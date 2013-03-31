@@ -1,0 +1,21 @@
+body {
+  font-size:18px;
+  font-family:"jaf-facitweb",sans-serif;
+  font-weight:300;
+  color:#111;
+}
+
+p,ul li,ol li,h1,h2,h3,h4,h5,h6 {line-height:1.618;}
+strong {font-weight:bold;}
+em {font-style:italic;}
+
+h1 {font-size:50px;}
+h2 {font-size:40px;}
+h3 {font-size:32px;}
+h4 {font-size:26px;}
+h5 {font-size:22px;}
+h6 {font-size:20px;}
+
+h3,h4,h5,h6 {
+  margin-bottom:10px;
+}

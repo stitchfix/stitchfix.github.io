@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<section class="single-column">
-  <article class="post">
-    {% for post in site.posts limit: 1 %}
-       <h1 class="ct h1">{{ post.title }}</h1>
-      {{ post.content }}
-    {% endfor %}
-  </article>
-  <section class="mt-4">
+  {% include _header.html %}
+  {% include _promo.html %}
+  {% include _culture.html %}
+  {% include _team.html %}
+  {% include _perks.html %}
+  {% include _stack.html %}
+  {% include _contact.html %}
+  <section>
     <article>
       <ul class="large-list ct mt-1">
         {% for post in paginator.posts %}
@@ -23,7 +23,6 @@ layout: default
           </li>
         {% endfor %}
       </ul>
-      <p class="ct"><a href="{{site.url}}/archives/" class="ct" title="Archives">...</a></p>
+      <p><a href="{{site.url}}/archives/" title="Archives">...</a></p>
     </article>
   </section>
-</section>

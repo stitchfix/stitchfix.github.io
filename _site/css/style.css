@@ -1,0 +1,184 @@
+/* Team section */
+
+dl.info dt {
+  display:none;
+}
+
+dl.info .name {
+  font-weight:bold;
+  font-size:24px;
+}
+
+dl.info .title {
+  font-style:italic;
+}
+
+dl.info .stats {
+  margin-top:10px;
+}
+
+#about h2 {
+  font-family:"proxima-nova-soft";
+  font-weight:900;
+  margin-bottom:0;
+  margin-top:40px;
+}
+
+a.map:hover {
+  opacity:0.5;
+}
+
+#team img {
+  border-radius:8px;
+}
+
+#culture,#team,#apply {
+  margin-bottom:200px;
+}
+
+#culture ul li {
+  float:left;
+  margin-left:10px;
+  opacity:0.7;
+  padding-top:90px;
+  text-align:center;
+  width:100px;
+}
+
+#culture .coding {
+  background:transparent url(../images/coding.png) no-repeat 0 0;
+  background-size:100%;
+}
+
+#culture .coffee{
+  background:transparent url(../images/coffee.png) no-repeat 0 0;
+  background-size:100%;
+}
+ 
+#culture .drinking {
+  background:transparent url(../images/beer.png) no-repeat 0 0;
+  background-size:100%;
+}
+
+#culture .playing {
+  background:transparent url(../images/play.png) no-repeat center 10px;
+  background-size:80%;
+}
+
+#culture .thinking {
+  background:transparent url(../images/thinking.png) no-repeat center 15px;
+  background-size:80%;
+}
+
+#culture .data {
+  background:transparent url(../images/data.png) no-repeat center 15px;
+  background-size:80%;
+}
+
+#about .description {
+  margin-top:45px;
+}
+.description {
+  margin-top:90px;
+  font-size:24px;
+  line-height:2;
+}
+
+.descripiton a,
+.apply a,
+.description a:link,
+.apply a:link,
+.apply a:visited,
+.description a:visited {
+  font-weight:bold;
+  color:#ff4e00!important;
+  padding:4px 6px;
+  border-radius:4px;
+  white-space:nowrap;
+}
+
+
+.soon {
+  color:#fff;
+  font-weight:bold;
+  text-align:center;
+  opacity:0.7;
+  font-size:18px;
+  padding:60px;
+}
+
+#apply article {
+  margin-top:30px;
+  border-radius:4px;
+  background-color:#fff;
+  padding-bottom:10px;
+  opacity:0.9;
+}
+
+
+#apply article p,
+#apply article h5 {
+  padding:10px;
+  color:#222;
+}
+
+#apply article a {
+  margin-left:10px;
+}
+
+.perks {
+  text-align:left;
+  font-size:14px;
+}
+
+#team article {
+  margin-bottom:30px;
+}
+
+.btn {
+  background-color:#0098BE;
+  padding:6px;
+  border-radius:3px;
+  color:#eee;
+}
+
+#stitchfix, #stitchfix div {
+  height:70px;
+}
+
+#stitchfix div img {
+  margin-top:10px;
+}
+
+#apply h4 {
+  color:#fff;
+  margin-bottom:10px;
+}
+
+a.apply {
+  font-size:24px;
+  font-weight:bold;
+  padding:12px;
+  color:#ff4e00;
+  background-color:#fff;
+  display:inline-block;
+  border-radius:4px;
+}
+
+a.apply:hover,
+.description a:hover{
+  background-color:#ff4e00;
+  color:#fff!important;
+}
+
+#apply ul li {font-weight:500;}
+
+#apply p strong {
+  color:#fff!important;
+  font-size:18px;
+}
+header {background-color:#005678;}
+section a.top-link {color:#fff;}
+section a.top-link:hover {
+  opacity:0.5;
+}
