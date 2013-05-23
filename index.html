@@ -14,7 +14,7 @@ layout: default
       <ul class="large-list ct mt-1">
         {% for post in paginator.posts %}
           <li>
-            <a href="{{ post.url }}" title="{{post.title}}">
+            <a href="{{ post.url }}" title="{{post.title}}" class="text-link">
               <date datetime="{{post.date}}" class="meta">
                 {{ post.date | date_to_long_string }}
               </date>
@@ -23,6 +23,7 @@ layout: default
           </li>
         {% endfor %}
       </ul>
+
       <p><a href="{{site.url}}/archives/" title="Archives">...</a></p>
     </article>
   </section>
