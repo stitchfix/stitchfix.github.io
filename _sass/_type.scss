@@ -1,0 +1,59 @@
+/* ==========================================================================
+   ALL THINGS TYPE
+   ========================================================================== */
+
+/* Fonts
+   ========================================================================== */
+
+/**
+ *  Fonts are served up through typekit. Shouldn't need to declare them anywhere 
+ *  else. These defaults should be good.
+ */
+
+body              { 
+  font-family:"museo-sans"; 
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+  font-size:20px;
+}
+
+h1,h2,h3,h4,h5,h6 { 
+  font-family: "museo-slab";
+  font-weight: 100;
+}
+   
+
+
+/* Headings & Type Scale
+   ========================================================================== */
+
+h1, .h1, .f1 { font-size:72px; }
+h2, .h2, .f2 { font-size:48px; }
+h3, .h3, .f3 { font-size:32px; }
+h4, .h4, .f4 { font-size:20px; }
+h5, .h5, .f5 { font-size:16px; }
+h6, .h6, .f6 { font-size:14px; }
+
+.mega { font-size:72px; }
+
+
+
+/* Random Utilties
+   ========================================================================== */
+
+/** Bold things */
+strong,  b,  .b { font-weight:bold; }
+
+/** Italicize things */
+em,      i,  .i { font-style:italic; }
+
+.title { 
+  line-height:1.3; 
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin:0;
+}
+
+.lh-1     { line-height:1; }
+.lh-2     { line-height:2; }
+p,.copy   { line-height:1.618; }

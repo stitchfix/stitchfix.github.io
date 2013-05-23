@@ -1,0 +1,25 @@
+.list {
+  list-style:none;
+}
+
+.horizontal-list {
+  width:100%;
+  display:block;
+  outline:1px solid gold;
+  word-spacing: -0.43em;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+  margin:0;
+  padding:0;
+}
+
+.horizontal-list--i {
+  width:33.3333%;
+  display:inline-block;
+  outline:1px solid blue;
+  text-rendering: auto;
+  word-spacing: normal;
+  letter-spacing: normal;
+  margin:0;
+  padding:0;
+}

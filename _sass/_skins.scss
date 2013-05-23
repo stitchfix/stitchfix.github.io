@@ -1,0 +1,26 @@
+.default { color:$sf-dark-gray; }
+
+.bg-dark {
+  background-color:$sf-dark-gray;
+  color:#ccc;
+}
+
+.bg-light {
+  color:$sf-dark-gray;
+  background-color:$sf-light-gray;
+}
+
+.bg-lightest {
+  background-color:$lightest;
+  color:$sf-dark-gray;
+}
+
+.bg-green {
+  background-color:$sf-green;
+  color:#222;
+}
+
+.green { color:$sf-green; }
+
+.bb-gray { border-bottom:1px solid $border-color; }
+
