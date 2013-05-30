@@ -1,58 +1,1049 @@
-/*
-Syntax error: File to import not found or unreadable: variables.
-              Load paths:
-                /Users/mrmrs/Sites/nightslayer
-                /Users/mrmrs/Sites/nightslayer/_sass
-        on line 5 of _sass/i.scss
+/* ==========================================================================
+   FILES TO IMPORT
+   ========================================================================== */
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+/* 
+  Colors
+  ========================================================================== */
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
 
-1: /* ==========================================================================
-2:    FILES TO IMPORT
-3:    ========================================================================== */
-4: 
-5: @import "variables";
-6: @import "mixins";
-7: @import "normalize";
-8: @import "type";
-9: @import "grid";
-10: @import "spacing";
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
 
-Backtrace:
-_sass/i.scss:5
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/import_node.rb:45:in `import'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/tree/root_node.rb:20:in `render'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:299:in `block in watch'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/vendor/listen/lib/listen/adapter.rb:198:in `call'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/vendor/listen/lib/listen/adapter.rb:198:in `report_changes'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/vendor/listen/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/Users/mrmrs/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/darwin.rb:38:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: variables.\A               Load paths:\A                 /Users/mrmrs/Sites/nightslayer\A                 /Users/mrmrs/Sites/nightslayer/_sass\A         on line 5 of _sass/i.scss\A \A 1: /* ==========================================================================\A 2:    FILES TO IMPORT\A 3:    ========================================================================== */\A 4: \A 5: @import \"variables\";\A 6: @import \"mixins\";\A 7: @import \"normalize\";\A 8: @import \"type\";\A 9: @import \"grid\";\A 10: @import \"spacing\";"; }
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+/* ==========================================================================
+   ALL THINGS TYPE
+
+   - Global type styles
+   - Headings & Type Scale
+   - Utilities
+   ========================================================================== */
+/* Fonts
+   ========================================================================== */
+/**
+ *  Fonts are served up through typekit. Shouldn't need to declare them anywhere 
+ *  else. These defaults should be good.
+ */
+body {
+  font-family: "museo-sans";
+  -webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+  font-size: 20px; }
+
+/* Headings & Type Scale
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "museo-slab";
+  font-weight: 100; }
+
+h1, .h1, .f1 {
+  font-size: 72px; }
+
+h2, .h2, .f2 {
+  font-size: 48px; }
+
+h3, .h3, .f3 {
+  font-size: 32px; }
+
+h4, .h4, .f4 {
+  font-size: 18px; }
+
+h5, .h5, .f5 {
+  font-size: 16px; }
+
+h6, .h6, .f6 {
+  font-size: 14px; }
+
+.mega {
+  font-size: 72px; }
+
+@media screen and (max-width: 479px) {
+  .mega {
+    font-size: 26px; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; }
+
+  h1, .h1, .f1 {
+    font-size: 32px; }
+
+  h2, .h2, .f2 {
+    font-size: 32px; }
+
+  h3, .h3, .f3 {
+    font-size: 20px; }
+
+  h4, .h4, .f4 {
+    font-size: 20px; }
+
+  h5, .h5, .f5 {
+    font-size: 16px; }
+
+  h6, .h6, .f6 {
+    font-size: 14px; } }
+/* Random Utilties
+   ========================================================================== */
+/** Bold things */
+strong, b, .b {
+  font-weight: bold; }
+
+/** Italicize things */
+em, i, .i {
+  font-style: italic; }
+
+.title {
+  line-height: 1.3;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin: 0; }
+
+.lh-1 {
+  line-height: 1; }
+
+.lh-2 {
+  line-height: 2; }
+
+p, .copy {
+  line-height: 1.618; }
+
+.caps {
+  text-transform: uppercase; }
+
+.sans-serif {
+  font-family: "museo-sans"; }
+
+/* ==========================================================================
+   grid
+   ========================================================================== */
+/**
+ * Core grid component
+ * Make use of dimension utilities, or components that extend 'grid' in order
+ * to apply particular widths to cells.
+ *
+ * Example uses:
+ *
+ * <div class="grid">
+ *     <div class="grid-cell u-size1of2"></div>
+ *     <div class="grid-cell u-size1of2"></div>
+ *     <div class="grid-cell u-size1of3"></div>
+ *     <div class="grid-cell u-size1of3"></div>
+ * </div>
+ *
+ * <div class="grid grid--center">
+ *     <div class="grid-cell u-size1of3"></div>
+ *     <div class="grid-cell u-size1of3"></div>
+ * </div>
+ */
+/* grid container
+   ========================================================================== */
+/**
+ * Must only contain `grid` or `grid-cell` components as children.
+ *
+ * 1. Ensure consistent default alignment.
+ * 2. Remove inter-unit whitespace that appears between `inline-block` child
+ *    elements. Work for all non-monospace font-families.  If you're using a
+ *    monospace base font, you will need to set the `grid` font-family to
+ *   `sans-serif` and then redeclare the monospace font on the `grid-cell`
+ *    objects.
+ * 3. Protect against WebKit bug with optimizelegibility.
+ */
+.grid {
+  display: block;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  /* 1 */
+  letter-spacing: -0.31em;
+  /* 2 */
+  text-rendering: optimizespeed;
+  /* 3 */ }
+
+/* Opera hack */
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+  /* 2 */ }
+
+/**
+ * Modifier: horizontally center all grid units
+ * Allows for automatic unit centering irrespective of the number of
+ * units in the grid.
+ */
+.grid--center {
+  text-align: center; }
+
+/* grid cell
+   ========================================================================== */
+/**
+ * No explicit width by default. Rely on combining `grid-cell` with a dimension
+ * utility or component that extends 'grid'.
+ *
+ * 1. Fundamentals of the non-float grid layout mechanism.
+ * 2. Controls vertical positioning of units.
+ * 3. Keeps content correctly aligned with the grid direction.
+ * 4. Reset text defaults.
+ */
+.grid-cell {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  /* 1 */
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  /* 2 */
+  text-align: left;
+  /* 3 */
+  letter-spacing: normal;
+  /* 4 */
+  word-spacing: normal;
+  /* 4 */
+  text-rendering: auto;
+  /* 4 */ }
+
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+.grid-cell--center {
+  display: block;
+  margin: 0 auto; }
+
+/* ==========================================================================
+   grid Layouts
+   ========================================================================== */
+/* ==========================================================================
+   SUIT grid layouts
+   ========================================================================== */
+/**
+ * Modifiers for the core 'suit-grid' component. These traits are pre-build
+ * grids that provide different layouts at different breakpoints (supports 2
+ * breakpoints).
+ *
+ * Example uses:
+ *
+ * <div class="grid v2-grid--2col v3-grid--4col">
+ *     <div class="grid-cell grid-cell--1"></div>
+ *     <div class="grid-cell grid-cell--2"></div>
+ *     <div class="grid-cell grid-cell--3"></div>
+ *     <div class="grid-cell grid-cell--4"></div>
+ * </div>
+ *
+ * <div class="grid v2-grid--fitToFill">
+ *     <div class="grid-cell grid-cell--1"></div>
+ *     <div class="grid-cell grid-cell--2"></div>
+ * </div>
+ */
+/* grid version 1 (default)
+   ========================================================================== */
+.v1-grid--2col > .grid-cell {
+  width: 50%; }
+
+.v1-grid--3col > .grid-cell {
+  width: 33.333%; }
+
+/* grid version 2 (at first breakpoint)
+========================================================================== */
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .v2-grid--1col > .grid-cell,
+  .v2-grid--3on1 > .grid-cell--4 {
+    width: 100%; }
+
+  .v2-grid--1to3 > .grid-cell--2,
+  .v2-grid--3to1 > .grid-cell--1 {
+    width: 75%; }
+
+  .v2-grid--1to2 > .grid-cell--2,
+  .v2-grid--2to1 > .grid-cell--1 {
+    width: 66.666%; }
+
+  .v2-grid--2col > .grid-cell {
+    width: 50%; }
+
+  .v2-grid--1to2 > .grid-cell--1,
+  .v2-grid--2to1 > .grid-cell--2,
+  .v2-grid--3col > .grid-cell,
+  .v2-grid--3on1 > .grid-cell--1,
+  .v2-grid--3on1 > .grid-cell--2,
+  .v2-grid--3on1 > .grid-cell--3 {
+    width: 33.333%; }
+
+  .v2-grid--1to3 > .grid-cell--1,
+  .v2-grid--3to1 > .grid-cell--2,
+  .v2-grid--4col > .grid-cell {
+    width: 25%; }
+
+  /**
+   * Fit and Fill
+   */
+  .v2-grid--fitToFill > .grid-cell--1 {
+    display: block;
+    float: left;
+    width: auto; }
+
+  .v2-grid--fitToFill > .grid-cell--2 {
+    display: block;
+    overflow: hidden;
+    width: auto; }
+
+  /* Contain floats */
+  .v2-grid--fitToFill:after {
+    display: table;
+    content: " ";
+    clear: both; } }
+/* grid version 3 (at second breakpoint)
+========================================================================== */
+@media screen and (min-width: 1025px) {
+  .v3-grid--1col > .grid-cell {
+    width: 100%; }
+
+  .v3-grid--1to2 > .grid-cell--2,
+  .v3-grid--2to1 > .grid-cell--1 {
+    width: 66.666%; }
+
+  .v3-grid--2to3 > .grid-cell--2,
+  .v3-grid--3to2 > .grid-cell--1 {
+    width: 60%; }
+
+  .v3-grid--2col > .grid-cell {
+    width: 50%; }
+
+  .v3-grid--2to3 > .grid-cell--1,
+  .v3-grid--3to2 > .grid-cell--2 {
+    width: 40%; }
+
+  .v3-grid--1to2 > .grid-cell--1,
+  .v3-grid--2to1 > .grid-cell--2,
+  .v3-grid--3col > .grid-cell {
+    width: 33.333%; }
+
+  .v3-grid--4col > .grid-cell {
+    width: 25%; }
+
+  .v3-grid--5col > .grid-cell {
+    width: 20%; } }
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+.section-padding {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.half-padding {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.content-box {
+  padding: 0 0 0 20px; }
+
+.p-1 {
+  padding: 10px; }
+
+.pr-1 {
+  padding-right: 10px; }
+
+.m-0 {
+  margin: 0; }
+
+.m-2 {
+  margin: 20px 0 !important; }
+
+.default {
+  color: #464547; }
+
+.bg-dark {
+  background-color: #464547;
+  color: #ccc; }
+
+.bg-light {
+  color: #464547;
+  background-color: #efefef; }
+
+.bg-lightest {
+  background-color: #f9f9f9;
+  color: #464547; }
+
+.bg-green {
+  background-color: #9ed7d6;
+  color: #2a6664; }
+
+.green {
+  color: #56b9b7; }
+
+.green-hover:hover {
+  color: #9ed7d6; }
+
+.bb-gray {
+  border-bottom: 1px solid #ebebeb; }
+
+.bg-yellow {
+  background-color: #f2e230;
+  color: #514b05; }
+
+.bg-blue {
+  background-color: #c0d8d8;
+  color: #4e7e7e; }
+
+.opacity-hover:hover {
+  opacity: 0.5;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s; }
+
+@media screen and (max-width: 479px) {
+  .mobile-list-border {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
+/* ==========================================================================
+   Dimension utilities
+   ========================================================================== */
+/* Intrinsic widths
+   ========================================================================== */
+/**
+ * Make an element shrink wrap its content.
+ */
+.u-sizeFit {
+  display: block;
+  float: left;
+  width: auto !important; }
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+.u-sizeFill {
+  display: block;
+  overflow: hidden;
+  width: auto !important; }
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * N.B. Do not use if child elements might be wider than the remaining space.
+ * In Chrome, Safari, and Firefox it results in undesired layout.
+ */
+.u-sizeFillAlt {
+  display: table-cell;
+  max-width: 100%;
+  width: 10000px; }
+
+/**
+ * Make an element the width of its parent.
+ */
+.u-sizeFull {
+  display: block;
+  width: 100%; }
+
+/* Proportional widths
+   ========================================================================== */
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 4, 5, 6, 8, 10, 12 part
+ */
+.u-size1of12 {
+  width: 8.333%; }
+
+.u-size1of10 {
+  width: 10%; }
+
+.u-size1of8 {
+  width: 12.5%; }
+
+.u-size1of6,
+.u-size2of12 {
+  width: 16.667%; }
+
+.u-size1of5,
+.u-size2of10 {
+  width: 20%; }
+
+.u-size1of4,
+.u-size2of8,
+.u-size3of12 {
+  width: 25%; }
+
+.u-size3of10 {
+  width: 30%; }
+
+.u-size1of3,
+.u-size2of6,
+.u-size3of9,
+.u-size4of12 {
+  width: 33.333%; }
+
+.u-size3of8 {
+  width: 37.5%; }
+
+.u-size2of5,
+.u-size4of10 {
+  width: 40%; }
+
+.u-size5of12 {
+  width: 41.667%; }
+
+.u-size1of2,
+.u-size2of4,
+.u-size3of6,
+.u-size4of8,
+.u-size5of10,
+.u-size6of12 {
+  width: 50%; }
+
+.u-size7of12 {
+  width: 58.333%; }
+
+.u-size3of5,
+.u-size6of10 {
+  width: 60%; }
+
+.u-size5of8 {
+  width: 62.5%; }
+
+.u-size2of3,
+.u-size4of6,
+.u-size8of12 {
+  width: 66.667%; }
+
+.u-size7of10 {
+  width: 70%; }
+
+.u-size3of4,
+.u-size6of8,
+.u-size9of12 {
+  width: 75%; }
+
+.u-size4of5,
+.u-size8of10 {
+  width: 80%; }
+
+.u-size5of6,
+.u-size10of12 {
+  width: 83.333%; }
+
+.u-size7of8 {
+  width: 87.5%; }
+
+.u-size9of10 {
+  width: 90%; }
+
+.u-size11of12 {
+  width: 91.667%; }
+
+.column-wrapper {
+  max-width: 720px;
+  margin: 0 auto; }
+  @media screen and (max-width: 479px) {
+    .column-wrapper {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
+    .column-wrapper {
+      padding-right: 30px;
+      padding-left: 30px; } }
+
+.link {
+  text-decoration: none;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s; }
+
+.list {
+  list-style: none; }
+
+.horizontal-list {
+  width: 100%;
+  display: block;
+  word-spacing: -0.43em;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed; }
+
+.horizontal-list--i {
+  width: 33.3333%;
+  display: inline-block;
+  text-rendering: auto;
+  word-spacing: normal;
+  letter-spacing: normal;
+  margin-bottom: 10px; }
+
+.list-prose--i {
+  padding: 10px 0; }
+  .list-prose--i .ss-icon {
+    vertical-align: middle; }
+  .list-prose--i .text {
+    padding: 0 0 0 10px; }
+  @media screen and (max-width: 479px) {
+    .list-prose--i {
+      font-size: 16px; } }
+
+.large-list-i .link {
+  padding: 20px;
+  display: block;
+  width: 100%;
+  color: #225452;
+  transition: background .5s;
+  -webkit-transition: background .5s;
+  background: #efefef;
+  border-bottom: 1px solid #fff; }
+
+.large-list-i .link:hover {
+  transition: background .5s;
+  -webkit-transition: background .5s;
+  background: #b0dedd; }
+
+/* ==========================================================================
+   JUNK CSS TO BE REFACTORED
+   Author : Adam Morse
+   ========================================================================== */
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  position: relative; }
+
+a.btn {
+  background-color: #fff;
+  font-family: "pt-sans",sans-serif;
+  -webkit-border-radius: 4px;
+  padding: 20px;
+  display: inline-block;
+  font-weight: bold;
+  width: auto;
+  color: #bf3030;
+  transition: background-color .5s,color .5s;
+  -webkit-transition: background-color .5s,color .5s;
+  -moz-transition: background-color .5s,color .5s; }
+
+a.btn:link {
+  background-color: #fff;
+  color: #bf3030; }
+
+a.btn:visited {
+  background-color: #fff;
+  color: #bf3030; }
+
+a.btn:hover {
+  color: #fff;
+  background-color: #dd7878;
+  -webkit-transition: background-color .5s,color .5s;
+  transition: background-color .5s,color .5s;
+  -moz-transition: background-color .5s,color .5s;
+  -o-transition: background-color .5s,color .5s; }
+
+.center {
+  text-align: center; }
+
+.team article h1 {
+  line-height: 1; }
+
+img {
+  max-width: 100% !important; }
+
+iframe {
+  width: 100%; }
+
+.rounded {
+  border-radius: 8px; }
+
+.fl {
+  float: left; }
+
+.dib {
+  display: inline-block; }
+
+.site-footer {
+  border-top: 1px solid #bebfc1;
+  padding: 20px 0; }
+  .site-footer .footer-nav {
+    font-size: 16px; }
+  .site-footer .link {
+    transition: color .4s;
+    -webkit-transition: color .4s;
+    color: #464547; }
+  .site-footer .link:hover {
+    transition: color .4s;
+    -webkit-transition: color .4s;
+    color: #bebfc1; }
+
+iframe {
+  border: 0;
+  margin-bottom: -5px; }
+
+/* ==========================================================================
+   ICON STYLES
+   ========================================================================== */
+.ss-icon {
+  font-size: 32px;
+  vertical-align: middle; }
+
+.ss-social {
+  font-size: 20px;
+  color: #464547;
+  margin-right: 10px; }
+
+.ss-social:hover {
+  color: #56b9b7 !important; }
+
+/**
+ * Sets text in li to be label format an vertically aligned to middle
+ */
+.icon-wrapper {
+  vertical-align: middle !important;
+  font-size: 14px;
+  text-transform: uppercase; }
