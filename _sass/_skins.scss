@@ -17,10 +17,26 @@
 
 .bg-green {
   background-color:$sf-green;
-  color:#222;
+  color:darken($sf-green,45%);
 }
 
-.green { color:$sf-green; }
+.green { color:darken($sf-green,20%); }
+.green-hover:hover {color:$sf-green;}
 
 .bb-gray { border-bottom:1px solid $border-color; }
+.bg-yellow {background-color:$sf-yellow;color:darken($sf-yellow,40%);}
+.bg-blue {background-color:$blue;color:darken($blue,40%);}
+
+.opacity-hover:hover {
+  opacity:0.5;
+  -webkit-transition:opacity .5s;
+  transition:opacity .5s;
+}
+
+@include breakpoint(one-hand) {
+  .mobile-list-border {
+    border-bottom:1px solid rgba(0,0,0,0.1);
+  }
+}
+
 

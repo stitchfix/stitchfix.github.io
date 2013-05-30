@@ -5,25 +5,9 @@ layout: default
   {% include _header.html %}
   {% include _promo.html %}
   {% include _culture.html %}
-  {% include _team.html %}
   {% include _perks.html %}
+  {% include _team.html %}
   {% include _stack.html %}
+  {% include _we_do.html %}
+  {% include _apply.html %}
   {% include _contact.html %}
-  <section>
-    <article>
-      <ul class="large-list ct mt-1">
-        {% for post in paginator.posts %}
-          <li>
-            <a href="{{ post.url }}" title="{{post.title}}" class="text-link">
-              <date datetime="{{post.date}}" class="meta">
-                {{ post.date | date_to_long_string }}
-              </date>
-              {{ post.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-
-      <p><a href="{{site.url}}/archives/" title="Archives">...</a></p>
-    </article>
-  </section>

@@ -1,13 +1,12 @@
-<article class="single-column mt-4">
-  <h1 class="h3">Related Posts</h1>
+<article class="single-column mt-4 section-padding">
+  <h1 class="h3">Other Positions at Stitch Fix</h1>
   <ul class="large-list list">
-  {% for post in site.related_posts limit: 3 %}
-    <li>
-      <a href="{{ post.url }}" title="{{post.title}}">
-        <span class="meta">{{ post.date | date_to_long_string }}</span>
-          {{ post.title }}
-      </a>
-    </li>
-  {% endfor %}
+    {% for post in site.related_posts limit: 3 %}
+      <li class="large-list-i">
+        <a href="{{ post.url }}" class="link" title="{{post.title}}">
+            {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </article>

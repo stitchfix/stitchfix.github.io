@@ -5,21 +5,42 @@
 .horizontal-list {
   width:100%;
   display:block;
-  outline:1px solid gold;
   word-spacing: -0.43em;
   letter-spacing: -0.31em;
   text-rendering: optimizespeed;
-  margin:0;
-  padding:0;
 }
 
 .horizontal-list--i {
   width:33.3333%;
   display:inline-block;
-  outline:1px solid blue;
   text-rendering: auto;
   word-spacing: normal;
   letter-spacing: normal;
-  margin:0;
-  padding:0;
+  margin-bottom:10px;
+}
+
+.list-prose--i {
+  padding:10px 0;
+  .ss-icon {vertical-align:middle;}
+  .text {padding:0 0 0 10px;}
+  @include breakpoint(one-hand) {
+    font-size:16px; 
+  }
+}
+
+.large-list-i .link {
+  padding:20px;
+  display:block;
+  width:100%;
+  color:darken($sf-green,50%);
+  transition:background .5s;
+  -webkit-transition:background .5s;
+  background:$sf-light-gray;
+  border-bottom:1px solid #fff;
+}
+
+.large-list-i .link:hover {
+  transition:background .5s;
+  -webkit-transition:background .5s;
+  background: lighten($sf-green, 5%);
 }

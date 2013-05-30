@@ -1,11 +1,16 @@
-@import "vars";
-@import "colors";
+/* ==========================================================================
+   FILES TO IMPORT
+   ========================================================================== */
+
+@import "variables";
 @import "mixins";
 @import "normalize";
+@import "type";
+@import "grid";
+@import "spacing";
 @import "skins";
 @import "dimensions";
 @import "links";
 @import "lists";
 @import "styles";
-@import "type";
-@import "grid";
+@import "icons";

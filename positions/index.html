@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include _header.html %}
+
+<article class="column-wrapper">
+  <div class="section-padding">
+    <h1 class="h2">Open Positions</h1>
+    <p>
+      Get in touch at 
+      <a href="mailto:tech-jobs@stitchfix.com" title="Email tech-jobs@stitchfix.com">tech-jobs@stitchfix.com</a>
+    </p>
+    <br >
+    <ul class="large-list ct mt-1">
+      {% for post in site.posts %}
+        <li class="large-list-i">
+          <a href="{{ post.url }}" title="{{post.title}}" class="link">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <br> <br> <br> <br> <br>
+  </div>
+</article>

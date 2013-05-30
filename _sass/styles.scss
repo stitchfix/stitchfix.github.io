@@ -4,6 +4,7 @@
    ========================================================================== */
 
 * {box-sizing:border-box;}
+html,body {height:100%;position:relative;}
 
 a.btn {
   background-color:#fff;
@@ -39,12 +40,31 @@ a.btn:hover {
 
 .center {text-align:center;}
 
-section { padding:50px 0; }
 
 .team article h1 { line-height:1; }
 
-.contact img { border-radius:4px; }
-.avatar img { border-radius:4px; }
-
-img {max-width:100%;}
+img {max-width:100%!important;}
 iframe { width:100%; }
+
+.rounded { border-radius:8px; }
+.fl { float:left; }
+.dib {display:inline-block;}
+
+.site-footer {
+  border-top:1px solid $sf-medium-gray;
+  padding:20px 0;
+  .footer-nav {
+    font-size:16px; 
+  }
+  .link {
+    transition:color .4s;
+    -webkit-transition:color .4s;
+    color:$sf-dark-gray; 
+  }
+  .link:hover {
+    transition:color .4s;
+    -webkit-transition:color .4s;
+    color:$sf-medium-gray; 
+  } 
+}
+iframe {border:0;margin-bottom:-5px;}

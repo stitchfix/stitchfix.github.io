@@ -11,3 +11,18 @@
   -moz-transition:$attribute $time;
   -o-transition:$attribute $time;
 }
+
+@mixin breakpoint($viewport-width) {
+  @if $viewport-width == one-hand {
+    @media screen and (max-width: 479px) { @content; }  
+  }
+
+  @else if $viewport-width == tablet {
+    @media screen and (min-width: 480px) and (max-width: 1024px){ @content; }  
+  }
+  @else if $viewport-width == desktop { @media screen and (min-width: 1025px){ @content; 
+    }  
+  }
+
+}
+

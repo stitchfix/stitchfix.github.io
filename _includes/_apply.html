@@ -1,72 +1,32 @@
-<section class="apply">
-  <div class="layout-width">
-      <h1>What We Are Looking For</h1>
-      <article>
-        <h4>Communication Skills</h4>
+  <section id="apply">
+    <div class="column-wrapper">
+      <article class="section-padding">
+        <h1 class="h2">We Are Looking For</h1>
+        <h2 class="h4 sans-serif b">Communication Skills</h2>
         <p>
-          You aren't just great at listening, speaking and writing.  
-          You are able to convey complex ideas and information regardless of the medium or situation
+          You aren't just great at listening, speaking and writing. You are able to convey 
+          complex ideas and information regardless of the medium or situation
         </p>
-        <h4>Product-Centric Thinking</h4>
-        <p>
-          You come from a technology background but you have opinions about how the product you are building should work. 
-          You dig deep and work with customers and the company to uncover the ideal way to leverage technology to solve problems.
-        </p>
-        <h4>Self-Directed</h4>
-        <p>
-          Once you've got something, we don't have to worry about it.  
-          You have a bias toward action.
-        </p>
-        <h4>Passion</h4>
-        <p>
-          You love what you do.
-          You spend some of your free time reading blogs/books, or going to meet ups.
-        </p>
-        <h4>Just Generally Awesome</h4>
-        <p>
-          You take your work seriously but not yourself. You show everyone respect regardless of the circumstances. Extra points if we think you're funny.
-         </p>
-        <h4>Location</h4>
-        <p>While our preference is for everyone to work in San Francisco, we will make an exception if you are an exceptional fit.</p>
-        <br />
-      </article>
-      <article>
-        <h2 id="apply">Positions</h2>
-        <h3 class="position"><a href="{{site.url}}/rails.html" title="Full Stack Rails Engineer - Stitch Fix">Full-stack Rails Engineer</a></h3>
-      </article>
-      <articl>
-        <h3 class="position">
-          <a href="{{site.url}}/ios.html" title="iOS Developer - Stitch Fix">iOS Developer</a>
-        </h3>
-      </article>
-      <article>
-        <h3 class="position">
-          <a href="{{site.url}}/director-data-science.html" title="Director of Data Science Engineering - Stitch Fix">
-            Director of Data Science Engineering
-          </a>
-        </h3>
-      </article>
-      <article>
-        <h3 class="position">
-          <a href="{{site.url}}/data-scientist-algorithm-dev.html" title="Data Scientist Algorithm - Stitch Fix">
-            Data Scientist - Algorithm Development
-          </a>
-        </h3>
-      </article>
-      <article>
-        <h3 class="position">
-          <a href="{{site.url}}/data-scientist-intern.html" title="Data Scientist Intern - Stitch Fix">
-            Data Scientist Intern - Algorithm Development
-          </a>
-        </h3>
-      </article>
-      <div>
-        <h2>Join Us</h2>
-        <p>
-          We are always looking for talented &amp; awesome people to work with - so even if you don't see something that matches your skill set, please
-          drop us a line at <br />
-          <a href="mailto:tech-jobs@stitchfix.com" title="Stitch Fix Engineering Jobs">tech-jobs@stitchfix.com</a>
-        </p>
-      </div>
-  </div>
-</section>
+        <h2 class="h4 sans-serif b">Product-Centric Thinking</h2>
+      <p class="">You come from a technology background but you have opinions about how the product you are building should work. You dig deep and work with customers and the company to uncover the ideal way to leverage technology to solve problems.</p>
+  <h2 class="h4 sans-serif b">Self-Directed</h2>
+  <p class=" m-0">Once you've got something, we don't have to worry about it. You have a bias toward action.</p>
+  <h2 class="h4 sans-serif b">Passion</h2>
+  <p class=" m-0">You love what you do. You spend some of your free time reading blogs/books, or going to meet ups.</p>
+  <h2 class="h4 sans-serif b">Just Generally Awesome</h2>
+  <p class=" m-0">You take your work seriously but not yourself. You show everyone respect regardless of the circumstances. Extra points if we think you're funny.</p>
+  <h2 class="h4 sans-serif b">Location</h2>
+  <p class=" m-0">While our preference is for everyone to work in San Francisco, we will make an exception if you are an exceptional fit.</p>
+      <h2 class="h3">Open Positions</h2>
+      <ul class="large-list ct mt-1">
+        {% for post in paginator.posts %}
+          <li class="large-list-i">
+            <a href="{{ post.url }}" title="{{post.title}}" class="link">
+              {{ post.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+    </div>
+  </section>

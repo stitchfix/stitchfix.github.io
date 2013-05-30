@@ -171,4 +171,12 @@
 .column-wrapper {
   max-width:720px;
   margin:0 auto;
+  @include breakpoint(one-hand) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @include breakpoint(tablet) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }

@@ -1,5 +1,9 @@
 /* ==========================================================================
    ALL THINGS TYPE
+
+   - Global type styles
+   - Headings & Type Scale
+   - Utilities
    ========================================================================== */
 
 /* Fonts
@@ -10,33 +14,42 @@
  *  else. These defaults should be good.
  */
 
-body              { 
+body { 
   font-family:"museo-sans"; 
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
   font-size:20px;
 }
 
-h1,h2,h3,h4,h5,h6 { 
-  font-family: "museo-slab";
-  font-weight: 100;
-}
-   
 
 
 /* Headings & Type Scale
    ========================================================================== */
 
+h1,h2,h3,h4,h5,h6 { 
+  font-family: "museo-slab";
+  font-weight: 100;
+}
+
 h1, .h1, .f1 { font-size:72px; }
 h2, .h2, .f2 { font-size:48px; }
 h3, .h3, .f3 { font-size:32px; }
-h4, .h4, .f4 { font-size:20px; }
+h4, .h4, .f4 { font-size:18px; }
 h5, .h5, .f5 { font-size:16px; }
 h6, .h6, .f6 { font-size:14px; }
 
 .mega { font-size:72px; }
 
-
+@include breakpoint(one-hand) {
+  .mega {font-size:26px;}
+  h1,h2,h3,h4,h5,h6 {font-weight:bold;}
+  h1, .h1, .f1 { font-size:32px; }
+  h2, .h2, .f2 { font-size:32px; }
+  h3, .h3, .f3 { font-size:20px; }
+  h4, .h4, .f4 { font-size:20px; }
+  h5, .h5, .f5 { font-size:16px; }
+  h6, .h6, .f6 { font-size:14px; }
+}
 
 /* Random Utilties
    ========================================================================== */
@@ -57,3 +70,6 @@ em,      i,  .i { font-style:italic; }
 .lh-1     { line-height:1; }
 .lh-2     { line-height:2; }
 p,.copy   { line-height:1.618; }
+.caps { text-transform:uppercase;}
+
+.sans-serif { font-family:"museo-sans"; }
