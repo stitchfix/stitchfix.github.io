@@ -20,7 +20,7 @@
 }
 
 .list-prose--i {
-  padding:10px 0;
+  padding:5px 0;
   .ss-icon {vertical-align:middle;}
   .text {padding:0 0 0 10px;}
   @include breakpoint(one-hand) {
@@ -29,13 +29,12 @@
 }
 
 .large-list-i .link {
-  padding:20px;
+  padding:20px 0;
   display:block;
   width:100%;
   color:darken($sf-green,50%);
   transition:background .5s;
   -webkit-transition:background .5s;
-  background:$sf-light-gray;
   border-bottom:1px solid #fff;
 }
 

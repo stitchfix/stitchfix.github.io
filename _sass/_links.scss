@@ -3,3 +3,11 @@
   -webkit-transition:opacity .5s;
   transition:opacity .5s;
 }
+
+.button-click {
+  text-decoration:none;
+  background-color:$sf-yellow;
+  color:#222;
+  padding:20px;
+  border-radius:2px;
+}

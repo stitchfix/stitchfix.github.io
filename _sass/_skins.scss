@@ -24,7 +24,7 @@
 .green-hover:hover {color:$sf-green;}
 
 .bb-gray { border-bottom:1px solid $border-color; }
-.bg-yellow {background-color:$sf-yellow;color:darken($sf-yellow,40%);}
+.bg-yellow {background-color:darken($sf-green,25%);color:lighten($sf-green,30%);}
 .bg-blue {background-color:$blue;color:darken($blue,40%);}
 
 .opacity-hover:hover {
@@ -40,3 +40,6 @@
 }
 
 
+.bt-li {
+  border-top:1px solid rgba(0,0,0,0.2);
+}

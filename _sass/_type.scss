@@ -27,16 +27,16 @@ body {
    ========================================================================== */
 
 h1,h2,h3,h4,h5,h6 { 
-  font-family: "museo-slab";
-  font-weight: 100;
+  font-family: "museo-sans";
+  margin-top:0;
 }
 
-h1, .h1, .f1 { font-size:72px; }
-h2, .h2, .f2 { font-size:48px; }
-h3, .h3, .f3 { font-size:32px; }
-h4, .h4, .f4 { font-size:18px; }
-h5, .h5, .f5 { font-size:16px; }
-h6, .h6, .f6 { font-size:14px; }
+h1, .h1, .f1 { font-size:72px; font-weight:900;}
+h2, .h2, .f2 { font-size:48px; font-weight:900;}
+h3, .h3, .f3 { font-size:32px; font-weight:900;}
+h4, .h4, .f4 { font-size:18px; font-weight:100;}
+h5, .h5, .f5 { font-size:16px; font-weight:100;}
+h6, .h6, .f6 { font-size:14px; font-weight:100;}
 
 .mega { font-size:72px; }
 
@@ -55,7 +55,7 @@ h6, .h6, .f6 { font-size:14px; }
    ========================================================================== */
 
 /** Bold things */
-strong,  b,  .b { font-weight:bold; }
+strong,  b,  .b { font-weight:bold!important;}
 
 /** Italicize things */
 em,      i,  .i { font-style:italic; }
@@ -73,3 +73,4 @@ p,.copy   { line-height:1.618; }
 .caps { text-transform:uppercase;}
 
 .sans-serif { font-family:"museo-sans"; }
+
