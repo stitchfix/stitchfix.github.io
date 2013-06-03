@@ -9,23 +9,31 @@
 
 .ss-social {
   font-size:20px;
-  color:$sf-dark-gray;
   margin-right:10px;
+  color:$sf-dark-gray;
+  -webkit-transform:scale(1);
+  -webkit-transition:color .4s, -webkit-transform .4s;
+  transform:scale(1);
+  transition:color .4s, transform;
 }
 
-.ss-social:hover {
-  color:darken($sf-green,20%)!important;
+.hov-c:hover {
+  color:darken($sf-green,20%);
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+  -webkit-transition: color .4s, -webkit-transform .4s;
+  transition: color .4s, transform .4s;
 }
 
 /**
  * Sets text in li to be label format an vertically aligned to middle
  */
 
-
-
 .icon-wrapper {
   vertical-align:middle!important;
   font-size:14px;
   text-transform:uppercase;
 }
+
+
 

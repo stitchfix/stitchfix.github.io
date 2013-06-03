@@ -23,22 +23,24 @@
   padding:5px 0;
   .ss-icon {vertical-align:middle;}
   .text {padding:0 0 0 10px;}
-  @include breakpoint(one-hand) {
-    font-size:16px; 
-  }
+    @include breakpoint(one-hand) {
+      padding:16px 0;
+      font-size:16px; 
+    }
 }
 
 .large-list-i .link {
   padding:20px 0;
   display:block;
+  color:#fff;
   width:100%;
-  color:darken($sf-green,50%);
   transition:background .5s;
   -webkit-transition:background .5s;
-  border-bottom:1px solid #fff;
+  border-bottom:1px dotted darken($sf-green,25%);
 }
 
 .large-list-i .link:hover {
+  color:#fff;
   transition:background .5s;
   -webkit-transition:background .5s;
   background: lighten($sf-green, 5%);

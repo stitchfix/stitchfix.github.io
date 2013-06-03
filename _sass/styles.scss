@@ -14,18 +14,9 @@ a.btn {
   display:inline-block;
   font-weight:bold;
   width:auto;
-  color:$sf-red;
   transition:background-color .5s,color .5s;
   -webkit-transition:background-color .5s,color .5s;
   -moz-transition:background-color .5s,color .5s;
-}
-
-a.btn:link {background-color:#fff;
-  color:$sf-red;
-}
-
-a.btn:visited {background-color:#fff;
-  color:$sf-red;
 }
 
 a.btn:hover {
@@ -68,3 +59,13 @@ iframe { width:100%; }
   } 
 }
 iframe {border:0;margin-bottom:-5px;}
+
+a.ss-icon.ss-social:hover {
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}
+
+a.ss-icon.ss.social:hover {
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}

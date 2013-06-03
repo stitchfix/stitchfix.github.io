@@ -17,16 +17,20 @@
   <p class=" m-0">You take your work seriously but not yourself. You show everyone respect regardless of the circumstances. Extra points if we think you're funny.</p>
   <h2 class="h4 sans-serif b">Location</h2>
   <p class=" m-0">While our preference is for everyone to work in San Francisco, we will make an exception if you are an exceptional fit.</p>
-      <h2 class="h3">Open Positions</h2>
+  </div>
+  <div class="section-padding bg-green">
+    <div class="column-wrapper">
+      <h1 class="h3">Open Positions</h1>
       <ul class="large-list ct mt-1">
         {% for post in paginator.posts %}
           <li class="large-list-i">
-            <a href="{{ post.url }}" title="{{post.title}}" class="link caps b f3">
+            <a href="{{post.url}}" title="{{post.title}}" class="link caps b f3">
               {{ post.title }} »
             </a>
           </li>
         {% endfor %}
       </ul>
     </article>
+  </div>
     </div>
   </section>

@@ -886,100 +886,23 @@ p, .copy {
   padding: 0 0 0 10px; }
 @media screen and (max-width: 479px) {
   .list-prose--i {
+    padding: 16px 0;
     font-size: 16px; } }
 
 .large-list-i .link {
   padding: 20px 0;
   display: block;
+  color: #fff;
   width: 100%;
-  color: #225452;
   transition: background .5s;
   -webkit-transition: background .5s;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px dotted #48aeac; }
 
 .large-list-i .link:hover {
+  color: #fff;
   transition: background .5s;
   -webkit-transition: background .5s;
   background: #b0dedd; }
-
-/* ==========================================================================
-   JUNK CSS TO BE REFACTORED
-   Author : Adam Morse
-   ========================================================================== */
-* {
-  box-sizing: border-box; }
-
-html, body {
-  height: 100%;
-  position: relative; }
-
-a.btn {
-  background-color: #fff;
-  font-family: "pt-sans",sans-serif;
-  -webkit-border-radius: 4px;
-  padding: 20px;
-  display: inline-block;
-  font-weight: bold;
-  width: auto;
-  color: #bf3030;
-  transition: background-color .5s,color .5s;
-  -webkit-transition: background-color .5s,color .5s;
-  -moz-transition: background-color .5s,color .5s; }
-
-a.btn:link {
-  background-color: #fff;
-  color: #bf3030; }
-
-a.btn:visited {
-  background-color: #fff;
-  color: #bf3030; }
-
-a.btn:hover {
-  color: #fff;
-  background-color: #dd7878;
-  -webkit-transition: background-color .5s,color .5s;
-  transition: background-color .5s,color .5s;
-  -moz-transition: background-color .5s,color .5s;
-  -o-transition: background-color .5s,color .5s; }
-
-.center {
-  text-align: center; }
-
-.team article h1 {
-  line-height: 1; }
-
-img {
-  max-width: 100% !important; }
-
-iframe {
-  width: 100%; }
-
-.rounded {
-  border-radius: 8px; }
-
-.fl {
-  float: left; }
-
-.dib {
-  display: inline-block; }
-
-.site-footer {
-  border-top: 1px solid #bebfc1;
-  padding: 20px 0; }
-.site-footer .footer-nav {
-  font-size: 16px; }
-.site-footer .link {
-  transition: color .4s;
-  -webkit-transition: color .4s;
-  color: #464547; }
-.site-footer .link:hover {
-  transition: color .4s;
-  -webkit-transition: color .4s;
-  color: #bebfc1; }
-
-iframe {
-  border: 0;
-  margin-bottom: -5px; }
 
 /* ==========================================================================
    ICON STYLES
@@ -990,11 +913,19 @@ iframe {
 
 .ss-social {
   font-size: 20px;
+  margin-right: 10px;
   color: #464547;
-  margin-right: 10px; }
+  -webkit-transform: scale(1);
+  -webkit-transition: color .4s, -webkit-transform .4s;
+  transform: scale(1);
+  transition: color .4s, transform; }
 
-.ss-social:hover {
-  color: #56b9b7 !important; }
+.hov-c:hover {
+  color: #56b9b7;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: color .4s, -webkit-transform .4s;
+  transition: color .4s, transform .4s; }
 
 /**
  * Sets text in li to be label format an vertically aligned to middle
@@ -1003,3 +934,28 @@ iframe {
   vertical-align: middle !important;
   font-size: 14px;
   text-transform: uppercase; }
+
+.link {
+  color: #464547;
+  font-weight: bold; }
+
+.link:hover {
+  color: #9ed7d6; }
+
+img, iframe {
+  width: 100%; }
+
+iframe {
+  border: 0;
+  outline: 0;
+  margin-bottom: -5px; }
+
+.dib {
+  display: inline-block; }
+
+.footer-nav {
+  padding: 20px 0; }
+
+.site-footer {
+  font-size: 14px;
+  font-weight: 100; }
