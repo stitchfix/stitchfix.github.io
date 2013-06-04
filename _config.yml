@@ -5,9 +5,9 @@ descripiton: "Stitch Fix is a styling as a service start-up based in San Francis
 
 # Owner (organization or individual) of site content
 author: "Stitch Fix"
-url: "http://stitchfix.github.io/doom/"
+#url: "http://stitchfix.github.io/doom/"
 #url: "http://localhost:4000"
-#url: "http://stitchfixjobs.com"
+url: "http://stitchfixjobs.com"
 
 # Your UA tracking number (i.e 35858753-1) for Google Analytics. 
 # If you comment this out, or don't fill out this parameter - Google analytics won't be included. 
