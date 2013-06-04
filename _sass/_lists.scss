@@ -19,9 +19,26 @@
   margin-bottom:10px;
 }
 
+.list-prose {
+  list-style-type:disc;
+  @include breakpoint(one-hand) {
+    list-style-type:none;
+  }
+}
+
 .list-prose--i {
   padding:5px 0;
-  .ss-icon {vertical-align:middle;}
+  .text {padding:0 0 0 10px;}
+    @include breakpoint(one-hand) {
+      padding:16px 0;
+      font-size:16px; 
+    }
+}
+
+.no-bullets {list-style-type:none!important;}
+
+.list-prose--i {
+  padding:5px 0;
   .text {padding:0 0 0 10px;}
     @include breakpoint(one-hand) {
       padding:16px 0;
@@ -32,16 +49,6 @@
 .large-list-i .link {
   padding:20px 0;
   display:block;
-  color:#fff;
   width:100%;
-  transition:background .5s;
-  -webkit-transition:background .5s;
-  border-bottom:1px dotted darken($sf-green,25%);
 }
 
-.large-list-i .link:hover {
-  color:#fff;
-  transition:background .5s;
-  -webkit-transition:background .5s;
-  background: lighten($sf-green, 5%);
-}

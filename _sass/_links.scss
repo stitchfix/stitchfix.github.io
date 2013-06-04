@@ -4,10 +4,23 @@
   transition:opacity .5s;
 }
 
-.button-click {
+.btn-click {
   text-decoration:none;
-  background-color:$sf-yellow;
-  color:#222;
-  padding:20px;
+  padding:16px;
   border-radius:2px;
+  white-space: nowrap;
+  display:inline-block;
+  margin-left:8px;
+  font-size:16px;
 }
+
+.btn-yellow {
+  color:#222;
+  background-color:$sf-yellow;
+  border:2px solid transparent;
+  &:hover {
+    background-color:lighten($sf-yellow, 10%);
+    border:2px solid darken($sf-yellow, 5%);
+  }
+}
+
