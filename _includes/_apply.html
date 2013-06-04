@@ -1,36 +1,49 @@
-  <section id="apply">
-    <div class="column-wrapper">
-      <article class="section-padding">
-        <h1 class="h2">We Are Looking For</h1>
-        <h2 class="h4 sans-serif b">Communication Skills</h2>
-        <p>
-          You aren't just great at listening, speaking and writing. You are able to convey 
-          complex ideas and information regardless of the medium or situation
-        </p>
-        <h2 class="h4 sans-serif b">Product-Centric Thinking</h2>
-      <p class="">You come from a technology background but you have opinions about how the product you are building should work. You dig deep and work with customers and the company to uncover the ideal way to leverage technology to solve problems.</p>
-  <h2 class="h4 sans-serif b">Self-Directed</h2>
-  <p class=" m-0">Once you've got something, we don't have to worry about it. You have a bias toward action.</p>
-  <h2 class="h4 sans-serif b">Passion</h2>
-  <p class=" m-0">You love what you do. You spend some of your free time reading blogs/books, or going to meet ups.</p>
-  <h2 class="h4 sans-serif b">Just Generally Awesome</h2>
-  <p class=" m-0">You take your work seriously but not yourself. You show everyone respect regardless of the circumstances. Extra points if we think you're funny.</p>
-  <h2 class="h4 sans-serif b">Location</h2>
-  <p class=" m-0">While our preference is for everyone to work in San Francisco, we will make an exception if you are an exceptional fit.</p>
-  </div>
-  <div class="section-padding bg-green">
-    <div class="column-wrapper">
-      <h1 class="h3">Open Positions</h1>
-      <ul class="large-list ct mt-1">
-        {% for post in paginator.posts %}
-          <li class="large-list-i">
-            <a href="{{post.url}}" title="{{post.title}}" class="link caps b f3">
-              {{ post.title }} »
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </article>
-  </div>
+<section id="apply">
+  <div class="column-wrapper">
+    <article class="section-padding">
+      <h1 class="h2">We Are Looking For</h1>
+      <h2 class="h4 sans-serif b">Communication Skills</h2>
+      <p class="mb-2">
+        You aren't just great at listening, speaking and writing. You are able to convey 
+        complex ideas and information regardless of the medium or situation
+      </p>
+      <h2 class="h4 sans-serif b">Product-Centric Thinking</h2>
+      <p  class="mb-2">
+        You come from a technology background but you have opinions about how the product 
+        you are building should work. You dig deep and work with customers and the company 
+        to uncover the ideal way to leverage technology to solve problems.
+      </p>
+      <h2 class="h4 sans-serif b">Self-Directed</h2>
+      <p class="mb-2">
+        Once you've got something, we don't have to worry about it. You have a bias toward 
+        action.
+      </p>
+      <h2 class="h4 sans-serif b">Passion</h2>
+      <p class="mb-2">
+        You love what you do. You spend some of your free time reading blogs/books, or going to meet ups.
+      </p>
+      <h2 class="h4 sans-serif b">Just Generally Awesome</h2>
+      <p class="mb-2">
+        You take your work seriously but not yourself. You show everyone respect regardless 
+        of the circumstances. Extra points if we think you're funny.
+      </p>
+      <h2 class="h4 sans-serif b">Location</h2>
+      <p class="mb-2">
+        While our preference is for everyone to work in San Francisco, we will make an exception 
+        if you are an exceptional fit.
+      </p>
+      </article>
     </div>
-  </section>
+    <div class="section-padding bg-green">
+      <div class="column-wrapper">
+        <h1 class="h3">Open Positions</h1>
+        <ul class="large-list ct mt-1">
+          {% for post in paginator.posts %}
+            <li class="large-list-i bg-ligreen trans-bg">
+              <a href="{{post.url}}" title="{{post.title}}" class="wht link caps b f3 trans-pl">
+                {{ post.title }} <span>»</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+</section>

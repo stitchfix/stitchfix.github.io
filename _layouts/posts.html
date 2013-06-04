@@ -1,17 +1,18 @@
 {% include _head.html %}
-<body>
+  <body>
   {% include _header.html %}
-  <section>
-    <div class="column-wrapper section-padding">
-      {{content}}
-    </div>
-  </section>
-  <section>
-    <div class="column-wrapper">
-    {% include _related_posts.html %}
-  </div>
-  </section>
-  {% include _footer.html %}
+    <section>
+      <div class="column-wrapper section-padding">
+        {{content}}
+        {% include _contact_us.html %}
+      </div>
+    </section>
+    <section>
+      <div class="column-wrapper">
+        {% include _related_posts.html %}
+      </div>
+    </section>
+    {% include _footer.html %}
     {% include _js.html %}
   </body>
-  </html>
+</html>

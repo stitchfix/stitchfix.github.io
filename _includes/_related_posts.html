@@ -3,8 +3,8 @@
   <ul class="large-list list">
     {% for post in site.related_posts limit: 3 %}
       <li class="large-list-i">
-        <a href="{{ post.url }}" class="link caps b f3" title="{{post.title}}">
-            {{ post.title }} »
+        <a href="{{ post.url }}" class="link caps b f3 trans-pl" title="{{post.title}}">
+          {{ post.title }} <span>»</span>
         </a>
       </li>
     {% endfor %}
