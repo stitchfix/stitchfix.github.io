@@ -12,7 +12,7 @@ Enough said.
 
 ### rake dev
 ```
-     jekyll --server --watch
+     jekyll serve --watch
 ```
 
 Sets up jekyll server for dev on port 4000. Site is regenerated everytime you save a file. 
