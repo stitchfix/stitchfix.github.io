@@ -37,13 +37,7 @@
     <div class="section-padding bg-green">
       <div class="column-wrapper">
         <h1 class="h3">Open Positions</h1>
-        <ul class="large-list ct mt-1">
-          {% for post in paginator.posts %}
-            <li class="large-list-i bg-ligreen trans-bg">
-              <a href="{{post.url}}" title="{{post.title}}" class="wht link caps b f3 trans-pl">
-                {{ post.title }} <span>»</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+        {% include _job_links.html %}
+      </div>
+    </div>
 </section>
