@@ -1,5 +1,8 @@
-.list {
+ul, ol, .list {
   list-style:none;
+  li{
+    margin-left: 20px;
+  }
 }
 
 .horizontal-list {
