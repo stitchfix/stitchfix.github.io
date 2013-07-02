@@ -17,7 +17,7 @@ googleID: 33032898-1
 paginate: 10
 
 # Style of permalinks
-permalink: pretty
+permalink: /blog/:year/:month/:day/:title
 
 # Variable format options for URL styles below
 # pretty                                          => /2009/04/29/slap-chop/index.html
