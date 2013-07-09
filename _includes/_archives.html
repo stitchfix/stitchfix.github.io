@@ -3,8 +3,8 @@
     {% for post in site.posts limit: 25 %}
       <li class="large-list-i bg-ligreen bg-ligreen-no-hover trans-bg">
         <a href="{{ post.url }}" title="{{post.title}}" class="link">
-          <span class="caps b f3 trans-pl">{{ post.title }}</span>
-          <date datetime="{{post.date}}" class="meta">{{ post.date | date_to_long_string }}</date>
+          <span class="caps b f3 trans-pl green">{{ post.title }}</span>
+          <date datetime="{{post.date | date: "%Y-%m-%d"}}" class="meta">{{post.date | date: "%B %d, %Y"}}</date>
         </a>
       </li>
     {% endfor %}
