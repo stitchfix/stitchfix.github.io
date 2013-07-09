@@ -458,6 +458,13 @@ p, .copy {
 .vm {
   vertical-align: middle; }
 
+.meta {
+  font-size: 14px;
+  color: #999; }
+
+li .meta {
+  margin-left: 20px; }
+
 /* ==========================================================================
    grid
    ========================================================================== */
@@ -725,6 +732,9 @@ p, .copy {
 .mb-4 {
   margin-bottom: 40px!important; }
 
+.pb-0 {
+  padding-bottom: 0!important; }
+
 .my-heading-clear {
   margin: 20px 0 40px 0; }
 
@@ -792,6 +802,10 @@ p.mb-2 {
 .bg-ligreen:hover {
   color: #fff;
   background: #b0dedd; }
+
+.bg-ligreen-no-hover,
+.bg-ligreen-no-hover:hover {
+  background: none; }
 
 .trans-bg {
   transition: background 0.5s, color 0.5s;
@@ -983,6 +997,9 @@ ul, ol, .list {
   list-style: none; }
   ul li, ol li, .list li {
     margin-left: 20px; }
+
+.no-gutter li {
+  margin-left: 0; }
 
 .horizontal-list {
   width: 100%;

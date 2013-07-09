@@ -4,6 +4,11 @@ ul, ol, .list {
     margin-left: 20px;
   }
 }
+.no-gutter{
+  li{
+    margin-left: 0;
+  }
+}
 
 .horizontal-list {
   width:100%;

@@ -1,10 +1,12 @@
 <article>
-  <ul class="large-list ct mt-1">
+  <ul class="large-list ct mt-1 mb-4 no-gutter">
     {% for post in site.posts limit: 25 %}
-      <li><a href="{{ post.url }}" title="{{post.title}}">
-        <date datetime="{{post.date}}" class="meta">{{ post.date | date_to_long_string }}</date>
-        {{ post.title }}
-      </a></li>
+      <li class="large-list-i bg-ligreen bg-ligreen-no-hover trans-bg">
+        <a href="{{ post.url }}" title="{{post.title}}" class="link">
+          <span class="caps b f3 trans-pl">{{ post.title }}</span>
+          <date datetime="{{post.date}}" class="meta">{{ post.date | date_to_long_string }}</date>
+        </a>
+      </li>
     {% endfor %}
   </ul>
 </article>
