@@ -76,46 +76,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
   </li>
 </ol>
 
-{% highlight ruby linenos=table %}
-module V2
-  class CustomersController < ApplicationController
-    def create
-      # Need to send a hash of :id, :name, :email
-      result = Braintree::Customer.create({
-        :id => params[:id],
-        :first_name => params[:name].split(' ').first,
-        :last_name => params[:name].split(' ').last,
-        :email => params[:email]
-      })
-      resp = { success: result.success?, message: (result.message rescue '') }
-      respond_to do |format|
-        format.json { render json: resp }
-      end
-    end
-  end
-end
-{% endhighlight %}
-
-{% highlight ruby linenos %}
-module V2
-  class CustomersController < ApplicationController
-    def create
-      # Need to send a hash of :id, :name, :email
-      result = Braintree::Customer.create({
-        :id => params[:id],
-        :first_name => params[:name].split(' ').first,
-        :last_name => params[:name].split(' ').last,
-        :email => params[:email]
-      })
-      resp = { success: result.success?, message: (result.message rescue '') }
-      respond_to do |format|
-        format.json { render json: resp }
-      end
-    end
-  end
-end
-{% endhighlight %}
-
 {% highlight ruby %}
 module V2
   class CustomersController < ApplicationController
@@ -176,6 +136,46 @@ $(function(){
     <?php the_content(); ?>
   </div>
 <?php get_footer(); ?>
+{% endhighlight %}
+
+{% highlight ruby linenos=table %}
+module V2
+  class CustomersController < ApplicationController
+    def create
+      # Need to send a hash of :id, :name, :email
+      result = Braintree::Customer.create({
+        :id => params[:id],
+        :first_name => params[:name].split(' ').first,
+        :last_name => params[:name].split(' ').last,
+        :email => params[:email]
+      })
+      resp = { success: result.success?, message: (result.message rescue '') }
+      respond_to do |format|
+        format.json { render json: resp }
+      end
+    end
+  end
+end
+{% endhighlight %}
+
+{% highlight ruby linenos %}
+module V2
+  class CustomersController < ApplicationController
+    def create
+      # Need to send a hash of :id, :name, :email
+      result = Braintree::Customer.create({
+        :id => params[:id],
+        :first_name => params[:name].split(' ').first,
+        :last_name => params[:name].split(' ').last,
+        :email => params[:email]
+      })
+      resp = { success: result.success?, message: (result.message rescue '') }
+      respond_to do |format|
+        format.json { render json: resp }
+      end
+    end
+  end
+end
 {% endhighlight %}
 
 
