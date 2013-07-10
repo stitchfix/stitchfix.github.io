@@ -9,10 +9,14 @@ Stitch Fix Engineering & Analytics jobs site
 Enough said.
 
 # Get Started
-If you don't have jekyll 1.0+ installed yet run:
+
+    bundle install
+
+Or:
 
 ```
-gem install jekyll
+gem install jekyll # need > 1.0
+gem install sass
 ```
 
 Once jekyll is installed, grab the repo from github:
@@ -29,7 +33,7 @@ jekyll serve --watch
 ```
 
 Sets up jekyll server for dev on port 4000. Site is regenerated everytime you save a file. 
-NOTE: Changing _config.yml will require a restart of the jekyll server to see changes.
+NOTE: Changing `_config.yml` will require a restart of the jekyll server to see changes.
 To restart server, go to terminal tab that server is running in then press
     ctrl+C ⇧  enter
 
