@@ -18,7 +18,7 @@ gem install jekyll
 Once jekyll is installed, grab the repo from github:
 
 ```
-git clone git@github.com:stitchfix/doom-patrol.git 
+git clone git@github.com:stitchfix/doom.git
 ```
 
 ## Rake tasks
@@ -38,6 +38,8 @@ To restart server, go to terminal tab that server is running in then press
 sass --watch _sass:css 
 ```
 
+(```gem install sass``` if you don't already have it)
+
 ### rake clean
 ```
 rm -rf _site  
@@ -51,3 +53,16 @@ should not be commited and pushed...ever.
 sass --watch _sass:css --style compressed
 ```
 Outputs minified css from the compiler.
+
+
+# Deploying to the website
+
+```
+git fetch                 // get latest from origin repo
+git checkout gh-pages     // go to the gh-pages branch (it may say it's a new branch, that's ok. origin/gh-pages is a special "detached branch")
+git merge master          // bring gh-pages up to date with master
+git push origin gh-pages  // push the changes
+git checkout master       // return to the master branch
+```
+
+Note: This means you should treat ```master``` as we do in any other branch. It's production-ready with the latest code. Don't work directly in ```gh-pages```.
