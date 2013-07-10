@@ -1,5 +1,13 @@
-.list {
+ul, ol, .list {
   list-style:none;
+  li{
+    margin-left: 20px;
+  }
+}
+.no-gutter{
+  li{
+    margin-left: 0;
+  }
 }
 
 .horizontal-list {
@@ -19,14 +27,14 @@
   margin-bottom:10px;
 }
 
-.list-prose {
+.list-prose, .post .content ul {
   list-style-type:disc;
   @include breakpoint(one-hand) {
     list-style-type:none;
   }
 }
 
-.list-prose--i {
+.list-prose--i, .post .content li {
   padding:5px 0;
   .text {padding:0 0 0 10px;}
     @include breakpoint(one-hand) {
@@ -50,5 +58,8 @@
   padding:20px 0;
   display:block;
   width:100%;
+}
+.footer-nav li:first-child{
+  margin-left: 0;
 }
 

@@ -55,6 +55,11 @@
   background: lighten($sf-green, 5%);
 }
 
+.bg-ligreen-no-hover,
+.bg-ligreen-no-hover:hover{
+  background: none;
+}
+
 .trans-bg {
   transition:background .5s, color .5s;
   -webkit-transition:background .5s, color .5s;

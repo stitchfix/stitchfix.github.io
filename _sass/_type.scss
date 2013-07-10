@@ -76,3 +76,22 @@ p,.copy   { line-height:1.618; }
 
 .sans-serif { font-family:"museo-sans"; }
 .vm { vertical-align:middle;}
+
+.meta{
+  font-size: 14px;
+  color: #999;
+}
+li .meta{
+  margin-left: 20px;
+}
+.intro{
+  font-size: 24px;
+  line-height: 1.5em;
+}
+.post{
+  .meta{
+    font-size: 16px;
+    color: #333;
+    font-style: italic;
+  }
+}
