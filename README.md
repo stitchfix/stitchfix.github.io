@@ -65,4 +65,4 @@ git push origin gh-pages  // push the changes
 git checkout master       // return to the master branch
 ```
 
-Note: This means you should treat ```master``` as we do in any other branch. It's production-ready with the latest code. Don't work directly in ```gh-pages```.
+Note: This means you should treat ```master``` as we do in any other repo. It's production-ready with the latest code. Don't work directly in ```gh-pages```.
