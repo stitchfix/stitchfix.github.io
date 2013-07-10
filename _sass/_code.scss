@@ -1,4 +1,4 @@
-.highlighttable, code, .code {
+.highlighttable, pre code, .code {
   $code-border-radius: 6px;
   border-top-right-radius: $code-border-radius;
   border-bottom-right-radius: $code-border-radius;
@@ -7,7 +7,7 @@
   background-color: $grey-subtle;
 }
 code, .code {
-  display: block;
+  display: inline;
   font-family: 
     Consolas, 
     "Andale Mono WT", 
@@ -23,6 +23,10 @@ code, .code {
     Courier, 
     monospace;
   font-size: 14px;
+  padding: 0.2em;
+}
+pre code {
+  display: block;
   line-height: 1.4;
   letter-spacing: 0.1em;
   margin: 1em 0;
