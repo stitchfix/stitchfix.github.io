@@ -2,8 +2,8 @@
 layout: posts
 title: "Getting OmniAuth with Google Apps to Work on Heroku"
 author: "Dave Copeland"
-date: 2013-04-29 11:01
-published: false
+date: 2013-07-11 11:01
+published: true
 categories: 
 ---
 
@@ -25,7 +25,7 @@ out-of-box configurations recommend by OmniAuth.
 
 _tl;dr scroll down_
 
-This is not a dig at OmniAuth - it's super awesome.  It's just that it bakes in a lot of assumptions that may not hold if you are using Heroku or are follow the [12-factor][12factor] app architecture.   You end up needing to know a bit more about how things are working, and you have to stop trusting default configurations.
+This is not a dig at OmniAuth - it's super awesome.  It's just that it bakes in a lot of assumptions that may not hold if you are using Heroku or are following the [12-factor][12factor] app architecture.   You end up needing to know a bit more about how things are working, and you have to stop trusting default configurations.
 
 First, the general setup of OmniAuth recommends this:
 
