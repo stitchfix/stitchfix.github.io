@@ -208,7 +208,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -428,7 +428,7 @@ h6, .h6, .f6 {
    ========================================================================== */
 /** Bold things */
 strong, b, .b {
-  font-weight: bold !important; }
+  font-weight: bold!important; }
 
 /** Italicize things */
 em, i, .i {
@@ -729,6 +729,9 @@ li .meta {
 .pr-1 {
   padding-right: 10px; }
 
+.pb-1 {
+  padding-bottom: 10px; }
+
 .pt-1 {
   padding-top: 10px; }
 
@@ -739,29 +742,32 @@ li .meta {
   margin: 20px 0 !important; }
 
 .mb-1 {
-  margin-bottom: 10px !important; }
+  margin-bottom: 10px!important; }
+
+.ml-4 {
+  margin-left: 40px!important; }
 
 .mb-4 {
-  margin-bottom: 40px !important; }
+  margin-bottom: 40px!important; }
 
 .pb-0 {
-  padding-bottom: 0 !important; }
+  padding-bottom: 0!important; }
 
 .my-heading-clear {
   margin: 20px 0 40px 0; }
 
 .h4 {
-  margin-bottom: 0px !important; }
+  margin-bottom: 0px!important; }
 
 p.mb-2 {
-  margin-top: 10px !important;
+  margin-top: 10px!important;
   margin-bottom: 40px; }
 
 .default {
   color: #464547; }
 
 .wht {
-  color: white !important; }
+  color: #fff!important; }
 
 .bg-dark {
   background-color: #464547;
@@ -798,8 +804,8 @@ p.mb-2 {
 
 .opacity-hover:hover {
   opacity: 0.5;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s; }
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
 
 @media screen and (max-width: 479px) {
   .mobile-list-border {
@@ -820,20 +826,20 @@ p.mb-2 {
   background: none; }
 
 .trans-bg {
-  transition: background .5s, color .5s;
-  -webkit-transition: background .5s, color .5s; }
+  transition: background 0.5s, color 0.5s;
+  -webkit-transition: background 0.5s, color 0.5s; }
 
 .trans-bg:hover {
-  transition: background .5s, color .5s;
-  -webkit-transition: background .5s, color .5s; }
+  transition: background 0.5s, color 0.5s;
+  -webkit-transition: background 0.5s, color 0.5s; }
 
 .trans-pl span {
-  transition: padding-left ease-in-out .3s;
-  -webkit-transition: padding-left ease-in-out .3s, color ease-in-out .3s; }
+  transition: padding-left ease-in-out 0.3s;
+  -webkit-transition: padding-left ease-in-out 0.3s, color ease-in-out 0.3s; }
 
 .trans-pl:hover span {
-  transition: padding-left ease-in-out .3s;
-  -webkit-transition: padding-left ease-in-out .3s;
+  transition: padding-left ease-in-out 0.3s;
+  -webkit-transition: padding-left ease-in-out 0.3s;
   padding-left: 10px; }
 
 /* ==========================================================================
@@ -985,8 +991,8 @@ p.mb-2 {
 
 .link, .post .content a {
   text-decoration: none;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s; }
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
 
 .btn-click {
   text-decoration: none;
@@ -1044,7 +1050,7 @@ ul, ol, .list {
       font-size: 16px; } }
 
 .no-bullets {
-  list-style-type: none !important; }
+  list-style-type: none!important; }
 
 .list-prose--i {
   padding: 5px 0; }
@@ -1060,9 +1066,6 @@ ul, ol, .list {
   display: block;
   width: 100%; }
 
-.footer-nav li:first-child {
-  margin-left: 0; }
-
 /* ==========================================================================
    ICON STYLES
    ========================================================================== */
@@ -1075,22 +1078,22 @@ ul, ol, .list {
   margin-right: 10px;
   color: #464547;
   -webkit-transform: scale(1);
-  -webkit-transition: color .4s, -webkit-transform .4s;
+  -webkit-transition: color 0.4s, -webkit-transform 0.4s;
   transform: scale(1);
-  transition: color .4s, transform; }
+  transition: color 0.4s, transform; }
 
 .hov-c:hover {
   color: #56b9b7;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
-  -webkit-transition: color .4s, -webkit-transform .4s;
-  transition: color .4s, transform .4s; }
+  -webkit-transition: color 0.4s, -webkit-transform 0.4s;
+  transition: color 0.4s, transform 0.4s; }
 
 /**
  * Sets text in li to be label format an vertically aligned to middle
  */
 .icon-wrapper {
-  vertical-align: middle !important;
+  vertical-align: middle!important;
   font-size: 14px;
   text-transform: uppercase; }
 
@@ -1130,7 +1133,7 @@ iframe {
 
 code, .code {
   display: inline;
-  font-family: Consolas,  "Andale Mono WT",  "Andale Mono",  "Lucida Console",  "Lucida Sans Typewriter",  "DejaVu Sans Mono",  "Bitstream Vera Sans Mono",  "Liberation Mono",  "Nimbus Mono L",  Monaco,  "Courier New",  Courier,  monospace;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   font-size: 14px;
   padding: 0.2em; }
 
@@ -1411,3 +1414,13 @@ pre code {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+.nav {
+  font-size: 14px; }
+  .nav li:first-child {
+    margin-left: 0; }
+
+@media screen and (max-width: 479px) {
+  .header-nav {
+    margin-left: 0!important; } }
+.header-nav a {
+  font-weight: normal; }
