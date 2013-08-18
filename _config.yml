@@ -8,6 +8,9 @@ author: "Stitch Fix"
 #url: "http://stitchfix.github.io/doom/"
 #url: "http://localhost:4000"
 url: "http://stitchfixjobs.com"
+title: "Stitch Fix Tech Blog"
+production_url: "http://stitchfixjobs.com/blog"
+atom_path: "atom.xml"
 
 # Your UA tracking number (i.e 35858753-1) for Google Analytics. 
 # If you comment this out, or don't fill out this parameter - Google analytics won't be included. 
