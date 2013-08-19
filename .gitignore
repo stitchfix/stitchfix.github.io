@@ -2,3 +2,6 @@ _site/
 .sass-cache/
 .rvmrc
 .idea/
+serve/
+*.swp
+
