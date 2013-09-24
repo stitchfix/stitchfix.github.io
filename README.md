@@ -62,12 +62,5 @@ Outputs minified css from the compiler.
 # Deploying to the website
 
 ```
-git fetch                 // get latest from origin repo
-git checkout gh-pages     // go to the gh-pages branch (it may say it's a new branch, that's ok. origin/gh-pages is a special "detached branch")
-git merge master          // bring gh-pages up to date with master
-git push origin gh-pages  // push the changes
-git checkout master       // return to the master branch
-git branch -D gh-pages    // delete your local gh-pages branch since it is orphaned from the origin (not 100% sure this is necessary but it can't hurt)
+git push origin master
 ```
-
-Note: This means you should treat ```master``` as we do in any other repo. It's production-ready with the latest code. Don't work directly in ```gh-pages```.
