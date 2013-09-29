@@ -1,14 +1,11 @@
-desc "Automatically generate site at :4000 for local dev"
 task :dev do
-  sh "jekyll serve --watch --trace"
+  abort "foreman start, yo"
 end # task :dev
 
-desc "Start Sass so that is compiles to css upon file save"
 task :sass do
-  sh "sass --watch _sass:css"
+  abort "foreman start, yo"
 end # task :sass
 
-desc "Start Sass so that is compiles and minifies upon file save"
 task :minify do
   sh "sass --watch _sass:css --style compressed"
 end # task :minify
@@ -17,3 +14,7 @@ desc "Remove _site from directory before committing"
 task :clean do
   sh "rm -rf _site"
 end # task :clean
+
+task :default do
+  abort "foreman start, yo"
+end
