@@ -55,8 +55,8 @@ Which turns our template into:
 <%= @event.username %>
 {% endhighlight %}
 
-Where `@event` is actually an `EventPresenter`.  The "problem" here is that we also need access to other attributes of `Event`,
-such as the `event_name` and `created_at` date.  In a sense, we want our `EventPresenter` to behave just like the
+where `@event` is actually an `EventPresenter`.  The "problem" here is that we also need access to other attributes of `Event`,
+such as the `event_name` and `created_at`.  In a sense, we want our `EventPresenter` to behave just like the
 `Event` that was given to its initializer, but with the additional `username` method as well.  We can do this by telling
 `EventPresenter` to delegate methods to its internal `Event` instance.
 
