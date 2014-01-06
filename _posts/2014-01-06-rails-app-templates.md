@@ -9,7 +9,7 @@ published: true
 
 The ability to quickly create and deploy an application is crucial to avoiding a monolithic architecture.  I touched on this in my 
 [talk at RubyNation][3], as well as [my post][4] here, but a key part of that ability is to script the actual creation of the application so that it's
-ready for your infrastructure and your team.  At Stitch Fix, we  use Ruby on Rails for most of our applications and, fortunately enough, Rails provides a handy feature called [applicaiton templates][1] that allows you to script the creation of a new applications with whatever boilerplate you need.
+ready for your infrastructure and your team.  At Stitch Fix, we  use Ruby on Rails for most of our applications and, fortunately enough, Rails provides a handy feature called [application templates][1] that allows you to script the creation of a new applications with whatever boilerplate you need.
 
 For example, internal apps at Stitch Fix use Google Apps and OmniAuth for login, Twitter Bootstrap (with a customized skin) for
 CSS, RSpec for tests, and a smattering of other gems needed for deployment to Heroku.  Setting this up by hand for new apps can be error prone and
