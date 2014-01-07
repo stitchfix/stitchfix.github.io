@@ -92,7 +92,7 @@ a certain file is in when asking to manipulate it.
 Suppose you want to add a line to the top of `environment.rb` to force stdout to sync.  You could do:
 
 {% highlight ruby %}
-insert_into_file 'config/environment.rb', "$stdout.sync = true\n"
+insert_into_file 'config/environment.rb', "$stdout.sync = true\n",
                  before: "# Load the rails application"
 {% endhighlight %}
 
