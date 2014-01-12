@@ -763,6 +763,9 @@ p.mb-2 {
   margin-top: 10px !important;
   margin-bottom: 40px; }
 
+p.tight {
+  margin: 0; }
+
 .default {
   color: #464547; }
 
