@@ -1,5 +1,5 @@
+$code-border-radius: 6px;
 .highlighttable, pre code, .code {
-  $code-border-radius: 6px;
   border-top-right-radius: $code-border-radius;
   border-bottom-right-radius: $code-border-radius;
   border: 1px solid $grey-light;
@@ -23,7 +23,10 @@ code, .code {
     Courier, 
     monospace;
   font-size: 14px;
-  padding: 0.2em;
+  padding: 0.3em;
+  background-color: $grey-subtle;
+  border-radius: $code-border-radius;
+  border: 1px solid $grey-light;
 }
 pre code {
   display: block;

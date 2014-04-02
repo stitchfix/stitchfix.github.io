@@ -5,14 +5,14 @@ descripiton: "Stitch Fix is a styling as a service start-up based in San Francis
 
 # Owner (organization or individual) of site content
 author: "Stitch Fix"
-url: "http://stitchfixjobs.com"
+url: "http://technology.stitchfix.com/"
 title: "Stitch Fix Tech Blog"
-production_url: "http://stitchfixjobs.com/blog"
+production_url: "http://technology.stitchfix.com/blog"
 atom_path: "atom.xml"
 
 # Your UA tracking number (i.e 35858753-1) for Google Analytics. 
 # If you comment this out, or don't fill out this parameter - Google analytics won't be included. 
-googleID: 33032898-1
+googleID: 25598599-8
 
 # Pagination variable for how many posts to show in a list
 paginate: 10
