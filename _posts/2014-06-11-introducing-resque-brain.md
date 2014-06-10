@@ -13,7 +13,7 @@ or getting work out of the web request/response loop, Resque is our go-to techno
 Because we have many single-purpose applications (instead of one awful MonoRail),
 we also have many Resque instances (we can't have an influx of user signups cause 
 shipping label generation to slow down, thus taking out the warehouse).  Getting an
-overview of all of these instances at once is impossible with resque-web.
+overview of all of these instances at once is impossible with [resque-web](https://github.com/resque/resque/tree/1-x-stable#the-front-end).
 
 Today, we're introducing [Resque Brain][resque-brain], an open source application that
 monitors multiple resque instances.  It has a mobile-friendly UI, and provides
