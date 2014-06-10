@@ -20,7 +20,7 @@ monitors multiple resque instances.  It has a mobile-friendly UI, and provides
 better tools for managing the failed queue.  It also includes some basic monitoring
 and statistics tasks.
 
-We've been using it for about a month.  It's open source, Apache-licensend, and ready
+We've been using it for about a month.  It's open source, Apache-licensed, and ready
 for action.  [Source is on GitHub][resque-brain-source].
 
 ![Screenshot](https://camo.githubusercontent.com/76a0d96bdf902ba943bf84682144d0701bdeddc2/68747470733a2f2f7777772e657665726e6f74652e636f6d2f73686172642f7337312f73682f39373630623730622d393062372d346162652d613865372d3739663264336432323165362f30313934373137376334353265313535653364346136616663656463663263312f646565702f302f5265737175652d427261696e2e706e67)
