@@ -7,7 +7,7 @@ published: true
 categories: 
 ---
 
-We use [Resque][resque] for at Stitch Fix…a lot.  For background processing
+We use [Resque][resque] at Stitch Fix…a lot.  For background processing
 or getting work out of the web request/response loop, Resque is our go-to technology.
 
 Because we have many single-purpose applications (instead of one awful MonoRail),
