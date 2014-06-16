@@ -4,6 +4,7 @@
       <li class="large-list-i bg-ligreen bg-ligreen-no-hover trans-bg">
         <a href="{{ post.url }}" title="{{post.title}}" class="link">
           <span class="b f3 trans-pl green">{{ post.title }}</span>
+          <span class="f5 trans-pl default">by {{ post.author }}</span>
           <date datetime="{{post.date | date: "%Y-%m-%d"}}" class="meta">{{post.date | date: "%B %d, %Y"}}</date>
         </a>
       </li>
