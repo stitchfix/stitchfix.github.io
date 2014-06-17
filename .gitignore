@@ -4,4 +4,4 @@ _site/
 .idea/
 serve/
 *.swp
-
+.DS_Store
