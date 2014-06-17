@@ -31,6 +31,7 @@ GEM
     pygments.rb (0.5.1)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
+    redcarpet (3.1.1)
     safe_yaml (0.7.1)
     sass (3.2.9)
     syntax (1.0.0)
@@ -43,4 +44,5 @@ PLATFORMS
 DEPENDENCIES
   foreman
   jekyll
+  redcarpet
   sass
