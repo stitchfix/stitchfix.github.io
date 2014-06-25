@@ -18,7 +18,7 @@ Some of the algorithms we use at Stitch Fix have very specialized processing tha
 
 On a more personal note, I’ve had the pleasure of working with Jeff both at Netflix, and in his function as an advisor to Stitch Fix. I’ve never met someone more passionate about coding. And, it’s contagious.  He inspires each of us to instill a bit more elegance into our solutions.   As we continue to evolve as a company, I believe his expertise and leadership will be instrumental in helping grow our algorithms team.
 
-If you’re interested in learning more about the Stitch Fix algorithms and Engineering teams, please visit our [Engineering and Analytics Careers page][jobspage] for more information and current jobs listings. 
+If you’re interested in learning more about the Stitch Fix algorithms and Engineering teams, please visit our [Engineering and Algorithms Careers page][jobspage] for more information and current jobs listings. 
 
 
 [Aegisthus]: http://techblog.netflix.com/search/label/Aegisthus
