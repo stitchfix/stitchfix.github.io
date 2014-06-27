@@ -31,8 +31,8 @@ In the context of a Resque job, _idempotent_ essentially means that you can retr
 At Stitch Fix, we wanted our jobs to "just work" and be automatically retriable, so we set out to make them as idempotent as we could.
 The trickiest one was in charging a client's credit card.
 
-We charge our clients a styling fee (inside a Resque job) before we ship out their Fix. We saw the same issues that Grouper did–as our service grew in
-popularity, we had more and more of these jobs, and were therefore seeing more and more of them fail due to a `TERM` signal.
+We charge our clients a styling fee (inside a Resque job) before we ship out their Fix. 
+We saw the same issues that Grouper did–as our service grew in popularity, we had more and more of these jobs, and were therefore seeing more and more of them fail due to a `TERM` signal.
 
 Because these jobs charged our customers money via a third party, they are tricky to retry, and hard to make idempotent.
 The reason is that it's not always clear if the charge to their card actually went through at Braintree (our credit card processor) or not.
