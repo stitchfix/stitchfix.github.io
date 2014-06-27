@@ -1,0 +1,2395 @@
+@charset "UTF-8";
+/* Humble Kit
+   ========================================================================== */
+/* Base - styles and settings needed for all projects.
+   ========================================================================== */
+/* ==========================================================================
+   Global variables
+   ========================================================================== */
+/**
+* These variables are needed for almost all parts of this project, so they
+* are always included.
+*/
+/* Defaults
+   ========================================================================== */
+/* Custom breakpoints
+   ========================================================================== */
+/**
+* These variables represent the max-width of a size break.
+*
+* Divvy these up however you want, but—by default—we're looking at something
+* like mobile (xs), tablet (sm), smaller/laptop (md), big lap/small monitor (lg),
+* standard monitor (xl).
+*
+* Feel free to customize these size breaks and/or rename and replace these
+* variable names.
+*/
+/* Padding
+   ========================================================================== */
+/**
+* Multi-purpose, generic padding schema.
+*
+* TODO: do i need to do this?
+*/
+/* Typography
+   ========================================================================== */
+/**
+* 1. The base font size of the site. This variable controls the basis of the
+*    vertical rhythm of the site. Since everything's in rems, the rem will size
+*    off of this number exactly.
+*
+*    So what's awesome about this? You now have complete control over a very
+*    powerful unit of math that controls your entire site. Congratulations!
+*
+*    Padding and margins are set in rems (by default) as is the entire typography
+*    scale of the site, so all you need to do is modify this just a bit to get
+*    a totally new scale.
+*
+* 2. Modular scale ratio: This system makes use of math (oy, vey...) to create
+*    sequential, relational type in a scale. Basically, it's a simple way to
+*    get good-looking type sizes using only a couple of variables.
+*
+*    Reading: http://alistapart.com/article/more-meaningful-typography
+*    Practice: http://modularscale.com/
+*
+*    $type-ratio is a number or fraction that defines our exponential scale.
+*    Even minor changes can make a noticeable impact on your type scale. Don't
+*    worry though: the vertical rhythm is calculated and will accept any
+*    changes in scale and adapt. See _mixins.css.scss for more info.
+*/
+/* 1 */
+/* 2 */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+   Modified by Brian Cleveland (@yorthehunter)
+*/
+html, body {
+  height: 100%;
+  background-color: white; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+img {
+  display: block; }
+
+/* ==========================================================================
+   Global Mixins
+   ========================================================================== */
+/**
+* These mixins are needed for almost all parts of this project, so they are
+* always included.
+*/
+/* Media breakpoint, super-simple version
+   ========================================================================== */
+/**
+* 1. Sass magic that lets us pass content to the mixin. More reading:
+*    http://krasimirtsonev.com/blog/article/SASS-content-directive-is-a-wonderful-thing
+*/
+/* Returns exponent
+   ========================================================================== */
+/**
+* 1. Reset value
+* 2. Positive integers get multiplied
+* 3. Negative integers get divided. A number divided by itself is 1
+* 4. Return the last value written
+*/
+/* Font size and line height mixin
+   ========================================================================== */
+/**
+* 1. Multiply by 1 unit (e.g. rem) to get the size in units
+* 2. Do a little math and round it to get a pleasant and scalable line height.
+*    This is a necessity for rem-based, beautiful vertical rhythm. At least, it
+*    is for this system.
+* 3. Optional: For aesthetics, adjust letter-space to -1% of font size.
+*/
+/* Typography - everything typography-related
+   ========================================================================== */
+/*doc
+---
+title: Typography
+name: basic-typography
+category: Typography
+---
+
+The basic typography and vertical rhythm is already setup by default. It's
+all variable-driven and moderately easy to modify.
+
+*/
+/* Basic font variables
+   ========================================================================== */
+/**
+* 1. Optional: User font family definition. Add a font or fonts as a variable
+*    and it will be injected into the site font family (serif or sans).
+* 2. $font-family-base defines which style of font (defined before) to use as
+*    default for the site. $font-family-sans-serif by default.
+* 3. Default color for text. If using dark on light, avoid solid black (#000).
+*    This is just good practice and looks nicer, too.
+* 4. Some variables for <small> text. Accepts a size and a unit.
+*/
+/* 1 */
+/* 2 */
+/* 3 */
+/* 4 */
+/* Headings variables
+   ========================================================================== */
+/* Font size variables
+   ========================================================================== */
+/**
+* I choose not to use classes or variables with the greek naming convention
+* (i.e. ".alpha, $beta, etc.")
+* I find it easier not to have to learn new languages (however common) nor
+* have to think about (however briefly) a class and its implication.
+*
+* In this numerical naming convention, it's easier to associate lower
+* numbers with larger text, simply because that convention is already in
+* place with heading markup (h1 - h6).
+*
+* Also included here are a few more font sizes with the sm, md, lg
+* naming convention.
+*
+* 1. Expressed as progressive steps in scale (as integers). See
+*    _variables.css.scss for more information.
+*    Basically, the type grows (or shrinks) from a base font size variable
+*    at a rate that is exponential according to the integers below.
+*    If this makes no sense, it might be easier to try changing these numbers,
+*    the $font-size-base, or the $type-ratio and seeing the results in your
+*    application. Tweak them to get something that works for you.
+*/
+/* 1 */
+/* Typography basics
+   ========================================================================== */
+/**
+* 1. This line sets up our rem size for the site. We set it up as the
+*    $font-size-base so we can keep tight control over the font sizes and
+*    vertical rhythm.
+*    You can test out what a change to this number looks like by changing it
+*    to, oh say, 30px and refreshing the page. Everything will scale up
+*    drastically because everything in this app is rem-based :}
+*/
+html, body {
+  font-size: 16px; }
+
+/* 1 */
+body {
+  line-height: 1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #444444; }
+
+strong,
+b {
+  font-weight: 700; }
+
+em,
+i {
+  font-style: italic; }
+
+/* Font size placeholders
+   ========================================================================== */
+/**
+* @extend these placeholders in modules to give a component a specific font size.
+*/
+h1, .h1 {
+  font-size: 4.50767rem;
+  /* 1 */
+  margin-bottom: 4rem;
+  line-height: 5rem;
+  /* 2 */
+  letter-spacing: -0.04508rem;
+  /* 3 */ }
+
+h2, .h2 {
+  font-size: 2.93163rem;
+  /* 1 */
+  margin-bottom: 3rem;
+  line-height: 3rem;
+  /* 2 */
+  letter-spacing: -0.02932rem;
+  /* 3 */ }
+
+h3, .h3, input.input-lg:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+select.input-lg,
+textarea.input-lg {
+  font-size: 2.36421rem;
+  /* 1 */
+  margin-bottom: 2rem;
+  line-height: 3rem;
+  /* 2 */
+  letter-spacing: -0.02364rem;
+  /* 3 */ }
+
+h4, .h4 {
+  font-size: 1.90662rem;
+  /* 1 */
+  margin-bottom: 2rem;
+  line-height: 2rem;
+  /* 2 */
+  letter-spacing: -0.01907rem;
+  /* 3 */ }
+
+h5, .h5,
+p, .p,
+dl, ol, ul {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  /* 2 */
+  letter-spacing: -0.0124rem;
+  /* 3 */ }
+
+h6, .h6 {
+  font-size: 1rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 1rem;
+  /* 2 */
+  letter-spacing: -0.01rem;
+  /* 3 */ }
+
+/*doc
+---
+title: "Headings and paragraphs"
+name: headings-and-paragraphs
+category: Typography
+---
+
+Headings are given some default styling to give them a typographical
+hierarchy. There is more than one school of thought when using headings in
+markup. See this example:
+
+<header>
+  <h1>This is a giant header</h1>
+</header>
+
+Your output is dependent on the styles given to h1{}. If you would rather
+present your h1 as a smaller font, maybe more like an h2, then your markup
+could look like this:
+
+<header>
+  <h1 class="h2">This is a moderately big header.</h1>
+</header>
+
+Semantically, you are saying "this heading is as important as an h1, but
+should present itself as an h2".
+
+Despite being a semantically correct and easily identifiable solution, it
+doesn't always sit well in a shared development environment.
+Therefore:
+
+<header>
+  <h2>This is a moderately big header, too.</h2>
+</header>
+
+The code above works, but doesn't say as much semantically. YMMV.
+
+
+```html_example
+
+<header>
+  <h1 class="h2">This is a moderately big header.</h1>
+</header>
+<p>And this is some paragraph text.</p>
+
+```
+*/
+/**
+* 1. The .p class can be used to describe paragraph text when an actual <p>
+*    isn't used. E.g. <div class="p">Text goes here.</div>
+* 2. The last paragraph in a group of paragraphs (or single paragraph) will not
+*    have a margin below it. The complicated "not" selector will ignore this
+*    declaration for the margin-bottom (.mbN) classes, allowing the margin-bottom
+*    to instead by managed by the class.
+*    We use the :not selector because the last-of-type selector, when attached
+*    to the <p> or .p, is more specific than the .mbN class.
+*    Note: this is personal preference. Delete if you want.
+*/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 700;
+  color: inherit;
+  text-rendering: optimizeLegibility; }
+
+p:last-of-type:not([class^="mb"]), .p:last-of-type:not([class^="mb"]) {
+  /* 2 */
+  margin-bottom: 0; }
+
+.f-xl {
+  font-size: 10.65709rem;
+  /* 1 */
+  margin-bottom: 6rem;
+  line-height: 11rem;
+  /* 2 */
+  letter-spacing: -0.10657rem;
+  /* 3 */ }
+
+.f-lg {
+  font-size: 6.93099rem;
+  /* 1 */
+  margin-bottom: 5rem;
+  line-height: 7rem;
+  /* 2 */
+  letter-spacing: -0.06931rem;
+  /* 3 */ }
+
+form,
+.form, input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+select,
+textarea,
+.f-md {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  /* 2 */
+  letter-spacing: -0.0124rem;
+  /* 3 */ }
+
+.f-sm {
+  font-size: 1rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 1rem;
+  /* 2 */
+  letter-spacing: -0.01rem;
+  /* 3 */ }
+
+.f-xs {
+  font-size: 0.80645rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 1rem;
+  /* 2 */
+  letter-spacing: -0.00806rem;
+  /* 3 */ }
+
+/*doc
+---
+title: "Helper classes"
+name: helper-typography-classes
+category: Typography
+---
+
+The following are some utility classes that help control the visuals of your
+typography.
+
+**A note about placeholders:**
+
+Why include placeholders along with classes? Why not just use one or the other?
+Because there are cases to be made for each at different times.
+It's sometimes less meaningful to use a class (or @extend a placeholder).
+I've found cases for both in all of my projects, so I am proactively trying
+to create placeholders for classes that I *may* later want to @extend.
+If this makes no sense, please feel free to ignore and do what you please :}
+
+Oh, by the way: placeholders do not compile on their own, so there's no need
+to worry about bloating your code. However, classes DO compile, whether you
+use them or not, so stay cautious, friends.
+
+```html_example
+
+<div class="u">Underline text</div>
+<sup>Superscript text</sup>
+<br />
+<sub>Subscript text</sub>
+<br />
+<div class="small">Small text</div>
+<div class="strike">Strikethrough text</div>
+<div class="text-l">Align left</div>
+<div class="text-c">Align center</div>
+<div class="text-r">Align right</div>
+<div class="light">Light text</div>
+<div class="dark">Dark text</div>
+<div class="thin">Thin text</div>
+<div class="thick">Thick text</div>
+<div class="line1">Line height of 1 rem</div>
+<div class="line2">Line height of 2 rem</div>
+<div class="line3">Line height of 3 rem</div>
+<div class="line4">Line height of 4 rem</div>
+
+```
+*/
+/**
+* 1. I decided I liked this enough to put it in. <sub> and <sup> now have life.
+*    Based on this: https://gist.github.com/unruthless/413930
+*
+* 2. Line height helpers: This seems a little over-the-top-micro-managey, but
+*    since I've come across times where this is particularly useful, I've
+*    included a few helpful classes. It's worth it, I think.
+*/
+.u {
+  text-decoration: underline; }
+
+sub, sup {
+  /* 1 */
+  font-size: 65%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5rem; }
+
+sub {
+  bottom: -0.25rem; }
+
+small,
+.small {
+  font-size: 65%;
+  line-height: 1rem; }
+
+.strike {
+  text-decoration: line-through; }
+
+.text-l {
+  text-align: left   !important; }
+
+.text-c {
+  text-align: center !important; }
+
+.text-r {
+  text-align: right  !important; }
+
+.light {
+  color: #989898; }
+
+.dark {
+  color: black; }
+
+.thin {
+  font-weight: 100; }
+
+.thick {
+  font-weight: 700; }
+
+.line1 {
+  line-height: 1rem !important; }
+
+/* 2 */
+.line2 {
+  line-height: 2rem !important; }
+
+.line3 {
+  line-height: 3rem !important; }
+
+.line4 {
+  line-height: 4rem !important; }
+
+/*doc
+---
+title: "Responsive text"
+name: responsive-text
+category: Typography
+---
+
+`f-xl` `f-lg` `h1` `h2` `h3` `h4` and `p` classes react responsively to change the
+font-size at breakpoints. This will scale down font sizes for smaller
+devices for better readability.
+
+
+```html_example
+
+<div class="f-xl">XL text</div>
+<div class="f-lg">LG text</div>
+<div class="h1">h1 text</div>
+<div class="h2">h2 text</div>
+<div class="h3">h3 text</div>
+<div class="h4">h4 text</div>
+<div class="h5">h5 text</div>
+<div class="h6">h6 text</div>
+<div class="p">p text</div>
+
+```
+*/
+@media screen and (max-width: 992px) {
+  .f-xl {
+    font-size: 6.93099rem;
+    /* 1 */
+    margin-bottom: 5rem;
+    line-height: 7rem;
+    /* 2 */
+    letter-spacing: -0.06931rem;
+    /* 3 */ }
+
+  .f-lg {
+    font-size: 4.50767rem;
+    /* 1 */
+    margin-bottom: 4rem;
+    line-height: 5rem;
+    /* 2 */
+    letter-spacing: -0.04508rem;
+    /* 3 */ }
+
+  .h1 {
+    font-size: 3.63522rem;
+    /* 1 */
+    margin-bottom: 3rem;
+    line-height: 4rem;
+    /* 2 */
+    letter-spacing: -0.03635rem;
+    /* 3 */ }
+
+  .h2 {
+    font-size: 2.36421rem;
+    /* 1 */
+    margin-bottom: 2rem;
+    line-height: 3rem;
+    /* 2 */
+    letter-spacing: -0.02364rem;
+    /* 3 */ }
+
+  .h3 {
+    font-size: 1.90662rem;
+    /* 1 */
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    /* 2 */
+    letter-spacing: -0.01907rem;
+    /* 3 */ } }
+@media screen and (max-width: 768px) {
+  .f-lg, .f-xl {
+    font-size: 3.63522rem;
+    /* 1 */
+    margin-bottom: 3rem;
+    line-height: 4rem;
+    /* 2 */
+    letter-spacing: -0.03635rem;
+    /* 3 */ }
+
+  .h1 {
+    font-size: 2.93163rem;
+    /* 1 */
+    margin-bottom: 3rem;
+    line-height: 3rem;
+    /* 2 */
+    letter-spacing: -0.02932rem;
+    /* 3 */ }
+
+  .h2 {
+    font-size: 1.90662rem;
+    /* 1 */
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    /* 2 */
+    letter-spacing: -0.01907rem;
+    /* 3 */ }
+
+  .h3, .p, .h4 {
+    font-size: 1.5376rem;
+    /* 1 */
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    /* 2 */
+    letter-spacing: -0.01538rem;
+    /* 3 */ } }
+/*doc
+---
+title: "Responsive text alignment"
+name: responsive-text-alignment
+category: Typography
+---
+
+Some utility classes for forcing the alignment of text responsively.
+A basic example is using centered text for impact at a larger scale. This
+may not visually work as well on a small screen, so we would include a
+class that would align the text to the left.
+
+
+```html_example
+
+<h1 class="h3 text-c text-l-xs">
+  This Heading will Align Center by Default, and Left on xs Screens
+</h1>
+
+```
+*/
+@media screen and (max-width: 480px) {
+  .text-l-xs {
+    text-align: left   !important;
+    float: none !important; }
+
+  .text-c-xs {
+    text-align: center !important;
+    float: none !important; }
+
+  .text-r-xs {
+    text-align: right  !important;
+    float: none !important; }
+
+  /* 1 */ }
+/* Elementary - fundamental styling for commonly-used tags
+   ========================================================================== */
+/**
+* Standalones. Don't like it? Leave it out.
+*/
+/*doc
+---
+title: Links
+name: links
+category: Elements
+---
+
+Links have basic styling for `:hover` `:active` and `:visited` by default. There's
+also a couple of classes you can use to make links more universally useful.
+
+```html_example
+<div class="p1">
+  <a href="#">Standard link</a>
+</div>
+<div class="p1" style="background-color: #666;">
+  <a href="#" class="light">"Light" link for dark backgrounds</a>
+  <br>
+  <a href="#" class="link-white">Forced white text link</a>
+  <br>
+  <a href="#" class="link-white u">Use .u to force an underline</a>
+</div>
+
+```
+
+*/
+a {
+  color: #3874b5;
+  text-decoration: none;
+  -webkit-transition: color, 200ms;
+  -moz-transition: color, 200ms;
+  -ms-transition: color, 200ms;
+  -o-transition: color, 200ms;
+  transition: color, 200ms; }
+  a:visited {
+    color: #3874b5; }
+  a.light {
+    color: #77abc9; }
+    a.light:visited {
+      color: #77abc9; }
+    a.light:hover {
+      color: #284c72; }
+    a.light:active {
+      color: #77abc9; }
+  a.link-white {
+    color: white; }
+    a.link-white:visited, a.link-white:hover, a.link-white:active {
+      color: white; }
+  a:hover {
+    color: #77abc9; }
+  a:active {
+    color: #3874b5; }
+
+/*doc
+---
+title: Lists
+name: lists
+category: Elements
+---
+
+By default, `ul` `ol` and `dl` have some basic styling. There's also
+a couple of classes with which to extend these to make them more versatile.
+
+```html_example
+<h2 class="h4">Default list styling</h2>
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<dl>
+  <dt>List item 1 title</dt>
+  <dd>List item 1 definition</dd>
+  <dt>List item 2 title</dt>
+  <dd>List item 2 definition</dd>
+</dl>
+<hr />
+
+<h2 class="h4">Unstyled list</h2>
+<ul class="list-unstyled">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
+<h2 class="h4">Inline list</h2>
+<ul class="list-inline">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
+<h2 class="h4">Nav list</h2>
+<p>Extend .list-inline with .list-nav to force inline list items to change to full-width blocks at the mobile breakpoint.</p>
+<ul class="list-inline list-nav">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+
+```
+
+*/
+/* Basic list styling */
+ul,
+ol {
+  padding-left: 1.5em;
+  margin-top: 0; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-bottom: 0; }
+
+li {
+  margin-bottom: 1rem; }
+
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 0;
+  margin-bottom: 1rem; }
+
+dl > dd:last-child {
+  margin-bottom: 0; }
+
+/* List utility classes - extends ul, ol, dl */
+.list-unstyled {
+  padding-left: 0;
+  list-style: none; }
+
+.list-inline {
+  padding-left: 0; }
+  .list-inline > li {
+    display: inline-block;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem; }
+  @media screen and (max-width: 480px) {
+    .list-inline.list-nav {
+      /* 1 */ }
+      .list-inline.list-nav > li {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0; } }
+  .list-inline.list-nav .btn {
+    vertical-align: middle; }
+
+/*doc
+---
+title: Tables
+name: tables
+category: Elements
+---
+
+There's some basic styling applied to `table` tags and children to make it
+more browser-friendly, but there's also several "stackable" extension
+classes to help define some basic UX-ready tables.
+
+```html_example
+
+<h2 class="h4">Default table</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+
+<h2 class="h4">Condensed Table</h2>
+<table class="table-condensed">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Striped Table</h2>
+<table class="table-striped">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Hoverable Table</h2>
+<table class="table-hover">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Striped and Hoverable for dark backgrounds</h2>
+<div style="background: #666;" class="light p1">
+  <p> ProTip: use the "full-width" utility class to force a table to extend the width of its container.
+  <table class="table-striped-dark full-width">
+    <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    </tbody>
+  </table>
+  <hr/>
+
+  <table class="table-hover-dark">
+    <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+```
+
+*/
+.table,
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 16px;
+  line-height: 16px;
+  max-width: 100%;
+  overflow-y: auto;
+  background-color: transparent; }
+  @media screen and (max-width: 768px) {
+    .table,
+    table {
+      display: block;
+      position: relative;
+      display: -webkit-box;
+      overflow-x: auto; } }
+  .table.table-full,
+  table.table-full {
+    width: 100%; }
+
+thead th {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  vertical-align: bottom;
+  line-height: 14px; }
+
+tfoot td {
+  line-height: 16px;
+  border-bottom: 0;
+  background-color: transparent; }
+
+th {
+  text-align: left;
+  font-weight: 700; }
+
+td,
+th {
+  padding: 1rem 1rem;
+  line-height: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+td {
+  vertical-align: top; }
+
+tfoot td {
+  background-color: transparent; }
+
+.table-condensed td,
+.table-condensed th {
+  padding: 0.5rem 0.5rem; }
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  line-height: 15px; }
+.table-bordered thead th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 14px; }
+
+.table-striped tr:nth-child(odd) td {
+  background-color: #f0f0f0; }
+
+.table-striped-dark tr:nth-child(odd) td {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.table-striped tfoot tr:nth-child(odd) td,
+.table-striped-dark tfoot tr:nth-child(odd) td {
+  background-color: transparent; }
+
+.table-hover tr:hover td {
+  background-color: #e7e7e7; }
+
+.table-hover-dark tr:hover td {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.table-hover tfoot tr:hover td,
+.table-hover-dark tfoot tr:hover td {
+  background-color: transparent; }
+
+/*doc
+---
+title: Forms
+name: forms
+category: Elements
+---
+
+Forms are inline by default and pretty much ready-to-go. There's a few
+ways to extend a `form` or `input` to make life easier.
+
+```html_example
+<h2 class="h3">Default Form</h2>
+<form>
+  <fieldset>
+    <input placeholder="Email", type="text" /><input placeholder="Password", type="password" />
+    <label class="line3">
+      <input type="checkbox" class="checkbox" />Remember me
+    </label>
+    <button class="btn btn-sm btn-primary" type="submit">Sign in</button>
+  </fieldset>
+</form>
+
+<h2 class="h3">Stacked Form</h2>
+<form class="form-stacked">
+  <fieldset>
+    <div class="mb1">
+      <label>E-Mail</label>
+      <input required="<%= true %>" type="email"></input>
+      <aside>
+        <em class="light">This is a required field.</em>
+      </aside>
+    </div>
+    <div class="mb1">
+      <label>State</label>
+      <select>
+        <option>Option Number 1</option>
+        <option>2nd opt</option>
+        <option>This is long option three</option>
+        <option>Something 4</option>
+        <option>five</option>
+      </select>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="checkbox" class="checkbox"></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="radio" class="radio"></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-link" type="reset">Cancel</button>
+  </fieldset>
+</form>
+
+```
+
+*/
+/* Forms
+   ========================================================================== */
+fieldset,
+button {
+  padding: 0;
+  margin: 0;
+  border: none; }
+
+label {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 2rem;
+  /* 2 */
+  letter-spacing: -0.0124rem;
+  /* 3 */
+  margin-right: 0.5rem;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  line-height: 3rem; }
+
+textarea {
+  min-height: 5rem;
+  vertical-align: top; }
+
+input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+select,
+textarea {
+  margin: 0 1rem 1rem 0;
+  color: #989898;
+  padding: 0.5rem 0.25rem;
+  background-color: #f0f0f0;
+  border: 1px solid #afa9af;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+  vertical-align: top; }
+  input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]).input-lg,
+  select.input-lg,
+  textarea.input-lg {
+    max-height: 5rem; }
+  input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]):focus,
+  select:focus,
+  textarea:focus {
+    background-color: white;
+    color: #444444;
+    outline: none;
+    box-shadow: 0 0 6px 1px rgba(18, 107, 173, 0.5); }
+
+select {
+  height: 3rem; }
+
+.checkbox,
+input[type="checkbox"],
+.radio,
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 0.25rem;
+  font-size: 1em; }
+
+.form-stacked input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+.form-stacked select,
+.form-stacked textarea {
+  margin: 0;
+  width: 100%; }
+.form-stacked label {
+  line-height: inherit; }
+
+input[disabled],
+select[disabled],
+input:disabled,
+select:disabled,
+.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background-color: rgba(240, 240, 240, 0.5) !important;
+  color: rgba(152, 152, 152, 0.5) !important; }
+
+/* Structure - Helpers that manage the layout and vertical rhythm of a site.
+   ========================================================================== */
+/**
+* These will be the most invasive classes for your markup for a good reason:
+* You want to be able to glance at the markup and get an idea of what the
+* layout will be. I have no problem creating many classes to help structure
+* a site. If you make fundamental changes to your structure later, you will
+* be making markup changes anyway, right?
+*/
+/* Layout variables
+   ========================================================================== */
+/*doc
+---
+title: "Margin helpers"
+name: margin-helpers
+category: Layout
+---
+
+Use margin and padding helpers to keep vertical rhythm. Micro classes like
+this help maintain the intended design, while keeping css size low.
+
+However, _sometimes_ it's easier for long-term maintenance to extend styles
+for margin and padding in another class.
+
+Examples:
+
+Bad:
+
+`.myModule {
+  margin-bottom: 30px;
+}`
+
+
+Decent:
+
+`.myClass {
+  @extend %mb3;
+  @extend %p1;
+}`
+
+This will produce the output css:
+
+`.myClass { margin-bottom: 3rem; padding: 1rem; }`
+
+But necessitates the use of placeholders. However, this might be easier to
+maintain for your particular application.
+
+
+Better:
+
+<div class="myClass mb4 p1">
+  This module has .myClass, margin-bottom of 4rem, and a padding
+  of 1rem on all sides. It's obvious to the coder, and smaller in
+  file size. It's also pretty damn easy to change later.
+</div>
+
+```html_example
+
+<div class="m1 p1" style="background-color: #BBC;">margin 1 rem top and bottom</div>
+<hr />
+<div class="mb2 p1" style="background-color: #BBC;">margin 2 rem bottom</div>
+<hr />
+<div class="mt3 p1" style="background-color: #BBC;">margin 3 rem top</div>
+<hr />
+<div class="mr1 p1" style="background-color: #BBC;">margin 1 rem right</div>
+<hr />
+<div class="ml2 p1" style="background-color: #BBC;">margin 2 rem left</div>
+<hr />
+<div class="m-xl p1" style="background-color: #BBC;">margin XL on all sides</div>
+
+
+```
+*/
+.center {
+  margin-left: auto;
+  margin-right: auto; }
+
+.m0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.m1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.m2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.m3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.m4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.mb0 {
+  margin-bottom: 0 !important; }
+
+.mb1 {
+  margin-bottom: 1rem; }
+
+.mb2 {
+  margin-bottom: 2rem; }
+
+.mb4 {
+  margin-bottom: 4rem; }
+
+.mb8 {
+  margin-bottom: 8rem; }
+
+.mt0 {
+  margin-top: 0 !important; }
+
+.mt1 {
+  margin-top: 1rem; }
+
+.mt2 {
+  margin-top: 2rem; }
+
+.mt3 {
+  margin-top: 3rem; }
+
+.mt4 {
+  margin-top: 4rem; }
+
+.mr0 {
+  margin-right: 0 !important; }
+
+.mr1 {
+  margin-right: 1rem; }
+
+.mr2 {
+  margin-right: 2rem; }
+
+.mr3 {
+  margin-right: 3rem; }
+
+.mr4 {
+  margin-right: 4rem; }
+
+.ml0 {
+  margin-left: 0 !important; }
+
+.ml1 {
+  margin-left: 1rem; }
+
+.ml2 {
+  margin-left: 2rem; }
+
+.ml3 {
+  margin-left: 3rem; }
+
+.ml4 {
+  margin-left: 4rem; }
+
+.m-xs {
+  margin: 1px; }
+
+.m-sm {
+  margin: 3px; }
+
+.m-md {
+  margin: 5px; }
+
+.m-lg {
+  margin: 8px; }
+
+.m-xl {
+  margin: 12px; }
+
+/*doc
+---
+title: "Padding helpers"
+name: padding-helpers
+category: Layout
+---
+
+```html_example
+
+<div class="p1" style="background-color: #BBC; display: inline-block;">padding 1 rem on all sides</div>
+<hr />
+<div class="pyhalf px1" style="background-color: #BBC; display: inline-block;">padding 1/2 rem vertically, 1 rem horizontally</div>
+<hr />
+<div class="px8" style="background-color: #BBC; display: inline-block;"">padding 8 rem horizontally</div>
+<hr />
+<div class="py4" style="background-color: #BBC; display: inline-block;"">margin 4 rem vertically</div>
+
+```
+*/
+/**
+* 1. Use the same base as margin does (1 rem by default)
+*/
+/* 1 */
+.p1 {
+  padding: 1rem; }
+
+.p2 {
+  padding: 2rem; }
+
+.p3 {
+  padding: 3rem; }
+
+.p4 {
+  padding: 4rem; }
+
+.pyhalf {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+.py1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.py2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.py4 {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+
+.py8 {
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
+
+.pxhalf {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem; }
+
+.px1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+
+.px2 {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.px4 {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+.px8 {
+  padding-left: 4rem;
+  padding-right: 4rem; }
+
+/* Responsive padding: halves vertical padding on xs (typically mobile) screens.*/
+@media screen and (max-width: 768px) {
+  .p1 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+
+  .p2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+  .p3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+
+  .p4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+
+  .py1 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+
+  .py2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+  .py4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+
+  .py8 {
+    padding-top: 4rem;
+    padding-bottom: 4rem; } }
+/*doc
+---
+title: "Position helpers"
+name: position-helpers
+category: Layout
+---
+
+Position elements using micro classes for better control.
+
+
+```html_example
+
+<div class="pos-rel full-width" style="background-color: #EEE; height: 500px;">
+  <div class="pos-abs pos-b pos-r p1 m-lg" style="background-color: #BBC;">
+    Absolutely positioned bottom right, margin LG
+  </div>
+  <div class="pos-abs pos-t pos-l pos-b p1" style="background-color: #BBC;">
+    Absolutely positioned left, top, bottom
+    <br />
+    (to stretch from top to bottom)
+  </div>
+</div>
+
+```
+*/
+.pos-abs {
+  position: absolute; }
+
+.pos-rel {
+  position: relative; }
+
+.pos-fix {
+  position: fixed; }
+
+.pos-t {
+  top: 0; }
+
+.pos-b {
+  bottom: 0; }
+
+.pos-l {
+  left: 0; }
+
+.pos-r {
+  right: 0; }
+
+.pos-all {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.z1 {
+  z-index: 1; }
+
+.z2 {
+  z-index: 2; }
+
+.z5 {
+  z-index: 5; }
+
+.z10 {
+  z-index: 10; }
+
+/*doc
+---
+title: "Utility helpers"
+name: utility-helpers
+category: Layout
+---
+
+```html_example
+
+<p>Horizontal rule</p>
+<hr />
+
+<span class="full-width p1" style="background-color: #BBC; display:inline-block;">Full width</span>
+
+<div class="clearfix p1" style="background-color: #EEE;">
+  <p>Clearfix: successfully displays a container that contains floated child elements</p>
+  <p class="left p1" style="background-color: #BBC;">Float left</p>
+  <p class="right p1" style="background-color: #BBC;">Float right</p>
+</div>
+
+```
+*/
+/* Horizontal rule
+   ========================================================================== */
+/**
+* 1. To keep vertical rhythm, hr uses font-size-base as a height (including
+*    1px for the border.
+*/
+hr,
+.hr {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 15px;
+  /* 1 */
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+/* Layout utility classes
+   ========================================================================== */
+.full-width {
+  width: 100%; }
+
+.clearfix:before, .clearfix:after,
+.container:before,
+.container:after {
+  content: " ";
+  display: table; }
+.clearfix:after,
+.container:after {
+  clear: both; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+/*doc
+---
+title: "Responsive display"
+name: z-responsive-display
+category: Layout
+---
+
+**Responsively show and hide content - use with caution**
+
+`hidden` class will hide class at any breakpoint.
+
+These classes will hide content at defined breakpoints.
+
+For example:
+<div class="hide_xs">
+  Something worth hiding
+</div>
+
+This div will not show at XS breakpoint. This content still LOADS, however,
+so be cognizant of the load impact and use *wisely*.
+
+Responsive display classes:
+
+`hide_xl` `hide_lg` `hide_ltlg` `hide_md` `hide_ltmd` `hide_sm` `hide_ltsm` `hide_xs` `hide_gtxs` `hide_gtsm`
+
+*/
+/* This class will hide content at any breakpoint, even from screen readers. */
+.hidden {
+  display: none !important; }
+
+@media screen and (min-width: 1201px) {
+  .hide_xl {
+    display: none !important; } }
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+  .hide_lg {
+    display: none !important; } }
+@media screen and (max-width: 1200px) {
+  .hide_ltlg {
+    display: none !important; } }
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .hide_md {
+    display: none !important; } }
+@media screen and (max-width: 992px) {
+  .hide_ltmd {
+    display: none !important; } }
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .hide_sm {
+    display: none !important; } }
+@media screen and (max-width: 768px) {
+  .hide_ltsm {
+    display: none !important; } }
+@media screen and (max-width: 480px) {
+  .hide_xs {
+    display: none !important; }
+
+  /* 1 */ }
+@media screen and (min-width: 480px) {
+  .hide_gtxs {
+    display: none !important; } }
+@media screen and (min-width: 768px) {
+  .hide_gtsm {
+    display: none !important; } }
+/*doc
+---
+title: Container
+name: container
+category: Structure
+---
+
+The `.container` class, when included, will constrain the width of its
+children and collapse based on defined media breakpoints.
+
+*/
+/* Container
+   ========================================================================== */
+/**
+* 1. Include a $container-max if you want to constrain the maximum allowable
+*    width for the container, regardless of breakpoint constraints.
+*
+* 2. Center the container by default.
+*
+* 3. @if statement handles
+*/
+/* Container constraint variables */
+/* 1 */
+/* 2 */
+.container {
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  /**
+  * @include at_breakpoints to collapse the container as it reaches
+  * each breakpoint.
+  */
+  /*doc
+  ---
+  title: "Container extensions"
+  name: container-extensions
+  category: Structure
+  ---
+
+  Use `.flex` to extend the `.container` class and allow a fully flexible,
+  100% width container that still pads the sides appropriately. Totally
+  works well with the grid classes, too.
+
+  Use `.contain-to-N to` extend the `.container` class to set a max width for
+  a particular container. By default, the `.container` class contains to xl.
+
+  **For example:** Maybe a text-heavy section will read better when contained to
+  a "md" size, but the header and footer can remain contained to "xl" size.
+
+  */
+  /**
+    * 1. Use .flex to extend the .container class and allow a fully flexible,
+    *    100% width container that still pads the sides appropriately. Totally
+    *    works well with the grid classes, too.
+    *
+    * 2. Use .contain-to-N to extend the .container class to set a max width for
+    *    a particular container. By default, the .container class contains to xl.
+    *
+    * For example: Maybe a text-heavy section will read better when contained to
+    * a "md" size, but the header and footer can remain contained to "xl" size.
+    */
+  /* 2 */ }
+  .container > .container {
+    padding: 0 !important; }
+  @media screen and (min-width: 1201px) {
+    .container {
+      /* 4 */
+      width: 1380px; } }
+  @media screen and (max-width: 1400px) {
+    .container {
+      width: 1180px; } }
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 972px; } }
+  @media screen and (max-width: 992px) {
+    .container {
+      width: 748px; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%; } }
+  .container.flex {
+    /* 1 */
+    max-width: 100%;
+    width: 100%; }
+  .container.contain-to-lg {
+    max-width: 1180px; }
+  .container.contain-to-md {
+    max-width: 972px; }
+  .container.contain-to-sm {
+    max-width: 748px; }
+
+/*doc
+---
+title: Grids
+name: grid
+category: Structure
+---
+
+1) Start by containing a section of content that you intend to grid with the class `grid`
+2) The child element needs two classes: `g` to set up the grid-like qualities and a fractional width like `_1-2`
+3) If you want responsive grids (grids that are different at a particular breakpoint), then add a suffix: `xs` `sm` `md` `lg`.
+   Any suffix you add will work for any breakpoint equal to or smaller (i.e. `_1-2-lg` will make a column that is 50% of its parent at large breakpoints and below, unless you specify another responsive grid size)
+
+
+```html_example
+
+<section class="grid">
+  <div class="g _1-2">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">_1-4 column width</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">_1-4 column width</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Responsive grids</h2>
+<section class="grid">
+  <div class="g _1-2-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+  <div class="g _1-4-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+  <div class="g _1-4-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+</section>
+
+```
+*/
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+/**
+* 1. Fix for lists.
+* 2. Negative margin to offset grid parent
+* 3. Set font size to 0 to fix inline-block extra space
+*    http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+*/
+.grid {
+  list-style: none;
+  /* 1 */
+  margin-left: -24px;
+  /* 2 */
+  padding: 0;
+  font-size: 0; }
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ * 6. Set font size back to base to fix inline-block extra space
+ */
+.g {
+  display: inline-block;
+  /* 1 */
+  padding-left: 24px;
+  /* 2 */
+  vertical-align: top;
+  /* 3 */
+  width: 100%;
+  /* 4 */
+  font-size: 16px;
+  /* 6 */ }
+
+/* Widths */
+._1-1,
+._2_2,
+._3_3,
+._4_4,
+._5_5,
+._6_6 {
+  width: 100%; }
+
+._1-2,
+._2-4,
+._3-6 {
+  width: 50%; }
+
+._1-3,
+._2-6 {
+  width: 33.333%; }
+
+._2-3,
+._4-6 {
+  width: 66.666%; }
+
+._1-4 {
+  width: 25%; }
+
+._3-4 {
+  width: 75%; }
+
+._1-5 {
+  width: 20%; }
+
+._2-5 {
+  width: 40%; }
+
+._3-5 {
+  width: 60%; }
+
+._4-5 {
+  width: 80%; }
+
+._1-6 {
+  width: 16.667%; }
+
+._5-6 {
+  width: 83.333%; }
+
+@media screen and (max-width: 480px) {
+  ._1-1-xs,
+  ._2_2-xs,
+  ._3_3-xs,
+  ._4_4-xs,
+  ._5_5-xs,
+  ._6_6-xs {
+    width: 100%; }
+
+  ._1-2-xs,
+  ._2-4-xs,
+  ._3-6-xs {
+    width: 50%; }
+
+  ._1-3-xs,
+  ._2-6-xs {
+    width: 33.333%; }
+
+  ._2-3-xs,
+  ._4-6-xs {
+    width: 66.666%; }
+
+  ._1-4-xs {
+    width: 25%; }
+
+  ._3-4-xs {
+    width: 75%; }
+
+  ._1-5-xs {
+    width: 20%; }
+
+  ._2-5-xs {
+    width: 40%; }
+
+  ._3-5-xs {
+    width: 60%; }
+
+  ._4-5-xs {
+    width: 80%; }
+
+  ._1-6-xs {
+    width: 16.667%; }
+
+  ._5-6-xs {
+    width: 83.333%; }
+
+  /* 1 */ }
+@media screen and (max-width: 768px) {
+  ._1-1-sm,
+  ._2_2-sm,
+  ._3_3-sm,
+  ._4_4-sm,
+  ._5_5-sm,
+  ._6_6-sm {
+    width: 100%; }
+
+  ._1-2-sm,
+  ._2-4-sm,
+  ._3-6-sm {
+    width: 50%; }
+
+  ._1-3-sm,
+  ._2-6-sm {
+    width: 33.333%; }
+
+  ._2-3-sm,
+  ._4-6-sm {
+    width: 66.666%; }
+
+  ._1-4-sm {
+    width: 25%; }
+
+  ._3-4-sm {
+    width: 75%; }
+
+  ._1-5-sm {
+    width: 20%; }
+
+  ._2-5-sm {
+    width: 40%; }
+
+  ._3-5-sm {
+    width: 60%; }
+
+  ._4-5-sm {
+    width: 80%; }
+
+  ._1-6-sm {
+    width: 16.667%; }
+
+  ._5-6-sm {
+    width: 83.333%; } }
+@media screen and (max-width: 992px) {
+  ._1-1-md,
+  ._2_2-md,
+  ._3_3-md,
+  ._4_4-md,
+  ._5_5-md,
+  ._6_6-md {
+    width: 100%; }
+
+  ._1-2-md,
+  ._2-4-md,
+  ._3-6-md {
+    width: 50%; }
+
+  ._1-3-md,
+  ._2-6-md {
+    width: 33.333%; }
+
+  ._2-3-md,
+  ._4-6-md {
+    width: 66.666%; }
+
+  ._1-4-md {
+    width: 25%; }
+
+  ._3-4-md {
+    width: 75%; }
+
+  ._1-5-md {
+    width: 20%; }
+
+  ._2-5-md {
+    width: 40%; }
+
+  ._3-5-md {
+    width: 60%; }
+
+  ._4-5-md {
+    width: 80%; }
+
+  ._1-6-md {
+    width: 16.667%; }
+
+  ._5-6-md {
+    width: 83.333%; } }
+@media screen and (max-width: 1200px) {
+  ._1-1-lg,
+  ._2_2-lg,
+  ._3_3-lg,
+  ._4_4-lg,
+  ._5_5-lg,
+  ._6_6-lg {
+    width: 100%; }
+
+  ._1-2-lg,
+  ._2-4-lg,
+  ._3-6-lg {
+    width: 50%; }
+
+  ._1-3-lg,
+  ._2-6-lg {
+    width: 33.333%; }
+
+  ._2-3-lg,
+  ._4-6-lg {
+    width: 66.666%; }
+
+  ._1-4-lg {
+    width: 25%; }
+
+  ._3-4-lg {
+    width: 75%; }
+
+  ._1-5-lg {
+    width: 20%; }
+
+  ._2-5-lg {
+    width: 40%; }
+
+  ._3-5-lg {
+    width: 60%; }
+
+  ._4-5-lg {
+    width: 80%; }
+
+  ._1-6-lg {
+    width: 16.667%; }
+
+  ._5-6-lg {
+    width: 83.333%; } }
+/*doc
+---
+title: "Grid utility classes"
+name: grid-utility-classes
+category: Structure
+---
+
+Grid utility classes extend the .grid class.
+
+```html_example
+
+<h2 class="h4">Reverses grid direction from what is displayed in the markup</h2>
+
+<section class="grid grid-reverse">
+  <div class="g _1-2">
+    <div class="p1" style="background-color: #BBC;">Content #1</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">Content #2</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">Content #3</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Centered grid</h2>
+<section class="grid grid-c">
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+  <div class="g _1-3">
+    <div class="p1" style="background-color: #BBC;">_1-3 column width</div>
+  </div>
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Right align grid</h2>
+<section class="grid grid-r">
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+  <div class="g _1-3">
+    <div class="p1" style="background-color: #BBC;">_1-3 column width</div>
+  </div>
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+</section>
+
+```
+*/
+/* Presents columns in reverse order of their markup. */
+.grid {
+  /* Center align grid. */
+  /* Right align grid. */ }
+  .grid.grid-reverse {
+    direction: rtl;
+    text-align: left; }
+    .grid.grid-reverse > .g {
+      direction: ltr;
+      text-align: left; }
+  .grid.grid-c {
+    text-align: center; }
+    .grid.grid-c > .g {
+      text-align: left; }
+  .grid.grid-r {
+    text-align: right; }
+    .grid.grid-r > .g {
+      text-align: left;
+      margin-right: 0; }
+
+/* Modules - REUSABLE patterns. I'm only forcing one on you: buttons.
+   ========================================================================== */
+/**
+* But don't be scared. These buttons are highly customizable and friendly!
+*/
+/*doc
+---
+title: Buttons
+name: buttons
+category: Modules
+---
+```html_example
+
+<a href="#" class="btn btn-xl">xl Button</a>
+<a href="#" class="btn btn-lg">lg Button</a>
+<a href="#" class="btn">md Button</a>
+<a href="#" class="btn btn-sm">sm Button</a>
+<a href="#" class="btn btn-xs">xs Button</a>
+<hr />
+<h2 class="h4">Button colors</h2>
+<a href="#" class="btn btn-primary">Primary</a>
+<a href="#" class="btn btn-secondary">Secondary</a>
+<a href="#" class="btn btn-tertiary">Tertiary</a>
+<a href="#" class="btn btn-link">Link Button</a>
+<hr />
+<h2 class="h4">Button active/current state</h2>
+<a href="#" class="btn btn-primary current">Primary</a>
+<a href="#" class="btn btn-secondary active">Secondary</a>
+<a href="#" class="btn btn-tertiary current">Tertiary</a>
+<a href="#" class="btn btn-link active">Link Button</a>
+<hr />
+<div style="background-color: #666; padding: 10px;">
+  <a href="#" class="btn btn-link btn-link-dark light">Link Button - Dark Background</a>
+</div>
+<hr />
+<h2 class="h4">Form inputs using the same classes</h2>
+<button class="btn btn-sm btn-primary">button</button>
+<input type="button" value="input button" class="btn btn-sm btn-secondary">
+<input type="submit" value="submit" class="btn btn-sm btn-link">
+
+```
+*/
+.btn {
+  font-size: 1.90662rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 2rem;
+  /* 2 */
+  letter-spacing: -0.01907rem;
+  /* 3 */
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: top;
+  background-color: #ababbb;
+  color: white;
+  border-style: solid;
+  border-color: #8f8fa4;
+  text-decoration: none;
+  max-height: 4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .btn:not([class^="px"]):not([class*="px"]) {
+    padding-left: 3rem;
+    padding-right: 3rem; }
+  .btn:not([class^="py"]):not([class*="py"]) {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .btn:hover {
+    background-color: #c2c2cd;
+    border-color: #a5a5b6;
+    color: white;
+    text-shadow: 0 0 15px white, 0 0 30px white; }
+  .btn:active, .btn.current, .btn.active {
+    -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #8f8fa4; }
+  .btn:visited {
+    color: white; }
+  .btn.disabled, .btn[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.45;
+    box-shadow: none; }
+  .btn:focus {
+    outline: 0; }
+
+.btn-primary {
+  background-color: #007acb;
+  color: white;
+  border-color: #005b98; }
+  .btn-primary:hover {
+    background-color: #0093f4;
+    border-color: #0074c1; }
+  .btn-primary:active, .btn-primary.current, .btn-primary.active {
+    background-color: #005b98; }
+
+.btn-secondary {
+  background-color: #bc87dd;
+  color: white;
+  border-color: #a65fd2; }
+  .btn-secondary:hover {
+    background-color: #cea7e6;
+    border-color: #b87fdb; }
+  .btn-secondary:active, .btn-secondary.current, .btn-secondary.active {
+    background-color: #a65fd2; }
+
+.btn-tertiary {
+  background-color: #9accec;
+  color: white;
+  border-color: #6fb6e4; }
+  .btn-tertiary:hover {
+    background-color: #bcddf2;
+    border-color: #91c8ea; }
+  .btn-tertiary:active, .btn-tertiary.current, .btn-tertiary.active {
+    background-color: #6fb6e4; }
+
+.btn-link {
+  background-color: transparent;
+  color: #007acb;
+  border-color: rgba(212, 230, 240, 0); }
+  .btn-link:visited {
+    color: #007acb; }
+  .btn-link:hover {
+    background-color: #d4e6f0;
+    color: #9accec;
+    border-color: rgba(242, 248, 251, 0); }
+  .btn-link:active {
+    color: #007acb; }
+  .btn-link.btn-link-dark:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .btn-link.current, .btn-link.active {
+    background-color: #d4e6f0; }
+
+.btn-xl {
+  font-size: 2.93163rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 3rem;
+  /* 2 */
+  letter-spacing: -0.02932rem;
+  /* 3 */
+  height: 7rem;
+  max-height: 7rem; }
+  .btn-xl:not([class^="px"]):not([class*="px"]) {
+    padding-left: 6rem;
+    padding-right: 6rem; }
+  .btn-xl:not([class^="py"]):not([class*="py"]) {
+    padding-top: 1.66rem;
+    padding-bottom: 1.66rem; }
+
+.btn-lg {
+  font-size: 2.36421rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 3rem;
+  /* 2 */
+  letter-spacing: -0.02364rem;
+  /* 3 */
+  height: 5rem;
+  max-height: 5rem; }
+  .btn-lg:not([class^="px"]):not([class*="px"]) {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem; }
+  .btn-lg:not([class^="py"]):not([class*="py"]) {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+.btn-sm {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 2rem;
+  /* 2 */
+  letter-spacing: -0.0124rem;
+  /* 3 */
+  height: 3rem;
+  max-height: 3rem; }
+  .btn-sm:not([class^="px"]):not([class*="px"]) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+  .btn-sm:not([class^="py"]):not([class*="py"]) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+
+.btn-xs {
+  font-size: 1rem;
+  /* 1 */
+  margin-bottom: 0rem;
+  line-height: 1rem;
+  /* 2 */
+  letter-spacing: -0.01rem;
+  /* 3 */
+  height: 2rem;
+  max-height: 2rem; }
+  .btn-xs:not([class^="px"]):not([class*="px"]) {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  .btn-xs:not([class^="py"]):not([class*="py"]) {
+    padding-top: 0.33rem;
+    padding-bottom: 0.33rem; }
+
+@media screen and (max-width: 480px) {
+  .btn {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+    .btn:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]) {
+      padding-left: 0 !important;
+      padding-right: 0 !important; }
+
+  /* 1 */ }

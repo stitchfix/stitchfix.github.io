@@ -1,0 +1,125 @@
+/*doc
+---
+title: Lists
+name: lists
+category: Elements
+---
+
+By default, `ul` `ol` and `dl` have some basic styling. There's also
+a couple of classes with which to extend these to make them more versatile.
+
+```html_example
+<h2 class="h4">Default list styling</h2>
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<dl>
+  <dt>List item 1 title</dt>
+  <dd>List item 1 definition</dd>
+  <dt>List item 2 title</dt>
+  <dd>List item 2 definition</dd>
+</dl>
+<hr />
+
+<h2 class="h4">Unstyled list</h2>
+<ul class="list-unstyled">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
+<h2 class="h4">Inline list</h2>
+<ul class="list-inline">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
+<h2 class="h4">Nav list</h2>
+<p>Extend .list-inline with .list-nav to force inline list items to change to full-width blocks at the mobile breakpoint.</p>
+<ul class="list-inline list-nav">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+
+```
+
+*/
+
+/* Basic list styling */
+
+ul,
+ol {
+  padding-left: 1.5em;
+  margin-top: 0;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+dl > dd:last-child {
+  margin-bottom: 0;
+}
+
+/* List utility classes - extends ul, ol, dl */
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+
+  > li {
+    display: inline-block;
+    padding-left: $pad-h-xs;
+    padding-right: $pad-h-xs;
+  }
+
+  &.list-nav {
+    @include at_breakpoint(xs) {
+      > li {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .btn {
+      vertical-align: middle;
+    }
+  }
+}

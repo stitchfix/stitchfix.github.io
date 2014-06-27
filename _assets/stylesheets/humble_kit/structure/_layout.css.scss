@@ -1,0 +1,331 @@
+/* Layout variables
+   ========================================================================== */
+
+$hr-color:         rgba(0,0,0,0.1) !default;
+
+
+/*doc
+---
+title: "Margin helpers"
+name: margin-helpers
+category: Layout
+---
+
+Use margin and padding helpers to keep vertical rhythm. Micro classes like
+this help maintain the intended design, while keeping css size low.
+
+However, _sometimes_ it's easier for long-term maintenance to extend styles
+for margin and padding in another class.
+
+Examples:
+
+Bad:
+
+`.myModule {
+  margin-bottom: 30px;
+}`
+
+
+Decent:
+
+`.myClass {
+  @extend %mb3;
+  @extend %p1;
+}`
+
+This will produce the output css:
+
+`.myClass { margin-bottom: 3rem; padding: 1rem; }`
+
+But necessitates the use of placeholders. However, this might be easier to
+maintain for your particular application.
+
+
+Better:
+
+<div class="myClass mb4 p1">
+  This module has .myClass, margin-bottom of 4rem, and a padding
+  of 1rem on all sides. It's obvious to the coder, and smaller in
+  file size. It's also pretty damn easy to change later.
+</div>
+
+```html_example
+
+<div class="m1 p1" style="background-color: #BBC;">margin 1 rem top and bottom</div>
+<hr />
+<div class="mb2 p1" style="background-color: #BBC;">margin 2 rem bottom</div>
+<hr />
+<div class="mt3 p1" style="background-color: #BBC;">margin 3 rem top</div>
+<hr />
+<div class="mr1 p1" style="background-color: #BBC;">margin 1 rem right</div>
+<hr />
+<div class="ml2 p1" style="background-color: #BBC;">margin 2 rem left</div>
+<hr />
+<div class="m-xl p1" style="background-color: #BBC;">margin XL on all sides</div>
+
+
+```
+*/
+
+$margin-base: 1rem !default;
+
+.center { margin-left: auto; margin-right: auto;}
+
+.m0   { margin-top:    0 !important;   margin-bottom: 0 !important; }
+.m1   { margin-top:    $margin-base*1; margin-bottom: $margin-base*1; }
+.m2   { margin-top:    $margin-base*2; margin-bottom: $margin-base*2; }
+.m3   { margin-top:    $margin-base*3; margin-bottom: $margin-base*3; }
+.m4   { margin-top:    $margin-base*4; margin-bottom: $margin-base*4; }
+
+.mb0  { margin-bottom: 0 !important;   }
+.mb1  { margin-bottom: $margin-base*1; }
+.mb2  { margin-bottom: $margin-base*2; }
+.mb4  { margin-bottom: $margin-base*4; }
+.mb8  { margin-bottom: $margin-base*8; }
+
+.mt0  { margin-top:    0 !important;  }
+.mt1  { margin-top:    $margin-base*1; }
+.mt2  { margin-top:    $margin-base*2; }
+.mt3  { margin-top:    $margin-base*3; }
+.mt4  { margin-top:    $margin-base*4; }
+
+.mr0  { margin-right:  0 !important;  }
+.mr1  { margin-right:  $margin-base*1; }
+.mr2  { margin-right:  $margin-base*2; }
+.mr3  { margin-right:  $margin-base*3; }
+.mr4  { margin-right:  $margin-base*4; }
+
+.ml0  { margin-left:   0 !important;  }
+.ml1  { margin-left:   $margin-base*1; }
+.ml2  { margin-left:   $margin-base*2; }
+.ml3  { margin-left:   $margin-base*3; }
+.ml4  { margin-left:   $margin-base*4; }
+
+.m-xs { margin: 1px;  }
+.m-sm { margin: 3px;  }
+.m-md { margin: 5px;  }
+.m-lg { margin: 8px;  }
+.m-xl { margin: 12px; }
+
+
+/*doc
+---
+title: "Padding helpers"
+name: padding-helpers
+category: Layout
+---
+
+```html_example
+
+<div class="p1" style="background-color: #BBC; display: inline-block;">padding 1 rem on all sides</div>
+<hr />
+<div class="pyhalf px1" style="background-color: #BBC; display: inline-block;">padding 1/2 rem vertically, 1 rem horizontally</div>
+<hr />
+<div class="px8" style="background-color: #BBC; display: inline-block;"">padding 8 rem horizontally</div>
+<hr />
+<div class="py4" style="background-color: #BBC; display: inline-block;"">margin 4 rem vertically</div>
+
+```
+*/
+
+/**
+* 1. Use the same base as margin does (1 rem by default)
+*/
+
+$padding-base: $margin-base !default; /* 1 */
+
+.p1 { padding: $padding-base*1; }
+.p2 { padding: $padding-base*2; }
+.p3 { padding: $padding-base*3; }
+.p4 { padding: $padding-base*4; }
+
+.pyhalf { padding-top: $padding-base*0.5;  padding-bottom: $padding-base*0.5; }
+.py1    { padding-top: $padding-base*1;    padding-bottom: $padding-base*1;   }
+.py2    { padding-top: $padding-base*2;    padding-bottom: $padding-base*2;   }
+.py4    { padding-top: $padding-base*4;    padding-bottom: $padding-base*4;   }
+.py8    { padding-top: $padding-base*8;    padding-bottom: $padding-base*8;   }
+
+.pxhalf { padding-left: $padding-base*0.25; padding-right:  $padding-base*0.25;}
+.px1    { padding-left: $padding-base*0.5;  padding-right:  $padding-base*0.5; }
+.px2    { padding-left: $padding-base*1;    padding-right:  $padding-base*1;   }
+.px4    { padding-left: $padding-base*2;    padding-right:  $padding-base*2;   }
+.px8    { padding-left: $padding-base*4;    padding-right:  $padding-base*4;   }
+
+
+/* Responsive padding: halves vertical padding on xs (typically mobile) screens.*/
+
+@include at_breakpoint(ltsm) {
+  .p1 { padding-top: $padding-base*0.5; padding-bottom: $padding-base*0.5; }
+  .p2 { padding-top: $padding-base*1;   padding-bottom: $padding-base*1;   }
+  .p3 { padding-top: $padding-base*1.5; padding-bottom: $padding-base*1.5; }
+  .p4 { padding-top: $padding-base*2;   padding-bottom: $padding-base*2;   }
+  .py1  { padding-top: $padding-base*0.5;  padding-bottom: $padding-base*0.5; }
+  .py2  { padding-top: $padding-base*1;    padding-bottom: $padding-base*1;   }
+  .py4  { padding-top: $padding-base*2;    padding-bottom: $padding-base*2;   }
+  .py8  { padding-top: $padding-base*4;    padding-bottom: $padding-base*4;   }
+}
+
+
+/*doc
+---
+title: "Position helpers"
+name: position-helpers
+category: Layout
+---
+
+Position elements using micro classes for better control.
+
+
+```html_example
+
+<div class="pos-rel full-width" style="background-color: #EEE; height: 500px;">
+  <div class="pos-abs pos-b pos-r p1 m-lg" style="background-color: #BBC;">
+    Absolutely positioned bottom right, margin LG
+  </div>
+  <div class="pos-abs pos-t pos-l pos-b p1" style="background-color: #BBC;">
+    Absolutely positioned left, top, bottom
+    <br />
+    (to stretch from top to bottom)
+  </div>
+</div>
+
+```
+*/
+
+%pos-abs,
+.pos-abs { position: absolute; }
+%pos-rel,
+.pos-rel { position: relative; }
+%pos-fix,
+.pos-fix { position: fixed;    }
+
+%pos-t,
+.pos-t { top:    0; }
+%pos-b,
+.pos-b { bottom: 0; }
+%pos-l,
+.pos-l { left:   0; }
+%pos-r,
+.pos-r { right:  0; }
+
+%pos-all,
+.pos-all { top: 0; left: 0; right: 0; bottom:0; }
+
+%z1,
+.z1  { z-index: 1; }
+%z2,
+.z2  { z-index: 2; }
+%z5,
+.z5  { z-index: 5; }
+%z10,
+.z10 { z-index: 10; }
+
+
+/*doc
+---
+title: "Utility helpers"
+name: utility-helpers
+category: Layout
+---
+
+```html_example
+
+<p>Horizontal rule</p>
+<hr />
+
+<span class="full-width p1" style="background-color: #BBC; display:inline-block;">Full width</span>
+
+<div class="clearfix p1" style="background-color: #EEE;">
+  <p>Clearfix: successfully displays a container that contains floated child elements</p>
+  <p class="left p1" style="background-color: #BBC;">Float left</p>
+  <p class="right p1" style="background-color: #BBC;">Float right</p>
+</div>
+
+```
+*/
+
+/* Horizontal rule
+   ========================================================================== */
+/**
+* 1. To keep vertical rhythm, hr uses font-size-base as a height (including
+*    1px for the border.
+*/
+
+%hr,
+hr,
+.hr {
+  border: none;
+  border-bottom: 1px solid $hr-color;
+  height: ($font-size-base - 1); /* 1 */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+/* Layout utility classes
+   ========================================================================== */
+
+.full-width,
+%full-width {
+  width: 100%;
+}
+
+.clearfix,
+%clearfix {
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+.right,
+%right {
+  float: right;
+}
+.left,
+%left {
+  float: left;
+}
+
+
+/*doc
+---
+title: "Responsive display"
+name: z-responsive-display
+category: Layout
+---
+
+**Responsively show and hide content - use with caution**
+
+`hidden` class will hide class at any breakpoint.
+
+These classes will hide content at defined breakpoints.
+
+For example:
+<div class="hide_xs">
+  Something worth hiding
+</div>
+
+This div will not show at XS breakpoint. This content still LOADS, however,
+so be cognizant of the load impact and use *wisely*.
+
+Responsive display classes:
+
+`hide_xl` `hide_lg` `hide_ltlg` `hide_md` `hide_ltmd` `hide_sm` `hide_ltsm` `hide_xs` `hide_gtxs` `hide_gtsm`
+
+*/
+
+/* This class will hide content at any breakpoint, even from screen readers. */
+.hidden,
+%hidden {
+  display: none !important;
+}
+
+@include at_breakpoint(xl)   { .hide_xl   { display: none !important; } }
+@include at_breakpoint(lg)   { .hide_lg   { display: none !important; } }
+@include at_breakpoint(ltlg) { .hide_ltlg { display: none !important; } }
+@include at_breakpoint(md)   { .hide_md   { display: none !important; } }
+@include at_breakpoint(ltmd) { .hide_ltmd { display: none !important; } }
+@include at_breakpoint(sm)   { .hide_sm   { display: none !important; } }
+@include at_breakpoint(ltsm) { .hide_ltsm { display: none !important; } }
+@include at_breakpoint(xs)   { .hide_xs   { display: none !important; } }
+@include at_breakpoint(gtxs) { .hide_gtxs { display: none !important; } }
+@include at_breakpoint(gtsm) { .hide_gtsm { display: none !important; } }
