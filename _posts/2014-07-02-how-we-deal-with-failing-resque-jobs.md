@@ -31,12 +31,13 @@ In the context of a Resque job, _idempotent_ essentially means that you can retr
 At Stitch Fix, we wanted our jobs to "just work" and be automatically retriable, so we set out to make them as idempotent as we could.
 The trickiest one was in charging a client's credit card.
 
+<a name="return_1"></a>
 We charge our clients a styling fee (inside a Resque job) before we ship out their Fix. 
 We saw the same issues that Grouper did–as our service grew in popularity, we had more and more of these jobs, and were therefore seeing more and more of them fail due to a `TERM` signal.
+Because these jobs use a third party<sup><a href="#1">1</a></sup> to charge our clients (namely, the awesomely secure and pretty-much-always-on [Braintree]), they are tricky to retry, and hard to make idempotent.
 
-Because these jobs charged our customers money via a third party, they are tricky to retry, and hard to make idempotent.
-The reason is that it's not always clear if the charge to their card actually went through at Braintree (our credit card processor) or not.
-Did our job die before the charge went through and we can retry, or did the charge go through and now we have to update our database with that fact?
+The reason it's so hard is that it's not always clear if the charge to their card actually went through at Braintree or not.
+Did our job die before the charge went through and we can retry, or did the charge go through and now we have to update our database (manually) with the results?
 
 Like I said, it's tricky. But not impossible.
 
@@ -63,8 +64,16 @@ through cables.  It's a bit more up-front cost, but it's also much simpler to te
 Now, we try to make all of our jobs idempotent and retriable. I'd recommend you do the same, as you can stop worrying about operations and start worrying
 about growing your business.
 
+---
+<a name="1"></a>
+<sup>1</sup> If you aren't familiar with payment processing, this is absolutely the best way to do it, because we don't have any sensitive information
+stored in our systems anywhere.  We use a secret, meaningless internal identifier to ask our secure (and heavily audited) partner to charge the client on
+our behalf.  Even if someone stole our entire database, they'd have **zero** access to our client's credit card info.  I definitely sleep better at night
+knowing this :) <a href="#return_1">↩</a>
+
 [grouperblog]: http://eng.joingrouper.com/
 [grouperpost]: http://eng.joingrouper.com/blog/2014/06/27/too-many-signals-resque-on-heroku/
 [resqueretry]: https://github.com/lantins/resque-retry
 [idempotent]: http://en.wikipedia.org/wiki/Idempotence
 [Resque]: http://github.com/resque/resque
+[Braintree]: https://www.braintreepayments.com/
