@@ -2,6 +2,7 @@
 layout: posts
 title: "The Value of Minimal, Flexible Systems"
 author: "Joel Strait"
+author_url: 'http://www.joelstrait.com'
 date: 2014-06-30
 published: true
 categories: 
