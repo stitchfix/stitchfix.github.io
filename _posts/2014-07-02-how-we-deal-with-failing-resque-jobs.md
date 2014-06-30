@@ -15,7 +15,7 @@ This happens to us as well (and will happen to anyone on Heroku running Resque a
 Heroku will send `TERM` to any dyno at any time for any reason, and your code is expected to deal with it.
 
 When this happens, the Resque workers will, by default, raise `Resque::TermException`, which effectively puts the job into the failed queue.
-Grouper are proposing an enhancement to Resque to make it easier to catch that exception and try to clean up (Heroku gives you 10 seconds to do so before definitively killing your job).
+Grouper is proposing an enhancement to Resque to make it easier to catch that exception and try to clean up (Heroku gives you 10 seconds to do so before definitively killing your job).
 The reason they've gone this route is mentioned in their post:
 
 > Except that not all of our jobs are fully idempotent. Running them multiple times could cause users to be charged more than once or to get emails more than once which is definitely not desirable.
