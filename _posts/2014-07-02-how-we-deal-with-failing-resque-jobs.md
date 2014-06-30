@@ -26,6 +26,8 @@ Granted, they will fail at a lower rate, but it's still a rate correlated to the
 
 The underlying problem is that jobs aren't [idempotent].
 
+## Idem-what?
+
 In the context of a Resque job, _idempotent_ essentially means that you can retry your job any number of times, and it won't do something undesirable (or dangerous) like double-charge your customer or sending them 20 emails.  Jobs that are idempotent are largely immune from arbitrary restarts because they be blindly retried.
 
 At Stitch Fix, we wanted our jobs to "just work" and be automatically retriable, so we set out to make them as idempotent as we could.
@@ -40,6 +42,8 @@ The reason it's so hard is that it's not always clear if the charge to their car
 Did our job die before the charge went through and we can retry, or did the charge go through and now we have to update our database (manually) with the results?
 
 Like I said, it's tricky. But not impossible.
+
+## Idempotently Charging Credit Cards
 
 To make a job like this idempotent requires some work on our end, but also some help on Braintree's side.  Fortunately, Braintree allows you to send
 arbitrary data with your calls, and it will store it for later examination.  This enables a common pattern for making a job idempotent:
@@ -57,6 +61,8 @@ If we get interrupted at any step, we can safely pick up where we left off.
 This logic is certainly more complex than just fire-and-forget, but now our styling-fee-charging job is bulletproof.
 We configured it to automatically retry using [resque-retry][resqueretry], and it hasn't bothered us since (nor have our clients been double-charged).
 This has a nice side effect in that if Braintree (or our connection to Braintree) goes down, we can blindly retry all the jobs that failed when it comes back up.
+
+## Design for Idempotence 
 
 By designing your jobs to be idempotent, you insulate them against any external factors like Heroku, third-party maintenance windows, or gophers chewing
 through cables.  It's a bit more up-front cost, but it's also much simpler to test that it's working.
