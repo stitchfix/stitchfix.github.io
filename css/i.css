@@ -339,6 +339,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 /* ==========================================================================
    ALL THINGS TYPE
@@ -468,6 +472,9 @@ li .meta {
 .post .meta {
   font-size: 16px;
   color: #333;
+  font-style: italic; }
+
+blockquote {
   font-style: italic; }
 
 /* ==========================================================================
