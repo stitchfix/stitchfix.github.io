@@ -36,7 +36,7 @@ The trickiest one was in charging a client's credit card.
 <a name="return_1"></a>
 We charge our clients a styling fee (inside a Resque job) before we ship out their Fix. 
 We saw the same issues that Grouper did–as our service grew in popularity, we had more and more of these jobs, and were therefore seeing more and more of them fail due to a `TERM` signal.
-Because these jobs use a third party<sup><a href="#1">1</a></sup> to charge our clients (namely, the awesomely secure and pretty-much-always-on [Braintree]), they are tricky to retry, and hard to make idempotent.
+Because these jobs use a third party<sup><a href="#1">1</a></sup> to charge our clients (namely, the awesomely secure and pretty-much-always-on [Braintree] _[except for the 5 minutes before I posted this, when they had a system-wide outage.  So, the following is really being used as you read this! -DBC]_), they are tricky to retry, and hard to make idempotent.
 
 The reason it's so hard is that it's not always clear if the charge to their card actually went through at Braintree or not.
 Did our job die before the charge went through and we can retry, or did the charge go through and now we have to update our database (manually) with the results?
