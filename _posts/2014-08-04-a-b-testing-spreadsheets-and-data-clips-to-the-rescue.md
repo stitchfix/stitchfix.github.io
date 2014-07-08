@@ -35,8 +35,8 @@ Since we
 use Google Docs for much of our work, it's natural to share these with other teammates.
 A little fiddling around and I had a nice dashboard with all the info we needed. It looked something like this:
 
+<img class="rounded" style="width:409px" src="/img/blog/a-b-test-dashboard-screenshot.png" alt="Screenshot of spreadsheet showing a column for control and one for experiment, with stats labelled in each row">
 
- ￼
 
 That’s basically it. With an hour of work, and no actual programming, I solved a problem in a simple way. Of course
 I could have built a web-app with lots of new technologies, but this served the purpose.
