@@ -1,3 +1,140 @@
 /* Humble Kit
    ========================================================================== */
 @import "humble_kit.css.scss";
+@import "webfonts.scss";
+
+body {
+//  font-family: 'Droid Serif', serif;
+//  font-family: 'BrandonText-Regular', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+@for $i from 1 through 6 {
+  .h#{$i} {
+    font-weight: 300;
+  }
+}
+
+img.logo {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+$colors: #484848, #888888, #484848, #888888, #484848, #888888;
+$background-colors: #706f73, #fff, #fff, #fff, #fff, #fff;
+$backgrounds: '/assets/images/stitchfix-dot-full-trans.svg', '/assets/images/aa-bg.svg', '/assets/images/bt_image00_home.jpg', '/assets/images/technology.jpg', '/assets/images/bt_image00_home.jpg', '/assets/images/technology.jpg';
+
+
+div.content, ul.content li, nav li{
+  clear: both;
+  color: #fff;
+  background-color: #303030;
+  float: left;
+}
+ul.content, nav ul{
+  list-style: none;
+  li{
+    display: inline-block;
+    padding: 6px 10px;
+  }
+}
+.headline {
+  opacity: 0.9;
+}
+.blurb, ul.content li, nav li {
+  opacity: 0.8;
+}
+
+nav{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  a{
+    color: #fff;
+  }
+  ul li{
+    font-size: 14px;
+    padding: 0 6px;
+    margin: 10px 0 0;
+    float: right;
+  }
+}
+
+a:hover{
+  color: #9ed7d1;
+}
+a.current{
+  color: #f2e230;
+}
+
+section {
+  height: 100vh;
+  position: relative;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 1px 0px 0px;
+  border-width: 0.0625rem 0rem 0rem;
+  border-style: solid;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .content-group {
+    position: absolute;
+    div.content {
+      padding: 20px;
+      margin-bottom: 20px;
+      @for $i from 1 through 6 {
+        .h#{$i} {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.intro {
+    .headline {
+      max-width: 800px;
+    }
+    .blurb {
+      max-width: 700px;
+    }
+  }
+  &.data-science {
+    .headline {
+      max-width: 700px;
+    }
+    .blurb {
+      max-width: 850px;
+    }
+  }
+  &.applications {
+    .headline {
+      max-width: 850px;
+    }
+    .blurb {
+      max-width: 700px;
+    }
+  }
+}
+@for $i from 1 through length($backgrounds) {
+  section:nth-child(#{length($backgrounds)}n+#{$i}) {
+    background-color: nth($background-colors, $i);
+    background-image: url(nth($backgrounds, $i));
+  }
+}
+
+section.bl{
+  .content-group {
+    bottom: 100px;
+    left: 60px;
+    margin-right: 60px;
+  }
+}
+section.tl{
+  .content-group {
+    top: 100px;
+    left: 60px;
+    margin-right: 60px;
+  }
+}

@@ -65,6 +65,7 @@
 
    Modified by Brian Cleveland (@yorthehunter)
 */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 html, body {
   height: 100%;
   background-color: white; }
@@ -2393,3 +2394,140 @@ category: Modules
       padding-right: 0 !important; }
 
   /* 1 */ }
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px; }
+
+.h1 {
+  font-weight: 300; }
+
+.h2 {
+  font-weight: 300; }
+
+.h3 {
+  font-weight: 300; }
+
+.h4 {
+  font-weight: 300; }
+
+.h5 {
+  font-weight: 300; }
+
+.h6 {
+  font-weight: 300; }
+
+img.logo {
+  display: inline-block;
+  margin-right: 10px; }
+
+div.content, ul.content li, nav li {
+  clear: both;
+  color: #fff;
+  background-color: #303030;
+  float: left; }
+
+ul.content, nav ul {
+  list-style: none; }
+  ul.content li, nav ul li {
+    display: inline-block;
+    padding: 6px 10px; }
+
+.headline {
+  opacity: 0.9; }
+
+.blurb, ul.content li, nav li {
+  opacity: 0.8; }
+
+nav {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+  nav a {
+    color: #fff; }
+  nav ul li {
+    font-size: 14px;
+    padding: 0 6px;
+    margin: 10px 0 0;
+    float: right; }
+
+a:hover {
+  color: #9ed7d1; }
+
+a.current {
+  color: #f2e230; }
+
+section {
+  height: 100vh;
+  position: relative;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 1px 0px 0px;
+  border-width: 0.0625rem 0rem 0rem;
+  border-style: solid;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  section .content-group {
+    position: absolute; }
+    section .content-group div.content {
+      padding: 20px;
+      margin-bottom: 20px; }
+      section .content-group div.content .h1 {
+        margin: 0; }
+      section .content-group div.content .h2 {
+        margin: 0; }
+      section .content-group div.content .h3 {
+        margin: 0; }
+      section .content-group div.content .h4 {
+        margin: 0; }
+      section .content-group div.content .h5 {
+        margin: 0; }
+      section .content-group div.content .h6 {
+        margin: 0; }
+  section.intro .headline {
+    max-width: 800px; }
+  section.intro .blurb {
+    max-width: 700px; }
+  section.data-science .headline {
+    max-width: 700px; }
+  section.data-science .blurb {
+    max-width: 850px; }
+  section.applications .headline {
+    max-width: 850px; }
+  section.applications .blurb {
+    max-width: 700px; }
+
+section:nth-child(6n+1) {
+  background-color: #706f73;
+  background-image: url("/assets/images/stitchfix-dot-full-trans.svg"); }
+
+section:nth-child(6n+2) {
+  background-color: white;
+  background-image: url("/assets/images/aa-bg.svg"); }
+
+section:nth-child(6n+3) {
+  background-color: white;
+  background-image: url("/assets/images/bt_image00_home.jpg"); }
+
+section:nth-child(6n+4) {
+  background-color: white;
+  background-image: url("/assets/images/technology.jpg"); }
+
+section:nth-child(6n+5) {
+  background-color: white;
+  background-image: url("/assets/images/bt_image00_home.jpg"); }
+
+section:nth-child(6n+6) {
+  background-color: white;
+  background-image: url("/assets/images/technology.jpg"); }
+
+section.bl .content-group {
+  bottom: 100px;
+  left: 60px;
+  margin-right: 60px; }
+
+section.tl .content-group {
+  top: 100px;
+  left: 60px;
+  margin-right: 60px; }
