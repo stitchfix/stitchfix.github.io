@@ -1131,6 +1131,22 @@ iframe {
 .alumni {
   display: none; }
 
+.stitch-fix-logo {
+  background-image: url(/img/logo.svg);
+  background-repeat: no-repeat;
+  color: transparent;
+  width: 211px;
+  display: inline-block;
+  margin-right: 5px;
+  background-position: left top; }
+  @media screen and (min-width: 480px) {
+    .stitch-fix-logo {
+      background-position: left 13px; } }
+
+@media screen and (min-width: 500px) {
+  .hide-two-hand {
+    display: none; } }
+
 .highlighttable, pre code, .code {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
