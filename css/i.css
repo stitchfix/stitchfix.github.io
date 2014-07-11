@@ -1131,21 +1131,44 @@ iframe {
 .alumni {
   display: none; }
 
+.technology-at {
+  margin-left: -10px;
+  letter-spacing: -3px;
+  display: block;
+  color: #95cdc3;
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 200; }
+  @media screen and (min-width: 400px) {
+    .technology-at {
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 110px; } }
+  @media screen and (min-width: 600px) {
+    .technology-at {
+      font-size: 92px;
+      line-height: 124px;
+      font-weight: 600; } }
+
+.tighten {
+  letter-spacing: -8px; }
+
 .stitch-fix-logo {
   background-image: url(/img/logo.svg);
   background-repeat: no-repeat;
   color: transparent;
-  width: 211px;
-  display: inline-block;
-  margin-right: 15px;
-  background-position: left 3px; }
-  @media screen and (min-width: 480px) {
+  display: block;
+  margin: -10px 15px 0px -3px;
+  background-position: left 3px;
+  width: 130px; }
+  @media screen and (min-width: 400px) {
     .stitch-fix-logo {
-      background-position: left 13px; } }
-
-@media screen and (min-width: 500px) {
-  .hide-two-hand {
-    display: none; } }
+      margin: -35px 15px 0px 0px;
+      width: 199px; } }
+  @media screen and (min-width: 600px) {
+    .stitch-fix-logo {
+      margin: -30px 15px 0px -3px;
+      width: 232px; } }
 
 .highlighttable, pre code, .code {
   border-top-right-radius: 6px;
