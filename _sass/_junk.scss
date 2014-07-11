@@ -1,23 +1,53 @@
 .link, .post .content a {
-  color:$sf-dark-gray;
-  font-weight:bold;
+  color: $sf-dark-gray;
+  font-weight: bold;
   &:hover {
-    color:$sf-green;
+    color: $sf-green;
   }
 }
 
-img,iframe {width:100%;}
-iframe {border:0;outline:0;margin-bottom:-5px;}
-.dib {display:inline-block;}
+img, iframe {
+  width: 100%;
+}
+
+iframe {
+  border: 0;
+  outline: 0;
+  margin-bottom: -5px;
+}
+
+.dib {
+  display: inline-block;
+}
+
 .footer-nav {
-  padding:20px 0;
+  padding: 20px 0;
 }
 
 .site-footer {
-  font-size:14px;
-  font-weight:100;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 .alumni {
   display: none;
+}
+
+.stitch-fix-logo {
+  background-image: url(/img/logo.svg);
+  background-repeat: no-repeat;
+  color: transparent;
+  width: 211px;
+  display: inline-block;
+  margin-right: 15px;
+  background-position: left 3px;
+  @media screen and (min-width: 480px) {
+    background-position: left 13px;
+  }
+}
+
+.hide-two-hand {
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
 }
