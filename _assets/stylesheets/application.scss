@@ -4,7 +4,6 @@
 @import "webfonts.scss";
 
 body {
-//  font-family: 'Droid Serif', serif;
 //  font-family: 'BrandonText-Regular', sans-serif;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -33,17 +32,6 @@ ul.content{
     display: inline-block;
     padding: 6px 10px;
   }
-}
-.headline {
-  opacity: 0.9;
-  color: #fff;
-//  .h3 {
-//    font-weight: 600;
-//    text-shadow: 1px 2px 0 rgba(0,0,0,0.6);
-//  }
-}
-.blurb, ul.content li {
-  opacity: 0.9;
 }
 
 nav {
@@ -104,11 +92,6 @@ a, .btn, .btn-link{
 section {
   height: 100vh;
   position: relative;
-//  border-color: #fff;
-//  border-color: rgba(255, 255, 255, 0.5);
-//  border-width: 1px 0px 0px;
-//  border-width: 0.0625rem 0rem 0rem;
-//  border-style: solid;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,6 +116,16 @@ section {
     background-image: url('/assets/images/stitchfix-dot-full-trans.svg');
     background-size: cover;
     background-position: 0 80px;
+    .headline {
+      opacity: 0.9;
+      //.h3 {
+      //  font-weight: 600;
+      //  text-shadow: 1px 2px 0 rgba(0,0,0,0.6);
+      //}
+    }
+    .blurb, ul.content li {
+      opacity: 0.9;
+    }
     .headline {
       max-width: 800px;
     }
@@ -160,7 +153,7 @@ section {
   }
   &.applications {
     background-color: #fff;
-    background-image: url('/assets/images/technology.jpg');
+    background-image: url('/assets/images/eng-bg.svg');
     .headline {
       max-width: 640px;
     }

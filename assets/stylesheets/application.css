@@ -2433,13 +2433,6 @@ ul.content {
     display: inline-block;
     padding: 6px 10px; }
 
-.headline {
-  opacity: 0.9;
-  color: #fff; }
-
-.blurb, ul.content li {
-  opacity: 0.9; }
-
 nav {
   position: fixed;
   width: 100%;
@@ -2506,6 +2499,10 @@ section {
     background-size: cover;
     background-position: 0 80px; }
     section.intro .headline {
+      opacity: 0.9; }
+    section.intro .blurb, section.intro ul.content li {
+      opacity: 0.9; }
+    section.intro .headline {
       max-width: 800px; }
     section.intro .blurb {
       max-width: 700px; }
@@ -2522,7 +2519,7 @@ section {
       max-width: 730px; }
   section.applications {
     background-color: #fff;
-    background-image: url("/assets/images/technology.jpg"); }
+    background-image: url("/assets/images/eng-bg.svg"); }
     section.applications .headline {
       max-width: 640px; }
     section.applications .blurb {
