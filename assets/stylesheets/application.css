@@ -65,7 +65,7 @@
 
    Modified by Brian Cleveland (@yorthehunter)
 */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800);
 html, body {
   height: 100%;
   background-color: white; }
@@ -2397,7 +2397,7 @@ category: Modules
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 16px; }
+  position: relative; }
 
 .h1 {
   font-weight: 300; }
@@ -2421,113 +2421,138 @@ img.logo {
   display: inline-block;
   margin-right: 10px; }
 
-div.content, ul.content li, nav li {
+div.content, ul.content li {
   clear: both;
   color: #fff;
-  background-color: #303030;
+  background-color: #464547;
   float: left; }
 
-ul.content, nav ul {
+ul.content {
   list-style: none; }
-  ul.content li, nav ul li {
+  ul.content li {
     display: inline-block;
     padding: 6px 10px; }
 
 .headline {
-  opacity: 0.9; }
+  opacity: 0.9;
+  color: #fff; }
 
-.blurb, ul.content li, nav li {
-  opacity: 0.8; }
+.blurb, ul.content li {
+  opacity: 0.9; }
 
 nav {
   position: fixed;
-  bottom: 20px;
-  right: 20px; }
-  nav a {
-    color: #fff; }
-  nav ul li {
-    font-size: 14px;
-    padding: 0 6px;
-    margin: 10px 0 0;
-    float: right; }
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  color: #fff;
+  text-align: center; }
+  nav .logo-wrap {
+    padding: 10px 0;
+    opacity: 0.8; }
+  nav .nav-wrap {
+    opacity: 0.7; }
+  nav li {
+    margin-bottom: 0; }
+  nav h1, nav .h3 {
+    margin-bottom: 10px; }
+  nav h1 {
+    margin-right: 20px; }
 
-a:hover {
-  color: #9ed7d1; }
+a, .btn, .btn-link {
+  color: #fff; }
+  a:hover, .btn:hover, .btn-link:hover {
+    color: #333;
+    background-color: #9ed7d1; }
+  a:visited, .btn:visited, .btn-link:visited {
+    color: #eee; }
 
-a.current {
-  color: #f2e230; }
+.active a, .active .btn, .active .btn-link {
+  color: #333;
+  background-color: #9ed7d1; }
 
 section {
   height: 100vh;
   position: relative;
-  border-color: #fff;
-  border-color: rgba(255, 255, 255, 0.5);
-  border-width: 1px 0px 0px;
-  border-width: 0.0625rem 0rem 0rem;
-  border-style: solid;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; }
-  section .content-group {
+  section .content-group div.content {
+    padding: 20px;
+    margin-bottom: 20px; }
+    section .content-group div.content .h1 {
+      margin: 0;
+      line-height: 1.5; }
+    section .content-group div.content .h2 {
+      margin: 0;
+      line-height: 1.5; }
+    section .content-group div.content .h3 {
+      margin: 0;
+      line-height: 1.5; }
+    section .content-group div.content .h4 {
+      margin: 0;
+      line-height: 1.5; }
+    section .content-group div.content .h5 {
+      margin: 0;
+      line-height: 1.5; }
+    section .content-group div.content .h6 {
+      margin: 0;
+      line-height: 1.5; }
+    section .content-group div.content p {
+      font-size: 1.1em; }
+  section.intro {
+    background-color: #706f73;
+    background-image: url("/assets/images/stitchfix-dot-full-trans.svg");
+    background-size: cover;
+    background-position: 0 80px; }
+    section.intro .headline {
+      max-width: 800px; }
+    section.intro .blurb {
+      max-width: 700px; }
+    section.intro div.content .h3 {
+      line-height: 1.3; }
+    section.intro div.content p {
+      font-size: 1.24em; }
+  section.data-science {
+    background-color: #fff;
+    background-image: url("/assets/images/aa-bg.svg"); }
+    section.data-science .headline {
+      max-width: 570px; }
+    section.data-science .blurb {
+      max-width: 730px; }
+  section.applications {
+    background-color: #fff;
+    background-image: url("/assets/images/technology.jpg"); }
+    section.applications .headline {
+      max-width: 640px; }
+    section.applications .blurb {
+      max-width: 600px; }
+  section.bl .content-group, section.br .content-group, section.tl .content-group, section.tr .content-group, section.cl .content-group, section.cr .content-group {
     position: absolute; }
-    section .content-group div.content {
-      padding: 20px;
-      margin-bottom: 20px; }
-      section .content-group div.content .h1 {
-        margin: 0; }
-      section .content-group div.content .h2 {
-        margin: 0; }
-      section .content-group div.content .h3 {
-        margin: 0; }
-      section .content-group div.content .h4 {
-        margin: 0; }
-      section .content-group div.content .h5 {
-        margin: 0; }
-      section .content-group div.content .h6 {
-        margin: 0; }
-  section.intro .headline {
-    max-width: 800px; }
-  section.intro .blurb {
-    max-width: 700px; }
-  section.data-science .headline {
-    max-width: 700px; }
-  section.data-science .blurb {
-    max-width: 850px; }
-  section.applications .headline {
-    max-width: 850px; }
-  section.applications .blurb {
-    max-width: 700px; }
-
-section:nth-child(6n+1) {
-  background-color: #706f73;
-  background-image: url("/assets/images/stitchfix-dot-full-trans.svg"); }
-
-section:nth-child(6n+2) {
-  background-color: white;
-  background-image: url("/assets/images/aa-bg.svg"); }
-
-section:nth-child(6n+3) {
-  background-color: white;
-  background-image: url("/assets/images/bt_image00_home.jpg"); }
-
-section:nth-child(6n+4) {
-  background-color: white;
-  background-image: url("/assets/images/technology.jpg"); }
-
-section:nth-child(6n+5) {
-  background-color: white;
-  background-image: url("/assets/images/bt_image00_home.jpg"); }
-
-section:nth-child(6n+6) {
-  background-color: white;
-  background-image: url("/assets/images/technology.jpg"); }
-
-section.bl .content-group {
-  bottom: 100px;
-  left: 60px;
-  margin-right: 60px; }
-
-section.tl .content-group {
-  top: 100px;
-  left: 60px;
-  margin-right: 60px; }
+  section.bl .content-group {
+    bottom: 100px;
+    left: 60px;
+    margin-right: 60px; }
+  section.br .content-group {
+    bottom: 100px;
+    right: 60px;
+    margin-right: 60px; }
+    section.br .content-group div.content {
+      float: right;
+      text-align: right; }
+  section.tl .content-group {
+    top: 200px;
+    left: 60px;
+    margin-right: 60px; }
+  section.cl .content-group {
+    top: 25%;
+    left: 60px;
+    margin-right: 60px; }
+  section.center {
+    text-align: center; }
+    section.center .content-group {
+      margin-top: 200px;
+      position: static;
+      display: inline-block; }
+      section.center .content-group .headline, section.center .content-group .blurb {
+        max-width: 800px; }

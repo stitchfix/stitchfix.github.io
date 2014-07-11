@@ -13,6 +13,10 @@ Enough said.
     bundle install
     foreman start
     open http://localhost:4000
+    
+# If you get "unknown command: coffee"
+
+    sudo npm install -g coffee-script
 
 # Deploying to the website
 

@@ -1,32 +1,34 @@
 ---
 layout: default
 ---
-<nav>
-  <div class="container">
-    <h1 class="h3"><img class="logo" src="/assets/images/stitchfix-text.svg" alt="Stitch Fix"> technology</h1>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#" class="current">Algorithms &amp; Analytics</a></li>
-      <li><a href="#">Applications</a></li>
+<nav class="top-nav">
+  <div class="logo-wrap">
+    <!--<h1 class="h3"><img class="logo" src="/assets/images/stitchfix-text.svg" alt="Stitch Fix"> technology</h1>-->
+    <ul class="list-inline list-nav m0 nav nav-tabs" role="tablist">
+      <li><a href="#intro" class="btn btn-sm btn-link m0 px2 text-l-xs">About</a></li>
+      <li><a href="#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data</a></li>
+      <li><a href="#applications" class="btn btn-sm btn-link m0 px2 text-l-xs">Applications</a></li>
+      <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
+      <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
     </ul>
   </div>
 </nav>
-<section class="tl intro">
+<section class="center intro" id="intro">
   <div class="content-group">
     <div class="content headline">
       <h2 class="clearfix h3"><img class="logo" src="/assets/images/stitchfix-text.svg" alt="Stitch Fix"> is reinventing the retail industry with innovative technology.</h2>
     </div>
     <div class="content blurb">
       <p>We're a full-stack startup creating unique solutions in data-driven merchandising, massively scaled personal
-        styling, and complex logistics. We are Post Agile: very lightweight planning, continuous deployment, little tech
+        styling, and complex logistics. We are Post-Agile: very lightweight planning, continuous deployment, little tech
         debt, no product managers.</p>
     </div>
   </div>
 </section>
-<section class="bl data-science">
+<section class="cl data-science" id="data-science">
   <div class="content-group">
     <div class="content headline">
-      <h2 class="clearfix h3">Advanced algorithms and data science drive our innovative model.</h2>
+      <h2 class="clearfix h4">Advanced algorithms and data science drive our innovative model.</h2>
     </div>
     <div class="content blurb">
       <p>Scaling a truly personal styling service means giving our stylists the information they need to deliver the
@@ -36,10 +38,10 @@ layout: default
     </div>
   </div>
 </section>
-<section class="bl applications">
+<section class="br applications" id="applications">
   <div class="content-group">
     <div class="content headline">
-      <h2 class="clearfix h3">Our multi-app, event-driven application architecture drives both scale and flexibility.</h2>
+      <h2 class="clearfix h4">Our multi-app, event-driven application architecture drives both scale and flexibility.</h2>
     </div>
     <div class="content blurb">
       <p>There are no monoliths here. Each application in our platform has a clear and distinct purpose and all of them
@@ -49,11 +51,11 @@ layout: default
       <p>All apps are continually tested and deployed with little process overhead. We value complete test coverage,
       continuous integeration, and automatic deployments.</p>
     </div>
-    <ul class="content list">
-      <li>Separate concerns per application</li>
-      <li>Event based publish and subscribe inter-app communication</li>
-      <li>UX driven UIs</li>
-      <li>Tests, CI, constant deployment</li>
-    </ul>
+    <!--<ul class="content list">-->
+      <!--<li>Separate concerns per application</li>-->
+      <!--<li>Event based publish and subscribe inter-app communication</li>-->
+      <!--<li>UX driven UIs</li>-->
+      <!--<li>Tests, CI, constant deployment</li>-->
+    <!--</ul>-->
   </div>
 </section>
