@@ -4,7 +4,19 @@
 
   window.StitchFix.Nav = {
     init: function() {
-      return console.log('nav!');
+      $('body').scrollspy({
+        target: '.top-nav',
+        offset: 100
+      });
+      return $('.top-nav').on('activate.bs.scrollspy', function(e) {
+        var target;
+        target = $(e.target).children('a').attr('href');
+        if (target === '#intro') {
+          return $('.top-nav').removeClass('nav-trans');
+        } else {
+          return $('.top-nav').addClass('nav-trans');
+        }
+      });
     }
   };
 

@@ -3,6 +3,9 @@
 @import "humble_kit.css.scss";
 @import "webfonts.scss";
 
+$dark-gray: #706f73;
+$mint-green: #9ed7d1;
+
 body {
 //  font-family: 'BrandonText-Regular', sans-serif;
   font-family: 'Open Sans', sans-serif;
@@ -20,20 +23,6 @@ img.logo {
   margin-right: 10px;
 }
 
-div.content, ul.content li{
-  clear: both;
-  color: #fff;
-  background-color: #464547;
-  float: left;
-}
-ul.content{
-  list-style: none;
-  li{
-    display: inline-block;
-    padding: 6px 10px;
-  }
-}
-
 nav {
   position: fixed;
   width: 100%;
@@ -41,25 +30,8 @@ nav {
   z-index: 1;
   color: #fff;
   text-align: center;
-//  & > div{
-//    margin: 10px 0;
-//    display: inline-block;
-//  }
-  a{
-
-  }
-
-
-  .logo-wrap, .nav-wrap{
-//    background-color: #303030;
-  }
-  .logo-wrap{
-    padding: 10px 0;
-    opacity: 0.8;
-  }
-  .nav-wrap{
-    opacity: 0.7;
-  }
+  padding: 10px 0;
+  background-color: $dark-gray;
 
   li{
     margin-bottom: 0;
@@ -71,12 +43,24 @@ nav {
     margin-right: 20px;
   }
 }
+$nav-transition-speed: 0.2s;
+.nav-trans {
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+  -webkit-transition: all $nav-transition-speed;
+  -moz-transition: all $nav-transition-speed;
+  -ms-transition: all $nav-transition-speed;
+  -o-transition: all $nav-transition-speed;
+  transition: all $nav-transition-speed;
+}
 
 a, .btn, .btn-link{
   color: #fff;
   &:hover{
     color: #333;
-    background-color: #9ed7d1;
+    background-color: $mint-green;
   }
   &:visited{
     color: #eee;
@@ -85,16 +69,11 @@ a, .btn, .btn-link{
 .active{
   a, .btn, .btn-link{
     color: #333;
-    background-color: #9ed7d1;
+    background-color: $mint-green;
   }
 }
 
 section {
-  height: 100vh;
-  position: relative;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   .content-group {
     div.content {
       padding: 20px;
@@ -112,10 +91,29 @@ section {
   }
 
   &.intro {
-    background-color: #706f73;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $dark-gray;
     background-image: url('/assets/images/stitchfix-dot-full-trans.svg');
     background-size: cover;
     background-position: 0 80px;
+
+    div.content, ul.content li{
+      clear: both;
+      color: #fff;
+      background-color: #464547;
+      float: left;
+    }
+    ul.content{
+      list-style: none;
+      li{
+        display: inline-block;
+        padding: 6px 10px;
+      }
+    }
     .headline {
       opacity: 0.9;
       //.h3 {
@@ -139,63 +137,6 @@ section {
       p{
         font-size: 1.24em;
       }
-    }
-  }
-  &.data-science {
-    background-color: #fff;
-    background-image: url('/assets/images/aa-bg.svg');
-    .headline {
-      max-width: 570px;
-    }
-    .blurb {
-      max-width: 730px;
-    }
-  }
-  &.applications {
-    background-color: #fff;
-    background-image: url('/assets/images/eng-bg.svg');
-    .headline {
-      max-width: 640px;
-    }
-    .blurb {
-      max-width: 600px;
-    }
-  }
-  &.bl, &.br, &.tl, &.tr, &.cl, &.cr{
-    .content-group {
-      position: absolute;
-    }
-  }
-  &.bl{
-    .content-group {
-      bottom: 100px;
-      left: 60px;
-      margin-right: 60px;
-    }
-  }
-  &.br{
-    .content-group {
-      bottom: 100px;
-      right: 60px;
-      margin-left: 60px;
-      div.content{
-        float: right;
-        text-align: right;
-      }
-    }
-  }
-  &.tl{
-    .content-group {
-      top: 200px;
-      left: 60px;
-      margin-right: 60px;
-    }
-  }
-  &.cl{
-    .content-group {
-      top: 25%;
-      left: 60px;
-      margin-right: 60px;
     }
   }
   &.center{

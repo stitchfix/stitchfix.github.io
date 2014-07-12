@@ -2,15 +2,13 @@
 layout: default
 ---
 <nav class="top-nav">
-  <div class="logo-wrap">
-    <ul class="list-inline list-nav m0 nav nav-tabs" role="tablist">
-      <li><a href="#intro" class="btn btn-sm btn-link m0 px2 text-l-xs">About</a></li>
-      <li><a href="#engineering" class="btn btn-sm btn-link m0 px2 text-l-xs">Engineering</a></li>
-      <li><a href="#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data Science</a></li>
-      <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
-      <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
-    </ul>
-  </div>
+  <ul class="list-inline list-nav m0 nav nav-tabs" role="tablist">
+    <li><a href="#intro" class="btn btn-sm btn-link m0 px2 text-l-xs">About</a></li>
+    <li><a href="#engineering" class="btn btn-sm btn-link m0 px2 text-l-xs">Engineering</a></li>
+    <li><a href="#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data Science</a></li>
+    <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
+    <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
+  </ul>
 </nav>
 <section class="center intro" id="intro">
   <div class="content-group">
@@ -24,31 +22,34 @@ layout: default
     </div>
   </div>
 </section>
-<section class="br applications" id="engineering">
-  <div class="content-group">
-    <div class="content headline">
-      <h2 class="clearfix h4">Our multi-app, event-driven application architecture drives both scale and flexibility.</h2>
-    </div>
-    <div class="content blurb">
-      <p>There are no monoliths here. Each application in our platform has a clear and distinct purpose and all of them
+<div class="container contain-to-md m4" id="engineering">
+  <header class="text-c">
+    <h1 class="h1">Applications</h1>
+    <h2 class="h2 thin light">Our multi-app, event-driven application architecture drives both scale and flexibility.</h2>
+  </header>
+</div>
+<section class="container contain-to-md m4">
+  <article>
+    <p>There are no monoliths here. Each application in our platform has a clear and distinct purpose and all of them
       are built in house, primarily in Rails. That means small, clean code bases with little technical debt and lots of flexibility. We use
       RabbitMQ to send messages about real-world events to other apps who decide for themselves whether or not to do
       something with it. This de-coupled architecture allows us to scale with ease and add or change components as needed.</p>
-      <p>All apps are continually tested and deployed with little process overhead. We value complete test coverage,
+    <p>All apps are continually tested and deployed with little process overhead. We value complete test coverage,
       continuous integeration, and automatic deployments.</p>
-    </div>
-  </div>
+  </article>
 </section>
-<section class="cl data-science" id="data-science">
-  <div class="content-group">
-    <div class="content headline">
-      <h2 class="clearfix h4">Advanced algorithms and data science drive our innovative model.</h2>
-    </div>
-    <div class="content blurb">
-      <p>Scaling a truly personal styling service means giving our stylists the information they need to deliver the
-        perfect Stitch Fix&trade;. Our advanced learning algorithms match customer data to available inventory to
-        deliver perfect fashion to her door. But our love for data doesn't end there. Data science drives our business
-        by helping to plan, predict, and understand everything from merchandising to customer service.</p>
-    </div>
-  </div>
+<hr>
+<div class="container contain-to-md m4" id="data-science">
+  <header class="text-c">
+    <h1 class="h1">Algorithms &amp; Analytics</h1>
+    <h2 class="h2 thin light">Advanced algorithms and data science drive our innovative model.</h2>
+  </header>
+</div>
+<section class="container contain-to-md m4">
+  <article>
+    <p>Scaling a truly personal styling service means giving our stylists the information they need to deliver the
+      perfect Stitch Fix&trade;. Our advanced learning algorithms match customer data to available inventory to
+      deliver perfect fashion to her door. But our love for data doesn't end there. Data science drives our business
+      by helping to plan, predict, and understand everything from merchandising to customer service.</p>
+  </article>
 </section>
