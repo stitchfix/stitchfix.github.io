@@ -6,8 +6,9 @@ layout: default
     <li><a href="#intro" class="btn btn-sm btn-link m0 px2 text-l-xs">About</a></li>
     <li><a href="#engineering" class="btn btn-sm btn-link m0 px2 text-l-xs">Engineering</a></li>
     <li><a href="#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data Science</a></li>
-    <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
-    <li><a href="#" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
+    <li><a href="#culture" class="btn btn-sm btn-link m0 px2 text-l-xs">Culture</a></li>
+    <li><a href="#team" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
+    <li><a href="#blog" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
   </ul>
 </nav>
 <section class="center intro" id="intro">
@@ -22,34 +23,160 @@ layout: default
     </div>
   </div>
 </section>
-<div class="container contain-to-md m4" id="engineering">
+<div class="container contain-to-md m2" id="engineering">
   <header class="text-c">
-    <h1 class="h1">Applications</h1>
+    <h1 class="h1 thin">Engineering</h1>
     <h2 class="h2 thin light">Our multi-app, event-driven application architecture drives both scale and flexibility.</h2>
   </header>
 </div>
-<section class="container contain-to-md m4">
+<section class="hidden container contain-to-md">
   <article>
-    <p>There are no monoliths here. Each application in our platform has a clear and distinct purpose and all of them
-      are built in house, primarily in Rails. That means small, clean code bases with little technical debt and lots of flexibility. We use
-      RabbitMQ to send messages about real-world events to other apps who decide for themselves whether or not to do
-      something with it. This de-coupled architecture allows us to scale with ease and add or change components as needed.</p>
-    <p>All apps are continually tested and deployed with little process overhead. We value complete test coverage,
-      continuous integeration, and automatic deployments.</p>
+    <img class="hero" src="/assets/images/multi-app-mb.svg" alt="Separate apps and services per concern, communicating by message bus">
   </article>
 </section>
-<hr>
-<div class="container contain-to-md m4" id="data-science">
+<section class="container contain-to-md">
+  <article>
+    <header>
+      <h4 class="h4">Multiple application architecture</h4>
+    </header>
+    <p>There are no monoliths here. Each application in our platform has a clear and distinct purpose and all of them
+      are built in house, primarily in Ruby. That means small, clean code bases with little technical debt and lots of flexibility. We use
+      RabbitMQ to send messages about real-world events to other apps who decide for themselves whether or not to do
+      something with it. This de-coupled architecture allows us to scale with ease and add or change components as needed.</p>
+  </article>
+  <article class="m4">
+    <header>
+      <h4 class="h4">We are the Product team</h4>
+    </header>
+    <p>We hire engineers with great Product instinct because we are also the Product team. We value practicality and
+      efficiency over process and interface directly with stakeholders in the business. Building great software
+      is a collaborative effort. The business knows we need to do more than just deliver features and trusts where we focus
+      our time and effort.</p>
+  </article>
+  <article class="m4 hidden">
+    <header>
+      <h4 class="h4">Deadlines are doomed to fail</h4>
+    </header>
+    <p>Starting a conversation with a due date dooms it to fail from the beginning. We don't believe deadlines get things
+      done faster. Rather, they encourage stress, bad decisions, and technical debt. We still deliver a lot in a short period of
+      time, but not because we burned ourselves out in the process.</p>
+  </article>
+</section>
+<div class="skin-lightest-gray p2">
+  <div class="container contain-to-md tools">
+    <article class="m0">
+      <header>
+        <h4 class="h4 thin light">Tools</h4>
+      </header>
+      <div class="grid">
+        <div class="g _1-1-sm _1-2">
+          <dl>
+            <dt>Ruby</dt>
+            <dd>with Rails as web application glue</dd>
+            <dt>RabbitMQ</dt>
+            <dd>apps communicate by broadcasting events, not rigid APIs</dd>
+            <dt>Postgres</dt>
+            <dd>powerful and redundant data layer</dd>
+          </dl>
+        </div>
+        <div class="g _1-1-sm _1-2">
+          <dl>
+            <dt>CI</dt>
+            <dd>continuous testing and auto-deployment</dd>
+            <dt>Responsive Design</dt>
+            <dd>we love every screen size</dd>
+            <dt>AngularJS</dt>
+            <dd>because sometimes you just want to be fancy ;)</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+<div class="skin-mint p2">
+  <div class="container contain-to-md">
+    <article class="m0">
+      <header>
+        <h4 class="h4 thin">Open Engineering Positions</h4>
+      </header>
+      <dl>
+        <dt><a href="#">Sr. Full Stack Rails Engineer</a></dt>
+        <dd>Experience in Ruby, Rails, front-end development, and Product design.</dd>
+        <dt><a href="#">Lead DevOps Engineer</a></dt>
+        <dd>Responsible for design, implementation, and support for our infrastructure.</dd>
+      </dl>
+      <p><small><a href="#data-science" class="dark">Looking for Data Science Positions?</a></small></p>
+    </article>
+  </div>
+</div>
+<div class="container contain-to-md m2" id="data-science">
   <header class="text-c">
-    <h1 class="h1">Algorithms &amp; Analytics</h1>
+    <h1 class="h1 thin">Algorithms &amp; Analytics</h1>
     <h2 class="h2 thin light">Advanced algorithms and data science drive our innovative model.</h2>
   </header>
 </div>
-<section class="container contain-to-md m4">
-  <article>
+<section class="container contain-to-md">
+  <article class="m4">
+    <header>
+      <h4 class="h4">Recommendation Algorithm</h4>
+    </header>
     <p>Scaling a truly personal styling service means giving our stylists the information they need to deliver the
       perfect Stitch Fix&trade;. Our advanced learning algorithms match customer data to available inventory to
       deliver perfect fashion to her door. But our love for data doesn't end there. Data science drives our business
       by helping to plan, predict, and understand everything from merchandising to customer service.</p>
   </article>
+  <article class="m4">
+    <header>
+      <h4 class="h4">Business Insights</h4>
+    </header>
+    <p>Our love for data doesn't end with clients and apparel. Data science drives our business
+      by helping to plan, predict, and understand everything from merchandising to customer service.</p>
+  </article>
 </section>
+<div class="skin-lightest-gray p2">
+  <div class="container contain-to-md tools">
+    <article class="m0">
+      <header>
+        <h4 class="h4 thin light">Tools</h4>
+      </header>
+      <div class="grid">
+        <div class="g _1-1-sm _1-2">
+          <dl>
+            <dt>Python</dt>
+            <dd>is super great</dd>
+            <dt>R</dt>
+            <dd>is really also great</dd>
+          </dl>
+        </div>
+        <div class="g _1-1-sm _1-2">
+          <dl>
+            <dt>Postgres</dt>
+            <dd>powerful and redundant data layer</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+<div class="skin-mint p2">
+  <div class="container contain-to-md">
+    <article class="m0">
+      <header>
+        <h4 class="h4 thin">Open Data Science Positions</h4>
+      </header>
+      <dl>
+        <dt><a href="#">Data Science Engineer</a></dt>
+        <dd>You are great at doing things data-y and science-y.</dd>
+        <dt><a href="#">Data Science Engineering Intern</a></dt>
+        <dd>You are great at doing things data-y and science-y.</dd>
+        <dt><a href="#">Data Scientist</a></dt>
+        <dd>You are great at doing things data-y and science-y.</dd>
+        <dt><a href="#">Algorithm Developer</a></dt>
+        <dd>You are great at doing things data-y and science-y.</dd>
+        <dt><a href="#">Algorithm Developer Intern</a></dt>
+        <dd>You are great at doing things data-y and science-y.</dd>
+      </dl>
+      <p><small><a href="#engineering" class="dark">Looking for Engineering Positions?</a></small></p>
+    </article>
+  </div>
+</div>

@@ -66,6 +66,7 @@
    Modified by Brian Cleveland (@yorthehunter)
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800);
+@import url("//hello.myfonts.net/count/2b26e2");
 html, body {
   height: 100%;
   background-color: white; }
@@ -2394,32 +2395,85 @@ category: Modules
       padding-right: 0 !important; }
 
   /* 1 */ }
+@font-face {
+  font-family: BrandonText;
+  font-weight: 500;
+  font-style: italic;
+  src: url("/assets/webfonts/brandon/2B26E2_0_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_0_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_0_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_0_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_0_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonText;
+  font-weight: 500;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_1_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_1_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_1_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_1_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_1_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonText;
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_2_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_2_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_2_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_2_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_2_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 600;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_3_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_3_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_3_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_3_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_3_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_4_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_4_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_4_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_4_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_4_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 200;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_5_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_5_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_5_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_5_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_5_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 800;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_6_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_6_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_6_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_6_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_6_0.svg#wf") format("svg"); }
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   position: relative; }
 
-.h1 {
-  font-weight: 300; }
+h5, .h5, p, .p, dl, ol, ul {
+  font-size: 1.1em; }
 
-.h2 {
-  font-weight: 300; }
-
-.h3 {
-  font-weight: 300; }
-
-.h4 {
-  font-weight: 300; }
-
-.h5 {
-  font-weight: 300; }
-
-.h6 {
-  font-weight: 300; }
+.tools dl {
+  font-size: 1em; }
 
 img.logo {
   display: inline-block;
   margin-right: 10px; }
+
+.skin-mint {
+  background-color: #9ed7d1; }
+  .skin-mint a, .skin-mint a:visited, .skin-mint a:active {
+    color: white; }
+    .skin-mint a.dark, .skin-mint a:visited.dark, .skin-mint a:active.dark {
+      color: #444444; }
+
+.skin-yellow {
+  background-color: #f2e230; }
+
+.skin-light-gray {
+  background-color: #bebfc1; }
+  .skin-light-gray .light {
+    color: #efefef; }
+  .skin-light-gray a, .skin-light-gray a:visited, .skin-light-gray a:active {
+    color: white; }
+
+.skin-lightest-gray {
+  background-color: #efefef; }
+
+a, a:visited, a:active {
+  color: #48aea3; }
 
 nav {
   position: fixed;
@@ -2436,6 +2490,16 @@ nav {
     margin-bottom: 10px; }
   nav h1 {
     margin-right: 20px; }
+  nav a, nav .btn, nav .btn-link {
+    color: #fff; }
+    nav a:hover, nav .btn:hover, nav .btn-link:hover {
+      color: #333;
+      background-color: #9ed7d1; }
+    nav a:visited, nav .btn:visited, nav .btn-link:visited {
+      color: #eee; }
+  nav .active a, nav .active .btn, nav .active .btn-link {
+    color: #333;
+    background-color: #9ed7d1; }
 
 .nav-trans {
   opacity: 0.9;
@@ -2446,18 +2510,6 @@ nav {
   transition: all 0.2s; }
   .nav-trans:hover {
     opacity: 1; }
-
-a, .btn, .btn-link {
-  color: #fff; }
-  a:hover, .btn:hover, .btn-link:hover {
-    color: #333;
-    background-color: #9ed7d1; }
-  a:visited, .btn:visited, .btn-link:visited {
-    color: #eee; }
-
-.active a, .active .btn, .active .btn-link {
-  color: #333;
-  background-color: #9ed7d1; }
 
 section .content-group div.content {
   padding: 20px;
@@ -2492,6 +2544,18 @@ section.intro {
   background-image: url("/assets/images/stitchfix-dot-full-trans.svg");
   background-size: cover;
   background-position: 0 80px; }
+  section.intro .h1 {
+    font-weight: 300; }
+  section.intro .h2 {
+    font-weight: 300; }
+  section.intro .h3 {
+    font-weight: 300; }
+  section.intro .h4 {
+    font-weight: 300; }
+  section.intro .h5 {
+    font-weight: 300; }
+  section.intro .h6 {
+    font-weight: 300; }
   section.intro div.content, section.intro ul.content li {
     clear: both;
     color: #fff;
@@ -2522,3 +2586,6 @@ section.center {
     display: inline-block; }
     section.center .content-group .headline, section.center .content-group .blurb {
       max-width: 800px; }
+
+.hero {
+  width: 100%; }

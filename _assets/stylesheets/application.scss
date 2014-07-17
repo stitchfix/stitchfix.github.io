@@ -1,26 +1,64 @@
+@charset "UTF-8";
+
 /* Humble Kit
    ========================================================================== */
 @import "humble_kit.css.scss";
 @import "webfonts.scss";
 
+$light-gray: #bebfc1;
+$lightest-gray: #efefef;
 $dark-gray: #706f73;
 $mint-green: #9ed7d1;
+$yellow: #f2e230;
+$body-text: #444;
 
 body {
-//  font-family: 'BrandonText-Regular', sans-serif;
+//  font-family: 'BrandonText', sans-serif;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   position: relative; // For scrollspy
 }
-@for $i from 1 through 6 {
-  .h#{$i} {
-    font-weight: 300;
+
+h5, .h5, p, .p, dl, ol, ul{
+  font-size: 1.1em;
+}
+.tools{
+  dl {
+    font-size: 1em;
   }
 }
-
 img.logo {
   display: inline-block;
   margin-right: 10px;
+}
+
+.skin-mint {
+  background-color: $mint-green;
+  a, a:visited, a:active {
+    color: white;
+    &.dark {
+      color: $body-text;
+    }
+  }
+}
+.skin-yellow {
+  background-color: $yellow;
+}
+.skin-light-gray {
+  background-color: $light-gray;
+  .light {
+    color: $lightest-gray;
+  }
+  a, a:visited, a:active {
+    color: white;
+  }
+}
+.skin-lightest-gray {
+  background-color: $lightest-gray;
+}
+
+a, a:visited, a:active {
+  color: darken($mint-green, 25%);
 }
 
 nav {
@@ -42,6 +80,23 @@ nav {
   h1{
     margin-right: 20px;
   }
+
+  a, .btn, .btn-link{
+    color: #fff;
+    &:hover{
+      color: #333;
+      background-color: $mint-green;
+    }
+    &:visited{
+      color: #eee;
+    }
+  }
+  .active{
+    a, .btn, .btn-link{
+      color: #333;
+      background-color: $mint-green;
+    }
+  }
 }
 $nav-transition-speed: 0.2s;
 .nav-trans {
@@ -54,23 +109,6 @@ $nav-transition-speed: 0.2s;
   -ms-transition: all $nav-transition-speed;
   -o-transition: all $nav-transition-speed;
   transition: all $nav-transition-speed;
-}
-
-a, .btn, .btn-link{
-  color: #fff;
-  &:hover{
-    color: #333;
-    background-color: $mint-green;
-  }
-  &:visited{
-    color: #eee;
-  }
-}
-.active{
-  a, .btn, .btn-link{
-    color: #333;
-    background-color: $mint-green;
-  }
 }
 
 section {
@@ -91,6 +129,11 @@ section {
   }
 
   &.intro {
+    @for $i from 1 through 6 {
+      .h#{$i} {
+        font-weight: 300;
+      }
+    }
     height: 100vh;
     position: relative;
     background-attachment: fixed;
@@ -150,4 +193,7 @@ section {
       }
     }
   }
+}
+.hero {
+  width: 100%;
 }
