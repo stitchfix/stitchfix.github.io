@@ -8,6 +8,7 @@
 $light-gray: #bebfc1;
 $lightest-gray: #efefef;
 $dark-gray: #706f73;
+$darkest-gray: #464547;
 $mint-green: #9ed7d1;
 $yellow: #f2e230;
 $body-text: #444;
@@ -55,6 +56,17 @@ img.logo {
 }
 .skin-lightest-gray {
   background-color: $lightest-gray;
+}
+.skin-dark-gray {
+  background-color: $dark-gray;
+}
+.skin-darkest-gray {
+  background-color: $darkest-gray;
+  color: white;
+}
+.skin-dot {
+  background-image: url('/assets/images/stitchfix-dot-full-trans.svg');
+  background-position: 0 80px;
 }
 
 a, a:visited, a:active {
@@ -111,6 +123,21 @@ $nav-transition-speed: 0.2s;
   transition: all $nav-transition-speed;
 }
 
+.full-height {
+  height: 100vh;
+}
+.bg-fixed {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-img {
+  width: 100%;
+}
+.trans9{
+  opacity: 0.9;
+}
+
 section {
   .content-group {
     div.content {
@@ -122,78 +149,16 @@ section {
           line-height: 1.5;
         }
       }
-      p{
-        font-size: 1.1em;
-      }
-    }
-  }
-
-  &.intro {
-    @for $i from 1 through 6 {
-      .h#{$i} {
-        font-weight: 300;
-      }
-    }
-    height: 100vh;
-    position: relative;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $dark-gray;
-    background-image: url('/assets/images/stitchfix-dot-full-trans.svg');
-    background-size: cover;
-    background-position: 0 80px;
-
-    div.content, ul.content li{
-      clear: both;
-      color: #fff;
-      background-color: #464547;
-      float: left;
-    }
-    ul.content{
-      list-style: none;
-      li{
-        display: inline-block;
-        padding: 6px 10px;
-      }
-    }
-    .headline {
-      opacity: 0.9;
-      //.h3 {
-      //  font-weight: 600;
-      //  text-shadow: 1px 2px 0 rgba(0,0,0,0.6);
-      //}
-    }
-    .blurb, ul.content li {
-      opacity: 0.9;
-    }
-    .headline {
-      max-width: 800px;
-    }
-    .blurb {
-      max-width: 700px;
-    }
-    div.content {
-      .h3{
-        line-height: 1.3;
-      }
-      p{
-        font-size: 1.24em;
-      }
-    }
-  }
-  &.center{
-    text-align: center;
-    .content-group {
-      margin-top: 200px;
-      position: static;
-      display: inline-block;
-      .headline, .blurb{
-        max-width: 800px;
-      }
     }
   }
 }
-.hero {
-  width: 100%;
+.center{
+  .content-group {
+    margin-top: 200px;
+    position: static;
+    display: inline-block;
+    .headline, .blurb{
+      max-width: 800px;
+    }
+  }
 }
