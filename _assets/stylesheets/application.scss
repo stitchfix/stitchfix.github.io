@@ -162,3 +162,15 @@ section {
     }
   }
 }
+
+.team-img {
+//  display: inline-block;
+//  width: 200px;
+  img {
+    width: 100%;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
