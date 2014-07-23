@@ -447,7 +447,7 @@ use them or not, so stay cautious, friends.
 
 sub, sup {
   /* 1 */
-  font-size: 65%;
+  font-size: 80%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
@@ -460,7 +460,7 @@ sub {
 
 small,
 .small {
-  font-size: 65%;
+  font-size: 80%;
   line-height: 1rem; }
 
 .strike {
@@ -2484,7 +2484,15 @@ img.logo {
   background-position: 0 80px; }
 
 a, a:visited, a:active {
-  color: #48aea3; }
+  color: #67baaf; }
+
+.text-body-color {
+  color: #444444; }
+
+a.text-body-color, a.text-body-color:visited {
+  color: #444444; }
+a.text-body-color:hover {
+  color: #67baaf; }
 
 nav {
   position: fixed;
@@ -2570,3 +2578,19 @@ section .content-group div.content {
 
 .uppercase {
   text-transform: uppercase; }
+
+.post-link .h1 {
+  display: block; }
+.post-link .h2 {
+  display: block; }
+.post-link .h3 {
+  display: block; }
+.post-link .h4 {
+  display: block; }
+.post-link .h5 {
+  display: block; }
+.post-link .h6 {
+  display: block; }
+.post-link date, .post-link time {
+  font-size: 80%;
+  color: #bebfc1; }

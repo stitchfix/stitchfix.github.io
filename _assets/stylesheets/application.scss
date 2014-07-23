@@ -2,6 +2,7 @@
 
 /* Humble Kit
    ========================================================================== */
+$small-size: 80;
 @import "humble_kit.css.scss";
 @import "webfonts.scss";
 
@@ -12,6 +13,7 @@ $darkest-gray: #464547;
 $mint-green: #9ed7d1;
 $yellow: #f2e230;
 $body-text: #444;
+$dark-mint: rgb(103, 186, 175);
 
 body {
 //  font-family: 'BrandonText', sans-serif;
@@ -70,7 +72,19 @@ img.logo {
 }
 
 a, a:visited, a:active {
-  color: darken($mint-green, 25%);
+  color: $dark-mint;
+}
+
+.text-body-color{
+  color: $body-text;
+}
+a.text-body-color {
+  &, &:visited {
+    color: $body-text;
+  }
+  &:hover {
+    color: $dark-mint;
+  }
 }
 
 nav {
@@ -173,4 +187,16 @@ section {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.post-link {
+  @for $i from 1 through 6 {
+    .h#{$i} {
+      display: block;
+    }
+  }
+  date, time {
+    font-size: $small-size#{$small-size-unit};
+    color: $light-gray;
+  }
 }

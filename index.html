@@ -337,3 +337,29 @@ layout: default
     </div>
   </div>
 </section>
+<div class="skin-mint p2">
+  <div class="container contain-to-md">
+    <article class="m2">
+      <p>&nbsp;</p>
+    </article>
+  </div>
+</div>
+
+<div class="container contain-to-md m2" id="blog">
+  <header class="text-c">
+    <h1 class="h1 thin">Blog</h1>
+  </header>
+  <article class="m2">
+    <ul class="list-unstyled">
+      {% for post in site.posts %}
+        <li class="post-link m2">
+          <a href="{{ post.url }}" title="{{ post.title }}" class="text-body-color">
+            <span class="h4 m1">{{ post.title }}</span>
+            <span class="thin mr1">{{ post.author }}</span>
+            <date datetime="{{ post.date | date: "%Y-%m-%d"}}">{{ post.date | date: "%B %d, %Y"}}</date>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
+</div>
