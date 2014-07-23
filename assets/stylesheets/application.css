@@ -2556,21 +2556,23 @@ nav {
 .uppercase {
   text-transform: uppercase; }
 
-.post-link .h1 {
-  display: block; }
-.post-link .h2 {
-  display: block; }
-.post-link .h3 {
-  display: block; }
-.post-link .h4 {
-  display: block; }
-.post-link .h5 {
-  display: block; }
-.post-link .h6 {
-  display: block; }
-.post-link date, .post-link time {
-  font-size: 80%;
-  color: #bebfc1; }
+.post-link {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .post-link .h1 {
+    display: block; }
+  .post-link .h2 {
+    display: block; }
+  .post-link .h3 {
+    display: block; }
+  .post-link .h4 {
+    display: block; }
+  .post-link .h5 {
+    display: block; }
+  .post-link .h6 {
+    display: block; }
+  .post-link date, .post-link time {
+    font-size: 80%;
+    color: #bebfc1; }
 
 .p10 {
   padding-top: 10rem;

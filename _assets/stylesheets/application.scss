@@ -178,6 +178,7 @@ $nav-transition-speed: 0.2s;
     font-size: $small-size#{$small-size-unit};
     color: $light-gray;
   }
+  border-bottom: 1px solid $hr-color;
 }
 .p10 {
   padding-top: 10rem;
