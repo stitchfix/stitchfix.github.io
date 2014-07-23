@@ -2533,6 +2533,12 @@ nav {
 .full-height {
   height: 100vh; }
 
+.two-thirds-height {
+  height: 66vh; }
+
+.three-quarter-height {
+  height: 75vh; }
+
 .bg-fixed {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -2543,35 +2549,6 @@ nav {
 
 .trans9 {
   opacity: 0.9; }
-
-section .content-group div.content {
-  padding: 20px;
-  margin-bottom: 20px; }
-  section .content-group div.content .h1 {
-    margin: 0;
-    line-height: 1.5; }
-  section .content-group div.content .h2 {
-    margin: 0;
-    line-height: 1.5; }
-  section .content-group div.content .h3 {
-    margin: 0;
-    line-height: 1.5; }
-  section .content-group div.content .h4 {
-    margin: 0;
-    line-height: 1.5; }
-  section .content-group div.content .h5 {
-    margin: 0;
-    line-height: 1.5; }
-  section .content-group div.content .h6 {
-    margin: 0;
-    line-height: 1.5; }
-
-.center .content-group {
-  margin-top: 200px;
-  position: static;
-  display: inline-block; }
-  .center .content-group .headline, .center .content-group .blurb {
-    max-width: 800px; }
 
 .team-img img {
   width: 100%; }
@@ -2594,3 +2571,7 @@ section .content-group div.content {
 .post-link date, .post-link time {
   font-size: 80%;
   color: #bebfc1; }
+
+.p10 {
+  padding-top: 10rem;
+  padding-bottom: 10rem; }
