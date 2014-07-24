@@ -3,8 +3,6 @@
 /* Humble Kit
    ========================================================================== */
 $small-size: 80;
-@import "humble_kit.css.scss";
-@import "webfonts.scss";
 
 $light-gray: #bebfc1;
 $lightest-gray: #efefef;
@@ -14,6 +12,12 @@ $mint-green: #9ed7d1;
 $yellow: #f2e230;
 $body-text: #444;
 $dark-mint: rgb(103, 186, 175);
+
+@import "humble_kit.css.scss";
+@import "webfonts.scss";
+
+@import "blog.css.scss";
+@import "code.css.scss";
 
 body {
 //  font-family: 'BrandonText', sans-serif;
