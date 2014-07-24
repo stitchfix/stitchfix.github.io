@@ -4,7 +4,7 @@
 
   window.StitchFix.Nav = {
     init: function() {
-      $('body').scrollspy({
+      $('body.home').scrollspy({
         target: '.top-nav',
         offset: 100
       });

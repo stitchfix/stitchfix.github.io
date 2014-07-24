@@ -1,10 +1,10 @@
 <nav class="top-nav">
   <ul class="list-inline list-nav m0 nav nav-tabs" role="tablist">
-    <li><a href="/#intro" class="btn btn-sm btn-link m0 px2 text-l-xs">About</a></li>
-    <li><a href="/#engineering" class="btn btn-sm btn-link m0 px2 text-l-xs">Engineering</a></li>
-    <li><a href="/#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data Science</a></li>
-    <li><a href="/#culture" class="btn btn-sm btn-link m0 px2 text-l-xs">Culture</a></li>
-    <li><a href="/#team" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
-    <li><a href="/#blog" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
+    <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#intro" class="btn btn-sm btn-link m0 px2 text-l-xs">About</a></li>
+    <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#engineering" class="btn btn-sm btn-link m0 px2 text-l-xs">Engineering</a></li>
+    <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data Science</a></li>
+    <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#culture" class="btn btn-sm btn-link m0 px2 text-l-xs">Culture</a></li>
+    <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#team" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
+    <li{% if page.url != '/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#blog" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
   </ul>
 </nav>
