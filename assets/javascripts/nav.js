@@ -4,9 +4,16 @@
 
   window.StitchFix.Nav = {
     init: function() {
+      var navHeight;
+      navHeight = $('.top-nav').height();
+      $('body.home .top-nav a').click(function(e) {
+        return $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top - navHeight - 50
+        }, 500);
+      });
       $('body.home').scrollspy({
         target: '.top-nav',
-        offset: 100
+        offset: 200
       });
       return $('.top-nav').on('activate.bs.scrollspy', function(e) {
         var target;
