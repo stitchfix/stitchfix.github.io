@@ -6,8 +6,8 @@ descripiton: "Stitch Fix is a styling as a service start-up based in San Francis
 # Owner (organization or individual) of site content
 author: "Stitch Fix"
 url: "http://technology.stitchfix.com/"
-title: "Stitch Fix Tech Blog"
-production_url: "http://technology.stitchfix.com/blog"
+title: "Stitch Fix Technology"
+production_url: "http://technology.stitchfix.com"
 atom_path: "atom.xml"
 
 # Your UA tracking number (i.e 35858753-1) for Google Analytics. 
