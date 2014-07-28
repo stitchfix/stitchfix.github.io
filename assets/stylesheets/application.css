@@ -2756,7 +2756,7 @@ body {
 h5, .h5, p, .p, dl, ol, ul {
   font-size: 1.1em; }
 
-.tools dl {
+.small-dl dl {
   font-size: 1em; }
 
 img.logo {
@@ -2888,3 +2888,6 @@ nav {
 .p10 {
   padding-top: 10rem;
   padding-bottom: 10rem; }
+
+.mt6 {
+  margin-top: 6rem; }

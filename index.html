@@ -34,9 +34,10 @@ layout: default
       <h4 class="h4">Multiple application architecture</h4>
     </header>
     <p>There are no monoliths here. Each application in our platform has a clear and distinct purpose and all of them
-      are built in house, primarily in Ruby. That means small, clean code bases with little technical debt and lots of flexibility. We use
-      RabbitMQ to send messages about real-world events to other apps who decide for themselves whether or not to do
-      something with it. This de-coupled architecture allows us to scale with ease and add or change components as needed.</p>
+      are built in house, primarily in Ruby. That means small, clean code bases with little technical debt and lots of
+      flexibility. Often we use RabbitMQ to send messages about real-world events to other apps who decide for themselves
+      whether or not to do something with it. This de-coupled architecture allows us to scale with ease and add or change
+      components as needed. When it really makes sense we build RESTful API's for our services as well.</p>
   </article>
   <article class="m4">
     <header>
@@ -47,7 +48,7 @@ layout: default
       is a collaborative effort. The business knows we need to do more than just deliver features and trusts where we focus
       our time and effort.</p>
   </article>
-  <article class="m4 hidden">
+  <article class="m4">
     <header>
       <h4 class="h4">Deadlines are doomed to fail</h4>
     </header>
@@ -55,9 +56,94 @@ layout: default
       done faster. Rather, they encourage stress, bad decisions, and technical debt. We still deliver a lot in a short period of
       time, but not because we burned ourselves out in the process.</p>
   </article>
+
+  <article class="m4">
+    <header>
+      <h4 class="h4 thin light">Some of what we work on</h4>
+    </header>
+  </article>
+  <article class="m4">
+    <header>
+      <h5 class="h5">Operations and Warehouse</h5>
+    </header>
+    <ul>
+      <li>We receive lots of deliveries from vendors every day and need to get them into our physical and digital
+        inventory as quickly as possible
+      </li>
+      <li>We need to pick, pack and ship lots of Fixes every day, and they all need to be of the highest quality</li>
+      <li>We get lots of returns from clients every day (it’s part of the business model) and we have to check the
+        merchandise and get it back into inventory as quickly as possible
+      </li>
+    </ul>
+    <header>
+      <h5 class="h5 mt2">Merchandising</h5>
+    </header>
+    <ul>
+      <li>We have to order lots of new inventory every day and synchronize those orders with the warehouse</li>
+      <li>We have to plan every upcoming week, month, season and year to ensure we have the right amount and best mix
+        of
+        clothes
+      </li>
+      <li>We have to leverage all of our sales and client data to make the best possible buying decisions</li>
+    </ul>
+    <header>
+      <h5 class="h5 mt2">Personal Styling</h5>
+    </header>
+    <ul>
+      <li>Helping our stylists leverage our very effective styling algorithm to put together incredible, unique fixes for
+        all our clients
+      </li>
+      <li>Our stylists need to see the best possible matches between each client and all our clothes, and they need to
+        use that information with their own knowledge to create a unique fix for each of our customers
+      </li>
+      <li>We need to give our stylists and their managers insight into their performance and success rates</li>
+    </ul>
+    <header>
+      <h5 class="h5 mt2">Customer Service</h5>
+    </header>
+    <ul>
+      <li>We encourage our customers to give us feedback about all aspects of our service through whichever channels
+        they want, and we need to keep track of all of that
+      </li>
+      <li>We want our service to be as convenient as possible and sometimes that means lending a helping hand with
+        shipments, payments or using our website
+      </li>
+    </ul>
+  </article>
+  <article class="m4">
+    <p>
+      We use technologies like PostgreSQL, Redis, ElasticSearch and RabbitMQ along with various private Gems to tie
+      them
+      all together. We work from San Francisco, Pittsburgh and remotely, and we use Heroku, GitHub, Google Hangouts
+      and
+      HipChat to help us build it all.
+    </p>
+
+    <p>
+      We are looking for people who share our values. We like to move quickly and ship lots of code, but in a
+      considered
+      way. We use TDD, CI and an all-hands-on-deck approach to Pull Requests to ensure we can keep the pace up without
+      stinting on quality.
+    </p>
+
+    <p>
+      If any of us have a good idea for introducing a new technology or pattern then we go ahead and run an
+      experiment.
+      The debates don’t start until we have some real evidence to look at and since we avoid dogma and evangelism they
+      tend to be short.
+    </p>
+
+    <p>
+      We work closely with our internal partners (no product managers here!) and we assume that they know best about
+      what they need to do their jobs. Our job is to solve business problems and some of our proudest moments come
+      from
+      solving those problems without a line of code.
+    </p>
+  </article>
+
 </section>
 <div class="skin-lightest-gray p2">
-  <div class="container contain-to-md tools">
+  <div class="container contain-to-md small-dl">
     <article class="m0">
       <header>
         <h4 class="h4 thin light">Tools</h4>
@@ -94,7 +180,7 @@ layout: default
         <h4 class="h4 thin">Open Engineering Positions</h4>
       </header>
       <dl>
-        <dt><a href="#">Sr. Full Stack Rails Engineer</a></dt>
+        <dt><a href="/jobs/senior-full-stack-rails.html">Sr. Full Stack Rails Engineer</a></dt>
         <dd>Experience in Ruby, Rails, front-end development, and Product design.</dd>
         <dt><a href="#">Lead DevOps Engineer</a></dt>
         <dd>Responsible for design, implementation, and support for our infrastructure.</dd>
@@ -129,7 +215,7 @@ layout: default
   </article>
 </section>
 <div class="skin-lightest-gray p2">
-  <div class="container contain-to-md tools">
+  <div class="container contain-to-md small-dl">
     <article class="m0">
       <header>
         <h4 class="h4 thin light">Tools</h4>
@@ -298,47 +384,47 @@ layout: default
   <div class="grid">
     <div class="team-img g _1-4">
       <img src="/assets/images/team/bhaskar.jpg" alt="Bhaskar">
-      <h2 class="h5">Baskar <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Baskar <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/eric.jpg" alt="Eric">
-      <h2 class="h5">Eric <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Eric <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/alan.jpg" alt="Alan">
-      <h2 class="h5">Alan <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Alan <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/brad.jpg" alt="Brad">
-      <h2 class="h5">Brad <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Brad <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/daragh.jpg" alt="Daragh">
-      <h2 class="h5">Daragh <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Daragh <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/Thomas.jpg" alt="Thomas">
-      <h2 class="h5">Thomas <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Thomas <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/eli.jpg" alt="Eli">
-      <h2 class="h5">Eli <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Eli <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/deep.jpg" alt="Deep">
-      <h2 class="h5">Deep <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Deep <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/cian.jpg" alt="Cian">
-      <h2 class="h5">Cian <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Cian <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/jeff_m.jpg" alt="Jeff">
-      <h2 class="h5">Jeff <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Jeff <small class="thin uppercase">San Francisco</small></h2>
     </div>
     <div class="team-img g _1-4">
       <img src="/assets/images/team/paolo.jpg" alt="Paolo">
-      <h2 class="h5">Paolo <small class="thin uppercase">Data</small></h2>
+      <h2 class="h5">Paolo <small class="thin uppercase">San Francisco</small></h2>
     </div>
   </div>
 </section>
