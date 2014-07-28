@@ -2831,6 +2831,14 @@ nav {
     color: #333;
     background-color: #9ed7d1; }
 
+.btn-primary {
+  background-color: #9ed7d1;
+  color: white;
+  border-color: transparent; }
+  .btn-primary:hover, .btn-primary:visited {
+    background-color: #9ed7d1;
+    border-color: transparent; }
+
 .nav-trans {
   opacity: 0.9;
   -webkit-transition: all 0.2s;

@@ -128,6 +128,17 @@ nav {
     }
   }
 }
+
+.btn-primary {
+  background-color: $mint-green;
+  color: white;
+  border-color: transparent;
+  &:hover, &:visited {
+    background-color: $mint-green;
+    border-color: transparent;
+  }
+}
+
 $nav-transition-speed: 0.2s;
 .nav-trans {
   opacity: 0.9;
