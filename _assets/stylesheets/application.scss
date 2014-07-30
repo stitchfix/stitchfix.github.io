@@ -9,9 +9,21 @@ $lightest-gray: #efefef;
 $dark-gray: #706f73;
 $darkest-gray: #464547;
 $mint-green: #9ed7d1;
-$yellow: #f2e230;
 $body-text: #444;
-$dark-mint: rgb(103, 186, 175);
+
+// Copied directly from new brand guidelines
+$mint-link-color: #68bcb0;
+$pink-accent-color: #ff5d60;
+$off-white: rgb(254, 250, 247);
+
+// Links
+$link-color:         $mint-link-color;
+$link-hover-color:   $mint-link-color;
+$link-active-color:  $pink-accent-color;
+$link-visited-color: $mint-link-color;
+
+$brandon-text: 'BrandonText', Molengo, 'Gill Sans', 'Calibri', 'Trebuchet MS', sans-serif;
+$brandon-gt: 'BrandonGrotesque', Molengo, 'Gill Sans', 'Calibri', 'Trebuchet MS', sans-serif;
 
 @import "humble_kit.css.scss";
 @import "webfonts.scss";
@@ -20,10 +32,36 @@ $dark-mint: rgb(103, 186, 175);
 @import "code.css.scss";
 
 body {
-//  font-family: 'BrandonText', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-family: $brandon-text;
   position: relative; // For scrollspy
+  font-size: 20px;
+  line-height: 1.2;
+  text-spacing: 0;
+}
+html, body {
+  background-color: $off-white;
+}
+
+@for $i from 1 through 6 {
+  h#{$i}, .h#{$i} {
+    font-family: $brandon-gt;
+  }
+}
+
+.header {
+  font-family: $brandon-gt;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-spacing: 50;
+}
+.title {
+  font-family: $brandon-gt;
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-spacing: 0;
+  text-transform: none;
 }
 
 h5, .h5, p, .p, dl, ol, ul{
@@ -42,14 +80,11 @@ img.logo {
 .skin-mint {
   background-color: $mint-green;
   a, a:visited, a:active {
-    color: white;
+    color: $off-white;
     &.dark {
       color: $body-text;
     }
   }
-}
-.skin-yellow {
-  background-color: $yellow;
 }
 .skin-light-gray {
   background-color: $light-gray;
@@ -57,7 +92,7 @@ img.logo {
     color: $lightest-gray;
   }
   a, a:visited, a:active {
-    color: white;
+    color: $off-white;
   }
 }
 .skin-lightest-gray {
@@ -68,15 +103,11 @@ img.logo {
 }
 .skin-darkest-gray {
   background-color: $darkest-gray;
-  color: white;
+  color: $off-white;
 }
 .skin-dot {
   background-image: url('/assets/images/stitchfix-dot-full-trans.svg');
   background-position: 0 80px;
-}
-
-a, a:visited, a:active {
-  color: $dark-mint;
 }
 
 .text-body-color{
@@ -87,7 +118,7 @@ a.text-body-color {
     color: $body-text;
   }
   &:hover {
-    color: $dark-mint;
+    color: $mint-link-color;
   }
 }
 
@@ -100,6 +131,7 @@ nav {
   text-align: center;
   padding: 10px 0;
   background-color: $dark-gray;
+  text-transform: uppercase;
 
   li{
     margin-bottom: 0;
@@ -131,7 +163,7 @@ nav {
 
 .btn-primary {
   background-color: $mint-green;
-  color: white;
+  color: $off-white;
   border-color: transparent;
   &:hover, &:visited {
     background-color: $mint-green;

@@ -65,7 +65,6 @@
 
    Modified by Brian Cleveland (@yorthehunter)
 */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800);
 @import url("//hello.myfonts.net/count/2b26e2");
 html, body {
   height: 100%;
@@ -673,7 +672,7 @@ also a couple of classes you can use to make links more universally useful.
 
 */
 a {
-  color: #3874b5;
+  color: #68bcb0;
   text-decoration: none;
   -webkit-transition: color, 200ms;
   -moz-transition: color, 200ms;
@@ -681,7 +680,7 @@ a {
   -o-transition: color, 200ms;
   transition: color, 200ms; }
   a:visited {
-    color: #3874b5; }
+    color: #68bcb0; }
   a.light {
     color: #77abc9; }
     a.light:visited {
@@ -695,9 +694,9 @@ a {
     a.link-white:visited, a.link-white:hover, a.link-white:active {
       color: white; }
   a:hover {
-    color: #77abc9; }
+    color: #68bcb0; }
   a:active {
-    color: #3874b5; }
+    color: #ff5d60; }
 
 /*doc
 ---
@@ -2749,9 +2748,47 @@ pre code {
 
 /* Literal.Number.Integer.Long */
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  position: relative; }
+  font-family: "BrandonText", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif;
+  position: relative;
+  font-size: 20px;
+  line-height: 1.2;
+  text-spacing: 0; }
+
+html, body {
+  background-color: #fefaf7; }
+
+h1, .h1 {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif; }
+
+h2, .h2 {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif; }
+
+h3, .h3 {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif; }
+
+h4, .h4 {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif; }
+
+h5, .h5 {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif; }
+
+h6, .h6 {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif; }
+
+.header {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-spacing: 50; }
+
+.title {
+  font-family: "BrandonGrotesque", Molengo, "Gill Sans", "Calibri", "Trebuchet MS", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-spacing: 0;
+  text-transform: none; }
 
 h5, .h5, p, .p, dl, ol, ul {
   font-size: 1.1em; }
@@ -2766,19 +2803,16 @@ img.logo {
 .skin-mint {
   background-color: #9ed7d1; }
   .skin-mint a, .skin-mint a:visited, .skin-mint a:active {
-    color: white; }
+    color: #fefaf7; }
     .skin-mint a.dark, .skin-mint a:visited.dark, .skin-mint a:active.dark {
       color: #444444; }
-
-.skin-yellow {
-  background-color: #f2e230; }
 
 .skin-light-gray {
   background-color: #bebfc1; }
   .skin-light-gray .light {
     color: #efefef; }
   .skin-light-gray a, .skin-light-gray a:visited, .skin-light-gray a:active {
-    color: white; }
+    color: #fefaf7; }
 
 .skin-lightest-gray {
   background-color: #efefef; }
@@ -2788,14 +2822,11 @@ img.logo {
 
 .skin-darkest-gray {
   background-color: #464547;
-  color: white; }
+  color: #fefaf7; }
 
 .skin-dot {
   background-image: url("/assets/images/stitchfix-dot-full-trans.svg");
   background-position: 0 80px; }
-
-a, a:visited, a:active {
-  color: #67baaf; }
 
 .text-body-color {
   color: #444444; }
@@ -2803,7 +2834,7 @@ a, a:visited, a:active {
 a.text-body-color, a.text-body-color:visited {
   color: #444444; }
 a.text-body-color:hover {
-  color: #67baaf; }
+  color: #68bcb0; }
 
 nav {
   position: fixed;
@@ -2813,7 +2844,8 @@ nav {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  background-color: #706f73; }
+  background-color: #706f73;
+  text-transform: uppercase; }
   nav li {
     margin-bottom: 0; }
   nav h1, nav .h3 {
@@ -2833,7 +2865,7 @@ nav {
 
 .btn-primary {
   background-color: #9ed7d1;
-  color: white;
+  color: #fefaf7;
   border-color: transparent; }
   .btn-primary:hover, .btn-primary:visited {
     background-color: #9ed7d1;
