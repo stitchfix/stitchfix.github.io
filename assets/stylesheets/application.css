@@ -2437,25 +2437,25 @@ category: Modules
   font-style: normal;
   src: url("/assets/webfonts/brandon/2B26E2_6_0.eot");
   src: url("/assets/webfonts/brandon/2B26E2_6_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_6_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_6_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_6_0.svg#wf") format("svg"); }
-.blog h1 {
+.blog .post-content h1 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-.blog h2 {
+.blog .post-content h2 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-.blog h3 {
+.blog .post-content h3 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-.blog h4 {
+.blog .post-content h4 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-.blog h5 {
+.blog .post-content h5 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-.blog h6 {
+.blog .post-content h6 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
-.blog img {
+.blog .post-content img {
   width: 100%; }
 
 .highlighttable, pre code, .code {
