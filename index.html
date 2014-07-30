@@ -31,13 +31,14 @@ layout: default
 <section class="container contain-to-md">
   <article>
     <header>
-      <h4 class="h4">Multiple application architecture</h4>
+      <h4 class="h4">Many applications and services</h4>
     </header>
     <p>There are no monoliths here. Each application in our platform has a clear and distinct purpose and all of them
-      are built in house, primarily in Ruby. That means small, clean code bases with little technical debt and lots of
+      are built in house. That means small, clean code bases with little technical debt and lots of
       flexibility. Often we use RabbitMQ to send messages about real-world events to other apps who decide for themselves
-      whether or not to do something with it. This de-coupled architecture allows us to scale with ease and add or change
-      components as needed. When it really makes sense we build RESTful API's for our services as well.</p>
+      whether or not to do something with it. This de-coupled, asynchronous architecture allows us to scale with ease and add or change
+      components as needed. When it really makes sense we'll build a RESTful API to wrap a service requiring an immediate
+      response.</p>
   </article>
   <article class="m4">
     <header>
@@ -118,31 +119,26 @@ layout: default
   <article class="mt2 mb4">
     <p>
       We use technologies like PostgreSQL, Redis, ElasticSearch and RabbitMQ along with various private Gems to tie
-      them
-      all together. We work from San Francisco, Pittsburgh and remotely, and we use Heroku, GitHub, Google Hangouts
-      and
-      HipChat to help us build it all.
+      them all together. We work from San Francisco, Pittsburgh and remotely, and we use Heroku, GitHub, Google Hangouts
+      and HipChat to help us build it all.
     </p>
 
     <p>
       We are looking for people who share our values. We like to move quickly and ship lots of code, but in a
-      considered
-      way. We use TDD, CI and an all-hands-on-deck approach to Pull Requests to ensure we can keep the pace up without
-      stinting on quality.
+      considered way. We use TDD, CI and an all-hands-on-deck approach to Pull Requests to ensure we can keep the pace
+      up without stinging on quality.
     </p>
 
     <p>
       If any of us have a good idea for introducing a new technology or pattern then we go ahead and run an
-      experiment.
-      The debates don’t start until we have some real evidence to look at and since we avoid dogma and evangelism they
-      tend to be short.
+      experiment. The debates don’t start until we have some real evidence to look at and since we avoid dogma and
+      evangelism they tend to be short.
     </p>
 
     <p>
       We work closely with our internal partners (no product managers here!) and we assume that they know best about
       what they need to do their jobs. Our job is to solve business problems and some of our proudest moments come
-      from
-      solving those problems without a line of code.
+      from solving those problems without a line of code.
     </p>
   </article>
 
@@ -159,7 +155,7 @@ layout: default
             <dt>Ruby</dt>
             <dd>with Rails as web application glue</dd>
             <dt>RabbitMQ</dt>
-            <dd>apps communicate by broadcasting events, not rigid APIs</dd>
+            <dd>apps communicate by broadcasting their real-world events</dd>
             <dt>Postgres</dt>
             <dd>powerful and redundant data layer</dd>
           </dl>
@@ -169,7 +165,7 @@ layout: default
             <dt>CI</dt>
             <dd>continuous testing and auto-deployment</dd>
             <dt>Responsive Design</dt>
-            <dd>we love every screen size</dd>
+            <dd>we love all screens equally</dd>
             <dt>AngularJS</dt>
             <dd>because sometimes you just want to be fancy ;)</dd>
           </dl>
