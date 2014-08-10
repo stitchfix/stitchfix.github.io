@@ -75,7 +75,7 @@ img.logo {
   background-position: 0 80px;
 }
 
-a, a:visited, a:active {
+a, a:visited, a:active, a:hover{
   color: $dark-mint;
 }
 
@@ -88,6 +88,51 @@ a.text-body-color {
   }
   &:hover {
     color: $dark-mint;
+  }
+}
+
+.social {
+  margin-top: 6px;
+  margin-bottom: 20px;
+  a {
+    margin-right: 6px;
+    &, &:visited {
+      color: $body-text;
+    }
+    &:hover {
+      color: $dark-mint;
+    }
+  }
+
+}
+.bio {
+  $bio-height: 80px;
+  p {
+    font-size: #{$small-size}#{$small-size-unit};
+    line-height: 1.2rem;
+  }
+  padding: 6px 0;
+  max-height: $bio-height;
+  position: relative;
+  overflow: hidden;
+  .read-more {
+    &, a {
+      width: 100%;
+      height: $bio-height;
+      display: block;
+    }
+    a {
+      text-decoration: none;
+    }
+    position: absolute;
+    bottom: 0; left: 0;
+    text-align: right;
+
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, white));
+    background-image: -webkit-linear-gradient(top, transparent, white);
+    background-image: -moz-linear-gradient(top, transparent, white);
+    background-image: -ms-linear-gradient(top, transparent, white);
+    background-image: -o-linear-gradient(top, transparent, white);
   }
 }
 

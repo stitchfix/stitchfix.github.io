@@ -4291,7 +4291,7 @@ img.logo {
   background-image: url("/assets/images/stitchfix-dot-full-trans.svg");
   background-position: 0 80px; }
 
-a, a:visited, a:active {
+a, a:visited, a:active, a:hover {
   color: #67baaf; }
 
 .text-body-color {
@@ -4301,6 +4301,41 @@ a.text-body-color, a.text-body-color:visited {
   color: #444444; }
 a.text-body-color:hover {
   color: #67baaf; }
+
+.social {
+  margin-top: 6px;
+  margin-bottom: 20px; }
+  .social a {
+    margin-right: 6px; }
+    .social a, .social a:visited {
+      color: #444444; }
+    .social a:hover {
+      color: #67baaf; }
+
+.bio {
+  padding: 6px 0;
+  max-height: 80px;
+  position: relative;
+  overflow: hidden; }
+  .bio p {
+    font-size: 80%;
+    line-height: 1.2rem; }
+  .bio .read-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(1, white));
+    background-image: -webkit-linear-gradient(top, transparent, white);
+    background-image: -moz-linear-gradient(top, transparent, white);
+    background-image: -ms-linear-gradient(top, transparent, white);
+    background-image: -o-linear-gradient(top, transparent, white); }
+    .bio .read-more, .bio .read-more a {
+      width: 100%;
+      height: 80px;
+      display: block; }
+    .bio .read-more a {
+      text-decoration: none; }
 
 nav {
   position: fixed;
