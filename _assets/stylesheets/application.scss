@@ -34,10 +34,6 @@ h5, .h5, p, .p, dl, ol, ul{
     font-size: 1em;
   }
 }
-img.logo {
-  display: inline-block;
-  margin-right: 10px;
-}
 
 .skin-mint {
   background-color: $mint-green;
@@ -217,17 +213,11 @@ $nav-transition-speed: 0.2s;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.hero-img {
+img {
   width: 100%;
 }
 .trans9{
   opacity: 0.9;
-}
-
-.team-img {
-  img {
-    width: 100%;
-  }
 }
 
 .uppercase {

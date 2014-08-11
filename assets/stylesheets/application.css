@@ -4256,10 +4256,6 @@ h5, .h5, p, .p, dl, ol, ul {
 .small-dl dl {
   font-size: 1em; }
 
-img.logo {
-  display: inline-block;
-  margin-right: 10px; }
-
 .skin-mint {
   background-color: #9fd8d2; }
   .skin-mint a, .skin-mint a:visited, .skin-mint a:active {
@@ -4399,14 +4395,11 @@ nav {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.hero-img {
+img {
   width: 100%; }
 
 .trans9 {
   opacity: 0.9; }
-
-.team-img img {
-  width: 100%; }
 
 .uppercase {
   text-transform: uppercase; }
