@@ -1,27 +1,27 @@
-{% include _head.html %}
-  <body>
-  {% include _header.html %}
-    <article class="post column-wrapper section-padding">
-      <header>
-        <h1 class="mb-1">{{page.title}}</h1>
-        <p class="meta">
-          <span class="author">by <a class="link" href="{{page.author_url}}">{{page.author}}</a></span>
+<!DOCTYPE html>
+<html lang="en">
+  {% include _head.html %}
+  <body class="blog">
+    {% include _header.html %}
+    <div class="container contain-to-md mt4 mb2" id="blog">
+      <header class="text-c mt6">
+        <h1 class="h1 thin">{{ page.title }}</h1>
+        <h2 class="h2 thin light">
+          by <a href="{{ page.author_url }}">{{ page.author }}</a>
           on <date datetime="{{page.date | date: "%Y-%m-%d"}}">{{page.date | date: "%B %d, %Y"}}</date>
-        </p>
+        </h2>
       </header>
-      <section class="content">
-        {{content}}
-      </section>
-    </article>
-    <aside class="comments column-wrapper">
-      {% include _disqus.html %}
-    </aside>
-    <section>
-      <div class="column-wrapper">
-        {% include _related_posts.html %}
-      </div>
+    </div>
+    <section class="container contain-to-md">
+      <article class="post-content">
+        {{ content }}
+      </article>
+    </section>
+    <section class="container contain-to-md m4">
+      <article>
+        {% include _disqus.html %}
+      </article>
     </section>
     {% include _footer.html %}
-    {% include _js.html %}
   </body>
 </html>

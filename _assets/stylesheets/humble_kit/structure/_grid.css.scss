@@ -1,0 +1,426 @@
+/*doc
+---
+title: Grids
+name: grid
+category: Structure
+---
+
+1) Start by containing a section of content that you intend to grid with the class `grid`
+2) The child element needs two classes: `g` to set up the grid-like qualities and a fractional width like `_1-2`
+3) If you want responsive grids (grids that are different at a particular breakpoint), then add a suffix: `xs` `sm` `md` `lg`.
+   Any suffix you add will work for any breakpoint equal to or smaller (i.e. `_1-2-lg` will make a column that is 50% of its parent at large breakpoints and below, unless you specify another responsive grid size)
+
+
+```html_example
+
+<section class="grid">
+  <div class="g _1-2">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">_1-4 column width</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">_1-4 column width</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Responsive grids</h2>
+<section class="grid">
+  <div class="g _1-2-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+  <div class="g _1-4-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+  <div class="g _1-4-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+</section>
+
+```
+*/
+
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+$grid-gutter: $font-size-base * 1.5 !default;
+
+/**
+* 1. Fix for lists.
+* 2. Negative margin to offset grid parent
+* 3. Set font size to 0 to fix inline-block extra space
+*    http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+*/
+
+.grid {
+  list-style:    none;         /* 1 */
+  margin-left:  -$grid-gutter; /* 2 */
+  padding:       0;
+  font-size:     0;
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ * 6. Set font size back to base to fix inline-block extra space
+ */
+
+$grid-debug: false;
+
+.g {
+  display:        inline-block;    /* 1 */
+  padding-left:   $grid-gutter;    /* 2 */
+  vertical-align: top;             /* 3 */
+  width:          100%;            /* 4 */
+  font-size:      $font-size-base; /* 6 */
+
+  @if $grid-debug {
+    background-color: rgba(yellow,0.25) !important;
+
+    &:nth-child(odd) {
+      background-color: rgba(red,0.25) !important;
+    }
+  }
+
+}
+
+
+/* Widths */
+
+._1-1,
+._2_2,
+._3_3,
+._4_4,
+._5_5,
+._6_6 {
+  width: 100%;
+}
+._1-2,
+._2-4,
+._3-6 {
+  width: 50%;
+}
+._1-3,
+._2-6 {
+  width: 33.333%;
+}
+._2-3,
+._4-6 {
+  width: 66.666%;
+}
+._1-4 {
+  width: 25%;
+}
+._3-4 {
+  width: 75%;
+}
+._1-5 {
+  width: 20%;
+}
+._2-5 {
+  width: 40%;
+}
+._3-5 {
+  width: 60%;
+}
+._4-5 {
+  width: 80%;
+}
+._1-6 {
+  width: 16.667%;
+}
+._5-6 {
+  width: 83.333%;
+}
+
+
+@include at_breakpoint(xs) {
+  ._1-1-xs,
+  ._2_2-xs,
+  ._3_3-xs,
+  ._4_4-xs,
+  ._5_5-xs,
+  ._6_6-xs {
+    width: 100%;
+  }
+  ._1-2-xs,
+  ._2-4-xs,
+  ._3-6-xs {
+    width: 50%;
+  }
+  ._1-3-xs,
+  ._2-6-xs {
+    width: 33.333%;
+  }
+  ._2-3-xs,
+  ._4-6-xs {
+    width: 66.666%;
+  }
+  ._1-4-xs {
+    width: 25%;
+  }
+  ._3-4-xs {
+    width: 75%;
+  }
+  ._1-5-xs {
+    width: 20%;
+  }
+  ._2-5-xs {
+    width: 40%;
+  }
+  ._3-5-xs {
+    width: 60%;
+  }
+  ._4-5-xs {
+    width: 80%;
+  }
+  ._1-6-xs {
+    width: 16.667%;
+  }
+  ._5-6-xs {
+    width: 83.333%;
+  }
+}
+
+@include at_breakpoint(ltsm) {
+  ._1-1-sm,
+  ._2_2-sm,
+  ._3_3-sm,
+  ._4_4-sm,
+  ._5_5-sm,
+  ._6_6-sm {
+    width: 100%;
+  }
+  ._1-2-sm,
+  ._2-4-sm,
+  ._3-6-sm {
+    width: 50%;
+  }
+  ._1-3-sm,
+  ._2-6-sm {
+    width: 33.333%;
+  }
+  ._2-3-sm,
+  ._4-6-sm {
+    width: 66.666%;
+  }
+  ._1-4-sm {
+    width: 25%;
+  }
+  ._3-4-sm {
+    width: 75%;
+  }
+  ._1-5-sm {
+    width: 20%;
+  }
+  ._2-5-sm {
+    width: 40%;
+  }
+  ._3-5-sm {
+    width: 60%;
+  }
+  ._4-5-sm {
+    width: 80%;
+  }
+  ._1-6-sm {
+    width: 16.667%;
+  }
+  ._5-6-sm {
+    width: 83.333%;
+  }
+}
+
+@include at_breakpoint(ltmd) {
+  ._1-1-md,
+  ._2_2-md,
+  ._3_3-md,
+  ._4_4-md,
+  ._5_5-md,
+  ._6_6-md {
+    width: 100%;
+  }
+  ._1-2-md,
+  ._2-4-md,
+  ._3-6-md {
+    width: 50%;
+  }
+  ._1-3-md,
+  ._2-6-md {
+    width: 33.333%;
+  }
+  ._2-3-md,
+  ._4-6-md {
+    width: 66.666%;
+  }
+  ._1-4-md {
+    width: 25%;
+  }
+  ._3-4-md {
+    width: 75%;
+  }
+  ._1-5-md {
+    width: 20%;
+  }
+  ._2-5-md {
+    width: 40%;
+  }
+  ._3-5-md {
+    width: 60%;
+  }
+  ._4-5-md {
+    width: 80%;
+  }
+  ._1-6-md {
+    width: 16.667%;
+  }
+  ._5-6-md {
+    width: 83.333%;
+  }
+}
+
+@include at_breakpoint(ltlg) {
+  ._1-1-lg,
+  ._2_2-lg,
+  ._3_3-lg,
+  ._4_4-lg,
+  ._5_5-lg,
+  ._6_6-lg {
+    width: 100%;
+  }
+  ._1-2-lg,
+  ._2-4-lg,
+  ._3-6-lg {
+    width: 50%;
+  }
+  ._1-3-lg,
+  ._2-6-lg {
+    width: 33.333%;
+  }
+  ._2-3-lg,
+  ._4-6-lg {
+    width: 66.666%;
+  }
+  ._1-4-lg {
+    width: 25%;
+  }
+  ._3-4-lg {
+    width: 75%;
+  }
+  ._1-5-lg {
+    width: 20%;
+  }
+  ._2-5-lg {
+    width: 40%;
+  }
+  ._3-5-lg {
+    width: 60%;
+  }
+  ._4-5-lg {
+    width: 80%;
+  }
+  ._1-6-lg {
+    width: 16.667%;
+  }
+  ._5-6-lg {
+    width: 83.333%;
+  }
+}
+
+/*doc
+---
+title: "Grid utility classes"
+name: grid-utility-classes
+category: Structure
+---
+
+Grid utility classes extend the .grid class.
+
+```html_example
+
+<h2 class="h4">Reverses grid direction from what is displayed in the markup</h2>
+
+<section class="grid grid-reverse">
+  <div class="g _1-2">
+    <div class="p1" style="background-color: #BBC;">Content #1</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">Content #2</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">Content #3</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Centered grid</h2>
+<section class="grid grid-c">
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+  <div class="g _1-3">
+    <div class="p1" style="background-color: #BBC;">_1-3 column width</div>
+  </div>
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Right align grid</h2>
+<section class="grid grid-r">
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+  <div class="g _1-3">
+    <div class="p1" style="background-color: #BBC;">_1-3 column width</div>
+  </div>
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+</section>
+
+```
+*/
+
+/* Presents columns in reverse order of their markup. */
+
+.grid {
+  &.grid-reverse {
+    direction: rtl;
+    text-align: left;
+
+    > .g {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+
+  /* Center align grid. */
+  &.grid-c {
+    text-align: center;
+
+    > .g {
+      text-align: left;
+    }
+  }
+
+  /* Right align grid. */
+  &.grid-r {
+    text-align: right;
+
+    > .g {
+      text-align: left;
+      margin-right: 0;
+    }
+  }
+}

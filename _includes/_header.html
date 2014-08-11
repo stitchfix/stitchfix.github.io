@@ -1,29 +1,31 @@
-<header class="main bg-lightest bb-gray" role="main">
-  <div class="column-wrapper">
-    <h1 class="h3 m-0 lh-2">
-      <a href="/" class="link technology-at">
-      <span class="tighten">T</span>echnology<span>@</span>
-      </a>
-      <a href="https://www.stitchfix.com" class="link ">
-      <span class="default stitch-fix-logo">Stitch Fix </span>
+<nav class="top-nav">
+  <div class='container flex hide_gtsm'>
+    <ul class='list-inline m0 clearfix'>
+      <li class='m0 right'>
+        <a class='btn btn-sm btn-link btn-link-dark light m0 px2 text-r-xs round-none' data-target='#nav_mobile' data-toggle='dropdown' href='#'>
+          <span class='ss-icon'>List</span>
         </a>
-    </h1>
-    <div class="header-nav nav">
-      <nav role="navigation" class="single-column pb-1">
-        <ul>
-          <li class="dib">
-            <a href="/blog" class="link">Blog</a>
-          </li>
-          <li class="dib">
-            <a href="/#team" class="link">Our Team</a>
-          </li>
-          <li class="dib">
-            <a href="/jobs" class="link">Open Positions</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      </li>
+    </ul>
   </div>
-</header>
-
-
+  <div class='container flex hide_gtsm dropdown' id='nav_mobile'>
+    <ul class='list-inline list-nav m0 nav nav-tabs' role="tablist">
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#intro" class="btn btn-sm btn-link m0 px2 text-l-xs">Home</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#engineering" class="btn btn-sm btn-link m0 px2 text-l-xs">Engineering</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data Science</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#culture" class="btn btn-sm btn-link m0 px2 text-l-xs">Culture</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#team" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
+      <li{% if page.url != '/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#blog" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
+    </ul>
+  </div>
+  <div class="container flex hide_ltsm">
+    <ul class="list-inline list-nav m0 nav nav-tabs" role="tablist">
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#intro" class="btn btn-sm btn-link m0 px2 text-l-xs logo">Home</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#engineering" class="btn btn-sm btn-link m0 px2 text-l-xs">Engineering</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#data-science" class="btn btn-sm btn-link m0 px2 text-l-xs">Data Science</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#culture" class="btn btn-sm btn-link m0 px2 text-l-xs">Culture</a></li>
+      <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#team" class="btn btn-sm btn-link m0 px2 text-l-xs">Team</a></li>
+      <li{% if page.url != '/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#blog" class="btn btn-sm btn-link m0 px2 text-l-xs">Blog</a></li>
+    </ul>
+  </div>
+</nav>

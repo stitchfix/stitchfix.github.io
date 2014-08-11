@@ -25,7 +25,7 @@ They can even quantify interactions between latent attributes, capturing the val
 Machines perform these tasks by computing literally billions of calculations on structured historical data that capture the interactions between each client and each piece of merchandise.
 This might include distance or similarity calculations, mixed effect models, matrix factorization,  principal component analysis (PCA), logistic regression, or any number of statistical-learning / machine-learning techniques.
 
-![Various Types of Algorithms](/img/various_types_of_algorithms.jpg)
+![Various Types of Algorithms](/assets/images/blog/various_types_of_algorithms.jpg)
 
 The output from machine processing is a set of scores representing the relevancy between the client and each piece of merchandise.
 These scores encapsulate all the relationships inherent to the data, representing the aggregate knowledge amassed from vast amounts of client-merchandise interactions, and applied to the personal preferences of each client.
@@ -55,7 +55,7 @@ Next, she performs the task of curation, where she synthesizes concepts from the
 Finally, she helps to foster a relationship with the client by explaining the selections and providing styling tips.
 This provides transparency and engenders trust.
 
-![Human Stylist](/img/human_stylist.png)
+![Human Stylist](/assets/images/blog/human_stylist.png)
 
 ## Coordinating Resources
 
@@ -67,7 +67,7 @@ Our Engineering team has developed a very slick interface <sup><a href="#3">3</a
 In this app they are presented with the results from machine processing as well as the information they need to perform their tasks: images, video, client notes, Pinterest boards, ...etc.
 
 
-![Coordinate](/img/coordinate.png)
+![Coordinate](/assets/images/blog/coordinate.png)
 
 The result is a set merchandise more relevant than either machine or human could have achieved alone.
 Working together, their contributions combine to produce a synthesis that exhausts all processing and all data.

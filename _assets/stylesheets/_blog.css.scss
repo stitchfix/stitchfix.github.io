@@ -1,0 +1,11 @@
+.blog .post-content {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin-top:    $margin-base*2;
+      margin-bottom: $margin-base*2;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}

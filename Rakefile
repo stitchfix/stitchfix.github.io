@@ -7,7 +7,7 @@ task :sass do
 end # task :sass
 
 task :minify do
-  sh "sass --watch _sass:css --style compressed"
+  sh "sass --watch _assets/stylesheets:assets/stylesheets --style compressed"
 end # task :minify
 
 desc "Remove _site from directory before committing"

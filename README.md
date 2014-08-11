@@ -13,9 +13,27 @@ Enough said.
     bundle install
     foreman start
     open http://localhost:4000
+    
+# If you get "unknown command: coffee"
+
+    sudo npm install -g coffee-script
 
 # Deploying to the website
 
 ```
 git push origin master
 ```
+
+
+# TODO
+
+- Stitch Fix Technology in place of "About" in nav (maybe to the left?)
+  - logo in top nav on mobile
+- footer, link back to stitchfix.com and about page there, board members, etc
+- author pages
+- job list?
+- jobs in top nav?
+- following achor from another page scrolls to correct position
+- copy
+- brandon/new branding guidelines
+- blog related posts?
