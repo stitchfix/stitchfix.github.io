@@ -36,9 +36,8 @@ $dark-mint:     rgb(103, 186, 175);
 @import "code.css.scss";
 
 
-
-
 body {
+  text-rendering: optimizeLegibility;
   position: relative; // For scrollspy
 }
 
@@ -127,7 +126,7 @@ a.text-body-color {
 .bg-fixed {
   background-attachment: fixed;
   background-repeat: no-repeat;
-//  background-size: cover;
+  background-size: 100%;
 }
 img {
   width: 100%;

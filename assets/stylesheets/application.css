@@ -4319,6 +4319,7 @@ pre code {
 
 /* Literal.Number.Integer.Long */
 body {
+  text-rendering: optimizeLegibility;
   position: relative; }
 
 .small-dl dl {
@@ -4389,7 +4390,8 @@ a.text-body-color:hover {
 
 .bg-fixed {
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 img {
   width: 100%; }
