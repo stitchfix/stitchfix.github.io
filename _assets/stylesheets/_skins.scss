@@ -1,0 +1,41 @@
+.skin-mint {
+  background-color: $mint-green;
+  a, a:visited, a:active {
+    color: white;
+    &.dark {
+      color: $body-text;
+    }
+  }
+}
+
+.skin-yellow {
+  background-color: $yellow;
+}
+
+.skin-light-gray {
+  background-color: $light-gray;
+  .light {
+    color: $lightest-gray;
+  }
+  a, a:visited, a:active {
+    color: white;
+  }
+}
+
+.skin-lightest-gray {
+  background-color: $lightest-gray;
+}
+
+.skin-dark-gray {
+  background-color: $dark-gray;
+}
+
+.skin-darkest-gray {
+  background-color: $darkest-gray;
+  color: white;
+}
+
+.skin-dot {
+  background-image: url('/assets/images/stitchfix-dot-full-trans.svg');
+  background-position: center 80px;
+}

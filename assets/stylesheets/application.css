@@ -3936,6 +3936,77 @@ category: Modules
 .ss-share:before, .ss-share.right:after {
   content: ''; }
 
+.skin-mint {
+  background-color: #9fd8d2; }
+  .skin-mint a, .skin-mint a:visited, .skin-mint a:active {
+    color: white; }
+    .skin-mint a.dark, .skin-mint a:visited.dark, .skin-mint a:active.dark {
+      color: #444444; }
+
+.skin-yellow {
+  background-color: #f2e230; }
+
+.skin-light-gray {
+  background-color: #bebfc1; }
+  .skin-light-gray .light {
+    color: #efefef; }
+  .skin-light-gray a, .skin-light-gray a:visited, .skin-light-gray a:active {
+    color: white; }
+
+.skin-lightest-gray {
+  background-color: #efefef; }
+
+.skin-dark-gray {
+  background-color: #706f73; }
+
+.skin-darkest-gray {
+  background-color: #464547;
+  color: white; }
+
+.skin-dot {
+  background-image: url("/assets/images/stitchfix-dot-full-trans.svg");
+  background-position: center 80px; }
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #706f73; }
+  nav li {
+    margin-bottom: 0; }
+  nav h1, nav .h3 {
+    margin-bottom: 10px; }
+  nav h1 {
+    margin-right: 20px; }
+  nav a, nav .btn, nav .btn-link {
+    color: #fff; }
+    nav a:hover, nav .btn:hover, nav .btn-link:hover {
+      color: #333;
+      background-color: #9fd8d2; }
+    nav a:visited, nav .btn:visited, nav .btn-link:visited {
+      color: #eee; }
+  nav .active a, nav .active .btn, nav .active .btn-link {
+    color: #333;
+    background-color: #9fd8d2; }
+  nav .dropdown {
+    display: none; }
+    nav .dropdown.open {
+      display: block; }
+
+.nav-trans {
+  opacity: 0.9;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .nav-trans:hover {
+    opacity: 1; }
+
 .blog .post-content h1 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
@@ -4250,42 +4321,8 @@ pre code {
 body {
   position: relative; }
 
-h5, .h5, p, .p, dl, ol, ul {
-  font-size: 1.1em; }
-
 .small-dl dl {
   font-size: 1em; }
-
-.skin-mint {
-  background-color: #9fd8d2; }
-  .skin-mint a, .skin-mint a:visited, .skin-mint a:active {
-    color: white; }
-    .skin-mint a.dark, .skin-mint a:visited.dark, .skin-mint a:active.dark {
-      color: #444444; }
-
-.skin-yellow {
-  background-color: #f2e230; }
-
-.skin-light-gray {
-  background-color: #bebfc1; }
-  .skin-light-gray .light {
-    color: #efefef; }
-  .skin-light-gray a, .skin-light-gray a:visited, .skin-light-gray a:active {
-    color: white; }
-
-.skin-lightest-gray {
-  background-color: #efefef; }
-
-.skin-dark-gray {
-  background-color: #706f73; }
-
-.skin-darkest-gray {
-  background-color: #464547;
-  color: white; }
-
-.skin-dot {
-  background-image: url("/assets/images/stitchfix-dot-full-trans.svg");
-  background-position: center 80px; }
 
 a, a:visited, a:active, a:hover {
   color: #67baaf; }
@@ -4333,36 +4370,6 @@ a.text-body-color:hover {
     .bio .read-more a {
       text-decoration: none; }
 
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  background-color: #706f73; }
-  nav li {
-    margin-bottom: 0; }
-  nav h1, nav .h3 {
-    margin-bottom: 10px; }
-  nav h1 {
-    margin-right: 20px; }
-  nav a, nav .btn, nav .btn-link {
-    color: #fff; }
-    nav a:hover, nav .btn:hover, nav .btn-link:hover {
-      color: #333;
-      background-color: #9fd8d2; }
-    nav a:visited, nav .btn:visited, nav .btn-link:visited {
-      color: #eee; }
-  nav .active a, nav .active .btn, nav .active .btn-link {
-    color: #333;
-    background-color: #9fd8d2; }
-  nav .dropdown {
-    display: none; }
-    nav .dropdown.open {
-      display: block; }
-
 .btn-primary {
   background-color: #9fd8d2;
   color: white;
@@ -4370,16 +4377,6 @@ nav {
   .btn-primary:hover, .btn-primary:visited {
     background-color: #9fd8d2;
     border-color: transparent; }
-
-.nav-trans {
-  opacity: 0.9;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s; }
-  .nav-trans:hover {
-    opacity: 1; }
 
 .full-height {
   height: 100vh; }
