@@ -27,13 +27,18 @@ git push origin master
 
 # TODO
 
-- Stitch Fix Technology in place of "About" in nav (maybe to the left?)
-  - logo in top nav on mobile
-- footer, link back to stitchfix.com and about page there, board members, etc
-- author pages
-- job list?
-- jobs in top nav?
-- following achor from another page scrolls to correct position
-- copy
-- brandon/new branding guidelines
-- blog related posts?
+- Mobile
+  - Top margin on first section of homepage is too big
+- Does Stitch Fix Technology (or Engineering and Data Science) need to be in the top nav? At least after first section?
+- Footer
+  - link to stitchfix.com 
+  - link to about page on stitchfix.com
+- Blog
+  - Author pages (all posts by an author, linked in bios)
+  - Related posts list?
+  - Next/previous post nav?
+- Combined job list?
+  - Separate nav item for combined job list?
+- Bugfixes
+  - following achor from another page scrolls to correct position
+- Use Brandon font/new branding guidelines as on stitchfix.com?
