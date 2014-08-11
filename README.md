@@ -1,5 +1,5 @@
 # Doom Patrol
-Stitch Fix Engineering & Algorithms jobs site
+Stitch Fix Engineering & Data Science
 
 ![Doom Patrol](http://images2.wikia.nocookie.net/__cb20091015054813/marvel_dc/images/5/55/Doom_Patrol_008.jpg "DOOM PATROL")
 
