@@ -2395,6 +2395,8 @@ category: Modules
       padding-right: 0 !important; }
 
   /* 1 */ }
+/* Custom colors
+   ========================================================================== */
 @font-face {
   font-family: BrandonText;
   font-weight: 500;
@@ -4246,8 +4248,6 @@ pre code {
 
 /* Literal.Number.Integer.Long */
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
   position: relative; }
 
 h5, .h5, p, .p, dl, ol, ul {
@@ -4285,7 +4285,7 @@ h5, .h5, p, .p, dl, ol, ul {
 
 .skin-dot {
   background-image: url("/assets/images/stitchfix-dot-full-trans.svg");
-  background-position: 0 80px; }
+  background-position: center 80px; }
 
 a, a:visited, a:active, a:hover {
   color: #67baaf; }
@@ -4392,8 +4392,7 @@ nav {
 
 .bg-fixed {
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-repeat: no-repeat; }
 
 img {
   width: 100%; }

@@ -27,7 +27,7 @@ all variable-driven and moderately easy to modify.
 $user-font-family-sans-serif: "Source Sans Pro" !default; /* 1 */
 $user-font-family-serif:       null !default;
 
-$font-family-sans-serif:  $user-font-family-sans-serif, "Helvetica Neue", Helvetica, sans-serif;
+$font-family-sans-serif:  $user-font-family-sans-serif, "Helvetica Neue", Helvetica, sans-serif !default;
 $font-family-serif:       $user-font-family-serif, Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif !default; /* 2 */
