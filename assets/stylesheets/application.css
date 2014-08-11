@@ -4362,6 +4362,10 @@ nav {
   nav .active a, nav .active .btn, nav .active .btn-link {
     color: #333;
     background-color: #9fd8d2; }
+  nav .dropdown {
+    display: none; }
+    nav .dropdown.open {
+      display: block; }
 
 .btn-primary {
   background-color: #9fd8d2;

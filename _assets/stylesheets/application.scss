@@ -172,6 +172,12 @@ nav {
       background-color: $mint-green;
     }
   }
+  .dropdown {
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
 }
 
 .btn-primary {
