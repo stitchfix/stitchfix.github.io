@@ -22,16 +22,17 @@ code, .code {
   "Courier New",
   Courier,
   monospace;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0.3em;
+  line-height: 1;
   background-color: $lightest-gray;
   border-radius: $code-border-radius;
   border: 1px solid $light-gray;
 }
 pre code {
   display: block;
+  font-size: 14px;
   line-height: 1.4;
-  letter-spacing: 0.1em;
   margin: 1em 0;
   overflow-x: auto;
   padding: 1em;

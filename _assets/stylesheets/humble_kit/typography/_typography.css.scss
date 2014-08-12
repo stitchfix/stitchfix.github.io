@@ -207,12 +207,12 @@ h3,.h3 { @extend %f3; }
 h4,.h4 { @extend %f4; }
 
 h5,.h5,
-p,.p, /* 1 */
+p, /* 1 */
 dl,ol,ul { @extend %f5; }
 
 h6,.h6 { @extend %f6; }
 
-p,.p {
+p {
   &:last-of-type:not([class^="mb"]){ /* 2 */
     margin-bottom: 0;
   }
@@ -406,7 +406,7 @@ devices for better readability.
   .h2 {
     @include size_and_line(($f2 - 2), rem);
   }
-  .h3, .p, .h4 {
+  .h3, .h4 {
     @include size_and_line(($f3 - 2), rem);
   }
 }
