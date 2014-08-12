@@ -77,7 +77,7 @@ The JavaScript (actually CoffeeScript) looks like so:
 
 {% highlight coffeescript %}
 setup_short_pick_handling = ->
-  $(“.js-short-pick”).each ->
+  $(".js-short-pick").each ->
     $(this).click ->
       item_id   = $("[data-current-item-id]").attr("data-current-item-id")
       exception = $(this).attr("data-short-pick-exception")
