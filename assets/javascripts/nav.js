@@ -8,7 +8,7 @@
       navHeight = $('.top-nav').height();
       $('body.home .top-nav .hide_ltsm a').click(function(e) {
         return $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top - navHeight - 50
+          scrollTop: $($.attr(this, 'href')).offset().top - navHeight
         }, 500);
       });
       $('body.home').scrollspy({
