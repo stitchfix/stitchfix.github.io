@@ -1,6 +1,11 @@
 <nav class="top-nav">
   <div class='container flex hide_gtsm'>
     <ul class='list-inline m0 clearfix'>
+      <li class="left" style="max-width: 180px;">
+        <a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#intro" class='btn btn-sm btn-link btn-link-dark light m0 pxhalf text-r-xs round-none'>
+          <img src="/assets/images/stitchfix-technology.svg" alt="Stitch Fix Engineering and Data Science">
+        </a>
+      </li>
       <li class='m0 right'>
         <a class='btn btn-sm btn-link btn-link-dark light m0 px2 text-r-xs round-none' data-target='#nav_mobile' data-toggle='dropdown' href='#'>
           <span class='ss-icon'>List</span>
