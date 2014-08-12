@@ -51,11 +51,11 @@
       @content
     }
   } @else if $media == gtxs {
-    @media screen and (min-width: ($media-width-xs)) {
+    @media screen and (min-width: ($media-width-xs + 1)) {
       @content
     }
   } @else if $media == gtsm {
-    @media screen and (min-width: ($media-width-sm)) {
+    @media screen and (min-width: ($media-width-sm + 1)) {
       @content
     }
   }
