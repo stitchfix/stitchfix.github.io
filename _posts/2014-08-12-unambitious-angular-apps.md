@@ -38,7 +38,7 @@ To keep our UI logic separate from our markup, and to avoid a situation where a 
 Here's a simplified view of the button toolbar that allows pickers to indicate a short pick (lots of irrelevant CSS omitted):
 
 {% highlight html %}
-<ul class=“js-buttons-list”>
+<ul class="js-buttons-list">
   <li>
     <a href="#" 
        class="btn js-short-pick" 
