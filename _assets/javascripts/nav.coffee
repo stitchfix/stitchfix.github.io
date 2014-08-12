@@ -5,7 +5,7 @@ window.StitchFix.Nav =
 
     $('body.home .top-nav .hide_ltsm a').click (e)->
       $('html, body').animate
-        scrollTop: $( $.attr(this, 'href') ).offset().top - navHeight - 50,
+        scrollTop: $( $.attr(this, 'href') ).offset().top - navHeight,
         500
 
     $('body.home').scrollspy({ target: '.top-nav .hide_ltsm', offset: 200 })
@@ -16,7 +16,6 @@ window.StitchFix.Nav =
         $('.top-nav').removeClass('nav-trans')
       else
         $('.top-nav').addClass('nav-trans')
-
 
 $ ->
   window.StitchFix.Nav.init()

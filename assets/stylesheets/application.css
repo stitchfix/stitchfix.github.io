@@ -482,7 +482,7 @@ small,
   color: black; }
 
 .thin {
-  font-weight: 100; }
+  font-weight: 300; }
 
 .thick {
   font-weight: 700; }
@@ -2222,7 +2222,7 @@ category: Modules
   letter-spacing: -0.01907rem;
   /* 3 */
   display: inline-block;
-  font-weight: 100;
+  font-weight: 300;
   text-align: center;
   vertical-align: top;
   background-color: #ababbb;
@@ -3974,7 +3974,6 @@ nav {
   z-index: 1;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
   background-color: #706f73; }
   nav li {
     margin-bottom: 0; }
@@ -4320,6 +4319,7 @@ pre code {
 /* Literal.Number.Integer.Long */
 body {
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   position: relative; }
 
 .small-dl dl {
@@ -4426,3 +4426,8 @@ img {
 
 .mt6 {
   margin-top: 6rem; }
+
+.round-none {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important; }

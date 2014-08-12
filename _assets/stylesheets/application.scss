@@ -4,6 +4,9 @@
    ========================================================================== */
 
 $small-size: 80;
+$font-weight-base:  400;
+$font-weight-thin:  300;
+$font-weight-thick: 700;
 
 @import "humble_kit.css.scss";
 
@@ -38,6 +41,7 @@ $dark-mint:     rgb(103, 186, 175);
 
 body {
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   position: relative; // For scrollspy
 }
 
@@ -157,4 +161,10 @@ img {
 }
 .mt6 {
   margin-top: 6rem;
+}
+
+.round-none {
+  border-radius:         0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius:    0 !important;
 }
