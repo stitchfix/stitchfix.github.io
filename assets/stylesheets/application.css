@@ -254,7 +254,7 @@ h4, .h4 {
   /* 3 */ }
 
 h5, .h5,
-p, .p,
+p,
 dl, ol, ul {
   font-size: 1.24rem;
   /* 1 */
@@ -335,7 +335,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: inherit;
   text-rendering: optimizeLegibility; }
 
-p:last-of-type:not([class^="mb"]), .p:last-of-type:not([class^="mb"]) {
+p:last-of-type:not([class^="mb"]) {
   /* 2 */
   margin-bottom: 0; }
 
@@ -599,7 +599,7 @@ devices for better readability.
     letter-spacing: -0.01907rem;
     /* 3 */ }
 
-  .h3, .p, .h4 {
+  .h3, .h4 {
     font-size: 1.5376rem;
     /* 1 */
     margin-bottom: 1rem;
@@ -3968,16 +3968,17 @@ category: Modules
 code, .code {
   display: inline;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0.3em;
+  line-height: 1;
   background-color: #efefef;
   border-radius: 6px;
   border: 1px solid #bebfc1; }
 
 pre code {
   display: block;
+  font-size: 14px;
   line-height: 1.4;
-  letter-spacing: 0.1em;
   margin: 1em 0;
   overflow-x: auto;
   padding: 1em; }
@@ -4253,7 +4254,7 @@ body {
   font-weight: 300;
   position: relative; }
 
-h5, .h5, p, .p, dl, ol, ul {
+h5, .h5, p, dl, ol, ul {
   font-size: 1.1em; }
 
 .small-dl dl {
