@@ -8,15 +8,12 @@ tags:
 ---
 
 ![Client Style Vectors](/assets/images/blog/client_style_vectors.png)
-*** need to add the image for n choose k to the repo
 
 Each of our clients is unique.  The visualization above shows a small sample of our clients represented by just one feature: a vector of style preferences.  This alone isn’t enough to make every client unique, but our algorithms and stylists take into consideration many other features such as size, height, profession, age, geography, fit preferences, price preferences, past purchases, adventurousness, etc.  When we take into account all the features combined, every single client is truly unique.  And, since clothing preferences are so deeply personal, it therefore stands to reason that each Fix <sup><a href=“#1”>1</a></sup> should also be unique.
 
-And, indeed they are.  In all of our history, no two Fixes have contained the same selection of items.   This may seem surprising at first; it’s intuitive to think that random luck alone would generate a few occurrences.  But when you take into account the vast inventory we have to choose from, it easy to see how our Fixes can be as unique as our clients.   Our buyers are constantly sourcing new merchandise from a variety of vendors large and small.  They look for up-and-coming labels and experiment with new brands that they buy often and in very small lots.  This creates a set of inventory that is extremely dynamic and diverse.  When it comes time to prepare each Fix there is a very broad and fresh set of items to choose from.  From a mathematical perspective, one can think of it as a [n choose k][binomial_coefficient] problem.  That is, the number of possible sets of _k_ that can be made from _n_ items is given by:
+And, indeed they are.  In all of our history, no two Fixes have contained the same selection of items.   This may seem surprising at first; it’s intuitive to think that random luck alone would generate a few occurrences.  But when you take into account the vast inventory we have to choose from, it is easy to see how our Fixes can be as unique as our clients.   Our buyers are constantly sourcing new merchandise from a variety of vendors large and small.  They look for up-and-coming labels,  experiment with new brands, and buy in very small lots from a large number of vendors.   This creates a set of inventory that is extremely dynamic and diverse.  When it comes time to prepare each Fix there is a very broad and fresh set of items to choose from.  From a mathematical perspective, one can think of it as a [n choose k][binomial_coefficient] problem.  That is, the number of possible sets of _k_ that can be made from _n_ items is given by:
 
 ![n choose k](/assets/images/blog/nchoosek.png)
-
-*** need to add the image for n choose k to the repo
 
 For Stitch Fix, the _k_ is fixed at five (we select 5 items for each Fix).  However, the _n_ - the number of items from which we have to choose - is always changing and huge!   I can’t disclose the exact number of distinct items we have available at any given time.  However, the resulting number of sets of 5 items you can make from our inventory is typically in the billions to trillions.  Therefore, if one were to draw random sets of 5 items, the probability of pulling two sets that shared the same 5 items is extremely small - even after millions of tries.
 
