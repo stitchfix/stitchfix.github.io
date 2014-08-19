@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: As Unique as You
+title: Recommendations As Unique as You
 author: Eric Colson
 author_url: 'https://www.linkedin.com/in/ecolson'
 date: 2014-08-19 15:31
