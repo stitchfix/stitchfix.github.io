@@ -2,8 +2,8 @@
 layout: posts
 title: “As Unique as You”
 author: Eric Colson
-date: 2014-08-19 14:01
-published: false
+date: 2014-08-19 15:31
+published: true 
 tags:
 ---
 
@@ -15,7 +15,7 @@ And, indeed they are.  In all of our history, no two Fixes have contained the sa
 
 ![n choose k](/assets/images/blog/nchoosek.png)
 
-For Stitch Fix, the _k_ is fixed at five (we select 5 items for each Fix).  However, the _n_ - the number of items from which we have to choose - is always changing and huge!   I can’t disclose the exact number of distinct items we have available at any given time.  However, the resulting number of sets of 5 items you can make from our inventory is typically in the billions to trillions.  Therefore, if one were to draw random sets of 5 items, the probability of pulling two sets that shared the same 5 items is extremely small - even after millions of tries.
+For Stitch Fix, the _k_ is fixed at five (we select 5 items for each Fix).  However, the _n_ - the number of distinct items from which we have to choose - is always changing and huge!   I can’t disclose the exact number of distinct items we have available at any given time.  However, the resulting number of sets of 5 items you can make from our inventory is typically in the billions to trillions.  Therefore, if one were to draw random sets of 5 items, the probability of pulling two sets that shared the same 5 items is extremely small - even after millions of tries.
 
 But, of course, our Fixes are anything but random.  Rather they are the synthesis of machine-learning algorithms and expert-human judgment (see my previous post [here][post_on_humans_and_machines]).  Each item is carefully selected to meet each client’s specific preferences.   Interestingly, while each client’s preferences are unique, they are also correlated.    This is because preferences for apparel are individual as well as social.   We are influenced by trends and fads that pervade our culture.  We discover new styles by seeing what others are wearing. And, we want to assimilate - either consciously or unconsciously.  We want to fit in. We want to be “current” or “in-style”.  As a result, we would expect some concentration in popular items.   And indeed, we do see evidence of social influence and observe that some Fixes do share one or two items.   But, individual preferences make it exceedingly rare for any two Fixes to share more than a few items.   Regardless of how fashionable, the clothes need to look good on _her_ body and to be in-line with _her_ specific preferences for fit, size, color, price, material, etc.    These individual preferences act as a tension to social pressures and ultimately produce the uniqueness we see in our Fixes.
 
@@ -27,9 +27,4 @@ What’s gratifying to me about the uniqueness of our Fixes is that we have made
 
 [binomial_coefficient]: http://en.wikipedia.org/wiki/Binomial_coefficient
 [post_on_humans_and_machines]: http://technology.stitchfix.com/blog/2014/07/21/machine-and-expert-human-resources/
-
-
-*** check links
-*** check footnotes
-*** check italics
 
