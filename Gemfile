@@ -10,7 +10,6 @@ gem 'coffee-script'
 gem 'uglifier'
 gem 'sass'
 gem 'bower'
-gem 'bower-rails'
 
 group :development do
   gem 'guard'

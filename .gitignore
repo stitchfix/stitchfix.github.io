@@ -7,3 +7,4 @@ serve/
 *.swp
 .DS_Store
 patches/.bundle
+.bundle/
