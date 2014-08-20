@@ -1,7 +1,7 @@
 # This will be the first part of the title tag for your site <title> site.name + page.title </title>
 name: "Stitch Fix Engineering & Algorithms Jobs"
 # Populates the meta description for the site. Should be under 150 characters for best SEO purposes.
-descripiton: "Stitch Fix is a styling as a service start-up based in San Francisco"
+description: "Stitch Fix is a full-stack startup creating unique solutions in data-driven merchandising, massively scaled personal styling, and complex logistics."
 
 # Owner (organization or individual) of site content
 author: "Stitch Fix"
@@ -25,7 +25,7 @@ permalink: /blog/:year/:month/:day/:title
 # /:month-month:day-:year/:title.html/            => 04-29-2009/slap-chop.html
 # /blog/:year/:month/:day/:title                 => /blog/2009/04/29/slap-chop/index.html
 
-exclude: [Rakefile, README.md]
+exclude: [Rakefile, README.md, bower_components, bower.json]
 
 markdown: redcarpet
 
@@ -47,3 +47,8 @@ navigation:
 
 assets:
   css_compressor: sass
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - bower_components
