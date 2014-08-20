@@ -2,7 +2,7 @@
 
 @import "global/global.css.scss";
 
-@import "humble_kit.css.scss";
+//@import "humble_kit.css.scss";
 
 @import "base/base.css.scss";
 
@@ -27,11 +27,11 @@ body {
 a, a:visited, a:active, a:hover{ color: $dark-mint; }
 
 .text-body-color{
-  color: $font-color-base;
+  color: $text-base-color;
 }
 a.text-body-color {
   &, &:visited {
-    color: $font-color-base;
+    color: $text-base-color;
   }
   &:hover {
     color: $dark-mint;
@@ -44,7 +44,7 @@ a.text-body-color {
   a {
     margin-right: 6px;
     &, &:visited {
-      color: $font-color-base;
+      color: $text-base-color;
     }
     &:hover {
       color: $dark-mint;

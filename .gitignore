@@ -6,4 +6,4 @@ _site/
 serve/
 *.swp
 .DS_Store
-patches/
+patches/.bundle
