@@ -1,0 +1,74 @@
+/*doc
+---
+title: "Additional type helpers"
+name: typography-additional-helpers
+category: typography
+---
+
+Some helper classes for working within the typography.
+
+`.no-wrap`
+
+Stops text from wrapping with its container
+
+```html_example
+
+<div style="width: 250px;" class="no-wrap">
+  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
+</div>
+
+```
+
+`.truncated`
+
+Truncates a single line of text to its container width and applies an ellipsis at the end
+
+```html_example
+
+<div style="width: 250px;" class="truncated">
+  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
+</div>
+
+```
+
+`.clipped`
+
+Can be used to truncate after multiple lines of text. Specify `-webkite-line-clamp: #` to change # of lines.
+
+```html_example
+
+<div style="width: 250px;" class="clipped">
+  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
+</div>
+
+```
+
+*/
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.truncated {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.clipped {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+%normal,
+.normal {
+  font-weight: $font-weight-base !important;
+}
+
+%uppercase,
+.uppercase {
+  text-transform: uppercase;
+}

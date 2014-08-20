@@ -1,0 +1,11 @@
+{
+    "name": "Stitch Fix Engineering & Algorithms Jobs",
+    "dependencies": {
+        "humble_kit": "git@github.com:yorthehunter/humblekit.git#0.1.4"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}

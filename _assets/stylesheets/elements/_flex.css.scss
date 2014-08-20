@@ -1,0 +1,55 @@
+/*doc
+---
+title: Flexbox
+name: flexbox
+category: elements
+---
+
+Flexbox is a way to create an expandable/contractible set of elements
+in modern browsers. The standard flexbox consists of a parent container
+and any number of flexible child elements.
+
+```html_example
+<div class="flex-container">
+  <div class="flex-item flex-left f-lg bordered border-xs">
+    1
+  </div>
+  <div class="flex-item flex-left f-lg bordered border-xs">
+    2
+  </div>
+  <div class="flex-item flex-left f-lg bordered border-xs">
+    3
+ </div>
+</div>
+```
+
+*/
+
+%flex-container,
+.flex-container {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  .flex-item {
+    margin: auto;
+    -webkit-flex: 1;
+            flex: 1;
+  }
+  .flex-left {
+    margin-left: 0;
+  }
+  .flex-0 {
+    -webkit-flex: 0;
+    flex: 0;
+  }
+  .flex-2 {
+    -webkit-flex: 2;
+    flex: 2;
+  }
+  .flex-4 {
+    -webkit-flex: 4;
+    flex: 4;
+  }
+}

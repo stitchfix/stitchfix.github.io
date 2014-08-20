@@ -1,0 +1,199 @@
+/*doc
+---
+title: Borders
+name: decorations-borders
+category: modules
+---
+
+**A note about decoration classes:**
+
+Use decorative classes to help visually enhance your desired theme/message.
+
+Why not put these into module classes? e.g. .well { border: 1px solid black; }
+Good question. The answer is ambiguous enough for me to include "placeholder"
+classes as well as normal classes. If a particular module will ***ALWAYS***
+have a certain style or style set, then `@extend %your_class` to include it
+forever.
+
+Why not just extend `.yourClass`? Why the placeholders?
+This can better be explained in person, but basically you are extending
+every occurrence of that class (and any future occurrence). So don't.
+
+Also, it's very easy to include placeholder classes, since they don't
+compile unless they're extended by another class.
+
+
+```html_example
+    <div class='p1 m2 bordered border-xs'>
+      Bordered on all sides (xs)
+    </div>
+
+    <div class='p1 m2 border-b border-xl border-gray-light'>
+      Bordered bottom, light gray (xl)
+    </div>
+
+    <div class='p1 m2 border-t border-md border-gray'>
+      Bordered top, medium gray (md)
+    </div>
+
+    <div class='p1 m2 bordered border-md border-gray-dark'>
+      Bordered on all sides, dark gray (md)
+    </div>
+
+    <div class='p1 m2 bordered border-md border-error'>
+      Bordered on all sides, error color (md)
+    </div>
+
+    <div class='p1 m2 bordered border-md border-warning'>
+      Bordered on all sides, warning color (md)
+    </div>
+
+    <div class='p1 m2 bordered border-md border-success'>
+      Bordered on all sides, success color (md)
+    </div>
+```
+*/
+
+
+$border-xs:  1px;
+$border-sm:  2px;
+$border-md:  3px;
+$border-lg:  5px;
+$border-xl:  10px;
+$border-xxl: 2rem;
+
+$border-light: $lightest-gray;
+$border-base: $dark-gray;
+$border-dark: $darkest-gray;
+
+%bordered,
+.bordered { border-style: solid; }
+
+%border-t,
+.border-t { border:none; border-top:    1px solid; }
+%border-b,
+.border-b { border:none; border-bottom: 1px solid; }
+%border-l,
+.border-l { border:none; border-left:   1px solid; }
+%border-r,
+.border-r { border:none; border-right:  1px solid; }
+
+%border-none,
+.border-none  { border-width: 0 !important; }
+%border-xs,
+.border-xs    { border-width: $border-xs; }
+%border-sm,
+.border-sm    { border-width: $border-sm; }
+%border-md,
+.border-md    { border-width: $border-md; }
+%border-lg,
+.border-lg    { border-width: $border-lg; }
+%border-xl,
+.border-xl    { border-width: $border-xl; }
+%border-xxl,
+.border-xxl   { border-width: $border-xxl; }
+
+%border-gray-light,
+.border-gray-light { border-color: $border-light; }
+%border-gray,
+.border-gray       { border-color: $border-base; }
+%border-gray-dark,
+.border-gray-dark  { border-color: $border-dark; }
+%border-error,
+.border-error      { border-color: $brand-danger; }
+%border-warning,
+.border-warning    { border-color: $brand-warning; }
+%border-success,
+.border-success    { border-color: $brand-success; }
+
+/*doc
+---
+title: "Border Radials"
+name: decorations-borders-radials
+category: modules
+---
+
+```html_example
+    <div>
+      <div class='p1 mr4 mb1 round-xs' style='background-color: #BBC; display: inline-block;'>
+        round (xs)
+      </div>
+
+      <div class='p1 mr4 mb1 round-sm' style='background-color: #BBC; display: inline-block;'>
+        round (sm)
+      </div>
+
+      <div class='p1 mr4 mb1 round-md' style='background-color: #BBC; display: inline-block;'>
+        round (md)
+      </div>
+
+      <div class='p1 mr4 mb1 round-lg' style='background-color: #BBC; display: inline-block;'>
+        round (lg)
+      </div>
+
+      <div class='p1 mr4 mb1 round-xl' style='background-color: #BBC; display: inline-block;'>
+        round (xl)
+      </div>
+    </div>
+
+    <div>
+      <div class='p1 mr4 mb1 round-md round-b' style='background-color: #BBC; display: inline-block;'>
+        round (bottom)
+      </div>
+
+      <div class='p1 mr4 mb1 round-md round-t' style='background-color: #BBC; display: inline-block;'>
+        round (top)
+      </div>
+
+      <div class='p1 mr4 mb1 round-md round-r' style='background-color: #BBC; display: inline-block;'>
+        round (right)
+      </div>
+
+      <div class='p1 mr4 mb1 round-md round-l' style='background-color: #BBC; display: inline-block;'>
+        round (left)
+      </div>
+    </div>
+
+```
+*/
+
+$border-radius-xs: $font-size-base / 6   !default;
+$border-radius-sm: $font-size-base / 4   !default;
+$border-radius-md: $font-size-base / 2   !default;
+$border-radius-lg: $font-size-base       !default;
+$border-radius-xl: $font-size-base * 1.5 !default;
+
+%round-b,
+.round-b {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius:  0 !important;
+}
+%round-t,
+.round-t {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius:  0 !important;
+}
+%round-r,
+.round-r {
+  border-top-left-radius:    0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+%round-l,
+.round-l {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius:    0 !important;
+}
+%round-none,
+.round-none { border-radius: 0 !important; }
+%round-xs,
+.round-xs   { border-radius: $border-radius-xs; }
+%round-sm,
+.round-sm   { border-radius: $border-radius-sm; }
+%round-md,
+.round-md   { border-radius: $border-radius-md; }
+%round-lg,
+.round-lg   { border-radius: $border-radius-lg; }
+%round-xl,
+.round-xl   { border-radius: $border-radius-xl; }
+
+.trans9 { opacity: 0.9; }
