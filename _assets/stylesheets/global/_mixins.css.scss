@@ -1,0 +1,58 @@
+/* Creates a "skin-{color}" class that will handle color coordination for an element
+(typically a container of some sort e.g. "<div class='skin-gray'>content</div>) */
+
+@mixin skin($color) {
+  $skin-bg: $color;
+  $skin-border-color:  desaturate(darken($skin-bg, 7), 14);
+  $skin-color-gradient:darken($skin-bg, 15);
+  $skin-color-dark:    desaturate(darken($skin-bg, 30), 14);
+  $skin-color-button:  saturate(darken($skin-bg, 20), 14);
+  $skin-color-neutral: desaturate(lighten($skin-bg, 30), 28);
+  $skin-color-light:   lighten($skin-bg, 50);
+
+  $skin-color-base:    $skin-color-light;
+  $skin-color-muted:   $skin-color-neutral;
+
+  background-color: $skin-bg;
+  color: $skin-color-base;
+
+  .btn-skin,
+  .btn-skin-dark {
+    font-weight: $font-weight-base;
+    border-width: 2px;
+
+    &:hover {
+      background-color: $skin-bg;
+      border-color: $skin-color-light;
+      color: white;
+    }
+  }
+
+  .btn-skin {
+    background-color: $skin-bg;
+    border-color: $skin-color-button;
+    color: $skin-color-button;
+  }
+
+  .btn-skin-dark {
+    background-color: $skin-color-button;
+    border-color: darken($skin-color-button,10);
+    color: lighten($skin-bg,10);
+  }
+
+  p, .p      { color: $skin-color-base;  }
+  .light     { color: $skin-color-light; }
+  .dark      { color: $skin-color-dark;  }
+  .bordered,
+  &.bordered { border-color: $skin-border-color; }
+
+  &.bg-gradient {
+    background: $skin-bg;
+    background: -moz-linear-gradient(-45deg,  $skin-color-gradient 0%, $skin-bg 50%, $skin-color-gradient 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$skin-color-gradient), color-stop(50%,$skin-bg), color-stop(100%,$skin-color-gradient)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  $skin-color-gradient 0%,$skin-bg 50%,$skin-color-gradient 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  $skin-color-gradient 0%,$skin-bg 50%,$skin-color-gradient 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  $skin-color-gradient 0%,$skin-bg 50%,$skin-color-gradient 100%); /* IE10+ */
+    background: linear-gradient(135deg,  $skin-color-gradient 0%,$skin-bg 50%,$skin-color-gradient 100%); /* W3C */
+  }
+}

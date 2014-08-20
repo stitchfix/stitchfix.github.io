@@ -44,3 +44,6 @@ navigation:
    url: "/blog/"
  - title: Jobs
    url: "/jobs/"
+
+assets:
+  css_compressor: sass

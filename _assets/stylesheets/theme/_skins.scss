@@ -3,7 +3,7 @@
   a, a:visited, a:active {
     color: white;
     &.dark {
-      color: $body-text;
+      color: $font-color-base;
     }
   }
 }

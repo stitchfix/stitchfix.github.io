@@ -1,0 +1,19 @@
+/* Forces element to be full width of parent at xs breakpoint */
+
+@include at_breakpoint(xs) {
+  .full-width-xs {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    &:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+// Use with negative margin to center a positioned element
+.pos-center {
+  top: 50%;
+  left: 50%;
+}

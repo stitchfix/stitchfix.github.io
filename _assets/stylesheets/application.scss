@@ -1,43 +1,18 @@
 @charset "UTF-8";
 
-/* Custom colors
-   ========================================================================== */
+@import "global/global.css.scss";
 
-$sf-dark-mint: rgb(103, 186, 175);
-$sf-mint: rgb(159, 216, 210);
-$sf-off-white: rgb(254, 250, 247);
-$sf-red: rgb(255, 93, 96);
-$sf-warm-grey: rgb(132, 124, 119);
-$sf-dark-grey: rgb(69, 54, 53);
+@import "humble_kit.css.scss";
 
-$light-gray: #bebfc1;
-$lightest-gray: #efefef;
-$dark-gray: #706f73;
-$darkest-gray: #464547;
-$mint-green: rgb(159, 216, 210);
-$yellow: #f2e230;
-$dark-mint: rgb(103, 186, 175);
+@import "base/base.css.scss";
 
+@import "elements/elements.css.scss";
 
-/* Humble Kit
-   ========================================================================== */
+@import "theme/theme.css.scss";
 
-$small-size: 80;
-$font-weight-base:  400;
-$font-weight-thin:  300;
-$font-weight-thick: 700;
-$btn-bg-secondary: $dark-gray;
+@import "modules/modules.css.scss";
 
-@import "humble_kit.css.scss"; 
-
-$body-text: $font-color-base;
-
-
-@import "webfonts.scss";
-@import "skins.scss";
-@import "nav.scss";
 @import "blog.css.scss";
-@import "code.css.scss";
 
 body {
   text-rendering: optimizeLegibility;
@@ -54,11 +29,11 @@ body {
 a, a:visited, a:active, a:hover{ color: $dark-mint; }
 
 .text-body-color{
-  color: $body-text;
+  color: $font-color-base;
 }
 a.text-body-color {
   &, &:visited {
-    color: $body-text;
+    color: $font-color-base;
   }
   &:hover {
     color: $dark-mint;
@@ -71,7 +46,7 @@ a.text-body-color {
   a {
     margin-right: 6px;
     &, &:visited {
-      color: $body-text;
+      color: $font-color-base;
     }
     &:hover {
       color: $dark-mint;
