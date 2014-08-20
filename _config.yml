@@ -28,3 +28,19 @@ permalink: /blog/:year/:month/:day/:title
 exclude: [Rakefile, README.md]
 
 markdown: redcarpet
+
+navigation:
+ - title: Home
+   url: "#intro"
+ - title: Engineering
+   url: "#engineering"
+ - title: Data Science
+   url: "#data-science"
+ - title: Culture
+   url: "#culture"
+ - title: Team
+   url: "#team"
+ - title: Blog
+   url: "/blog/"
+ - title: Jobs
+   url: "/jobs/"
