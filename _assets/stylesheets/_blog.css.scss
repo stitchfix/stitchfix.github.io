@@ -1,11 +1,23 @@
 .blog .post-content {
   @for $i from 1 through 6 {
     h#{$i} {
-      margin-top:    $margin-base*2;
-      margin-bottom: $margin-base*2;
+      margin-top:    $margin-base*4;
     }
   }
-  img {
-    width: 100%;
+}
+
+.post-link {
+  @for $i from 1 through 6 {
+    .h#{$i} {
+      display: block;
+    }
   }
+  date, time {
+    @extend %small;
+    @extend %light;
+  }
+
+  @extend %border-b;
+  @extend %border-gray-light;
+
 }

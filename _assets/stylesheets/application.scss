@@ -1,143 +1,16 @@
 @charset "UTF-8";
 
 @import "global/global.css.scss";
-
 @import "base/base.css.scss";
-
 @import "elements/elements.css.scss";
-
 @import "theme/theme.css.scss";
-
 @import "modules/modules.css.scss";
 
+@import "index.css.scss";
 @import "blog.css.scss";
 
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   position: relative; // For scrollspy
-}
-
-.small-dl{
-  dl { font-size: 1em; }
-}
-
-a, a:visited, a:active, a:hover{ color: $dark-mint; }
-
-.text-body-color{
-  color: $text-base-color;
-}
-a.text-body-color {
-  &, &:visited {
-    color: $text-base-color;
-  }
-  &:hover {
-    color: $dark-mint;
-  }
-}
-
-.social {
-  margin-top: 6px;
-  margin-bottom: 20px;
-  a {
-    margin-right: 6px;
-    &, &:visited {
-      color: $text-base-color;
-    }
-    &:hover {
-      color: $dark-mint;
-    }
-  }
-}
-
-.bio {
-  $bio-height: 80px;
-  p {
-    font-size: #{$small-size}#{$small-size-unit};
-    line-height: 1.2rem;
-  }
-  padding: 6px 0;
-  max-height: $bio-height;
-  position: relative;
-  overflow: hidden;
-  .read-more {
-    &, a {
-      width: 100%;
-      height: $bio-height;
-      display: block;
-    }
-    a {
-      text-decoration: none;
-    }
-    position: absolute;
-    bottom: 0; left: 0;
-    text-align: right;
-
-    background-image: linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
-    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
-    background-image: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
-    background-image: -ms-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
-    background-image: -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
-  }
-}
-
-.btn-primary {
-  background-color: $mint-green;
-  color: white;
-  border-color: transparent;
-  &:hover, &:visited {
-    background-color: $mint-green;
-    border-color: transparent;
-  }
-}
-
-.full-height {
-  height: 100vh;
-}
-.two-thirds-height {
-  height: 66vh;
-}
-.three-quarter-height {
-  height: 75vh;
-}
-.bg-fixed {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-img {
-  width: 100%;
-}
-.trans9{
-  opacity: 0.9;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.post-link {
-  @for $i from 1 through 6 {
-    .h#{$i} {
-      display: block;
-    }
-  }
-  date, time {
-    font-size: $small-size#{$small-size-unit};
-    color: $light-gray;
-  }
-  border-bottom: 1px solid $hr-color;
-}
-.p10 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-.mt6 {
-  margin-top: 6rem;
-}
-
-.round-none {
-  border-radius:         0 !important;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius:    0 !important;
 }

@@ -62,7 +62,7 @@ $border-lg:  5px;
 $border-xl:  10px;
 $border-xxl: 2rem;
 
-$border-light: $light-gray;
+$border-light: $lightest-gray;
 $border-base: $dark-gray;
 $border-dark: $darkest-gray;
 
@@ -195,3 +195,5 @@ $border-radius-xl: $font-size-base * 1.5 !default;
 .round-lg   { border-radius: $border-radius-lg; }
 %round-xl,
 .round-xl   { border-radius: $border-radius-xl; }
+
+.trans9 { opacity: 0.9; }

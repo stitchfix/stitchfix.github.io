@@ -39,3 +39,22 @@
   background-image: url('/assets/images/stitchfix-dot-full-trans.svg');
   background-position: center 80px;
 }
+
+.bg-fixed {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.text-body-color {
+  color: $text-base-color;
+}
+
+a.text-body-color {
+  &, &:visited {
+    color: $text-base-color;
+  }
+  &:hover {
+    color: $dark-mint;
+  }
+}
