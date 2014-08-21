@@ -4,7 +4,6 @@ gem 'jekyll'
 gem 'foreman'
 gem 'redcarpet'
 
-gem 'jekyll-assets'
 gem 'sprockets-sass'
 gem 'coffee-script'
 gem 'uglifier'
