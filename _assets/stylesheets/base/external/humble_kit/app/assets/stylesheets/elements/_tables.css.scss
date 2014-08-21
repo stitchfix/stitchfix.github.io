@@ -1,0 +1,378 @@
+/*doc
+---
+title: "Customizing tables"
+name: tables-variables
+category: elements
+---
+
+<pre>
+  <code class="language-css">
+$table-cell-pad:           $pad-v-sm $pad-h-base;
+$table-cell-condensed-pad: $pad-v-xs $pad-h-sm;
+
+$table-bg:            transparent !default;
+$table-header-border: rgba(0, 0, 0, 0.1) !default;
+$table-footer-border: rgba(0, 0, 0, 0.1) !default;
+$table-cell-border:   rgba(0, 0, 0, 0.1) !default;
+$table-stripe-color:  #F0F0F0 !default;
+$table-hover-color:   #E7E7E7 !default;
+$table-border-color:  rgba(0, 0, 0, 0.1) !default;
+
+$table-stripe-dark-color: rgba(255, 255, 255, 0.1) !default;
+$table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
+  </code>
+</pre>
+
+*/
+
+$table-cell-pad:           $pad-v-sm $pad-h-base;
+$table-cell-condensed-pad: $pad-v-xs $pad-h-sm;
+
+$table-bg:            transparent !default;
+$table-header-border: rgba(0, 0, 0, 0.1) !default;
+$table-footer-border: rgba(0, 0, 0, 0.1) !default;
+$table-cell-border:   rgba(0, 0, 0, 0.1) !default;
+$table-stripe-color:  #F0F0F0 !default;
+$table-hover-color:   #E7E7E7 !default;
+$table-border-color:  rgba(0, 0, 0, 0.1) !default;
+
+$table-stripe-dark-color: rgba(255, 255, 255, 0.1) !default;
+$table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
+
+
+/*doc
+---
+title: Tables
+name: tables
+category: elements
+---
+
+There's some basic styling applied to `table` tags and children to make it
+more browser-friendly, but there's also several "stackable" extension
+classes to help define some basic UX-ready tables.
+
+```html_example
+
+<h2 class="h4">Default table</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+
+<h2 class="h4">Condensed Table</h2>
+<table class="table-condensed">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Striped Table</h2>
+<table class="table-striped">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Hoverable Table</h2>
+<table class="table-hover">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Striped and Hoverable for dark backgrounds</h2>
+<div style="background: #666;" class="light p1">
+  <p> ProTip: use the "full-width" utility class to force a table to extend the width of its container.
+  <table class="table-striped-dark full-width">
+    <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    </tbody>
+  </table>
+  <hr/>
+
+  <table class="table-hover-dark">
+    <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+```
+
+*/
+
+.table,
+ table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: $font-size-base;
+  line-height: $font-size-base;
+  max-width: 100%;
+  overflow-y: auto;
+  @if variable_exists(table-bg){ background-color: $table-bg;}
+
+  @include at_breakpoint(ltsm) {
+    display: block;
+    position: relative;
+    display: -webkit-box;
+    overflow-x: auto;
+  }
+
+  &.table-full {
+    width: 100%;
+  }
+}
+
+thead {
+  th {
+    border-bottom: 2px solid $table-header-border;
+    vertical-align: bottom;
+    line-height: $font-size-base - 2;
+  }
+}
+
+tfoot {
+  td {
+    line-height: $font-size-base;
+    border-bottom: 0;
+    @if variable_exists(table-bg){ background-color: $table-bg;}
+  }
+}
+
+th {
+  text-align: left;
+  font-weight: $font-weight-thick;
+}
+
+td,
+th {
+  padding: $table-cell-pad;
+  line-height: $font-size-base - 1;
+  border-bottom: 1px solid $table-cell-border;
+}
+
+td {
+  vertical-align: top;
+}
+
+tfoot {
+  td {
+    @if variable_exists(table-bg){ background-color: $table-bg;}
+      @else { background-color: transparent; }
+  }
+}
+
+.table-condensed {
+  td,
+  th {
+    padding: $table-cell-condensed-pad;
+  }
+}
+
+.table-bordered {
+  td,
+  th {
+    border: 1px solid $table-border-color;
+    border-top: none;
+    line-height: $font-size-base - 1;
+  }
+
+  thead {
+    th {
+      border: 1px solid $table-border-color;
+      line-height: $font-size-base - 2;
+    }
+  }
+}
+
+.table-striped {
+  tr:nth-child(odd) {
+    td {
+      background-color: $table-stripe-color;
+    }
+  }
+}
+.table-striped-dark {
+  tr:nth-child(odd) {
+    td {
+      background-color: $table-stripe-dark-color;
+    }
+  }
+}
+.table-striped,
+.table-striped-dark {
+  tfoot {
+    tr:nth-child(odd) td {
+      @if variable_exists(table-bg) {
+        background-color: $table-bg;
+      } @else {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.table-hover {
+  tr:hover td {
+    background-color: $table-hover-color;
+  }
+}
+.table-hover-dark {
+  tr:hover td {
+    background-color: $table-hover-dark-color;
+  }
+}
+.table-hover,
+.table-hover-dark {
+  tfoot {
+    tr:hover td {
+      @if variable_exists(table-bg){ background-color: $table-bg; }
+        @else { background-color: transparent; }
+    }
+  }
+}
