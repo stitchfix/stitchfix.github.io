@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Global variables
+   ========================================================================== */
+/**
+* These variables are needed for almost all parts of this project, so they
+* are always included.
+*/
+
+/* Defaults
+   ========================================================================== */
+
+$body-bg: #ffffff !default;
+
+$transition-speed-base: 200ms !default;
+$transition-speed-fast: 100ms !default;
+$transition-speed-slow: 400ms !default;
+
+
+/* Custom breakpoints
+   ========================================================================== */
+/**
+* These variables represent the max-width of a size break.
+*
+* Divvy these up however you want, but—by default—we're looking at something
+* like mobile (xs), tablet (sm), smaller/laptop (md), big lap/small monitor (lg),
+* standard monitor (xl).
+*
+* Feel free to customize these size breaks and/or rename and replace these
+* variable names.
+*/
+
+$media-width-xs: 480px  !default;
+$media-width-sm: 768px  !default;
+$media-width-md: 992px  !default;
+$media-width-lg: 1200px !default;
+$media-width-xl: 1400px !default;
+
+
+/* Padding
+   ========================================================================== */
+/**
+* Multi-purpose, generic padding schema.
+*
+* TODO: do i need to do this?
+*/
+
+$pad-h-xs: 0.25rem;
+$pad-h-sm: 0.5rem;
+$pad-h-md: 1rem;
+$pad-h-lg: 2rem;
+$pad-v-xs: 0.5rem;
+$pad-v-sm: 1rem;
+$pad-v-md: 1.5rem;
+$pad-v-lg: 2rem;
+
+$pad-h-base: $pad-h-md;
+$pad-v-base: $pad-v-md;
+
+
+/* Typography
+   ========================================================================== */
+/**
+* 1. The base font size of the site. This variable controls the basis of the
+*    vertical rhythm of the site. Since everything's in rems, the rem will size
+*    off of this number exactly.
+*
+*    So what's awesome about this? You now have complete control over a very
+*    powerful unit of math that controls your entire site. Congratulations!
+*
+*    Padding and margins are set in rems (by default) as is the entire typography
+*    scale of the site, so all you need to do is modify this just a bit to get
+*    a totally new scale.
+*
+* 2. Modular scale ratio: This system makes use of math (oy, vey...) to create
+*    sequential, relational type in a scale. Basically, it's a simple way to
+*    get good-looking type sizes using only a couple of variables.
+*
+*    Reading: http://alistapart.com/article/more-meaningful-typography
+*    Practice: http://modularscale.com/
+*
+*    $type-ratio is a number or fraction that defines our exponential scale.
+*    Even minor changes can make a noticeable impact on your type scale. Don't
+*    worry though: the vertical rhythm is calculated and will accept any
+*    changes in scale and adapt. See _mixins.css.scss for more info.
+*/
+
+$font-size-base:          16px !default; /* 1 */
+
+$type-ratio:              1.24 !default; /* 2 */
+
+$font-weight-base:        400 !default;
+$font-weight-thin:       100 !default;
+$font-weight-thick:       700 !default;

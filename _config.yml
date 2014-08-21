@@ -52,3 +52,7 @@ assets:
     - _assets/javascripts
     - _assets/stylesheets
     - bower_components
+
+sass:
+  style: :compressed
+  load_paths: bower_components

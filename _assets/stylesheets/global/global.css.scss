@@ -1,17 +1,17 @@
 /* Custom variables - redefine variable defaults as you see fit
    ========================================================================== */
 /* Site-specific colors */
-@import "colors";
+@import "colors.css.scss";
 
 /* Custom variable overrides for common elements (see HumbleKit for details) */
-@import "custom_variables";
+@import "custom_variables.css.scss";
 
 
 /* Site-specific Mixins
    ========================================================================== */
-@import "mixins";
+@import "mixins.css.scss";
 
 
 /* Site-specific Typography
    ========================================================================== */
-@import "typography";
+@import "typography.css.scss";
