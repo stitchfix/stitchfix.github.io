@@ -26,7 +26,7 @@ First, you don’t have to worry about platform compatibility issues.
 At Stitch Fix, we target only WebKit browsers, and can move very fast by ignoring Internet Explorer and Firefox entirely.
 
 Second, a line-of-business app is often designed to solve a specific business problem, meaning that your work on such an app has a direct correlation to the success of the business.
-My team has shipped many features for our warehouse operations staff and have seen operating costs go down steadily as a result.
+My team has shipped many features for our warehouse operations staff and have seen operating efficiencies increase steadily as a result.
 It’s an awesome feeling!
 
 Finally, when building line-of-business apps, you get a direct connection to the users.
