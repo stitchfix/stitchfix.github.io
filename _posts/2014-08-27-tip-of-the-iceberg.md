@@ -29,7 +29,7 @@ It’s an awesome feeling!
 
 Finally, when building line-of-business apps, you get a direct connection to the users.
 You’re building an application to help people do their job better, faster, or both.
-You can actually see the affect your work has on real people.
+You can actually see the effect your work has on real people.
 
 Every two months, my team visits one of our warehouses to talk with users and actually perform the work our software facilitates.
 It’s not only illuminating, but a great chance to connect with the users to understand what problems they are facing and how we can solve them.
