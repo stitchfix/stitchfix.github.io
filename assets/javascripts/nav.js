@@ -6,16 +6,16 @@
     init: function() {
       var navHeight;
       navHeight = $('.top-nav').height();
-      $('body.home .top-nav .hide_ltsm a').click(function(e) {
+      $('.js-scrolling-nav a').click(function(e) {
         return $('html, body').animate({
           scrollTop: $($.attr(this, 'href')).offset().top - navHeight
         }, 500);
       });
       $('body.home').scrollspy({
-        target: '.top-nav .hide_ltsm',
+        target: '.top-nav .js-scrollspy',
         offset: 200
       });
-      return $('.top-nav .hide_ltsm').on('activate.bs.scrollspy', function(e) {
+      return $('.top-nav .js-scrollspy').on('activate.bs.scrollspy', function(e) {
         var target;
         target = $(e.target).children('a').attr('href');
         if (target === '#intro') {

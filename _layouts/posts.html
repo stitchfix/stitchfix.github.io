@@ -6,14 +6,26 @@
     <div class="container contain-to-md mt2 mb2" id="blog">
       <header class="text-c py8">
         <h1 class="h1 thin">{{ page.title }}</h1>
-        <h2 class="h2 thin light">
+        <h2 class="h2 thin light mb1">
           by <a href="{{ page.author_url }}">{{ page.author }}</a>
           on <date datetime="{{page.date | date: "%Y-%m-%d"}}">{{page.date | date: "%B %d, %Y"}}</date>
         </h2>
+        {% if page.location %}
+        <h3 class="h4 thin light m0">
+          from Wasington, DC
+        </h3>
+        {% endif %}
       </header>
     </div>
     <section class="container contain-to-sm">
       <article class="post-content">
+        {% if page.image %}
+          {% if page.image_position %}
+            <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-{{ page.image_position }}">
+          {% else %}
+            <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-right ">
+          {% endif %}
+        {% endif %}
         {{ content }}
       </article>
     </section>

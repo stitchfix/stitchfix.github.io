@@ -21,3 +21,15 @@
   @extend %border-gray-light;
 
 }
+
+img.post-image {
+  width: 50%;
+  padding: $pad-v-sm $pad-h-md;
+
+  &.post-image-right {
+    float: right;
+  }
+  &.post-image-left {
+    float: left;
+  }
+}
