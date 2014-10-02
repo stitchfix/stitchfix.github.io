@@ -20,6 +20,7 @@
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#data-science" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Data Science</a></li>
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#culture" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Culture</a></li>
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#team" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Team</a></li>
+      <li{% if page.layout == 'posts' %} class="active"{% elsif page.url == '/open_source/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}open_source/index.html" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Open Source</a></li>
       <li{% if page.layout == 'posts' %} class="active"{% elsif page.url == '/blog/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}blog/index.html" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Blog</a></li>
       <li{% if page.layout == 'jobs' %} class="active"{% elsif page.url == '/jobs/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}jobs/index.html" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Jobs</a></li>
     </ul>
@@ -31,6 +32,7 @@
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#data-science" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Data Science</a></li>
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#culture" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Culture</a></li>
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#team" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Team</a></li>
+      <li{% if page.layout == 'posts' %} class="active"{% elsif page.url == '/open_source/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}open_source/index.html" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Open Source</a></li>
       <li{% if page.layout == 'posts' %} class="active"{% elsif page.url == '/blog/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}blog/index.html" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Blog</a></li>
       <li{% if page.layout == 'jobs' %} class="active"{% elsif page.url == '/jobs/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}jobs/index.html" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Jobs</a></li>
     </ul>
