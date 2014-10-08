@@ -1,26 +1,51 @@
-team: engineering
-  - name:   Jeff
-    lastname:    Barrett
-    location:    San Francisco
-    division:    Administrative Overhead
-    description: Jeff likes his objects oriented in a programmable fashion and his espresso well made. If he had a time machine he'd stop Buddy Holly from flying on any planes ever. Hails from New York.
-    linkedin:    jeffreyjbarrett
-    github:
-    twitter:
-    instagram:
-    flickr:
-    homepage:
-    blog:
+- teamname: engineering
+  members:
+    - name:        Jeff
+      lastname:    Barrett
+      location:    San Francisco
+      division:    Administrative Overhead
+      description: Jeff likes his objects oriented in a programmable fashion and his espresso well made. If he had a time machine he'd stop Buddy Holly from flying on any planes ever. Hails from New York.
+      linkedin:    jeffreyjbarrett
+      github:
+      twitter:
+      instagram:
+      flickr:
+      homepage:
+      blog:
+    - name:        Jon
+      lastname:    Dean
+      location:    Pittsburgh
+      division:    Warehouse & Logistics
+      description: Jon is a web software engineer and pipes everything to /dev/null, the only true web scale. He's composed of 60% water, 20% coffee, 19% lager and 1% other. Hails from Pittsburgh.
+      linkedin:    jonathandean
+      github:      jonathandean
+      twitter:     jonathandean
+      instagram:   jonathandean
+      flickr:
+      homepage:    http://www.jonathandean.com
+      blog:
 
-  - name:   Jon
-    lastname:    Dean
-    location:    Pittsburgh
-    division:    Warehouse & Logistics
-    description: Jon is a web software engineer and pipes everything to /dev/null, the only true web scale. He's composed of 60% water, 20% coffee, 19% lager and 1% "other." Hails from Pittsburgh.
-    linkedin:    jonathandean
-    github:      jonathandean
-    twitter:     jonathandean
-    instagram:   jonathandean
-    flickr:
-    homepage:    http://www.jonathandean.com
-    blog:
+
+- title: "Projects"
+  subcategories:
+    - title: "project-sub1"
+      items:
+        - title: "project-sub1-item1"
+          href: "#"
+        - title: "project-sub1-item2"
+          href: "#"
+    - title: "project-sub2"
+      items:
+        - title: "project-sub2-item1"
+          href: "#"
+        - title: "project-sub2-item2"
+          href: "#"
+
+- title: "Support"
+  subcategories:
+   - title: "support-sub1"
+     items:
+      - title: "support-sub1-item1"
+        href: "#"
+      - title: "support-sub1-item2"
+        href: "#"

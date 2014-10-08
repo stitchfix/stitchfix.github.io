@@ -3,42 +3,23 @@
     <section>
       <header class="text-c py8">
         <h1 class="h1 thin">Team</h1>
-        <h2 class="h2 thin light">Engineering</h2>
       </header>
+
+
+      <article>
+        <header>
+          <h2 class="h2 thin light"></h2>
+        </header>
+      </article>
+
+
+
+
+
+      <h2 class="h2 thin light">Engineering</h2>
+
+
       <div class="grid">
-
-        {% for member in site.data.team %}
-          <div class="team-img g _1-4 _1-2-sm _1-1-xs">
-            <img src="/assets/images/team/{{ member.name }}.jpg" alt="{{ member.name }}">
-            <h2 class="h5 m0">{{ member.name }}
-              <small class="thin uppercase">{{ member.location }}</small>
-            </h2>
-            <h3 class="h6 m0 thin">{{ member.division }}</h3>
-            <div class="bio expandable">
-              <p>{{ member.description }}</p>
-              <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
-            </div>
-            <div class="social">
-              {% if member.linkedin %}
-                <a href="http://www.linkedin.com/in/{{ member.linkedin }}" class="ss-icon ss-social"
-                   title="{{ member.name }} {{ member.lastname }} on linkedin">linkedin</a>
-              {% elsif member.github %}
-              {% elsif member.twitter %}
-              {% elsif member.instagram %}
-              {% elsif member.flickr %}
-              {% elsif member.homepage %}
-              {% elsif member.blog %}
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-
-
-
-
-
-
-
         <div class="team-img g _1-4 _1-2-sm _1-1-xs">
           <img src="/assets/images/team/jeff.jpg" alt="Jeff">
 
