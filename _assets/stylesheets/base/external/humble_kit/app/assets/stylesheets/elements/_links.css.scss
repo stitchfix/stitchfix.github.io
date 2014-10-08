@@ -34,23 +34,6 @@ $link-underline-hover-option:  false !default;
 
 */
 
-$link-gray:       #BBC;
-$link-blue:       #3874b5;
-$link-blue-soft:  #77abc9;
-$link-blue-light: #284c72;
-
-$link-color:         $link-blue !default;
-$link-hover-color:   $link-blue-soft !default;
-$link-active-color:  $link-blue !default;
-$link-visited-color: $link-blue !default;
-
-$link-light-color:         $link-blue-soft !default;
-$link-light-hover-color:   $link-blue-light !default;
-$link-light-active-color:  $link-blue-soft !default;
-$link-light-visited-color: $link-blue-soft !default;
-
-$link-transition-speed:    $transition-speed-base !default;
-
 // Options
 
 $link-underline-option:        false !default;
@@ -82,10 +65,11 @@ also a couple of classes you can use to make links more universally useful.
 </div>
 
 ```
-
 */
 
 
+%link,
+.link,
 a {
   color: $link-color;
 

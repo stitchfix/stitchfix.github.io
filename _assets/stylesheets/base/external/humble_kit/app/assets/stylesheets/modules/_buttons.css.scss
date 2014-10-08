@@ -1,5 +1,66 @@
 /*doc
 ---
+title: "Customizing buttons"
+name: buttons-variables
+category: modules
+---
+```html_example
+
+<pre>
+  <code class="language-css">
+$btn-font-weight:      $font-weight-thin !default;
+$btn-border-radius:    0.25rem !default;
+$btn-shadow:           inset 0 2px 6px rgba(0,0,0,0.3) !default;
+
+$btn-bg-default:       $btn-gray !default;
+$btn-color-default:    white !default;
+$btn-border-default:   darken($btn-bg-default, 10%) !default;
+
+$btn-bg-primary:       $btn-blue !default;
+$btn-color-primary:    white !default;
+$btn-border-primary:   darken($btn-bg-primary, 10%) !default;
+
+$btn-bg-secondary:     $btn-violet !default;
+$btn-color-secondary:  white !default;
+$btn-border-secondary: darken($btn-bg-secondary, 10%) !default;
+
+$btn-bg-tertiary:      $btn-blue-soft !default;
+$btn-color-tertiary:   white !default;
+$btn-border-tertiary:  darken($btn-bg-tertiary, 10%) !default;
+
+$btn-bg-link:          $btn-blue-light !default;
+$btn-bg-link-dark:     rgba(255,255,255,0.15) !default;
+$btn-border-link:      rgba($btn-blue-light,0.0) !default;
+
+$btn-hover-adjustment: 8% !default;
+$btn-border-width:     1px !default;
+$btn-transition-speed: 0.2s !default;
+
+--- Optional customizations ---
+$btn-inset-option:       true !default;
+$btn-border-option:      true !default;
+$btn-radius-option:      true !default;
+$btn-text-shadow-option: true !default;
+$btn-transition-option:  true !default;
+$btn-hover-bg-option:    true !default;
+$btn-mobile-full-width:  true !default;
+  </code>
+</pre>
+
+```
+*/
+
+$btn-inset-option:       true !default;
+$btn-border-option:      true !default;
+$btn-radius-option:      true !default;
+$btn-text-shadow-option: true !default;
+$btn-transition-option:  true !default;
+$btn-hover-bg-option:    true !default;
+$btn-mobile-full-width:  true !default;
+
+
+/*doc
+---
 title: Buttons
 name: buttons
 category: modules
@@ -36,70 +97,7 @@ category: modules
 ```
 */
 
-$btn-class-prefix:     "btn";
-
-// Default button colors.
-$btn-gray:             #ababbb;
-$btn-blue:             #007acb;
-$btn-violet:           #bc87dd;
-$btn-blue-soft:        #9accec;
-$btn-blue-light:       #d4e6f0;
-
-$link-color:           $btn-blue;
-$link-hover-color:     $btn-blue-soft;
-$link-active-color:    $btn-blue;
-$link-visited-color:   $btn-blue;
-
-$btn-font-weight:      $font-weight-thin;
-$btn-border-radius:    0.25rem !default;
-$btn-shadow:           inset 0 2px 6px rgba(0,0,0,0.3) !default;
-
-$btn-bg-default:       $btn-gray !default;
-$btn-color-default:    white !default;
-$btn-border-default:   darken($btn-bg-default, 10%) !default;
-
-$btn-bg-primary:       $btn-blue !default;
-$btn-color-primary:    white !default;
-$btn-border-primary:   darken($btn-bg-primary, 10%) !default;
-
-$btn-bg-secondary:     $btn-violet !default;
-$btn-color-secondary:  white !default;
-$btn-border-secondary: darken($btn-bg-secondary, 10%) !default;
-
-$btn-bg-tertiary:      $btn-blue-soft !default;
-$btn-color-tertiary:   white !default;
-$btn-border-tertiary:  darken($btn-bg-tertiary, 10%) !default;
-
-$btn-bg-link:          $btn-blue-light !default;
-$btn-bg-link-dark:     rgba(255,255,255,0.15) !default;
-$btn-border-link:      rgba($btn-blue-light,0.0) !default;
-
-$btn-hover-adjustment: 8%;
-$btn-border-width:     1px !default;
-$btn-transition-speed: 0.2s !default;
-
-$btn-py-xs: 0.33rem;
-$btn-px-xs: 1.0rem;
-$btn-py-sm: 0.5rem;
-$btn-px-sm: 1.5rem;
-$btn-py-md: 1.0rem;
-$btn-px-md: 3.0rem;
-$btn-py-lg: 1rem;
-$btn-px-lg: 4.5rem;
-$btn-py-xl: 1.66rem;
-$btn-px-xl: 6.0rem;
-
-
-// Options
-
-$btn-inset-option:       true !default;
-$btn-border-option:      true !default;
-$btn-radius-option:      true !default;
-$btn-text-shadow-option: true !default;
-$btn-transition-option:  true !default;
-$btn-hover-bg-option:    true !default;
-$btn-mobile-full-width:  true !default;
-
+%#{$btn-class-prefix},
 .#{$btn-class-prefix} {
   @if variable_exists(f4){ @include size_and_line($f4, rem, 0); }
     @else { @include size_and_line(1.3, rem, 0) }
@@ -108,7 +106,7 @@ $btn-mobile-full-width:  true !default;
   text-align: center;
   vertical-align: top;
   background-color: $btn-bg-default;
-  color: white;
+  color: $btn-color-default;
   border-style: solid;
   border-color: $btn-border-default;
   text-decoration: none;
@@ -141,7 +139,7 @@ $btn-mobile-full-width:  true !default;
   &:hover {
     @if $btn-hover-bg-option { background-color: lighten($btn-bg-default,$btn-hover-adjustment); }
     border-color: lighten($btn-border-default,$btn-hover-adjustment);
-    color: white;
+    color: $btn-color-default;
     @if $btn-text-shadow-option { text-shadow: 0 0 15px white, 0 0 30px white; }
   }
   &:active,
@@ -150,8 +148,9 @@ $btn-mobile-full-width:  true !default;
     @if $btn-inset-option { -webkit-box-shadow: $btn-shadow;-moz-box-shadow: $btn-shadow;box-shadow: $btn-shadow; }
     background-color: darken($btn-bg-default,10%);
   }
+  &:active,
   &:visited {
-    color: white;
+    color: $btn-color-default;
   }
 
   &.disabled,
@@ -167,6 +166,7 @@ $btn-mobile-full-width:  true !default;
   }
 }
 
+%#{$btn-class-prefix}-primary,
 .#{$btn-class-prefix}-primary {
   background-color: $btn-bg-primary;
   color: $btn-color-primary;
@@ -180,10 +180,17 @@ $btn-mobile-full-width:  true !default;
   &:active,
   &.current,
   &.active {
+    color: $btn-color-primary;
     background-color: darken($btn-bg-primary,10%);
+  }
+
+  &:hover,
+  &:visited {
+    color: $btn-color-primary;
   }
 }
 
+%#{$btn-class-prefix}-secondary,
 .#{$btn-class-prefix}-secondary {
   background-color: $btn-bg-secondary;
   color: $btn-color-secondary;
@@ -197,10 +204,17 @@ $btn-mobile-full-width:  true !default;
   &:active,
   &.current,
   &.active {
+    color: $btn-color-secondary;
     background-color: darken($btn-bg-secondary,10%);
+  }
+
+  &:hover,
+  &:visited {
+    color: $btn-color-secondary;
   }
 }
 
+%#{$btn-class-prefix}-tertiary,
 .#{$btn-class-prefix}-tertiary {
   background-color: $btn-bg-tertiary;
   color: $btn-color-tertiary;
@@ -214,10 +228,17 @@ $btn-mobile-full-width:  true !default;
   &:active,
   &.current,
   &.active {
+    color: $btn-color-tertiary;
     background-color: darken($btn-bg-tertiary,10%);
+  }
+
+  &:hover,
+  &:visited {
+    color: $btn-color-tertiary;
   }
 }
 
+%#{$btn-class-prefix}-link,
 .#{$btn-class-prefix}-link {
   background-color: transparent;
   color: $link-color;
@@ -235,6 +256,7 @@ $btn-mobile-full-width:  true !default;
     color: $link-active-color;
   }
 
+  &%#{$btn-class-prefix}-link-dark,
   &.#{$btn-class-prefix}-link-dark {
     &:hover {
       background-color: $btn-bg-link-dark;
@@ -247,6 +269,7 @@ $btn-mobile-full-width:  true !default;
   }
 }
 
+%#{$btn-class-prefix}-xl,
 .#{$btn-class-prefix}-xl {
   @if variable_exists(f2){ @include size_and_line($f2, rem, 0); }
     @else { @include size_and_line(1.75, rem, 0) }
@@ -262,6 +285,7 @@ $btn-mobile-full-width:  true !default;
   }
 }
 
+%#{$btn-class-prefix}-lg,
 .#{$btn-class-prefix}-lg {
   @if variable_exists(f3){ @include size_and_line($f3, rem, 0); }
     @else { @include size_and_line(1.45, rem, 0) }
@@ -277,6 +301,7 @@ $btn-mobile-full-width:  true !default;
   }
 }
 
+%#{$btn-class-prefix}-sm,
 .#{$btn-class-prefix}-sm {
   @if variable_exists(f5){ @include size_and_line($f5, rem, 0); }
     @else { @include size_and_line(1.15, rem, 0) }
@@ -292,6 +317,7 @@ $btn-mobile-full-width:  true !default;
   }
 }
 
+%#{$btn-class-prefix}-xs,
 .#{$btn-class-prefix}-xs {
   @if variable_exists(f6){ @include size_and_line($f6, rem, 0); }
     @else { @include size_and_line(1, rem, 0) }
@@ -348,6 +374,7 @@ category: modules
 
 .#{$btn-class-prefix}-group {
   display: inline-block;
+  vertical-align: top;
   font-size: 0; // Fixes inline-block spacing issue
 
   .#{$btn-class-prefix} + .#{$btn-class-prefix},

@@ -10,31 +10,6 @@ children and collapse based on defined media breakpoints.
 
 */
 
-
-/* Container
-   ========================================================================== */
-/**
-* 1. Include a $container-max if you want to constrain the maximum allowable
-*    width for the container, regardless of breakpoint constraints.
-*
-* 2. Center the container by default.
-*
-* 3. @if statement handles
-*/
-
-/* Container constraint variables */
-
-$container-pad:   10px !default;
-$container-sm:    ($media-width-sm - ($container-pad*2)) !default;
-$container-md:    ($media-width-md - ($container-pad*2)) !default;
-$container-lg:    ($media-width-lg - ($container-pad*2)) !default;
-$container-xl:    ($media-width-xl - ($container-pad*2)) !default;
-
-$container-max:   null !default; /* 1 */
-
-// $container-align - possible values: left / right / center
-$container-align: center !default; /* 2 */
-
 .container {
   @extend %clearfix;
   padding: 0 $container-pad;
@@ -44,7 +19,7 @@ $container-align: center !default; /* 2 */
     padding: 0 !important;
   }
 
-  @if $container-align == left { /* 3 */
+  @if $container-align == left {
     margin-left: 0;
     margin-right: auto;
   } @else if $container-align == right {
@@ -119,5 +94,6 @@ $container-align: center !default; /* 2 */
   &.contain-to-lg { max-width: $container-lg; }
   &.contain-to-md { max-width: $container-md; }
   &.contain-to-sm { max-width: $container-sm; }
+  &.contain-to-sm { max-width: $container-xs; }
 }
 
