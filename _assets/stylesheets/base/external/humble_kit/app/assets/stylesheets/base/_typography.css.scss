@@ -2,7 +2,7 @@
 ---
 title: "Customizing typography"
 name: basic-typography-variables
-category: typography
+category: base
 ---
 
 <pre>
@@ -26,95 +26,12 @@ $small-size-unit: "%" !default;
 
 */
 
-/* Basic font variables
-   ========================================================================== */
-
-/**
-* 1. Optional: User font family definition. Add a font or fonts as a variable
-*    and it will be injected into the site font family (serif or sans).
-* 2. $font-family-base defines which style of font (defined before) to use as
-*    default for the site. $font-family-sans-serif by default.
-* 3. Default color for text. If using dark on light, avoid solid black (#000).
-*    This is just good practice and looks nicer, too.
-* 4. Some variables for <small> text. Accepts a size and a unit.
-*/
-
-$user-font-family-sans-serif: "Source Sans Pro" !default; /* 1 */
-$user-font-family-serif:      null !default;
-
-$font-family-sans-serif: $user-font-family-sans-serif, "Helvetica Neue", Helvetica, sans-serif;
-$font-family-serif:      $user-font-family-serif, Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, serif;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:       $font-family-sans-serif !default; /* 2 */
-
-$text-base-color:  #444 !default; /* 3 */
-$text-light-color: lighten($text-base-color, 33%);
-$text-dark-color:  darken($text-base-color, 33%);
-
-$small-size:      65 !default; /* 4 */
-$small-size-unit: "%" !default;
-
-
-/* Headings variables
-   ========================================================================== */
-
-$headings-font-family: $font-family-serif !default;
-$headings-font-weight: $font-weight-thick !default;
-$headings-color: inherit !default;
-$headings-weight: $font-weight-thick !default;
-
-
-
-
-
-
-
-
-
-
-/* Font size variables
-   ========================================================================== */
-
-/**
-* I choose not to use classes or variables with the greek naming convention
-* (i.e. ".alpha, $beta, etc.")
-* I find it easier not to have to learn new languages (however common) nor
-* have to think about (however briefly) a class and its implication.
-*
-* In this numerical naming convention, it's easier to associate lower
-* numbers with larger text, simply because that convention is already in
-* place with heading markup (h1 - h6).
-*
-* Also included here are a few more font sizes with the sm, md, lg
-* naming convention.
-*
-* 1. Expressed as progressive steps in scale (as integers). See
-*    _variables.css.scss for more information.
-*    Basically, the type grows (or shrinks) from a base font size variable
-*    at a rate that is exponential according to the integers below.
-*    If this makes no sense, it might be easier to try changing these numbers,
-*    the $font-size-base, or the $type-ratio and seeing the results in your
-*    application. Tweak them to get something that works for you.
-*/
-
-$f-xl:  11; /* 1 */
-$f-lg:  9;
-$f1:    7;
-$f2:    5;
-$f3:    4;
-$f4:    3;
-$f5:    1;
-$f-md:  $f5;
-$f6:    0;
-$f-sm:  $f6;
-$f-xs: -1;
-
 
 /*doc
 ---
 title: Typography
 name: basic-typography
-category: typography
+category: base
 ---
 
 The basic typography and vertical rhythm is already setup by default. It's
@@ -171,7 +88,7 @@ i {
 ---
 title: "Headings and paragraphs"
 name: headings-and-paragraphs
-category: typography
+category: base
 ---
 
 Headings are given some default styling to give them a typographical
@@ -217,13 +134,6 @@ The code above works, but doesn't say as much semantically. YMMV.
 /**
 * 1. The .p class can be used to describe paragraph text when an actual <p>
 *    isn't used. E.g. <div class="p">Text goes here.</div>
-* 2. The last paragraph in a group of paragraphs (or single paragraph) will not
-*    have a margin below it. The complicated "not" selector will ignore this
-*    declaration for the margin-bottom (.mbN) classes, allowing the margin-bottom
-*    to instead by managed by the class.
-*    We use the :not selector because the last-of-type selector, when attached
-*    to the <p> or .p, is more specific than the .mbN class.
-*    Note: this is personal preference. Delete if you want.
 */
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
@@ -245,12 +155,6 @@ p,.p, /* 1 */
 dl,ol,ul { @extend %f5; }
 
 h6,.h6 { @extend %f6; }
-
-p,.p {
-  &:last-of-type:not([class^="mb"]){ /* 2 */
-    margin-bottom: 0;
-  }
-}
 
 %f-xl,
 .f-xl {
@@ -278,7 +182,7 @@ p,.p {
 ---
 title: "Helper classes"
 name: helper-typography-classes
-category: typography
+category: base
 ---
 
 The following are some utility classes that help control the visuals of your
@@ -305,7 +209,11 @@ use them or not, so stay cautious, friends.
 <sub>Subscript text</sub>
 <br />
 <div class="small">Small text</div>
+<div class="uppercase">Uppercase text</div>
 <div class="strike">Strikethrough text</div>
+<div style="width: 250px;" class="truncated">
+  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
+</div>
 <div class="text-l">Align left</div>
 <div class="text-c">Align center</div>
 <div class="text-r">Align right</div>
@@ -313,6 +221,7 @@ use them or not, so stay cautious, friends.
 <div class="dark">Dark text</div>
 <div class="thin">Thin text</div>
 <div class="thick">Thick text</div>
+<div class="normal">Normal weight text</div>
 <div class="line1">Line height of 1 rem</div>
 <div class="line2">Line height of 2 rem</div>
 <div class="line3">Line height of 3 rem</div>
@@ -336,6 +245,7 @@ use them or not, so stay cautious, friends.
   text-decoration: underline;
 }
 
+%sub, %sup,
 sub, sup {                  /* 1 */
   font-size: $small-size#{$small-size-unit};
   line-height: 0;
@@ -343,10 +253,12 @@ sub, sup {                  /* 1 */
   vertical-align: baseline;
 }
 
+%sup,
 sup {
   top: -0.5rem;
 }
 
+%sub,
 sub {
   bottom: -0.25rem;
 }
@@ -358,13 +270,28 @@ small,
   line-height: 1rem;
 }
 
+%uppercase,
+.uppercase {
+  text-transform: uppercase;
+}
+
 %strike,
 .strike {
   text-decoration: line-through;
 }
 
+%truncated,
+.truncated {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+%text-l,
 .text-l { text-align: left   !important; }
+%text-c,
 .text-c { text-align: center !important; }
+%text-r,
 .text-r { text-align: right  !important; }
 
 %light,
@@ -379,9 +306,18 @@ small,
 %thick,
 .thick { font-weight: $font-weight-thick; }
 
+%normal,
+.normal {
+  font-weight: $font-weight-base !important;
+}
+
+%line1,
 .line1 { line-height: 1rem !important; } /* 2 */
+%line2,
 .line2 { line-height: 2rem !important; }
+%line3,
 .line3 { line-height: 3rem !important; }
+%line4,
 .line4 { line-height: 4rem !important; }
 
 
@@ -389,7 +325,7 @@ small,
 ---
 title: "Responsive text"
 name: responsive-text
-category: typography
+category: base
 ---
 
 `f-xl` `f-lg` `h1` `h2` `h3` `h4` and `p` classes react responsively to change the
@@ -450,7 +386,7 @@ devices for better readability.
 ---
 title: "Responsive text alignment"
 name: responsive-text-alignment
-category: typography
+category: base
 ---
 
 Some utility classes for forcing the alignment of text responsively.
@@ -469,7 +405,10 @@ class that would align the text to the left.
 */
 
 @include at_breakpoint(xs) {
+  %text-l-xs,
   .text-l-xs { text-align: left   !important; float: none !important; }
+  %text-c-xs,
   .text-c-xs { text-align: center !important; float: none !important; }
+  %text-r-xs,
   .text-r-xs { text-align: right  !important; float: none !important; }
 }

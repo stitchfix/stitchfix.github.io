@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Global Mixins
+   Base Mixins
    ========================================================================== */
 /**
 * These mixins are needed for almost all parts of this project, so they are
@@ -51,11 +51,11 @@
       @content
     }
   } @else if $media == gtxs {
-    @media screen and (min-width: ($media-width-xs)) {
+    @media screen and (min-width: ($media-width-xs + 1)) {
       @content
     }
   } @else if $media == gtsm {
-    @media screen and (min-width: ($media-width-sm)) {
+    @media screen and (min-width: ($media-width-sm + 1)) {
       @content
     }
   }
@@ -95,13 +95,17 @@
 * 3. Optional: For aesthetics, adjust letter-space to -1% of font size.
 */
 
-$letter-spacing-adjustment: true !default;
-
 @mixin size_and_line($size, $unit, $margin:ceil($size / 2)) {
   $truesize: exponent($type-ratio, $size);
 
   font-size:   $truesize * 1#{$unit}; /* 1 */
-  margin-bottom: #{$margin}rem;
+
+  @if $margin == 0 {
+    margin-bottom: 0;
+  }
+  @else {
+    margin-bottom: #{$margin}rem;
+  }
 
   @if $unit == "px" {
     line-height: ceil($truesize / $font-size-base) * 1rem; /* 2 */

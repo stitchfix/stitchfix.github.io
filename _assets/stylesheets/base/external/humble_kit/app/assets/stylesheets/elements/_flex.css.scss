@@ -1,0 +1,124 @@
+@mixin flex_styles {
+
+  /*doc
+  ---
+  title: Flexbox
+  name: flexbox
+  category: elements
+  ---
+
+  Flexbox is a way to create an expandable/contractible set of elements
+  in modern browsers. The standard flexbox consists of a parent container
+  and any number of flexible child elements.
+
+  This section is unofficial and unfinished.
+
+  ```html_example
+  <div class="flex-container">
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      1
+    </div>
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      2
+    </div>
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      3
+   </div>
+  </div>
+  ```
+
+  */
+
+  %flex-container,
+  .flex-container {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    %flex-item,
+    .flex-item {
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-flex: 1;
+              flex: 1;
+    }
+    %flex-left,
+    .flex-left {
+      margin-left: 0;
+    }
+    %flex-0,
+    .flex-0 {
+      -webkit-flex: 0;
+              flex: 0;
+    }
+    %flex-2,
+    .flex-2 {
+      -webkit-flex: 2;
+              flex: 2;
+    }
+    %flex-3,
+    .flex-3 {
+      -webkit-flex: 3;
+              flex: 3;
+    }
+    %flex-4,
+    .flex-4 {
+      -webkit-flex: 4;
+              flex: 4;
+    }
+  }
+
+
+  /*doc
+  ---
+  title: "Flex list"
+  name: flexlist
+  category: elements
+  ---
+
+  List flex extends <ul> and uses <li> children as flexible sections.
+
+  This section is unofficial and unfinished.
+
+  ```html_example
+  <ul class="list-flex">
+    <li class="list-header">
+      List header
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+  </ul>
+  ```
+
+  */
+
+  %list-flex,
+  .list-flex {
+    @extend %flex-container;
+    @extend %m0;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      @extend %flex-item;
+      @extend %flex-2;
+      @extend %m0;
+
+      &.list-header {
+        @extend %text-r;
+        @extend %flex-4;
+        @extend %px1;
+      }
+    }
+  }
+}

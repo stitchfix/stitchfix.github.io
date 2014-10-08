@@ -50,8 +50,6 @@ category: structure
    Grid
    ========================================================================== */
 
-$grid-gutter: $font-size-base * 1.5 !default;
-
 /**
 * 1. Fix for lists.
 * 2. Negative margin to offset grid parent
@@ -74,8 +72,6 @@ $grid-gutter: $font-size-base * 1.5 !default;
  * 5. Required to combine fluid widths and fixed gutters.
  * 6. Set font size back to base to fix inline-block extra space
  */
-
-$grid-debug: false;
 
 .g {
   display:        inline-block;    /* 1 */
