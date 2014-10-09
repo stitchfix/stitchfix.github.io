@@ -1,22 +1,64 @@
 <article id="team">
   <div class="container contain-to-md">
     <section>
-      <header class="text-c py8">
-        <h1 class="h1 thin">Team</h1>
+      <header class="py4">
+        <h1 class="h1 thin text-c">Team</h1>
+        <hr>
       </header>
 
 
-      <article>
-        <header>
-          <h2 class="h2 thin light"></h2>
-        </header>
-      </article>
+      {% for team in site.data.teams %}
+        <article>
+          <header class="py4">
+            <h2 class="h2 thin light text-c">{{ team.teamname | capitalize }}</h2>
+          </header>
+          <section class="grid">
+            {% for member in team.members %}
+              <article class="member-info g _1-4 _1-2-sm _1-1-xs">
+                <img src="/assets/images/team/{% if member.image %}{{ member.image }}{% else %}{{ member.name | downcase }}{% endif %}.jpg" alt="{{ member.name }} {{ member.lastname }}">
+                <h3 class="h5 m0">
+                  {{ member.name }}
+                  <small class="thin uppercase">{{ member.location }}</small>
+                </h3>
+                <h4 class="h6 m0 thin">{{ member.division }}</h4>
+                <section class="bio expandable">
+                  <p>{{ member.description }}</p>
+                  <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+                </section>
+                <aside class="social">
+                  {% if member.linkedin %}
+                    <a href="http://www.linkedin.com/in/{{ member.linkedin }}" class="ss-icon ss-social ss-linkedin"
+                       title="{{ member.name }} {{ member.lastname }} on LinkedIn"></a>
+                  {% endif %}
+                  {% if member.github %}
+                    <a href="https://github.com/{{ member.github }}" class="ss-icon ss-social ss-octocat"
+                       title="{{ member.name }} {{ member.lastname }} on GitHub"></a>
+                  {% endif %}
+                  {% if member.twitter %}
+                    <a href="http://twitter.com/{{ member.twitter }}" class="ss-icon ss-social ss-twitter"
+                       title="{{ member.name }} {{ member.lastname }} on Twitter"></a>
+                  {% endif %}
+                  {% if member.instagram %}
+                    <a href="http://instagram.com/{{ member.instagram }}" class="ss-icon ss-social ss-instagram"
+                       title="{{ member.name }} {{ member.lastname }} on Instagram"></a>
+                  {% endif %}
+                  {% if member.flickr %}
+                  <a href="http://www.flickr.com/photos/{{ member.flickr }}" class="ss-icon ss-social ss-flickr"
+                     title="{{ member.name }} {{ member.lastname }} on Flickr"></a>
+                  {% endif %}
+                  {% if member.links %}
+                    {% for link in member.links %}
+                      <a href="{{ link.url }}" class="ss-icon ss-standard ss-link"
+                         title="{{ member.name }} {{ member.lastname }}'s {{ link.type }}"></a>
+                    {% endfor %}
+                  {% endif %}
+                </aside>
+              </article>
+            {% endfor %}
+          </section>
+        </article>
+      {% endfor %}
 
-
-
-
-
-      <h2 class="h2 thin light">Engineering</h2>
 
 
       <div class="grid">

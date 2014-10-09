@@ -5,47 +5,115 @@
       location:    San Francisco
       division:    Administrative Overhead
       description: Jeff likes his objects oriented in a programmable fashion and his espresso well made. If he had a time machine he'd stop Buddy Holly from flying on any planes ever. Hails from New York.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
       linkedin:    jeffreyjbarrett
       github:
       twitter:
       instagram:
       flickr:
-      homepage:
-      blog:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
     - name:        Jon
       lastname:    Dean
       location:    Pittsburgh
       division:    Warehouse & Logistics
       description: Jon is a web software engineer and pipes everything to /dev/null, the only true web scale. He's composed of 60% water, 20% coffee, 19% lager and 1% other. Hails from Pittsburgh.
-      linkedin:    jonathandean
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       jon3
+      linkedin:    jonathanedean
       github:      jonathandean
-      twitter:     jonathandean
+      twitter:     jonathanedean
       instagram:   jonathandean
       flickr:
-      homepage:    http://www.jonathandean.com
-      blog:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://jonathandean.com
+
+    - name:        Joel
+      lastname:    Strait
+      location:    San Francisco
+      division:    Styling
+      description: Joel builds great web applications with a secret blend of 11 technologies and spices. He's available for weddings, bar mitzvahs, and birthday parties. Once <a href='http://beatsdrummachine.com/'>built a command line drum machine</a> and then later <a href='http://www.joelstrait.com/blog/2014/6/14/nanosynth_create_sound_with_ruby'>did it again</a>. Hails from Pittsburgh.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      linkedin:
+      github:      jstrait
+      twitter:     joelstrait
+      instagram:   joelstrait
+      flickr:      48041310@N00
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://joelstrait.com
+
+    - name:        Dave
+      lastname:    Copeland
+      location:    Washington, DC
+      division:    Warehouse & Logistics
+      description: Dave likes iced tea, cats, homemade bitters, and the commandline. He's written a <a class="link" title="Build Awesome Command-Line Applications in Ruby" href="http://pragprog.com/titles/dccar2">book on only one of those subjects</a>. Hails from Washington, DC.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      linkedin:
+      github:      davetron5000
+      twitter:     davetron5000
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://naildrivin5.com
+
+    - name:        Andy
+      lastname:    Peterson
+      location:    San Francisco
+      division:    Client Experience
+      description: Andy builds compelling software. He bikes, hikes, hoops, wears shorts, and plays with art and music. Adopted SF native but hails from the cold in the North.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      linkedin:    ndpsoftware
+      github:      ndp
+      twitter:     ndp8
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://ndpsoftware.com
+        - type:    blog
+          url:     http://blog.ndpsoftware.com
+
+    - name:        Nick
+      lastname:    Reavill
+      location:    San Francisco
+      division:    Merchandising
+      description: Nick likes long walks in the rain and holding hands in a salt-spritzed gust of wind. He also likes all kinds of databases and anything that allows him to put data in them. Hails from England.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      linkedin:
+      github:      nickflux
+      twitter:     nreavill
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
 
-- title: "Projects"
-  subcategories:
-    - title: "project-sub1"
-      items:
-        - title: "project-sub1-item1"
-          href: "#"
-        - title: "project-sub1-item2"
-          href: "#"
-    - title: "project-sub2"
-      items:
-        - title: "project-sub2-item1"
-          href: "#"
-        - title: "project-sub2-item2"
-          href: "#"
+    - name:        David
+      lastname:    McClain
+      location:    San Francisco
+      division:    Merchandising
+      description: David likes being the dumbest guy in the room, which is why he loves working at Stitch Fix. He loves coding and has high hopes that this "Internet" thing might someday take off. Hails from England, dislikes spelling 'colour' without the 'u'.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      linkedin:    davidamcclain
+      github:      uhhuhyeah
+      twitter:     davidamcclain
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
-- title: "Support"
-  subcategories:
-   - title: "support-sub1"
-     items:
-      - title: "support-sub1-item1"
-        href: "#"
-      - title: "support-sub1-item2"
-        href: "#"
+
