@@ -1,14 +1,13 @@
 <article id="team">
   <div class="container contain-to-md">
     <section>
-      <header class="py4">
+      <header class="mt4">
         <h1 class="h1 thin text-c">Team</h1>
-        <hr>
       </header>
 
       {% for team in site.data.teams %}
         <article>
-          <header class="py4">
+          <header class="mt6 mb2">
             <h2 class="h2 thin light text-c">{{ team.teamname | capitalize }}</h2>
           </header>
           <section class="grid">
