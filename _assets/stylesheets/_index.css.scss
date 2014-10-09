@@ -1,8 +1,6 @@
 .social {
-  margin-top: 6px;
-  margin-bottom: 20px;
   a {
-    margin-right: 6px;
+    @extend %f6;
     &, &:visited {
       color: $text-base-color;
     }
