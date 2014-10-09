@@ -1,78 +1,655 @@
 <article id="team">
   <div class="container contain-to-md">
     <section>
-      <header class="mt4">
-        <h1 class="h1 thin text-c">Team</h1>
+      <header class="text-c py8">
+        <h1 class="h1 thin">Team</h1>
+        <h2 class="h2 thin light">Engineering</h2>
       </header>
+      <div class="grid">
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/jeff.jpg" alt="Jeff">
 
-      {% for team in site.data.teams %}
-        <article>
-          <header class="mt6 mb2">
-            <h2 class="h2 thin light text-c">{{ team.teamname | capitalize }}</h2>
-          </header>
-          <section class="grid">
-            {% for member in team.members %}
-              <article class="member-info g _1-4 _1-2-sm _1-1-xs">
-                <img src="/assets/images/team/{% if member.image %}{{ member.image }}{% else %}{{ member.name | downcase }}{% endif %}.jpg" alt="{{ member.name }} {{ member.lastname }}">
-                <h3 class="h5 m0">
-                  {{ member.name }}
-                  <small class="thin uppercase">{{ member.location }}</small>
-                </h3>
-                <h4 class="h6 m0 thin">{{ member.division }}</h4>
-                <section class="bio expandable">
-                  <p>{{ member.description }}</p>
-                  <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
-                </section>
-                <ul class="social list-inline list-condensed m1">
-                  {% if member.linkedin %}
-                    {% if member.linkedin contains 'linkedin.' %}
-                      <li>
-                        <a href="{{ member.linkedin }}" class="ss-icon ss-social ss-linkedin"
-                           title="{{ member.name }} {{ member.lastname }} on LinkedIn"></a>
-                      </li>
-                    {% else %}
-                      <li>
-                        <a href="http://www.linkedin.com/in/{{ member.linkedin }}" class="ss-icon ss-social ss-linkedin"
-                         title="{{ member.name }} {{ member.lastname }} on LinkedIn"></a>
-                      </li>
-                    {% endif %}
-                  {% endif %}
-                  {% if member.github %}
-                    <li>
-                      <a href="https://github.com/{{ member.github }}" class="ss-icon ss-social ss-octocat"
-                         title="{{ member.name }} {{ member.lastname }} on GitHub"></a>
-                    </li>
-                  {% endif %}
-                  {% if member.twitter %}
-                    <li>
-                      <a href="http://twitter.com/{{ member.twitter }}" class="ss-icon ss-social ss-twitter"
-                         title="{{ member.name }} {{ member.lastname }} on Twitter"></a>
-                    </li>
-                  {% endif %}
-                  {% if member.instagram %}
-                    <a href="http://instagram.com/{{ member.instagram }}" class="ss-icon ss-social ss-instagram"
-                       title="{{ member.name }} {{ member.lastname }} on Instagram"></a>
-                  {% endif %}
-                  {% if member.flickr %}
-                    <li>
-                      <a href="http://www.flickr.com/photos/{{ member.flickr }}" class="ss-icon ss-social ss-flickr"
-                         title="{{ member.name }} {{ member.lastname }} on Flickr"></a>
-                    </li>
-                  {% endif %}
-                  {% if member.links %}
-                    {% for link in member.links %}
-                      <li>
-                        <a href="{{ link.url }}" class="ss-icon ss-standard ss-link"
-                           title="{{ member.name }} {{ member.lastname }}'s {{ link.type }}"></a>
-                      </li>
-                    {% endfor %}
-                  {% endif %}
-                </ul>
-              </article>
-            {% endfor %}
-          </section>
-        </article>
-      {% endfor %}
+          <h2 class="h5 m0">Jeff
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">Administrative Overhead</h3>
+          <div class="bio expandable">
+            <p>Jeff likes his objects oriented in a programmable fashion and his espresso well made. If he had a time
+              machine he'd stop Buddy Holly from flying on any planes ever. Hails from New York.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://www.linkedin.com/in/jeffreyjbarrett" class="ss-icon ss-social"
+               title="jeff barrett on linkedin">linkedin</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/jon3.png" alt="Jon">
+
+          <h2 class="h5 m0">Jon
+            <small class="thin uppercase">Pittsburgh</small>
+          </h2>
+          <h3 class="h6 m0 thin">Warehouse &amp; Logistics</h3>
+          <div class="bio expandable">
+            <p>Jon is a web software engineer and pipes everything to /dev/null, the only true web scale.
+              He's composed of 60% water, 20% coffee, 19% lager and 1% "other." Hails from Pittsburgh.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://jonathandean.com" class="ss-icon ss-symbolicons-block" title="jonathandean.com">&#x1F517;</a>
+            <a href="https://github.com/jonathandean" class="ss-icon ss-social" title="Jonathan Deans Github">&#xF671;</a>
+            <a href="http://www.linkedin.com/in/jonathanedean" class="ss-icon ss-social"
+               title="Jonathan Dean on LinkedIn">LinkedIn</a>
+            <a href="http://twitter.com/jonathanedean" class="ss-icon ss-social"
+               title="Jonathan Dean on Twitter">twitter</a>
+            <a href="http://instagram.com/jonathandean" class="ss-icon ss-social" title="Jonathan Dean on Instagram">Instagram</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/joel.jpg" alt="Joel">
+
+          <h2 class="h5 m0">Joel
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">Styling</h3>
+          <div class="bio expandable">
+            <p>Joel builds great web applications with a secret blend of 11 technologies and spices. He's available for
+              weddings, bar mitzvahs, and birthday parties. Once <a href="http://beatsdrummachine.com"
+                                                                    title="Beats - The command line drum machine">
+                built a command line drum machine</a> and then later <a
+                      href="http://www.joelstrait.com/blog/2014/6/14/nanosynth_create_sound_with_ruby"
+                      title="NanoSynth - Create Sound with Ruby">did it again</a>. Hails from Pittsburgh.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://joelstrait.com" title="joelstrait.com" class="ss-icon ss-symbolicons-block">&#x1F517;</a>
+            <a href="http://github.com/jstrait" class="ss-icon ss-social" title="github.com/jstrait">&#xF671;</a>
+            <a href="http://twitter.com/joelstrait" title="@joelstrait" class="ss-icon ss-social">twitter</a>
+            <a href="http://www.flickr.com/photos/48041310@N00/" class="ss-icon ss-social" title="Joel Strait on Flickr">flickr</a>
+            <a href="http://instagram.com/joelstrait" class="ss-icon ss-social"
+               title="Joel Strait on Instagram">instagram</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/dave.jpg" alt="Dave">
+
+          <h2 class="h5 m0">Dave
+            <small class="thin uppercase">Washington, DC</small>
+          </h2>
+          <h3 class="h6 m0 thin">Warehouse &amp; Logistics</h3>
+          <div class="bio expandable">
+            <p>Dave likes iced tea, cats, homemade bitters, and the commandline. He's written a
+              <a class="link" title="Build Awesome Command-Line Applications in Ruby"
+                 href="http://pragprog.com/titles/dccar2">book
+                on only one of those subjects</a>.
+              Hails from Washington, DC.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://naildrivin5.com" title="naildrivin5.com" class="ss-icon ss-symbolicons-block">&#x1F517;</a>
+            <a href="http://github.com/davetron5000" class="ss-icon ss-social" title="Dave Copeland Github">&#xF671;</a>
+            <a href="http://twitter.com/davetron5000" class="ss-icon ss-social"
+               title="Dave Copeland on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/andy.jpg" alt="Andy">
+
+          <h2 class="h5 m0">Andy
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">Client Experience</h3>
+          <div class="bio expandable">
+            <p>Andy builds compelling software. He bikes, hikes, hoops, wears shorts, and
+              plays with art and music. Adopted SF native but hails from the cold in the North.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://ndpsoftware.com" title="ndpsoftware.com" class="ss-icon ss-symbolicons-block">&#x1F517;</a>
+            <a href="http://blog.ndpsoftware.com" class="ss-icon ss-social">&#xF622;</a>
+            <a href="http://github.com/ndp" class="ss-icon ss-social" title="Andy on Github">&#xF671;</a>
+            <a href="http://linkedin.com/in/ndpsoftware" class="ss-icon ss-social" title="NDP on LinkedIn">linkedin</a>
+            <a href="http://twitter.com/ndp8" class="ss-icon ss-social" title="Andy on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/nick.jpg" height="220" alt="Nick">
+
+          <h2 class="h5 m0">Nick
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">Merchandising</h3>
+          <div class="bio expandable">
+            <p>Nick likes long walks in the rain and holding hands in a salt-spritzed gust of wind. He also likes all
+              kinds
+              of
+              databases and anything that allows him to put data in them. Hails from England.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://github.com/nickflux" title="Nick on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="http://twitter.com/nreavill" class="ss-icon ss-social" title="Nick on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/david.jpg" alt="David">
+
+          <h2 class="h5 m0">David
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">Merchandising</h3>
+          <div class="bio expandable">
+            <p>David likes being the dumbest guy in the room, which is why he loves working at Stitch Fix. He loves coding
+              and has high hopes that this "Internet" thing might someday take off. Hails from England, dislikes spelling
+              'colour' without the 'u'.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/uhhuhyeah" title="David on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="http://www.linkedin.com/in/davidamcclain/" title="David on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+            <a href="http://twitter.com/davidamcclain" class="ss-icon ss-social" title="David on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/joe.jpg" alt="Joe">
+
+          <h2 class="h5 m0">Joe
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">Client Experience</h3>
+          <div class="bio expandable">
+            <p>Born in Youngstown Oh, Joe relocated to Cleveland for 8 years where he established himself in the
+              tech/startup scene. He’s now fleeing for San Francisco, mostly for the Buddhist temples and Indian Food.
+              He’s
+              also the Father of a boy named 'Biscuits'.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/joecannatti" title="Joe on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="http://twitter.com/joecannatti" class="ss-icon ss-social" title="Joe Cannatti on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/jim.jpg" alt="Jim">
+
+          <h2 class="h5 m0">Jim
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">Client Experience</h3>
+          <div class="bio expandable">
+            <p>
+              Jim loves to think about how to make things better. He was raised in the Bay Area but has hopped around the country since
+              college. Often unprepared for slight changes in weather.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://www.linkedin.com/in/jimmyfung/" title="Jim on LinkedIn" class="ss-icon ss-social">linkedin</a>
+            <a href="http://twitter.com/_jimfung" class="ss-icon ss-social" title="Jim on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/steve.jpg" alt="Steve">
+
+          <h2 class="h5 m0">Steve
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <h3 class="h6 m0 thin">DevOps</h3>
+          <div class="bio expandable">
+            <p>
+              Stephen is a DevOps engineer whose main want is to automate all the things (let's make Skynet!). On the
+              weekends you can find him at Hackathons, building weird clusters of things, and generally geeking out.
+              Originally from Tennessee, recently transplanted to the Bay Area.
+            </p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/slb350" title="Steve on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="http://www.linkedin.com/pub/stephen-brandon/7/25b/a42/" title="Steve on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+            <a href="http://twitter.com/brandon_stephen" class="ss-icon ss-social" title="Steve on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/simeon.png" alt="Simeon">
+
+          <h2 class="h5 m0">Simeon
+            <small class="thin uppercase">Long Beach</small>
+          </h2>
+          <h3 class="h6 m0 thin">Styling</h3>
+          <div class="bio expandable">
+            <p>Simeon is a web engineer who prefers simple over complex unless we're talking about coffee or stouts.
+             He loves watching and playing the beautiful game.
+             Hails from Maryland's Eastern Shore.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/simeonwillbanks" title="Simeon on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="https://www.linkedin.com/in/simeonwillbanks" title="Simeon on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+            <a href="https://twitter.com/simeonwillbanks" class="ss-icon ss-social" title="Simeon on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/jgeorge.jpg" alt="Justin">
+
+          <h2 class="h5 m0">Justin
+            <small class="thin uppercase">Portland</small>
+          </h2>
+          <h3 class="h6 m0 thin">Styling</h3>
+          <div class="bio expandable">
+            <p>Justin is self taught and practices the craft of
+              software development and dabbles in woodworking as well as solving problems
+              through the radical application of honesty and acceptance. He has an abiding passion
+              for boardgames, fine food, and literature. Hails from Eugene, Oregon</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/jaggederest" title="Justin on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="https://www.linkedin.com/in/justingeorge" title="Justin on LinkedIn" class="ss-icon ss-social">linkedin</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/pete.jpg" alt="Pete">
+
+          <h2 class="h5 m0">Pete
+            <small class="thin uppercase">Pittsburgh</small>
+          </h2>
+          <h3 class="h6 m0 thin">Warehouse &amp; Logistics</h3>
+          <div class="bio expandable">
+            <p>Pete is a fiction writer turned programmer. A conversion specialist, he's migrated from .NET to Rails and from being a Browns fan to a Steelers fan (at the demand of his father-in-law). His son and daughter help keep his life nice and busy.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/pdudek" title="Peter on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="https://www.linkedin.com/pub/peter-dudek/32/2ab/284" title="Pete on LinkedIn" class="ss-icon ss-social">linkedin</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </section>
+
+
+    <section>
+      <header class="text-c py8">
+        <h2 class="h2 thin light">Design</h2>
+      </header>
+      <div class="grid">
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/brian.jpg" alt="Brian">
+
+          <h2 class="h5 m0">Brian
+            <small class="thin uppercase">Pittsburgh</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Brian holds love-hate relationships with the following: cats, chickens, Kurt Russell, horror films,
+              antiques,
+              retro video games, and the oxford comma. Betwixt it all, he designs and implements experiences for web and
+              mobile applications. Hails from Pittsburgh.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://www.linkedin.com/in/borudesign" class="ss-icon ss-social"
+               title="Brian Cleveland on LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/aaron.jpg" height="220" alt="Aaron">
+
+          <h2 class="h5 m0">Aaron
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Sup? I'm a semi-ex-developer; a recent graduate in graphic design &amp; printmaking; and a tech-savvy,
+              customer-centric designer&mdash;visual, interaction, information...take your pick. I refuse to refer to
+              myself
+              in the 3rd person, and I recently read a blog post on semi-colons; amiright?</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://linkedin.com/in/aaronsbrown" class="ss-icon ss-social"
+               title="Aaron on LinkedIn">linkedin</a>
+            <a href="http://twitter.com/aaronsbrown" class="ss-icon ss-social" title="Aaron on Twitter">twitter</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </section>
+
+
+    <section>
+      <header class="text-c py8">
+        <h2 class="h2 thin light">Data Science</h2>
+      </header>
+      <div class="grid">
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/bhaskar.jpg" alt="Bhaskar">
+
+          <h2 class="h5 m0">Bhaskar
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Bhaskar likes data, datum, and ruby. He runs on decaf Blue Bottle coffee. Hails from India.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://www.linkedin.com/pub/bhaskar-rao/3/539/82a" title="bhaskar rao on linkedin"
+               class="ss-icon ss-social">linkedin</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/eric.jpg" alt="Eric">
+
+          <h2 class="h5 m0">Eric
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Eric loves the austere beauty of data and analytics. He could easily go too far if practicality didn’t rein
+              him
+              in now and again. Hails from the SF Bay Area.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://www.linkedin.com/in/ecolson" class="ss-icon ss-social"
+               title="Eric Colson on LinkedIn">linkedin</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/alan.jpg" alt="Alan">
+
+          <h2 class="h5 m0">Alan
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Alan enjoys puns, data, unsalted almonds, R, and copious amounts of unsweetened
+              black tea in a wine glass (preferably filled with only the last item). Also knows
+              a French word or two. Hails from San Francisco.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://linkedin.com/in/alanfaieng" class="ss-icon ss-social"
+               title="Alan Eng on LinkedIn">linkedin</a>
+            <a href="http://twitter.com/alanengdata" class="ss-icon ss-social" title="Alan Eng on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/brad.jpg" alt="Brad">
+
+          <h2 class="h5 m0">Brad
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Brad likes statistics, messy data and all things Python. Originally from Colorado, he now lives in the SF
+              Bay
+              area and enjoys the local coffee and hiking.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://www.linkedin.com/pub/brad-klingenberg/34/5a4/7aa" class="ss-icon ss-social"
+               title="Brad on LinkedIn">linkedin</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/daragh.jpg" height="220" alt="Daragh">
+
+          <h2 class="h5 m0">Daragh
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Daragh enjoys home brewing, rock climbing, and R. He tries to avoid all three in the same evening. You can
+              typically find him over caffeinated and over excited about his latest analytic project. Hails from the
+              Washington, DC area.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="http://www.linkedin.com/pub/daragh-sibley/5/183/211" title="Daragh on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/Thomas.jpg" alt="Thomas">
+
+          <h2 class="h5 m0">Thomas
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Hailing in from Canada, Thomas is taking time off school to do some of that data engineering stuff. When
+              he's
+              not working, he is cooking, hacking, and hiking.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/thmsmlr" title="Thomas on GitHub" class="ss-icon ss-social">&#xF671;</a>
+            <a href="http://ca.linkedin.com/pub/thomas-millar/4b/208/3bb/" title="Thomas on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+            <a href="https://twitter.com/thmsmlr" class="ss-icon ss-social" title="Thomas on Twitter">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/eli.jpg" alt="Eli">
+
+          <h2 class="h5 m0">Eli
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Eli loves big ideas and putting them into action by connecting the impossible. During his freetime he
+              writes,
+              surfs, and enjoys the California lifestyle. Hails from the sun-baked lands of Arizona.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/ebressert" class="ss-icon ss-social" title="Eli on Github">&#xF671;</a>
+            <a href="http://www.linkedin.com/pub/eli-bressert/60/960/872" title="Eli on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+            <a href="https://twitter.com/astrobiased" title="Eli on Twitter" class="ss-icon ss-social">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/deep.jpg" height="220" alt="Deep">
+
+          <h2 class="h5 m0">Deep
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Deep enjoys high dimensional statistics, map reduce, and skateboarding. You can occasionally find him
+              starting brawls between Bayesians and frequentists. Hails from LA.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/dganguli" class="ss-icon ss-social" title="Deep on Github">&#xF671;</a>
+            <a href="http://www.linkedin.com/pub/deep-ganguli/47/573/356/" title="Deep on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+            <a href="https://twitter.com/dgangul1" title="Deep on Twitter" class="ss-icon ss-social">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/cian.jpg" alt="Cian">
+
+          <h2 class="h5 m0">Cian
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Cian loves developing original ideas based on insights from data whether it's in geophysics, molecular
+              spectroscopy or women's fashion. Outside of the office he'll probably be playing a sport. Hails from
+              Vancouver, BC.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/cianmj" class="ss-icon ss-social" title="Cian on Github">&#xF671;</a>
+            <a href="http://www.linkedin.com/in/cianmenzeljones" title="Cian on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+            <a href="https://twitter.com/cianmj" title="Cian on Twitter" class="ss-icon ss-social">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/jeff_m.jpg" alt="Jeff">
+
+          <h2 class="h5 m0">Jeff
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Jeff likes Python, coffee, and combining the two to build data infrastructure that’s incredibly easy and
+              fun
+              to use. Hails from Texas.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/jeffmagnusson" class="ss-icon ss-social" title="Jeff on Github">&#xF671;</a>
+            <a href="http://www.linkedin.com/in//jmagnuss" title="Jeff on LinkedIn" class="ss-icon ss-social">linkedin</a>
+            <a href="https://twitter.com/jeffmagnusson" title="Jeff on Twitter" class="ss-icon ss-social">twitter</a>
+          </div>
+        </div>
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/paolo.jpg" alt="Paolo">
+
+          <h2 class="h5 m0">Paolo
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Paolo enjoys digging in complex data sets, building models, and finding those hidden connections. During
+              his
+              free time he loves skiing, hiking, biking, and playing guitar. Hails from Italy.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://www.linkedin.com/pub/paolo-massimi/20/737/827" title="Paolo on LinkedIn"
+               class="ss-icon ss-social">linkedin</a>
+          </div>
+        </div>
+
+        <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+          <img src="/assets/images/team/JasKhela.jpg" alt="Jas">
+
+          <h2 class="h5 m0">Jas
+            <small class="thin uppercase">San Francisco</small>
+          </h2>
+          <div class="bio expandable">
+            <p>Jas believes data can be used to solve any problem. He also believes the way to a woman’s heart is through
+              her wardrobe. Jas enjoys traveling, binge watching TV series on Netflix, and spy movies. Hails from
+              Fresno.</p>
+
+            <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+          </div>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/jaskhela" title="Jas on LinkedIn" class="ss-icon ss-social">linkedin</a>
+          </div>
+        </div>
+
+          <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+            <img src="/assets/images/team/lenia-dritsoula.jpg" alt="Lenia">
+
+            <h2 class="h5 m0">Lenia
+              <small class="thin uppercase">San Francisco</small>
+            </h2>
+            <div class="bio expandable">
+              <p>Lenia likes solving puzzles and window shopping, making Stitch Fix the ideal work environment.
+                 In her free time she loves painting and cooking for friends. Hails from Athens, Greece.</p>
+
+              <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+            </div>
+            <div class="social">
+              <a href="http://www.linkedin.com/in/lenia" title="Lenia on LinkedIn" class="ss-icon ss-social">linkedin</a>
+              <a href="https://twitter.com/lenioulini" title="Jeff on Twitter" class="ss-icon ss-social">twitter</a>
+            </div>
+          </div>
+
+          <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+            <img src="/assets/images/team/kelty-allen.jpg" alt="Kelty">
+
+            <h2 class="h5 m0">Kelty
+              <small class="thin uppercase">San Francisco</small>
+            </h2>
+            <div class="bio expandable">
+              <p>Like the rest of the team, Kelty likes data, coffee, and lists of three things. She enjoys exploration of
+                  all kinds, from finding insights in complex data sets to backpacking in the west coast’s incredible
+                  national parks. Hails from South Carolina.</p>
+
+              <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+            </div>
+            <div class="social">
+              <a href="http://www.linkedin.com/in/keltyallen" title="Kelty on LinkedIn" class="ss-icon ss-social">linkedin</a>
+            </div>
+          </div>
+
+          <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+            <img src="/assets/images/team/jay-martin.jpg" alt="Jay">
+
+            <h2 class="h5 m0">Jay
+              <small class="thin uppercase">San Francisco</small>
+            </h2>
+            <div class="bio expandable">
+              <p>Jay likes finding innovative ways to combine crowdsourcing with machine learning to solve challenging problems.
+                 Outside of work, he enjoys being outdoors. Hails from the San Francisco Bay Area.</p>
+
+              <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+            </div>
+            <div class="social">
+              <a href="https://github.com/jbmartin" class="ss-icon ss-social" title="Jeff on Github">&#xF671;</a>
+              <a href="http://www.linkedin.com/pub/jay-b-martin/55/ab0/4a0" title="Jay on LinkedIn" class="ss-icon ss-social">linkedin</a>
+            </div>
+          </div>
+
+          <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+            <img src="/assets/images/team/nick-kridler.jpg" alt="Nick">
+
+            <h2 class="h5 m0">Nick
+              <small class="thin uppercase">San Francisco</small>
+            </h2>
+            <div class="bio expandable">
+              <p>Nick enjoys using python to solve data problems, build tools, and save whales. He also enjoys Japanese food,
+                 Final Fantasy, and slot machines. Hails from western MD. </p>
+
+              <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+            </div>
+            <div class="social">
+              <a href="http://www.linkedin.com/pub/nicholas-kridler/2b/a67/376" title="Nick on LinkedIn" class="ss-icon ss-social">linkedin</a>
+            </div>
+          </div>
+
+          <div class="team-img g _1-4 _1-2-sm _1-1-xs">
+            <img src="/assets/images/team/cory-simon.jpg" alt="Cory">
+
+            <h2 class="h5 m0">Cory
+              <small class="thin uppercase">San Francisco</small>
+            </h2>
+            <div class="bio expandable">
+              <p>Cory enjoys drinking coffee/green tea/wine, programming, math, hiking, running, playing guitar, and snowboarding.
+                 He supports vector machines. ^.^</p>
+
+              <p class="read-more"><a href="#" title="Click to expand">&nbsp;</a></p>
+            </div>
+            <div class="social">
+              <a href="http://www.linkedin.com/pub/cory-simon/1b/5b2/48" title="Cory on LinkedIn" class="ss-icon ss-social">linkedin</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </article>

@@ -1,18 +1,14 @@
 .social {
+  margin-top: 6px;
+  margin-bottom: 20px;
   a {
-    @extend %f6;
+    margin-right: 6px;
     &, &:visited {
       color: $text-base-color;
     }
     &:hover {
       color: $dark-mint;
     }
-  }
-}
-
-.member-info {
-  img {
-    width: 100%;
   }
 }
 
