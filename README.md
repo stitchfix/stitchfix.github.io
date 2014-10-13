@@ -24,11 +24,18 @@ Enough said.
 git push origin master
 ```
 
+# Updating the Team section
+
+    1. Edit the file `_data/teams.yml`
+    2. Locate your team name (e.g. teamname: engineering)
+    3. Following the guidelines in this file, add a new member or modify an existing member
+    4. New member data begins with the line `- name: ...`
+    5. Be mindful of the indentation and format of this YAML file
+    6. Local changes should take effect immediately; push to master to see the team list automatically update
+
 
 # TODO
 
-- Mobile
-  - Top margin on first section of homepage is too big
 - Does Stitch Fix Technology (or Engineering and Data Science) need to be in the top nav? At least after first section?
 - Footer
   - link to stitchfix.com 
@@ -39,6 +46,4 @@ git push origin master
   - Next/previous post nav?
 - Combined job list?
   - Separate nav item for combined job list?
-- Bugfixes
-  - following achor from another page scrolls to correct position
-- Use Brandon font/new branding guidelines as on stitchfix.com?
+- Use new branding guidelines
