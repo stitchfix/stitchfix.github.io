@@ -26,12 +26,12 @@ git push origin master
 
 # Updating the Team section
 
-    1. Edit the file `_data/teams.yml`
-    2. Locate your team name (e.g. teamname: engineering)
-    3. Following the guidelines in this file, add a new member or modify an existing member
-    4. New member data begins with the line `- name: ...`
-    5. Be mindful of the indentation and format of this YAML file
-    6. Local changes should take effect immediately; push to master to see the team list automatically update
+1. Edit the file `_data/teams.yml`
+2. Locate your team name (e.g. teamname: engineering)
+3. Following the guidelines in this file, add a new member or modify an existing member
+4. New member data begins with the line `- name: ...`
+5. Be mindful of the indentation and format of this YAML file
+6. Local changes should take effect immediately; push to master to see the team list automatically update
 
 
 # TODO
