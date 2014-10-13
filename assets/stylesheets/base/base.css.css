@@ -1,1 +1,4466 @@
-@charset "UTF-8";@import url("//hello.myfonts.net/count/2b26e2");@font-face{font-family:BrandonText;font-weight:500;font-style:italic;src:url("/assets/webfonts/brandon/2B26E2_0_0.eot");src:url("/assets/webfonts/brandon/2B26E2_0_0.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/brandon/2B26E2_0_0.woff") format("woff"),url("/assets/webfonts/brandon/2B26E2_0_0.ttf") format("truetype"),url("/assets/webfonts/brandon/2B26E2_0_0.svg#wf") format("svg")}@font-face{font-family:BrandonText;font-weight:500;font-style:normal;src:url("/assets/webfonts/brandon/2B26E2_1_0.eot");src:url("/assets/webfonts/brandon/2B26E2_1_0.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/brandon/2B26E2_1_0.woff") format("woff"),url("/assets/webfonts/brandon/2B26E2_1_0.ttf") format("truetype"),url("/assets/webfonts/brandon/2B26E2_1_0.svg#wf") format("svg")}@font-face{font-family:BrandonText;font-weight:700;font-style:normal;src:url("/assets/webfonts/brandon/2B26E2_2_0.eot");src:url("/assets/webfonts/brandon/2B26E2_2_0.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/brandon/2B26E2_2_0.woff") format("woff"),url("/assets/webfonts/brandon/2B26E2_2_0.ttf") format("truetype"),url("/assets/webfonts/brandon/2B26E2_2_0.svg#wf") format("svg")}@font-face{font-family:BrandonGrotesque;font-weight:600;font-style:normal;src:url("/assets/webfonts/brandon/2B26E2_3_0.eot");src:url("/assets/webfonts/brandon/2B26E2_3_0.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/brandon/2B26E2_3_0.woff") format("woff"),url("/assets/webfonts/brandon/2B26E2_3_0.ttf") format("truetype"),url("/assets/webfonts/brandon/2B26E2_3_0.svg#wf") format("svg")}@font-face{font-family:BrandonGrotesque;font-weight:400;font-style:normal;src:url("/assets/webfonts/brandon/2B26E2_4_0.eot");src:url("/assets/webfonts/brandon/2B26E2_4_0.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/brandon/2B26E2_4_0.woff") format("woff"),url("/assets/webfonts/brandon/2B26E2_4_0.ttf") format("truetype"),url("/assets/webfonts/brandon/2B26E2_4_0.svg#wf") format("svg")}@font-face{font-family:BrandonGrotesque;font-weight:200;font-style:normal;src:url("/assets/webfonts/brandon/2B26E2_5_0.eot");src:url("/assets/webfonts/brandon/2B26E2_5_0.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/brandon/2B26E2_5_0.woff") format("woff"),url("/assets/webfonts/brandon/2B26E2_5_0.ttf") format("truetype"),url("/assets/webfonts/brandon/2B26E2_5_0.svg#wf") format("svg")}@font-face{font-family:BrandonGrotesque;font-weight:800;font-style:normal;src:url("/assets/webfonts/brandon/2B26E2_6_0.eot");src:url("/assets/webfonts/brandon/2B26E2_6_0.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/brandon/2B26E2_6_0.woff") format("woff"),url("/assets/webfonts/brandon/2B26E2_6_0.ttf") format("truetype"),url("/assets/webfonts/brandon/2B26E2_6_0.svg#wf") format("svg")}@font-face{font-family:"SSSocial";src:url("/assets/webfonts/ss-social/ss-social-circle.eot");src:url("/assets/webfonts/ss-social/ss-social-circle.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/ss-social/ss-social-circle.woff") format("woff"),url("/assets/webfonts/ss-social/ss-social-circle.ttf") format("truetype"),url("/assets/webfonts/ss-social/ss-social-circle.svg#SSSocialCircle") format("svg");font-weight:bold;font-style:normal}@font-face{font-family:"SSSocial";src:url("/assets/webfonts/ss-social/ss-social-regular.eot");src:url("/assets/webfonts/ss-social/ss-social-regular.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/ss-social/ss-social-regular.woff") format("woff"),url("/assets/webfonts/ss-social/ss-social-regular.ttf") format("truetype"),url("/assets/webfonts/ss-social/ss-social-regular.svg#SSSocialRegular") format("svg");font-weight:normal;font-style:normal}.ss-icon,.ss-icon.ss-social,.ss-icon.ss-social-circle,[class^="ss-"]:before,[class*=" ss-"]:before,[class^="ss-"][class*=" ss-social"]:before,[class*=" ss-"][class*=" ss-social"]:before,[class^="ss-"].right:after,[class*=" ss-"].right:after,[class^="ss-"][class*=" ss-social"].right:after,[class*=" ss-"][class*=" ss-social"].right:after{font-family:"SSSocial";font-style:normal;font-weight:normal;text-decoration:none;text-rendering:optimizeLegibility;white-space:nowrap;-webkit-font-feature-settings:"liga";-moz-font-feature-settings:"liga=1";-moz-font-feature-settings:"liga";-ms-font-feature-settings:"liga" 1;-o-font-feature-settings:"liga";font-feature-settings:"liga";-webkit-font-smoothing:antialiased}.ss-icon.ss-social-circle,[class^="ss-"].ss-social-circle:before,[class*=" ss-"].ss-social-circle:before,[class^="ss-"].ss-social-circle.right:after,[class*=" ss-"].ss-social-circle.right:after{font-weight:bold}[class^="ss-"].right:before,[class^="ss-"][class*=" ss-social"].right:before{display:none;content:''}.ss-facebook:before,.ss-facebook.right:after{content:''}.ss-twitter:before,.ss-twitter.right:after{content:''}.ss-linkedin:before,.ss-linkedin.right:after{content:''}.ss-googleplus:before,.ss-googleplus.right:after{content:''}.ss-tumblr:before,.ss-tumblr.right:after{content:''}.ss-wordpress:before,.ss-wordpress.right:after{content:''}.ss-blogger:before,.ss-blogger.right:after{content:''}.ss-posterous:before,.ss-posterous.right:after{content:''}.ss-youtube:before,.ss-youtube.right:after{content:''}.ss-vimeo:before,.ss-vimeo.right:after{content:''}.ss-flickr:before,.ss-flickr.right:after{content:''}.ss-instagram:before,.ss-instagram.right:after{content:''}.ss-pinterest:before,.ss-pinterest.right:after{content:''}.ss-dribbble:before,.ss-dribbble.right:after{content:''}.ss-behance:before,.ss-behance.right:after{content:''}.ss-github:before,.ss-github.right:after{content:''}.ss-octocat:before,.ss-octocat.right:after{content:''}.ss-paypal:before,.ss-paypal.right:after{content:''}.ss-foursquare:before,.ss-foursquare.right:after{content:''}.ss-skype:before,.ss-skype.right:after{content:''}.ss-rdio:before,.ss-rdio.right:after{content:''}.ss-spotify:before,.ss-spotify.right:after{content:''}.ss-lastfm:before,.ss-lastfm.right:after{content:''}.ss-mail:before,.ss-mail.right:after{content:'✉'}.ss-like:before,.ss-like.right:after{content:'👍'}.ss-rss:before,.ss-rss.right:after{content:''}@font-face{font-family:"SSSymbolicons";src:url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.eot");src:url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.eot?#iefix") format("embedded-opentype"),url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.woff") format("woff"),url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.ttf") format("truetype"),url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.svg#SSSymboliconsBlock") format("svg");font-weight:normal;font-style:normal}.ss-icon,.ss-icon.ss-symbolicons-block,[class^="ss-"]:before,[class*=" ss-"]:before,[class^="ss-"].ss-symbolicons-block:before,[class*=" ss-"].ss-symbolicons-block:before,[class^="ss-"].right:after,[class*=" ss-"].right:after,[class^="ss-"].ss-symbolicons-block.right:after,[class*=" ss-"].ss-symbolicons-block.right:after{font-family:"SSSymbolicons";font-style:normal;font-weight:normal;text-decoration:none;text-rendering:optimizeLegibility;white-space:nowrap;-webkit-font-feature-settings:"liga";-moz-font-feature-settings:"liga=1";-moz-font-feature-settings:"liga";-ms-font-feature-settings:"liga" 1;-o-font-feature-settings:"liga";font-feature-settings:"liga";-webkit-font-smoothing:antialiased}[class^="ss-"].right:before,[class*=" ss-"].ss-symbolicons-block.right:before{display:none;content:''}.ss-crosshair:before,.ss-crosshair.right:after{content:'⌖'}.ss-search:before,.ss-search.right:after{content:'🔍'}.ss-zoomin:before,.ss-zoomin.right:after{content:''}.ss-zoomout:before,.ss-zoomout.right:after{content:''}.ss-binoculars:before,.ss-binoculars.right:after{content:''}.ss-raisedhand:before,.ss-raisedhand.right:after{content:'✋'}.ss-link:before,.ss-link.right:after{content:'🔗'}.ss-write:before,.ss-write.right:after{content:'✎'}.ss-compose:before,.ss-compose.right:after{content:'📝'}.ss-lock:before,.ss-lock.right:after{content:'🔒'}.ss-unlock:before,.ss-unlock.right:after{content:'🔓'}.ss-key:before,.ss-key.right:after{content:'🔑'}.ss-backspace:before,.ss-backspace.right:after{content:'⌫'}.ss-ban:before,.ss-ban.right:after{content:'🚫'}.ss-nosmoking:before,.ss-nosmoking.right:after{content:'🚭'}.ss-trash:before,.ss-trash.right:after{content:''}.ss-target:before,.ss-target.right:after{content:'◎'}.ss-stopsign:before,.ss-stopsign.right:after{content:''}.ss-radioactive:before,.ss-radioactive.right:after{content:'☢'}.ss-skull:before,.ss-skull.right:after{content:'💀'}.ss-lightning:before,.ss-lightning.right:after{content:'☇'}.ss-tag:before,.ss-tag.right:after{content:''}.ss-newtag:before,.ss-newtag.right:after{content:''}.ss-flag:before,.ss-flag.right:after{content:'⚑'}.ss-like:before,.ss-like.right:after{content:'👍'}.ss-dislike:before,.ss-dislike.right:after{content:'👎'}.ss-heart:before,.ss-heart.right:after{content:'♥'}.ss-addheart:before,.ss-addheart.right:after{content:''}.ss-deleteheart:before,.ss-deleteheart.right:after{content:'💔'}.ss-star:before,.ss-star.right:after{content:'⋆'}.ss-trophy:before,.ss-trophy.right:after{content:'🏆'}.ss-award:before,.ss-award.right:after{content:''}.ss-medal:before,.ss-medal.right:after{content:''}.ss-badge:before,.ss-badge.right:after{content:'📛'}.ss-crown:before,.ss-crown.right:after{content:'👑'}.ss-bullseye:before,.ss-bullseye.right:after{content:'🎯'}.ss-sample:before,.ss-sample.right:after{content:''}.ss-crop:before,.ss-crop.right:after{content:''}.ss-layers:before,.ss-layers.right:after{content:''}.ss-magicwand:before,.ss-magicwand.right:after{content:''}.ss-cut:before,.ss-cut.right:after{content:'✂'}.ss-cutpaste:before,.ss-cutpaste.right:after{content:''}.ss-clipboard:before,.ss-clipboard.right:after{content:'📋'}.ss-rules:before,.ss-rules.right:after{content:'📏'}.ss-rulerpencil:before,.ss-rulerpencil.right:after{content:''}.ss-gridlines:before,.ss-gridlines.right:after{content:''}.ss-pen:before,.ss-pen.right:after{content:'✒'}.ss-pencilbrush:before,.ss-pencilbrush.right:after{content:''}.ss-pencilbrushpen:before,.ss-pencilbrushpen.right:after{content:''}.ss-brush:before,.ss-brush.right:after{content:''}.ss-paintroller:before,.ss-paintroller.right:after{content:''}.ss-fill:before,.ss-fill.right:after{content:''}.ss-stroke:before,.ss-stroke.right:after{content:''}.ss-crayons:before,.ss-crayons.right:after{content:''}.ss-palette:before,.ss-palette.right:after{content:'🎨'}.ss-fliphorizontally:before,.ss-fliphorizontally.right:after{content:''}.ss-flipvertically:before,.ss-flipvertically.right:after{content:''}.ss-effects:before,.ss-effects.right:after{content:''}.ss-bezier:before,.ss-bezier.right:after{content:''}.ss-pixels:before,.ss-pixels.right:after{content:''}.ss-phone:before,.ss-phone.right:after{content:'📞'}.ss-rotaryphone:before,.ss-rotaryphone.right:after{content:'☎'}.ss-touchtonephone:before,.ss-touchtonephone.right:after{content:'☏'}.ss-phonebook:before,.ss-phonebook.right:after{content:''}.ss-voicemail:before,.ss-voicemail.right:after{content:'⌕'}.ss-megaphone:before,.ss-megaphone.right:after{content:'📢'}.ss-rss:before,.ss-rss.right:after{content:''}.ss-podcast:before,.ss-podcast.right:after{content:''}.ss-mailbox:before,.ss-mailbox.right:after{content:'📫'}.ss-send:before,.ss-send.right:after{content:''}.ss-mail:before,.ss-mail.right:after{content:'✉'}.ss-incomingmail:before,.ss-incomingmail.right:after{content:'📩'}.ss-inbox:before,.ss-inbox.right:after{content:'📥'}.ss-outbox:before,.ss-outbox.right:after{content:'📤'}.ss-stamp:before,.ss-stamp.right:after{content:''}.ss-chat:before,.ss-chat.right:after{content:'💬'}.ss-chats:before,.ss-chats.right:after{content:''}.ss-textchat:before,.ss-textchat.right:after{content:''}.ss-exclamationchat:before,.ss-exclamationchat.right:after{content:''}.ss-questionchat:before,.ss-questionchat.right:after{content:''}.ss-ellipsischat:before,.ss-ellipsischat.right:after{content:''}.ss-smile:before,.ss-smile.right:after{content:'☻'}.ss-frown:before,.ss-frown.right:after{content:'☹'}.ss-toothsmile:before,.ss-toothsmile.right:after{content:'😃'}.ss-toothlesssmile:before,.ss-toothlesssmile.right:after{content:'😀'}.ss-user:before,.ss-user.right:after{content:'👤'}.ss-users:before,.ss-users.right:after{content:'👥'}.ss-adduser:before,.ss-adduser.right:after{content:''}.ss-removeuser:before,.ss-removeuser.right:after{content:''}.ss-deleteuser:before,.ss-deleteuser.right:after{content:''}.ss-heartuser:before,.ss-heartuser.right:after{content:''}.ss-males:before,.ss-males.right:after{content:'👬'}.ss-females:before,.ss-females.right:after{content:'👭'}.ss-malefemale:before,.ss-malefemale.right:after{content:'👫'}.ss-userportrait:before,.ss-userportrait.right:after{content:''}.ss-userframe:before,.ss-userframe.right:after{content:''}.ss-usersframe:before,.ss-usersframe.right:after{content:''}.ss-baby:before,.ss-baby.right:after{content:'👶'}.ss-swaddledbaby:before,.ss-swaddledbaby.right:after{content:''}.ss-robot:before,.ss-robot.right:after{content:''}.ss-happyrobot:before,.ss-happyrobot.right:after{content:''}.ss-alien:before,.ss-alien.right:after{content:'👽'}.ss-ghost:before,.ss-ghost.right:after{content:'👻'}.ss-contacts:before,.ss-contacts.right:after{content:'📇'}.ss-addressbook:before,.ss-addressbook.right:after{content:'📑'}.ss-footsteps:before,.ss-footsteps.right:after{content:'👣'}.ss-cart:before,.ss-cart.right:after{content:''}.ss-shoppingbag:before,.ss-shoppingbag.right:after{content:''}.ss-gift:before,.ss-gift.right:after{content:'🎁'}.ss-store:before,.ss-store.right:after{content:'🏪'}.ss-safe:before,.ss-safe.right:after{content:''}.ss-bill:before,.ss-bill.right:after{content:''}.ss-creditcard:before,.ss-creditcard.right:after{content:'💳'}.ss-banknote:before,.ss-banknote.right:after{content:'💵'}.ss-moneybag:before,.ss-moneybag.right:after{content:'💰'}.ss-calculator:before,.ss-calculator.right:after{content:''}.ss-bank:before,.ss-bank.right:after{content:'🏦'}.ss-gavel:before,.ss-gavel.right:after{content:'🔨'}.ss-meeting:before,.ss-meeting.right:after{content:''}.ss-barchart:before,.ss-barchart.right:after{content:'📊'}.ss-piechart:before,.ss-piechart.right:after{content:''}.ss-activity:before,.ss-activity.right:after{content:'📈'}.ss-flowchart:before,.ss-flowchart.right:after{content:''}.ss-box:before,.ss-box.right:after{content:'📦'}.ss-crate:before,.ss-crate.right:after{content:''}.ss-home:before,.ss-home.right:after{content:'⌂'}.ss-fence:before,.ss-fence.right:after{content:''}.ss-buildings:before,.ss-buildings.right:after{content:'🏢'}.ss-bridge:before,.ss-bridge.right:after{content:''}.ss-barn:before,.ss-barn.right:after{content:''}.ss-lodging:before,.ss-lodging.right:after{content:'🏨'}.ss-earth:before,.ss-earth.right:after{content:'🌎'}.ss-globe:before,.ss-globe.right:after{content:'🌐'}.ss-compass:before,.ss-compass.right:after{content:''}.ss-signpost:before,.ss-signpost.right:after{content:''}.ss-map:before,.ss-map.right:after{content:''}.ss-location:before,.ss-location.right:after{content:''}.ss-pushpin:before,.ss-pushpin.right:after{content:'📌'}.ss-script:before,.ss-script.right:after{content:''}.ss-playscript:before,.ss-playscript.right:after{content:''}.ss-stopscript:before,.ss-stopscript.right:after{content:''}.ss-recordscript:before,.ss-recordscript.right:after{content:''}.ss-bug:before,.ss-bug.right:after{content:'🐛'}.ss-puzzle:before,.ss-puzzle.right:after{content:''}.ss-window:before,.ss-window.right:after{content:''}.ss-database:before,.ss-database.right:after{content:''}.ss-adddatabase:before,.ss-adddatabase.right:after{content:''}.ss-deletedatabase:before,.ss-deletedatabase.right:after{content:''}.ss-hdd:before,.ss-hdd.right:after{content:''}.ss-networkhdd:before,.ss-networkhdd.right:after{content:''}.ss-downloadhdd:before,.ss-downloadhdd.right:after{content:''}.ss-airplay:before,.ss-airplay.right:after{content:''}.ss-music:before,.ss-music.right:after{content:'♫'}.ss-mic:before,.ss-mic.right:after{content:'🎤'}.ss-headphones:before,.ss-headphones.right:after{content:'🎧'}.ss-volume:before,.ss-volume.right:after{content:'🔈'}.ss-radio:before,.ss-radio.right:after{content:'📻'}.ss-phonograph:before,.ss-phonograph.right:after{content:''}.ss-disc:before,.ss-disc.right:after{content:'💿'}.ss-discs:before,.ss-discs.right:after{content:''}.ss-playlist:before,.ss-playlist.right:after{content:''}.ss-musichome:before,.ss-musichome.right:after{content:''}.ss-itunes:before,.ss-itunes.right:after{content:''}.ss-camera:before,.ss-camera.right:after{content:'📷'}.ss-picture:before,.ss-picture.right:after{content:'🌄'}.ss-pictures:before,.ss-pictures.right:after{content:''}.ss-searchpicture:before,.ss-searchpicture.right:after{content:''}.ss-video:before,.ss-video.right:after{content:'📹'}.ss-clapboard:before,.ss-clapboard.right:after{content:'🎬'}.ss-film:before,.ss-film.right:after{content:''}.ss-playfilm:before,.ss-playfilm.right:after{content:''}.ss-tv:before,.ss-tv.right:after{content:'📺'}.ss-flatscreen:before,.ss-flatscreen.right:after{content:''}.ss-projector:before,.ss-projector.right:after{content:''}.ss-videogame:before,.ss-videogame.right:after{content:'🎮'}.ss-play:before,.ss-play.right:after{content:'▶'}.ss-pause:before,.ss-pause.right:after{content:''}.ss-stop:before,.ss-stop.right:after{content:'■'}.ss-record:before,.ss-record.right:after{content:'●'}.ss-rewind:before,.ss-rewind.right:after{content:'⏪'}.ss-fastforward:before,.ss-fastforward.right:after{content:'⏩'}.ss-skipback:before,.ss-skipback.right:after{content:'⏮'}.ss-skipforward:before,.ss-skipforward.right:after{content:'⏭'}.ss-eject:before,.ss-eject.right:after{content:'⏏'}.ss-shuffle:before,.ss-shuffle.right:after{content:'🔀'}.ss-filecabinet:before,.ss-filecabinet.right:after{content:''}.ss-storagebox:before,.ss-storagebox.right:after{content:''}.ss-books:before,.ss-books.right:after{content:'📚'}.ss-bookspencil:before,.ss-bookspencil.right:after{content:''}.ss-openbook:before,.ss-openbook.right:after{content:'📖'}.ss-bookinsert:before,.ss-bookinsert.right:after{content:''}.ss-notebook:before,.ss-notebook.right:after{content:'📓'}.ss-ledger:before,.ss-ledger.right:after{content:'📒'}.ss-album:before,.ss-album.right:after{content:''}.ss-newspaper:before,.ss-newspaper.right:after{content:'📰'}.ss-spiralbound:before,.ss-spiralbound.right:after{content:''}.ss-notepad:before,.ss-notepad.right:after{content:''}.ss-notice:before,.ss-notice.right:after{content:''}.ss-grid:before,.ss-grid.right:after{content:''}.ss-thumbnails:before,.ss-thumbnails.right:after{content:''}.ss-filter:before,.ss-filter.right:after{content:''}.ss-desktop:before,.ss-desktop.right:after{content:'💻'}.ss-laptop:before,.ss-laptop.right:after{content:''}.ss-tablet:before,.ss-tablet.right:after{content:''}.ss-cell:before,.ss-cell.right:after{content:'📱'}.ss-cellbars:before,.ss-cellbars.right:after{content:'📶'}.ss-battery:before,.ss-battery.right:after{content:'🔋'}.ss-mediumbattery:before,.ss-mediumbattery.right:after{content:''}.ss-emptybattery:before,.ss-emptybattery.right:after{content:''}.ss-chargingbattery:before,.ss-chargingbattery.right:after{content:''}.ss-screwdrivermobile:before,.ss-screwdrivermobile.right:after{content:''}.ss-brushmobile:before,.ss-brushmobile.right:after{content:''}.ss-pencilmobile:before,.ss-pencilmobile.right:after{content:''}.ss-door:before,.ss-door.right:after{content:'🚪'}.ss-washer:before,.ss-washer.right:after{content:''}.ss-dryer:before,.ss-dryer.right:after{content:''}.ss-fireplace:before,.ss-fireplace.right:after{content:''}.ss-toilet:before,.ss-toilet.right:after{content:'🚽'}.ss-toiletpaper:before,.ss-toiletpaper.right:after{content:''}.ss-lightbulb:before,.ss-lightbulb.right:after{content:'💡'}.ss-cfl:before,.ss-cfl.right:after{content:''}.ss-flashlight:before,.ss-flashlight.right:after{content:'🔦'}.ss-candle:before,.ss-candle.right:after{content:''}.ss-campfire:before,.ss-campfire.right:after{content:'🔥'}.ss-picnictable:before,.ss-picnictable.right:after{content:''}.ss-frame:before,.ss-frame.right:after{content:''}.ss-heartframe:before,.ss-heartframe.right:after{content:'💟'}.ss-starframe:before,.ss-starframe.right:after{content:''}.ss-treeframe:before,.ss-treeframe.right:after{content:''}.ss-flowerframe:before,.ss-flowerframe.right:after{content:''}.ss-questionframe:before,.ss-questionframe.right:after{content:''}.ss-utensilsframe:before,.ss-utensilsframe.right:after{content:''}.ss-atom:before,.ss-atom.right:after{content:'⚛'}.ss-fluxcapacitor:before,.ss-fluxcapacitor.right:after{content:''}.ss-rings:before,.ss-rings.right:after{content:'💍'}.ss-balloons:before,.ss-balloons.right:after{content:'🎈'}.ss-easteregg:before,.ss-easteregg.right:after{content:''}.ss-jackolantern:before,.ss-jackolantern.right:after{content:'🎃'}.ss-menorah:before,.ss-menorah.right:after{content:''}.ss-christmastree:before,.ss-christmastree.right:after{content:'🎃'}.ss-teddy:before,.ss-teddy.right:after{content:''}.ss-blocks:before,.ss-blocks.right:after{content:''}.ss-rattle:before,.ss-rattle.right:after{content:''}.ss-diaper:before,.ss-diaper.right:after{content:''}.ss-pailshovel:before,.ss-pailshovel.right:after{content:''}.ss-sweep:before,.ss-sweep.right:after{content:''}.ss-headstone:before,.ss-headstone.right:after{content:'⛼'}.ss-onedie:before,.ss-onedie.right:after{content:'⚀'}.ss-twodie:before,.ss-twodie.right:after{content:'⚁'}.ss-threedie:before,.ss-threedie.right:after{content:'⚂'}.ss-fourdie:before,.ss-fourdie.right:after{content:'⚃'}.ss-fivedie:before,.ss-fivedie.right:after{content:'⚄'}.ss-sixdie:before,.ss-sixdie.right:after{content:'⚅'}.ss-fuzzydice:before,.ss-fuzzydice.right:after{content:''}.ss-download:before,.ss-download.right:after{content:''}.ss-downloadbox:before,.ss-downloadbox.right:after{content:''}.ss-downloadcrate:before,.ss-downloadcrate.right:after{content:''}.ss-upload:before,.ss-upload.right:after{content:''}.ss-uploadbox:before,.ss-uploadbox.right:after{content:''}.ss-uploadcrate:before,.ss-uploadcrate.right:after{content:''}.ss-transfer:before,.ss-transfer.right:after{content:'⇆'}.ss-refresh:before,.ss-refresh.right:after{content:'↻'}.ss-sync:before,.ss-sync.right:after{content:''}.ss-wifi:before,.ss-wifi.right:after{content:''}.ss-connection:before,.ss-connection.right:after{content:''}.ss-usb:before,.ss-usb.right:after{content:''}.ss-files:before,.ss-files.right:after{content:''}.ss-addfile:before,.ss-addfile.right:after{content:''}.ss-removefile:before,.ss-removefile.right:after{content:''}.ss-deletefile:before,.ss-deletefile.right:after{content:''}.ss-searchfile:before,.ss-searchfile.right:after{content:''}.ss-folder:before,.ss-folder.right:after{content:'📁'}.ss-addfolder:before,.ss-addfolder.right:after{content:''}.ss-removefolder:before,.ss-removefolder.right:after{content:''}.ss-deletefolder:before,.ss-deletefolder.right:after{content:''}.ss-downloadfolder:before,.ss-downloadfolder.right:after{content:''}.ss-uploadfolder:before,.ss-uploadfolder.right:after{content:''}.ss-undo:before,.ss-undo.right:after{content:'↩'}.ss-redo:before,.ss-redo.right:after{content:'↪'}.ss-quote:before,.ss-quote.right:after{content:'“'}.ss-font:before,.ss-font.right:after{content:''}.ss-anchor:before,.ss-anchor.right:after{content:''}.ss-print:before,.ss-print.right:after{content:'⎙'}.ss-fax:before,.ss-fax.right:after{content:'📠'}.ss-shredder:before,.ss-shredder.right:after{content:''}.ss-typewriter:before,.ss-typewriter.right:after{content:''}.ss-list:before,.ss-list.right:after{content:''}.ss-action:before,.ss-action.right:after{content:''}.ss-redirect:before,.ss-redirect.right:after{content:'↗'}.ss-expand:before,.ss-expand.right:after{content:'⤢'}.ss-contract:before,.ss-contract.right:after{content:''}.ss-scaleup:before,.ss-scaleup.right:after{content:''}.ss-scaledown:before,.ss-scaledown.right:after{content:''}.ss-power:before,.ss-power.right:after{content:''}.ss-lifepreserver:before,.ss-lifepreserver.right:after{content:''}.ss-help:before,.ss-help.right:after{content:'❓'}.ss-info:before,.ss-info.right:after{content:'ℹ'}.ss-alert:before,.ss-alert.right:after{content:'⚠'}.ss-caution:before,.ss-caution.right:after{content:'⛔'}.ss-plus:before,.ss-plus.right:after{content:'+'}.ss-hyphen:before,.ss-hyphen.right:after{content:'-'}.ss-check:before,.ss-check.right:after{content:'✓'}.ss-delete:before,.ss-delete.right:after{content:'␡'}.ss-dogface:before,.ss-dogface.right:after{content:'🐶'}.ss-catface:before,.ss-catface.right:after{content:'🐱'}.ss-bearface:before,.ss-bearface.right:after{content:'🐻'}.ss-bird:before,.ss-bird.right:after{content:'🐦'}.ss-dog:before,.ss-dog.right:after{content:'🐕'}.ss-sheep:before,.ss-sheep.right:after{content:'🐑'}.ss-pig:before,.ss-pig.right:after{content:'🐖'}.ss-bone:before,.ss-bone.right:after{content:''}.ss-tooth:before,.ss-tooth.right:after{content:''}.ss-palmtree:before,.ss-palmtree.right:after{content:'🌴'}.ss-tree:before,.ss-tree.right:after{content:'🌲'}.ss-leaf:before,.ss-leaf.right:after{content:'🍂'}.ss-flower:before,.ss-flower.right:after{content:'⚘'}.ss-settings:before,.ss-settings.right:after{content:'⚙'}.ss-dashboard:before,.ss-dashboard.right:after{content:''}.ss-notifications:before,.ss-notifications.right:after{content:'🔔'}.ss-toggles:before,.ss-toggles.right:after{content:''}.ss-switch:before,.ss-switch.right:after{content:''}.ss-switchoff:before,.ss-switchoff.right:after{content:''}.ss-brightness:before,.ss-brightness.right:after{content:'🔆'}.ss-flashoff:before,.ss-flashoff.right:after{content:''}.ss-toolbox:before,.ss-toolbox.right:after{content:''}.ss-tools:before,.ss-tools.right:after{content:''}.ss-wrench:before,.ss-wrench.right:after{content:'🔧'}.ss-wrenches:before,.ss-wrenches.right:after{content:''}.ss-wrenchpencil:before,.ss-wrenchpencil.right:after{content:''}.ss-screwdriverpencil:before,.ss-screwdriverpencil.right:after{content:''}.ss-hammerscrewdriver:before,.ss-hammerscrewdriver.right:after{content:''}.ss-tapemeasure:before,.ss-tapemeasure.right:after{content:''}.ss-hourglass:before,.ss-hourglass.right:after{content:'⏳'}.ss-clock:before,.ss-clock.right:after{content:'⏲'}.ss-stopwatch:before,.ss-stopwatch.right:after{content:'⏱'}.ss-alarmclock:before,.ss-alarmclock.right:after{content:'⏰'}.ss-calendar:before,.ss-calendar.right:after{content:'📅'}.ss-keyboardup:before,.ss-keyboardup.right:after{content:''}.ss-keyboarddown:before,.ss-keyboarddown.right:after{content:''}.ss-heavyasterisk:before,.ss-heavyasterisk.right:after{content:'✱'}.ss-egg:before,.ss-egg.right:after{content:''}.ss-cheese:before,.ss-cheese.right:after{content:''}.ss-hotdog:before,.ss-hotdog.right:after{content:''}.ss-burger:before,.ss-burger.right:after{content:'🍔'}.ss-birthdaycake:before,.ss-birthdaycake.right:after{content:'🎂'}.ss-pancakes:before,.ss-pancakes.right:after{content:''}.ss-pizza:before,.ss-pizza.right:after{content:'🍕'}.ss-frenchfries:before,.ss-frenchfries.right:after{content:'🍟'}.ss-apple:before,.ss-apple.right:after{content:'🍏'}.ss-mug:before,.ss-mug.right:after{content:'☕'}.ss-coffee:before,.ss-coffee.right:after{content:''}.ss-growler:before,.ss-growler.right:after{content:''}.ss-beer:before,.ss-beer.right:after{content:'🍺'}.ss-bottle:before,.ss-bottle.right:after{content:''}.ss-wine:before,.ss-wine.right:after{content:''}.ss-wineglass:before,.ss-wineglass.right:after{content:'🍷'}.ss-cocktail:before,.ss-cocktail.right:after{content:'🍸'}.ss-soda:before,.ss-soda.right:after{content:''}.ss-cup:before,.ss-cup.right:after{content:''}.ss-babybottle:before,.ss-babybottle.right:after{content:'🍼'}.ss-jug:before,.ss-jug.right:after{content:''}.ss-oven:before,.ss-oven.right:after{content:''}.ss-takeout:before,.ss-takeout.right:after{content:''}.ss-paperbag:before,.ss-paperbag.right:after{content:''}.ss-utensils:before,.ss-utensils.right:after{content:'🍴'}.ss-tshirt:before,.ss-tshirt.right:after{content:'👕'}.ss-graduationcap:before,.ss-graduationcap.right:after{content:'🎓'}.ss-fabric:before,.ss-fabric.right:after{content:''}.ss-swatch:before,.ss-swatch.right:after{content:''}.ss-weave:before,.ss-weave.right:after{content:''}.ss-thread:before,.ss-thread.right:after{content:''}.ss-yarn:before,.ss-yarn.right:after{content:''}.ss-crochet:before,.ss-crochet.right:after{content:''}.ss-needles:before,.ss-needles.right:after{content:''}.ss-scissorsneedles:before,.ss-scissorsneedles.right:after{content:''}.ss-button:before,.ss-button.right:after{content:''}.ss-zipper:before,.ss-zipper.right:after{content:''}.ss-sun:before,.ss-sun.right:after{content:'☀'}.ss-partlycloudy:before,.ss-partlycloudy.right:after{content:'⛅'}.ss-rainbow:before,.ss-rainbow.right:after{content:'🌈'}.ss-umbrella:before,.ss-umbrella.right:after{content:'☂'}.ss-crescentmoon:before,.ss-crescentmoon.right:after{content:'🌙'}.ss-newmoon:before,.ss-newmoon.right:after{content:'🌑'}.ss-waxingcrescentmoon:before,.ss-waxingcrescentmoon.right:after{content:'🌒'}.ss-firstquartermoon:before,.ss-firstquartermoon.right:after{content:'🌓'}.ss-waxinggibbousmoon:before,.ss-waxinggibbousmoon.right:after{content:'🌔'}.ss-fullmoon:before,.ss-fullmoon.right:after{content:'🌕'}.ss-waninggibbousmoon:before,.ss-waninggibbousmoon.right:after{content:'🌖'}.ss-lastquartermoon:before,.ss-lastquartermoon.right:after{content:'🌗'}.ss-waningcrescentmoon:before,.ss-waningcrescentmoon.right:after{content:'🌘'}.ss-car:before,.ss-car.right:after{content:'🚘'}.ss-carrepair:before,.ss-carrepair.right:after{content:''}.ss-taxi:before,.ss-taxi.right:after{content:'🚖'}.ss-train:before,.ss-train.right:after{content:'🚆'}.ss-bus:before,.ss-bus.right:after{content:'🚍'}.ss-truck:before,.ss-truck.right:after{content:'🚚'}.ss-trailer:before,.ss-trailer.right:after{content:''}.ss-trailerdump:before,.ss-trailerdump.right:after{content:''}.ss-plane:before,.ss-plane.right:after{content:'✈'}.ss-bike:before,.ss-bike.right:after{content:'🚲'}.ss-motorcycle:before,.ss-motorcycle.right:after{content:''}.ss-boat:before,.ss-boat.right:after{content:'🚢'}.ss-rocket:before,.ss-rocket.right:after{content:'🚀'}.ss-ufo:before,.ss-ufo.right:after{content:''}.ss-squarekey:before,.ss-squarekey.right:after{content:''}.ss-tire:before,.ss-tire.right:after{content:''}.ss-fuel:before,.ss-fuel.right:after{content:'⛽'}.ss-parking:before,.ss-parking.right:after{content:''}.ss-wheelchair:before,.ss-wheelchair.right:after{content:'♿'}.ss-restroom:before,.ss-restroom.right:after{content:'🚻'}.ss-elevator:before,.ss-elevator.right:after{content:''}.ss-briefcase:before,.ss-briefcase.right:after{content:'💼'}.ss-theatre:before,.ss-theatre.right:after{content:'🎭'}.ss-ticket:before,.ss-ticket.right:after{content:'🎫'}.ss-golf:before,.ss-golf.right:after{content:''}.ss-billiards:before,.ss-billiards.right:after{content:'🎱'}.ss-baseball:before,.ss-baseball.right:after{content:'⚾'}.ss-tennis:before,.ss-tennis.right:after{content:'🎾'}.ss-basketball:before,.ss-basketball.right:after{content:'🏀'}.ss-football:before,.ss-football.right:after{content:'🏈'}.ss-soccer:before,.ss-soccer.right:after{content:'⚽'}.ss-flaginhole:before,.ss-flaginhole.right:after{content:'⛳'}.ss-paddles:before,.ss-paddles.right:after{content:''}.ss-skiboot:before,.ss-skiboot.right:after{content:''}.ss-skis:before,.ss-skis.right:after{content:'🎿'}.ss-hiker:before,.ss-hiker.right:after{content:''}.ss-runner:before,.ss-runner.right:after{content:'🏃'}.ss-hottub:before,.ss-hottub.right:after{content:''}.ss-exercise:before,.ss-exercise.right:after{content:''}.ss-hospital:before,.ss-hospital.right:after{content:'⛨'}.ss-medicalcross:before,.ss-medicalcross.right:after{content:''}.ss-medicalbag:before,.ss-medicalbag.right:after{content:''}.ss-bandage:before,.ss-bandage.right:after{content:''}.ss-flask:before,.ss-flask.right:after{content:''}.ss-testtube:before,.ss-testtube.right:after{content:''}.ss-up:before,.ss-up.right:after{content:'⬆'}.ss-right:before,.ss-right.right:after{content:'➡'}.ss-down:before,.ss-down.right:after{content:'⬇'}.ss-left:before,.ss-left.right:after{content:'⬅'}.ss-navigateup:before,.ss-navigateup.right:after{content:''}.ss-navigateright:before,.ss-navigateright.right:after{content:'▻'}.ss-navigatedown:before,.ss-navigatedown.right:after{content:''}.ss-navigateleft:before,.ss-navigateleft.right:after{content:'◅'}.ss-share:before,.ss-share.right:after{content:''}html,body{height:100%;background-color:#fff}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}img{display:block}html,body{font-size:16px}body{line-height:1rem;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,sans-serif;font-weight:400;color:#444}strong,b{font-weight:700}em,i{font-style:italic}h1,.h1{font-size:4.50767rem;margin-bottom:4rem;line-height:5rem;letter-spacing:-0.04508rem}h2,.h2{font-size:2.93163rem;margin-bottom:3rem;line-height:3rem;letter-spacing:-0.02932rem}h3,.h3,input.input-lg:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),select.input-lg,textarea.input-lg{font-size:2.36421rem;margin-bottom:2rem;line-height:3rem;letter-spacing:-0.02364rem}h4,.h4{font-size:1.90662rem;margin-bottom:2rem;line-height:2rem;letter-spacing:-0.01907rem}h5,.h5,p,.p,dl,ol,ul{font-size:1.24rem;margin-bottom:1rem;line-height:2rem;letter-spacing:-0.0124rem}h6,.h6{font-size:1rem;margin-bottom:0rem;line-height:1rem;letter-spacing:-0.01rem}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-weight:700;color:inherit;text-rendering:optimizeLegibility}p:last-of-type:not([class^="mb"]),.p:last-of-type:not([class^="mb"]){margin-bottom:0}.f-xl{font-size:10.65709rem;margin-bottom:6rem;line-height:11rem;letter-spacing:-0.10657rem}.f-lg{font-size:6.93099rem;margin-bottom:5rem;line-height:7rem;letter-spacing:-0.06931rem}form,.form,input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),select,textarea,.f-md{font-size:1.24rem;margin-bottom:1rem;line-height:2rem;letter-spacing:-0.0124rem}.f-sm{font-size:1rem;margin-bottom:0rem;line-height:1rem;letter-spacing:-0.01rem}.f-xs{font-size:0.80645rem;margin-bottom:0rem;line-height:1rem;letter-spacing:-0.00806rem}.u{text-decoration:underline}sub,sup{font-size:65%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5rem}sub{bottom:-0.25rem}small,.small{font-size:65%;line-height:1rem}.strike{text-decoration:line-through}.text-l{text-align:left   !important}.text-c{text-align:center !important}.text-r{text-align:right  !important}.light{color:#989898}.dark{color:#000}.thin{font-weight:100}.thick{font-weight:700}.line1{line-height:1rem !important}.line2{line-height:2rem !important}.line3{line-height:3rem !important}.line4{line-height:4rem !important}@media screen and (max-width: 992px){.f-xl{font-size:6.93099rem;margin-bottom:5rem;line-height:7rem;letter-spacing:-0.06931rem}.f-lg{font-size:4.50767rem;margin-bottom:4rem;line-height:5rem;letter-spacing:-0.04508rem}.h1{font-size:3.63522rem;margin-bottom:3rem;line-height:4rem;letter-spacing:-0.03635rem}.h2{font-size:2.36421rem;margin-bottom:2rem;line-height:3rem;letter-spacing:-0.02364rem}.h3{font-size:1.90662rem;margin-bottom:2rem;line-height:2rem;letter-spacing:-0.01907rem}}@media screen and (max-width: 768px){.f-lg,.f-xl{font-size:3.63522rem;margin-bottom:3rem;line-height:4rem;letter-spacing:-0.03635rem}.h1{font-size:2.93163rem;margin-bottom:3rem;line-height:3rem;letter-spacing:-0.02932rem}.h2{font-size:1.90662rem;margin-bottom:2rem;line-height:2rem;letter-spacing:-0.01907rem}.h3,.p,.h4{font-size:1.5376rem;margin-bottom:1rem;line-height:2rem;letter-spacing:-0.01538rem}}@media screen and (max-width: 480px){.text-l-xs{text-align:left   !important;float:none !important}.text-c-xs{text-align:center !important;float:none !important}.text-r-xs{text-align:right  !important;float:none !important}}a{color:#3874b5;text-decoration:none;-webkit-transition:color,200ms;-moz-transition:color,200ms;-ms-transition:color,200ms;-o-transition:color,200ms;transition:color,200ms}a:visited{color:#3874b5}a.light{color:#77abc9}a.light:visited{color:#77abc9}a.light:hover{color:#284c72}a.light:active{color:#77abc9}a.link-white{color:white}a.link-white:visited,a.link-white:hover,a.link-white:active{color:white}a:hover{color:#77abc9}a:active{color:#3874b5}ul,ol{padding-left:1.5em;margin-top:0}ul ul,ul ol,ol ul,ol ol{margin-bottom:0}li{margin-bottom:1rem}dl{margin-top:0;margin-bottom:1rem}dt{font-weight:bold}dd{margin-left:0;margin-bottom:1rem}dl>dd:last-child{margin-bottom:0}.list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0}.list-inline>li{display:inline-block;padding-left:0.25rem;padding-right:0.25rem}@media screen and (max-width: 480px){.list-inline.list-nav>li{display:block;width:100%;text-align:left;padding-left:0;padding-right:0}}.list-inline.list-nav .btn{vertical-align:middle}.table,table{border-collapse:collapse;border-spacing:0;font-size:16px;line-height:16px;max-width:100%;overflow-y:auto;background-color:transparent}@media screen and (max-width: 768px){.table,table{display:block;position:relative;display:-webkit-box;overflow-x:auto}}.table.table-full,table.table-full{width:100%}thead th{border-bottom:2px solid rgba(0,0,0,0.1);vertical-align:bottom;line-height:14px}tfoot td{line-height:16px;border-bottom:0;background-color:transparent}th{text-align:left;font-weight:700}td,th{padding:1rem 1rem;line-height:15px;border-bottom:1px solid rgba(0,0,0,0.1)}td{vertical-align:top}tfoot td{background-color:transparent}.table-condensed td,.table-condensed th{padding:0.5rem 0.5rem}.table-bordered td,.table-bordered th{border:1px solid rgba(0,0,0,0.1);border-top:none;line-height:15px}.table-bordered thead th{border:1px solid rgba(0,0,0,0.1);line-height:14px}.table-striped tr:nth-child(odd) td{background-color:#f0f0f0}.table-striped-dark tr:nth-child(odd) td{background-color:rgba(255,255,255,0.1)}.table-striped tfoot tr:nth-child(odd) td,.table-striped-dark tfoot tr:nth-child(odd) td{background-color:transparent}.table-hover tr:hover td{background-color:#e7e7e7}.table-hover-dark tr:hover td{background-color:rgba(255,255,255,0.2)}.table-hover tfoot tr:hover td,.table-hover-dark tfoot tr:hover td{background-color:transparent}fieldset,button{padding:0;margin:0;border:none}label{font-size:1.24rem;margin-bottom:0rem;line-height:2rem;letter-spacing:-0.0124rem;margin-right:0.5rem;display:inline-block;vertical-align:top;cursor:pointer;line-height:3rem}textarea{min-height:5rem;vertical-align:top}input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),select,textarea{margin:0 1rem 1rem 0;color:#989898;padding:0.5rem 0.25rem;background-color:#f0f0f0;border:1px solid #afa9af;box-sizing:border-box;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,sans-serif;vertical-align:top}input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]).input-lg,select.input-lg,textarea.input-lg{max-height:5rem}input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]):focus,select:focus,textarea:focus{background-color:#fff;color:#444;outline:none;box-shadow:0 0 6px 1px rgba(18,107,173,0.5)}select{height:3rem}.checkbox,input[type="checkbox"],.radio,input[type="radio"]{display:inline-block;margin-right:0.25rem;font-size:1em}.form-stacked input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),.form-stacked select,.form-stacked textarea{margin:0;width:100%}.form-stacked label{line-height:inherit}input[disabled],select[disabled],input:disabled,select:disabled,.disabled{opacity:0.65;cursor:not-allowed;background-color:rgba(240,240,240,0.5) !important;color:rgba(152,152,152,0.5) !important}.center{margin-left:auto;margin-right:auto}.m0{margin-top:0 !important;margin-bottom:0 !important}.m1{margin-top:1rem;margin-bottom:1rem}.m2{margin-top:2rem;margin-bottom:2rem}.m3{margin-top:3rem;margin-bottom:3rem}.m4{margin-top:4rem;margin-bottom:4rem}.mb0{margin-bottom:0 !important}.mb1{margin-bottom:1rem}.mb2{margin-bottom:2rem}.mb4{margin-bottom:4rem}.mb8{margin-bottom:8rem}.mt0{margin-top:0 !important}.mt1{margin-top:1rem}.mt2{margin-top:2rem}.mt3{margin-top:3rem}.mt4{margin-top:4rem}.mr0{margin-right:0 !important}.mr1{margin-right:1rem}.mr2{margin-right:2rem}.mr3{margin-right:3rem}.mr4{margin-right:4rem}.ml0{margin-left:0 !important}.ml1{margin-left:1rem}.ml2{margin-left:2rem}.ml3{margin-left:3rem}.ml4{margin-left:4rem}.m-xs{margin:1px}.m-sm{margin:3px}.m-md{margin:5px}.m-lg{margin:8px}.m-xl{margin:12px}.p1{padding:1rem}.p2{padding:2rem}.p3{padding:3rem}.p4{padding:4rem}.pyhalf{padding-top:0.5rem;padding-bottom:0.5rem}.py1{padding-top:1rem;padding-bottom:1rem}.py2{padding-top:2rem;padding-bottom:2rem}.py4{padding-top:4rem;padding-bottom:4rem}.py8{padding-top:8rem;padding-bottom:8rem}.pxhalf{padding-left:0.25rem;padding-right:0.25rem}.px1{padding-left:0.5rem;padding-right:0.5rem}.px2{padding-left:1rem;padding-right:1rem}.px4{padding-left:2rem;padding-right:2rem}.px8{padding-left:4rem;padding-right:4rem}@media screen and (max-width: 768px){.p1{padding-top:0.5rem;padding-bottom:0.5rem}.p2{padding-top:1rem;padding-bottom:1rem}.p3{padding-top:1.5rem;padding-bottom:1.5rem}.p4{padding-top:2rem;padding-bottom:2rem}.py1{padding-top:0.5rem;padding-bottom:0.5rem}.py2{padding-top:1rem;padding-bottom:1rem}.py4{padding-top:2rem;padding-bottom:2rem}.py8{padding-top:4rem;padding-bottom:4rem}}.pos-abs{position:absolute}.pos-rel{position:relative}.pos-fix{position:fixed}.pos-t{top:0}.pos-b{bottom:0}.pos-l{left:0}.pos-r{right:0}.pos-all{top:0;left:0;right:0;bottom:0}.z1{z-index:1}.z2{z-index:2}.z5{z-index:5}.z10{z-index:10}hr,.hr{border:none;border-bottom:1px solid rgba(0,0,0,0.1);height:15px;margin-top:0;margin-bottom:1rem}.full-width{width:100%}.clearfix:before,.clearfix:after,.container:before,.container:after{content:" ";display:table}.clearfix:after,.container:after{clear:both}.right{float:right}.left{float:left}.hidden{display:none !important}@media screen and (min-width: 1201px){.hide_xl{display:none !important}}@media screen and (max-width: 1200px) and (min-width: 993px){.hide_lg{display:none !important}}@media screen and (max-width: 1200px){.hide_ltlg{display:none !important}}@media screen and (max-width: 992px) and (min-width: 769px){.hide_md{display:none !important}}@media screen and (max-width: 992px){.hide_ltmd{display:none !important}}@media screen and (max-width: 768px) and (min-width: 481px){.hide_sm{display:none !important}}@media screen and (max-width: 768px){.hide_ltsm{display:none !important}}@media screen and (max-width: 480px){.hide_xs{display:none !important}}@media screen and (min-width: 480px){.hide_gtxs{display:none !important}}@media screen and (min-width: 768px){.hide_gtsm{display:none !important}}.container{padding:0 10px;margin-left:auto;margin-right:auto}.container>.container{padding:0 !important}@media screen and (min-width: 1201px){.container{width:1380px}}@media screen and (max-width: 1400px){.container{width:1180px}}@media screen and (max-width: 1200px){.container{width:972px}}@media screen and (max-width: 992px){.container{width:748px}}@media screen and (max-width: 768px){.container{width:100%}}.container.flex{max-width:100%;width:100%}.container.contain-to-lg{max-width:1180px}.container.contain-to-md{max-width:972px}.container.contain-to-sm{max-width:748px}.grid{list-style:none;margin-left:-24px;padding:0;font-size:0}.g{display:inline-block;padding-left:24px;vertical-align:top;width:100%;font-size:16px}._1-1,._2_2,._3_3,._4_4,._5_5,._6_6{width:100%}._1-2,._2-4,._3-6{width:50%}._1-3,._2-6{width:33.333%}._2-3,._4-6{width:66.666%}._1-4{width:25%}._3-4{width:75%}._1-5{width:20%}._2-5{width:40%}._3-5{width:60%}._4-5{width:80%}._1-6{width:16.667%}._5-6{width:83.333%}@media screen and (max-width: 1200px){._1-1-lg,._2_2-lg,._3_3-lg,._4_4-lg,._5_5-lg,._6_6-lg{width:100%}._1-2-lg,._2-4-lg,._3-6-lg{width:50%}._1-3-lg,._2-6-lg{width:33.333%}._2-3-lg,._4-6-lg{width:66.666%}._1-4-lg{width:25%}._3-4-lg{width:75%}._1-5-lg{width:20%}._2-5-lg{width:40%}._3-5-lg{width:60%}._4-5-lg{width:80%}._1-6-lg{width:16.667%}._5-6-lg{width:83.333%}}@media screen and (max-width: 992px){._1-1-md,._2_2-md,._3_3-md,._4_4-md,._5_5-md,._6_6-md{width:100%}._1-2-md,._2-4-md,._3-6-md{width:50%}._1-3-md,._2-6-md{width:33.333%}._2-3-md,._4-6-md{width:66.666%}._1-4-md{width:25%}._3-4-md{width:75%}._1-5-md{width:20%}._2-5-md{width:40%}._3-5-md{width:60%}._4-5-md{width:80%}._1-6-md{width:16.667%}._5-6-md{width:83.333%}}@media screen and (max-width: 768px){._1-1-sm,._2_2-sm,._3_3-sm,._4_4-sm,._5_5-sm,._6_6-sm{width:100%}._1-2-sm,._2-4-sm,._3-6-sm{width:50%}._1-3-sm,._2-6-sm{width:33.333%}._2-3-sm,._4-6-sm{width:66.666%}._1-4-sm{width:25%}._3-4-sm{width:75%}._1-5-sm{width:20%}._2-5-sm{width:40%}._3-5-sm{width:60%}._4-5-sm{width:80%}._1-6-sm{width:16.667%}._5-6-sm{width:83.333%}}@media screen and (max-width: 480px){._1-1-xs,._2_2-xs,._3_3-xs,._4_4-xs,._5_5-xs,._6_6-xs{width:100%}._1-2-xs,._2-4-xs,._3-6-xs{width:50%}._1-3-xs,._2-6-xs{width:33.333%}._2-3-xs,._4-6-xs{width:66.666%}._1-4-xs{width:25%}._3-4-xs{width:75%}._1-5-xs{width:20%}._2-5-xs{width:40%}._3-5-xs{width:60%}._4-5-xs{width:80%}._1-6-xs{width:16.667%}._5-6-xs{width:83.333%}}.grid.grid-reverse{direction:rtl;text-align:left}.grid.grid-reverse>.g{direction:ltr;text-align:left}.grid.grid-c{text-align:center}.grid.grid-c>.g{text-align:left}.grid.grid-r{text-align:right}.grid.grid-r>.g{text-align:left;margin-right:0}.btn{font-size:1.90662rem;margin-bottom:0rem;line-height:2rem;letter-spacing:-0.01907rem;display:inline-block;font-weight:100;text-align:center;vertical-align:top;background-color:#ababbb;color:white;border-style:solid;border-color:#8f8fa4;text-decoration:none;max-height:4rem;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;cursor:pointer;border-width:1px;border-radius:0.25rem;-webkit-border-radius:0.25rem;-moz-border-radius:0.25rem;-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-ms-transition:all 0.2s;-o-transition:all 0.2s;transition:all 0.2s}.btn:not([class^="px"]):not([class*="px"]){padding-left:3rem;padding-right:3rem}.btn:not([class^="py"]):not([class*="py"]){padding-top:1rem;padding-bottom:1rem}.btn:hover{background-color:#c2c2cd;border-color:#a5a5b6;color:white;text-shadow:0 0 15px white, 0 0 30px white}.btn:active,.btn.current,.btn.active{-webkit-box-shadow:inset 0 2px 6px rgba(0,0,0,0.3);-moz-box-shadow:inset 0 2px 6px rgba(0,0,0,0.3);box-shadow:inset 0 2px 6px rgba(0,0,0,0.3);background-color:#8f8fa4}.btn:visited{color:white}.btn.disabled,.btn[disabled]{cursor:not-allowed;pointer-events:none;opacity:0.45;box-shadow:none}.btn:focus{outline:0}.btn-primary{background-color:#007acb;color:#fff;border-color:#005b98}.btn-primary:hover{background-color:#0093f4;border-color:#0074c1}.btn-primary:active,.btn-primary.current,.btn-primary.active{background-color:#005b98}.btn-secondary{background-color:#bc87dd;color:#fff;border-color:#a65fd2}.btn-secondary:hover{background-color:#cea7e6;border-color:#b87fdb}.btn-secondary:active,.btn-secondary.current,.btn-secondary.active{background-color:#a65fd2}.btn-tertiary{background-color:#9accec;color:#fff;border-color:#6fb6e4}.btn-tertiary:hover{background-color:#bcddf2;border-color:#91c8ea}.btn-tertiary:active,.btn-tertiary.current,.btn-tertiary.active{background-color:#6fb6e4}.btn-link{background-color:transparent;color:#007acb;border-color:rgba(212,230,240,0)}.btn-link:visited{color:#007acb}.btn-link:hover{background-color:#d4e6f0;color:#9accec;border-color:rgba(242,248,251,0)}.btn-link:active{color:#007acb}.btn-link.btn-link-dark:hover{background-color:rgba(255,255,255,0.15)}.btn-link.current,.btn-link.active{background-color:#d4e6f0}.btn-xl{font-size:2.93163rem;margin-bottom:0rem;line-height:3rem;letter-spacing:-0.02932rem;height:7rem;max-height:7rem}.btn-xl:not([class^="px"]):not([class*="px"]){padding-left:6rem;padding-right:6rem}.btn-xl:not([class^="py"]):not([class*="py"]){padding-top:1.66rem;padding-bottom:1.66rem}.btn-lg{font-size:2.36421rem;margin-bottom:0rem;line-height:3rem;letter-spacing:-0.02364rem;height:5rem;max-height:5rem}.btn-lg:not([class^="px"]):not([class*="px"]){padding-left:4.5rem;padding-right:4.5rem}.btn-lg:not([class^="py"]):not([class*="py"]){padding-top:1rem;padding-bottom:1rem}.btn-sm{font-size:1.24rem;margin-bottom:0rem;line-height:2rem;letter-spacing:-0.0124rem;height:3rem;max-height:3rem}.btn-sm:not([class^="px"]):not([class*="px"]){padding-left:1.5rem;padding-right:1.5rem}.btn-sm:not([class^="py"]):not([class*="py"]){padding-top:0.5rem;padding-bottom:0.5rem}.btn-xs{font-size:1rem;margin-bottom:0rem;line-height:1rem;letter-spacing:-0.01rem;height:2rem;max-height:2rem}.btn-xs:not([class^="px"]):not([class*="px"]){padding-left:1rem;padding-right:1rem}.btn-xs:not([class^="py"]):not([class*="py"]){padding-top:0.33rem;padding-bottom:0.33rem}@media screen and (max-width: 480px){.btn{width:100%;margin-left:0 !important;margin-right:0 !important}.btn:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]){padding-left:0 !important;padding-right:0 !important}}.btn-group{display:inline-block;font-size:0}.btn-group .btn+.btn,.btn-group .btn+.btn-group,.btn-group .btn-group+.btn,.btn-group .btn-group+.btn-group{margin-left:-1px}.btn-group>.btn:not(:first-child):not(:last-child){border-radius:0}.btn-group>.btn:first-child{margin-left:0}.btn-group>.btn:first-child:not(:last-child){border-bottom-right-radius:0;border-top-right-radius:0}.btn-group>.btn:last-child:not(:first-child){border-bottom-left-radius:0;border-top-left-radius:0}
+@charset "UTF-8";
+/* External libraries (vendor or otherwise)
+   ========================================================================== */
+/* Fonts */
+@import url("//hello.myfonts.net/count/2b26e2");
+@font-face {
+  font-family: BrandonText;
+  font-weight: 500;
+  font-style: italic;
+  src: url("/assets/webfonts/brandon/2B26E2_0_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_0_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_0_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_0_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_0_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonText;
+  font-weight: 500;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_1_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_1_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_1_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_1_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_1_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonText;
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_2_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_2_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_2_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_2_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_2_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 600;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_3_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_3_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_3_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_3_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_3_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_4_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_4_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_4_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_4_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_4_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 200;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_5_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_5_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_5_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_5_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_5_0.svg#wf") format("svg"); }
+@font-face {
+  font-family: BrandonGrotesque;
+  font-weight: 800;
+  font-style: normal;
+  src: url("/assets/webfonts/brandon/2B26E2_6_0.eot");
+  src: url("/assets/webfonts/brandon/2B26E2_6_0.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/brandon/2B26E2_6_0.woff") format("woff"), url("/assets/webfonts/brandon/2B26E2_6_0.ttf") format("truetype"), url("/assets/webfonts/brandon/2B26E2_6_0.svg#wf") format("svg"); }
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+* 
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-social.css" rel="stylesheet" />
+*/
+@font-face {
+  font-family: "SSSocial";
+  src: url("/assets/webfonts/ss-social/ss-social-circle.eot");
+  src: url("/assets/webfonts/ss-social/ss-social-circle.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/ss-social/ss-social-circle.woff") format("woff"), url("/assets/webfonts/ss-social/ss-social-circle.ttf") format("truetype"), url("/assets/webfonts/ss-social/ss-social-circle.svg#SSSocialCircle") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "SSSocial";
+  src: url("/assets/webfonts/ss-social/ss-social-regular.eot");
+  src: url("/assets/webfonts/ss-social/ss-social-regular.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/ss-social/ss-social-regular.woff") format("woff"), url("/assets/webfonts/ss-social/ss-social-regular.ttf") format("truetype"), url("/assets/webfonts/ss-social/ss-social-regular.svg#SSSocialRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.ss-icon, .ss-icon.ss-social, .ss-icon.ss-social-circle,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after {
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased; }
+
+.ss-icon.ss-social-circle,
+[class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before,
+[class^="ss-"].ss-social-circle.right:after, [class*=" ss-"].ss-social-circle.right:after {
+  font-weight: bold; }
+
+[class^="ss-"].right:before, [class^="ss-"][class*=" ss-social"].right:before {
+  display: none;
+  content: ''; }
+
+.ss-facebook:before, .ss-facebook.right:after {
+  content: ''; }
+
+.ss-twitter:before, .ss-twitter.right:after {
+  content: ''; }
+
+.ss-linkedin:before, .ss-linkedin.right:after {
+  content: ''; }
+
+.ss-googleplus:before, .ss-googleplus.right:after {
+  content: ''; }
+
+.ss-tumblr:before, .ss-tumblr.right:after {
+  content: ''; }
+
+.ss-wordpress:before, .ss-wordpress.right:after {
+  content: ''; }
+
+.ss-blogger:before, .ss-blogger.right:after {
+  content: ''; }
+
+.ss-posterous:before, .ss-posterous.right:after {
+  content: ''; }
+
+.ss-youtube:before, .ss-youtube.right:after {
+  content: ''; }
+
+.ss-vimeo:before, .ss-vimeo.right:after {
+  content: ''; }
+
+.ss-flickr:before, .ss-flickr.right:after {
+  content: ''; }
+
+.ss-instagram:before, .ss-instagram.right:after {
+  content: ''; }
+
+.ss-pinterest:before, .ss-pinterest.right:after {
+  content: ''; }
+
+.ss-dribbble:before, .ss-dribbble.right:after {
+  content: ''; }
+
+.ss-behance:before, .ss-behance.right:after {
+  content: ''; }
+
+.ss-github:before, .ss-github.right:after {
+  content: ''; }
+
+.ss-octocat:before, .ss-octocat.right:after {
+  content: ''; }
+
+.ss-paypal:before, .ss-paypal.right:after {
+  content: ''; }
+
+.ss-foursquare:before, .ss-foursquare.right:after {
+  content: ''; }
+
+.ss-skype:before, .ss-skype.right:after {
+  content: ''; }
+
+.ss-rdio:before, .ss-rdio.right:after {
+  content: ''; }
+
+.ss-spotify:before, .ss-spotify.right:after {
+  content: ''; }
+
+.ss-lastfm:before, .ss-lastfm.right:after {
+  content: ''; }
+
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉'; }
+
+.ss-like:before, .ss-like.right:after {
+  content: '👍'; }
+
+.ss-rss:before, .ss-rss.right:after {
+  content: ''; }
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+*
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-symbolicons-block.css" rel="stylesheet" />
+*/
+@font-face {
+  font-family: "SSSymbolicons";
+  src: url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.eot");
+  src: url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.woff") format("woff"), url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.ttf") format("truetype"), url("/assets/webfonts/ss-symbolicons/ss-symbolicons-block.svg#SSSymboliconsBlock") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.ss-icon, .ss-icon.ss-symbolicons-block,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"].ss-symbolicons-block:before, [class*=" ss-"].ss-symbolicons-block:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"].ss-symbolicons-block.right:after, [class*=" ss-"].ss-symbolicons-block.right:after {
+  font-family: "SSSymbolicons";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased; }
+
+[class^="ss-"].right:before, [class*=" ss-"].ss-symbolicons-block.right:before {
+  display: none;
+  content: ''; }
+
+.ss-crosshair:before, .ss-crosshair.right:after {
+  content: '⌖'; }
+
+.ss-search:before, .ss-search.right:after {
+  content: '🔍'; }
+
+.ss-zoomin:before, .ss-zoomin.right:after {
+  content: ''; }
+
+.ss-zoomout:before, .ss-zoomout.right:after {
+  content: ''; }
+
+.ss-binoculars:before, .ss-binoculars.right:after {
+  content: ''; }
+
+.ss-raisedhand:before, .ss-raisedhand.right:after {
+  content: '✋'; }
+
+.ss-link:before, .ss-link.right:after {
+  content: '🔗'; }
+
+.ss-write:before, .ss-write.right:after {
+  content: '✎'; }
+
+.ss-compose:before, .ss-compose.right:after {
+  content: '📝'; }
+
+.ss-lock:before, .ss-lock.right:after {
+  content: '🔒'; }
+
+.ss-unlock:before, .ss-unlock.right:after {
+  content: '🔓'; }
+
+.ss-key:before, .ss-key.right:after {
+  content: '🔑'; }
+
+.ss-backspace:before, .ss-backspace.right:after {
+  content: '⌫'; }
+
+.ss-ban:before, .ss-ban.right:after {
+  content: '🚫'; }
+
+.ss-nosmoking:before, .ss-nosmoking.right:after {
+  content: '🚭'; }
+
+.ss-trash:before, .ss-trash.right:after {
+  content: ''; }
+
+.ss-target:before, .ss-target.right:after {
+  content: '◎'; }
+
+.ss-stopsign:before, .ss-stopsign.right:after {
+  content: ''; }
+
+.ss-radioactive:before, .ss-radioactive.right:after {
+  content: '☢'; }
+
+.ss-skull:before, .ss-skull.right:after {
+  content: '💀'; }
+
+.ss-lightning:before, .ss-lightning.right:after {
+  content: '☇'; }
+
+.ss-tag:before, .ss-tag.right:after {
+  content: ''; }
+
+.ss-newtag:before, .ss-newtag.right:after {
+  content: ''; }
+
+.ss-flag:before, .ss-flag.right:after {
+  content: '⚑'; }
+
+.ss-like:before, .ss-like.right:after {
+  content: '👍'; }
+
+.ss-dislike:before, .ss-dislike.right:after {
+  content: '👎'; }
+
+.ss-heart:before, .ss-heart.right:after {
+  content: '♥'; }
+
+.ss-addheart:before, .ss-addheart.right:after {
+  content: ''; }
+
+.ss-deleteheart:before, .ss-deleteheart.right:after {
+  content: '💔'; }
+
+.ss-star:before, .ss-star.right:after {
+  content: '⋆'; }
+
+.ss-trophy:before, .ss-trophy.right:after {
+  content: '🏆'; }
+
+.ss-award:before, .ss-award.right:after {
+  content: ''; }
+
+.ss-medal:before, .ss-medal.right:after {
+  content: ''; }
+
+.ss-badge:before, .ss-badge.right:after {
+  content: '📛'; }
+
+.ss-crown:before, .ss-crown.right:after {
+  content: '👑'; }
+
+.ss-bullseye:before, .ss-bullseye.right:after {
+  content: '🎯'; }
+
+.ss-sample:before, .ss-sample.right:after {
+  content: ''; }
+
+.ss-crop:before, .ss-crop.right:after {
+  content: ''; }
+
+.ss-layers:before, .ss-layers.right:after {
+  content: ''; }
+
+.ss-magicwand:before, .ss-magicwand.right:after {
+  content: ''; }
+
+.ss-cut:before, .ss-cut.right:after {
+  content: '✂'; }
+
+.ss-cutpaste:before, .ss-cutpaste.right:after {
+  content: ''; }
+
+.ss-clipboard:before, .ss-clipboard.right:after {
+  content: '📋'; }
+
+.ss-rules:before, .ss-rules.right:after {
+  content: '📏'; }
+
+.ss-rulerpencil:before, .ss-rulerpencil.right:after {
+  content: ''; }
+
+.ss-gridlines:before, .ss-gridlines.right:after {
+  content: ''; }
+
+.ss-pen:before, .ss-pen.right:after {
+  content: '✒'; }
+
+.ss-pencilbrush:before, .ss-pencilbrush.right:after {
+  content: ''; }
+
+.ss-pencilbrushpen:before, .ss-pencilbrushpen.right:after {
+  content: ''; }
+
+.ss-brush:before, .ss-brush.right:after {
+  content: ''; }
+
+.ss-paintroller:before, .ss-paintroller.right:after {
+  content: ''; }
+
+.ss-fill:before, .ss-fill.right:after {
+  content: ''; }
+
+.ss-stroke:before, .ss-stroke.right:after {
+  content: ''; }
+
+.ss-crayons:before, .ss-crayons.right:after {
+  content: ''; }
+
+.ss-palette:before, .ss-palette.right:after {
+  content: '🎨'; }
+
+.ss-fliphorizontally:before, .ss-fliphorizontally.right:after {
+  content: ''; }
+
+.ss-flipvertically:before, .ss-flipvertically.right:after {
+  content: ''; }
+
+.ss-effects:before, .ss-effects.right:after {
+  content: ''; }
+
+.ss-bezier:before, .ss-bezier.right:after {
+  content: ''; }
+
+.ss-pixels:before, .ss-pixels.right:after {
+  content: ''; }
+
+.ss-phone:before, .ss-phone.right:after {
+  content: '📞'; }
+
+.ss-rotaryphone:before, .ss-rotaryphone.right:after {
+  content: '☎'; }
+
+.ss-touchtonephone:before, .ss-touchtonephone.right:after {
+  content: '☏'; }
+
+.ss-phonebook:before, .ss-phonebook.right:after {
+  content: ''; }
+
+.ss-voicemail:before, .ss-voicemail.right:after {
+  content: '⌕'; }
+
+.ss-megaphone:before, .ss-megaphone.right:after {
+  content: '📢'; }
+
+.ss-rss:before, .ss-rss.right:after {
+  content: ''; }
+
+.ss-podcast:before, .ss-podcast.right:after {
+  content: ''; }
+
+.ss-mailbox:before, .ss-mailbox.right:after {
+  content: '📫'; }
+
+.ss-send:before, .ss-send.right:after {
+  content: ''; }
+
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉'; }
+
+.ss-incomingmail:before, .ss-incomingmail.right:after {
+  content: '📩'; }
+
+.ss-inbox:before, .ss-inbox.right:after {
+  content: '📥'; }
+
+.ss-outbox:before, .ss-outbox.right:after {
+  content: '📤'; }
+
+.ss-stamp:before, .ss-stamp.right:after {
+  content: ''; }
+
+.ss-chat:before, .ss-chat.right:after {
+  content: '💬'; }
+
+.ss-chats:before, .ss-chats.right:after {
+  content: ''; }
+
+.ss-textchat:before, .ss-textchat.right:after {
+  content: ''; }
+
+.ss-exclamationchat:before, .ss-exclamationchat.right:after {
+  content: ''; }
+
+.ss-questionchat:before, .ss-questionchat.right:after {
+  content: ''; }
+
+.ss-ellipsischat:before, .ss-ellipsischat.right:after {
+  content: ''; }
+
+.ss-smile:before, .ss-smile.right:after {
+  content: '☻'; }
+
+.ss-frown:before, .ss-frown.right:after {
+  content: '☹'; }
+
+.ss-toothsmile:before, .ss-toothsmile.right:after {
+  content: '😃'; }
+
+.ss-toothlesssmile:before, .ss-toothlesssmile.right:after {
+  content: '😀'; }
+
+.ss-user:before, .ss-user.right:after {
+  content: '👤'; }
+
+.ss-users:before, .ss-users.right:after {
+  content: '👥'; }
+
+.ss-adduser:before, .ss-adduser.right:after {
+  content: ''; }
+
+.ss-removeuser:before, .ss-removeuser.right:after {
+  content: ''; }
+
+.ss-deleteuser:before, .ss-deleteuser.right:after {
+  content: ''; }
+
+.ss-heartuser:before, .ss-heartuser.right:after {
+  content: ''; }
+
+.ss-males:before, .ss-males.right:after {
+  content: '👬'; }
+
+.ss-females:before, .ss-females.right:after {
+  content: '👭'; }
+
+.ss-malefemale:before, .ss-malefemale.right:after {
+  content: '👫'; }
+
+.ss-userportrait:before, .ss-userportrait.right:after {
+  content: ''; }
+
+.ss-userframe:before, .ss-userframe.right:after {
+  content: ''; }
+
+.ss-usersframe:before, .ss-usersframe.right:after {
+  content: ''; }
+
+.ss-baby:before, .ss-baby.right:after {
+  content: '👶'; }
+
+.ss-swaddledbaby:before, .ss-swaddledbaby.right:after {
+  content: ''; }
+
+.ss-robot:before, .ss-robot.right:after {
+  content: ''; }
+
+.ss-happyrobot:before, .ss-happyrobot.right:after {
+  content: ''; }
+
+.ss-alien:before, .ss-alien.right:after {
+  content: '👽'; }
+
+.ss-ghost:before, .ss-ghost.right:after {
+  content: '👻'; }
+
+.ss-contacts:before, .ss-contacts.right:after {
+  content: '📇'; }
+
+.ss-addressbook:before, .ss-addressbook.right:after {
+  content: '📑'; }
+
+.ss-footsteps:before, .ss-footsteps.right:after {
+  content: '👣'; }
+
+.ss-cart:before, .ss-cart.right:after {
+  content: ''; }
+
+.ss-shoppingbag:before, .ss-shoppingbag.right:after {
+  content: ''; }
+
+.ss-gift:before, .ss-gift.right:after {
+  content: '🎁'; }
+
+.ss-store:before, .ss-store.right:after {
+  content: '🏪'; }
+
+.ss-safe:before, .ss-safe.right:after {
+  content: ''; }
+
+.ss-bill:before, .ss-bill.right:after {
+  content: ''; }
+
+.ss-creditcard:before, .ss-creditcard.right:after {
+  content: '💳'; }
+
+.ss-banknote:before, .ss-banknote.right:after {
+  content: '💵'; }
+
+.ss-moneybag:before, .ss-moneybag.right:after {
+  content: '💰'; }
+
+.ss-calculator:before, .ss-calculator.right:after {
+  content: ''; }
+
+.ss-bank:before, .ss-bank.right:after {
+  content: '🏦'; }
+
+.ss-gavel:before, .ss-gavel.right:after {
+  content: '🔨'; }
+
+.ss-meeting:before, .ss-meeting.right:after {
+  content: ''; }
+
+.ss-barchart:before, .ss-barchart.right:after {
+  content: '📊'; }
+
+.ss-piechart:before, .ss-piechart.right:after {
+  content: ''; }
+
+.ss-activity:before, .ss-activity.right:after {
+  content: '📈'; }
+
+.ss-flowchart:before, .ss-flowchart.right:after {
+  content: ''; }
+
+.ss-box:before, .ss-box.right:after {
+  content: '📦'; }
+
+.ss-crate:before, .ss-crate.right:after {
+  content: ''; }
+
+.ss-home:before, .ss-home.right:after {
+  content: '⌂'; }
+
+.ss-fence:before, .ss-fence.right:after {
+  content: ''; }
+
+.ss-buildings:before, .ss-buildings.right:after {
+  content: '🏢'; }
+
+.ss-bridge:before, .ss-bridge.right:after {
+  content: ''; }
+
+.ss-barn:before, .ss-barn.right:after {
+  content: ''; }
+
+.ss-lodging:before, .ss-lodging.right:after {
+  content: '🏨'; }
+
+.ss-earth:before, .ss-earth.right:after {
+  content: '🌎'; }
+
+.ss-globe:before, .ss-globe.right:after {
+  content: '🌐'; }
+
+.ss-compass:before, .ss-compass.right:after {
+  content: ''; }
+
+.ss-signpost:before, .ss-signpost.right:after {
+  content: ''; }
+
+.ss-map:before, .ss-map.right:after {
+  content: ''; }
+
+.ss-location:before, .ss-location.right:after {
+  content: ''; }
+
+.ss-pushpin:before, .ss-pushpin.right:after {
+  content: '📌'; }
+
+.ss-script:before, .ss-script.right:after {
+  content: ''; }
+
+.ss-playscript:before, .ss-playscript.right:after {
+  content: ''; }
+
+.ss-stopscript:before, .ss-stopscript.right:after {
+  content: ''; }
+
+.ss-recordscript:before, .ss-recordscript.right:after {
+  content: ''; }
+
+.ss-bug:before, .ss-bug.right:after {
+  content: '🐛'; }
+
+.ss-puzzle:before, .ss-puzzle.right:after {
+  content: ''; }
+
+.ss-window:before, .ss-window.right:after {
+  content: ''; }
+
+.ss-database:before, .ss-database.right:after {
+  content: ''; }
+
+.ss-adddatabase:before, .ss-adddatabase.right:after {
+  content: ''; }
+
+.ss-deletedatabase:before, .ss-deletedatabase.right:after {
+  content: ''; }
+
+.ss-hdd:before, .ss-hdd.right:after {
+  content: ''; }
+
+.ss-networkhdd:before, .ss-networkhdd.right:after {
+  content: ''; }
+
+.ss-downloadhdd:before, .ss-downloadhdd.right:after {
+  content: ''; }
+
+.ss-airplay:before, .ss-airplay.right:after {
+  content: ''; }
+
+.ss-music:before, .ss-music.right:after {
+  content: '♫'; }
+
+.ss-mic:before, .ss-mic.right:after {
+  content: '🎤'; }
+
+.ss-headphones:before, .ss-headphones.right:after {
+  content: '🎧'; }
+
+.ss-volume:before, .ss-volume.right:after {
+  content: '🔈'; }
+
+.ss-radio:before, .ss-radio.right:after {
+  content: '📻'; }
+
+.ss-phonograph:before, .ss-phonograph.right:after {
+  content: ''; }
+
+.ss-disc:before, .ss-disc.right:after {
+  content: '💿'; }
+
+.ss-discs:before, .ss-discs.right:after {
+  content: ''; }
+
+.ss-playlist:before, .ss-playlist.right:after {
+  content: ''; }
+
+.ss-musichome:before, .ss-musichome.right:after {
+  content: ''; }
+
+.ss-itunes:before, .ss-itunes.right:after {
+  content: ''; }
+
+.ss-camera:before, .ss-camera.right:after {
+  content: '📷'; }
+
+.ss-picture:before, .ss-picture.right:after {
+  content: '🌄'; }
+
+.ss-pictures:before, .ss-pictures.right:after {
+  content: ''; }
+
+.ss-searchpicture:before, .ss-searchpicture.right:after {
+  content: ''; }
+
+.ss-video:before, .ss-video.right:after {
+  content: '📹'; }
+
+.ss-clapboard:before, .ss-clapboard.right:after {
+  content: '🎬'; }
+
+.ss-film:before, .ss-film.right:after {
+  content: ''; }
+
+.ss-playfilm:before, .ss-playfilm.right:after {
+  content: ''; }
+
+.ss-tv:before, .ss-tv.right:after {
+  content: '📺'; }
+
+.ss-flatscreen:before, .ss-flatscreen.right:after {
+  content: ''; }
+
+.ss-projector:before, .ss-projector.right:after {
+  content: ''; }
+
+.ss-videogame:before, .ss-videogame.right:after {
+  content: '🎮'; }
+
+.ss-play:before, .ss-play.right:after {
+  content: '▶'; }
+
+.ss-pause:before, .ss-pause.right:after {
+  content: ''; }
+
+.ss-stop:before, .ss-stop.right:after {
+  content: '■'; }
+
+.ss-record:before, .ss-record.right:after {
+  content: '●'; }
+
+.ss-rewind:before, .ss-rewind.right:after {
+  content: '⏪'; }
+
+.ss-fastforward:before, .ss-fastforward.right:after {
+  content: '⏩'; }
+
+.ss-skipback:before, .ss-skipback.right:after {
+  content: '⏮'; }
+
+.ss-skipforward:before, .ss-skipforward.right:after {
+  content: '⏭'; }
+
+.ss-eject:before, .ss-eject.right:after {
+  content: '⏏'; }
+
+.ss-shuffle:before, .ss-shuffle.right:after {
+  content: '🔀'; }
+
+.ss-filecabinet:before, .ss-filecabinet.right:after {
+  content: ''; }
+
+.ss-storagebox:before, .ss-storagebox.right:after {
+  content: ''; }
+
+.ss-books:before, .ss-books.right:after {
+  content: '📚'; }
+
+.ss-bookspencil:before, .ss-bookspencil.right:after {
+  content: ''; }
+
+.ss-openbook:before, .ss-openbook.right:after {
+  content: '📖'; }
+
+.ss-bookinsert:before, .ss-bookinsert.right:after {
+  content: ''; }
+
+.ss-notebook:before, .ss-notebook.right:after {
+  content: '📓'; }
+
+.ss-ledger:before, .ss-ledger.right:after {
+  content: '📒'; }
+
+.ss-album:before, .ss-album.right:after {
+  content: ''; }
+
+.ss-newspaper:before, .ss-newspaper.right:after {
+  content: '📰'; }
+
+.ss-spiralbound:before, .ss-spiralbound.right:after {
+  content: ''; }
+
+.ss-notepad:before, .ss-notepad.right:after {
+  content: ''; }
+
+.ss-notice:before, .ss-notice.right:after {
+  content: ''; }
+
+.ss-grid:before, .ss-grid.right:after {
+  content: ''; }
+
+.ss-thumbnails:before, .ss-thumbnails.right:after {
+  content: ''; }
+
+.ss-filter:before, .ss-filter.right:after {
+  content: ''; }
+
+.ss-desktop:before, .ss-desktop.right:after {
+  content: '💻'; }
+
+.ss-laptop:before, .ss-laptop.right:after {
+  content: ''; }
+
+.ss-tablet:before, .ss-tablet.right:after {
+  content: ''; }
+
+.ss-cell:before, .ss-cell.right:after {
+  content: '📱'; }
+
+.ss-cellbars:before, .ss-cellbars.right:after {
+  content: '📶'; }
+
+.ss-battery:before, .ss-battery.right:after {
+  content: '🔋'; }
+
+.ss-mediumbattery:before, .ss-mediumbattery.right:after {
+  content: ''; }
+
+.ss-emptybattery:before, .ss-emptybattery.right:after {
+  content: ''; }
+
+.ss-chargingbattery:before, .ss-chargingbattery.right:after {
+  content: ''; }
+
+.ss-screwdrivermobile:before, .ss-screwdrivermobile.right:after {
+  content: ''; }
+
+.ss-brushmobile:before, .ss-brushmobile.right:after {
+  content: ''; }
+
+.ss-pencilmobile:before, .ss-pencilmobile.right:after {
+  content: ''; }
+
+.ss-door:before, .ss-door.right:after {
+  content: '🚪'; }
+
+.ss-washer:before, .ss-washer.right:after {
+  content: ''; }
+
+.ss-dryer:before, .ss-dryer.right:after {
+  content: ''; }
+
+.ss-fireplace:before, .ss-fireplace.right:after {
+  content: ''; }
+
+.ss-toilet:before, .ss-toilet.right:after {
+  content: '🚽'; }
+
+.ss-toiletpaper:before, .ss-toiletpaper.right:after {
+  content: ''; }
+
+.ss-lightbulb:before, .ss-lightbulb.right:after {
+  content: '💡'; }
+
+.ss-cfl:before, .ss-cfl.right:after {
+  content: ''; }
+
+.ss-flashlight:before, .ss-flashlight.right:after {
+  content: '🔦'; }
+
+.ss-candle:before, .ss-candle.right:after {
+  content: ''; }
+
+.ss-campfire:before, .ss-campfire.right:after {
+  content: '🔥'; }
+
+.ss-picnictable:before, .ss-picnictable.right:after {
+  content: ''; }
+
+.ss-frame:before, .ss-frame.right:after {
+  content: ''; }
+
+.ss-heartframe:before, .ss-heartframe.right:after {
+  content: '💟'; }
+
+.ss-starframe:before, .ss-starframe.right:after {
+  content: ''; }
+
+.ss-treeframe:before, .ss-treeframe.right:after {
+  content: ''; }
+
+.ss-flowerframe:before, .ss-flowerframe.right:after {
+  content: ''; }
+
+.ss-questionframe:before, .ss-questionframe.right:after {
+  content: ''; }
+
+.ss-utensilsframe:before, .ss-utensilsframe.right:after {
+  content: ''; }
+
+.ss-atom:before, .ss-atom.right:after {
+  content: '⚛'; }
+
+.ss-fluxcapacitor:before, .ss-fluxcapacitor.right:after {
+  content: ''; }
+
+.ss-rings:before, .ss-rings.right:after {
+  content: '💍'; }
+
+.ss-balloons:before, .ss-balloons.right:after {
+  content: '🎈'; }
+
+.ss-easteregg:before, .ss-easteregg.right:after {
+  content: ''; }
+
+.ss-jackolantern:before, .ss-jackolantern.right:after {
+  content: '🎃'; }
+
+.ss-menorah:before, .ss-menorah.right:after {
+  content: ''; }
+
+.ss-christmastree:before, .ss-christmastree.right:after {
+  content: '🎃'; }
+
+.ss-teddy:before, .ss-teddy.right:after {
+  content: ''; }
+
+.ss-blocks:before, .ss-blocks.right:after {
+  content: ''; }
+
+.ss-rattle:before, .ss-rattle.right:after {
+  content: ''; }
+
+.ss-diaper:before, .ss-diaper.right:after {
+  content: ''; }
+
+.ss-pailshovel:before, .ss-pailshovel.right:after {
+  content: ''; }
+
+.ss-sweep:before, .ss-sweep.right:after {
+  content: ''; }
+
+.ss-headstone:before, .ss-headstone.right:after {
+  content: '⛼'; }
+
+.ss-onedie:before, .ss-onedie.right:after {
+  content: '⚀'; }
+
+.ss-twodie:before, .ss-twodie.right:after {
+  content: '⚁'; }
+
+.ss-threedie:before, .ss-threedie.right:after {
+  content: '⚂'; }
+
+.ss-fourdie:before, .ss-fourdie.right:after {
+  content: '⚃'; }
+
+.ss-fivedie:before, .ss-fivedie.right:after {
+  content: '⚄'; }
+
+.ss-sixdie:before, .ss-sixdie.right:after {
+  content: '⚅'; }
+
+.ss-fuzzydice:before, .ss-fuzzydice.right:after {
+  content: ''; }
+
+.ss-download:before, .ss-download.right:after {
+  content: ''; }
+
+.ss-downloadbox:before, .ss-downloadbox.right:after {
+  content: ''; }
+
+.ss-downloadcrate:before, .ss-downloadcrate.right:after {
+  content: ''; }
+
+.ss-upload:before, .ss-upload.right:after {
+  content: ''; }
+
+.ss-uploadbox:before, .ss-uploadbox.right:after {
+  content: ''; }
+
+.ss-uploadcrate:before, .ss-uploadcrate.right:after {
+  content: ''; }
+
+.ss-transfer:before, .ss-transfer.right:after {
+  content: '⇆'; }
+
+.ss-refresh:before, .ss-refresh.right:after {
+  content: '↻'; }
+
+.ss-sync:before, .ss-sync.right:after {
+  content: ''; }
+
+.ss-wifi:before, .ss-wifi.right:after {
+  content: ''; }
+
+.ss-connection:before, .ss-connection.right:after {
+  content: ''; }
+
+.ss-usb:before, .ss-usb.right:after {
+  content: ''; }
+
+.ss-files:before, .ss-files.right:after {
+  content: ''; }
+
+.ss-addfile:before, .ss-addfile.right:after {
+  content: ''; }
+
+.ss-removefile:before, .ss-removefile.right:after {
+  content: ''; }
+
+.ss-deletefile:before, .ss-deletefile.right:after {
+  content: ''; }
+
+.ss-searchfile:before, .ss-searchfile.right:after {
+  content: ''; }
+
+.ss-folder:before, .ss-folder.right:after {
+  content: '📁'; }
+
+.ss-addfolder:before, .ss-addfolder.right:after {
+  content: ''; }
+
+.ss-removefolder:before, .ss-removefolder.right:after {
+  content: ''; }
+
+.ss-deletefolder:before, .ss-deletefolder.right:after {
+  content: ''; }
+
+.ss-downloadfolder:before, .ss-downloadfolder.right:after {
+  content: ''; }
+
+.ss-uploadfolder:before, .ss-uploadfolder.right:after {
+  content: ''; }
+
+.ss-undo:before, .ss-undo.right:after {
+  content: '↩'; }
+
+.ss-redo:before, .ss-redo.right:after {
+  content: '↪'; }
+
+.ss-quote:before, .ss-quote.right:after {
+  content: '“'; }
+
+.ss-font:before, .ss-font.right:after {
+  content: ''; }
+
+.ss-anchor:before, .ss-anchor.right:after {
+  content: ''; }
+
+.ss-print:before, .ss-print.right:after {
+  content: '⎙'; }
+
+.ss-fax:before, .ss-fax.right:after {
+  content: '📠'; }
+
+.ss-shredder:before, .ss-shredder.right:after {
+  content: ''; }
+
+.ss-typewriter:before, .ss-typewriter.right:after {
+  content: ''; }
+
+.ss-list:before, .ss-list.right:after {
+  content: ''; }
+
+.ss-action:before, .ss-action.right:after {
+  content: ''; }
+
+.ss-redirect:before, .ss-redirect.right:after {
+  content: '↗'; }
+
+.ss-expand:before, .ss-expand.right:after {
+  content: '⤢'; }
+
+.ss-contract:before, .ss-contract.right:after {
+  content: ''; }
+
+.ss-scaleup:before, .ss-scaleup.right:after {
+  content: ''; }
+
+.ss-scaledown:before, .ss-scaledown.right:after {
+  content: ''; }
+
+.ss-power:before, .ss-power.right:after {
+  content: ''; }
+
+.ss-lifepreserver:before, .ss-lifepreserver.right:after {
+  content: ''; }
+
+.ss-help:before, .ss-help.right:after {
+  content: '❓'; }
+
+.ss-info:before, .ss-info.right:after {
+  content: 'ℹ'; }
+
+.ss-alert:before, .ss-alert.right:after {
+  content: '⚠'; }
+
+.ss-caution:before, .ss-caution.right:after {
+  content: '⛔'; }
+
+.ss-plus:before, .ss-plus.right:after {
+  content: '+'; }
+
+.ss-hyphen:before, .ss-hyphen.right:after {
+  content: '-'; }
+
+.ss-check:before, .ss-check.right:after {
+  content: '✓'; }
+
+.ss-delete:before, .ss-delete.right:after {
+  content: '␡'; }
+
+.ss-dogface:before, .ss-dogface.right:after {
+  content: '🐶'; }
+
+.ss-catface:before, .ss-catface.right:after {
+  content: '🐱'; }
+
+.ss-bearface:before, .ss-bearface.right:after {
+  content: '🐻'; }
+
+.ss-bird:before, .ss-bird.right:after {
+  content: '🐦'; }
+
+.ss-dog:before, .ss-dog.right:after {
+  content: '🐕'; }
+
+.ss-sheep:before, .ss-sheep.right:after {
+  content: '🐑'; }
+
+.ss-pig:before, .ss-pig.right:after {
+  content: '🐖'; }
+
+.ss-bone:before, .ss-bone.right:after {
+  content: ''; }
+
+.ss-tooth:before, .ss-tooth.right:after {
+  content: ''; }
+
+.ss-palmtree:before, .ss-palmtree.right:after {
+  content: '🌴'; }
+
+.ss-tree:before, .ss-tree.right:after {
+  content: '🌲'; }
+
+.ss-leaf:before, .ss-leaf.right:after {
+  content: '🍂'; }
+
+.ss-flower:before, .ss-flower.right:after {
+  content: '⚘'; }
+
+.ss-settings:before, .ss-settings.right:after {
+  content: '⚙'; }
+
+.ss-dashboard:before, .ss-dashboard.right:after {
+  content: ''; }
+
+.ss-notifications:before, .ss-notifications.right:after {
+  content: '🔔'; }
+
+.ss-toggles:before, .ss-toggles.right:after {
+  content: ''; }
+
+.ss-switch:before, .ss-switch.right:after {
+  content: ''; }
+
+.ss-switchoff:before, .ss-switchoff.right:after {
+  content: ''; }
+
+.ss-brightness:before, .ss-brightness.right:after {
+  content: '🔆'; }
+
+.ss-flashoff:before, .ss-flashoff.right:after {
+  content: ''; }
+
+.ss-toolbox:before, .ss-toolbox.right:after {
+  content: ''; }
+
+.ss-tools:before, .ss-tools.right:after {
+  content: ''; }
+
+.ss-wrench:before, .ss-wrench.right:after {
+  content: '🔧'; }
+
+.ss-wrenches:before, .ss-wrenches.right:after {
+  content: ''; }
+
+.ss-wrenchpencil:before, .ss-wrenchpencil.right:after {
+  content: ''; }
+
+.ss-screwdriverpencil:before, .ss-screwdriverpencil.right:after {
+  content: ''; }
+
+.ss-hammerscrewdriver:before, .ss-hammerscrewdriver.right:after {
+  content: ''; }
+
+.ss-tapemeasure:before, .ss-tapemeasure.right:after {
+  content: ''; }
+
+.ss-hourglass:before, .ss-hourglass.right:after {
+  content: '⏳'; }
+
+.ss-clock:before, .ss-clock.right:after {
+  content: '⏲'; }
+
+.ss-stopwatch:before, .ss-stopwatch.right:after {
+  content: '⏱'; }
+
+.ss-alarmclock:before, .ss-alarmclock.right:after {
+  content: '⏰'; }
+
+.ss-calendar:before, .ss-calendar.right:after {
+  content: '📅'; }
+
+.ss-keyboardup:before, .ss-keyboardup.right:after {
+  content: ''; }
+
+.ss-keyboarddown:before, .ss-keyboarddown.right:after {
+  content: ''; }
+
+.ss-heavyasterisk:before, .ss-heavyasterisk.right:after {
+  content: '✱'; }
+
+.ss-egg:before, .ss-egg.right:after {
+  content: ''; }
+
+.ss-cheese:before, .ss-cheese.right:after {
+  content: ''; }
+
+.ss-hotdog:before, .ss-hotdog.right:after {
+  content: ''; }
+
+.ss-burger:before, .ss-burger.right:after {
+  content: '🍔'; }
+
+.ss-birthdaycake:before, .ss-birthdaycake.right:after {
+  content: '🎂'; }
+
+.ss-pancakes:before, .ss-pancakes.right:after {
+  content: ''; }
+
+.ss-pizza:before, .ss-pizza.right:after {
+  content: '🍕'; }
+
+.ss-frenchfries:before, .ss-frenchfries.right:after {
+  content: '🍟'; }
+
+.ss-apple:before, .ss-apple.right:after {
+  content: '🍏'; }
+
+.ss-mug:before, .ss-mug.right:after {
+  content: '☕'; }
+
+.ss-coffee:before, .ss-coffee.right:after {
+  content: ''; }
+
+.ss-growler:before, .ss-growler.right:after {
+  content: ''; }
+
+.ss-beer:before, .ss-beer.right:after {
+  content: '🍺'; }
+
+.ss-bottle:before, .ss-bottle.right:after {
+  content: ''; }
+
+.ss-wine:before, .ss-wine.right:after {
+  content: ''; }
+
+.ss-wineglass:before, .ss-wineglass.right:after {
+  content: '🍷'; }
+
+.ss-cocktail:before, .ss-cocktail.right:after {
+  content: '🍸'; }
+
+.ss-soda:before, .ss-soda.right:after {
+  content: ''; }
+
+.ss-cup:before, .ss-cup.right:after {
+  content: ''; }
+
+.ss-babybottle:before, .ss-babybottle.right:after {
+  content: '🍼'; }
+
+.ss-jug:before, .ss-jug.right:after {
+  content: ''; }
+
+.ss-oven:before, .ss-oven.right:after {
+  content: ''; }
+
+.ss-takeout:before, .ss-takeout.right:after {
+  content: ''; }
+
+.ss-paperbag:before, .ss-paperbag.right:after {
+  content: ''; }
+
+.ss-utensils:before, .ss-utensils.right:after {
+  content: '🍴'; }
+
+.ss-tshirt:before, .ss-tshirt.right:after {
+  content: '👕'; }
+
+.ss-graduationcap:before, .ss-graduationcap.right:after {
+  content: '🎓'; }
+
+.ss-fabric:before, .ss-fabric.right:after {
+  content: ''; }
+
+.ss-swatch:before, .ss-swatch.right:after {
+  content: ''; }
+
+.ss-weave:before, .ss-weave.right:after {
+  content: ''; }
+
+.ss-thread:before, .ss-thread.right:after {
+  content: ''; }
+
+.ss-yarn:before, .ss-yarn.right:after {
+  content: ''; }
+
+.ss-crochet:before, .ss-crochet.right:after {
+  content: ''; }
+
+.ss-needles:before, .ss-needles.right:after {
+  content: ''; }
+
+.ss-scissorsneedles:before, .ss-scissorsneedles.right:after {
+  content: ''; }
+
+.ss-button:before, .ss-button.right:after {
+  content: ''; }
+
+.ss-zipper:before, .ss-zipper.right:after {
+  content: ''; }
+
+.ss-sun:before, .ss-sun.right:after {
+  content: '☀'; }
+
+.ss-partlycloudy:before, .ss-partlycloudy.right:after {
+  content: '⛅'; }
+
+.ss-rainbow:before, .ss-rainbow.right:after {
+  content: '🌈'; }
+
+.ss-umbrella:before, .ss-umbrella.right:after {
+  content: '☂'; }
+
+.ss-crescentmoon:before, .ss-crescentmoon.right:after {
+  content: '🌙'; }
+
+.ss-newmoon:before, .ss-newmoon.right:after {
+  content: '🌑'; }
+
+.ss-waxingcrescentmoon:before, .ss-waxingcrescentmoon.right:after {
+  content: '🌒'; }
+
+.ss-firstquartermoon:before, .ss-firstquartermoon.right:after {
+  content: '🌓'; }
+
+.ss-waxinggibbousmoon:before, .ss-waxinggibbousmoon.right:after {
+  content: '🌔'; }
+
+.ss-fullmoon:before, .ss-fullmoon.right:after {
+  content: '🌕'; }
+
+.ss-waninggibbousmoon:before, .ss-waninggibbousmoon.right:after {
+  content: '🌖'; }
+
+.ss-lastquartermoon:before, .ss-lastquartermoon.right:after {
+  content: '🌗'; }
+
+.ss-waningcrescentmoon:before, .ss-waningcrescentmoon.right:after {
+  content: '🌘'; }
+
+.ss-car:before, .ss-car.right:after {
+  content: '🚘'; }
+
+.ss-carrepair:before, .ss-carrepair.right:after {
+  content: ''; }
+
+.ss-taxi:before, .ss-taxi.right:after {
+  content: '🚖'; }
+
+.ss-train:before, .ss-train.right:after {
+  content: '🚆'; }
+
+.ss-bus:before, .ss-bus.right:after {
+  content: '🚍'; }
+
+.ss-truck:before, .ss-truck.right:after {
+  content: '🚚'; }
+
+.ss-trailer:before, .ss-trailer.right:after {
+  content: ''; }
+
+.ss-trailerdump:before, .ss-trailerdump.right:after {
+  content: ''; }
+
+.ss-plane:before, .ss-plane.right:after {
+  content: '✈'; }
+
+.ss-bike:before, .ss-bike.right:after {
+  content: '🚲'; }
+
+.ss-motorcycle:before, .ss-motorcycle.right:after {
+  content: ''; }
+
+.ss-boat:before, .ss-boat.right:after {
+  content: '🚢'; }
+
+.ss-rocket:before, .ss-rocket.right:after {
+  content: '🚀'; }
+
+.ss-ufo:before, .ss-ufo.right:after {
+  content: ''; }
+
+.ss-squarekey:before, .ss-squarekey.right:after {
+  content: ''; }
+
+.ss-tire:before, .ss-tire.right:after {
+  content: ''; }
+
+.ss-fuel:before, .ss-fuel.right:after {
+  content: '⛽'; }
+
+.ss-parking:before, .ss-parking.right:after {
+  content: ''; }
+
+.ss-wheelchair:before, .ss-wheelchair.right:after {
+  content: '♿'; }
+
+.ss-restroom:before, .ss-restroom.right:after {
+  content: '🚻'; }
+
+.ss-elevator:before, .ss-elevator.right:after {
+  content: ''; }
+
+.ss-briefcase:before, .ss-briefcase.right:after {
+  content: '💼'; }
+
+.ss-theatre:before, .ss-theatre.right:after {
+  content: '🎭'; }
+
+.ss-ticket:before, .ss-ticket.right:after {
+  content: '🎫'; }
+
+.ss-golf:before, .ss-golf.right:after {
+  content: ''; }
+
+.ss-billiards:before, .ss-billiards.right:after {
+  content: '🎱'; }
+
+.ss-baseball:before, .ss-baseball.right:after {
+  content: '⚾'; }
+
+.ss-tennis:before, .ss-tennis.right:after {
+  content: '🎾'; }
+
+.ss-basketball:before, .ss-basketball.right:after {
+  content: '🏀'; }
+
+.ss-football:before, .ss-football.right:after {
+  content: '🏈'; }
+
+.ss-soccer:before, .ss-soccer.right:after {
+  content: '⚽'; }
+
+.ss-flaginhole:before, .ss-flaginhole.right:after {
+  content: '⛳'; }
+
+.ss-paddles:before, .ss-paddles.right:after {
+  content: ''; }
+
+.ss-skiboot:before, .ss-skiboot.right:after {
+  content: ''; }
+
+.ss-skis:before, .ss-skis.right:after {
+  content: '🎿'; }
+
+.ss-hiker:before, .ss-hiker.right:after {
+  content: ''; }
+
+.ss-runner:before, .ss-runner.right:after {
+  content: '🏃'; }
+
+.ss-hottub:before, .ss-hottub.right:after {
+  content: ''; }
+
+.ss-exercise:before, .ss-exercise.right:after {
+  content: ''; }
+
+.ss-hospital:before, .ss-hospital.right:after {
+  content: '⛨'; }
+
+.ss-medicalcross:before, .ss-medicalcross.right:after {
+  content: ''; }
+
+.ss-medicalbag:before, .ss-medicalbag.right:after {
+  content: ''; }
+
+.ss-bandage:before, .ss-bandage.right:after {
+  content: ''; }
+
+.ss-flask:before, .ss-flask.right:after {
+  content: ''; }
+
+.ss-testtube:before, .ss-testtube.right:after {
+  content: ''; }
+
+.ss-up:before, .ss-up.right:after {
+  content: '⬆'; }
+
+.ss-right:before, .ss-right.right:after {
+  content: '➡'; }
+
+.ss-down:before, .ss-down.right:after {
+  content: '⬇'; }
+
+.ss-left:before, .ss-left.right:after {
+  content: '⬅'; }
+
+.ss-navigateup:before, .ss-navigateup.right:after {
+  content: ''; }
+
+.ss-navigateright:before, .ss-navigateright.right:after {
+  content: '▻'; }
+
+.ss-navigatedown:before, .ss-navigatedown.right:after {
+  content: ''; }
+
+.ss-navigateleft:before, .ss-navigateleft.right:after {
+  content: '◅'; }
+
+.ss-share:before, .ss-share.right:after {
+  content: ''; }
+
+/* Basic framework - type, forms, tables, links, buttons, vertical rhythm
+   ========================================================================== */
+/* Base - global setup, styles, and classes for any project
+   ========================================================================== */
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/**
+* These are the default values for the framework's many options. Variables
+* that use the !default flag are basically saying "assign this value unless
+* a value already exists."
+*/
+/* ==========================================================================
+   Base Variables
+   ========================================================================== */
+/* OPTION: include flexbox and flex list styles
+   ========================================================================== */
+/* Body variables
+   ========================================================================== */
+/* Transitions variables
+   ========================================================================== */
+/* Global typography values
+   ========================================================================== */
+/**
+* 1. The base font size of the site. This variable controls the basis of the
+*    vertical rhythm of the site. Since everything's in rems, the rem will size
+*    off of this number exactly.
+*
+*    So what's awesome about this? You now have complete control over a very
+*    powerful unit of math that controls your entire site. Congratulations!
+*
+*    Padding and margins are set in rems (by default) as is the entire typography
+*    scale of the site, so all you need to do is modify this just a bit to get
+*    a totally new scale.
+*
+* 2. Modular scale ratio: This system makes use of math (oy, vey...) to create
+*    sequential, relational type in a scale. Basically, it's a simple way to
+*    get good-looking type sizes using only a couple of variables.
+*
+*    Reading: http://alistapart.com/article/more-meaningful-typography
+*    Practice: http://modularscale.com/
+*
+*    $type-ratio is a number or fraction that defines our exponential scale.
+*    Even minor changes can make a noticeable impact on your type scale. Don't
+*    worry though: the vertical rhythm is calculated and will accept any
+*    changes in scale and adapt. See _mixins.css.scss for more info.
+*/
+/* This will automatically adjust heading letter spacing to look nicer at larger font sizes. */
+/* 1 */
+/* 2 */
+/* Basic typography variables
+   ========================================================================== */
+/**
+* 1. Optional: User font family definition. Add a font or fonts as a variable
+*    and it will be injected into the site font family (serif or sans).
+* 2. $font-family-base defines which style of font (defined before) to use as
+*    default for the site. $font-family-sans-serif by default.
+* 3. Default color for text. If using dark on light, avoid solid black (#000).
+*    This is just good practice and looks nicer, too.
+* 4. Some variables for <small> text. Accepts a size and a unit.
+*/
+/* 1 */
+/* 2 */
+/* 3 */
+/* 4 */
+/* Headings variables
+   ========================================================================== */
+/* Font size variables
+   ========================================================================== */
+/**
+* I choose not to use classes or variables with the greek naming convention
+* (i.e. ".alpha, $beta, etc.")
+* I find it easier not to have to learn new languages (however common) nor
+* have to think about (however briefly) a class and its implication.
+*
+* In this numerical naming convention, it's easier to associate lower
+* numbers with larger text, simply because that convention is already in
+* place with heading markup (h1 - h6).
+*
+* Also included here are a few more font sizes with the sm, md, lg
+* naming convention.
+*
+* 1. Expressed as progressive steps in scale (as integers). See
+*    _variables.css.scss for more information.
+*    Basically, the type grows (or shrinks) from a base font size variable
+*    at a rate that is exponential according to the integers below.
+*    If this makes no sense, it might be easier to try changing these numbers,
+*    the $font-size-base, or the $type-ratio and seeing the results in your
+*    application. Tweak them to get something that works for you.
+*/
+/* 1 */
+/* Custom breakpoints
+   ========================================================================== */
+/**
+* These variables represent the max-width of a size break.
+*
+* Define these values as you need, but, by default, we're looking at something
+* like mobile (xs), tablet (sm), smaller lap (md), big lap/small monitor (lg),
+* standard monitor (xl).
+*
+* Feel free to customize these size breaks and/or rename and replace these
+* variable names.
+*/
+/* ==========================================================================
+   Elements Variables
+   ========================================================================== */
+/* Links variables
+   ========================================================================== */
+/* Lists variables
+   ========================================================================== */
+/* Tables variables
+   ========================================================================== */
+/* Forms variables
+   ========================================================================== */
+/* ==========================================================================
+   Structure Variables
+   ========================================================================== */
+/* Layout variables
+   ========================================================================== */
+/* Containers variables
+   ========================================================================== */
+/**
+* 1. Include a $container-max if you want to constrain the maximum allowable
+*    width for the container, regardless of breakpoint constraints.
+*
+* 2. Center the container by default. Possible values: left / right / center
+*/
+/* Container constraint variables */
+/* 1 */
+/* 2 */
+/* Grid variables
+   ========================================================================== */
+/* ==========================================================================
+   Modules Variables
+   ========================================================================== */
+/* Buttons variables
+   ========================================================================== */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+   Modified by Brian Cleveland (@yorthehunter)
+*/
+html, body {
+  height: 100%;
+  background-color: white; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+img {
+  display: block; }
+
+/* ==========================================================================
+   Base Mixins
+   ========================================================================== */
+/**
+* These mixins are needed for almost all parts of this project, so they are
+* always included.
+*/
+/* Media breakpoint, super-simple version
+   ========================================================================== */
+/**
+* 1. Sass magic that lets us pass content to the mixin. More reading:
+*    http://krasimirtsonev.com/blog/article/SASS-content-directive-is-a-wonderful-thing
+*/
+/* Returns exponent
+   ========================================================================== */
+/**
+* 1. Reset value
+* 2. Positive integers get multiplied
+* 3. Negative integers get divided. A number divided by itself is 1
+* 4. Return the last value written
+*/
+/* Font size and line height mixin
+   ========================================================================== */
+/**
+* 1. Multiply by 1 unit (e.g. rem) to get the size in units
+* 2. Do a little math and round it to get a pleasant and scalable line height.
+*    This is a necessity for rem-based, beautiful vertical rhythm. At least, it
+*    is for this system.
+* 3. Optional: For aesthetics, adjust letter-space to -1% of font size.
+*/
+/*doc
+---
+title: "Customizing typography"
+name: basic-typography-variables
+category: base
+---
+
+<pre>
+  <code class="language-css">
+$user-font-family-sans-serif: "Source Sans Pro" !default;
+$user-font-family-serif:      null !default;
+
+$font-family-sans-serif: $user-font-family-sans-serif, "Helvetica Neue", Helvetica, sans-serif;
+$font-family-serif:      $user-font-family-serif, Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:       $font-family-sans-serif !default;
+
+$text-base-color:  #444 !default;
+$text-light-color: lighten($text-base-color, 33%);
+$text-dark-color:  darken($text-base-color, 33%);
+
+$small-size:      65 !default;
+$small-size-unit: "%" !default;
+  </code>
+</pre>
+
+*/
+/*doc
+---
+title: Typography
+name: basic-typography
+category: base
+---
+
+The basic typography and vertical rhythm is already setup by default. It's
+all variable-driven and moderately easy to modify.
+
+*/
+/* Typography basics
+   ========================================================================== */
+/**
+* 1. This line sets up our rem size for the site. We set it up as the
+*    $font-size-base so we can keep tight control over the font sizes and
+*    vertical rhythm.
+*    You can test out what a change to this number looks like by changing it
+*    to, oh say, 30px and refreshing the page. Everything will scale up
+*    drastically because everything in this app is rem-based :}
+*/
+html, body {
+  font-size: 16px; }
+
+/* 1 */
+body {
+  line-height: 1rem;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #444444; }
+
+strong,
+b {
+  font-weight: 700; }
+
+em,
+i {
+  font-style: italic; }
+
+/* Font size placeholders
+   ========================================================================== */
+/**
+* @extend these placeholders in modules to give a component a specific font size.
+*/
+h1, .h1 {
+  font-size: 4.50767rem;
+  /* 1 */
+  margin-bottom: 4rem;
+  line-height: 5rem;
+  /* 2 */ }
+
+h2, .h2 {
+  font-size: 2.93163rem;
+  /* 1 */
+  margin-bottom: 3rem;
+  line-height: 3rem;
+  /* 2 */ }
+
+h3, .h3, input.input-lg:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+select.input-lg,
+textarea.input-lg {
+  font-size: 2.36421rem;
+  /* 1 */
+  margin-bottom: 2rem;
+  line-height: 3rem;
+  /* 2 */ }
+
+h4, .h4 {
+  font-size: 1.90662rem;
+  /* 1 */
+  margin-bottom: 2rem;
+  line-height: 2rem;
+  /* 2 */ }
+
+h5, .h5,
+p, .p,
+dl, ol, ul {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  /* 2 */ }
+
+h6, .h6 {
+  font-size: 1rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 1rem;
+  /* 2 */ }
+
+/*doc
+---
+title: "Headings and paragraphs"
+name: headings-and-paragraphs
+category: base
+---
+
+Headings are given some default styling to give them a typographical
+hierarchy. There is more than one school of thought when using headings in
+markup. See this example:
+
+<header>
+  <h1>This is a giant header</h1>
+</header>
+
+Your output is dependent on the styles given to h1{}. If you would rather
+present your h1 as a smaller font, maybe more like an h2, then your markup
+could look like this:
+
+<header>
+  <h1 class="h2">This is a moderately big header.</h1>
+</header>
+
+Semantically, you are saying "this heading is as important as an h1, but
+should present itself as an h2".
+
+Despite being a semantically correct and easily identifiable solution, it
+doesn't always sit well in a shared development environment.
+Therefore:
+
+<header>
+  <h2>This is a moderately big header, too.</h2>
+</header>
+
+The code above works, but doesn't say as much semantically. YMMV.
+
+
+```html_example
+
+<header>
+  <h1 class="h2">This is a moderately big header.</h1>
+</header>
+<p>And this is some paragraph text.</p>
+
+```
+*/
+/**
+* 1. The .p class can be used to describe paragraph text when an actual <p>
+*    isn't used. E.g. <div class="p">Text goes here.</div>
+*/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 700;
+  color: inherit;
+  text-rendering: optimizeLegibility; }
+
+.f-xl {
+  font-size: 10.65709rem;
+  /* 1 */
+  margin-bottom: 6rem;
+  line-height: 11rem;
+  /* 2 */ }
+
+.f-lg {
+  font-size: 6.93099rem;
+  /* 1 */
+  margin-bottom: 5rem;
+  line-height: 7rem;
+  /* 2 */ }
+
+form,
+.form, input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+select,
+textarea,
+.f-md {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  /* 2 */ }
+
+.f-sm {
+  font-size: 1rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 1rem;
+  /* 2 */ }
+
+.f-xs {
+  font-size: 0.80645rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 1rem;
+  /* 2 */ }
+
+/*doc
+---
+title: "Helper classes"
+name: helper-typography-classes
+category: base
+---
+
+The following are some utility classes that help control the visuals of your
+typography.
+
+**A note about placeholders:**
+
+Why include placeholders along with classes? Why not just use one or the other?
+Because there are cases to be made for each at different times.
+It's sometimes less meaningful to use a class (or @extend a placeholder).
+I've found cases for both in all of my projects, so I am proactively trying
+to create placeholders for classes that I *may* later want to @extend.
+If this makes no sense, please feel free to ignore and do what you please :}
+
+Oh, by the way: placeholders do not compile on their own, so there's no need
+to worry about bloating your code. However, classes DO compile, whether you
+use them or not, so stay cautious, friends.
+
+```html_example
+
+<div class="u">Underline text</div>
+<sup>Superscript text</sup>
+<br />
+<sub>Subscript text</sub>
+<br />
+<div class="small">Small text</div>
+<div class="uppercase">Uppercase text</div>
+<div class="strike">Strikethrough text</div>
+<div style="width: 250px;" class="truncated">
+  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
+</div>
+<div class="text-l">Align left</div>
+<div class="text-c">Align center</div>
+<div class="text-r">Align right</div>
+<div class="light">Light text</div>
+<div class="dark">Dark text</div>
+<div class="thin">Thin text</div>
+<div class="thick">Thick text</div>
+<div class="normal">Normal weight text</div>
+<div class="line1">Line height of 1 rem</div>
+<div class="line2">Line height of 2 rem</div>
+<div class="line3">Line height of 3 rem</div>
+<div class="line4">Line height of 4 rem</div>
+
+```
+*/
+/**
+* 1. I decided I liked this enough to put it in. <sub> and <sup> now have life.
+*    Based on this: https://gist.github.com/unruthless/413930
+*
+* 2. Line height helpers: This seems a little over-the-top-micro-managey, but
+*    since I've come across times where this is particularly useful, I've
+*    included a few helpful classes. It's worth it, I think.
+*/
+.u {
+  text-decoration: underline; }
+
+sub, sup {
+  /* 1 */
+  font-size: 65%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5rem; }
+
+sub {
+  bottom: -0.25rem; }
+
+small,
+.small {
+  font-size: 65%;
+  line-height: 1rem; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.strike {
+  text-decoration: line-through; }
+
+.truncated {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.text-l {
+  text-align: left   !important; }
+
+.text-c {
+  text-align: center !important; }
+
+.list-flex li.list-header,
+.text-r {
+  text-align: right  !important; }
+
+.light {
+  color: #989898; }
+
+.dark {
+  color: black; }
+
+.thin {
+  font-weight: 100; }
+
+.thick {
+  font-weight: 700; }
+
+.normal {
+  font-weight: 400 !important; }
+
+.line1 {
+  line-height: 1rem !important; }
+
+/* 2 */
+.line2 {
+  line-height: 2rem !important; }
+
+.line3 {
+  line-height: 3rem !important; }
+
+.line4 {
+  line-height: 4rem !important; }
+
+/*doc
+---
+title: "Responsive text"
+name: responsive-text
+category: base
+---
+
+`f-xl` `f-lg` `h1` `h2` `h3` `h4` and `p` classes react responsively to change the
+font-size at breakpoints. This will scale down font sizes for smaller
+devices for better readability.
+
+
+```html_example
+
+<div class="f-xl">XL text</div>
+<div class="f-lg">LG text</div>
+<div class="h1">h1 text</div>
+<div class="h2">h2 text</div>
+<div class="h3">h3 text</div>
+<div class="h4">h4 text</div>
+<div class="h5">h5 text</div>
+<div class="h6">h6 text</div>
+<div class="p">p text</div>
+
+```
+*/
+@media screen and (max-width: 992px) {
+  .f-xl {
+    font-size: 6.93099rem;
+    /* 1 */
+    margin-bottom: 5rem;
+    line-height: 7rem;
+    /* 2 */ }
+
+  .f-lg {
+    font-size: 4.50767rem;
+    /* 1 */
+    margin-bottom: 4rem;
+    line-height: 5rem;
+    /* 2 */ }
+
+  .h1 {
+    font-size: 3.63522rem;
+    /* 1 */
+    margin-bottom: 3rem;
+    line-height: 4rem;
+    /* 2 */ }
+
+  .h2 {
+    font-size: 2.36421rem;
+    /* 1 */
+    margin-bottom: 2rem;
+    line-height: 3rem;
+    /* 2 */ }
+
+  .h3 {
+    font-size: 1.90662rem;
+    /* 1 */
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    /* 2 */ } }
+@media screen and (max-width: 768px) {
+  .f-lg, .f-xl {
+    font-size: 3.63522rem;
+    /* 1 */
+    margin-bottom: 3rem;
+    line-height: 4rem;
+    /* 2 */ }
+
+  .h1 {
+    font-size: 2.93163rem;
+    /* 1 */
+    margin-bottom: 3rem;
+    line-height: 3rem;
+    /* 2 */ }
+
+  .h2 {
+    font-size: 1.90662rem;
+    /* 1 */
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    /* 2 */ }
+
+  .h3, .p, .h4 {
+    font-size: 1.5376rem;
+    /* 1 */
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    /* 2 */ } }
+/*doc
+---
+title: "Responsive text alignment"
+name: responsive-text-alignment
+category: base
+---
+
+Some utility classes for forcing the alignment of text responsively.
+A basic example is using centered text for impact at a larger scale. This
+may not visually work as well on a small screen, so we would include a
+class that would align the text to the left.
+
+
+```html_example
+
+<h1 class="h3 text-c text-l-xs">
+  This Heading will Align Center by Default, and Left on xs Screens
+</h1>
+
+```
+*/
+@media screen and (max-width: 480px) {
+  .text-l-xs {
+    text-align: left   !important;
+    float: none !important; }
+
+  .text-c-xs {
+    text-align: center !important;
+    float: none !important; }
+
+  .text-r-xs {
+    text-align: right  !important;
+    float: none !important; }
+
+  /* 1 */ }
+/* Elements - basic default styling for fundamental elements
+   ========================================================================== */
+/*doc
+---
+title: "Customizing links"
+name: links-variables
+category: elements
+---
+
+<pre>
+  <code class="language-css">
+$link-gray:       #BBC;
+$link-blue:       #3874b5;
+$link-blue-soft:  #77abc9;
+$link-blue-light: #284c72;
+
+$link-color:         $link-blue !default;
+$link-hover-color:   $link-blue-soft !default;
+$link-active-color:  $link-blue !default;
+$link-visited-color: $link-blue !default;
+
+$link-light-color:         $link-blue-soft !default;
+$link-light-hover-color:   $link-blue-light !default;
+$link-light-active-color:  $link-blue-soft !default;
+$link-light-visited-color: $link-blue-soft !default;
+
+$link-transition-speed:    $transition-speed-base !default;
+
+--- Optional customizations ---
+$link-underline-option:        false !default;
+$link-border-underline-option: false !default;
+$link-transition-option:       true !default;
+$link-underline-hover-option:  false !default;
+  </code>
+</pre>
+
+*/
+/*doc
+---
+title: Links
+name: links
+category: elements
+---
+
+Links have basic styling for `:hover` `:active` and `:visited` by default. There's
+also a couple of classes you can use to make links more universally useful.
+
+```html_example
+<div class="p1">
+  <a href="#">Standard link</a>
+</div>
+<div class="p1" style="background-color: #666;">
+  <a href="#" class="light">"Light" link for dark backgrounds</a>
+  <br>
+  <a href="#" class="link-white">Forced white text link</a>
+  <br>
+  <a href="#" class="link-white u">Use .u to force an underline</a>
+</div>
+
+```
+*/
+.link,
+a {
+  color: #3874b5;
+  text-decoration: none;
+  -webkit-transition: color, 200ms;
+  -moz-transition: color, 200ms;
+  -ms-transition: color, 200ms;
+  -o-transition: color, 200ms;
+  transition: color, 200ms; }
+  .link:visited,
+  a:visited {
+    color: #3874b5; }
+  .link.light,
+  a.light {
+    color: #77abc9; }
+    .link.light:visited,
+    a.light:visited {
+      color: #77abc9; }
+    .link.light:hover,
+    a.light:hover {
+      color: #284c72; }
+    .link.light:active,
+    a.light:active {
+      color: #77abc9; }
+  .link.link-white,
+  a.link-white {
+    color: white; }
+    .link.link-white:visited,
+    .link.link-white:hover,
+    .link.link-white:active,
+    a.link-white:visited,
+    a.link-white:hover,
+    a.link-white:active {
+      color: white; }
+  .link:hover,
+  a:hover {
+    color: #77abc9; }
+  .link:active,
+  a:active {
+    color: #3874b5; }
+
+/*doc
+---
+title: "Customizing lists"
+name: lists-variables
+category: elements
+---
+
+```html_example
+<pre>
+  <code class="language-css">
+$list-pad: 1.5rem !default;
+$list-inline-gutter: 1rem !default;
+  </code>
+</pre>
+```
+
+*/
+/*doc
+---
+title: Lists
+name: lists
+category: elements
+---
+
+By default, `ul` `ol` and `dl` have some basic styling. There's also
+a couple of classes with which to extend these to make them more versatile.
+
+```html_example
+<h2 class="h4">Default list styling</h2>
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<dl>
+  <dt>List item 1 title</dt>
+  <dd>List item 1 definition</dd>
+  <dt>List item 2 title</dt>
+  <dd>List item 2 definition</dd>
+</dl>
+<hr />
+
+<h2 class="h4">Unstyled list</h2>
+<ul class="list-unstyled">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
+<h2 class="h4">Condensed list</h2>
+<ul class="list-condensed">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
+<h2 class="h4">Inline list</h2>
+<ul class="list-inline">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
+<h2 class="h4">Nav list</h2>
+<p>Extend .list-inline with .list-nav to force inline list items to change to full-width blocks at the mobile breakpoint.</p>
+<ul class="list-inline list-nav">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+
+```
+
+*/
+ul,
+ol {
+  padding-left: 1.5rem;
+  margin-top: 0; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-bottom: 0; }
+
+li {
+  margin-bottom: 1rem; }
+
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 0;
+  margin-bottom: 1rem; }
+
+dl > dd:last-child {
+  margin-bottom: 0; }
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none; }
+
+.list-condensed {
+  margin-bottom: 0; }
+  .list-condensed > li {
+    margin-bottom: 0; }
+
+.list-inline {
+  padding-left: 0; }
+  .list-inline > li {
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    vertical-align: middle; }
+  @media screen and (max-width: 480px) {
+    .list-inline.list-nav {
+      /* 1 */ }
+      .list-inline.list-nav > li {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0; } }
+  .list-inline.list-nav .btn {
+    vertical-align: middle; }
+
+/*doc
+---
+title: "Customizing tables"
+name: tables-variables
+category: elements
+---
+
+<pre>
+  <code class="language-css">
+$table-cell-pad:           1rem 1rem;
+$table-cell-condensed-pad: 0.5rem 0.5rem;
+
+$table-bg:             transparent !default;
+$table-header-border:  rgba(0, 0, 0, 0.1) !default;
+$table-footer-border:  rgba(0, 0, 0, 0.1) !default;
+$table-cell-border:    rgba(0, 0, 0, 0.1) !default;
+$table-stripe-color:   #F0F0F0 !default;
+$table-hover-color:    #E7E7E7 !default;
+$table-border-color:   rgba(0, 0, 0, 0.1) !default;
+$table-vertical-align: middle;
+
+$table-stripe-dark-color: rgba(255, 255, 255, 0.1) !default;
+$table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
+  </code>
+</pre>
+
+*/
+/*doc
+---
+title: Tables
+name: tables
+category: elements
+---
+
+There's some basic styling applied to `table` tags and children to make it
+more browser-friendly, but there's also several "stackable" extension
+classes to help define some basic UX-ready tables.
+
+```html_example
+
+<h2 class="h4">Default table</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+
+<h2 class="h4">Unstyled table</h2>
+<table class='table-unstyled'>
+  <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+
+<h2 class="h4">Condensed Table</h2>
+<table class="table-condensed">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">No padding Table</h2>
+<table class="table-nopad">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Bordered Table</h2>
+<table class="table-bordered">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Striped Table</h2>
+<table class="table-striped">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Hoverable Table</h2>
+<table class="table-hover">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Striped and Hoverable for dark backgrounds</h2>
+<div style="background: #666;" class="light p1">
+  <p> ProTip: use the "full-width" utility class to force a table to extend the width of its container.
+  <table class="table-striped-dark full-width">
+    <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    </tbody>
+  </table>
+  <hr/>
+
+  <table class="table-hover-dark">
+    <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+```
+
+*/
+.table,
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 16px;
+  line-height: 16px;
+  max-width: 100%;
+  overflow-y: auto;
+  background-color: transparent; }
+  @media screen and (max-width: 768px) {
+    .table,
+    table {
+      display: block;
+      position: relative;
+      display: -webkit-box;
+      overflow-x: auto; } }
+  .table.table-full,
+  table.table-full {
+    width: 100%; }
+
+thead th {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  vertical-align: bottom;
+  line-height: 14px; }
+
+tfoot td {
+  line-height: 16px;
+  border-bottom: 0;
+  background-color: transparent; }
+
+th {
+  text-align: left;
+  font-weight: 700; }
+
+td,
+th {
+  padding: 1rem 1rem;
+  line-height: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+td {
+  vertical-align: middle; }
+
+.table-unstyled td,
+.table-unstyled th {
+  border-bottom-color: transparent; }
+
+.table-condensed td,
+.table-condensed th {
+  padding: 0.5rem 0.5rem; }
+
+.table-nopad td,
+.table-nopad th {
+  padding: 0; }
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  line-height: 15px; }
+.table-bordered thead th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 14px; }
+
+.table-striped tr:nth-child(odd) td {
+  background-color: #f0f0f0; }
+
+.table-striped-dark tr:nth-child(odd) td {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.table-striped tfoot tr:nth-child(odd) td,
+.table-striped-dark tfoot tr:nth-child(odd) td {
+  background-color: transparent; }
+
+.table-hover tr:hover td {
+  background-color: #e7e7e7; }
+
+.table-hover-dark tr:hover td {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.table-hover tfoot tr:hover td,
+.table-hover-dark tfoot tr:hover td {
+  background-color: transparent; }
+
+/*doc
+---
+title: "Customizing forms"
+name: forms-variables
+category: elements
+---
+
+<pre>
+  <code class="language-css">
+$input-gray:       #BBC;
+$input-blue:       #126BAD;
+$input-blue-soft:  #7cafec;
+$input-blue-light: #d4e6f0;
+
+$form-base-color:        $text-light-color !default;
+$form-placeholder-color: #afa9af !default;
+
+$form-pad-v-base: 0.5rem  !default;
+$form-pad-h-base: 0.25rem !default;
+
+$input-bg:           #f0f0f0 !default;
+$input-border-width: 1px !default;
+$input-border-color: #afa9af !default;
+$input-focus-bg:     white !default;
+$input-focus-color:  $text-base-color !default;
+
+$input-disabled-bg:    rgba($input-bg, 0.5) !default;
+$input-disabled-color: rgba($form-base-color, 0.5) !default;
+
+$labels-look-like-links-option: false !default;
+  </code>
+</pre>
+
+*/
+/*doc
+---
+title: Forms
+name: forms
+category: elements
+---
+
+Forms are inline by default and pretty much ready-to-go. There's a few
+ways to extend a `form` or `input` to make life easier.
+
+```html_example
+<h2 class="h3">Default Form</h2>
+<form>
+  <fieldset>
+    <input placeholder="Email", type="text" /><input placeholder="Password", type="password" />
+    <label class="line3">
+      <input type="checkbox" class="checkbox" />Remember me
+    </label>
+    <button class="btn btn-sm btn-primary" type="submit">Sign in</button>
+  </fieldset>
+</form>
+
+<h2 class="h3">Stacked Form</h2>
+<form class="form-stacked">
+  <fieldset>
+    <div class="mb1">
+      <label>E-Mail</label>
+      <input required="<%= true %>" type="email"></input>
+      <aside>
+        <em class="light">This is a required field.</em>
+      </aside>
+    </div>
+    <div class="mb1">
+      <label>State</label>
+      <select>
+        <option>Option Number 1</option>
+        <option>2nd opt</option>
+        <option>This is long option three</option>
+        <option>Something 4</option>
+        <option>five</option>
+      </select>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="checkbox" class="checkbox"></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="radio" class="radio"></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-link" type="reset">Cancel</button>
+  </fieldset>
+</form>
+
+```
+
+*/
+fieldset,
+button {
+  padding: 0;
+  margin: 0;
+  border: none; }
+
+label {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 2rem;
+  /* 2 */
+  margin-right: 0.5rem;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  line-height: 3rem; }
+
+textarea {
+  min-height: 5rem;
+  vertical-align: top; }
+
+input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+select,
+textarea {
+  margin: 0 1rem 1rem 0;
+  color: #989898;
+  padding: 0.5rem 0.25rem;
+  background-color: #f0f0f0;
+  border: 1px solid #afa9af;
+  height: 3rem;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  vertical-align: top; }
+  input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]).input-lg,
+  select.input-lg,
+  textarea.input-lg {
+    max-height: 5rem;
+    min-height: 4rem; }
+  input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]):focus,
+  select:focus,
+  textarea:focus {
+    background-color: white;
+    color: #444444;
+    outline: none;
+    box-shadow: 0 0 6px 1px rgba(18, 107, 173, 0.5); }
+
+select {
+  height: 3rem; }
+
+.checkbox,
+input[type="checkbox"],
+.radio,
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 0.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1em; }
+
+.form-stacked input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+.form-stacked select,
+.form-stacked textarea {
+  margin: 0;
+  width: 100%; }
+
+input[disabled]:not(.btn),
+select[disabled]:not(.btn),
+input:disabled:not(.btn),
+select:disabled:not(.btn),
+.disabled:not(.btn) {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background-color: rgba(240, 240, 240, 0.5) !important;
+  color: rgba(152, 152, 152, 0.5) !important; }
+
+  /*doc
+  ---
+  title: Flexbox
+  name: flexbox
+  category: elements
+  ---
+
+  Flexbox is a way to create an expandable/contractible set of elements
+  in modern browsers. The standard flexbox consists of a parent container
+  and any number of flexible child elements.
+
+  This section is unofficial and unfinished.
+
+  ```html_example
+  <div class="flex-container">
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      1
+    </div>
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      2
+    </div>
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      3
+   </div>
+  </div>
+  ```
+
+  */
+.list-flex,
+.flex-container {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex; }
+  .list-flex li,
+  .list-flex .flex-item,
+  .flex-container .list-flex li,
+  .list-flex .flex-container li,
+  .flex-container .flex-item {
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-flex: 1;
+    flex: 1; }
+  .list-flex .flex-left,
+  .flex-container .flex-left {
+    margin-left: 0; }
+  .list-flex .flex-0,
+  .flex-container .flex-0 {
+    -webkit-flex: 0;
+    flex: 0; }
+  .list-flex li,
+  .list-flex .flex-2,
+  .flex-container .list-flex li,
+  .list-flex .flex-container li,
+  .flex-container .flex-2 {
+    -webkit-flex: 2;
+    flex: 2; }
+  .list-flex .flex-3,
+  .flex-container .flex-3 {
+    -webkit-flex: 3;
+    flex: 3; }
+  .list-flex li.list-header,
+  .list-flex .flex-4,
+  .flex-container .list-flex li.list-header,
+  .list-flex .flex-container li.list-header,
+  .flex-container .flex-4 {
+    -webkit-flex: 4;
+    flex: 4; }
+
+  /*doc
+  ---
+  title: "Flex list"
+  name: flexlist
+  category: elements
+  ---
+
+  List flex extends <ul> and uses <li> children as flexible sections.
+
+  This section is unofficial and unfinished.
+
+  ```html_example
+  <ul class="list-flex">
+    <li class="list-header">
+      List header
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+  </ul>
+  ```
+
+  */
+.list-flex {
+  list-style: none;
+  padding-left: 0; }
+
+/* Structure - Helpers that manage the layout and vertical rhythm of a site.
+   ========================================================================== */
+/*doc
+---
+title: "Customizing layout"
+name: layout-variables
+category: structure
+---
+
+<pre>
+  <code class="language-css">
+$hr-color:     rgba(0,0,0,0.1) !default;
+$margin-base:  1rem !default;
+$padding-base: $margin-base !default;
+  </code>
+</pre>
+**Note:**
+*Margins and padding are defined in increments of rem by default*
+
+*/
+/*doc
+---
+title: "Margin helpers"
+name: margin-helpers
+category: structure
+---
+
+Use margin and padding helpers to keep vertical rhythm. Micro classes like
+this help maintain the intended design, while keeping css size low.
+
+However, _sometimes_ it's easier for long-term maintenance to extend styles
+for margin and padding in another class.
+
+Examples:
+
+Bad:
+
+`.myModule {
+  margin-bottom: 30px;
+}`
+
+
+Decent:
+
+`.myClass {
+  @extend %mb3;
+  @extend %p1;
+}`
+
+This will produce the output css:
+
+`.myClass { margin-bottom: 3rem; padding: 1rem; }`
+
+But necessitates the use of placeholders. However, this might be easier to
+maintain for your particular application.
+
+
+Better:
+
+<div class="myClass mb4 p1">
+  This module has .myClass, margin-bottom of 4rem, and a padding
+  of 1rem on all sides. It's obvious to the coder, and smaller in
+  file size. It's also pretty damn easy to change later.
+</div>
+
+```html_example
+
+<div class="m1 p1" style="background-color: #BBC;">margin 1 rem top and bottom</div>
+<hr />
+<div class="mb2 p1" style="background-color: #BBC;">margin 2 rem bottom</div>
+<hr />
+<div class="mt3 p1" style="background-color: #BBC;">margin 3 rem top</div>
+<hr />
+<div class="mr1 p1" style="background-color: #BBC;">margin 1 rem right</div>
+<hr />
+<div class="ml2 p1" style="background-color: #BBC;">margin 2 rem left</div>
+<hr />
+<div class="m-xl p1" style="background-color: #BBC;">margin XL on all sides</div>
+
+
+```
+*/
+.center {
+  margin-left: auto;
+  margin-right: auto; }
+
+.list-flex,
+.list-flex li,
+.m0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.m1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.m2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.m3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.m4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.mb0 {
+  margin-bottom: 0 !important; }
+
+.mb1 {
+  margin-bottom: 1rem; }
+
+.mb2 {
+  margin-bottom: 2rem; }
+
+.mb4 {
+  margin-bottom: 4rem; }
+
+.mb8 {
+  margin-bottom: 8rem; }
+
+.mt0 {
+  margin-top: 0 !important; }
+
+.mt1 {
+  margin-top: 1rem; }
+
+.mt2 {
+  margin-top: 2rem; }
+
+.mt3 {
+  margin-top: 3rem; }
+
+.mt4 {
+  margin-top: 4rem; }
+
+.mr0 {
+  margin-right: 0 !important; }
+
+.mr1 {
+  margin-right: 1rem; }
+
+.mr2 {
+  margin-right: 2rem; }
+
+.mr3 {
+  margin-right: 3rem; }
+
+.mr4 {
+  margin-right: 4rem; }
+
+.ml0 {
+  margin-left: 0 !important; }
+
+.ml1 {
+  margin-left: 1rem; }
+
+.ml2 {
+  margin-left: 2rem; }
+
+.ml3 {
+  margin-left: 3rem; }
+
+.ml4 {
+  margin-left: 4rem; }
+
+.m-xs {
+  margin: 1px; }
+
+.m-sm {
+  margin: 3px; }
+
+.m-md {
+  margin: 5px; }
+
+.m-lg {
+  margin: 8px; }
+
+.m-xl {
+  margin: 12px; }
+
+/*doc
+---
+title: "Padding helpers"
+name: padding-helpers
+category: structure
+---
+
+```html_example
+
+<div class="p1" style="background-color: #BBC; display: inline-block;">padding 1 rem on all sides</div>
+<hr />
+<div class="pyhalf px1" style="background-color: #BBC; display: inline-block;">padding 1/2 rem vertically, 1 rem horizontally</div>
+<hr />
+<div class="px8" style="background-color: #BBC; display: inline-block;"">padding 8 rem horizontally</div>
+<hr />
+<div class="py4" style="background-color: #BBC; display: inline-block;"">padding 4 rem vertically</div>
+
+```
+*/
+.p1 {
+  padding: 1rem; }
+
+.p2 {
+  padding: 2rem; }
+
+.p3 {
+  padding: 3rem; }
+
+.p4 {
+  padding: 4rem; }
+
+.pyhalf {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+.py1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.py2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.py4 {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+
+.py8 {
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
+
+.pxhalf {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem; }
+
+.list-flex li.list-header,
+.px1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+
+.px2 {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.px4 {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+.px8 {
+  padding-left: 4rem;
+  padding-right: 4rem; }
+
+/* Responsive padding: halves vertical padding on xs (typically mobile) screens.*/
+@media screen and (max-width: 768px) {
+  .p1 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+
+  .p2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+  .p3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+
+  .p4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+
+  .py1 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+
+  .py2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+  .py4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+
+  .py8 {
+    padding-top: 4rem;
+    padding-bottom: 4rem; } }
+/*doc
+---
+title: "Position helpers"
+name: position-helpers
+category: structure
+---
+
+Position elements using micro classes for better control.
+
+
+```html_example
+
+<div class="pos-rel full-width" style="background-color: #EEE; height: 500px;">
+  <div class="pos-abs pos-b pos-r p1 m-lg" style="background-color: #BBC;">
+    Absolutely positioned bottom right, margin LG
+  </div>
+  <div class="pos-abs pos-t pos-l pos-b p1" style="background-color: #BBC;">
+    Absolutely positioned left, top, bottom
+    <br />
+    (to stretch from top to bottom)
+  </div>
+  <div class="pos-abs pos-center" style="background-color: #BBC; width: 100px; height: 100px; margin-top: -50px; margin-left: -50px;">
+    Centered
+  </div>
+</div>
+
+```
+*/
+.pos-abs {
+  position: absolute; }
+
+.pos-rel {
+  position: relative; }
+
+.pos-fix {
+  position: fixed; }
+
+.pos-t {
+  top: 0; }
+
+.pos-b {
+  bottom: 0; }
+
+.pos-l {
+  left: 0; }
+
+.pos-r {
+  right: 0; }
+
+.pos-all {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.pos-center {
+  top: 50%;
+  left: 50%; }
+
+.z1 {
+  z-index: 1; }
+
+.z2 {
+  z-index: 2; }
+
+.z5 {
+  z-index: 5; }
+
+.z10 {
+  z-index: 10; }
+
+/*doc
+---
+title: "Utility helpers"
+name: utility-helpers
+category: structure
+---
+
+```html_example
+
+<p>Horizontal rule</p>
+<hr />
+
+<span class="full-width p1" style="background-color: #BBC; display:inline-block;">Full width</span>
+
+<div class="clearfix p1" style="background-color: #EEE;">
+  <p>Clearfix: successfully displays a container that contains floated child elements</p>
+  <p class="left p1" style="background-color: #BBC;">Float left</p>
+  <p class="right p1" style="background-color: #BBC;">Float right</p>
+  <p class="centered p1" style="background-color: #BBC; width: 300px;">Centered block content</p>
+</div>
+
+```
+*/
+/* Horizontal rule
+   ========================================================================== */
+/**
+* 1. To keep vertical rhythm, hr uses font-size-base as a height (including
+*    1px for the border.
+*/
+hr,
+.hr {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 15px;
+  /* 1 */
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+/* Layout utility classes
+   ========================================================================== */
+.full-width {
+  width: 100%; }
+
+.container:before, .container:after,
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+.container:after,
+.clearfix:after {
+  clear: both; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.centered {
+  margin-left: auto;
+  margin-right: auto; }
+
+/*doc
+---
+title: "Responsive display"
+name: z-responsive-display
+category: structure
+---
+
+**Responsively show and hide content - use with caution**
+
+`hidden` class will hide class at any breakpoint.
+
+`full-width-xs` forces element to be full width of parent at xs breakpoint
+
+These classes will hide content at defined breakpoints.
+
+For example:
+<div class="hidden-xs">
+  Something worth hiding
+</div>
+
+This div will not show at XS breakpoint. This content still LOADS, however,
+so be cognizant of the load impact and use *wisely*.
+
+Responsive display classes:
+
+`hidden-xl` `hidden-lg` `hidden-ltlg` `hidden-md` `hidden-ltmd` `hidden-sm` `hidden-ltsm` `hidden-xs` `hidden-gtxs` `hidden-gtsm`
+
+*/
+.hidden {
+  display: none !important; }
+
+@media screen and (min-width: 1201px) {
+  .hidden-xl {
+    display: none !important; } }
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+  .hidden-lg {
+    display: none !important; } }
+@media screen and (max-width: 1200px) {
+  .hidden-ltlg {
+    display: none !important; } }
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .hidden-md {
+    display: none !important; } }
+@media screen and (max-width: 992px) {
+  .hidden-ltmd {
+    display: none !important; } }
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .hidden-sm {
+    display: none !important; } }
+@media screen and (max-width: 768px) {
+  .hidden-ltsm {
+    display: none !important; } }
+@media screen and (max-width: 480px) {
+  .hidden-xs {
+    display: none !important; }
+
+  /* 1 */ }
+@media screen and (min-width: 481px) {
+  .hidden-gtxs {
+    display: none !important; } }
+@media screen and (min-width: 769px) {
+  .hidden-gtsm {
+    display: none !important; } }
+@media screen and (max-width: 480px) {
+  .full-width-xs {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+    .full-width-xs:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]) {
+      padding-left: 0 !important;
+      padding-right: 0 !important; }
+
+  /* 1 */ }
+/*doc
+---
+title: Container
+name: container
+category: structure
+---
+
+The `.container` class, when included, will constrain the width of its
+children and collapse based on defined media breakpoints.
+
+*/
+.container {
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  /**
+  * @include at_breakpoints to collapse the container as it reaches
+  * each breakpoint.
+  */
+  /*doc
+  ---
+  title: "Container extensions"
+  name: container-extensions
+  category: structure
+  ---
+
+  Use `.flex` to extend the `.container` class and allow a fully flexible,
+  100% width container that still pads the sides appropriately. Totally
+  works well with the grid classes, too.
+
+  Use `.contain-to-N to` extend the `.container` class to set a max width for
+  a particular container. By default, the `.container` class contains to xl.
+
+  **For example:** Maybe a text-heavy section will read better when contained to
+  a "md" size, but the header and footer can remain contained to "xl" size.
+
+  */
+  /**
+    * 1. Use .flex to extend the .container class and allow a fully flexible,
+    *    100% width container that still pads the sides appropriately. Totally
+    *    works well with the grid classes, too.
+    *
+    * 2. Use .contain-to-N to extend the .container class to set a max width for
+    *    a particular container. By default, the .container class contains to xl.
+    *
+    * For example: Maybe a text-heavy section will read better when contained to
+    * a "md" size, but the header and footer can remain contained to "xl" size.
+    */
+  /* 2 */ }
+  .container > .container {
+    padding: 0 !important; }
+  @media screen and (min-width: 1201px) {
+    .container {
+      /* 4 */
+      width: 1380px; } }
+  @media screen and (max-width: 1400px) {
+    .container {
+      width: 1180px; } }
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 972px; } }
+  @media screen and (max-width: 992px) {
+    .container {
+      width: 748px; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%; } }
+  .container.flex {
+    /* 1 */
+    max-width: 100%;
+    width: 100%; }
+  .container.contain-to-lg {
+    max-width: 1180px; }
+  .container.contain-to-md {
+    max-width: 972px; }
+  .container.contain-to-sm {
+    max-width: 748px; }
+  .container.contain-to-sm {
+    max-width: 460px; }
+
+/*doc
+---
+title: Grids
+name: grid
+category: structure
+---
+
+<ol>
+  <li>Start by containing a section of content that you intend to grid with the class `grid`</li>
+  <li>The child element needs two classes: `g` to set up the grid-like qualities and a fractional width like `_1-2`</li>
+  <li>If you want responsive grids (grids that are different at a particular breakpoint), then add a suffix: `xs` `sm` `md` `lg`.
+   Any suffix you add will work for any breakpoint equal to or smaller (i.e. `_1-2-lg` will make a column that is 50% of its parent at large breakpoints and below, unless you specify another responsive grid size)</li>
+</ol>
+
+
+```html_example
+
+<section class="grid">
+  <div class="g _1-2">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">_1-4 column width</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">_1-4 column width</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Responsive grids</h2>
+<section class="grid">
+  <div class="g _1-2-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+  <div class="g _1-4-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+  <div class="g _1-4-lg _1-1">
+    <div class="p1" style="background-color: #BBC;">_1-2 column width at large breakpoint</div>
+  </div>
+</section>
+
+```
+*/
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+/**
+* 1. Fix for lists.
+* 2. Negative margin to offset grid parent
+* 3. Set font size to 0 to fix inline-block extra space
+*    http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+*/
+.grid {
+  list-style: none;
+  /* 1 */
+  margin-left: -24px;
+  /* 2 */
+  padding: 0;
+  font-size: 0;
+  /* 3 */ }
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ * 6. Set font size back to base to fix inline-block extra space
+ */
+.g {
+  display: inline-block;
+  /* 1 */
+  padding-left: 24px;
+  /* 2 */
+  vertical-align: top;
+  /* 3 */
+  width: 100%;
+  /* 4 */
+  font-size: 16px;
+  /* 6 */ }
+
+/* Widths */
+._1-1,
+._2_2,
+._3_3,
+._4_4,
+._5_5,
+._6_6 {
+  width: 100%; }
+
+._1-2,
+._2-4,
+._3-6 {
+  width: 50%; }
+
+._1-3,
+._2-6 {
+  width: 33.333%; }
+
+._2-3,
+._4-6 {
+  width: 66.666%; }
+
+._1-4 {
+  width: 25%; }
+
+._3-4 {
+  width: 75%; }
+
+._1-5 {
+  width: 20%; }
+
+._2-5 {
+  width: 40%; }
+
+._3-5 {
+  width: 60%; }
+
+._4-5 {
+  width: 80%; }
+
+._1-6 {
+  width: 16.667%; }
+
+._5-6 {
+  width: 83.333%; }
+
+@media screen and (max-width: 1200px) {
+  ._1-1-lg,
+  ._2_2-lg,
+  ._3_3-lg,
+  ._4_4-lg,
+  ._5_5-lg,
+  ._6_6-lg {
+    width: 100%; }
+
+  ._1-2-lg,
+  ._2-4-lg,
+  ._3-6-lg {
+    width: 50%; }
+
+  ._1-3-lg,
+  ._2-6-lg {
+    width: 33.333%; }
+
+  ._2-3-lg,
+  ._4-6-lg {
+    width: 66.666%; }
+
+  ._1-4-lg {
+    width: 25%; }
+
+  ._3-4-lg {
+    width: 75%; }
+
+  ._1-5-lg {
+    width: 20%; }
+
+  ._2-5-lg {
+    width: 40%; }
+
+  ._3-5-lg {
+    width: 60%; }
+
+  ._4-5-lg {
+    width: 80%; }
+
+  ._1-6-lg {
+    width: 16.667%; }
+
+  ._5-6-lg {
+    width: 83.333%; } }
+@media screen and (max-width: 992px) {
+  ._1-1-md,
+  ._2_2-md,
+  ._3_3-md,
+  ._4_4-md,
+  ._5_5-md,
+  ._6_6-md {
+    width: 100%; }
+
+  ._1-2-md,
+  ._2-4-md,
+  ._3-6-md {
+    width: 50%; }
+
+  ._1-3-md,
+  ._2-6-md {
+    width: 33.333%; }
+
+  ._2-3-md,
+  ._4-6-md {
+    width: 66.666%; }
+
+  ._1-4-md {
+    width: 25%; }
+
+  ._3-4-md {
+    width: 75%; }
+
+  ._1-5-md {
+    width: 20%; }
+
+  ._2-5-md {
+    width: 40%; }
+
+  ._3-5-md {
+    width: 60%; }
+
+  ._4-5-md {
+    width: 80%; }
+
+  ._1-6-md {
+    width: 16.667%; }
+
+  ._5-6-md {
+    width: 83.333%; } }
+@media screen and (max-width: 768px) {
+  ._1-1-sm,
+  ._2_2-sm,
+  ._3_3-sm,
+  ._4_4-sm,
+  ._5_5-sm,
+  ._6_6-sm {
+    width: 100%; }
+
+  ._1-2-sm,
+  ._2-4-sm,
+  ._3-6-sm {
+    width: 50%; }
+
+  ._1-3-sm,
+  ._2-6-sm {
+    width: 33.333%; }
+
+  ._2-3-sm,
+  ._4-6-sm {
+    width: 66.666%; }
+
+  ._1-4-sm {
+    width: 25%; }
+
+  ._3-4-sm {
+    width: 75%; }
+
+  ._1-5-sm {
+    width: 20%; }
+
+  ._2-5-sm {
+    width: 40%; }
+
+  ._3-5-sm {
+    width: 60%; }
+
+  ._4-5-sm {
+    width: 80%; }
+
+  ._1-6-sm {
+    width: 16.667%; }
+
+  ._5-6-sm {
+    width: 83.333%; } }
+@media screen and (max-width: 480px) {
+  ._1-1-xs,
+  ._2_2-xs,
+  ._3_3-xs,
+  ._4_4-xs,
+  ._5_5-xs,
+  ._6_6-xs {
+    width: 100%; }
+
+  ._1-2-xs,
+  ._2-4-xs,
+  ._3-6-xs {
+    width: 50%; }
+
+  ._1-3-xs,
+  ._2-6-xs {
+    width: 33.333%; }
+
+  ._2-3-xs,
+  ._4-6-xs {
+    width: 66.666%; }
+
+  ._1-4-xs {
+    width: 25%; }
+
+  ._3-4-xs {
+    width: 75%; }
+
+  ._1-5-xs {
+    width: 20%; }
+
+  ._2-5-xs {
+    width: 40%; }
+
+  ._3-5-xs {
+    width: 60%; }
+
+  ._4-5-xs {
+    width: 80%; }
+
+  ._1-6-xs {
+    width: 16.667%; }
+
+  ._5-6-xs {
+    width: 83.333%; }
+
+  /* 1 */ }
+/*doc
+---
+title: "Grid utility classes"
+name: grid-utility-classes
+category: structure
+---
+
+Grid utility classes extend the .grid class.
+
+```html_example
+
+<h2 class="h4">Reverses grid direction from what is displayed in the markup</h2>
+
+<section class="grid grid-reverse">
+  <div class="g _1-2">
+    <div class="p1" style="background-color: #BBC;">Content #1</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">Content #2</div>
+  </div>
+  <div class="g _1-4">
+    <div class="p1" style="background-color: #BBC;">Content #3</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Centered grid</h2>
+<section class="grid grid-c">
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+  <div class="g _1-3">
+    <div class="p1" style="background-color: #BBC;">_1-3 column width</div>
+  </div>
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+</section>
+
+<hr />
+
+<h2 class="h4">Right align grid</h2>
+<section class="grid grid-r">
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+  <div class="g _1-3">
+    <div class="p1" style="background-color: #BBC;">_1-3 column width</div>
+  </div>
+  <div class="g _1-6">
+    <div class="p1" style="background-color: #BBC;">_1-6 column width</div>
+  </div>
+</section>
+
+```
+*/
+/* Presents columns in reverse order of their markup. */
+.grid {
+  /* Center align grid. */
+  /* Right align grid. */ }
+  .grid.grid-reverse {
+    direction: rtl;
+    text-align: left; }
+    .grid.grid-reverse > .g {
+      direction: ltr;
+      text-align: left; }
+  .grid.grid-c {
+    text-align: center; }
+    .grid.grid-c > .g {
+      text-align: left; }
+  .grid.grid-r {
+    text-align: right; }
+    .grid.grid-r > .g {
+      text-align: left;
+      margin-right: 0; }
+
+/* Modules - reusable patterns commonly found on most web apps
+   ========================================================================== */
+/*doc
+---
+title: "Media object"
+name: media_object
+category: modules
+---
+Made famous here:
+<a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">
+The media object saves hundreds of lines of code
+</a>
+
+The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+
+```html_example
+
+<div class="media">
+  <img src="http://fillmurray.com/100/100" class="left mr1">
+  <p class="media-body">
+    The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+  </div>
+</div>
+
+```
+*/
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1; }
+
+.media:first-child {
+  margin-top: 0; }
+
+.media-object {
+  display: block; }
+
+/*doc
+---
+title: "Customizing buttons"
+name: buttons-variables
+category: modules
+---
+```html_example
+
+<pre>
+  <code class="language-css">
+$btn-font-weight:      $font-weight-thin !default;
+$btn-border-radius:    0.25rem !default;
+$btn-shadow:           inset 0 2px 6px rgba(0,0,0,0.3) !default;
+
+$btn-bg-default:       $btn-gray !default;
+$btn-color-default:    white !default;
+$btn-border-default:   darken($btn-bg-default, 10%) !default;
+
+$btn-bg-primary:       $btn-blue !default;
+$btn-color-primary:    white !default;
+$btn-border-primary:   darken($btn-bg-primary, 10%) !default;
+
+$btn-bg-secondary:     $btn-violet !default;
+$btn-color-secondary:  white !default;
+$btn-border-secondary: darken($btn-bg-secondary, 10%) !default;
+
+$btn-bg-tertiary:      $btn-blue-soft !default;
+$btn-color-tertiary:   white !default;
+$btn-border-tertiary:  darken($btn-bg-tertiary, 10%) !default;
+
+$btn-bg-link:          $btn-blue-light !default;
+$btn-bg-link-dark:     rgba(255,255,255,0.15) !default;
+$btn-border-link:      rgba($btn-blue-light,0.0) !default;
+
+$btn-hover-adjustment: 8% !default;
+$btn-border-width:     1px !default;
+$btn-transition-speed: 0.2s !default;
+
+--- Optional customizations ---
+$btn-inset-option:       true !default;
+$btn-border-option:      true !default;
+$btn-radius-option:      true !default;
+$btn-text-shadow-option: true !default;
+$btn-transition-option:  true !default;
+$btn-hover-bg-option:    true !default;
+$btn-mobile-full-width:  true !default;
+  </code>
+</pre>
+
+```
+*/
+/*doc
+---
+title: Buttons
+name: buttons
+category: modules
+---
+```html_example
+
+<a href="#" class="btn btn-xl">xl Button</a>
+<a href="#" class="btn btn-lg">lg Button</a>
+<a href="#" class="btn">md Button</a>
+<a href="#" class="btn btn-sm">sm Button</a>
+<a href="#" class="btn btn-xs">xs Button</a>
+<hr />
+<h2 class="h4">Button colors</h2>
+<a href="#" class="btn btn-primary">Primary</a>
+<a href="#" class="btn btn-secondary">Secondary</a>
+<a href="#" class="btn btn-tertiary">Tertiary</a>
+<a href="#" class="btn btn-link">Link Button</a>
+<hr />
+<h2 class="h4">Button active/current state</h2>
+<a href="#" class="btn btn-primary current">Primary</a>
+<a href="#" class="btn btn-secondary active">Secondary</a>
+<a href="#" class="btn btn-tertiary current">Tertiary</a>
+<a href="#" class="btn btn-link active">Link Button</a>
+<hr />
+<div style="background-color: #666; padding: 10px;">
+  <a href="#" class="btn btn-link btn-link-dark light">Link Button - Dark Background</a>
+</div>
+<hr />
+<h2 class="h4">Form inputs using the same classes</h2>
+<button class="btn btn-sm btn-primary">button</button>
+<input type="button" value="input button" class="btn btn-sm btn-secondary">
+<input type="submit" value="submit" class="btn btn-sm btn-link">
+
+```
+*/
+.btn {
+  font-size: 1.90662rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 2rem;
+  /* 2 */
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: top;
+  background-color: #ababbb;
+  color: white;
+  border-style: solid;
+  border-color: #8f8fa4;
+  text-decoration: none;
+  max-height: 4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .btn:not([class^="px"]):not([class*="px"]) {
+    padding-left: 3rem;
+    padding-right: 3rem; }
+  .btn:not([class^="py"]):not([class*="py"]) {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .btn:hover {
+    background-color: #c2c2cd;
+    border-color: #a5a5b6;
+    color: white;
+    text-shadow: 0 0 15px white, 0 0 30px white; }
+  .btn:active,
+  .btn.current,
+  .btn.active {
+    -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #8f8fa4; }
+  .btn:active,
+  .btn:visited {
+    color: white; }
+  .btn.disabled,
+  .btn[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.45;
+    box-shadow: none; }
+  .btn:focus {
+    outline: 0; }
+
+.btn-primary {
+  background-color: #007acb;
+  color: white;
+  border-color: #005b98; }
+  .btn-primary:hover {
+    background-color: #0093f4;
+    border-color: #0074c1; }
+  .btn-primary:active,
+  .btn-primary.current,
+  .btn-primary.active {
+    color: white;
+    background-color: #005b98; }
+  .btn-primary:hover,
+  .btn-primary:visited {
+    color: white; }
+
+.btn-secondary {
+  background-color: #bc87dd;
+  color: white;
+  border-color: #a65fd2; }
+  .btn-secondary:hover {
+    background-color: #cea7e6;
+    border-color: #b87fdb; }
+  .btn-secondary:active,
+  .btn-secondary.current,
+  .btn-secondary.active {
+    color: white;
+    background-color: #a65fd2; }
+  .btn-secondary:hover,
+  .btn-secondary:visited {
+    color: white; }
+
+.btn-tertiary {
+  background-color: #9accec;
+  color: white;
+  border-color: #6fb6e4; }
+  .btn-tertiary:hover {
+    background-color: #bcddf2;
+    border-color: #91c8ea; }
+  .btn-tertiary:active,
+  .btn-tertiary.current,
+  .btn-tertiary.active {
+    color: white;
+    background-color: #6fb6e4; }
+  .btn-tertiary:hover,
+  .btn-tertiary:visited {
+    color: white; }
+
+.btn-link {
+  background-color: transparent;
+  color: #3874b5;
+  border-color: rgba(212, 230, 240, 0); }
+  .btn-link:visited {
+    color: #3874b5; }
+  .btn-link:hover {
+    background-color: #d4e6f0;
+    color: #77abc9;
+    border-color: rgba(242, 248, 251, 0); }
+  .btn-link:active {
+    color: #3874b5; }
+  .btn-link.btn-link-dark:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .btn-link.current,
+  .btn-link.active {
+    background-color: #d4e6f0; }
+
+.btn-xl {
+  font-size: 2.93163rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 3rem;
+  /* 2 */
+  height: 7rem;
+  max-height: 7rem; }
+  .btn-xl:not([class^="px"]):not([class*="px"]) {
+    padding-left: 6rem;
+    padding-right: 6rem; }
+  .btn-xl:not([class^="py"]):not([class*="py"]) {
+    padding-top: 1.66rem;
+    padding-bottom: 1.66rem; }
+
+.btn-lg {
+  font-size: 2.36421rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 3rem;
+  /* 2 */
+  height: 5rem;
+  max-height: 5rem; }
+  .btn-lg:not([class^="px"]):not([class*="px"]) {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem; }
+  .btn-lg:not([class^="py"]):not([class*="py"]) {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+.btn-sm {
+  font-size: 1.24rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 2rem;
+  /* 2 */
+  height: 3rem;
+  max-height: 3rem; }
+  .btn-sm:not([class^="px"]):not([class*="px"]) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+  .btn-sm:not([class^="py"]):not([class*="py"]) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+
+.btn-xs {
+  font-size: 1rem;
+  /* 1 */
+  margin-bottom: 0;
+  line-height: 1rem;
+  /* 2 */
+  height: 2rem;
+  max-height: 2rem; }
+  .btn-xs:not([class^="px"]):not([class*="px"]) {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  .btn-xs:not([class^="py"]):not([class*="py"]) {
+    padding-top: 0.33rem;
+    padding-bottom: 0.33rem; }
+
+@media screen and (max-width: 480px) {
+  .btn {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+    .btn:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]) {
+      padding-left: 0 !important;
+      padding-right: 0 !important; }
+
+  /* 1 */ }
+/*doc
+---
+title: "Button groups"
+name: buttons_groups
+category: modules
+---
+```html_example
+
+<div class="btn-group mr1">
+  <a href="#" class="btn btn-sm">Button</a>
+  <a href="#" class="btn btn-sm current">Button</a>
+  <a href="#" class="btn btn-sm">Button</a>
+</div>
+
+<div class="btn-group">
+  <a href="#" class="btn btn-tertiary">Button</a>
+  <a href="#" class="btn btn-tertiary">Button</a>
+</div>
+
+```
+*/
+.btn-group {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0; }
+  .btn-group .btn + .btn,
+  .btn-group .btn + .btn-group,
+  .btn-group .btn-group + .btn,
+  .btn-group .btn-group + .btn-group {
+    margin-left: -1px; }
+  .btn-group > .btn:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+  .btn-group > .btn:first-child {
+    margin-left: 0; }
+    .btn-group > .btn:first-child:not(:last-child) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0; }
+  .btn-group > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }

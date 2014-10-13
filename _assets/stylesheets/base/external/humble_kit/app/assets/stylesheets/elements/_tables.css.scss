@@ -7,16 +7,17 @@ category: elements
 
 <pre>
   <code class="language-css">
-$table-cell-pad:           $pad-v-sm $pad-h-base;
-$table-cell-condensed-pad: $pad-v-xs $pad-h-sm;
+$table-cell-pad:           1rem 1rem;
+$table-cell-condensed-pad: 0.5rem 0.5rem;
 
-$table-bg:            transparent !default;
-$table-header-border: rgba(0, 0, 0, 0.1) !default;
-$table-footer-border: rgba(0, 0, 0, 0.1) !default;
-$table-cell-border:   rgba(0, 0, 0, 0.1) !default;
-$table-stripe-color:  #F0F0F0 !default;
-$table-hover-color:   #E7E7E7 !default;
-$table-border-color:  rgba(0, 0, 0, 0.1) !default;
+$table-bg:             transparent !default;
+$table-header-border:  rgba(0, 0, 0, 0.1) !default;
+$table-footer-border:  rgba(0, 0, 0, 0.1) !default;
+$table-cell-border:    rgba(0, 0, 0, 0.1) !default;
+$table-stripe-color:   #F0F0F0 !default;
+$table-hover-color:    #E7E7E7 !default;
+$table-border-color:   rgba(0, 0, 0, 0.1) !default;
+$table-vertical-align: middle;
 
 $table-stripe-dark-color: rgba(255, 255, 255, 0.1) !default;
 $table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
@@ -24,20 +25,6 @@ $table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
 </pre>
 
 */
-
-$table-cell-pad:           $pad-v-sm $pad-h-base;
-$table-cell-condensed-pad: $pad-v-xs $pad-h-sm;
-
-$table-bg:            transparent !default;
-$table-header-border: rgba(0, 0, 0, 0.1) !default;
-$table-footer-border: rgba(0, 0, 0, 0.1) !default;
-$table-cell-border:   rgba(0, 0, 0, 0.1) !default;
-$table-stripe-color:  #F0F0F0 !default;
-$table-hover-color:   #E7E7E7 !default;
-$table-border-color:  rgba(0, 0, 0, 0.1) !default;
-
-$table-stripe-dark-color: rgba(255, 255, 255, 0.1) !default;
-$table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
 
 
 /*doc
@@ -55,6 +42,37 @@ classes to help define some basic UX-ready tables.
 
 <h2 class="h4">Default table</h2>
 <table>
+  <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+
+<h2 class="h4">Unstyled table</h2>
+<table class='table-unstyled'>
   <thead>
     <tr>
       <th>Table Header 1</th>
@@ -115,6 +133,68 @@ classes to help define some basic UX-ready tables.
 </table>
 <hr/>
 
+<h2 class="h4">No padding Table</h2>
+<table class="table-nopad">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Bordered Table</h2>
+<table class="table-bordered">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
 <h2 class="h4">Striped Table</h2>
 <table class="table-striped">
   <thead>
@@ -132,6 +212,11 @@ classes to help define some basic UX-ready tables.
   </tr>
   </tfoot>
   <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
   <tr>
     <td>Table Body 1</td>
     <td>Table Body 1</td>
@@ -280,7 +365,8 @@ tfoot {
   td {
     line-height: $font-size-base;
     border-bottom: 0;
-    @if variable_exists(table-bg){ background-color: $table-bg;}
+    @if variable_exists(table-bg){ background-color: $table-bg; }
+    @else {                        background-color: transparent; }
   }
 }
 
@@ -297,13 +383,13 @@ th {
 }
 
 td {
-  vertical-align: top;
+  vertical-align: $table-vertical-align;
 }
 
-tfoot {
-  td {
-    @if variable_exists(table-bg){ background-color: $table-bg;}
-      @else { background-color: transparent; }
+.table-unstyled {
+  td,
+  th {
+    border-bottom-color: transparent;
   }
 }
 
@@ -311,6 +397,13 @@ tfoot {
   td,
   th {
     padding: $table-cell-condensed-pad;
+  }
+}
+
+.table-nopad {
+  td,
+  th {
+    padding: 0;
   }
 }
 

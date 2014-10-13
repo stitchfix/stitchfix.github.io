@@ -1,43 +1,32 @@
-/* Base - styles and settings needed for all projects.
+/* Base - global setup, styles, and classes for any project
    ========================================================================== */
 @import "base/variables.css.scss";
 @import "base/reset.css.scss";
 @import "base/mixins.css.scss";
+@import "base/typography.css.scss";
 
 
-/* Typography - everything typography-related
+/* Elements - basic default styling for fundamental elements
    ========================================================================== */
-@import "typography/typography.css.scss";
-
-
-/* Elementary - fundamental styling for commonly-used tags
-   ========================================================================== */
-/**
-* Standalones. Don't like it? Leave it out.
-*/
 @import "elements/links.css.scss";
 @import "elements/lists.css.scss";
 @import "elements/tables.css.scss";
 @import "elements/forms.css.scss";
+@import "elements/flex.css.scss";
+
+@if $include-flex-option == true {
+  @include flex_styles;
+}
 
 
 /* Structure - Helpers that manage the layout and vertical rhythm of a site.
    ========================================================================== */
-/**
-* These will be the most invasive classes for your markup for a good reason:
-* You want to be able to glance at the markup and get an idea of what the
-* layout will be. I have no problem creating many classes to help structure
-* a site. If you make fundamental changes to your structure later, you will
-* be making markup changes anyway, right?
-*/
 @import "structure/layout.css.scss";
 @import "structure/containers.css.scss";
 @import "structure/grid.css.scss";
 
 
-/* Modules - REUSABLE patterns. I'm only forcing one on you: buttons.
+/* Modules - reusable patterns commonly found on most web apps
    ========================================================================== */
-/**
-* But don't be scared. These buttons are highly customizable and friendly!
-*/
+@import "modules/media.css.scss";
 @import "modules/buttons.css.scss";
