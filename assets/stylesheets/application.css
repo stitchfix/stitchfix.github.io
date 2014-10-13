@@ -2,88 +2,19 @@
 /* Custom variables - redefine variable defaults as you see fit
    ========================================================================== */
 /* Site-specific colors */
-/* Custom variable overrides for common elements (see HumbleKit for details) */
 /* Custom colors
    ========================================================================== */
+/* Custom variable overrides for common elements (see HumbleKit for details) */
 /* Humble Kit
    ========================================================================== */
 /* Site-specific Mixins
    ========================================================================== */
 /* Creates a "skin-{color}" class that will handle color coordination for an element
 (typically a container of some sort e.g. "<div class='skin-gray'>content</div>) */
-/* Site-specific Typography
-   ========================================================================== */
-/*doc
----
-title: "Additional type helpers"
-name: typography-additional-helpers
-category: typography
----
-
-Some helper classes for working within the typography.
-
-`.no-wrap`
-
-Stops text from wrapping with its container
-
-```html_example
-
-<div style="width: 250px;" class="no-wrap">
-  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
-</div>
-
-```
-
-`.truncated`
-
-Truncates a single line of text to its container width and applies an ellipsis at the end
-
-```html_example
-
-<div style="width: 250px;" class="truncated">
-  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
-</div>
-
-```
-
-`.clipped`
-
-Can be used to truncate after multiple lines of text. Specify `-webkite-line-clamp: #` to change # of lines.
-
-```html_example
-
-<div style="width: 250px;" class="clipped">
-  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
-</div>
-
-```
-
-*/
-@import url("//hello.myfonts.net/count/2b26e2");
-.no-wrap {
-  white-space: nowrap; }
-
-.truncated {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; }
-
-.clipped {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1; }
-
-.normal {
-  font-weight: 500 !important; }
-
-.uppercase {
-  text-transform: uppercase; }
-
 /* External libraries (vendor or otherwise)
    ========================================================================== */
 /* Fonts */
+@import url("//hello.myfonts.net/count/2b26e2");
 @font-face {
   font-family: BrandonText;
   font-weight: 500;
@@ -1625,37 +1556,26 @@ Can be used to truncate after multiple lines of text. Specify `-webkite-line-cla
 
 /* Basic framework - type, forms, tables, links, buttons, vertical rhythm
    ========================================================================== */
-/* Base - styles and settings needed for all projects.
+/* Base - global setup, styles, and classes for any project
    ========================================================================== */
 /* ==========================================================================
-   Global variables
+   Variables
    ========================================================================== */
 /**
-* These variables are needed for almost all parts of this project, so they
-* are always included.
+* These are the default values for the framework's many options. Variables
+* that use the !default flag are basically saying "assign this value unless
+* a value already exists."
 */
-/* Defaults
+/* ==========================================================================
+   Base Variables
    ========================================================================== */
-/* Custom breakpoints
+/* OPTION: include flexbox and flex list styles
    ========================================================================== */
-/**
-* These variables represent the max-width of a size break.
-*
-* Divvy these up however you want, but—by default—we're looking at something
-* like mobile (xs), tablet (sm), smaller/laptop (md), big lap/small monitor (lg),
-* standard monitor (xl).
-*
-* Feel free to customize these size breaks and/or rename and replace these
-* variable names.
-*/
-/* Padding
+/* Body variables
    ========================================================================== */
-/**
-* Multi-purpose, generic padding schema.
-*
-* TODO: do i need to do this?
-*/
-/* Typography
+/* Transitions variables
+   ========================================================================== */
+/* Global typography values
    ========================================================================== */
 /**
 * 1. The base font size of the site. This variable controls the basis of the
@@ -1681,105 +1601,10 @@ Can be used to truncate after multiple lines of text. Specify `-webkite-line-cla
 *    worry though: the vertical rhythm is calculated and will accept any
 *    changes in scale and adapt. See _mixins.css.scss for more info.
 */
+/* This will automatically adjust heading letter spacing to look nicer at larger font sizes. */
 /* 1 */
 /* 2 */
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-
-   Modified by Brian Cleveland (@yorthehunter)
-*/
-html, body {
-  height: 100%;
-  background-color: white; }
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-img {
-  display: block; }
-
-/* ==========================================================================
-   Global Mixins
-   ========================================================================== */
-/**
-* These mixins are needed for almost all parts of this project, so they are
-* always included.
-*/
-/* Media breakpoint, super-simple version
-   ========================================================================== */
-/**
-* 1. Sass magic that lets us pass content to the mixin. More reading:
-*    http://krasimirtsonev.com/blog/article/SASS-content-directive-is-a-wonderful-thing
-*/
-/* Returns exponent
-   ========================================================================== */
-/**
-* 1. Reset value
-* 2. Positive integers get multiplied
-* 3. Negative integers get divided. A number divided by itself is 1
-* 4. Return the last value written
-*/
-/* Font size and line height mixin
-   ========================================================================== */
-/**
-* 1. Multiply by 1 unit (e.g. rem) to get the size in units
-* 2. Do a little math and round it to get a pleasant and scalable line height.
-*    This is a necessity for rem-based, beautiful vertical rhythm. At least, it
-*    is for this system.
-* 3. Optional: For aesthetics, adjust letter-space to -1% of font size.
-*/
-/* Typography - everything typography-related
-   ========================================================================== */
-/*doc
----
-title: "Customizing typography"
-name: basic-typography-variables
-category: typography
----
-
-<pre>
-  <code class="language-css">
-$user-font-family-sans-serif: "Source Sans Pro" !default;
-$user-font-family-serif:      null !default;
-
-$font-family-sans-serif: $user-font-family-sans-serif, "Helvetica Neue", Helvetica, sans-serif;
-$font-family-serif:      $user-font-family-serif, Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, serif;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:       $font-family-sans-serif !default;
-
-$text-base-color:  #444 !default;
-$text-light-color: lighten($text-base-color, 33%);
-$text-dark-color:  darken($text-base-color, 33%);
-
-$small-size:      65 !default;
-$small-size-unit: "%" !default;
-  </code>
-</pre>
-
-*/
-/* Basic font variables
+/* Basic typography variables
    ========================================================================== */
 /**
 * 1. Optional: User font family definition. Add a font or fonts as a variable
@@ -1820,11 +1645,151 @@ $small-size-unit: "%" !default;
 *    application. Tweak them to get something that works for you.
 */
 /* 1 */
+/* Custom breakpoints
+   ========================================================================== */
+/**
+* These variables represent the max-width of a size break.
+*
+* Define these values as you need, but, by default, we're looking at something
+* like mobile (xs), tablet (sm), smaller lap (md), big lap/small monitor (lg),
+* standard monitor (xl).
+*
+* Feel free to customize these size breaks and/or rename and replace these
+* variable names.
+*/
+/* ==========================================================================
+   Elements Variables
+   ========================================================================== */
+/* Links variables
+   ========================================================================== */
+/* Lists variables
+   ========================================================================== */
+/* Tables variables
+   ========================================================================== */
+/* Forms variables
+   ========================================================================== */
+/* ==========================================================================
+   Structure Variables
+   ========================================================================== */
+/* Layout variables
+   ========================================================================== */
+/* Containers variables
+   ========================================================================== */
+/**
+* 1. Include a $container-max if you want to constrain the maximum allowable
+*    width for the container, regardless of breakpoint constraints.
+*
+* 2. Center the container by default. Possible values: left / right / center
+*/
+/* Container constraint variables */
+/* 1 */
+/* 2 */
+/* Grid variables
+   ========================================================================== */
+/* ==========================================================================
+   Modules Variables
+   ========================================================================== */
+/* Buttons variables
+   ========================================================================== */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+   Modified by Brian Cleveland (@yorthehunter)
+*/
+html, body {
+  height: 100%;
+  background-color: white; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+img {
+  display: block; }
+
+/* ==========================================================================
+   Base Mixins
+   ========================================================================== */
+/**
+* These mixins are needed for almost all parts of this project, so they are
+* always included.
+*/
+/* Media breakpoint, super-simple version
+   ========================================================================== */
+/**
+* 1. Sass magic that lets us pass content to the mixin. More reading:
+*    http://krasimirtsonev.com/blog/article/SASS-content-directive-is-a-wonderful-thing
+*/
+/* Returns exponent
+   ========================================================================== */
+/**
+* 1. Reset value
+* 2. Positive integers get multiplied
+* 3. Negative integers get divided. A number divided by itself is 1
+* 4. Return the last value written
+*/
+/* Font size and line height mixin
+   ========================================================================== */
+/**
+* 1. Multiply by 1 unit (e.g. rem) to get the size in units
+* 2. Do a little math and round it to get a pleasant and scalable line height.
+*    This is a necessity for rem-based, beautiful vertical rhythm. At least, it
+*    is for this system.
+* 3. Optional: For aesthetics, adjust letter-space to -1% of font size.
+*/
+/*doc
+---
+title: "Customizing typography"
+name: basic-typography-variables
+category: base
+---
+
+<pre>
+  <code class="language-css">
+$user-font-family-sans-serif: "Source Sans Pro" !default;
+$user-font-family-serif:      null !default;
+
+$font-family-sans-serif: $user-font-family-sans-serif, "Helvetica Neue", Helvetica, sans-serif;
+$font-family-serif:      $user-font-family-serif, Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:       $font-family-sans-serif !default;
+
+$text-base-color:  #444 !default;
+$text-light-color: lighten($text-base-color, 33%);
+$text-dark-color:  darken($text-base-color, 33%);
+
+$small-size:      65 !default;
+$small-size-unit: "%" !default;
+  </code>
+</pre>
+
+*/
 /*doc
 ---
 title: Typography
 name: basic-typography
-category: typography
+category: base
 ---
 
 The basic typography and vertical rhythm is already setup by default. It's
@@ -1869,18 +1834,14 @@ h1, .h1 {
   /* 1 */
   margin-bottom: 4rem;
   line-height: 5rem;
-  /* 2 */
-  letter-spacing: -0.04508rem;
-  /* 3 */ }
+  /* 2 */ }
 
 h2, .h2 {
   font-size: 2.93163rem;
   /* 1 */
   margin-bottom: 3rem;
   line-height: 3rem;
-  /* 2 */
-  letter-spacing: -0.02932rem;
-  /* 3 */ }
+  /* 2 */ }
 
 h3, .h3, input.input-lg:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
 select.input-lg,
@@ -1889,18 +1850,14 @@ textarea.input-lg {
   /* 1 */
   margin-bottom: 2rem;
   line-height: 3rem;
-  /* 2 */
-  letter-spacing: -0.02364rem;
-  /* 3 */ }
+  /* 2 */ }
 
 h4, .h4 {
   font-size: 1.90662rem;
   /* 1 */
   margin-bottom: 2rem;
   line-height: 2rem;
-  /* 2 */
-  letter-spacing: -0.01907rem;
-  /* 3 */ }
+  /* 2 */ }
 
 h5, .h5,
 p, .p,
@@ -1909,24 +1866,20 @@ dl, ol, ul {
   /* 1 */
   margin-bottom: 1rem;
   line-height: 2rem;
-  /* 2 */
-  letter-spacing: -0.0124rem;
-  /* 3 */ }
+  /* 2 */ }
 
 h6, .h6 {
   font-size: 1rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 1rem;
-  /* 2 */
-  letter-spacing: -0.01rem;
-  /* 3 */ }
+  /* 2 */ }
 
 /*doc
 ---
 title: "Headings and paragraphs"
 name: headings-and-paragraphs
-category: typography
+category: base
 ---
 
 Headings are given some default styling to give them a typographical
@@ -1971,40 +1924,25 @@ The code above works, but doesn't say as much semantically. YMMV.
 /**
 * 1. The .p class can be used to describe paragraph text when an actual <p>
 *    isn't used. E.g. <div class="p">Text goes here.</div>
-* 2. The last paragraph in a group of paragraphs (or single paragraph) will not
-*    have a margin below it. The complicated "not" selector will ignore this
-*    declaration for the margin-bottom (.mbN) classes, allowing the margin-bottom
-*    to instead by managed by the class.
-*    We use the :not selector because the last-of-type selector, when attached
-*    to the <p> or .p, is more specific than the .mbN class.
-*    Note: this is personal preference. Delete if you want.
 */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700;
   color: inherit;
   text-rendering: optimizeLegibility; }
 
-p:last-of-type:not([class^="mb"]), .p:last-of-type:not([class^="mb"]) {
-  /* 2 */
-  margin-bottom: 0; }
-
 .f-xl {
   font-size: 10.65709rem;
   /* 1 */
   margin-bottom: 6rem;
   line-height: 11rem;
-  /* 2 */
-  letter-spacing: -0.10657rem;
-  /* 3 */ }
+  /* 2 */ }
 
 .f-lg {
   font-size: 6.93099rem;
   /* 1 */
   margin-bottom: 5rem;
   line-height: 7rem;
-  /* 2 */
-  letter-spacing: -0.06931rem;
-  /* 3 */ }
+  /* 2 */ }
 
 form,
 .form, input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
@@ -2015,33 +1953,27 @@ textarea,
   /* 1 */
   margin-bottom: 1rem;
   line-height: 2rem;
-  /* 2 */
-  letter-spacing: -0.0124rem;
-  /* 3 */ }
+  /* 2 */ }
 
 .f-sm {
   font-size: 1rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 1rem;
-  /* 2 */
-  letter-spacing: -0.01rem;
-  /* 3 */ }
+  /* 2 */ }
 
 .f-xs {
   font-size: 0.80645rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 1rem;
-  /* 2 */
-  letter-spacing: -0.00806rem;
-  /* 3 */ }
+  /* 2 */ }
 
 /*doc
 ---
 title: "Helper classes"
 name: helper-typography-classes
-category: typography
+category: base
 ---
 
 The following are some utility classes that help control the visuals of your
@@ -2068,7 +2000,11 @@ use them or not, so stay cautious, friends.
 <sub>Subscript text</sub>
 <br />
 <div class="small">Small text</div>
+<div class="uppercase">Uppercase text</div>
 <div class="strike">Strikethrough text</div>
+<div style="width: 250px;" class="truncated">
+  Lorem ipsum dolor sit amet, nibh elit inermis ex eum, at quot verear vix, sed no unum dicam. Et pro possim repudiandae mediocritatem. Noster petentium expetenda ea pro, diam elit ridens id pro. Deserunt praesent ut vel, ad est natum habeo abhorreant.
+</div>
 <div class="text-l">Align left</div>
 <div class="text-c">Align center</div>
 <div class="text-r">Align right</div>
@@ -2076,6 +2012,7 @@ use them or not, so stay cautious, friends.
 <div class="dark">Dark text</div>
 <div class="thin">Thin text</div>
 <div class="thick">Thick text</div>
+<div class="normal">Normal weight text</div>
 <div class="line1">Line height of 1 rem</div>
 <div class="line2">Line height of 2 rem</div>
 <div class="line3">Line height of 3 rem</div>
@@ -2113,8 +2050,16 @@ small,
   font-size: 80%;
   line-height: 1rem; }
 
+.uppercase {
+  text-transform: uppercase; }
+
 .strike {
   text-decoration: line-through; }
+
+.truncated {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 .text-l {
   text-align: left   !important; }
@@ -2122,6 +2067,7 @@ small,
 .text-c {
   text-align: center !important; }
 
+.list-flex li.list-header,
 .text-r {
   text-align: right  !important; }
 
@@ -2137,6 +2083,9 @@ small,
 
 .thick {
   font-weight: 700; }
+
+.normal {
+  font-weight: 500 !important; }
 
 .line1 {
   line-height: 1rem !important; }
@@ -2155,7 +2104,7 @@ small,
 ---
 title: "Responsive text"
 name: responsive-text
-category: typography
+category: base
 ---
 
 `f-xl` `f-lg` `h1` `h2` `h3` `h4` and `p` classes react responsively to change the
@@ -2183,86 +2132,68 @@ devices for better readability.
     /* 1 */
     margin-bottom: 5rem;
     line-height: 7rem;
-    /* 2 */
-    letter-spacing: -0.06931rem;
-    /* 3 */ }
+    /* 2 */ }
 
   .f-lg {
     font-size: 4.50767rem;
     /* 1 */
     margin-bottom: 4rem;
     line-height: 5rem;
-    /* 2 */
-    letter-spacing: -0.04508rem;
-    /* 3 */ }
+    /* 2 */ }
 
   .h1 {
     font-size: 3.63522rem;
     /* 1 */
     margin-bottom: 3rem;
     line-height: 4rem;
-    /* 2 */
-    letter-spacing: -0.03635rem;
-    /* 3 */ }
+    /* 2 */ }
 
   .h2 {
     font-size: 2.36421rem;
     /* 1 */
     margin-bottom: 2rem;
     line-height: 3rem;
-    /* 2 */
-    letter-spacing: -0.02364rem;
-    /* 3 */ }
+    /* 2 */ }
 
   .h3 {
     font-size: 1.90662rem;
     /* 1 */
     margin-bottom: 2rem;
     line-height: 2rem;
-    /* 2 */
-    letter-spacing: -0.01907rem;
-    /* 3 */ } }
+    /* 2 */ } }
 @media screen and (max-width: 768px) {
   .f-lg, .f-xl {
     font-size: 3.63522rem;
     /* 1 */
     margin-bottom: 3rem;
     line-height: 4rem;
-    /* 2 */
-    letter-spacing: -0.03635rem;
-    /* 3 */ }
+    /* 2 */ }
 
   .h1 {
     font-size: 2.93163rem;
     /* 1 */
     margin-bottom: 3rem;
     line-height: 3rem;
-    /* 2 */
-    letter-spacing: -0.02932rem;
-    /* 3 */ }
+    /* 2 */ }
 
   .h2 {
     font-size: 1.90662rem;
     /* 1 */
     margin-bottom: 2rem;
     line-height: 2rem;
-    /* 2 */
-    letter-spacing: -0.01907rem;
-    /* 3 */ }
+    /* 2 */ }
 
   .h3, .p, .h4 {
     font-size: 1.5376rem;
     /* 1 */
     margin-bottom: 1rem;
     line-height: 2rem;
-    /* 2 */
-    letter-spacing: -0.01538rem;
-    /* 3 */ } }
+    /* 2 */ } }
 /*doc
 ---
 title: "Responsive text alignment"
 name: responsive-text-alignment
-category: typography
+category: base
 ---
 
 Some utility classes for forcing the alignment of text responsively.
@@ -2293,11 +2224,8 @@ class that would align the text to the left.
     float: none !important; }
 
   /* 1 */ }
-/* Elementary - fundamental styling for commonly-used tags
+/* Elements - basic default styling for fundamental elements
    ========================================================================== */
-/**
-* Standalones. Don't like it? Leave it out.
-*/
 /*doc
 ---
 title: "Customizing links"
@@ -2356,8 +2284,8 @@ also a couple of classes you can use to make links more universally useful.
 </div>
 
 ```
-
 */
+.link,
 a {
   color: #67baaf;
   text-decoration: none;
@@ -2366,25 +2294,55 @@ a {
   -ms-transition: color, 200ms;
   -o-transition: color, 200ms;
   transition: color, 200ms; }
+  .link:visited,
   a:visited {
     color: #67baaf; }
+  .link.light,
   a.light {
     color: #77abc9; }
+    .link.light:visited,
     a.light:visited {
       color: #77abc9; }
+    .link.light:hover,
     a.light:hover {
       color: #284c72; }
+    .link.light:active,
     a.light:active {
       color: #77abc9; }
+  .link.link-white,
   a.link-white {
     color: white; }
-    a.link-white:visited, a.link-white:hover, a.link-white:active {
+    .link.link-white:visited,
+    .link.link-white:hover,
+    .link.link-white:active,
+    a.link-white:visited,
+    a.link-white:hover,
+    a.link-white:active {
       color: white; }
+  .link:hover,
   a:hover {
     color: #326f67; }
+  .link:active,
   a:active {
     color: #67baaf; }
 
+/*doc
+---
+title: "Customizing lists"
+name: lists-variables
+category: elements
+---
+
+```html_example
+<pre>
+  <code class="language-css">
+$list-pad: 1.5rem !default;
+$list-inline-gutter: 1rem !default;
+  </code>
+</pre>
+```
+
+*/
 /*doc
 ---
 title: Lists
@@ -2423,6 +2381,14 @@ a couple of classes with which to extend these to make them more versatile.
 </ul>
 <hr />
 
+<h2 class="h4">Condensed list</h2>
+<ul class="list-condensed">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr />
+
 <h2 class="h4">Inline list</h2>
 <ul class="list-inline">
   <li>List item 1</li>
@@ -2442,10 +2408,9 @@ a couple of classes with which to extend these to make them more versatile.
 ```
 
 */
-/* Basic list styling */
 ul,
 ol {
-  padding-left: 1.5em;
+  padding-left: 1.5rem;
   margin-top: 0; }
   ul ul,
   ul ol,
@@ -2470,17 +2435,22 @@ dd {
 dl > dd:last-child {
   margin-bottom: 0; }
 
-/* List utility classes - extends ul, ol, dl */
 .list-unstyled {
   padding-left: 0;
   list-style: none; }
+
+.list-condensed {
+  margin-bottom: 0; }
+  .list-condensed > li {
+    margin-bottom: 0; }
 
 .list-inline {
   padding-left: 0; }
   .list-inline > li {
     display: inline-block;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem; }
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    vertical-align: middle; }
   @media screen and (max-width: 480px) {
     .list-inline.list-nav {
       /* 1 */ }
@@ -2502,16 +2472,17 @@ category: elements
 
 <pre>
   <code class="language-css">
-$table-cell-pad:           $pad-v-sm $pad-h-base;
-$table-cell-condensed-pad: $pad-v-xs $pad-h-sm;
+$table-cell-pad:           1rem 1rem;
+$table-cell-condensed-pad: 0.5rem 0.5rem;
 
-$table-bg:            transparent !default;
-$table-header-border: rgba(0, 0, 0, 0.1) !default;
-$table-footer-border: rgba(0, 0, 0, 0.1) !default;
-$table-cell-border:   rgba(0, 0, 0, 0.1) !default;
-$table-stripe-color:  #F0F0F0 !default;
-$table-hover-color:   #E7E7E7 !default;
-$table-border-color:  rgba(0, 0, 0, 0.1) !default;
+$table-bg:             transparent !default;
+$table-header-border:  rgba(0, 0, 0, 0.1) !default;
+$table-footer-border:  rgba(0, 0, 0, 0.1) !default;
+$table-cell-border:    rgba(0, 0, 0, 0.1) !default;
+$table-stripe-color:   #F0F0F0 !default;
+$table-hover-color:    #E7E7E7 !default;
+$table-border-color:   rgba(0, 0, 0, 0.1) !default;
+$table-vertical-align: middle;
 
 $table-stripe-dark-color: rgba(255, 255, 255, 0.1) !default;
 $table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
@@ -2534,6 +2505,37 @@ classes to help define some basic UX-ready tables.
 
 <h2 class="h4">Default table</h2>
 <table>
+  <thead>
+    <tr>
+      <th>Table Header 1</th>
+      <th>Table Header 2</th>
+      <th>Table Header 3</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Table Footer 1</td>
+      <td>Table Footer 2</td>
+      <td>Table Footer 3</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+    <tr>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+      <td>Table Body 1</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+
+<h2 class="h4">Unstyled table</h2>
+<table class='table-unstyled'>
   <thead>
     <tr>
       <th>Table Header 1</th>
@@ -2594,6 +2596,68 @@ classes to help define some basic UX-ready tables.
 </table>
 <hr/>
 
+<h2 class="h4">No padding Table</h2>
+<table class="table-nopad">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
+<h2 class="h4">Bordered Table</h2>
+<table class="table-bordered">
+  <thead>
+  <tr>
+    <th>Table Header 1</th>
+    <th>Table Header 2</th>
+    <th>Table Header 3</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Table Footer 1</td>
+    <td>Table Footer 2</td>
+    <td>Table Footer 3</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+
 <h2 class="h4">Striped Table</h2>
 <table class="table-striped">
   <thead>
@@ -2611,6 +2675,11 @@ classes to help define some basic UX-ready tables.
   </tr>
   </tfoot>
   <tbody>
+  <tr>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+    <td>Table Body 1</td>
+  </tr>
   <tr>
     <td>Table Body 1</td>
     <td>Table Body 1</td>
@@ -2765,14 +2834,19 @@ th {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 td {
-  vertical-align: top; }
+  vertical-align: middle; }
 
-tfoot td {
-  background-color: transparent; }
+.table-unstyled td,
+.table-unstyled th {
+  border-bottom-color: transparent; }
 
 .table-condensed td,
 .table-condensed th {
   padding: 0.5rem 0.5rem; }
+
+.table-nopad td,
+.table-nopad th {
+  padding: 0; }
 
 .table-bordered td,
 .table-bordered th {
@@ -2812,20 +2886,27 @@ category: elements
 
 <pre>
   <code class="language-css">
-$text-light-color:       $text-light-color !default;
+$input-gray:       #BBC;
+$input-blue:       #126BAD;
+$input-blue-soft:  #7cafec;
+$input-blue-light: #d4e6f0;
+
+$form-base-color:        $text-light-color !default;
 $form-placeholder-color: #afa9af !default;
 
-$form-pad-v-base:        $pad-v-xs !default;
-$form-pad-h-base:        $pad-h-xs !default;
+$form-pad-v-base: 0.5rem  !default;
+$form-pad-h-base: 0.25rem !default;
 
-$input-bg:               #f0f0f0 !default;
-$input-border-width:     1px !default;
-$input-border-color:     #afa9af !default;
-$input-focus-bg:         white !default;
-$input-focus-color:      $text-base-color !default;
+$input-bg:           #f0f0f0 !default;
+$input-border-width: 1px !default;
+$input-border-color: #afa9af !default;
+$input-focus-bg:     white !default;
+$input-focus-color:  $text-base-color !default;
 
-$input-disabled-bg:      rgba($input-bg, 0.5) !default;
-$input-disabled-color:   rgba($form-base-color, 0.5) !default;
+$input-disabled-bg:    rgba($input-bg, 0.5) !default;
+$input-disabled-color: rgba($form-base-color, 0.5) !default;
+
+$labels-look-like-links-option: false !default;
   </code>
 </pre>
 
@@ -2901,11 +2982,9 @@ button {
 label {
   font-size: 1.24rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 2rem;
   /* 2 */
-  letter-spacing: -0.0124rem;
-  /* 3 */
   margin-right: 0.5rem;
   display: inline-block;
   vertical-align: top;
@@ -2924,13 +3003,15 @@ textarea {
   padding: 0.5rem 0.25rem;
   background-color: #f0f0f0;
   border: 1px solid #afa9af;
+  height: 3rem;
   box-sizing: border-box;
   font-family: BrandonText, "Helvetica Neue", Helvetica, sans-serif;
   vertical-align: top; }
   input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]).input-lg,
   select.input-lg,
   textarea.input-lg {
-    max-height: 5rem; }
+    max-height: 5rem;
+    min-height: 4rem; }
   input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]):focus,
   select:focus,
   textarea:focus {
@@ -2948,6 +3029,8 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline-block;
   margin-right: 0.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 1em; }
 
 .form-stacked input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
@@ -2955,33 +3038,128 @@ input[type="radio"] {
 .form-stacked textarea {
   margin: 0;
   width: 100%; }
-.form-stacked label {
-  line-height: inherit; }
 
-input[disabled],
-select[disabled],
-input:disabled,
-select:disabled,
-.disabled {
+input[disabled]:not(.btn),
+select[disabled]:not(.btn),
+input:disabled:not(.btn),
+select:disabled:not(.btn),
+.disabled:not(.btn) {
   opacity: 0.65;
   cursor: not-allowed;
   background-color: rgba(240, 240, 240, 0.5) !important;
   color: rgba(152, 152, 152, 0.5) !important; }
 
+  /*doc
+  ---
+  title: Flexbox
+  name: flexbox
+  category: elements
+  ---
+
+  Flexbox is a way to create an expandable/contractible set of elements
+  in modern browsers. The standard flexbox consists of a parent container
+  and any number of flexible child elements.
+
+  This section is unofficial and unfinished.
+
+  ```html_example
+  <div class="flex-container">
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      1
+    </div>
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      2
+    </div>
+    <div class="flex-item flex-left f-lg bordered border-xs">
+      3
+   </div>
+  </div>
+  ```
+
+  */
+.list-flex,
+.flex-container {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex; }
+  .list-flex li,
+  .list-flex .flex-item,
+  .flex-container .list-flex li,
+  .list-flex .flex-container li,
+  .flex-container .flex-item {
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-flex: 1;
+    flex: 1; }
+  .list-flex .flex-left,
+  .flex-container .flex-left {
+    margin-left: 0; }
+  .list-flex .flex-0,
+  .flex-container .flex-0 {
+    -webkit-flex: 0;
+    flex: 0; }
+  .list-flex li,
+  .list-flex .flex-2,
+  .flex-container .list-flex li,
+  .list-flex .flex-container li,
+  .flex-container .flex-2 {
+    -webkit-flex: 2;
+    flex: 2; }
+  .list-flex .flex-3,
+  .flex-container .flex-3 {
+    -webkit-flex: 3;
+    flex: 3; }
+  .list-flex li.list-header,
+  .list-flex .flex-4,
+  .flex-container .list-flex li.list-header,
+  .list-flex .flex-container li.list-header,
+  .flex-container .flex-4 {
+    -webkit-flex: 4;
+    flex: 4; }
+
+  /*doc
+  ---
+  title: "Flex list"
+  name: flexlist
+  category: elements
+  ---
+
+  List flex extends <ul> and uses <li> children as flexible sections.
+
+  This section is unofficial and unfinished.
+
+  ```html_example
+  <ul class="list-flex">
+    <li class="list-header">
+      List header
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+    <li>
+      List item
+    </li>
+  </ul>
+  ```
+
+  */
+.list-flex {
+  list-style: none;
+  padding-left: 0; }
+
 /* Structure - Helpers that manage the layout and vertical rhythm of a site.
    ========================================================================== */
-/**
-* These will be the most invasive classes for your markup for a good reason:
-* You want to be able to glance at the markup and get an idea of what the
-* layout will be. I have no problem creating many classes to help structure
-* a site. If you make fundamental changes to your structure later, you will
-* be making markup changes anyway, right?
-*/
 /*doc
 ---
 title: "Customizing layout"
 name: layout-variables
-category: layout
+category: structure
 ---
 
 <pre>
@@ -2999,7 +3177,7 @@ $padding-base: $margin-base !default;
 ---
 title: "Margin helpers"
 name: margin-helpers
-category: layout
+category: structure
 ---
 
 Use margin and padding helpers to keep vertical rhythm. Micro classes like
@@ -3061,6 +3239,8 @@ Better:
   margin-left: auto;
   margin-right: auto; }
 
+.list-flex,
+.list-flex li,
 .m0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important; }
@@ -3160,7 +3340,7 @@ Better:
 ---
 title: "Padding helpers"
 name: padding-helpers
-category: layout
+category: structure
 ---
 
 ```html_example
@@ -3211,6 +3391,7 @@ category: layout
   padding-left: 0.25rem;
   padding-right: 0.25rem; }
 
+.list-flex li.list-header,
 .px1 {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
@@ -3264,7 +3445,7 @@ category: layout
 ---
 title: "Position helpers"
 name: position-helpers
-category: layout
+category: structure
 ---
 
 Position elements using micro classes for better control.
@@ -3280,6 +3461,9 @@ Position elements using micro classes for better control.
     Absolutely positioned left, top, bottom
     <br />
     (to stretch from top to bottom)
+  </div>
+  <div class="pos-abs pos-center" style="background-color: #BBC; width: 100px; height: 100px; margin-top: -50px; margin-left: -50px;">
+    Centered
   </div>
 </div>
 
@@ -3312,6 +3496,10 @@ Position elements using micro classes for better control.
   right: 0;
   bottom: 0; }
 
+.pos-center {
+  top: 50%;
+  left: 50%; }
+
 .z1 {
   z-index: 1; }
 
@@ -3328,7 +3516,7 @@ Position elements using micro classes for better control.
 ---
 title: "Utility helpers"
 name: utility-helpers
-category: layout
+category: structure
 ---
 
 ```html_example
@@ -3342,6 +3530,7 @@ category: layout
   <p>Clearfix: successfully displays a container that contains floated child elements</p>
   <p class="left p1" style="background-color: #BBC;">Float left</p>
   <p class="right p1" style="background-color: #BBC;">Float right</p>
+  <p class="centered p1" style="background-color: #BBC; width: 300px;">Centered block content</p>
 </div>
 
 ```
@@ -3366,13 +3555,13 @@ hr,
 .full-width {
   width: 100%; }
 
-.clearfix:before, .clearfix:after,
-.container:before,
-.container:after {
+.container:before, .container:after,
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table; }
-.clearfix:after,
-.container:after {
+.container:after,
+.clearfix:after {
   clear: both; }
 
 .right {
@@ -3381,21 +3570,27 @@ hr,
 .left {
   float: left; }
 
+.centered {
+  margin-left: auto;
+  margin-right: auto; }
+
 /*doc
 ---
 title: "Responsive display"
 name: z-responsive-display
-category: layout
+category: structure
 ---
 
 **Responsively show and hide content - use with caution**
 
 `hidden` class will hide class at any breakpoint.
 
+`full-width-xs` forces element to be full width of parent at xs breakpoint
+
 These classes will hide content at defined breakpoints.
 
 For example:
-<div class="hide_xs">
+<div class="hidden-xs">
   Something worth hiding
 </div>
 
@@ -3404,45 +3599,54 @@ so be cognizant of the load impact and use *wisely*.
 
 Responsive display classes:
 
-`hide_xl` `hide_lg` `hide_ltlg` `hide_md` `hide_ltmd` `hide_sm` `hide_ltsm` `hide_xs` `hide_gtxs` `hide_gtsm`
+`hidden-xl` `hidden-lg` `hidden-ltlg` `hidden-md` `hidden-ltmd` `hidden-sm` `hidden-ltsm` `hidden-xs` `hidden-gtxs` `hidden-gtsm`
 
 */
-/* This class will hide content at any breakpoint, even from screen readers. */
 .hidden {
   display: none !important; }
 
 @media screen and (min-width: 1201px) {
-  .hide_xl {
+  .hidden-xl {
     display: none !important; } }
 @media screen and (max-width: 1200px) and (min-width: 993px) {
-  .hide_lg {
+  .hidden-lg {
     display: none !important; } }
 @media screen and (max-width: 1200px) {
-  .hide_ltlg {
+  .hidden-ltlg {
     display: none !important; } }
 @media screen and (max-width: 992px) and (min-width: 769px) {
-  .hide_md {
+  .hidden-md {
     display: none !important; } }
 @media screen and (max-width: 992px) {
-  .hide_ltmd {
+  .hidden-ltmd {
     display: none !important; } }
 @media screen and (max-width: 768px) and (min-width: 481px) {
-  .hide_sm {
+  .hidden-sm {
     display: none !important; } }
 @media screen and (max-width: 768px) {
-  .hide_ltsm {
+  .hidden-ltsm {
     display: none !important; } }
 @media screen and (max-width: 480px) {
-  .hide_xs {
+  .hidden-xs {
     display: none !important; }
 
   /* 1 */ }
-@media screen and (min-width: 480px) {
-  .hide_gtxs {
+@media screen and (min-width: 481px) {
+  .hidden-gtxs {
     display: none !important; } }
-@media screen and (min-width: 768px) {
-  .hide_gtsm {
+@media screen and (min-width: 769px) {
+  .hidden-gtsm {
     display: none !important; } }
+@media screen and (max-width: 480px) {
+  .full-width-xs {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+    .full-width-xs:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]) {
+      padding-left: 0 !important;
+      padding-right: 0 !important; }
+
+  /* 1 */ }
 /*doc
 ---
 title: Container
@@ -3454,19 +3658,6 @@ The `.container` class, when included, will constrain the width of its
 children and collapse based on defined media breakpoints.
 
 */
-/* Container
-   ========================================================================== */
-/**
-* 1. Include a $container-max if you want to constrain the maximum allowable
-*    width for the container, regardless of breakpoint constraints.
-*
-* 2. Center the container by default.
-*
-* 3. @if statement handles
-*/
-/* Container constraint variables */
-/* 1 */
-/* 2 */
 .container {
   padding: 0 10px;
   margin-left: auto;
@@ -3533,6 +3724,8 @@ children and collapse based on defined media breakpoints.
     max-width: 972px; }
   .container.contain-to-sm {
     max-width: 748px; }
+  .container.contain-to-sm {
+    max-width: 460px; }
 
 /*doc
 ---
@@ -3923,10 +4116,95 @@ Grid utility classes extend the .grid class.
       text-align: left;
       margin-right: 0; }
 
-/* Modules - REUSABLE patterns. I'm only forcing one on you: buttons.
+/* Modules - reusable patterns commonly found on most web apps
    ========================================================================== */
-/**
-* But don't be scared. These buttons are highly customizable and friendly!
+/*doc
+---
+title: "Media object"
+name: media_object
+category: modules
+---
+Made famous here:
+<a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">
+The media object saves hundreds of lines of code
+</a>
+
+The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+
+```html_example
+
+<div class="media">
+  <img src="http://fillmurray.com/100/100" class="left mr1">
+  <p class="media-body">
+    The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+  </div>
+</div>
+
+```
+*/
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1; }
+
+.media:first-child {
+  margin-top: 0; }
+
+.media-object {
+  display: block; }
+
+/*doc
+---
+title: "Customizing buttons"
+name: buttons-variables
+category: modules
+---
+```html_example
+
+<pre>
+  <code class="language-css">
+$btn-font-weight:      $font-weight-thin !default;
+$btn-border-radius:    0.25rem !default;
+$btn-shadow:           inset 0 2px 6px rgba(0,0,0,0.3) !default;
+
+$btn-bg-default:       $btn-gray !default;
+$btn-color-default:    white !default;
+$btn-border-default:   darken($btn-bg-default, 10%) !default;
+
+$btn-bg-primary:       $btn-blue !default;
+$btn-color-primary:    white !default;
+$btn-border-primary:   darken($btn-bg-primary, 10%) !default;
+
+$btn-bg-secondary:     $btn-violet !default;
+$btn-color-secondary:  white !default;
+$btn-border-secondary: darken($btn-bg-secondary, 10%) !default;
+
+$btn-bg-tertiary:      $btn-blue-soft !default;
+$btn-color-tertiary:   white !default;
+$btn-border-tertiary:  darken($btn-bg-tertiary, 10%) !default;
+
+$btn-bg-link:          $btn-blue-light !default;
+$btn-bg-link-dark:     rgba(255,255,255,0.15) !default;
+$btn-border-link:      rgba($btn-blue-light,0.0) !default;
+
+$btn-hover-adjustment: 8% !default;
+$btn-border-width:     1px !default;
+$btn-transition-speed: 0.2s !default;
+
+--- Optional customizations ---
+$btn-inset-option:       true !default;
+$btn-border-option:      true !default;
+$btn-radius-option:      true !default;
+$btn-text-shadow-option: true !default;
+$btn-transition-option:  true !default;
+$btn-hover-bg-option:    true !default;
+$btn-mobile-full-width:  true !default;
+  </code>
+</pre>
+
+```
 */
 /*doc
 ---
@@ -3968,11 +4246,9 @@ category: modules
 .btn {
   font-size: 1.90662rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 2rem;
   /* 2 */
-  letter-spacing: -0.01907rem;
-  /* 3 */
   display: inline-block;
   font-weight: 300;
   text-align: center;
@@ -4007,14 +4283,18 @@ category: modules
     border-color: #a5a5b6;
     color: white;
     text-shadow: 0 0 15px white, 0 0 30px white; }
-  .btn:active, .btn.current, .btn.active {
+  .btn:active,
+  .btn.current,
+  .btn.active {
     -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
     background-color: #8f8fa4; }
+  .btn:active,
   .btn:visited {
     color: white; }
-  .btn.disabled, .btn[disabled] {
+  .btn.disabled,
+  .btn[disabled] {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.45;
@@ -4029,8 +4309,14 @@ category: modules
   .btn-primary:hover {
     background-color: #bce4e0;
     border-color: #98d5cf; }
-  .btn-primary:active, .btn-primary.current, .btn-primary.active {
+  .btn-primary:active,
+  .btn-primary.current,
+  .btn-primary.active {
+    color: white;
     background-color: #7bc9c1; }
+  .btn-primary:hover,
+  .btn-primary:visited {
+    color: white; }
 
 .btn-secondary {
   background-color: #706f73;
@@ -4039,8 +4325,14 @@ category: modules
   .btn-secondary:hover {
     background-color: #848388;
     border-color: #6b6a6e; }
-  .btn-secondary:active, .btn-secondary.current, .btn-secondary.active {
+  .btn-secondary:active,
+  .btn-secondary.current,
+  .btn-secondary.active {
+    color: white;
     background-color: #575659; }
+  .btn-secondary:hover,
+  .btn-secondary:visited {
+    color: white; }
 
 .btn-tertiary {
   background-color: #9accec;
@@ -4049,34 +4341,39 @@ category: modules
   .btn-tertiary:hover {
     background-color: #bcddf2;
     border-color: #91c8ea; }
-  .btn-tertiary:active, .btn-tertiary.current, .btn-tertiary.active {
+  .btn-tertiary:active,
+  .btn-tertiary.current,
+  .btn-tertiary.active {
+    color: white;
     background-color: #6fb6e4; }
+  .btn-tertiary:hover,
+  .btn-tertiary:visited {
+    color: white; }
 
 .btn-link {
   background-color: transparent;
-  color: #007acb;
+  color: #67baaf;
   border-color: rgba(212, 230, 240, 0); }
   .btn-link:visited {
-    color: #007acb; }
+    color: #67baaf; }
   .btn-link:hover {
     background-color: #d4e6f0;
-    color: #9accec;
+    color: #326f67;
     border-color: rgba(242, 248, 251, 0); }
   .btn-link:active {
-    color: #007acb; }
+    color: #67baaf; }
   .btn-link.btn-link-dark:hover {
     background-color: rgba(255, 255, 255, 0.15); }
-  .btn-link.current, .btn-link.active {
+  .btn-link.current,
+  .btn-link.active {
     background-color: #d4e6f0; }
 
 .btn-xl {
   font-size: 2.93163rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 3rem;
   /* 2 */
-  letter-spacing: -0.02932rem;
-  /* 3 */
   height: 7rem;
   max-height: 7rem; }
   .btn-xl:not([class^="px"]):not([class*="px"]) {
@@ -4089,11 +4386,9 @@ category: modules
 .btn-lg {
   font-size: 2.36421rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 3rem;
   /* 2 */
-  letter-spacing: -0.02364rem;
-  /* 3 */
   height: 5rem;
   max-height: 5rem; }
   .btn-lg:not([class^="px"]):not([class*="px"]) {
@@ -4106,11 +4401,9 @@ category: modules
 .btn-sm {
   font-size: 1.24rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 2rem;
   /* 2 */
-  letter-spacing: -0.0124rem;
-  /* 3 */
   height: 3rem;
   max-height: 3rem; }
   .btn-sm:not([class^="px"]):not([class*="px"]) {
@@ -4123,11 +4416,9 @@ category: modules
 .btn-xs {
   font-size: 1rem;
   /* 1 */
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   line-height: 1rem;
   /* 2 */
-  letter-spacing: -0.01rem;
-  /* 3 */
   height: 2rem;
   max-height: 2rem; }
   .btn-xs:not([class^="px"]):not([class*="px"]) {
@@ -4170,6 +4461,7 @@ category: modules
 */
 .btn-group {
   display: inline-block;
+  vertical-align: top;
   font-size: 0; }
   .btn-group .btn + .btn,
   .btn-group .btn + .btn-group,
@@ -4194,52 +4486,6 @@ img {
 
 .small-dl dl {
   font-size: 1em; }
-
-/*doc
----
-title: Flexbox
-name: flexbox
-category: elements
----
-
-Flexbox is a way to create an expandable/contractible set of elements
-in modern browsers. The standard flexbox consists of a parent container
-and any number of flexible child elements.
-
-```html_example
-<div class="flex-container">
-  <div class="flex-item flex-left f-lg bordered border-xs">
-    1
-  </div>
-  <div class="flex-item flex-left f-lg bordered border-xs">
-    2
-  </div>
-  <div class="flex-item flex-left f-lg bordered border-xs">
-    3
- </div>
-</div>
-```
-
-*/
-.flex-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex; }
-  .flex-container .flex-item {
-    margin: auto;
-    -webkit-flex: 1;
-    flex: 1; }
-  .flex-container .flex-left {
-    margin-left: 0; }
-  .flex-container .flex-0 {
-    -webkit-flex: 0;
-    flex: 0; }
-  .flex-container .flex-2 {
-    -webkit-flex: 2;
-    flex: 2; }
-  .flex-container .flex-4 {
-    -webkit-flex: 4;
-    flex: 4; }
 
 .highlighttable, pre code, .code {
   border-top-right-radius: 6px;
@@ -4532,21 +4778,6 @@ pre code {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
-/* Forces element to be full width of parent at xs breakpoint */
-@media screen and (max-width: 480px) {
-  .full-width-xs {
-    width: 100%;
-    margin-left: 0 !important;
-    margin-right: 0 !important; }
-    .full-width-xs:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]) {
-      padding-left: 0 !important;
-      padding-right: 0 !important; }
-
-  /* 1 */ }
-.pos-center {
-  top: 50%;
-  left: 50%; }
-
 .mt6 {
   margin-top: 6rem; }
 
@@ -4898,7 +5129,7 @@ nav {
 
 img.post-image {
   width: 50%;
-  padding: 1rem 1rem; }
+  padding: 0.5rem 1rem; }
   img.post-image.post-image-right {
     float: right; }
   img.post-image.post-image-left {

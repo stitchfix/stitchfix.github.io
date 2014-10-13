@@ -1,5 +1,5 @@
 <nav class="top-nav">
-  <div class='container flex hide_gtsm'>
+  <div class='container flex hidden-gtsm'>
     <ul class='list-inline m0 clearfix'>
       <li class="left" style="max-width: 180px;">
         <a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#intro" class='btn btn-sm btn-link btn-link-dark light m0 pxhalf text-r-xs round-none'>
@@ -13,7 +13,7 @@
       </li>
     </ul>
   </div>
-  <div class='container flex hide_gtsm dropdown' id='nav_mobile'>
+  <div class='container flex hidden-gtsm dropdown' id='nav_mobile'>
     <ul class='list-inline list-nav m0 nav nav-tabs' role="tablist">
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#intro" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Home</a></li>
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#engineering" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Engineering</a></li>
@@ -24,7 +24,7 @@
       <li{% if page.layout == 'jobs' %} class="active"{% elsif page.url == '/jobs/index.html' %} class="active"{% else %}{% endif %}><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}jobs/index.html" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Jobs</a></li>
     </ul>
   </div>
-  <div class="container flex hide_ltsm js-srollspy">
+  <div class="container flex hidden-ltsm js-scrolling-nav js-srollspy">
     <ul class='list-inline list-nav m0 nav nav-tabs' role="tablist">
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#intro" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Home</a></li>
       <li><a href="{% if page.url != '/index.html' %}/{% else %}{% endif %}#engineering" class="btn btn-sm btn-link round-none m0 px2 text-l-xs">Engineering</a></li>

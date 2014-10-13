@@ -1,18 +1,18 @@
 /* Base - global setup, styles, and classes for any project
    ========================================================================== */
-@import "base/variables";
-@import "base/reset";
-@import "base/mixins";
-@import "base/typography";
+@import "base/variables.css.scss";
+@import "base/reset.css.scss";
+@import "base/mixins.css.scss";
+@import "base/typography.css.scss";
 
 
 /* Elements - basic default styling for fundamental elements
    ========================================================================== */
-@import "elements/links";
-@import "elements/lists";
-@import "elements/tables";
-@import "elements/forms";
-@import "elements/flex";
+@import "elements/links.css.scss";
+@import "elements/lists.css.scss";
+@import "elements/tables.css.scss";
+@import "elements/forms.css.scss";
+@import "elements/flex.css.scss";
 
 @if $include-flex-option == true {
   @include flex_styles;
@@ -21,12 +21,12 @@
 
 /* Structure - Helpers that manage the layout and vertical rhythm of a site.
    ========================================================================== */
-@import "structure/layout";
-@import "structure/containers";
-@import "structure/grid";
+@import "structure/layout.css.scss";
+@import "structure/containers.css.scss";
+@import "structure/grid.css.scss";
 
 
 /* Modules - reusable patterns commonly found on most web apps
    ========================================================================== */
-@import "modules/media";
-@import "modules/buttons";
+@import "modules/media.css.scss";
+@import "modules/buttons.css.scss";
