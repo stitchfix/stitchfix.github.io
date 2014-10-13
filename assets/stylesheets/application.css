@@ -1868,7 +1868,7 @@ dl, ol, ul {
   line-height: 2rem;
   /* 2 */ }
 
-h6, .h6 {
+h6, .h6, .social a {
   font-size: 1rem;
   /* 1 */
   margin-bottom: 0;
@@ -5066,15 +5066,13 @@ nav {
   .nav-trans:hover {
     opacity: 1; }
 
-.social {
-  margin-top: 6px;
-  margin-bottom: 20px; }
-  .social a {
-    margin-right: 6px; }
-    .social a, .social a:visited {
-      color: #444444; }
-    .social a:hover {
-      color: #67baaf; }
+.social a, .social a:visited {
+  color: #444444; }
+.social a:hover {
+  color: #67baaf; }
+
+.member-info img {
+  width: 100%; }
 
 .bio {
   padding: 6px 0;
@@ -5085,6 +5083,7 @@ nav {
     font-size: 80%;
     line-height: 1.2rem; }
   .bio .read-more {
+    margin-bottom: 0;
     position: absolute;
     bottom: 0;
     left: 0;

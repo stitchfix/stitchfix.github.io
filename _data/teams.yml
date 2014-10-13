@@ -1,0 +1,527 @@
+- teamname: engineering
+  members:
+    - name:        Jeff
+      lastname:    Barrett
+      location:    San Francisco
+      division:    Administrative Overhead
+      description: Jeff likes his objects oriented in a programmable fashion and his espresso well made. If he had a time machine he'd stop Buddy Holly from flying on any planes ever. Hails from New York.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    jeffreyjbarrett
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Jon
+      lastname:    Dean
+      location:    Pittsburgh
+      division:    Warehouse & Logistics
+      description: Jon is a web software engineer and pipes everything to /dev/null, the only true web scale. He's composed of 60% water, 20% coffee, 19% lager and 1% other. Hails from Pittsburgh.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       jon3
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    jonathanedean
+      github:      jonathandean
+      twitter:     jonathanedean
+      instagram:   jonathandean
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://jonathandean.com
+
+    - name:        Joel
+      lastname:    Strait
+      location:    San Francisco
+      division:    Styling
+      description: Joel builds great web applications with a secret blend of 11 technologies and spices. He's available for weddings, bar mitzvahs, and birthday parties. Once <a href='http://beatsdrummachine.com/'>built a command line drum machine</a> and then later <a href='http://www.joelstrait.com/blog/2014/6/14/nanosynth_create_sound_with_ruby'>did it again</a>. Hails from Pittsburgh.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:
+      github:      jstrait
+      twitter:     joelstrait
+      instagram:   joelstrait
+      flickr:      48041310@N00
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://joelstrait.com
+
+    - name:        Dave
+      lastname:    Copeland
+      location:    Washington, DC
+      division:    Warehouse & Logistics
+      description: Dave likes iced tea, cats, homemade bitters, and the commandline. He's written a <a class="link" title="Build Awesome Command-Line Applications in Ruby" href="http://pragprog.com/titles/dccar2">book on only one of those subjects</a>. Hails from Washington, DC.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:
+      github:      davetron5000
+      twitter:     davetron5000
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://naildrivin5.com
+
+    - name:        Andy
+      lastname:    Peterson
+      location:    San Francisco
+      division:    Client Experience
+      description: Andy builds compelling software. He bikes, hikes, hoops, wears shorts, and plays with art and music. Adopted SF native but hails from the cold in the North.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    ndpsoftware
+      github:      ndp
+      twitter:     ndp8
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://ndpsoftware.com
+        - type:    blog
+          url:     http://blog.ndpsoftware.com
+
+    - name:        Nick
+      lastname:    Reavill
+      location:    San Francisco
+      division:    Merchandising
+      description: Nick likes long walks in the rain and holding hands in a salt-spritzed gust of wind. He also likes all kinds of databases and anything that allows him to put data in them. Hails from England.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:
+      github:      nickflux
+      twitter:     nreavill
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        David
+      lastname:    McClain
+      location:    San Francisco
+      division:    Merchandising
+      description: David likes being the dumbest guy in the room, which is why he loves working at Stitch Fix. He loves coding and has high hopes that this "Internet" thing might someday take off. Hails from England, dislikes spelling 'colour' without the 'u'.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    davidamcclain
+      github:      uhhuhyeah
+      twitter:     davidamcclain
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Joe
+      lastname:    Cannatti
+      location:    San Francisco
+      division:    Client Experience
+      description: Born in Youngstown Oh, Joe relocated to Cleveland for 8 years where he established himself in the tech/startup scene. He’s now fleeing for San Francisco, mostly for the Buddhist temples and Indian Food. He’s also the Father of a boy named 'Biscuits'.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:
+      github:      joecannatti
+      twitter:     joecannatti
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Jim
+      lastname:    Fung
+      location:    San Francisco
+      division:    Client Experience
+      description: Jim loves to think about how to make things better. He was raised in the Bay Area but has hopped around the country since college. Often unprepared for slight changes in weather.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    jimmyfung
+      github:
+      twitter:     _jimfung
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Steve
+      lastname:    Brandon
+      location:    San Francisco
+      division:    DevOps
+      description: Stephen is a DevOps engineer whose main want is to automate all the things (let's make Skynet!). On the weekends you can find him at Hackathons, building weird clusters of things, and generally geeking out. Originally from Tennessee, recently transplanted to the Bay Area.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/stephen-brandon/7/25b/a42/
+      github:      slb350
+      twitter:     brandon_stephen
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Simeon
+      lastname:    Willbanks
+      location:    Long Beach
+      division:    Styling
+      description: Simeon is a web engineer who prefers simple over complex unless we're talking about coffee or stouts. He loves watching and playing the beautiful game. Hails from Maryland's Eastern Shore.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    simeonwillbanks
+      github:      simeonwillbanks
+      twitter:     simeonwillbanks
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Justin
+      lastname:    George
+      location:    Portland
+      division:    Styling
+      description: Justin is self taught and practices the craft of software development and dabbles in woodworking as well as solving problems through the radical application of honesty and acceptance. He has an abiding passion for boardgames, fine food, and literature. Hails from Eugene, Oregon.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       jgeorge
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    justingeorge
+      github:      jaggederest
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Pete
+      lastname:    Dudek
+      location:    Pittsburgh
+      division:    Warehouse & Logistics
+      description: Pete is a fiction writer turned programmer. A conversion specialist, he's migrated from .NET to Rails and from being a Browns fan to a Steelers fan (at the demand of his father-in-law). His son and daughter help keep his life nice and busy.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    https://www.linkedin.com/pub/peter-dudek/32/2ab/284
+      github:      pdudek
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+- teamname: design
+  members:
+    - name:        Brian
+      lastname:    Cleveland
+      location:    Pittsburgh
+      division:
+      description: "Brian holds love-hate relationships with the following: cats, chickens, Kurt Russell, horror films, antiques, retro video games, and the oxford comma. Betwixt it all, he designs and implements experiences for web and mobile applications. Hails from Pittsburgh."
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    borudesign
+      github:      yorthehunter
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Aaron
+      lastname:    Brown
+      location:    San Francisco
+      division:
+      description: "Sup? I'm a semi-ex-developer; a recent graduate in graphic design &amp; printmaking; and a tech-savvy, customer-centric designer&mdash;visual, interaction, information...take your pick. I refuse to refer to myself in the 3rd person, and I recently read a blog post on semi-colons; amiright?"
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    aaronsbrown
+      github:
+      twitter:     aaronsbrown
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+- teamname: data science
+  members:
+    - name:        Bhaskar
+      lastname:    Rao
+      location:    San Francisco
+      division:
+      description: Bhaskar likes data, datum, and ruby. He runs on decaf Blue Bottle coffee. Hails from India.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/bhaskar-rao/3/539/82a
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Eric
+      lastname:    Colson
+      location:    San Francisco
+      division:
+      description: Eric loves the austere beauty of data and analytics. He could easily go too far if practicality didn’t rein him in now and again. Hails from the SF Bay Area.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    ecolson
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Alan
+      lastname:    Eng
+      location:    San Francisco
+      division:
+      description: Alan enjoys puns, data, unsalted almonds, R, and copious amounts of unsweetened black tea in a wine glass (preferably filled with only the last item). Also knows a French word or two. Hails from San Francisco.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    alanfaieng
+      github:
+      twitter:     alanengdata
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Brad
+      lastname:    Klingenberg
+      location:    San Francisco
+      division:
+      description: Brad likes statistics, messy data and all things Python. Originally from Colorado, he now lives in the SF Bay area and enjoys the local coffee and hiking.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/brad-klingenberg/34/5a4/7aa
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Daragh
+      lastname:    Sibley
+      location:    San Francisco
+      division:
+      description: Daragh enjoys home brewing, rock climbing, and R. He tries to avoid all three in the same evening. You can typically find him over caffeinated and over excited about his latest analytic project. Hails from the Washington, DC area.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/daragh-sibley/5/183/211
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Thomas
+      lastname:    Millar
+      location:    San Francisco
+      division:
+      description: Hailing in from Canada, Thomas is taking time off school to do some of that data engineering stuff. When he's not working, he is cooking, hacking, and hiking.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://ca.linkedin.com/pub/thomas-millar/4b/208/3bb/
+      github:      thmsmlr
+      twitter:     thmsmlr
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Eli
+      lastname:    Bressert
+      location:    San Francisco
+      division:
+      description: Eli loves big ideas and putting them into action by connecting the impossible. During his freetime he writes, surfs, and enjoys the California lifestyle. Hails from the sun-baked lands of Arizona.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/eli-bressert/60/960/872
+      github:      ebressert
+      twitter:     astrobiased
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Deep
+      lastname:    Ganguli
+      location:    San Francisco
+      division:
+      description: Deep enjoys high dimensional statistics, map reduce, and skateboarding. You can occasionally find him starting brawls between Bayesians and frequentists. Hails from LA.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/deep-ganguli/47/573/356/
+      github:      dganguli
+      twitter:     dgangul1
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Cian
+      lastname:    Menzel-Jones
+      location:    San Francisco
+      division:
+      description: Cian loves developing original ideas based on insights from data whether it's in geophysics, molecular spectroscopy or women's fashion. Outside of the office he'll probably be playing a sport. Hails from Vancouver, BC.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    cianmenzeljones
+      github:      cianmj
+      twitter:     cianmj
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Jeff
+      lastname:    Magnusson
+      location:    San Francisco
+      division:
+      description: Jeff likes Python, coffee, and combining the two to build data infrastructure that’s incredibly easy and fun to use. Hails from Texas.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       jeff_m
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    jmagnuss
+      github:      jeffmagnusson
+      twitter:     jeffmagnusson
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Paolo
+      lastname:    Massimi
+      location:    San Francisco
+      division:
+      description: Paolo enjoys digging in complex data sets, building models, and finding those hidden connections. During his free time he loves skiing, hiking, biking, and playing guitar. Hails from Italy.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    https://www.linkedin.com/pub/paolo-massimi/20/737/827
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Jas
+      lastname:    Khela
+      location:    San Francisco
+      division:
+      description: Jas believes data can be used to solve any problem. He also believes the way to a woman’s heart is through her wardrobe. Jas enjoys traveling, binge watching TV series on Netflix, and spy movies. Hails from Fresno.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       jasKhela
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    jaskhela
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Lenia
+      lastname:    Dritsoula
+      location:    San Francisco
+      division:
+      description: Lenia likes solving puzzles and window shopping, making Stitch Fix the ideal work environment. In her free time she loves painting and cooking for friends. Hails from Athens, Greece.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       lenia-dritsoula
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    lenia
+      github:
+      twitter:     lenioulini
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Kelty
+      lastname:    Allen
+      location:    San Francisco
+      division:
+      description: Like the rest of the team, Kelty likes data, coffee, and lists of three things. She enjoys exploration of all kinds, from finding insights in complex data sets to backpacking in the west coast’s incredible national parks. Hails from South Carolina.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       kelty-allen
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    keltyallen
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Jay
+      lastname:    Martin
+      location:    San Francisco
+      division:
+      description: Jay likes finding innovative ways to combine crowdsourcing with machine learning to solve challenging problems. Outside of work, he enjoys being outdoors. Hails from the San Francisco Bay Area.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       jay-martin
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/jay-b-martin/55/ab0/4a0
+      github:      jbmartin
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Nick
+      lastname:    Kridler
+      location:    San Francisco
+      division:
+      description: Nick enjoys using python to solve data problems, build tools, and save whales. He also enjoys Japanese food, Final Fantasy, and slot machines. Hails from western MD.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       nick-kridler
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/nicholas-kridler/2b/a67/376
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Cory
+      lastname:    Simon
+      location:    San Francisco
+      division:
+      description: Cory enjoys drinking coffee/green tea/wine, programming, math, hiking, running, playing guitar, and snowboarding. He supports vector machines. ^.^
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       cory-simon
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    http://www.linkedin.com/pub/cory-simon/1b/5b2/48
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
