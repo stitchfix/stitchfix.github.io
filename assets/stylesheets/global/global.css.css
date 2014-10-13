@@ -1,1 +1,12 @@
-.no-wrap{white-space:nowrap}.truncated{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.clipped{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1}.normal{font-weight:500 !important}.uppercase{text-transform:uppercase}
+/* Custom variables - redefine variable defaults as you see fit
+   ========================================================================== */
+/* Site-specific colors */
+/* Custom colors
+   ========================================================================== */
+/* Custom variable overrides for common elements (see HumbleKit for details) */
+/* Humble Kit
+   ========================================================================== */
+/* Site-specific Mixins
+   ========================================================================== */
+/* Creates a "skin-{color}" class that will handle color coordination for an element
+(typically a container of some sort e.g. "<div class='skin-gray'>content</div>) */
