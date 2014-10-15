@@ -218,6 +218,22 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Eric
+      lastname:    Gravert
+      location:    Pittsburgh
+      division:    Warehouse & Logistics
+      description: Though he now hangs his hat in Pittsburgh, Eric was born and raised on Iowa farm land. When not translating caffeine and music to bits, he likes to spend his time collecting board games; sometimes he even plays them. His smart fashion sense can best be described as, "conference shirt chic".
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    https://www.linkedin.com/in/ericgravert
+      github:      egravert
+      twitter:     egravert
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
 - teamname: design
   members:
     - name:        Brian
