@@ -224,7 +224,7 @@
       division:    Warehouse & Logistics
       description: Though he now hangs his hat in Pittsburgh, Eric was born and raised on Iowa farm land. When not translating caffeine and music to bits, he likes to spend his time collecting board games; sometimes he even plays them. His smart fashion sense can best be described as, "conference shirt chic".
       # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      image:       egravert
       # linkedin: accepts a URL or a public profile name
       linkedin:    https://www.linkedin.com/in/ericgravert
       github:      egravert
