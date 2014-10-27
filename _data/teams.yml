@@ -542,18 +542,18 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
-      - name:        Kyle
-        lastname:    Schmaus
-        location:    San Francisco
-        division:
-        description: Kyle likes machine learning, R, and oxford commas. He enjoys learning new topics inside and out. During his free time he loves cooking, biking, yoga, and playing board games. Hails from the San Francisco Bay Area.
-        # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-        image:       kyle-schmaus
-        # linkedin: accepts a URL or a public profile name
-        linkedin:    kyleschmaus
-        github:
-        twitter:
-        instagram:
-        flickr:
-        links:
+    - name:        Kyle
+      lastname:    Schmaus
+      location:    San Francisco
+      division:
+      description: Kyle likes machine learning, R, and oxford commas. He enjoys learning new topics inside and out. During his free time he loves cooking, biking, yoga, and playing board games. Hails from the San Francisco Bay Area.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       kyle-schmaus
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    kyleschmaus
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
         # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
