@@ -234,6 +234,22 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        David
+      lastname:    Chang
+      location:    San Francisco
+      division:    Client Experience
+      description: David learned a love of data driven applications early on in his career, though they rarely love him back.  He is a native of the San Francisco Bay Area and will probably never leave, mostly because he is lazy, but also because he thinks it's a great place to live.  
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image: dc2
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    davidachang
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
 - teamname: design
   members:
     - name:        Brian
