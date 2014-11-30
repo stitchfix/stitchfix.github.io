@@ -15,18 +15,17 @@
         flexibility. We use RabbitMQ to send messages about real-world events to other apps which decide
         whether or not to do something with them. This de-coupled, asynchronous architecture allows us to scale with
         ease and add or change
-        components as needed. When it really makes sense we will build a RESTful API to wrap a service requiring an
-        immediate
-        response.</p>
+        components as needed. We use a combination of shared gems and RESTful services to share synchronous business logic between our systems.
+        </p>
     </section>
     <section class="mb4">
       <header>
         <h4 class="h4">Product is our primary concern</h4>
       </header>
-      <p>We hire engineers with great Product instincts because we are also the Product team: building great software
-        is a collaborative effort so we work directly with stakeholders in the business.
-        We are a central part of the business so we deliver real value and not just features, and because we understand
-        how Stitch Fix works we are trusted to focus our time and effort where they are most needed.</p>
+      <p>We hire engineers with great Product instincts because we are also the Product team. Building great software
+        is a collaborative effort, so we work directly with stakeholders in the business.
+        We deliver products &amp; solutions—not features—because we understand
+        how Stitch Fix works and are trusted to focus our time and effort where they are needed most.</p>
     </section>
     <section class="hidden mb4">
       <header>
@@ -50,28 +49,27 @@
             <h5 class="h5 uppercase">Personal Styling</h5>
           </header>
           <ul>
-            <li>Helping our stylists leverage our very effective styling algorithm to put together incredible, unique
+            <li>Helping our stylists leverage our effective styling algorithm to put together incredible, unique
               fixes for
-              all our clients
+              each of our customers
             </li>
-            <li>Our stylists need to see the best possible matches between each client and all our clothes, and they
-              need to
-              use that information with their own knowledge to create a unique fix for each of our customers
+            <li>Our stylists need to see the best possible matches between each customers and all our inventory. They
+              use that information, along with their own knowledge, to create a unique fix for each of our customers
             </li>
             <li>We need to give our stylists and their managers insight into their performance and success rates</li>
           </ul>
         </div>
         <div class="g _1-1-sm _1-2 m1">
           <header>
-            <h5 class="h5 uppercase">Operations and Warehouse</h5>
+            <h5 class="h5 uppercase">Warehouse and Logistics</h5>
           </header>
           <ul>
-            <li>We receive lots of deliveries from vendors every day and need to get them into our physical and digital
+            <li>We receive many deliveries from vendors every day and need to get them into our physical and digital
               inventory as quickly as possible
             </li>
-            <li>We need to pick, pack and ship lots of Fixes every day, and they all need to be of the highest quality
+            <li>We need to pick, pack, and ship lots of Fixes every day, without sacrificing the quality our customers enjoy
             </li>
-            <li>We get lots of returns from clients every day (it’s part of the business model) and we have to check the
+            <li>We get lots of returns from customers every day (it’s part of the business model) and we have to check the
               merchandise and get it back into inventory as quickly as possible
             </li>
           </ul>
@@ -81,13 +79,13 @@
             <h5 class="h5 uppercase">Merchandising</h5>
           </header>
           <ul>
-            <li>We have to order lots of new inventory every day and synchronize those orders with the warehouse</li>
-            <li>We have to plan every upcoming week, month, season and year to ensure we have the right amount and best
+            <li>We order new inventory every day and must synchronize those orders with the warehouse</li>
+            <li>We have to plan every upcoming week, month, season, and year to ensure we have the right amount and best
               mix
               of
-              clothes
+              clothes, accessories, and jewelry
             </li>
-            <li>We have to leverage all of our sales and client data to make the best possible buying decisions</li>
+            <li>We have to leverage all of our sales and customers data to make the best possible buying decisions</li>
           </ul>
         </div>
         <div class="g _1-1-sm _1-2 m1">
@@ -114,27 +112,27 @@
         <h4 class="h4 thin light">More about Stitch Fix Engineering</h4>
       </header>
       <p>
-        We use technologies like PostgreSQL, Redis, ElasticSearch and RabbitMQ along with various private Gems to tie
+        We use technologies like PostgreSQL, Redis, ElasticSearch and RabbitMQ along with various private gems and RESTful services to tie
         them all together. We work from San Francisco, Pittsburgh and remotely, and we use Heroku, GitHub, Google
-        Hangouts
+        Hangouts, Blue Jeans, Screen Hero,
         and HipChat to help us build it all.
       </p>
 
       <p>
         We are looking for people who share our values. We like to move quickly and ship lots of code, but in a
-        considered way. We use TDD, CI and an all-hands-on-deck approach to Pull Requests to ensure we can keep the
+        considered way. We use TDD, CI, and detailed and focused code reviews to ensure we can keep the
         pace
-        up without stinging on quality.
+        up without sacrificing quality.
       </p>
 
       <p>
-        If any of us have a good idea for introducing a new technology or pattern then we go ahead and run an
-        experiment. The debates don’t start until we have some real evidence to look at and since we avoid dogma and
-        evangelism they tend to be short.
+        Introducing new tools and technology is a part of our culture, and we debate such additions
+        by looking at running code that solves a real business problem.  This avoids dogma and focuses us
+        directly on what we want to accomplish and how a new tool could do that.
       </p>
 
       <p>
-        We work closely with our internal partners and we assume that they know best about
+        We work closely with the people running the business, under the assmption that they know best about
         what they need to do their jobs. Our job is to solve business problems and some of our proudest moments come
         from solving those problems without a line of code.
       </p>
@@ -151,11 +149,13 @@
             <div class="g _1-1-sm _1-2">
               <dl>
                 <dt>Ruby</dt>
-                <dd>with Rails as web application glue</dd>
+                <dd>with Rails as web application glue.  We update both Ruby, Rails, and *all* our gems monthly for all our apps, so we never fall too far behind (check back once 4.2 is out, though :).</dd>
                 <dt>RabbitMQ</dt>
                 <dd>apps communicate by broadcasting their real-world events</dd>
                 <dt>Postgres</dt>
                 <dd>powerful and redundant data layer</dd>
+                <dt>AngularJS</dt>
+                <dd>because sometimes you just want to be fancy ;)</dd>
               </dl>
             </div>
             <div class="g _1-1-sm _1-2">
@@ -164,8 +164,8 @@
                 <dd>continuous testing and auto-deployment</dd>
                 <dt>Responsive Design</dt>
                 <dd>we love all screens equally</dd>
-                <dt>AngularJS</dt>
-                <dd>because sometimes you just want to be fancy ;)</dd>
+                <dt>Resque</dt>
+                <dd>because sometimes important things take a while to happen</dd>
               </dl>
             </div>
           </div>
