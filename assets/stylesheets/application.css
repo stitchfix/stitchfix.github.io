@@ -4880,6 +4880,7 @@ compile unless they're extended by another class.
     </div>
 ```
 */
+img.post-image.post-image-bordered,
 .bordered {
   border-style: solid; }
 
@@ -4906,6 +4907,7 @@ compile unless they're extended by another class.
 .border-xs {
   border-width: 1px; }
 
+img.post-image.post-image-bordered,
 .border-sm {
   border-width: 2px; }
 
@@ -4921,7 +4923,7 @@ compile unless they're extended by another class.
 .border-xxl {
   border-width: 2rem; }
 
-.post-link,
+.post-link, img.post-image.post-image-bordered,
 .border-gray-light {
   border-color: #efefef; }
 
@@ -5012,6 +5014,7 @@ category: modules
 .round-xs {
   border-radius: 2.66667px; }
 
+img.post-image.post-image-bordered,
 .round-sm {
   border-radius: 4px; }
 
@@ -5133,6 +5136,9 @@ img.post-image {
     float: right; }
   img.post-image.post-image-left {
     float: left; }
+  img.post-image.post-image-bordered {
+    padding: 0;
+    margin: 0.5rem 1rem; }
 
 body {
   text-rendering: optimizeLegibility;
