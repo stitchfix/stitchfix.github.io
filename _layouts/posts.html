@@ -21,9 +21,17 @@
       <article class="post-content">
         {% if page.image %}
           {% if page.image_position %}
-            <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-{{ page.image_position }}">
+            {% if page.image_border %}
+              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-{{ page.image_position }} post-image-bordered">
+            {% else %}
+              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-{{ page.image_position }}">
+            {% endif %}
           {% else %}
-            <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-right ">
+            {% if page.image_border %}
+              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-right post-image-bordered">
+            {% else %}
+              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-right ">
+            {% endif %}
           {% endif %}
         {% endif %}
         {{ content }}

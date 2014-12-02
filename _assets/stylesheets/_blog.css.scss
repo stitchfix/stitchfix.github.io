@@ -32,4 +32,13 @@ img.post-image {
   &.post-image-left {
     float: left;
   }
+
+  &.post-image-bordered {
+    padding: 0;
+    margin: 0.5rem 1rem;
+    @extend %bordered;
+    @extend %border-gray-light;
+    @extend %border-sm;
+    @extend %round-sm;
+  }
 }
