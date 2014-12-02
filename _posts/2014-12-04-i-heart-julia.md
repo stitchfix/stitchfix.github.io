@@ -7,11 +7,6 @@ published: true
 location: "San Francisco, CA"
 ---
 
-<a name="footnote1-return"></a>
-Being a good developer means knowing both _what_ to build and _how_ to build it.
-At Stitch Fix, we don't have a dedicated product team, so we spend more time than most figuring out what to build<sup><a href="#footnote1">1</a></sup>.
-
-
 For the past half year I've been exploring [Julia](http://julialang.org/) in piecemeal fashion. It's a language that does not conform to the traditional notions of programming. Julia is a high-level, dynamic language (like Python) and is on par with C and Fortran in performance.
 
 Imagine the following: You’ve done some data exploration/prototyping in R and/or Python and you’re ready to take the code a level up for heavy lifting. Next step, flesh out the code in some flavor of C or Java for high performance, or modify your Python code to take advantage of PyPy, Numba, or Cython.
