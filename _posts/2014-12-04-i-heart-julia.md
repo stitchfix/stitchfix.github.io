@@ -48,7 +48,7 @@ $$ P(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)} $$
 
 {% highlight Julia linenos %}
 function  P(x, μ, σ)
-1 / (σ * sqrt(2 * π)) * exp(-(x - μ)^2 / (2 * σ^2))
+  1 / (σ * sqrt(2 * π)) * exp(-(x - μ)^2 / (2 * σ^2))
 end
 
 P(1.1, 0, 2)
@@ -68,7 +68,7 @@ Go give Julia a try on [JuliaBox](https://juliabox.org/) where you don't have to
 If you're planning to install Julia on OSX, here's what I found to be the easiest way to get started. First make sure you have [Cask](http://caskroom.io/) installed and then follow the details below.
 
 {% highlight bash linenos %}
-cask install Julia
+brew cask install Julia
 {% endhighlight %}
 
 Open up ~/.zshrc and put in the following (or your bashrc) .
