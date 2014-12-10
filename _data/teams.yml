@@ -250,6 +250,20 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Mitch
+      lastname:    Dempsey
+      location:    Orange County
+      division:    Merchandising
+      description: Mitch was born and raised in Orange County. He loves working on "scratch-your-own-itch" projects just as much as he loves working on large scale systems. Stitch Fix is one of the few places that promotes innovation on both. 
+      image:      mitch
+      linkedin:    mrdempsey
+      github:     webdestroya
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
 - teamname: design
   members:
     - name:        Brian
