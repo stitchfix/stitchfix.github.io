@@ -248,6 +248,20 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Emma
+      lastname:    Colner
+      location:    San Francisco
+      division:    Merchandising
+      description: Emma loves sci-fi, the brain, photography, working in Rails, and most importantly, cats. She is a Californian by way of Malaysia and England.
+      image:       emma
+      linkedin:    emmacolner
+      github:      emmafern
+      twitter:     meemameemameema
+      instagram:   emmafern
+      flickr:      emmafern
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
 - teamname: design
   members:
     - name:        Brian
