@@ -154,22 +154,6 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
-    - name:        Steve
-      lastname:    Brandon
-      location:    San Francisco
-      division:    DevOps
-      description: Stephen is a DevOps engineer whose main want is to automate all the things (let's make Skynet!). On the weekends you can find him at Hackathons, building weird clusters of things, and generally geeking out. Originally from Tennessee, recently transplanted to the Bay Area.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
-      # linkedin: accepts a URL or a public profile name
-      linkedin:    http://www.linkedin.com/pub/stephen-brandon/7/25b/a42/
-      github:      slb350
-      twitter:     brandon_stephen
-      instagram:
-      flickr:
-      links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
-
     - name:        Simeon
       lastname:    Willbanks
       location:    Long Beach
