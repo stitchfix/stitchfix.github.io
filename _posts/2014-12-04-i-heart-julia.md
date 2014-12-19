@@ -68,15 +68,15 @@ Go give Julia a try on [JuliaBox](https://juliabox.org/) where you don't have to
 If you're planning to install Julia on OSX, here's what I found to be the easiest way to get started. First make sure you have [Cask](http://caskroom.io/) installed and then follow the details below.
 
 {% highlight bash linenos %}
-brew cask install Julia
+brew cask install julia
 {% endhighlight %}
 
 Open up ~/.zshrc and put in the following (or your bashrc) .
 
 {% highlight bash linenos %}
-export PATH="Users/[yourusername]/Applications/Julia-X.X.X.app/Contents/Resources/julia/bin:$PATH"
+export PATH="/Users/[yourusername]/Applications/Julia-X.X.X.app/Contents/Resources/julia/bin:$PATH"
 {% endhighlight %}
 
 Change the X.X.X to the version number you have installed. In my case it's Julia-0.3.3.app.
 
-The most popular IDE for Julia is [Julia-Studio](http://forio.com/labs/julia-studio/), but it does not work for Julia newer than 2.X. Fortunately, there's [IJulia](https://github.com/JuliaLang/IJulia.jl) which uses the IPython Notebook system to create a nice data analysis environment. Otherwise you can use VIM, Sublime, or Atom with a Julia REPL to interact with.
+The most popular IDE for Julia is [Julia-Studio](http://forio.com/labs/julia-studio/), but it does not work for Julia newer than 2.X. Fortunately, there's [IJulia](https://github.com/JuliaLang/IJulia.jl) which uses the IPython Notebook system to create a nice data analysis environment. Another nice environment is [Juno](http://junolab.org/), which is great for interactions and data exploration. Otherwise you can use VIM, Sublime, or Atom with a Julia REPL to interact with.
