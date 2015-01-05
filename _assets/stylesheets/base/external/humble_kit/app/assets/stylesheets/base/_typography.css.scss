@@ -131,11 +131,6 @@ The code above works, but doesn't say as much semantically. YMMV.
 ```
 */
 
-/**
-* 1. The .p class can be used to describe paragraph text when an actual <p>
-*    isn't used. E.g. <div class="p">Text goes here.</div>
-*/
-
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
   font-weight: $headings-weight;
   color: $headings-color;
@@ -151,7 +146,7 @@ h3,.h3 { @extend %f3; }
 h4,.h4 { @extend %f4; }
 
 h5,.h5,
-p,.p, /* 1 */
+p, /* 1 */
 dl,ol,ul { @extend %f5; }
 
 h6,.h6 { @extend %f6; }

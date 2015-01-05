@@ -82,16 +82,27 @@ Just a few years ago the novelty of recommendation engines was precisely the abs
 
 
 
-<a name="1"></a>
-<sup>1</sup> Kahneman, Daniel. Thinking, Fast and Slow. New York: Farrar, Straus and Giroux, 2011.
+<footer class="footnotes">
+  <ol>
+  <li>
+  <a name="1"></a>
+  <sup>1</sup> Kahneman, Daniel. Thinking, Fast and Slow. New York: Farrar, Straus and Giroux, 2011.
+  </li>
+  <li>
+  <a name="2"></a>
+  <sup>2</sup> While there have been material innovations in the ability of machines to process unstructured data, it is still not to the point where it is viable for the level of confidence needed at Stitch Fix.
 
-<a name="2"></a>
-<sup>2</sup> While there have been material innovations in the ability of machines to process unstructured data, it is still not to the point where it is viable for the level of confidence needed at Stitch Fix.
+  </li>
+  <li>
+  <a name="3"></a>
+  <sup>3</sup> One of our unique advantages is that we don’t have to develop and maintain an ecommerce site since our clients delegate the shopping task to us.    This allows us to apply engineering resources towards internal applications.  The result is polished and elegant internal applications - a rarity for most ecommerce companies.
 
-<a name="3"></a>
-<sup>3</sup> One of our unique advantages is that we don’t have to develop and maintain an ecommerce site since our clients delegate the shopping task to us.    This allows us to apply engineering resources towards internal applications.  The result is polished and elegant internal applications - a rarity for most ecommerce companies.
+  </li>
+  <li>
+  <a name="4"></a>
+  <sup>4</sup> "better together" and "art & science" are prominent values in the Stitch Fix culture.
 
-<a name="4"></a>
-<sup>4</sup> "better together" and "art & science" are prominent values in the Stitch Fix culture.
-
+  </li>
+  </ol>
+</footer>
 
