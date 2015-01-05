@@ -127,9 +127,9 @@ difficult to understand
 Stitch Fix has our own version of `Struct` called `ImmutableStruct` which solves both of these.  For example:
 
 {% highlight ruby %}
-EventPresenter = ImmutableStruct.new(:event_name, 
-                                     :created_at, 
-                                     :admin_user, 
+EventPresenter = ImmutableStruct.new(:event_name,
+                                     :created_at,
+                                     :admin_user,
                                      :client)
 
 nil_event = EventPresenter.new # => all fields nil
