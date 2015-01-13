@@ -303,285 +303,274 @@
       location:    San Francisco
       division:
       description: Bhaskar likes data, datum, and ruby. He runs on decaf Blue Bottle coffee. Hails from India.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    http://www.linkedin.com/pub/bhaskar-rao/3/539/82a
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Eric
       lastname:    Colson
       location:    San Francisco
       division:
       description: Eric loves the austere beauty of data and analytics. He could easily go too far if practicality didn’t rein him in now and again. Hails from the SF Bay Area.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    ecolson
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Alan
       lastname:    Eng
       location:    San Francisco
       division:
       description: Alan enjoys puns, data, unsalted almonds, R, and copious amounts of unsweetened black tea in a wine glass (preferably filled with only the last item). Also knows a French word or two. Hails from San Francisco.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    alanfaieng
       github:
       twitter:     alanengdata
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Brad
       lastname:    Klingenberg
       location:    San Francisco
       division:
       description: Brad likes statistics, messy data and all things Python. Originally from Colorado, he now lives in the SF Bay area and enjoys the local coffee and hiking.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    http://www.linkedin.com/pub/brad-klingenberg/34/5a4/7aa
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Daragh
       lastname:    Sibley
       location:    San Francisco
       division:
       description: Daragh enjoys home brewing, rock climbing, and R. He tries to avoid all three in the same evening. You can typically find him over caffeinated and over excited about his latest analytic project. Hails from the Washington, DC area.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    http://www.linkedin.com/pub/daragh-sibley/5/183/211
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
-
-    - name:        Thomas
-      lastname:    Millar
-      location:    San Francisco
-      division:
-      description: Hailing in from Canada, Thomas is taking time off school to do some of that data engineering stuff. When he's not working, he is cooking, hacking, and hiking.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
-      # linkedin: accepts a URL or a public profile name
-      linkedin:    http://ca.linkedin.com/pub/thomas-millar/4b/208/3bb/
-      github:      thmsmlr
-      twitter:     thmsmlr
-      instagram:
-      flickr:
-      links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Eli
       lastname:    Bressert
       location:    San Francisco
       division:
       description: Eli loves big ideas and putting them into action by connecting the impossible. During his freetime he writes, surfs, and enjoys the California lifestyle. Hails from the sun-baked lands of Arizona.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    http://www.linkedin.com/pub/eli-bressert/60/960/872
       github:      ebressert
       twitter:     astrobiased
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Deep
       lastname:    Ganguli
       location:    San Francisco
       division:
       description: Deep enjoys high dimensional statistics, map reduce, and skateboarding. You can occasionally find him starting brawls between Bayesians and frequentists. Hails from LA.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    http://www.linkedin.com/pub/deep-ganguli/47/573/356/
       github:      dganguli
       twitter:     dgangul1
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Cian
       lastname:    Menzel-Jones
       location:    San Francisco
       division:
       description: Cian loves developing original ideas based on insights from data whether it's in geophysics, molecular spectroscopy or women's fashion. Outside of the office he'll probably be playing a sport. Hails from Vancouver, BC.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    cianmenzeljones
       github:      cianmj
       twitter:     cianmj
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Jeff
       lastname:    Magnusson
       location:    San Francisco
       division:
       description: Jeff likes Python, coffee, and combining the two to build data infrastructure that’s incredibly easy and fun to use. Hails from Texas.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:       jeff_m
-      # linkedin: accepts a URL or a public profile name
       linkedin:    jmagnuss
       github:      jeffmagnusson
       twitter:     jeffmagnusson
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Paolo
       lastname:    Massimi
       location:    San Francisco
       division:
       description: Paolo enjoys digging in complex data sets, building models, and finding those hidden connections. During his free time he loves skiing, hiking, biking, and playing guitar. Hails from Italy.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
-      # linkedin: accepts a URL or a public profile name
       linkedin:    https://www.linkedin.com/pub/paolo-massimi/20/737/827
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Jas
       lastname:    Khela
       location:    San Francisco
       division:
       description: Jas believes data can be used to solve any problem. He also believes the way to a woman’s heart is through her wardrobe. Jas enjoys traveling, binge watching TV series on Netflix, and spy movies. Hails from Fresno.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:       jasKhela
-      # linkedin: accepts a URL or a public profile name
       linkedin:    jaskhela
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
-
-    - name:        Lenia
-      lastname:    Dritsoula
-      location:    San Francisco
-      division:
-      description: Lenia likes solving puzzles and window shopping, making Stitch Fix the ideal work environment. In her free time she loves painting and cooking for friends. Hails from Athens, Greece.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:       lenia-dritsoula
-      # linkedin: accepts a URL or a public profile name
-      linkedin:    lenia
-      github:
-      twitter:     lenioulini
-      instagram:
-      flickr:
-      links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Kelty
       lastname:    Allen
       location:    San Francisco
       division:
       description: Like the rest of the team, Kelty likes data, coffee, and lists of three things. She enjoys exploration of all kinds, from finding insights in complex data sets to backpacking in the west coast’s incredible national parks. Hails from South Carolina.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:       kelty-allen
-      # linkedin: accepts a URL or a public profile name
       linkedin:    keltyallen
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Jay
       lastname:    Martin
       location:    San Francisco
       division:
       description: Jay likes finding innovative ways to combine crowdsourcing with machine learning to solve challenging problems. Outside of work, he enjoys being outdoors. Hails from the San Francisco Bay Area.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:       jay-martin
-      # linkedin: accepts a URL or a public profile name
       linkedin:    http://www.linkedin.com/pub/jay-b-martin/55/ab0/4a0
       github:      jbmartin
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Nick
       lastname:    Kridler
       location:    San Francisco
       division:
       description: Nick enjoys using python to solve data problems, build tools, and save whales. He also enjoys Japanese food, Final Fantasy, and slot machines. Hails from western MD.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:       nick-kridler
-      # linkedin: accepts a URL or a public profile name
       linkedin:    http://www.linkedin.com/pub/nicholas-kridler/2b/a67/376
       github:
       twitter:
       instagram:
       flickr:
       links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
-
-    - name:        Cory
-      lastname:    Simon
-      location:    San Francisco
-      division:
-      description: Cory enjoys drinking coffee/green tea/wine, programming, math, hiking, running, playing guitar, and snowboarding. He supports vector machines. ^.^
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:       cory-simon
-      # linkedin: accepts a URL or a public profile name
-      linkedin:    http://www.linkedin.com/pub/cory-simon/1b/5b2/48
-      github:
-      twitter:
-      instagram:
-      flickr:
-      links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
     - name:        Kyle
       lastname:    Schmaus
       location:    San Francisco
       division:
       description: Kyle likes machine learning, R, and oxford commas. He enjoys learning new topics inside and out. During his free time he loves cooking, biking, yoga, and playing board games. Hails from the San Francisco Bay Area.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:       kyle-schmaus
-      # linkedin: accepts a URL or a public profile name
       linkedin:    kyleschmaus
       github:
       twitter:
       instagram:
       flickr:
       links:
-        # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
+    - name:        Greg 
+      lastname:    Novak
+      location:    San Francisco
+      division:
+      description: Greg is a fan of late binding, dynamic typing, black holes,
+        bourbon, and using data to understand the world.  When he's not
+        helping women find clothing they'll love, Greg is likely to be
+        cycling, backpacking, or playing ice hockey.
+      image:       greg-novak
+      linkedin:    gsnovak
+      github:
+      twitter:     GSNovak
+      instagram:
+      flickr:
+      links:
+
+    - name:        Kim 
+      lastname:    Larsen
+      location:    San Francisco
+      division:
+      description: Originally from Denmark, Kim is passionate about bridging the gap between data analysis and business applications. He believes that if an analysis or algorithm cannot be explained at a high level, it is probably too convoluted. He is also a firm believer in Bayesian regression and loves programming (mostly in R these days).
+      image:       kim-larsen
+      linkedin:    https://www.linkedin.com/pub/kim-larsen/3/4a0/3a2 
+      github:
+      twitter:     
+      instagram:
+      flickr:
+      links:   
+     
+    - name:        Tara 
+      lastname:    Lydiard-Martin
+      location:    San Francisco
+      division:
+      description: Tara loves using data and visualizations to make complex systems feel intuitive. In her free time she enjoys ultimate frisbee, dancing, and the Brazilian martial art of capoeira. Hails from Seattle.
+      image:       tara-lydiard-martin
+      linkedin:    taralydiardmartin
+      github:
+      twitter:     lydiardmartin
+      instagram:
+      flickr:
+      links:
+
+    - name:        Zhou
+      lastname:    Yu
+      location:    San Francisco
+      division:
+      description: Grew up in southwest of China, Zhou loves Asian food, especially spicy dishes. He's always trying to apply statistics and machine learning to solving impactful business problem. In his spare time, he enjoys reading and playing basketball and pool. 
+      image:       zhou-yu 
+      linkedin:    zhouyustanford 
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+
+    - name:        John 
+      lastname:    McDonnel
+      location:    San Francisco
+      division:
+      description: John has a passion for learning, often with the aid of machines. His obsessions with English-style tea, bridge, and tweed jackets make him the world's oldest 20-something. He is a devout Bayesian but a Python vs R agnostic. He claims to be from Seattle, but he's lived all over the northerly parts of North America.     
+      image:       john-mcdonnel
+      linkedin:    www.linkedin.com/pub/john-mcdonnell/33/332/658
+      github:      https://github.com/johnmcdonnell
+      twitter:     johnvmcdonnell
+      instagram:
+      flickr:
+      links:
+
+    - name:        Richie 
+      lastname:    Li 
+      location:    San Francisco
+      division:
+      description: Richie likes machine learning, crunching data and writing Java code. He enjoys learning new technologies and tools. During his free time he loves cooking, video gaming and hiking. Hails from the southwest of China.
+      image:       richie-li
+      linkedin:    
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+
