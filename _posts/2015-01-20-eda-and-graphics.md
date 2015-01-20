@@ -57,7 +57,7 @@ Viewing pairwise correlations between the features can be cumbersome when there�
 
 ![Correlation matrix](/assets/images/blog/correlation_matrix.png)
 
-To find the subset of features that explain the bulk of the variation in the data, I use principal component analysis ([PCA](http://sebastianraschka.com/Articles/2014_pca_step_by_step.html)). It’s a simple yet powerful tool. Using a scatter plot is the ideal way to visualize a PCA of data projected onto two components. In this case we have a high number of observations, so I place histograms on the top and right side to represent PC1 and PC2 components, respectively, to ensure that I don’t miss any obvious densities. 
+To find the subset of features that explain the bulk of the variation in the data, I use [principal component analysis](http://sebastianraschka.com/Articles/2014_pca_step_by_step.html) (PCA). It’s a simple yet powerful tool. Using a scatter plot is the ideal way to visualize a PCA of data projected onto two components. In this case we have a high number of observations, so I place histograms on the top and right side to represent PC1 and PC2 components, respectively, to ensure that I don’t miss any obvious densities. 
 
 ![Principal component analysis](/assets/images/blog/pca.png)
 
@@ -70,11 +70,10 @@ In the next post we’ll discuss how to optimize the exploratory data analysis s
 
 ----
 
+<sup>&#8224;</sup>
+This post has been cross-posted on [Insight](http://www.insightdatascience.com/blog/).
+
 <a name="footnote1"></a>
 <sup>1</sup>
 All graphics shown here were made using [Seaborn](http://web.stanford.edu/~mwaskom/software/seaborn/index.html), a statistical graphics package in Python.
 <a href="#footnote1-return">&larr;</a>
-
-
-
-
