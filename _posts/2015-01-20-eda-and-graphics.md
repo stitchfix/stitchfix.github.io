@@ -57,9 +57,9 @@ Viewing pairwise correlations between the features can be cumbersome when there�
 
 ![Correlation matrix](/assets/images/blog/correlation_matrix.png)
 
-To find the subset of features that explain the bulk of the variation in the data, I use principle component analysis (PCA). It’s a simple yet powerful tool. Using a scatter plot is the ideal way to visualize a PCA of data projected onto two components. In this case we have a high number of observations, so I place histograms on the top and right side to represent PC1 and PC2 components, respectively, to ensure that I don’t miss any obvious densities. 
+To find the subset of features that explain the bulk of the variation in the data, I use principal component analysis ([PCA](http://sebastianraschka.com/Articles/2014_pca_step_by_step.html)). It’s a simple yet powerful tool. Using a scatter plot is the ideal way to visualize a PCA of data projected onto two components. In this case we have a high number of observations, so I place histograms on the top and right side to represent PC1 and PC2 components, respectively, to ensure that I don’t miss any obvious densities. 
 
-![Principle component analysis](/assets/images/blog/pca.png)
+![Principal component analysis](/assets/images/blog/pca.png)
 
 At this point, I can make some educated hypotheses about the data and model it to predict certain behaviors. If I were to take the it to the production stage, I can now assess which models should be used and move forward. 
 
