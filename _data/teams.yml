@@ -262,6 +262,22 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Chris
+      lastname:    Castleman
+      location:    San Francisco
+      division:    Client Experience
+      description: Chris is generalist with a passion for databases, CSS, and everything in between. He's also an endurance junkie who can often be found running, biking, or swimming down the Pacific Coast. He grew up in Philadelphia and then spent 10 snowy years in Buffalo before heading west to sunny San Francisco.
+      image:       chris
+      linkedin:    castleman
+      github:
+      twitter:
+      instagram:   chriscastleman
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+        - type:    homepage
+          url:     http://chriscastleman.com
+
 - teamname: design
   members:
     - name:        Brian
