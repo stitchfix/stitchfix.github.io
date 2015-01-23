@@ -574,3 +574,28 @@
       flickr:
       links:
 
+    - name:        Ewan 
+      lastname:    Oglethorpe
+      location:    San Francisco
+      division:
+      description: Ewan likes The Office as well as bears, beets and Battlestar Galactica. He was born in England and has spent time living in Southern Africa as well as the DC area. One of his favorite aspects of Stitch Fix is the combination of curated human selection to supplement machine learning.
+      image:       ewan-oglethorpe
+      linkedin:    http://www.linkedin.com/pub/ewan-oglethorpe/49/123/b5b/ 
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+
+    - name:        Alex
+      lastname:    Chen 
+      location:    San Francisco
+      division:
+      description: Alex grew up in Taiwan but live the second half of his life in North California. He likes projects in the domain of data science and ecommerce (Stitch Fix is perfect for him), and enjoys writing codes with simple and elegant design. In his spare time, he reads, travels, bikes, and drinks coffee. 
+      image:       alex-chen
+      linkedin:    
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
