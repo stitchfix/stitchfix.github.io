@@ -278,6 +278,20 @@
         - type:    homepage
           url:     http://chriscastleman.com
 
+    - name:        Flora
+      lastname:    Lee
+      location:    San Francisco
+      division:    Client Experience
+      description: When not sitting in front of a computer, Flora enjoys literature, sketching, photography, and cooking. She moved to San Francisco from Seattle, and before that has lived in Vancouver and Beijing.
+      image:       flora
+      linkedin:    leeflora
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
 - teamname: design
   members:
     - name:        Brian
