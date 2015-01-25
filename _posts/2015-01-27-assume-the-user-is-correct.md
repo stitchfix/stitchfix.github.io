@@ -14,7 +14,7 @@ While we have a team dedicated to our (external) customers' experience, most eng
 [internal-apps-post]: http://technology.stitchfix.com/blog/2014/08/27/tip-of-the-iceberg/
 
 We realized a key part of our success would be a good relationship with the internal users.
-We encourage them to reach out to use with any question, and created avenues for them to do so.
+We encourage them to reach out to us with any questions, and created avenues for them to do so.
 We also reach out to them when needed, too<sup><a href="#1">1</a></sup><a name="back-1"></a>.
 
 When the users reach out, they typically have straightforward questions, or report fairly obvious bugs.
@@ -26,12 +26,12 @@ Now, we have a saying: “assume the user is correct”.  Let me give you a rece
 
 ## Disrupting Warehouse Operations with 1 Click
 
-Our warehouse production process begins with printing pick-slips in bulk (the [pick-slip” contains basic information needed to locate the items that go into a shipment, and acts a physical “token” that lets everyone know who's working on a shipment).
-Bulk-printing these pick-slips a critical activity.  Printing a pick-slip twice means two people work on the same shipment.  Losing (or not printing) a pick-slip means the shipment gets lost and won't ship.
+Our warehouse production process begins with printing pick-slips in bulk (the “pick-slip” contains basic information needed to locate the items that go into a shipment, and acts as a physical “token” that lets everyone know who's working on a shipment).
+Bulk-printing these pick-slips is a critical activity.  Printing a pick-slip twice means two people work on the same shipment.  Losing (or not printing) a pick-slip means the shipment gets lost and won't ship.
 As such, very few users have access to do this and those that do are given special training.
 
 On Thursday, one of our warehouse managers reached out to engineering to find out why an employee they didn't know had printed all their pick-slips (we keep a lot of detailed logs).
-When the pack-slips are printed, the system remembers this so they wont't be printed in a future batch.
+When the pick-slips are printed, the system remembers this so they won't be printed in a future batch.
 So, the warehouse saw that a large batch of pick-slips were printed, but they didn't have the physical printouts.
 
 Looking into it, the user that printed them was one of our customer service (CS) agents (who works at our headquarters, not in a warehouse).
