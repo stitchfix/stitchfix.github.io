@@ -71,11 +71,17 @@ Now, we try to make all of our jobs idempotent and retriable. I'd recommend you 
 about growing your business.
 
 ---
-<a name="1"></a>
-<sup>1</sup> If you aren't familiar with payment processing, this is absolutely the best way to do it, because we don't have any sensitive information
-stored in our systems anywhere.  We use a secret, meaningless internal identifier to ask our secure (and heavily audited) partner to charge the client on
-our behalf.  Even if someone stole our entire database, they'd have **zero** access to our client's credit card info.  I definitely sleep better at night
-knowing this :) <a href="#return_1">↩</a>
+<footer class="footnotes">
+  <ol>
+  <li>
+  <a name="1"></a>
+  <sup>1</sup> If you aren't familiar with payment processing, this is absolutely the best way to do it, because we don't have any sensitive information
+  stored in our systems anywhere.  We use a secret, meaningless internal identifier to ask our secure (and heavily audited) partner to charge the client on
+  our behalf.  Even if someone stole our entire database, they'd have **zero** access to our client's credit card info.  I definitely sleep better at night
+  knowing this :) <a href="#return_1">↩</a>
+  </li>
+  </ol>
+</footer>
 
 [grouperblog]: http://eng.joingrouper.com/
 [grouperpost]: http://eng.joingrouper.com/blog/2014/06/27/too-many-signals-resque-on-heroku/

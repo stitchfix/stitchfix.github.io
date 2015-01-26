@@ -23,8 +23,14 @@ But, of course, our Fixes are anything but random.  Rather they are the synthesi
 What’s gratifying to me about the uniqueness of our Fixes is that we have made no effort to make them so. There is no mandate to ensure clients receive different things -- there is no code to check for such occurrences nor is there collaboration among stylist.  It just happens this way because we cater to each client’s specific needs - both the need to be in-style and the need for individual expression.
 
 
-<a name="1"></a>
-<sup>1</sup>  A “fix” is what we call the curated shipments of clothes that we send to our clients.
+<footer class="footnotes">
+  <ol>
+  <li>
+  <a name="1"></a>
+  <sup>1</sup>  A “fix” is what we call the curated shipments of clothes that we send to our clients.
+  </li>
+  </ol>
+</footer>
 
 [binomial_coefficient]: http://en.wikipedia.org/wiki/Binomial_coefficient
 [post_on_humans_and_machines]: http://technology.stitchfix.com/blog/2014/07/21/machine-and-expert-human-resources/
