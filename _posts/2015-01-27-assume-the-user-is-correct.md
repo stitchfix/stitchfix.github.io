@@ -14,7 +14,7 @@ While we have a team dedicated to our (external) customers' experience, most eng
 [internal-apps-post]: http://technology.stitchfix.com/blog/2014/08/27/tip-of-the-iceberg/
 
 Having a good relationship with our internal users is a key part of our success.
-We encourage them to reach out to us with any questions, and created avenues for them to do so.
+We encourage them to reach out to us with any questions, and have created avenues for them to do so.
 We also reach out to them when needed, too<sup><a href="#1">1</a></sup><a name="back-1"></a>.
 
 When the users reach out, they typically have straightforward questions, or report fairly obvious bugs.
@@ -59,8 +59,8 @@ So, I decided to try to **prove** that she was correct, rather than convince mys
 I tried to print a single pick-slip, exactly as our CS agent had described.  Much to my surprise, it **did** lead to the system bulk-printing all the pick-slips.
 Why wasn't this causing massive problems before now?
 
-Had the agent *not* been accidentally given access to the bulk-printing feature, what she had done would've triggered a harmless error message.
-And because warehouse workers *with* access almost never print one-offs, the bug lay dormant, waiting for this confluence of seemingly unrelated events.
+Agents don't normally get access to the bulk-printing feature, and without it what this agent tried to do would've would've triggered a harmless error message (it seems she got access purely on accident).
+Further, because warehouse workers *with* access almost never print one-offs, the bug lay dormant, waiting for this confluence of seemingly unrelated events.
 
 The bugfix was, as expected, a one line code change that took five minutes.  The deploy took longer than the fix.
 
