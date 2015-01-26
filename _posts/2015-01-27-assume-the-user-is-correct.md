@@ -13,7 +13,7 @@ While we have a team dedicated to our (external) customers' experience, most eng
 
 [internal-apps-post]: http://technology.stitchfix.com/blog/2014/08/27/tip-of-the-iceberg/
 
-We realized a key part of our success would be a good relationship with the internal users.
+Having a good relationship with our internal users is a key part of our success.
 We encourage them to reach out to us with any questions, and created avenues for them to do so.
 We also reach out to them when needed, too<sup><a href="#1">1</a></sup><a name="back-1"></a>.
 
