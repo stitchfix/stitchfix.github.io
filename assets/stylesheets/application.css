@@ -1860,7 +1860,7 @@ h4, .h4 {
   /* 2 */ }
 
 h5, .h5,
-p, .p,
+p,
 dl, ol, ul {
   font-size: 1.24rem;
   /* 1 */
@@ -1920,10 +1920,6 @@ The code above works, but doesn't say as much semantically. YMMV.
 <p>And this is some paragraph text.</p>
 
 ```
-*/
-/**
-* 1. The .p class can be used to describe paragraph text when an actual <p>
-*    isn't used. E.g. <div class="p">Text goes here.</div>
 */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700;
@@ -4487,6 +4483,12 @@ img {
 .small-dl dl {
   font-size: 1em; }
 
+.footnotes ol {
+  list-style: none; }
+  .footnotes ol li {
+    font-size: 16px;
+    line-height: 1.5; }
+
 .highlighttable, pre code, .code {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -4778,6 +4780,24 @@ pre code {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+blockquote {
+  background: #efefef;
+  border-left: 10px solid #bebfc1;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D"; }
+
+blockquote:before {
+  color: #bebfc1;
+  content: open-quote;
+  font-size: 7em;
+  line-height: 0.1em;
+  margin-right: 0;
+  vertical-align: -0.4em; }
+
+blockquote p {
+  display: inline; }
+
 .mt6 {
   margin-top: 6rem; }
 

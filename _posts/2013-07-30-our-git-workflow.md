@@ -13,7 +13,8 @@ well as Scott Chacon's [post][githubflow] on "Github Flow", both of which are ex
 I would tend to agree with Scott that gitflow is more complex than is generally needed.  It seems optimized for a regular release cycle with version
 numbers and heavy management.  I find this sort of release management to be an anti-pattern geared more toward control and less toward delivering value.
 
-At Stitch Fix, we (mostly<sup>1</sup>) do continuous deployment, and this is also how Github seems to work.  We're lucky that we're a small team, so we can establish
+<a name="return_1"></a>
+At Stitch Fix, we (mostly<sup><a href="#1">1</a></sup>) do continuous deployment, and this is also how Github seems to work.  We're lucky that we're a small team, so we can establish
 this sort of thing now, before we get too big.  I don't think it's totally a small-team-only thing, though.  My previous job was at LivingSocial, which
 has a quite large dev team.  Continuous deployment feels like the only sane way to manage such a large group or people making changes.  The amount of code
 that went into production in a week is enormous - to have to track that as a big lump sum release seems crazy to me.
@@ -50,7 +51,14 @@ this.
 
 ---
 
-1. We have a legacy application, currently being carved apart, that is managed manually.  We almost never change it, and so automating deployment of it hasn't been a priority
+<footer class="footnotes">
+  <ol>
+  <li>
+  <a name="1"></a>
+  <sup>1</sup> We have a legacy application, currently being carved apart, that is managed manually.  We almost never change it, and so automating deployment of it hasn't been a priority. <a href="#return_1">↩</a>
+  </li>
+  </ol>
+</footer>
 
 [linus]: http://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg39091.html
 [gitflow]: http://nvie.com/posts/a-successful-git-branching-model/
