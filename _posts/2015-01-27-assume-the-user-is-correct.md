@@ -56,9 +56,8 @@ So, I decided to try to **prove** that she was correct, rather than convince mys
 
 ## Correct, Until Proven Wrong
 
-It turns out that doing exactly what she said she had done **did** lead to the system bulk-printing all the pick-slips.
-I was astonished.
-How could this not have caused massive problems?
+I tried to print a single pick-slip, exactly as our CS agent had described.  Much to my surprise, it **did** lead to the system bulk-printing all the pick-slips.
+Why wasn't this causing massive problems before now?
 
 Had the agent *not* been accidentally given access to the bulk-printing feature, what she had done would've triggered a harmless error message.
 And because warehouse workers *with* access almost never print one-offs, the bug lay dormant, waiting for this confluence of seemingly unrelated events.
