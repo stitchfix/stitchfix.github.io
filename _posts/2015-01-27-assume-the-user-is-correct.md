@@ -59,7 +59,7 @@ So, I decided to try to **prove** that she was correct, rather than convince mys
 I tried to print a single pick-slip, exactly as our CS agent had described.  Much to my surprise, it **did** lead to the system bulk-printing all the pick-slips.
 Why wasn't this causing massive problems before now?
 
-Agents don't normally get access to the bulk-printing feature, and without it what this agent tried to do would've would've triggered a harmless error message (it seems she got access purely on accident).
+Agents don't normally get access to the bulk-printing feature, and without it, what this agent tried to do would've triggered a harmless error message (it seems she got access purely on accident).
 Further, because warehouse workers *with* access almost never print one-offs, the bug lay dormant, waiting for this confluence of seemingly unrelated events.
 
 The bugfix was, as expected, a one line code change that took five minutes.  The deploy took longer than the fix.
