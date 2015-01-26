@@ -77,5 +77,11 @@ You'll be surprised (and grateful).
 
 ---
 
-<a name="1"></a>
-<sup>1</sup> I've been known to see an error in Bugsnag, check the user id, and email them that I'm aware of their problem, and working on it.  It may seem a bit creepy, but ultimately seems to be appreciated :) <a href="#back-1">&larr;</a>
+<footer class="footnotes">
+  <ol>
+  <li>
+  <a name="1"></a>
+  <sup>1</sup> I've been known to see an error in Bugsnag, check the user id, and email them that I'm aware of their problem, and working on it.  It may seem a bit creepy, but ultimately seems to be appreciated :) <a href="#back-1">↩</a>
+  </li>
+  </ol>
+</footer>

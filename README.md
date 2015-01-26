@@ -50,9 +50,17 @@ going.  A wall of text can be off-putting, and headers make your post easier to 
   ```html
   ---
 
-  <a name="1"></a>
-  <sup>1</sup> This is the snark footnote.<a href="#back-1">&larr;</a>
+ <footer class="footnotes">
+   <ol>
+     <li>
+       <a name="1"></a>
+       <sup>1</sup> This is the snark footnote.<a href="#back-1">↩</a>
+     </li>
+   </ol>
+ </footer>
   ```
+
+  That last character is ↩ which you can just copy/paste for your return link.
 * Consider "this", "thing", and "very" to be spelling errors.  Remove or replace them and your statements will be stronger.
 
 # TODO
