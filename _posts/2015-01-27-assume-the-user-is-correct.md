@@ -1,5 +1,5 @@
 ---
-title: "Assume the user is correct"
+title: "Assume the User is Correct"
 layout: posts
 location: "Washington, DC"
 author: Dave Copeland
