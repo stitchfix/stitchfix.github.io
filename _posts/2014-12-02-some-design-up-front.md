@@ -68,12 +68,19 @@ You'd be amazed at what a bit of writing can do to organize your thoughts, and w
 
 ----
 
+<footer class="footnotes">
+<ol>
+<li>
 <a name="footnote1"></a>
 <sup>1</sup> In fact, the ability to understand a business process and provide solutions to problems with that process is far more important to us when hiring than, say, deep knowledge of Rails.
-<a href="#footnote1-return">&larr;</a>
-
+<a href="#footnote1-return">↩</a>
+</li>
+<li>
 <a name="footnote2"></a>
 <sup>2</sup> The scare quotes are there because the term “agile” has been so watered-down and co-opted, it's hard to know what it even means these days.
-<a href="#footnote2-return">&larr;</a>
+<a href="#footnote2-return">↩</a>
+</li>
+</ol>
+</footer>
 
 [agile]: http://agilemanifesto.org/
