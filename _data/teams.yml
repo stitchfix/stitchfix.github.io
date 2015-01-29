@@ -218,6 +218,24 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Deanna
+      lastname:    Alcorn
+      location:    San Francisco
+      division:    Client Experience
+      description: Deanna enjoys designing products that enrich people’s lives. She has worked with startups, ad agencies and music merchandisers, and has taught design classes in San Francisco. She's into art, prehistoric plants, yoga and rock shows.
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      image:       deanna
+      # linkedin: accepts a URL or a public profile name
+      linkedin:    https://www.linkedin.com/in/dastudios
+      github:
+      twitter:     DesignResonates
+      instagram:
+      flickr:
+      links:
+        - type:    homepage
+          url:     http://dastudios.com/
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
     - name:        David
       lastname:    Chang
       location:    San Francisco
