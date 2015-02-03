@@ -310,6 +310,20 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Nicola
+      lastname:    Adamchik
+      location:    Pittsburgh
+      division:    Warehouse & Logistics
+      description: Nicola likes to torture herself by spending time running long distances, biking up steep hills and sweating it out in bikram yoga. She likes to relax by hiking in the park with her dog and traveling to warm and strange locales all over the world.
+      image:       nicola
+      linkedin:    http://www.linkedin.com/in/nadamchik
+      github:      nicolaa
+      twitter:
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
 - teamname: design
   members:
     - name:        Brian
