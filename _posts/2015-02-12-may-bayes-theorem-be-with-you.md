@@ -177,6 +177,13 @@ makes our model less susceptible to being plagued by variance inflation
 and singularity of the sample covariance matrix. This is the same idea
 employed by the regularization techniques described earlier.
 
+A third use case is the Hierarchical Bayes model where we leverage the
+hierarchical structure of a dataset (if present) to create a prior structure,
+and the amount of shrinkage induced is informed by the data. This technique is
+particularly powerful when estimating effects at a granular level, e.g., at the
+individual level, because the model allows the slope estimate for an individual
+to "borrow" information from other individuals.
+
 ###Last Word
 
 Bayesian statistics offers a framework to handle uncertainty that is,
