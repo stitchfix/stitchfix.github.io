@@ -21,7 +21,7 @@ discusses two reasons why:
     that is based on a more intuitive mental model than the
     frequentist paradigm.
 
-    i. There’s a common misperception of what the confidence interval
+    i.  There’s a common misperception of what the confidence interval
         really is. In many cases, what you may be seeking is a
         Bayesian credible interval.
 
@@ -29,12 +29,13 @@ discusses two reasons why:
     techniques while also giving us a principled approach to
     explicitly expressing prior beliefs.
 
-    i.  This aids interpretability and helps us combat multicollinearity
+    i.  This aids interpretability
+        and helps us combat multicollinearity
         and overfitting.
 
 ###Confidence Interval or Credible Interval?
 
-####The Confidence Interval - the data is random, but the parameter is fixed
+####The Confidence Interval: The data is random, the parameter is fixed
 The confidence interval is the most commonly used frequentist tool. It
 works like this: Let’s say we want to test the hypothesis that the
 average American male is \\( 177 \\) cm tall. Let’s also assume that we have a
@@ -72,7 +73,7 @@ is a \\( 95 \% \\) probability that the true average height is between \\( 167 \
     the sample has been drawn - thus the misperception of the
     confidence interval
 
-####The Credible Interval - the data is fixed, but the parameter is random
+####The Credible Interval: The data is fixed, the parameter is random
 In the Bayesian paradigm, it’s the parameter that is random while the
 data is fixed. This paradigm seems logical: it's not just that the data
 is fixed in Bayesian inference - the data is fixed in reality,
