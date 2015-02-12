@@ -240,7 +240,7 @@
       lastname:    Chang
       location:    San Francisco
       division:    Client Experience
-      description: David learned a love of data driven applications early on in his career, though they rarely love him back.  He is a native of the San Francisco Bay Area and will probably never leave, mostly because he is lazy, but also because he thinks it's a great place to live.  
+      description: David learned a love of data driven applications early on in his career, though they rarely love him back.  He is a native of the San Francisco Bay Area and will probably never leave, mostly because he is lazy, but also because he thinks it's a great place to live.
       # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image: dc2
       # linkedin: accepts a URL or a public profile name
@@ -256,7 +256,7 @@
       lastname:    Dempsey
       location:    Orange County
       division:    Merchandising
-      description: Mitch was born and raised in Orange County. He loves working on "scratch-your-own-itch" projects just as much as he loves working on large scale systems. Stitch Fix is one of the few places that promotes innovation on both. 
+      description: Mitch was born and raised in Orange County. He loves working on "scratch-your-own-itch" projects just as much as he loves working on large scale systems. Stitch Fix is one of the few places that promotes innovation on both.
       image:      mitch
       linkedin:    mrdempsey
       github:     webdestroya
@@ -381,7 +381,7 @@
       image:
       linkedin:    ecolson
       github:
-      twitter:
+      twitter:     ericcolson
       instagram:
       flickr:
       links:
@@ -437,6 +437,8 @@
       instagram:
       flickr:
       links:
+      - type:    homepage
+        url:     http://astrobiased.com
 
     - name:        Deep
       lastname:    Ganguli
@@ -555,7 +557,7 @@
       flickr:
       links:
 
-    - name:        Greg 
+    - name:        Greg
       lastname:    Novak
       location:    San Francisco
       division:
@@ -571,20 +573,20 @@
       flickr:
       links:
 
-    - name:        Kim 
+    - name:        Kim
       lastname:    Larsen
       location:    San Francisco
       division:
       description: Originally from Denmark, Kim is passionate about bridging the gap between data analysis and business applications. He believes that if an analysis or algorithm cannot be explained at a high level, it is probably too convoluted. He is also a firm believer in Bayesian regression and loves programming (mostly in R these days).
       image:       kim-larsen
-      linkedin:    https://www.linkedin.com/pub/kim-larsen/3/4a0/3a2 
+      linkedin:    https://www.linkedin.com/pub/kim-larsen/3/4a0/3a2
       github:
-      twitter:     
+      twitter:
       instagram:
       flickr:
-      links:   
-     
-    - name:        Tara 
+      links:
+
+    - name:        Tara
       lastname:    Lydiard-Martin
       location:    San Francisco
       division:
@@ -601,20 +603,20 @@
       lastname:    Yu
       location:    San Francisco
       division:
-      description: Grew up in southwest of China, Zhou loves Asian food, especially spicy dishes. He's always trying to apply statistics and machine learning to solving impactful business problem. In his spare time, he enjoys reading and playing basketball and pool. 
-      image:       zhou-yu 
-      linkedin:    zhouyustanford 
+      description: Grew up in southwest of China, Zhou loves Asian food, especially spicy dishes. He's always trying to apply statistics and machine learning to solving impactful business problem. In his spare time, he enjoys reading and playing basketball and pool.
+      image:       zhou-yu
+      linkedin:    zhouyustanford
       github:
       twitter:
       instagram:
       flickr:
       links:
 
-    - name:        John 
+    - name:        John
       lastname:    McDonnel
       location:    San Francisco
       division:
-      description: John has a passion for learning, often with the aid of machines. His obsessions with English-style tea, bridge, and tweed jackets make him the world's oldest 20-something. He is a devout Bayesian but a Python vs R agnostic. He claims to be from Seattle, but he's lived all over the northerly parts of North America.     
+      description: John has a passion for learning, often with the aid of machines. His obsessions with English-style tea, bridge, and tweed jackets make him the world's oldest 20-something. He is a devout Bayesian but a Python vs R agnostic. He claims to be from Seattle, but he's lived all over the northerly parts of North America.
       image:       john-mcdonnel
       linkedin:    www.linkedin.com/pub/john-mcdonnell/33/332/658
       github:      https://github.com/johnmcdonnell
@@ -623,26 +625,26 @@
       flickr:
       links:
 
-    - name:        Richie 
-      lastname:    Li 
+    - name:        Richie
+      lastname:    Li
       location:    San Francisco
       division:
       description: Richie likes machine learning, crunching data and writing Java code. He enjoys learning new technologies and tools. During his free time he loves cooking, video gaming and hiking. Hails from the southwest of China.
       image:       richie-li
-      linkedin:    
+      linkedin:
       github:
       twitter:
       instagram:
       flickr:
       links:
 
-    - name:        Ewan 
+    - name:        Ewan
       lastname:    Oglethorpe
       location:    San Francisco
       division:
       description: Ewan likes The Office as well as bears, beets and Battlestar Galactica. He was born in England and has spent time living in Southern Africa as well as the DC area. One of his favorite aspects of Stitch Fix is the combination of curated human selection to supplement machine learning.
       image:       ewan-oglethorpe
-      linkedin:    http://www.linkedin.com/pub/ewan-oglethorpe/49/123/b5b/ 
+      linkedin:    http://www.linkedin.com/pub/ewan-oglethorpe/49/123/b5b/
       github:
       twitter:
       instagram:
@@ -650,12 +652,12 @@
       links:
 
     - name:        Alex
-      lastname:    Chen 
+      lastname:    Chen
       location:    San Francisco
       division:
-      description: Alex grew up in Taiwan but live the second half of his life in North California. He likes projects in the domain of data science and ecommerce (Stitch Fix is perfect for him), and enjoys writing codes with simple and elegant design. In his spare time, he reads, travels, bikes, and drinks coffee. 
+      description: Alex grew up in Taiwan but live the second half of his life in North California. He likes projects in the domain of data science and ecommerce (Stitch Fix is perfect for him), and enjoys writing codes with simple and elegant design. In his spare time, he reads, travels, bikes, and drinks coffee.
       image:       alex-chen
-      linkedin:    
+      linkedin:
       github:
       twitter:
       instagram:
