@@ -17,24 +17,20 @@ However, all practitioners in data science and statistics would benefit
 from integrating Bayesian techniques into their arsenal. This post
 discusses two reasons why:
 
--   Bayesian statistics offers a framework to handle uncertainty
+1.  Bayesian statistics offers a framework to handle uncertainty
     that is based on a more intuitive mental model than the
-    frequentist paradigm. ➊
+    frequentist paradigm.
 
-    -   There’s a common misperception of what the confidence interval
-        really is. In many cases, what you may be seeking is a
-        Bayesian credible interval.
+2.  Bayesian regression has close ties to regularization techniques while also
+    giving us a principled approach to explicitly expressing prior beliefs. This
+    helps us combat multicollinearity and overfitting.
 
--   Bayesian regression has close ties to regularization
-    techniques while also giving us a principled approach to
-    explicitly expressing prior beliefs. ➋
 
-    -   This aids interpretability and helps us combat multicollinearity
-        and overfitting.
+###Confidence Interval or Credible Interval?
+There’s a common misperception of what the confidence interval really is.
+In many cases, what you may be seeking is a Bayesian credible interval.
 
-###Confidence Interval or Credible Interval? ➊
-
-####The Confidence Interval - the data is random, but the parameter is fixed
+####The Confidence Interval: The data is random, the parameter is fixed
 The confidence interval is the most commonly used frequentist tool. It
 works like this: Let’s say we want to test the hypothesis that the
 average American male is \\( 177 \\) cm tall. Let’s also assume that we have a
@@ -72,7 +68,7 @@ is a \\( 95 \% \\) probability that the true average height is between \\( 167 \
     the sample has been drawn - thus the misperception of the
     confidence interval
 
-####The Credible Interval - the data is fixed, but the parameter is random
+####The Credible Interval: The data is fixed, the parameter is random
 In the Bayesian paradigm, it’s the parameter that is random while the
 data is fixed. This paradigm seems logical: it's not just that the data
 is fixed in Bayesian inference - the data is fixed in reality,
@@ -106,7 +102,7 @@ to fall within the interval bands if we ran the experiment a large
 number of times. This is a more intuitive way to think about
 uncertainty.
 
-###Bayesian Regression is a Shrinkage Estimator ➋
+###Bayesian Regression is a Shrinkage Estimator
 In a Bayesian regression model the slope coefficients follow prior
 random distributions:
 
@@ -182,7 +178,7 @@ hierarchical structure of a dataset (if present) to create a prior structure,
 and the amount of shrinkage induced is informed by the data. This technique is
 particularly powerful when estimating effects at a granular level, e.g., at the
 individual level, because the model allows the slope estimate for an individual
-to "borrow" information from other individuals.
+to "borrow" information from similar individuals.
 
 ###Last Word
 
