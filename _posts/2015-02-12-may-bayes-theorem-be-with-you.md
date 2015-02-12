@@ -17,22 +17,22 @@ However, all practitioners in data science and statistics would benefit
 from integrating Bayesian techniques into their arsenal. This post
 discusses two reasons why:
 
--   Bayesian statistics offers a framework to handle uncertainty
+1.  Bayesian statistics offers a framework to handle uncertainty
     that is based on a more intuitive mental model than the
-    frequentist paradigm. ➊
+    frequentist paradigm.
 
-    -   There’s a common misperception of what the confidence interval
+    i. There’s a common misperception of what the confidence interval
         really is. In many cases, what you may be seeking is a
         Bayesian credible interval.
 
--   Bayesian regression has close ties to regularization
+2.  Bayesian regression has close ties to regularization
     techniques while also giving us a principled approach to
-    explicitly expressing prior beliefs. ➋
+    explicitly expressing prior beliefs.
 
-    -   This aids interpretability and helps us combat multicollinearity
+    i.  This aids interpretability and helps us combat multicollinearity
         and overfitting.
 
-###Confidence Interval or Credible Interval? ➊
+###Confidence Interval or Credible Interval?
 
 ####The Confidence Interval - the data is random, but the parameter is fixed
 The confidence interval is the most commonly used frequentist tool. It
@@ -106,7 +106,7 @@ to fall within the interval bands if we ran the experiment a large
 number of times. This is a more intuitive way to think about
 uncertainty.
 
-###Bayesian Regression is a Shrinkage Estimator ➋
+###Bayesian Regression is a Shrinkage Estimator
 In a Bayesian regression model the slope coefficients follow prior
 random distributions:
 
