@@ -183,7 +183,7 @@ hierarchical structure of a dataset (if present) to create a prior structure,
 and the amount of shrinkage induced is informed by the data. This technique is
 particularly powerful when estimating effects at a granular level, e.g., at the
 individual level, because the model allows the slope estimate for an individual
-to "borrow" information from other individuals.
+to "borrow" information from similar individuals.
 
 ###Last Word
 
