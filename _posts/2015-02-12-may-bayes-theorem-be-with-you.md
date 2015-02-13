@@ -35,7 +35,7 @@ The confidence interval is the most commonly used frequentist tool. It
 works like this: Let’s say we want to test the hypothesis that the
 average American male is \\( 177 \\) cm tall. Let’s also assume that we have a
 random sample of American males, and the average height of the sample is
-\\( 171 \\) cm with a standard deviation of \\( 2 \\) cm. The lower limit of a \\( 95 \% \\)
+\\( 171 \\) cm with a standard error of \\( 2 \\) cm. The lower limit of a \\( 95 \% \\)
 confidence interval is then  \\( 171-2\ \times 1.96 = 167 \\), and the upper limit is
 \\( 171 + 2 \times 1.96 = 175 \\).
 
