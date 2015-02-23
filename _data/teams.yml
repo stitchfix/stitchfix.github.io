@@ -657,7 +657,33 @@
       division:
       description: Alex grew up in Taiwan but live the second half of his life in North California. He likes projects in the domain of data science and ecommerce (Stitch Fix is perfect for him), and enjoys writing codes with simple and elegant design. In his spare time, he reads, travels, bikes, and drinks coffee.
       image:       alex-chen
-      linkedin:
+      linkedin:    http://www.linkedin.com/in/alexchen12
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+
+    - name:        Chris
+      lastname:    Moody
+      location:    San Francisco
+      division:
+      description: Chris loves high performance computing, high dimensions & high fashion. He loves learning the beautiful symmetries between physics, data, and analytics. Hails from Spain & South Carolina. 
+      image:       chris-moody
+      linkedin:    https://www.linkedin.com/in/chrisemoody
+      github:      cemoody
+      twitter:     chrisemoody
+      instagram:
+      flickr:
+      links:
+
+    - name:        Joerg
+      lastname:    Fritz
+      location:    San Francisco
+      division:
+      description: Joerg hails from Germany, and likes to point out that at least half of all German luxury car brands you can name come from his home town. When he's not arguing about expensive cars, he is probably thinking about how to use math to find patterns in real world data or drinking hot chocolate, sometimes even at the same time.
+      image:       joerg-fritz
+      linkedin:    https://www.linkedin.com/in/joergfritz
       github:
       twitter:
       instagram:
