@@ -7,85 +7,116 @@ author_url: 'https://www.linkedin.com/in/nreavill'
 published: true
 ---
 
+## All these JOINs are killing me
+
 Complex relational databases can lead to tortuous SQL queries and slow
 responses from your web application. If you're trying to return a long list of
 objects that are built up from five, ten or even seventeen related tables your
-response times can be unacceptably slow. Heroku web dynos time out at thirty
-seconds and if your app is regularly butting up against that limit in the course
-of normal operation then it's probably time to think about some serious
-refactoring.
+response times can be unacceptably slow. At Stitch Fix we encounter this sort of
+problem regularly and we have found that using ElasticSearch along with some
+conventions for denormalizing complex objects can make it easy to generate
+sufficiently speedy responses, even when they are returning lots of rows.
 
-At Stitch Fix we have such a tool: the Receiving Queue. It is designed to give
-an itemized list of what new inventory we have received on a particular day, to
-show ordered vs received item counts and detailed information about the style
-of clothing received, so that the warehouse team can be sure they have received
-the items we were expecting.
+One such project is the Sample Queue, a tool that allows our Sample
+Coordinators to see, based on purchase orders, what clothing samples we are
+expecting in to our HQ and to keep track of all the steps that are required to
+process each sample: data attribution, fit analysis, photography, videography
+etc. This project requires loading rows of data built from many related
+Postgres tables and it's important that they can be easily searched and sorted.
 
-When we launched the Receiving Queue it quickly became apparent that performance
-was a problem. At first we could only load a week's worth of receipts, then a 
-week for a single warehouse, and then only a single day. It worked but since the
-data view was so narrow it was not as powerful as we intended it to be.
-
-A few months later a similar project arose. This time it was the Sample Queue, a
-tool that would allow our Sample Coordinators to see, based on purchase orders,
-what clothing samples we were expecting in to our HQ and to keep track of all
-the steps that are required to process each sample: data attribution, fit
-analysis, photography, videography etc. Again this project would require loading
-multiple rows of data built from many related Postgres tables, only this time
-searching, sorting and the ability to see many days in a single view were much
-more important features.
-
-We had been using [ElasticSearch][elasticsearch] for a couple of years and never really taken
-advantage of it as a data store (as opposed to using it as a search engine and
-loading ActiveRecord objects found from the primary key ids it returned). The
-advantages were obvious: ElasticSearch indexes are very easy to search and 
-with no ActiveRecord objects to instantiate and no need to hit the database the
-response time for even large numbers of records would be acceptable.
+We have been using [ElasticSearch][elasticsearch] for a couple of years and
+had never really taken advantage of it as a data store until recently (as
+opposed to using it as a search engine and loading ActiveRecord objects found
+from the primary key ids it returned). The advantages are obvious: ElasticSearch
+indexes are very easy to search and with no ActiveRecord objects to instantiate
+and no need to hit the database the response time for even large numbers of
+records is more than acceptable.
 
 [elasticsearch]: http://www.elasticsearch.org/
 
 All we needed to do was build a search index that contained all the data we
-wanted to display in Sample Queue view layer. However, we realised it would be
-useful if we could swap out individual rows of the Sample Queue with
+wanted to display in the Sample Queue's view layer. However, we realised it
+would be useful if we could swap out individual rows of the Sample Queue with
 ActiveRecord objects or JSON hashes. Or, to put it another way, the view layer
 shouldn't care about the class of the object it was rendering.
 
-### Presenters as Denormalizers
+## Presenters as Denormalizers
+
+We use the [Elasticsearch::Model][elasticsearch-model] library to integrate with
+ElasticSearch. The gem expects a method called `to_hash`. The hash is converted
+to JSON for each record and used to populate the ElasticSearch index:
+
+[elasticsearch-model]: https://github.com/elasticsearch/elasticsearch-rails/tree/master/elasticsearch-model
+
+```ruby
+class Sample < ActiveRecord::Base
+  include Elasticsearch::Model
+
+  # Building as small hash here is a little smelly but probably OK.
+  # As the hash grows you should start treating it as a separate concern. This
+  # is what we will be doing with our denormalizer (see below).
+  def to_hash
+    {
+                  id: self.id,
+        display_name: display_name,
+          style_name: style.name,
+            style_id: style.id,
+      original_image: original_image,
+          color_name: color.name
+    }
+  end
+  
+  settings(elasticsearch_settings) do
+    mapping do
+      indexes :display_name, type: 'multi_field', fields: {
+        display_name:       { type: "string", analyzer: "snowball" },
+        display_name_exact: { type: "string", index: :not_analyzed }
+      }
+      # etc ...
+    end
+  end
+end
+```
 The [Presenter pattern][presenter-pattern] is a familiar one in Rails: wrap
 objects in a presenter class to keep business logic away from your HAML or ERB.
-Since the process of building up a hash to push into an ElasticSearch index is basically the same
-we decided to use one class to do both jobs. The `SampleDenormalizer` looks like
-this:
+Since the process of building up a hash to push into an ElasticSearch index
+is basically the same we decided to use one class to do both jobs. We start with
+a 'denormalizer' class that flattens out the many objects that make up sample
+view. The `SampleDenormalizer` looks like this:
 
 [presenter-pattern]: http://nithinbekal.com/posts/rails-presenters/ "Nithin Bekal on Presenters in Rails"
 
 ```ruby
 class SampleDenormalizer
 
-  attr_reader :sample
   def initializer(sample)
     @sample = sample
   end
 
+  # This method should be treated like a view - no logic, just attributes
   def to_hash
-    # this list of methods_to_hash can get very long but it encourages you to
-    # keep the hash flat and to be deliberate about what you are adding in there
-    methods_to_hash = %w(id display_name original_image has_basic_attributes?)
-    methods_to_hash += %w(style_id style_id style_name color_name)
-    # etc ...
-    Hash[methods_to_hash.map{|mth| [mth, self.send(mth)]}]
+    # this list of methods can get very long but it encourages you to
+    # keep the hash flat and to be deliberate about what you are adding to it
+    %w(id
+       display_name
+       original_image
+       style_id
+       style_name
+       color_name).map{ |method_name|
+        [ method_name, self.send(method_name) ]
+    }.to_h
   end
 
   def display_name
-    sample.display_name
+    @sample.display_name
   end
 
   def original_image
-    sample.original_image
+    @sample.original_image
   end
 
   def color_name
-    sample.color.name
+    @sample.color.name
   end
 
   def style_name
@@ -96,42 +127,18 @@ class SampleDenormalizer
     style.id
   end
 
-  # One of the powers of this pattern is for attributes like this
-  # This method returns a boolean value that is complex and expensive to
-  # calculate
-  # What's more, it is nearly impossible to query with SQL.
-  # Once you put it in the ElasticSearch index it is cheap to store and return
-  # and simple to query
-  def has_basic_attributes?
-    return false unless style_scalar_attributes
-    required_scalar_values     = REQUIRED_BASIC_SCALAR_ATTRIBUTES.map{|attr| style_scalar_attributes.send(attr) }
-    required_multi_attributes  = if root_item_type  == 'Apparel'
-                                   REQUIRED_BASIC_APPAREL_MULTI_ATTRIBUTES
-                                 else
-                                   []
-                                 end
-    required_multi_values      = required_multi_attributes.map do |attr|
-      style_multi_attributes_names.include?(attr)
-    end
-    (required_scalar_values + required_multi_values).all?
-  end
-
-  # etc ...
-
   private
   # any methods that aren't included in the hash can be private and should be
   # memoized for better performance
   def style
-    @style  ||= sample.style
+    @style  ||= @sample.style
   end
 
 end
 ```
 
-You can use this with [Elasticsearch::Model][elasticsearch-model] library to
-build the hash for the index:
-
-[elasticsearch-model]: https://github.com/elasticsearch/elasticsearch-rails/tree/master/elasticsearch-model
+You can now use the denormalizer in the model to build the hash for
+ElasticSearch, considerably reducing the complexity of this particular class.
 
 ```ruby
 class Sample < ActiveRecord::Base
@@ -141,16 +148,43 @@ class Sample < ActiveRecord::Base
     SampleDenormalizer.new(self).to_hash
   end
   
-  # you still have to include the mapping here
-  settings(elasticsearch_settings) do
-    mapping do
-      indexes :display_name, type: 'multi_field', fields: {
-        display_name:       { type: "string", analyzer: "snowball" },
-        display_name_exact: { type: "string", index: :not_analyzed }
-      }
-      # etc ...
-    end
+  # mapping here as before ...
+
+end
+```
+
+One of the strengths of this pattern is for calculated attributes like
+`has_fit_attributes?` which returns a boolean value but is complex and expensive
+to calculate. What's more, it is nearly impossible to query with SQL. Once you
+put it in the ElasticSearch index it is cheap to store and return and simple to
+query.
+
+```ruby
+class SampleDenormalizer
+
+  def to_hash
+    %w(id
+       display_name
+       original_image
+       style_id
+       style_name
+       color_name
+       has_fit_attributes?).map{ |method_name|
+        [ method_name, self.send(method_name) ]
+    }.to_h
   end
+
+  # same as example above ...
+
+  def has_fit_attributes?
+    return true if @sample.root_item_type  == 'Non-Apparel'
+    required_scalar_values  = %w{fit_top good_for_top_body_type}.map{|attr| style.scalar_attributes.send(attr) }
+    required_multi_values   = %w{bra_type shoulder_width_match torso_length_match}.map do |attr|
+      style.multi_attributes_names.include?(attr)
+    end
+    (required_scalar_values + required_multi_values).all?
+  end
+
 end
 ```
 
@@ -177,13 +211,12 @@ class SamplesController < ApplicationController
 end
 ```
 
-Both the `Hashie::Mash` and `ActiveRecord` objects are using the same presenter.
-How so? The presenter is actually a simple wrapper around the denormalizer:
+Both the `Hashie::Mash` (which is what the ElasticSearch Ruby client returns)
+and `ActiveRecord` objects are using the same presenter. How so? The presenter
+is actually a simple wrapper around the denormalizer:
 
 ```ruby
 class SamplePresenter
-
-  attr_reader :target
 
   def initialize(object_for_presenting)
     if object_for_presenting.class.ancestors.include?(ActiveRecord::Base)
@@ -192,7 +225,7 @@ class SamplePresenter
     elsif object_for_presenting.kind_of?(Hashie::Mash)
       # if the object is a Hashie::Mash object from ElasticSearch it is
       # pre-denormalized so just pass it through un-presented and rely on
-      # method_missing to return call all the methods.
+      # method_missing to call all the methods.
       @target = object_for_presenting
     end
   end
@@ -221,3 +254,8 @@ no matter the object and get the same result:
     = sample.style_name.titleize
 ```
 
+In this example we are treating ElasticSearch as a view cache and making an
+assumption that our view may want display data from this quick-responding cache
+or from the built-on-the-fly database-backed objects. The fact that
+ElasticSearch is a powerful search engine is almost a side-benefit but using
+both features to their fullest enables us to build some powerful tools.
