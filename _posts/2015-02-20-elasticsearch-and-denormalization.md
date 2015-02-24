@@ -163,12 +163,13 @@ query.
 class SampleDenormalizer
 
   def to_hash
+    # added `has_fit_attributes?` to the hash
     %w(id
        display_name
        original_image
        style_id
        style_name
-       has_fit_attributes? # added this method to the hash
+       has_fit_attributes? 
        color_name).map{ |method_name|
         [ method_name, self.send(method_name) ]
     }.to_h
