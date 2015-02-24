@@ -81,8 +81,8 @@ The [Presenter pattern][presenter-pattern] is a familiar one in Rails: wrap
 objects in a presenter class to keep business logic away from your HAML or ERB.
 Since the process of building up a hash to push into an ElasticSearch index
 is basically the same we decided to use one class to do both jobs. We start with
-a 'denormalizer' class that flattens out the many objects that make up sample
-view. The `SampleDenormalizer` looks like this:
+a 'denormalizer' class that flattens out the many objects that make up the
+sample view. The `SampleDenormalizer` looks like this:
 
 [presenter-pattern]: http://nithinbekal.com/posts/rails-presenters/ "Nithin Bekal on Presenters in Rails"
 
@@ -190,7 +190,12 @@ end
 ```
 
 So that's how you can use the Denormalizer pattern to build up your search
-index. You can use that same code for more typical presenter work.
+index. You can use that same code for more typical presenter work. In the
+`SamplesController` the index action uses the ElasticSearch `search` method
+(defined in the gem) the return a list of records. Each record has a `_source`
+(an attribute which is the `Hashie::Mash` hash of the JSON document stored in
+the ElasticSearch index) and we can wrap them in the SamplePresenter (which we
+will see below).
 
 ```ruby
 class SamplesController < ApplicationController
@@ -199,6 +204,13 @@ class SamplesController < ApplicationController
   def index
     @samples  = Sample.search(params[:keywords]).map{|s| SamplePresenter.new(s._source) }
   end
+
+```
+
+Our update action, which operates on the Sample `ActiveRecord` object also gets
+wrapped in our SamplePresenter.
+
+```ruby
 
   # the object being presented here is an ActiveRecord object
   # this action is being called by an AJAX request
@@ -212,9 +224,8 @@ class SamplesController < ApplicationController
 end
 ```
 
-Both the `Hashie::Mash` (which is what the ElasticSearch Ruby client returns)
-and `ActiveRecord` objects are using the same presenter. How so? The presenter
-is actually a simple wrapper around the denormalizer:
+Both the `Hashie::Mash` and `ActiveRecord` objects are using the same presenter.
+How so? The presenter is actually a simple wrapper around the denormalizer:
 
 ```ruby
 class SamplePresenter
