@@ -168,8 +168,8 @@ class SampleDenormalizer
        original_image
        style_id
        style_name
-       color_name
-       has_fit_attributes?).map{ |method_name|
+       has_fit_attributes? # added this method to the hash
+       color_name).map{ |method_name|
         [ method_name, self.send(method_name) ]
     }.to_h
   end
