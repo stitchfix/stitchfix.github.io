@@ -103,6 +103,8 @@ number of times. This is a more intuitive way to think about
 uncertainty.
 
 ###Bayesian Regression is a Shrinkage Estimator
+In this section we turn our attention to regression analysis. As stated above, the Bayesian paradigm provides several benefits when fitting regression models.
+
 In a Bayesian regression model the slope coefficients follow prior
 random distributions:
 
