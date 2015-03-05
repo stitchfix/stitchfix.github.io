@@ -18,7 +18,7 @@ John’s talk focussed on why performance matters for realistic data science wor
 ![John talking about Julia](/assets/images/blog/jmw_multithreaded_data_talk_cropped.jpg)
 
 
-##Julia is fast
+##Let's face it, R and Python are slow
 
 To describe what's wrong with the current generation of programming languages, John walked us through an example of writing a naive implementation of [Brownian motion](http://en.wikipedia.org/wiki/Brownian_motion) in R:
 
@@ -69,7 +69,7 @@ So what makes Julia so efficient?
 
 * Julia infers the types of all variables inside the body of the `loop` function, conditional on knowing the types of the input arguments `n`. In practice, `loop` is only going to be called with an integer argument, so John was able to walk through the full inference results for `loop`.
 
-* With the results of type inference in hand, Julia is able to ask LLVM to generate machine code at run-time that corresponds to what a simple translation of the type-annotated Julia code into C would compile into.
+* With the results of type inference in hand, Julia is able to ask LLVM to generate machine code at run-time. This code corresponds to what a simple translation of the type-annotated Julia code into C would compile into.
 
 * Julia then executes the function body using the run-time compiled
 code rather than interpreting the raw source code.
