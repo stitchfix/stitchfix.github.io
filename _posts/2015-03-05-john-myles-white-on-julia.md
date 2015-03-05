@@ -7,7 +7,7 @@ published: true
 location: "San Francisco, CA"
 ---
 
-Last week we kicked off our first [Multithreaded Data event](http://www.meetup.com/Multithreaded-Data/events/220356115/), where [John Myles White](http://www.johnmyleswhite.com/) gave a talk about Julia, a new programming language that some of us [love](http://technology.stitchfix.com/blog/2014/12/04/i-heart-julia/)). It’s the first of many exciting talks to come at Stitch Fix. Our next invited speaker is [Hadley Wickham](http://had.co.nz/), who will be talking about how to get data into R. If you’re in the SF bay area and the topic excites you, keep an eye out for our upcoming [events](http://www.meetup.com/Multithreaded-Data/)!
+Last week we kicked off our first [Multithreaded Data event](http://www.meetup.com/Multithreaded-Data/events/220356115/), where [John Myles White](http://www.johnmyleswhite.com/) gave a talk about Julia, a new programming language that some of us [love](http://technology.stitchfix.com/blog/2014/12/04/i-heart-julia/). It’s the first of many exciting talks to come at Stitch Fix. Our next invited speaker is [Hadley Wickham](http://had.co.nz/), who will be talking about how to get data into R. If you’re in the SF bay area and the topic excites you, keep an eye out for our upcoming [events](http://www.meetup.com/Multithreaded-Data/)!
 
 ##Why Julia Matters for Data Science
 
