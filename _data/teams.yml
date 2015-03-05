@@ -170,22 +170,6 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
-    - name:        Justin
-      lastname:    George
-      location:    Portland
-      division:    Styling
-      description: Justin is self taught and practices the craft of software development and dabbles in woodworking as well as solving problems through the radical application of honesty and acceptance. He has an abiding passion for boardgames, fine food, and literature. Hails from Eugene, Oregon.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:       jgeorge
-      # linkedin: accepts a URL or a public profile name
-      linkedin:    justingeorge
-      github:      jaggederest
-      twitter:
-      instagram:
-      flickr:
-      links:
-      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
-
     - name:        Pete
       lastname:    Dudek
       location:    Pittsburgh
