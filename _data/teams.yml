@@ -3,7 +3,7 @@
     - name:        Jeff
       lastname:    Barrett
       location:    San Francisco
-      division:    Administrative Overhead
+      division:    CTO
       description: Jeff likes his objects oriented in a programmable fashion and his espresso well made. If he had a time machine he'd stop Buddy Holly from flying on any planes ever. Hails from New York.
       # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
       image:
