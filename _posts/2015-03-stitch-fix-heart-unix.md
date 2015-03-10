@@ -40,8 +40,8 @@ I &#10084; UNIX and using the command line; they help me solve problems at Stitc
    - [Command Completion Alert]()
  - [Bemuse Coworkers]()
 
-
-### Check Image Size <a name="check-image-size"></a>
+<a name="check-image-size"></a>
+### Check Image Size
 &#8212; [Dave Copeland](https://twitter.com/davetron5000/) *(OS X / bash)*
 
 #### Problem
