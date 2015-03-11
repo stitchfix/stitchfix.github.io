@@ -49,13 +49,13 @@ body {
 #graphic {
     display: block;
     margin: auto;
-    text-align:center;
+    text-align: center;
 }
  
 #legend {
     display: block;
     margin: auto;
-    text-align:center;
+    text-align: center
 } 
 
 p.l1, p.l2, p.l3, p.l4, p.l5, p.l6{
