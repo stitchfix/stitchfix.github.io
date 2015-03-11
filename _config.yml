@@ -28,6 +28,8 @@ permalink: /blog/:year/:month/:day/:title
 exclude: [Rakefile, README.md, bower_components, bower.json]
 
 markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
 
 navigation:
  - title: Home
