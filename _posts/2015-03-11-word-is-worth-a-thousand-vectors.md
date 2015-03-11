@@ -339,7 +339,7 @@ If you're using Python 2, this is a great reason to reduce Unicode headaches and
 <span style="font-size:medium;">
 <a name="footnote12"></a>
 <sup>12</sup>
-See a comparison of these techniques [here](http://www.cs.ubc.ca/research/flann/). My recommendation is using LSH if you need a pure Python solution, and annoy if you need a solution that is memory light. 
+See a comparison of these techniques [here](http://radimrehurek.com/2014/01/performance-shootout-of-nearest-neighbours-querying/). My recommendation is using LSH if you need a pure Python solution, and annoy if you need a solution that is memory light. 
 <a href="#footnote12-return">&larr;</a>
 </span>
 
