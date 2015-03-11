@@ -40,10 +40,89 @@ Caption: Example code for doing this using the [gensim module](https://radimrehu
 
 In this case, we’ve looked for vectors that are nearby to the word `vacation` by measuring the similarity (usually cosine similarity) to the root word and sorting by that.
 
-INTERACTIVE GRAPHIC
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
 
+#graphic {
+    display: block;
+    margin: auto;
+    text-align:center;
+}
+ 
+#legend {
+    display: block;
+    margin: auto;
+    text-align:center;
+} 
+
+p.l1, p.l2, p.l3, p.l4, p.l5, p.l6{
+    padding: 5px 8px 5px 8px;
+    color: white;
+    width: auto;
+    display:inline-block;
+    font-weight: bold;
+    }
+p.l1 {background-color: #FF8B00}
+p.l2 {background-color: #717171}
+p.l3 {background-color: #DB00E5}
+p.l4 {background-color: #00E526}
+p.l5 {background-color: #FD005A}
+p.l6 {background-color: #009785}
+</style>
+
+<script>
+d3.csv("/assets/data/data.csv", function(csv){
+    var data = csv.map(function(d){
+        return {
+            x: +d.x, 
+            y: +d.y,
+            radius: +d.r,
+            category: +d.c, 
+            text: d.t
+        };
+    });
+
+    MG.data_graphic({
+        data: data,
+        target: "#graphic",
+        chart_type: "point",
+        width: 600,
+        height: 600,
+        x_accessor: "x",
+        y_accessor: "y",
+        size_range: [1,10],
+        size_accessor: "radius",
+        color_accessor: "category",
+        show_rollover_text: false,
+        x_axis: false,
+        y_axis: false,
+        color_domain: ['0', '1', '2', '3', '4', '5'],
+        color_range: ['#FF8B00', '#717171', '#DB00E5',
+                      '#00E526', '#FD005A', '#009785'],
+        mouseover: function(d, i) {
+            d3.select('#graphic svg .mg-active-datapoint')
+                .text(data[i].text);
+        }
+    });
+});</script>
+
+
+<div id="graphic"></div>
+
+<div id="legend">
+<p class='l1'>Destinations</p> 
+<p class='l2'>Vacation</p> 
+<p class='l3'>Season</p> 
+<p class='l4'>Holidays</p> 
+<p class='l5'>Wedding</p> 
+<p class='l6'>Month</p> 
+</div>
+<br />
 CAPTION
-A visualization of the words nearest to vacation.Similar words are nearby. Feel free to zoom and hover over the bubbles to reveal the words they represent<sup><a href="#footnote7">7</a></sup>.
+An interatcive visualization of the words nearest to vacation. Similar words are nearby. Feel free to zoom and hover over the bubbles to reveal the words they represent<sup><a href="#footnote7">7</a></sup>.
 
 And these words aren’t just nearby; they’re also in several clusters. So we can determine that the words most similar to `vacation` come in a variety of flavors: one cluster might be `wedding`-related, but another might relate to destinations like `Belize`.
 

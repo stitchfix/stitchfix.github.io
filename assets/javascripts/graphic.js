@@ -1,4 +1,4 @@
-d3.csv("data/data.csv", function(csv){
+d3.csv("/assets/data/data.csv", function(csv){
     var data = csv.map(function(d){
         return {
             x: +d.x, 
