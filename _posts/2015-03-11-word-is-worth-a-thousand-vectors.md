@@ -6,9 +6,9 @@ author_url: 'https://twitter.com/chrisemoody'
 published: true
 location: "San Francisco, CA"
 ---
-Standard natural language processing (NLP) is a messy and difficult affair. It requires teaching a computer about English-specific word ambiguities as well as the hierarchical, sparse nature of words in sentences. At Stitch Fix, word vectors help computers learn from the raw text in customer notes. Our systems need to recommend the maternity line when she says she's in her 'third trimester', identify a medical professional when she writes that she 'used to wear scrubs to work', and distill 'taking a trip' into a Fix for vacation clothing. 
+Standard natural language processing (NLP) is a messy and difficult affair. It requires teaching a computer about English-specific word ambiguities as well as the hierarchical, sparse nature of words in sentences. At Stitch Fix, word vectors help computers learn from the raw text in customer notes. Our systems, composed of machines and human experts, need to recommend the maternity line when she says she's in her 'third trimester', identify a medical professional when she writes that she 'used to wear scrubs to work', and distill 'taking a trip' into a Fix for vacation clothing.
 
-Word vectors (also referred to as distributed representations) are an amazing alternative that sweep away most of the issues of dealing with NLP. They let us ignore the difficult-to-understand grammar & syntax of language while retaining the ability to ask and answer simple questions about a text. The goal of this post is to be a motivating introduction to word vectors and demonstrate their real-world utility.
+While we're not totally "there" yet with the holy grail to NLP, word vectors (also referred to as distributed representations) are an amazing tool that sweeps away some of the issues of dealing with human language. The machines work in tandem with the stylists as a support mechanism to help identify and summarize textual information from the customers. The human experts will make the final call on what actions will be taken. The goal of this post is to be a motivating introduction to word vectors and demonstrate their real-world utility.
 
 The following example set the natural language community afire<a name="footnote1-return"></a><sup><a href="#footnote1">1</a></sup> back in 2013:
 
