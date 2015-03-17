@@ -152,7 +152,7 @@ The output is also far less awesome and far less informative:
 
 ![Example of R ggpairs](/assets/images/blog/grammar_image03.png)
 
-There are some big issues here. First, the [pairplot](http://stanford.edu/~mwaskom/software/seaborn/generated/seaborn.pairplot.html) command from Seaborn dropped the variable cut, because it did not know how to compare it to the continuous variables. It can only plot scatter plots for continuous vs. continuous variables. Second, the upper triangle of this grid of plots is redundant (e.g., the top right plot is the same as the bottom left plot). In R, these redundant plots are replaced by correlation coefficients or grouped boxplots, which add information. Finally, I found the aesthetics of the figure in Seaborn way too difficult to control, hence the price labels on the x-axes are bunched together. Again, the ggplot+dplyr code is easier to read, easier to write, and produces an informative visualization with fairly simple and easy-to-follow code.
+There are some big issues here. First, the [pairplot](http://stanford.edu/~mwaskom/software/seaborn/generated/seaborn.pairplot.html) command from Seaborn dropped the variable cut, because it did not know how to compare it to the continuous variables. It can only plot scatter plots for continuous vs. continuous variables. Second, the upper triangle of this grid of plots is redundant (e.g., the top right plot is the same as the bottom left plot). In R, these redundant plots are replaced by correlation coefficients or grouped boxplots, which add information. Finally, I found the aesthetics of the figure in Seaborn way too difficult to control, hence the price labels on the x-axes are bunched together. Again, the ggplot+dplyr code is easier to read, easier to write, and produces an informative visualization with intuitive code patterns.
 
 ### Both languages are great for different reasons
 I’m a huge fan of doing exploratory data analysis/visualization in R using ggplot2 and dplyr. Using these tools, I find it straightforward to translate my ideas from English into code and visualizations. The analogous process in Python is usually more convoluted, and the results are not nearly as pleasing to the eye or as informative. I’ve found that the ease of working in R greatly enhances my creativity and general happiness.
@@ -161,4 +161,4 @@ That being said, **R also has some pretty huge drawbacks** relative to Python. T
 
 <hr>
 
-**Edits:** Michael Waskom, the developer behind Seaborn, kindly pointed out that you easily truncate the subplots in the second graphic of this post using `truncate=True` in `lmplot`. 
+**Edits:** Michael Waskom, the developer behind Seaborn, pointed out that you easily truncate the subplots in the second graphic of this post using `truncate=True` in `lmplot`. 
