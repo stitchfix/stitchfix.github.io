@@ -103,7 +103,7 @@ reap the benefits of multiple applications and shared code without having to imm
 
 ## Databases as a Service
 
-On the subject of databases, our databases work just like our appications - we can create new ones, set up replication, access backups, rollback to
+On the subject of databases, our databases work just like our applications - we can create new ones, set up replication, access backups, rollback to
 previous versions, and download production dumps with a simple command.  This is because, like our applications, our databases are setup via a cloud
 hosting service (Heroku Postgres) that provides all of that.  
 
