@@ -155,7 +155,7 @@ For the curious, here are the specific tools and services we use:
 
 * [Ruby on Rails](http://www.rubyonrails.org)
 * [Postgres](http://www.postgresql.org/)
-* [GitHb](http://github.com) (source code management)
+* [GitHub](http://github.com) (source code management)
 * [Heroku](http://heroku.com) (hosts our apps and Postgres databases)
 * [Resque](https://github.com/resque/resque/tree/1-x-stable) (background processing)
 * [Heroku Scheduler](https://addons.heroku.com/scheduler#standard) (cron-like)
