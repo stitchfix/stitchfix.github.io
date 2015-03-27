@@ -308,6 +308,20 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Geoff
+      lastname:    Thé
+      location:    San Francisco
+      division:    Warehouse & Logistics
+      description: Geoff enjoys riding motorcycles, reading comics, playing board games with his family, and watching Miyazaki movies.  Hails from the <a class="link" href="http://www.canada.ca/">great white north</a>.
+      image:       geoff
+      linkedin:    http://www.linkedin.com/in/geoffthe
+      github:      geoff2k
+      twitter:     geoff2k
+      instagram:
+      flickr:
+      links:
+      # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
+
 - teamname: design
   members:
     - name:        Brian
