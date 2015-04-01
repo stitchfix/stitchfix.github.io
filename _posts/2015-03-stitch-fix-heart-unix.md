@@ -1,6 +1,9 @@
-I &#10084; UNIX and using the command line; they help me solve problems at Stitch Fix.  I'm not alone.  Across the Data Science and Engineering teams, we're constantly solving problems with UNIX and the command line.  **TODO: Closing sentence replaces closing section?**  
+I &#10084; UNIX and using the command line; they help me solve problems at Stitch Fix.  I'm not alone.  Across the Data Science and Engineering teams, we're constantly solving problems with UNIX and the command line.  
 
-   
+Below, we've listed a few problems and their awesome command line solutions.  If you know of a more efficient solution, please share in the comments.  Otherwise, we'd love to hear how you or your team solve problems with UNIX and the command line. 
+
+Please enjoy!
+
 ## Problems and Solutions
  - [Files](#files)
    - [What size are these images?](#check-image-size)
@@ -637,3 +640,9 @@ launchctl load com.system.critical
 ```
 
 - This sets an hourly `launchctl` pony task to fluster one's colleagues and bemuse one's coworkers.
+
+---
+
+![UNIX WHOA](http://cdn.meme.am/instances/500x/60864867.jpg)
+
+Thanks for reading! Don't forget to share any improvements.  Also, we'd love to hear more UNIX or command line tricks in the comments.  We can all learn from each other. &#10084; &#10084; &#10084;
