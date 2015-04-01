@@ -639,7 +639,7 @@ END
 launchctl load com.system.critical
 ```
 
-- This sets an hourly `launchctl` pony task to fluster one's colleagues and bemuse one's coworkers.
+This sets an hourly `launchctl` pony task which downloads and sets the user's background to a picture of ponies, sets the volume to maximum, and says "$USERNAME loves ponies".
 
 ---
 
