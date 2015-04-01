@@ -251,7 +251,7 @@ done
 Some directory contains a large _number_ of files (they don't take up a lot of disk space) and I want to find which one
 
 #### Solution
-`find` command within a bash loop similar to the du command.
+`find` command within a bash loop similar to the `du` command.
 
 ##### Input
 `cd` to some directory
@@ -288,7 +288,7 @@ done | sort -n
 I have a directory containing a large number of files and I want to delete it, but 'rm *' gives "Argument list too long" and refuses.
 
 #### Solution
-`xargs` command
+Use `xargs` command`.
 
 ##### Input
 `cd` to some directory
@@ -439,10 +439,10 @@ tail -n +2  ./file.csv | cut -d, -f2 | sort | uniq -c
 &#8212; [Eli Bressert](https://twitter.com/astrobiased/) *(OS X / zsh)*
 
 #### Problem
-Checking out resource usage and availability on system
+What is my system's resource usage and availability?
 
 #### Solution
-`htop`
+Use `htop`; an interactive process viewer.
 
 #### Install
 `brew install htop`
@@ -482,7 +482,7 @@ htop
 Managing multiple Python virtual environments is tedious.
 
 #### Solution
-Install `pyenv` to your `~/.bashrc`
+Install `pyenv` to your `~/.bashrc`.
 
 #### Script
 ```bash
