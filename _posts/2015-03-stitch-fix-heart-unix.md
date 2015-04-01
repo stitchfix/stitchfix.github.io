@@ -18,7 +18,7 @@ Please enjoy!
  - [CSVs](#csvs)
    - [How do you filter a CSV file by a column value?](#filter-csv-by-column-values)
    - [In a CSV file, what are the column names and their indices?](#csv-file-columns-names-and-indices)
-   - [How do you find distinct CSV file rows?](#distinct-csv-file-rows)
+   - [How do you count the occurrences of a value in a CSV file column?](#count-value-occurrences-in-csv-file-column)
  - [Systems](#systems) 
    - [What is my system's resource usage and availability?](#display-resource-usage-and-availability)
    - [How do you easily manage Python virtual environments?](#easily-manage-python-virtual-environments)
@@ -393,15 +393,15 @@ head -n 1 ./file.csv | awk -F, '{for(i=1; i<=NF; i++) print i,$i}'
  - `awk` `-F` sets a "field separator" and splits on commas
  - `'{for(i=1; i<=NF; i++) print i,$i}'` is the program which loops over the columns and prints the column index and name
 
-<a name="distinct-csv-file-rows"></a>
-### CSV File Column Names And Indices
+<a name="count-value-occurrences-in-csv-file-column"></a>
+### Count The Occurrences Of A Value In A CSV File Column
 &#8212; [Nick Kridler](https://github.com/nmkridler/) *(OS X, Linux, Unix / bash)*
 
 #### Problem
-Now that we know how to find [column indices](#csv-file-columns-names-and-indices), let's find the distinct rows.
+We don't know how many times a value appears in a CSV file column.
 
 #### Solution
-Use `cut` and `uniq`
+Now that we know how to find [column indices](#csv-file-columns-names-and-indices), let's count the occurrences of a value in a column using `cut` and `uniq`.
 
 ##### Input
 `./file.csv`
