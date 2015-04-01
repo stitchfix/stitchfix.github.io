@@ -371,9 +371,9 @@ Use `head` to get the header and pipe it into `awk`.
 `./file.csv`
 
 ```csv
-shirt,size,color,fit
-1,L,Blue,Fitted
-5,M,Green,Loose
+shirt,name,size,color,fit
+1,blouse,L,Blue,Fitted
+5,tank,M,Green,Loose
 ```
 
 ##### Command
@@ -407,27 +407,27 @@ Now that we know how to find [column indices](#csv-file-columns-names-and-indice
 `./file.csv`
 
 ```csv
-a,b,c,d
-bob,1,2,3
-bob,2,3,4
-bill,3,5,6
-frank,5,6,7
+shirt,name,size,color,fit
+1,blouse,L,Blue,Fitted
+5,tank,M,Green,Loose
+7,blouse,S,White,Fitted
+8,sweater,M,Brown,Loose
 ```
 
 ##### Command
 ```
-tail -n +2  ./file.csv | cut -d, -f1 | sort | uniq -c
+tail -n +2  ./file.csv | cut -d, -f2 | sort | uniq -c
 ```
 
 ##### Output
 ```
-1 bill
-2 bob
-1 frank
+2 blouse
+1 sweater
+1 tank
 ```
 
  - `tail -n +2` gets all lines except the header
- - `cut -d, -f1` grabs the 1st column based on comma delimiters
+ - `cut -d, -f2` grabs the 2nd column based on comma delimiters
  - `sort` sorts the column
  - `uniq` counts the distinct words
 
