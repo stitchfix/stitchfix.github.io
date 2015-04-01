@@ -362,18 +362,18 @@ awk -F, '$2 == 15' ./hours.csv
 &#8212; [Nick Kridler](https://github.com/nmkridler/) *(OS X, Linux, Unix / bash)*
 
 #### Problem
-We don't know a CSV files column names and indices.
+We don't know a CSV file's column names and indices. Once we know the CSV file column names and indices, we can easily [extract data](#count-value-occurrences-in-csv-file-column).
 
 #### Solution
-Use `head` to get the header and pipe it into `awk`
+Use `head` to get the header and pipe it into `awk`.
 
 ##### Input
 `./file.csv`
 
 ```csv
-a,b,c,d
-1,2,3,4
-5,6,7,8
+shirt,size,color,fit
+1,L,Blue,Fitted
+5,M,Green,Loose
 ```
 
 ##### Command
@@ -383,10 +383,10 @@ head -n 1 ./file.csv | awk -F, '{for(i=1; i<=NF; i++) print i,$i}'
 
 ##### Output
 ```
-1 a
-2 b
-3 c
-4 d
+1 shirt
+2 size
+3 color
+4 fit
 ```
 
  - `head -n 1` grabs the first line
