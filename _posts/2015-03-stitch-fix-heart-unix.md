@@ -11,6 +11,7 @@ Please enjoy!
    - [How many lines are in this data dump?](#count-data-dump-number-of-lines)
    - [How do you bulk change filenames?](#bulk-change-filenames)
    - [How do you quickly copy files to a remote server?](#quick-file-copy-to-remote-server)
+   - [How do you create a graph of relative file sizes?](#relative-file-size-graph)
  - [Directories](#directories)
    - [How do you summarize a directories' files?](#directory-file-summary)
    - [Which directory has the most files?](#sort-directories-by-number-of-files)
@@ -205,6 +206,29 @@ scp some-file shiny:path/to/dest
 ```
 
 Yay!
+
+<a name="relative-file-size-graph"></a>
+### Relative File Size Graph
+&#8212; [Eli Bressert](https://twitter.com/astrobiased/) *(OS X / zsh)*
+
+#### Problem
+What are the relative sizes of files in a directory, in graphical form?
+
+#### Solution
+Use `du` and `grep` to get file sizes and generate a graph with `spark`.
+
+#### Install
+`brew install spark`
+
+##### Command
+```
+du -k *.txt | grep -o '[0-9]*' | spark
+```
+
+##### Output
+```
+▂▁▁▂▂▂▂▃▅▄▄▃▄▃▃▃▃▄▄▅▅▄▅▅▅▄▅▄▄▆▄▆▅▄▅▅▅▅▅▅▅▅▅▆▅▅▆▆▅▅▄▄▅▅▅▅▆▅▆▅▆▅▅▅▅▆▅▆▆▅▆▆▆▅▅▅▅▆▅▆▆▅▆▆▆▅▅▇▅▇█▇▇
+```
 
 ## Directories
 
@@ -468,9 +492,6 @@ htop
 75871 simeon    31   0 2407M  2144     0 C  0.0  0.0  0:00.00 htop
 
 ```
-
-
- - Display relative sizes of files in a directory, in graphical form
 
 <a name="easily-manage-python-virtual-environments"></a>
 ### Easily Manage Python Virtual Environments
