@@ -93,7 +93,7 @@ find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "
 How many lines of text are there in a data dump? This happens all the time, and I hate opening the data in a text editor and scrolling to the bottom.
 
 #### Solution
-`cat` and `wc`.
+Use `wc`.
 
 ##### Input
 `./foo.txt`
@@ -108,16 +108,15 @@ four to be exact
 ##### Command
 
 ```
-cat foo.txt | wc -l
+wc -l ./foo.txt
 ```
 
 ##### Output
 ```
-4
+4 ./foo.txt
 ```
 
- - `cat` prints the file to the screen. 
- - | pipes the output into the wc utility, which displays the number of lines, words, and bytes contained in each input file, or standard input. 
+ - The `wc` utility displays the number of lines, words, and bytes contained in each input file, or standard input. 
  - The `-l` flag specifies that you want the number of (l)ines in the file!
 
 <a name="bulk-change-filenames"></a>
