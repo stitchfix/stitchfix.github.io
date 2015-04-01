@@ -428,7 +428,7 @@
       location:    San Francisco
       division:
       description: Eli loves big ideas and putting them into action by connecting the impossible. During his freetime he writes, surfs, and enjoys the California lifestyle. Hails from the sun-baked lands of Arizona.
-      image:
+      image:       
       linkedin:    http://www.linkedin.com/pub/eli-bressert/60/960/872
       github:      ebressert
       twitter:     astrobiased
@@ -682,6 +682,19 @@
       description: Joerg hails from Germany, and likes to point out that at least half of all German luxury car brands you can name come from his home town. When he's not arguing about expensive cars, he is probably thinking about how to use math to find patterns in real world data or drinking hot chocolate, sometimes even at the same time.
       image:       joerg-fritz
       linkedin:    https://www.linkedin.com/in/joergfritz
+      github:
+      twitter:
+      instagram:
+      flickr:
+      links:
+
+    - name:        Patrick 
+      lastname:    Foley
+      location:    San Francisco
+      division:
+      description: Patrick enjoys math and maps, and he loves Arizona (U of A) college basketball. He is language agnostic, and prefers trying the simplest things first. AZ -> CA -> PA -> CA.
+      image:       patrick-foley
+      linkedin:    www.linkedin.com/pub/patrick-foley/15/538/922/en
       github:
       twitter:
       instagram:
