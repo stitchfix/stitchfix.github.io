@@ -287,7 +287,7 @@ done | sort -n
 I have a directory containing a large number of files and I want to delete it, but 'rm *' gives "Argument list too long" and refuses.
 
 #### Solution
-Use `xargs` command`.
+Use `xargs` command.
 
 ##### Input
 `cd` to some directory
