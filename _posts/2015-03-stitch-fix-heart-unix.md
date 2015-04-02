@@ -215,7 +215,7 @@ Yay!
 What are the relative sizes of files in a directory, in graphical form?
 
 #### Solution
-Use `du` and `grep` to get file sizes and generate a graph with `spark`.
+Use `du` and `grep` to get file sizes and generate a graph with [`spark`](http://zachholman.com/spark/).
 
 #### Install
 `brew install spark`
@@ -465,7 +465,7 @@ tail -n +2  ./file.csv | cut -d, -f2 | sort | uniq -c
 What is my system's resource usage and availability?
 
 #### Solution
-Use `htop`; an interactive process viewer.
+Use [`htop`](http://hisham.hm/htop/); an interactive process viewer.
 
 #### Install
 `brew install htop`
@@ -595,7 +595,7 @@ export CDPATH=.:$HOME/workspace:$GOPATH/src/github.com:$GOPATH/src/code.google.c
 I have a long-running command, and I want to be notified with a pop-up dialog on screen when it finishes.
 
 #### Solution
-`terminal-notifier` command installed via macports, homebrew, or whatever.
+Use [`terminal-notifier`](https://github.com/alloy/terminal-notifier) to send User Notifications on Mac OS X from the command-line.
 
 ##### Install
 ```
