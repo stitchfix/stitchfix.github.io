@@ -549,7 +549,7 @@ alias clock='date "+DATE: %Y-%m-%d%nTIME: %r"'
 Typing an alias is still too many keystrokes.
 
 ##### Solution
-Create custom key bindings.
+You can create custom key bindings in bash which can be used to execute commands and custom scripts, saving valuable keystrokes.
 
 ##### Command
 ```
