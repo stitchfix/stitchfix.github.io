@@ -90,7 +90,7 @@ find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "
 &#8212; [Deep Ganguli](https://twitter.com/dgangul1/) *(OS X / bash)*
 
 #### Problem
-How many lines of text are there in a data dump? This happens all the time, and I hate opening the data in a text editor and scrolling to the bottom.
+A common question I have is: how many rows of data are in this file? The egregiously lazy method of obtaining an answer is to open a text editor, scroll to the bottom, and read off the last line number. This is inefficient.
 
 #### Solution
 Use `wc`.
