@@ -62,7 +62,7 @@ So, I've got 8 instances of my script running at once.  Obviously, there are dim
 
 <a name="find-recently-changed-files"></a>
 ### Find Recently Changed Files
-&#8212; [Greg Novak](https://www.linkedin.com/in/gsnovak/) *(OS X / bash)*
+*(OS X / bash)*
 
 #### Problem
 Some file changed but I don't know where.  Sometimes this is "I don't know where my web browser saved my file."  I want a list of the most recently changed file in a tree.
