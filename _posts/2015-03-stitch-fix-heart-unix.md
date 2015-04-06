@@ -626,7 +626,7 @@ Colleague has left their laptop open and logged in, leaving their machine expose
 #### Solution
 Cron is a common choice, but that's a rookie move. It's too obvious, and cron is so user friendly that it's easy to find and fix.
 
-Instaed, use `launchctl`.  They'll *never* find it.
+Instead, use `launchctl`.  They'll *never* find it.
 
 ##### Command
 ```
