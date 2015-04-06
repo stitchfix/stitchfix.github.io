@@ -575,16 +575,20 @@ TIME: 01:08:53 PM
 I still hate typing.
 
 #### Solution
-You can use `CDPATH` for tab completion of the `cd` command.  If I have a directory with all of my projects, I can `export` `CDPATH` to this directory.
+You can set the `CDPATH` variable to add tab completion to the `cd` bash command. For example, if you have a directory which holds your projects, you can add that directory to the `CDPATH` variable to get tab completion of the project directories from anywhere in your file system.  
+
+It is important to remember to add `.` to the beginning of the directory list or you will lose tab completion in the current directory.
 
 ##### Command
-Add to your `~/.bashrc`
+Export `CDPATH` in your bash rc file (`~/.bash_profile` on mac). 
+
+For exmple:
 
 ```
 export CDPATH=.:$HOME/workspace:$GOPATH/src/github.com:$GOPATH/src/code.google.com/p
 ```
 
- - Type `cd` and hit tab, I now get tab completion for any project in the `CDPATH` subdirectories.
+ - After sourcing your `~/.bash_profile`, you will now be able to type `cd` at any time, and tab completion will include the matching subdirectories of each directory specified in `CDPATH`.
 
 <a name="command-completion-notification"></a>
 ### Command Completion Notification
