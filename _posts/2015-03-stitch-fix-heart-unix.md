@@ -36,10 +36,10 @@ Please enjoy!
 &#8212; [Dave Copeland](https://twitter.com/davetron5000/) *(OS X / bash)*
 
 #### Problem
-Check the sizes of our product images the pickers use to check what they are picking in our warehouse
+Our pickers in the warehouse were complaining that product images were too small (they need these images to help locate the right item for our customers).  So, check **all the images** to see if they are the right size!
 
 #### Solution
-Created a script to run curl on the argument to download the image, use ImageMagick to get its size and print that out in CSV.  Piped my input CSV of images into `xargs -n1 -P8 ./my_script.rb` to basically run my script 8-way parallel to get the job done as fast as I could without setting my machine on fire.
+Created a script to run `curl` on the script's argument to download the image, use ImageMagick to get its size and print that out in CSV.  Piped my input CSV of images into `xargs -n1 -P8 ./my_script.rb` to basically run my script 8-way parallel to get the job done as fast as I could without setting my machine on fire.
 
 ##### Input
 ```csv
@@ -53,13 +53,12 @@ Created a script to run curl on the argument to download the image, use ImageMag
 cat my_input.csv | xargs -n1 -P8 ./check.rb > images_with_possible_issues.csv
 ```
 
- - `xargs` runs a command, feeding `xargs` `STDIN` as arguments to that command
+ - `xargs` runs a command, feeding it `STDIN` as arguments to that command
    - `echo ""foo"" | xargs ls` is the same as `""ls foo""`.  
- - `-n1` says to run the given command once for each line of input.  
-  - Normally `xargs` will run many lines at once, so if you had a file with 10 rows in it called `""blah.csv""` and do `cat blah.csv | xargs curl`, it would likely run curl once with all 10 rows of blah.csv given to curl.  `-n1` means to just do them one at a time (so 10 runs of curl in this example).
+ - `-n1` says to run the given command once for each line of input (normally `xargs` will run many lines at once, so if you had a file with 10 rows in it called `""blah.csv""` and do `cat blah.csv | xargs curl`, it would likely run curl once with all 10 rows of blah.csv given to curl, so `-n1` runs it once per line of input).
  - `-P8` says to parallelize it 8 ways.  
 
-So, I've got 8 instances of my script running at once.  Obviously, there are diminishing returns on parallelism, but since curl'ing images is mostly I/O bound this worked pretty well without compromising my machine.
+So, I've got 8 instances of my script running at once.  Obviously, there are diminishing returns on parallelism, but since `curl`'ing images is mostly I/O bound this worked pretty well without compromising my machine.
 
 <a name="find-recently-changed-files"></a>
 ### Find Recently Changed Files
