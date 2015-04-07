@@ -1,3 +1,12 @@
+---
+title: Stitch Fix &#10084; UNIX
+layout: posts
+author: Simeon Willbanks
+author_url: 'https://twitter.com/simeonwillbanks'
+published: true
+location: "Everywhere"
+---
+
 I &#10084; UNIX and using the command line; they help me solve problems at Stitch Fix.  I'm not alone.  Across the Data Science and Engineering teams, we're constantly solving problems with UNIX and the command line.  
 
 Below, we've listed a few problems and their awesome command line solutions.  If you know of a more efficient solution, please share in the comments.  Otherwise, we'd love to hear how you or your team solve problems with UNIX and the command line. 
