@@ -369,7 +369,7 @@ awk -F, '$2 ~ 15' ./hours.csv
 
 ##### Command
 ```
-awk -F, '$2 == 15' ./hours.csv
+awk -F, '$2 == 15.01' ./hours.csv
 ```
 
 ##### Output
