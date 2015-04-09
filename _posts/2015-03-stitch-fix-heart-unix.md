@@ -245,7 +245,7 @@ du -k *.txt | grep -o '[0-9]*' | spark
 &#8212; [Greg Novak](https://www.linkedin.com/in/gsnovak/) *(OS X / bash)*
 
 #### Problem
-Some directory contains a lot of files, and a lot of large files.  For each directory, I want a summary of both the number of files and their sizes in human readable format (e.g. 37G instead of 37000000000)
+Some directory contains a lot of files, and a lot of large files.  For each directory, I want a summary of both the number of files and their sizes in human readable format (e.g. 37G instead of 37000000000).
 
 #### Solution
 `find`, `du`, `sed`, and `wc` commands in a bash loop.
@@ -279,7 +279,7 @@ done
 &#8212; [Greg Novak](https://www.linkedin.com/in/gsnovak/) *(OS X / bash)*
 
 #### Problem
-Some directory contains a large _number_ of files (they don't take up a lot of disk space) and I want to find which one
+Some directory contains a large _number_ of files (they don't take up a lot of disk space) and I want to find which one.
 
 #### Solution
 `find` command within a bash loop similar to the `du` command.
