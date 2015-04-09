@@ -38,6 +38,7 @@ Please enjoy!
    - [Can you be notified upon long-running command completion?](#command-completion-notification)
  - [Bemuse Coworkers](#bemuse-coworkers)
 
+<a name="files"></a>
 ## Files
 
 <a name="check-image-size"></a>
@@ -238,6 +239,7 @@ du -k *.txt | grep -o '[0-9]*' | spark
 ▂▁▁▂▂▂▂▃▅▄▄▃▄▃▃▃▃▄▄▅▅▄▅▅▅▄▅▄▄▆▄▆▅▄▅▅▅▅▅▅▅▅▅▆▅▅▆▆▅▅▄▄▅▅▅▅▆▅▆▅▆▅▅▅▅▆▅▆▆▅▆▆▆▅▅▅▅▆▅▆▆▅▆▆▆▅▅▇▅▇█▇▇
 ```
 
+<a name="directories"></a>
 ## Directories
 
 <a name="directory-file-summary"></a>
