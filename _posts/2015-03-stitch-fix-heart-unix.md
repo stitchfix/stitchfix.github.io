@@ -168,7 +168,7 @@ stitchfix-99.jpg
 #!/bin/bash
 
 if [ "$#" = "0" -o "$#" = "1" ]; then
-    echo Usage - fnsed <sed expression> <filename1> [filename2] ... 
+    echo "Usage - fnsed <sed expression> <filename1> [filename2] ..." 
     exit
 fi
 
