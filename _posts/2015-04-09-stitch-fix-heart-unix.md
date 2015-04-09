@@ -38,6 +38,7 @@ Please enjoy!
    - [Can you be notified upon long-running command completion?](#command-completion-notification)
  - [Bemuse Coworkers](#bemuse-coworkers)
 
+<a name="files"></a>
 ## Files
 
 <a name="check-image-size"></a>
@@ -51,7 +52,7 @@ Our pickers in the warehouse were complaining that product images were too small
 Created a script to run `curl` on the script's argument to download the image, use ImageMagick to get its size and print that out in CSV.  Piped my input CSV of images into `xargs -n1 -P8 ./my_script.rb` to basically run my script 8-way parallel to get the job done as fast as I could without setting my machine on fire.
 
 ##### Input
-```csv
+```
 1,https://cdn.example.com/image_A.jpg
 5,https://cdn.example.com/image_B.jpg
 10,https://cdn.example.com/image_C.jpg
@@ -238,6 +239,7 @@ du -k *.txt | grep -o '[0-9]*' | spark
 ▂▁▁▂▂▂▂▃▅▄▄▃▄▃▃▃▃▄▄▅▅▄▅▅▅▄▅▄▄▆▄▆▅▄▅▅▅▅▅▅▅▅▅▆▅▅▆▆▅▅▄▄▅▅▅▅▆▅▆▅▆▅▅▅▅▆▅▆▆▅▆▆▆▅▅▅▅▆▅▆▆▅▆▆▆▅▅▇▅▇█▇▇
 ```
 
+<a name="directories"></a>
 ## Directories
 
 <a name="directory-file-summary"></a>
@@ -349,7 +351,7 @@ We must filter a CSV file by specific column values.
 ##### Input
 `./hours.csv`
 
-```csv
+```
 User ID,Hours Styling
 1,15.90
 2,17.43
@@ -401,7 +403,7 @@ Use `head` to get the header and pipe it into `awk`.
 ##### Input
 `./file.csv`
 
-```csv
+```
 shirt,name,size,color,fit
 1,blouse,L,Blue,Fitted
 5,tank,M,Green,Loose
@@ -438,7 +440,7 @@ Now that we know how to find [column indices](#csv-file-columns-names-and-indice
 ##### Input
 `./file.csv`
 
-```csv
+```
 shirt,name,size,color,fit
 1,blouse,L,Blue,Fitted
 5,tank,M,Green,Loose
@@ -617,6 +619,7 @@ brew install terminal-notifier
 
 ##### Command
 `./ding`
+
 ```bash
 #!/bin/bash
 
