@@ -309,14 +309,14 @@ done | sort -n
    - Not efficient, but I haven't yet run into situations where it takes too long.  
  - The final sort command puts output in a useful order.  
    - The number of files is _cumulative_
-   - In the above example, there are 4273 files in _all_ directories below ./sf
+   - In the above example, there are 4273 files in _all_ directories below `./sf`
 
 <a name="delete-directory-with-large-number-of-files"></a>
 ### Delete Directory With Large Number Of Files
 &#8212; [Greg Novak](https://www.linkedin.com/in/gsnovak/) *(OS X / bash)*
 
 #### Problem
-I have a directory containing a large number of files and I want to delete it, but 'rm *' gives "Argument list too long" and refuses.
+I have a directory containing a large number of files and I want to delete it, but `rm *` gives "Argument list too long" and refuses.
 
 #### Solution
 Use `xargs` command.
