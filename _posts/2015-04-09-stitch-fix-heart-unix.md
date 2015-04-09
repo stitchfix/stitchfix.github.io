@@ -619,6 +619,7 @@ brew install terminal-notifier
 
 ##### Command
 `./ding`
+
 ```bash
 #!/bin/bash
 
