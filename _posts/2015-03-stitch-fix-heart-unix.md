@@ -415,9 +415,10 @@ head -n 1 ./file.csv | awk -F, '{for(i=1; i<=NF; i++) print i,$i}'
 ##### Output
 ```
 1 shirt
-2 size
-3 color
-4 fit
+2 name
+3 size
+4 color
+5 fit
 ```
 
  - `head -n 1` grabs the first line
