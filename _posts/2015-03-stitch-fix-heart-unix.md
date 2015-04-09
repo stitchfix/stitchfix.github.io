@@ -63,8 +63,8 @@ cat my_input.csv | xargs -n1 -P8 ./check.rb > images_with_possible_issues.csv
 ```
 
  - `xargs` runs a command, feeding it `STDIN` as arguments to that command
-   - `echo ""foo"" | xargs ls` is the same as `""ls foo""`.  
- - `-n1` says to run the given command once for each line of input (normally `xargs` will run many lines at once, so if you had a file with 10 rows in it called `""blah.csv""` and do `cat blah.csv | xargs curl`, it would likely run curl once with all 10 rows of blah.csv given to curl, so `-n1` runs it once per line of input).
+   - `echo "foo" | xargs ls` is the same as `"ls foo"`.  
+ - `-n1` says to run the given command once for each line of input (normally `xargs` will run many lines at once, so if you had a file with 10 rows in it called `"blah.csv"` and do `cat blah.csv | xargs curl`, it would likely run curl once with all 10 rows of blah.csv given to curl, so `-n1` runs it once per line of input).
  - `-P8` says to parallelize it 8 ways.  
 
 So, I've got 8 instances of my script running at once.  Obviously, there are diminishing returns on parallelism, but since `curl`'ing images is mostly I/O bound this worked pretty well without compromising my machine.
@@ -85,7 +85,7 @@ Find command as answered on [Stack Overflow](http://stackoverflow.com/questions/
 ##### Command
 ```
 # OS X find:
-find . -type f -print0 | xargs -0 stat -f ""%m %N"" | sort -rn | head -1 | cut -f2- -d" "
+find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -1 | cut -f2- -d" "
 
 # GNU find:
 find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "
@@ -290,7 +290,7 @@ Some directory contains a large _number_ of files (they don't take up a lot of d
 ##### Command
 ```
 find . -type d | while read -r dir;
-  do printf "%d\t%s\n" `find "$dir" | wc -l` ""$dir"";
+  do printf "%d\t%s\n" `find "$dir" | wc -l` "$dir";
 done | sort -n
 ```
 
@@ -645,7 +645,7 @@ Instead, use `launchctl`.  They'll *never* find it.
 cat <<END > $HOME/Library/LaunchAgents/com.system.critical.plist
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version=""1.0"">
+<plist version="1.0">
 <dict>
   <key>Label</key>
   <string>com.system.critical</string>
