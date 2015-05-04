@@ -1,0 +1,67 @@
+# Site settings
+title: Stitch Fix Technology – Multithreaded
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Stitch Fix is a full-stack startup creating unique solutions in
+  data-driven merchandising, massively scaled personal styling, and
+  complex logistics.
+baseurl: ""
+url: "http://technology.stitchfix.com/"
+production_url: "http://technology.stitchfix.com"
+twitter_username: jekyllrb
+github_username:  jekyll
+atom_path: "atom.xml"
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+
+# Owner (organization or individual) of site content
+author: "Stitch Fix"
+url: "http://technology.stitchfix.com/"
+
+# Pagination variable for how many posts to show in a list
+paginate: 10
+
+# Style of permalinks
+permalink: /blog/:year/:month/:day/:title
+
+# Variable format options for URL styles below
+# pretty                                          => /2009/04/29/slap-chop/index.html
+# /:month-month:day-:year/:title.html/            => 04-29-2009/slap-chop.html
+# /blog/:year/:month/:day/:title                 => /blog/2009/04/29/slap-chop/index.html
+
+exclude: [Rakefile, README.md]
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+
+navigation:
+ - title: Home
+   url: "#intro"
+ - title: Engineering
+   url: "#engineering"
+ - title: Data Science
+   url: "#data-science"
+ - title: Culture
+   url: "#culture"
+ - title: Team
+   url: "#team"
+ - title: Blog
+   url: "/blog/"
+ - title: Jobs
+   url: "/jobs/"
+
+assets:
+  css_compressor: sass
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - bower_components
+
+sass:
+  style: :compressed
+  load_paths: bower_components
