@@ -8,12 +8,18 @@ module Jekyll
       single = ''
 
       teams.each do |team|
-        single = team['members'].select { |member|
+        single = team['members'].select do |member|
           member['id'] == id
-        }
+        end
       end
 
       single[0]
+    end
+
+    def team(teams, name)
+      teams.select do |team|
+        team['teamname'] == name
+      end
     end
   end
 end

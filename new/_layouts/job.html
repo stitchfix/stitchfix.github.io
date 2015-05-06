@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+
+    <div class="container">
+      <div class="w-section bloghero"></div>
+      <div class="w-section section sectionheader">
+        <h2>{{ page.location }}</h2>
+        <h3>{{ page.title }}</h3>
+      </div>
+      <div class="w-section section"><img class="arrow" src="/assets/images/svgs/arrowgb.svg" width="150">
+        <h1>About this position</h1>
+        <div class="sectioncontent">
+          {{ content }}
+          <p class="sectionbutton">
+            <a href="{{ page.url }}">Submit your application</a>
+          </p>
+        </div>
+      </div>
+      <div class="w-section section sectiondark">
+        <h1>We love engineers who have:</h1>
+        <div class="sectioncontent">
+          <div class="w-row twocol">
+            <div class="w-col w-col-6 column">
+              <h2 class="listhead">Real Tech Fluency</h2>
+              <p>You can build anything with anything, and you probably have several years software development experience with a couple of those years working in Ruby on Rails. You can learn from us, and we can learn from you.</p>
+              <h2 class="listhead">Great Communication Skills</h2>
+              <p>You aren’t just great at listening, speaking, and writing. You are able to convey complex ideas and information regardless of the medium or situation.</p>
+              <h2 class="listhead">Product-Centric Thinking</h2>
+              <p>You have opinions about how the product you’re building should work. You dig deep and work with customers, the company, and our executive team to uncover the ideal way to leverage technology to solve problems.</p>
+            </div>
+            <div class="w-col w-col-6 column">
+              <h2 class="listhead">Self-Directed Working Style</h2>
+              <p>Once you’ve got something, we don’t have to worry about it. You have a bias toward action. Our team doesn’t have QA, Project Managers, or Product Managers, so we take ownership of what we build.</p>
+              <h2 class="listhead">Respect for the Craft</h2>
+              <p>You build software sustainably, using modern techniques. You are always looking for more and better ways to write software, and are willing to share them with your team.</p>
+              <h2 class="listhead">Respect, Empathy &amp; Humility</h2>
+              <p>You take your work seriously but not yourself. You show everyone respect, regardless of the circumstance. Extra points if you’re already a Stitch Fix superfan!</p>
+            </div>
+          </div>
+        </div>
+        <h1>Bonus Points</h1>
+        <div class="sectioncontent">
+          <div class="w-row twocol">
+            <div class="w-col w-col-6 column">
+              <h2 class="listhead">Experience working collaboratively</h2>
+              <p>We use GitHub, Heroku, HipChat, Screen Hero, and Blue Jeans to get stuff done online. We’re more interested in your personal process for collaboration than specific technologies, but are always on the lookout for better ways to work.</p>
+              <h2 class="listhead">Good at prototypes and design discussion</h2>
+              <p>Experience using pull requests, one-pagers, or screencasts to create rapid prototypes that demonstrate new features</p>
+            </div>
+            <div class="w-col w-col-6 column">
+              <h2 class="listhead">Experience with testing and CI</h2>
+              <p>We're working with the usual Ruby gems like Rspec, Capybara and others for unit and feature tests and use CircleCI to bring it all together.</p>
+              <h2 class="listhead">interest in service-oriented architecture</h2>
+              <p>We’re using tools like RabbitMQ, ElasticSearch, and headless HTTP services to scale our team and software. We’re learning as we go, so your experience or keen interest can ensure our systems handle our ever-increasing load.</p>
+            </div>
+          </div>
+          <p class="sectionbutton"><a href="/engineering">Learn about Engineering at Stitch Fix</a></p>
+        </div>
+      </div>
+      <div class="w-section section">
+        <h1>Working at Stitch Fix</h1>
+        <div class="sectioncontent">
+          <div class="w-row twocol">
+            <div class="w-col w-col-6 column">
+              <ul class="ul">
+                <li class="listitem">
+                  <p class="listtext">Competitive salaries and generous equity.</p>
+                </li>
+                <li class="listitem">
+                  <p class="listtext">A business that trusts and embraces tech.</p>
+                </li>
+                <li class="listitem">
+                  <p class="listtext">A leadership team that wants to do it right and is open to new ideas.</p>
+                </li>
+                <li class="listitem">
+                  <p class="listtext">A startup with a proven business model that’s growing fast.</p>
+                </li>
+                <li class="listitem">
+                  <p class="listtext">Use your preference of tools and hardware.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="w-col w-col-6 column">
+              <ul class="ul">
+                <li class="listitem">
+                  <p class="listtext">A comprehensive health insurance plan, including full dental and vision coverage.</p>
+                </li>
+                <li class="listitem">
+                  <p class="listtext">Fully stocked pantry with your choice of snacks and drinks.</p>
+                </li>
+                <li class="listitem">
+                  <p class="listtext">Sunny offices in downtown San Francisco and downtown Pittsburgh.</p>
+                </li>
+                <li class="listitem">
+                  <p class="listtext">Full support for remote work—you get to visit our SF office every couple months to connect with your peers and partners.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
