@@ -2,40 +2,7 @@
 layout: default
 ---
 <div class="w-tab-pane w--tab-active" data-w-tab="Blog">
-  <div class="headimage_blog">
-  </div>
-  <div class="w-section stickyblog">
-    <div class="w-clearfix filterwrapper">
-      <p class="formlabel filterlabel">Filter posts by</p>
-      <div class="w-dropdown filter" data-delay="0">
-        <div class="w-dropdown-toggle w-clearfix filtercontent">
-          <div class="filterlabel">Category</div>
-          <div class="w-icon-dropdown-toggle dropdownicon">
-          </div>
-        </div>
-        <nav class="w-dropdown-list dropdownlist">
-          <a class="w-dropdown-link dropdownitem" href="#">Engineering</a>
-          <a class="w-dropdown-link dropdownitem" href="#">Algorithms</a>
-          <a class="w-dropdown-link dropdownitem" href="#">Tools</a>
-        </nav>
-      </div>
-      <div class="w-dropdown filter" data-delay="0">
-        <div class="w-dropdown-toggle w-clearfix filtercontent">
-          <div class="filterlabel">Author</div>
-          <div class="w-icon-dropdown-toggle dropdownicon">
-          </div>
-        </div>
-        <nav class="w-dropdown-list dropdownlist">
-          <a class="w-dropdown-link dropdownitem" href="#">Engineering</a>
-          <a class="w-dropdown-link dropdownitem" href="#">Algorithms</a>
-          <a class="w-dropdown-link dropdownitem" href="#">Tools</a>
-        </nav>
-      </div>
-      <div class="w-clearfix search" data-ix="search-field-expand">
-        <img class="searchicon" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55074adf57a6df9d26c0a9c4_search.svg">
-      </div>
-    </div>
-  </div>
+  <div class="headimage_blog"></div>
   <div class="w-section w-clearfix filterbar" data-ix="filterstick">
     <div class="w-clearfix filterwrapper">
       <p class="filterlabel filtertitle">Filter posts by</p>
@@ -64,63 +31,54 @@ layout: default
         </nav>
       </div>
       <div class="w-clearfix search" data-ix="search-field-expand">
-        <img class="searchicon" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55074adf57a6df9d26c0a9c4_search.svg">
+        <img class="searchicon" src="/assets/images/svgs/search.svg">
       </div>
     </div>
     <div class="w-clearfix search mobilesearch" data-ix="mobile-search-expand">
-      <img class="searchicon" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55074adf57a6df9d26c0a9c4_search.svg">
+      <img class="searchicon" src="/assets/images/svgs/search.svg">
     </div>
   </div>
-  <div class="w-row blogpost">
-    <div class="w-col w-col-3 byline">
-      <img class="authorheadshot" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5545537de11f375d20616737_blog_eli.png">
-      <div class="blogauthor">Eli Bressert</div>
-      <div class="title">Data Scientist</div>
+
+  {% for post in site.posts %}
+    {% assign author = site.data.teams | find_member: post.author_id %}
+    <div class="w-row blogpost">
+      <div class="w-col w-col-3 byline">
+        {% if author.image %}
+          <img class="authorheadshot" src="{{ author.image }}">
+        {% endif %}
+        <div class="blogauthor">
+          {% if post.author %}
+            {{ post.author }}
+          {% elsif author %}
+            {{ author.name }} {{ author.lastname }}
+          {% endif %}
+        </div>
+        {% if author.division %}
+          <div class="title">{{ author.division }}</div>
+        {% endif %}
+      </div>
+      <div class="w-col w-col-9 blogcolumn">
+        <h4><a class="blogtitle" href="{{ post.url }}">{{ post.title }}</a></h4>
+        <div class="bloginfo">
+          {% if post.author %}
+            by {{ post.author }}
+          {% elsif author %}
+            by {{ author.name }} {{ author.lastname }}
+          {% endif %}
+
+          {% if post.categories[0] %}
+            in {{ post.categories | join: ", " | capitalize }}
+          {% endif %}
+          – <date datetime="{{ post.date | date: "%Y-%m-%d"}}">{{ post.date | date: "%B %d, %Y"}}</date>
+        </div>
+        <!-- TODO: how to get discus comments? <div class="bloginfo comments">6 Comments</div> <!-->
+
+        {{ post.excerpt }}
+        <a class="w-inline-block link" href="{{ post.url }}">
+          <div class="bloginfo blogjump">Read More&nbsp;»</div>
+        </a>
+      </div>
     </div>
-    <div class="w-col w-col-9 blogcolumn">
-      <h4>Multithreaded Data – John Myles White on Julia</h4>
-      <div class="bloginfo">by Eli Bressert in Algorithms – March 05, 2015</div>
-      <div class="bloginfo comments">6 Comments</div>
-      <p class="blogparagraph">Last week we kicked off our first&nbsp;<span class="dummylink">Multithreaded Data event</span>, where&nbsp;<span class="dummylink">John Myles White</span>&nbsp;gave a talk about Julia, a new programming language that some of us&nbsp;love. It’s the first of many exciting talks to come at Stitch Fix. Our next invited speaker is&nbsp;<span class="dummylink">Hadley Wickham</span>, who will be talking about how to get data into R. If you’re in the SF bay area and the topic excites you, keep an eye out for our <span class="dummylink">upcoming&nbsp;events</span>!</p>
-      <h5>Why Julia Matters for Data Science</h5>
-      <p class="blogparagraph">John’s talk focussed on why performance matters for realistic data science workloads in industry. He highlighted how programming languages like R and Python lack the design characteristics (like type consistency) necessary for high performance computing. Because performance matters, we need to have better programming language tools for doing data science.</p>
-      <a class="w-inline-block link" href="/blogpost">
-        <div class="bloginfo blogjump">Read More&nbsp;»</div>
-      </a>
-    </div>
-  </div>
-  <div class="w-row blogpost">
-    <div class="w-col w-col-3 byline">
-      <img class="authorheadshot" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/554553d16d0b308c4d223360_blog_chris.png">
-      <div class="blogauthor">Chris Moody</div>
-      <div class="title">Data Scientist</div>
-    </div>
-    <div class="w-col w-col-9 blogcolumn">
-      <h4>A Word is Worth a Thousand Vectors</h4>
-      <div class="bloginfo">by Chris Moody in Algorithms – March 11, 2015</div>
-      <div class="bloginfo comments">4 Comments</div>
-      <p class="blogparagraph">Standard natural language processing (NLP) is a messy and difficult affair. It requires teaching a computer about English-specific word ambiguities as well as the hierarchical, sparse nature of words in sentences. At Stitch Fix, word vectors help computers learn from the raw text in customer notes. Our systems need to recommend the maternity line when she says she's in her 'third trimester', identify a medical professional when she writes that she 'used to wear scrubs to work', and distill 'taking a trip' into a Fix for vacation clothing.</p>
-      <p class="blogparagraph">Word vectors (also referred to as distributed representations) are an amazing alternative that sweep away most of the issues of dealing with NLP. They let us ignore the difficult-to-understand grammar &amp; syntax of language while retaining the ability to ask and answer simple questions about a text. The goal of this post is to be a motivating introduction to word vectors and demonstrate their real-world utility.</p>
-      <a class="w-inline-block link" href="/blogpost">
-        <div class="bloginfo blogjump">Read More&nbsp;»</div>
-      </a>
-    </div>
-  </div>
-  <div class="w-row blogpost">
-    <div class="w-col w-col-3 byline">
-      <img class="authorheadshot" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55455446e11f375d20616756_blog_nick.png">
-      <div class="blogauthor">Nick Reavill</div>
-      <div class="title">Engineering Director</div>
-    </div>
-    <div class="w-col w-col-9 blogcolumn">
-      <h4>ElasticSearch and Denormalization in Rails</h4>
-      <div class="bloginfo">by Nick Reavill in Engineering – March 03, 2015</div>
-      <div class="bloginfo comments">2 Comments</div>
-      <p class="blogparagraph">Complex relational databases can lead to tortuous SQL queries and slow responses from your web application. If you're trying to return a long list of objects that are built up from five, ten or even seventeen related tables your response times can be unacceptably slow. At Stitch Fix we encounter this sort of problem regularly and we have found that using ElasticSearch along with some conventions for denormalizing complex objects can make it easy to generate sufficiently speedy responses, even when they are returning lots of rows.</p>
-      <p class="blogparagraph">One such project is the Sample Queue, a tool that allows our Sample Coordinators to see, based on purchase orders, what clothing samples we are expecting in to our HQ and to keep track of all the steps that are required to process each sample: data attribution, fit analysis, photography, videography etc. This project requires loading rows of data built from many related Postgres tables and it's important that they can be easily searched and sorted.</p>
-      <a class="w-inline-block link" href="/blogpost">
-        <div class="bloginfo blogjump">Read More&nbsp;»</div>
-      </a>
-    </div>
-  </div>
+  {% endfor %}
+
 </div>

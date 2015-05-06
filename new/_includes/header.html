@@ -1,11 +1,11 @@
-<div class="w-nav header" data-collapse="tiny" data-animation="default" data-duration="400" data-contain="1" data-doc-height="1">
+<div class="w-nav header">
   <div class="w-container navcontainer">
-    <a class="w-clearfix w-inline-block logo w--current" href="/">
-      <img class="logo" src="http://uploads.webflow.com/54fd9d36fafb193e0f8edc79/5514c10c7e6b2d7c5dd6536c_logov5.svg" alt="5514c10c7e6b2d7c5dd6536c_logov5.svg">
+    <a href="/" class="w-clearfix w-inline-block logo w--current">
+      <img class="logo" src="/assets/images/svgs/logov5.svg">
     </a>
-    <div class="w-dropdown mobilenav" data-delay="0">
+    <div class="w-dropdown mobilenav">
       <div class="w-dropdown-toggle mobilenavtoggle">
-        <img src="http://uploads.webflow.com/54fd9d36fafb193e0f8edc79/551bffca3f9283057b14cfac_hamburger_gr.svg" alt="551bffca3f9283057b14cfac_hamburger_gr.svg" height="25" width="150">
+        <img src="/assets/images/svgs/hamburger_gr.svg" height="25" width="150">
       </div>
       <nav class="w-dropdown-list">
         <a class="w-dropdown-link mobilenavlink" href="{{ site.baseurl }}/">Stitch Fix</a>
@@ -17,38 +17,38 @@
     </div>
     <a class="w-nav-brand logo" href="#"></a>
   </div>
-  <div class="w-nav-overlay" data-wf-ignore=""></div>
+  <div class="w-nav-overlay"></div>
 </div>
 
-<div class="w-tab-menu tabmenu" data-ix="tabmenuoriginal">
-  <a class="w-tab-link w-inline-block tab{% if page.type == 'home' %} w--current{% endif %}" data-w-tab="Stitch Fix / Home" href="/">
+<div class="w-tab-menu tabmenu">
+  <a href="/" class="w-tab-link w-inline-block tab{% if page.type == 'home' %} w--current{% endif %}">
     <div class="tablink">Stitch Fix</div>
     {% if page.type == 'home' %}
-    <img class="tabarrow initialtab" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5507679351c487ac7e1744fe_arrowgb.svg" data-ix="initial-tab-arrow">
+      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
     {% endif %}
   </a>
-  <a class="w-tab-link w-inline-block tab {% if page.type == 'engineering' %}w--current{% endif %}" data-w-tab="Engineering" href="/engineering">
+  <a href="/engineering" class="w-tab-link w-inline-block tab {% if page.type == 'engineering' %}w--current{% endif %}">
     <div class="tablink">Engineering</div>
     {% if page.type == 'engineering' %}
-    <img class="tabarrow initialtab" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5507679351c487ac7e1744fe_arrowgb.svg" data-ix="initial-tab-arrow">
+      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
     {% endif %}
   </a>
-  <a class="w-tab-link w-inline-block tab {% if page.type == 'algorithms' %}w--current{% endif %}" data-w-tab="Algorithms" href="/algorithms">
+  <a href="/algorithms" class="w-tab-link w-inline-block tab {% if page.type == 'algorithms' %}w--current{% endif %}">
     <div class="tablink">Algorithms</div>
     {% if page.type == 'algorithms' %}
-    <img class="tabarrow initialtab" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5507679351c487ac7e1744fe_arrowgb.svg" data-ix="initial-tab-arrow">
+      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
     {% endif %}
   </a>
-  <a class="w-tab-link w-inline-block tab {% if page.type == 'jobs' %}w--current{% endif %}" data-w-tab="Jobs" href="/jobs">
+  <a href="/jobs" class="w-tab-link w-inline-block tab {% if page.type == 'jobs' %}w--current{% endif %}">
     <div class="tablink">Jobs</div>
     {% if page.type == 'jobs' %}
-    <img class="tabarrow initialtab" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5507679351c487ac7e1744fe_arrowgb.svg" data-ix="initial-tab-arrow">
+      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
     {% endif %}
   </a>
-  <a class="w-tab-link w-inline-block tab {% if page.type == null %}w--current{% endif %}" data-w-tab="Blog" href="/blog">
+  <a href="/blog" class="w-tab-link w-inline-block tab {% if page.type == null %}w--current{% endif %}">
     <div class="tablink">Blog</div>
     {% if page.type == null %}
-    <img class="tabarrow initialtab" src="http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5507679351c487ac7e1744fe_arrowgb.svg" data-ix="initial-tab-arrow">
+      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
     {% endif %}
   </a>
 </div>

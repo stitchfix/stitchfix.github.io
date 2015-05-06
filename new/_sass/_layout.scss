@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Start of custom Webflow CSS
-   ========================================================================== */
 body {
   background-color: transparent;
   font-family: brandongrotesque, sans-serif;
@@ -41,7 +38,7 @@ h3 {
   margin-right: auto;
   margin-left: auto;
   padding-top: 6px;
-font-family: brandontext, sans-serif;
+  font-family: brandontext, sans-serif;
   color: #847b78;
   font-size: 35px;
   line-height: 45px;
@@ -157,7 +154,7 @@ p {
   background-color: #f3eeeb;
 }
 .section.sectiondark.sectionslash {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/553a9f1b089df19779983841_angle3.svg);
+  background-image: url('/assets/images/svgs/angle3.svg');
   background-position: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -174,13 +171,13 @@ p {
 .herodummy {
   min-height: 600px;
   margin-top: 60px;
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5522e2a0a5aeddb90cdaaef3_landing_page_v1.jpg);
+  background-image: url('/assets/images/landing_page_v1.jpg');
   background-position: 0% 50%;
   background-size: cover;
 }
 .herodummy.bloghero {
   min-height: 500px;
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55009bd6e12fc57729b7f9ba_IMG_0113.jpg);
+  background-image: url('/assets/images/hero/IMG_0113.jpg');
   background-position: 0% 0%;
 }
 .listicon {
@@ -192,45 +189,9 @@ p {
   padding-top: 0px;
   padding-bottom: 0px;
   float: none;
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/54fdbc143f2f65400f2cd153_IMG_1068.jpg), url(https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png);
+  background-image: url('/assets/images/hero/IMG_1068.jpg'), url('/assets/images/example-bg.png');
   background-position: -3% 0%, 0% 0%;
   background-size: cover, 125px;
-}
-.listicon.img1 {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/54fd8d133f2f65400f2cc822_IMG_0278.jpg);
-  background-position: 46% 0%;
-  background-size: cover;
-}
-.listicon.img2 {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/54fd8efefafb193e0f8edafc_IMG_1259.jpg);
-  background-position: 107% 50%;
-  background-size: cover;
-}
-.listicon.img3 {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/54fd8b6c3f2f65400f2cc806_IMG_0113.jpg);
-  background-position: 36% 0%;
-  background-size: cover;
-}
-.listicon.headshot {
-  background-image: none;
-  background-position: 0% 0%;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
-}
-.listicon.headshot2 {
-  background-image: none;
-  background-position: 0% 0%;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
-}
-.listicon.headshot3 {
-  background-image: none;
-  background-position: 0% 0%;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
 }
 .twocol {
   display: block;
@@ -902,19 +863,19 @@ p {
   text-align: center;
 }
 .workcell.photo3 {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/551c1143488e81037b9eaa0c_IMG_1344.jpg);
+  background-image: url('/assets/images/hero/IMG_1344.jpg');
   background-size: cover;
 }
 .workcell.photo {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/551c10d03e6f72906d319865_IMG_0816.jpg);
+  background-image: url('/assets/images/hero/IMG_0816.jpg');
   background-size: cover;
 }
 .workcell.photo2 {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/552584a2472da50219765a44_IMG_0205.jpg);
+  background-image: url('/assets/images/hero/IMG_0205.jpg');
   background-size: cover;
 }
 .workcell.photo2.imagegrid {
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5540e5b444e90df63fe638e6_IMG_1098.jpg);
+  background-image: url('/assets/images/hero/IMG_1098.jpg');
   background-position: 4% 50%;
   background-repeat: no-repeat;
 }
@@ -968,36 +929,36 @@ p {
 }
 .headimage_home {
   height: 738px;
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.49)), url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5546c2d0d98690ca7266e51d_Tech%20Site%20One_Crop2.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.49)), url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/5546c2d0d98690ca7266e51d_Tech%20Site%20One_Crop2.jpg);
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.49)), url('/assets/images/Tech Site One_Crop2.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.49)), url('/assets/images/Tech Site One_Crop2.jpg');
   background-position: 0% 0%, 50% 41%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
 }
 .headimage_engineering {
   height: 738px;
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/551c174b488e81037b9eabaa_IMG_0949.jpg);
+  background-image: url('/assets/images/hero/IMG_0949.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .headimage_algorithms {
   height: 738px;
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/552583795d66e5ed17afbf42_IMG_0114.jpg);
+  background-image: url('/assets/images/hero/IMG_0114.jpg');
   background-position: 50% 13%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .headimage_jobs {
   height: 738px;
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/54fdb95efafb193e0f8edfa0_IMG_0002.jpg);
+  background-image: url('/assets/images/hero/IMG_0002.jpg');
   background-position: 50% 27%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .headimage_blog {
   height: 738px;
-  background-image: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/552584a2472da50219765a44_IMG_0205.jpg);
+  background-image: url('/assets/images/hero/IMG_0205.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1115,15 +1076,6 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
   }
   .herodummy {
     min-height: 300px;
-  }
-  .listicon.img1 {
-    margin-bottom: 10px;
-  }
-  .listicon.img2 {
-    margin-bottom: 10px;
-  }
-  .listicon.img3 {
-    margin-bottom: 10px;
   }
   .twocol {
     width: 90%;
@@ -1427,18 +1379,6 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
   }
   .herodummy.bloghero {
     min-height: 300px;
-  }
-  .listicon.img1 {
-    width: 220px;
-    margin-top: 10px;
-  }
-  .listicon.img2 {
-    width: 220px;
-    margin-top: 20px;
-  }
-  .listicon.img3 {
-    width: 220px;
-    margin-top: 20px;
   }
   .twocol {
     max-width: 480px;
@@ -1915,9 +1855,6 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
     height: 100px;
     max-height: 300px;
   }
-  .listicon.img1 {
-    margin-top: 0px;
-  }
   .twocol {
     padding-right: 15px;
     padding-left: 15px;
@@ -2245,55 +2182,55 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
     padding-top: 50px;
   }
 }
-@font-face {
-  font-family: 'brandongrotesque';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500ac990de511082fd1b1f5_HVD%20Fonts%20-%20BrandonGrotesque-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'brandongrotesque';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500ac99bea91c7929c42340_HVD%20Fonts%20-%20BrandonGrotesque-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'brandongrotesque';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500ac99bea91c7929c4233f_HVD%20Fonts%20-%20BrandonGrotesque-Light.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'brandongrotesque';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500ac99bea91c7929c4233e_HVD%20Fonts%20-%20BrandonGrotesque-Bold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'brandontext';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500acdbe12fc57729b7fd3a_HVD%20Fonts%20-%20BrandonText-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'brandontext';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500acdb0de511082fd1b20c_HVD%20Fonts%20-%20BrandonText-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'brandontext';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500acdbbea91c7929c42351_HVD%20Fonts%20-%20BrandonText-Light.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'brandontext';
-  src: url('https://daks2k3a4ib2z.cloudfront.net/54fd9d36fafb193e0f8edc79/5500acdb0de511082fd1b20b_HVD%20Fonts%20-%20BrandonText-Bold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
 
+@font-face {
+  font-family: 'brandongrotesque';
+  src: url('/assets/fonts/HVD Fonts - BrandonGrotesque-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandongrotesque';
+  src: url('/assets/fonts/HVD Fonts - BrandonGrotesque-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandongrotesque';
+  src: url('/assets/fonts/HVD Fonts - BrandonGrotesque-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandongrotesque';
+  src: url('/assets/fonts/HVD Fonts - BrandonGrotesque-Bold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandontext';
+  src: url('/assets/fonts/HVD Fonts - BrandonText-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandontext';
+  src: url('/assets/fonts/HVD Fonts - BrandonText-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandontext';
+  src: url('/assets/fonts/HVD Fonts - BrandonText-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandontext';
+  src: url('/assets/fonts/HVD Fonts - BrandonText-Bold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
 
 
 
@@ -2317,9 +2254,78 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
 /********************************************/
 
 .tab {
-    float: left;
+  float: left;
+}
+
+.tabmenu {
+  position: fixed;
+  top: 60px;
 }
 
 .w--current .tabarrow {
-    opacity: 1;
+  opacity: 1;
 }
+
+.blogsection {
+  padding-top: 0;
+}
+
+.bloghero {
+  min-height: 500px;
+  height: 500px;
+  margin-top: 98px;
+  background: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55009bd6e12fc57729b7f9ba_IMG_0113.jpg) scroll 0 0 no-repeat transparent;
+  background-size: cover;
+}
+
+.blogpost {
+  a {
+    color: #ff5c60;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .blogtitle {
+    color: #847b78;
+  }
+
+  .blogcolumn {
+    min-height: 300px;
+    p {
+      @extend .blogparagraph;
+    }
+  }
+
+  .comments {
+    width: 100%;
+  }
+
+  .socialicon {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+.authorheadshot {
+  border-radius: 50%;
+}
+
+.footerlink {
+  text-decoration: none;
+  display: block;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.socialicon {
+    display: inline-block;
+  }
+  @media (max-width: 767px) {
+    &.mobilehide {
+      display: none;
+    }
+  }
+}
+

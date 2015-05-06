@@ -46,8 +46,18 @@ type: jobs
         <a class="w-dropdown-link dropdownitem" href="#">Internship</a>
       </nav>
     </div>
-    <p class="sectionbutton formbutton">See all Data Science Jobs</p>
+
+    <p class="sectionbutton formbutton">
+      <!-- TODO: jobfilter -->
+      {% if site.jobfilter %}
+        See all {{ site.jobfilter | find_team: site.data.teamnames }} Jobs
+      {% else %}
+        See all Jobs
+      {% endif %}
+    </p>
   </div>
+
+  <!-- TODO: populate filters from jobs data -->
   <div class="w-dropdown mobilefilter topmobilefilter" data-delay="0">
     <div class="w-dropdown-toggle w-clearfix filtercontent mobilefiltercontent">
       <div class="filterlabel mobilefilterlabel">All Teams</div>
@@ -84,37 +94,27 @@ type: jobs
       <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Internships</a>
     </nav>
   </div>
-  <a class="button formbutton mobileformbutton" href="#">Reset Filters</a>
+
+  <a class="button formbutton mobileformbutton" href="/jobs">Reset Filters</a>
+
+
   <div class="joblist">
-    <a class="w-clearfix w-inline-block jobslink" href="/railsengineer">
-      <div class="jobtitle">Lead iOS Engineer</div>
-      <div class="joblocation">Engineering in <span class="joblo">San Francisco, CA</span>
-    </div>
-  </a>
-  <a class="w-clearfix w-inline-block jobslink" href="/railsengineer">
-    <div class="jobtitle">Lead iOS Engineer</div>
-    <div class="joblocation">Engineering in <span class="joblo">San Francisco, CA</span>
+    {% assign jobs = site.data.jobs | find_jobs: '' %}
+    {% for job in jobs %}
+      <a class="w-clearfix w-inline-block jobslink" href="{{job.url}}">
+        <div class="jobtitle">{{ job.name }}</div>
+        <div class="joblocation">
+          {{ job.team | find_team: site.data.teamnames }}
+          in
+          <span class="joblo">
+            {% if job.location %}
+              {{ job.location }}
+            {% else %}
+              San Francisco, CA
+            {% endif %}
+          </span>
+        </div>
+      </a>
+    {% endfor %}
   </div>
-</a>
-<a class="w-clearfix w-inline-block jobslink" href="/railsengineer">
-  <div class="jobtitle">Head of DevOps</div>
-  <div class="joblocation">Engineering in <span class="joblo">San Francisco, CA</span>
-</div>
-</a>
-<a class="w-clearfix w-inline-block jobslink" href="/railsengineer">
-<div class="jobtitle">Full Stack Rails Engineer</div>
-<div class="joblocation">Engineering in <span class="joblo">San Francisco, CA</span>
-</div>
-</a>
-<a class="w-clearfix w-inline-block jobslink" href="/railsengineer">
-<div class="jobtitle">Data Engineer</div>
-<div class="joblocation">Engineering in <span class="joblo">San Francisco, CA</span>
-</div>
-</a>
-<a class="w-clearfix w-inline-block jobslink" href="/railsengineer">
-<div class="jobtitle">Data Science Intern</div>
-<div class="joblocation">Engineering in <span class="joblo">San Francisco, CA</span>
-</div>
-</a>
-</div>
 </div>
