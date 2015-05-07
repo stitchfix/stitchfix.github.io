@@ -356,7 +356,7 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
-- teamname: data science
+- teamname: algorithms
   members:
     - name:        Bhaskar
       lastname:    Rao

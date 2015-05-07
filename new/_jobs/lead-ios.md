@@ -3,8 +3,9 @@ title: Lead iOS Engineer
 description: Build Stitch Fix's mobile presence from the ground up.
 location:
  - 'San Francisco'
-url: 'mailto:tech-jobs@stitchfix.com'
+target_url: 'mailto:tech-jobs@stitchfix.com'
 layout: job
+team: engineering
 ---
 
 Stitch Fix is making its first foray into mobile and we’re looking for a great engineering leader to help us get there.
@@ -17,7 +18,7 @@ As such, we don’t have a product management discipline. Instead, we expect our
 
 If you want to come build new products and solve interesting problems with a great group of people, we're looking for more excited and talented individuals to join us.
 
-#### Responsibilities
+# Responsibilities
 
 - Design, architect, and develop Stitch Fix's first mobile application
 - Help grow and lead Stitch Fix's mobile team
@@ -27,7 +28,7 @@ If you want to come build new products and solve interesting problems with a gre
 - Provide and adhere to best-practices for mobile application development
 - Develop and maintain mobile applications, tools and re-usable components
 
-#### Requirements
+# Requirements
 
 - 4+ years professional experience developing production software
 - 2+ years experience developing complex iOS applications

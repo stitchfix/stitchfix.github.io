@@ -1,0 +1,23 @@
+
+{% assign team_name = page.type | team_name: site.data.teamnames %}
+<div class="w-section section sectiondark sectionslash">
+  <h1>{{ team_name }} Jobs</h1>
+  <div class="sectioncontent">
+    <div class="w-row twocol">
+      <div class="w-col w-col-6 column">
+        <!-- placeholder -->
+      </div>
+      <div class="w-col w-col-6 column">
+        {% assign jobs = site.collections['jobs']['docs'] | where:'team',page.type %}
+        {% for job in jobs %}
+          <a class="w-inline-block link" href="{{ job.url }}">
+            <h2 class="listhead">{{ job.title }}</h2>
+          </a>
+          <p>{{ job.description }}</p>
+        {% endfor %}
+
+        <a href="/jobs"><p class="sectionbutton">See all {{ team_name }} Jobs</p></a>
+      </div>
+    </div>
+  </div>
+</div>

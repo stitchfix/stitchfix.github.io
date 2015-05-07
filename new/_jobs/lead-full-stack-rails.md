@@ -5,8 +5,9 @@ location:
  - 'San Francisco'
  - 'Pittsburgh'
  - 'Remote'
-url: 'mailto:tech-jobs@stitchfix.com'
-layout: jobs
+target_url: 'mailto:tech-jobs@stitchfix.com'
+layout: job
+team: engineering
 ---
 
 We are looking for an experienced full-stack engineer who has built or worked heavily on a couple of Rails applications and has some other MVC framework experience. You want to learn from an experienced development team and develop your own skills.

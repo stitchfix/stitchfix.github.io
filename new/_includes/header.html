@@ -20,35 +20,42 @@
   <div class="w-nav-overlay"></div>
 </div>
 
+{% if include.type == null %}
+  {% assign type = page.type %}
+{% else %}
+  {% assign type = include.type %}
+{% endif %}
 <div class="w-tab-menu tabmenu">
-  <a href="/" class="w-tab-link w-inline-block tab{% if page.type == 'home' %} w--current{% endif %}">
-    <div class="tablink">Stitch Fix</div>
-    {% if page.type == 'home' %}
-      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
-    {% endif %}
-  </a>
-  <a href="/engineering" class="w-tab-link w-inline-block tab {% if page.type == 'engineering' %}w--current{% endif %}">
-    <div class="tablink">Engineering</div>
-    {% if page.type == 'engineering' %}
-      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
-    {% endif %}
-  </a>
-  <a href="/algorithms" class="w-tab-link w-inline-block tab {% if page.type == 'algorithms' %}w--current{% endif %}">
-    <div class="tablink">Algorithms</div>
-    {% if page.type == 'algorithms' %}
-      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
-    {% endif %}
-  </a>
-  <a href="/jobs" class="w-tab-link w-inline-block tab {% if page.type == 'jobs' %}w--current{% endif %}">
-    <div class="tablink">Jobs</div>
-    {% if page.type == 'jobs' %}
-      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
-    {% endif %}
-  </a>
-  <a href="/blog" class="w-tab-link w-inline-block tab {% if page.type == null %}w--current{% endif %}">
-    <div class="tablink">Blog</div>
-    {% if page.type == null %}
-      <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
-    {% endif %}
-  </a>
+  <div class="wrapper">
+    <a href="/" class="w-tab-link w-inline-block tab{% if type == 'home' %} w--current{% endif %}">
+      <div class="tablink">Stitch Fix</div>
+      {% if type == 'home' %}
+        <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
+      {% endif %}
+    </a>
+    <a href="/engineering" class="w-tab-link w-inline-block tab {% if type == 'engineering' %}w--current{% endif %}">
+      <div class="tablink">Engineering</div>
+      {% if type == 'engineering' %}
+        <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
+      {% endif %}
+    </a>
+    <a href="/algorithms" class="w-tab-link w-inline-block tab {% if type == 'algorithms' %}w--current{% endif %}">
+      <div class="tablink">Algorithms</div>
+      {% if type == 'algorithms' %}
+        <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
+      {% endif %}
+    </a>
+    <a href="/jobs" class="w-tab-link w-inline-block tab {% if type == 'jobs' %}w--current{% endif %}">
+      <div class="tablink">Jobs</div>
+      {% if type == 'jobs' %}
+        <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
+      {% endif %}
+    </a>
+    <a href="/blog" class="w-tab-link w-inline-block tab {% if type == null %}w--current{% endif %}">
+      <div class="tablink">Blog</div>
+      {% if type == null %}
+        <img class="tabarrow initialtab" src="/assets/images/svgs/arrowgb_1.svg">
+      {% endif %}
+    </a>
+  </div>
 </div>

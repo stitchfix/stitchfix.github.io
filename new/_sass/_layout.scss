@@ -2253,6 +2253,12 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
 
 /********************************************/
 
+.wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tab {
   float: left;
 }
@@ -2329,3 +2335,107 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
   }
 }
 
+.sectioncontent {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: brandontext, sans-serif;
+  color: #847b78;
+  font-size: 18px;
+  line-height: 1.7em;
+  ul, ol {
+    list-style-position: inside;
+  }
+}
+
+.teambio {
+  position: relative;
+  display: block;
+  opacity: 1;
+}
+
+.teammember {
+  height: 380px;
+  a {
+    color: #ff5c60;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .teamsocialicon {
+    height: 25px;
+  }
+
+  .flipper {
+    height: 300px;
+  }
+
+  .team-headshot {
+    width: 290px;
+    height: 290px;
+  }
+}
+
+.flip-container {
+  perspective: 1000;
+
+  &:hover .flipper,
+  &.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .flip-front, .flip-back {
+    backface-visibility: hidden;
+  }
+
+  .flip-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+
+  .flip-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.fade-container {
+  &:hover, &.hover {
+    .flip-front {
+      opacity: 0.15;
+    }
+
+    .flip-back {
+      opacity: 1;
+    }
+  }
+
+  .flipper {
+    position: relative;
+  }
+
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+  }
+
+  .flip-back {
+    opacity: 0;
+  }
+
+  .flip-front {
+    opacity: 1;
+  }
+}

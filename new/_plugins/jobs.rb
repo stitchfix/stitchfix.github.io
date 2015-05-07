@@ -24,14 +24,6 @@ module Jekyll
 
       list
     end
-
-    def find_team(id, teams)
-      name = teams.select do |team|
-        team['id'] == id
-      end
-
-      name[0]['name']
-    end
   end
 end
 

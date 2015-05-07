@@ -21,6 +21,14 @@ module Jekyll
         team['teamname'] == name
       end
     end
+
+    def team_name(id, teams)
+      name = teams.select do |team|
+        team['id'] == id
+      end
+
+      name[0]['name']
+    end
   end
 end
 

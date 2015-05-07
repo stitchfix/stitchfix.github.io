@@ -50,7 +50,7 @@ type: jobs
     <p class="sectionbutton formbutton">
       <!-- TODO: jobfilter -->
       {% if site.jobfilter %}
-        See all {{ site.jobfilter | find_team: site.data.teamnames }} Jobs
+        See all {{ site.jobfilter | team_name: site.data.teamnames }} Jobs
       {% else %}
         See all Jobs
       {% endif %}
@@ -99,16 +99,14 @@ type: jobs
 
 
   <div class="joblist">
-    {% assign jobs = site.data.jobs | find_jobs: '' %}
-    {% for job in jobs %}
-      <a class="w-clearfix w-inline-block jobslink" href="{{job.url}}">
-        <div class="jobtitle">{{ job.name }}</div>
+    {% for job in site.collections['jobs']['docs'] %}
+      <a class="w-clearfix w-inline-block jobslink" href="{{ job.url }}">
+        <div class="jobtitle">{{ job.title }}</div>
         <div class="joblocation">
-          {{ job.team | find_team: site.data.teamnames }}
           in
           <span class="joblo">
             {% if job.location %}
-              {{ job.location }}
+              {{ job.location | join: ", " }}
             {% else %}
               San Francisco, CA
             {% endif %}

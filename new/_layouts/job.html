@@ -2,21 +2,21 @@
 <html>
   {% include head.html %}
   <body>
-    {% include header.html %}
+    {% include header.html type='jobs' %}
 
     <div class="container">
       <div class="w-section bloghero"></div>
       <div class="w-section section sectionheader">
-        <h2>{{ page.location }}</h2>
+        <h2>{{ page.location | join: ', '}}</h2>
         <h3>{{ page.title }}</h3>
       </div>
       <div class="w-section section"><img class="arrow" src="/assets/images/svgs/arrowgb.svg" width="150">
         <h1>About this position</h1>
         <div class="sectioncontent">
           {{ content }}
-          <p class="sectionbutton">
-            <a href="{{ page.url }}">Submit your application</a>
-          </p>
+          <a href="{% if page.target_url %}{{ page.target_url }}{% else %}mailto:tech-jobs@stitchfix.com{% endif %}">
+            <p class="sectionbutton">Submit your application</p>
+          </a>
         </div>
       </div>
       <div class="w-section section sectiondark">
@@ -57,7 +57,9 @@
               <p>We’re using tools like RabbitMQ, ElasticSearch, and headless HTTP services to scale our team and software. We’re learning as we go, so your experience or keen interest can ensure our systems handle our ever-increasing load.</p>
             </div>
           </div>
-          <p class="sectionbutton"><a href="/engineering">Learn about Engineering at Stitch Fix</a></p>
+          <a href="/engineering">
+            <p class="sectionbutton">Learn about Engineering at Stitch Fix</p>
+          </a>
         </div>
       </div>
       <div class="w-section section">
@@ -103,3 +105,8 @@
         </div>
       </div>
     </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>

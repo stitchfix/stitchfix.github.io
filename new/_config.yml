@@ -12,6 +12,11 @@ twitter_username: jekyllrb
 github_username:  jekyll
 atom_path: "atom.xml"
 
+collections:
+  jobs:
+    output: true
+    permalink: /jobs/:path/
+
 # Build settings
 markdown: redcarpet
 redcarpet:
@@ -37,31 +42,3 @@ exclude: [Rakefile, README.md]
 markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
-
-navigation:
- - title: Home
-   url: "#intro"
- - title: Engineering
-   url: "#engineering"
- - title: Data Science
-   url: "#data-science"
- - title: Culture
-   url: "#culture"
- - title: Team
-   url: "#team"
- - title: Blog
-   url: "/blog/"
- - title: Jobs
-   url: "/jobs/"
-
-assets:
-  css_compressor: sass
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - bower_components
-
-sass:
-  style: :compressed
-  load_paths: bower_components

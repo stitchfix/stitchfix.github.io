@@ -2,8 +2,9 @@
 title: Head of Technical Operations/DevOps
 description: Lead Technical Operations across all technology products—client and staff facing.
 location: San Francisco, CA
-url: 'mailto:tech-jobs@stitchfix.com'
-layout: jobs
+target_url: 'mailto:tech-jobs@stitchfix.com'
+layout: job
+team: engineering
 ---
 
 Stitch Fix has an extensive internal platform for managing our business, from inventory management to warehouse logistics to our own Personal Styling platform, each serving thousands of internal users who run the business every day.  Our public-facing infrastructure is growing as well, helping millions of our customers be their best selves.  It’s all tied together with an array of user-facing applications and back-end services.
@@ -14,7 +15,7 @@ This is where you come in.  You’re ops-focused and developer-savvy. You’re r
 
 If you’ve always wanted to build a top-notch technical operations platform, this is the job for you.  If your idea of technical operations is tools, developer agency, and partnership—instead of tickets and pagers—this is the job for you.
 
-#### In the role you will:
+# In the role you will:
 
 - Develop a long-term view of technical operations at Stitch Fix
 - Partner with Engineering to define what “DevOps” means to us
@@ -22,7 +23,7 @@ If you’ve always wanted to build a top-notch technical operations platform, th
 - Architect, plan, and build the operations platform to make our engineering team successful
 - Advocate for technical operations as we grow our business
 
-#### Ideally, you:
+# Ideally, you:
 
 - Have strong experience with Ruby on Rails deployment and operations
 - Have experience maintaining and supporting data stores like Postgres and Redis
