@@ -1,0 +1,17 @@
+.pagination {
+    text-align: center;
+    margin-top: 40px;
+    a {
+        color: $link-color;
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 4px 20px;
+        border: 2px solid $link-color;
+        border-radius: 30px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

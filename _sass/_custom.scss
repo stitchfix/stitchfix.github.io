@@ -1,0 +1,138 @@
+
+.wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab {
+  float: left;
+}
+
+.tabmenu {
+  position: fixed;
+  top: 60px;
+}
+
+.w--current .tabarrow {
+  opacity: 1;
+}
+
+.blogsection {
+  padding-top: 0;
+}
+
+.bloghero {
+  min-height: 500px;
+  height: 500px;
+  margin-top: 98px;
+  background: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55009bd6e12fc57729b7f9ba_IMG_0113.jpg) scroll 0 0 no-repeat transparent;
+  background-size: cover;
+}
+
+.blogpost {
+  a {
+    color: #ff5c60;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .blogtitle {
+    color: #847b78;
+  }
+
+  .blogcolumn {
+    min-height: 300px;
+    p {
+      @extend .blogparagraph;
+    }
+  }
+
+  .comments {
+    width: 100%;
+  }
+
+  .socialicon {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+.authorheadshot {
+  border-radius: 50%;
+}
+
+.footerlink {
+  text-decoration: none;
+  display: block;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.socialicon {
+    display: inline-block;
+  }
+  @media (max-width: 767px) {
+    &.mobilehide {
+      display: none;
+    }
+  }
+}
+
+.sectioncontent {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: brandontext, sans-serif;
+  color: #847b78;
+  font-size: 18px;
+  line-height: 1.7em;
+  ul, ol {
+    list-style-position: inside;
+  }
+}
+
+.teambio {
+  position: relative;
+  display: block;
+  opacity: 1;
+}
+
+.teammember {
+  height: 380px;
+  a {
+    color: #ff5c60;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .teamsocialicon {
+    height: 25px;
+  }
+
+  .flipper {
+    height: 300px;
+  }
+
+  .team-headshot {
+    width: 290px;
+    height: 290px;
+  }
+}
+
+.jobfilter {
+  position: relative;
+ .expand-block {
+    display: block;
+    background: transparent;
+    width: 234px;
+    top: 40px;
+    left: 15px;
+    overflow: visible;
+    transition-duration: .3s;
+  }
+}

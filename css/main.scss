@@ -3,6 +3,8 @@
 ---
 @charset "utf-8";
 
+$link-color: #ff5c60;
+
 
 
 // Our variables
@@ -48,5 +50,8 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "custom",
+        "flip",
+        "expand",
+        "pagination"
 ;

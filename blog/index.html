@@ -6,7 +6,7 @@ layout: default
   <div class="w-section w-clearfix filterbar" data-ix="filterstick">
     <div class="w-clearfix filterwrapper">
       <p class="filterlabel filtertitle">Filter posts by</p>
-      <div class="w-dropdown filter" data-delay="0">
+      <div class="w-dropdown filter">
         <div class="w-dropdown-toggle w-clearfix filtercontent">
           <div class="filterlabel">Category</div>
           <div class="w-icon-dropdown-toggle dropdownicon">
@@ -18,7 +18,7 @@ layout: default
           <a class="w-dropdown-link dropdownitem" href="#">Tools</a>
         </nav>
       </div>
-      <div class="w-dropdown filter" data-delay="0">
+      <div class="w-dropdown filter">
         <div class="w-dropdown-toggle w-clearfix filtercontent">
           <div class="filterlabel">Author</div>
           <div class="w-icon-dropdown-toggle dropdownicon">
@@ -39,7 +39,7 @@ layout: default
     </div>
   </div>
 
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     {% assign author = site.data.teams | find_member: post.author_id %}
     <div class="w-row blogpost">
       <div class="w-col w-col-3 byline">
@@ -80,5 +80,16 @@ layout: default
       </div>
     </div>
   {% endfor %}
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% endif %}
+  </div>
 
 </div>
