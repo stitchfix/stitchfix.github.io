@@ -1,7 +1,11 @@
 <div class="w-section section sectiongrid">
   <h1>{{ team_name }} Team</h1>
-  <img class="expandicon" src="/assets/images/svgs/expand.svg" height="32" width="150">
-  <div class="gridexpand">
+
+  <input type="checkbox" name="expandgrid" id="expandgrid" class="expand-input" autocomplete="off" checked="checked">
+  <label for="expandgrid" class="expand-label">
+    <img class="expandicon" src="/assets/images/svgs/expand.svg" height="32" width="150">
+  </label>
+  <div class="gridexpand expand-block">
     <div class="w-row teamcolumns">
       {% assign team = site.data.teams | team: page.type %}
       {% for member in team[0]['members']  %}
