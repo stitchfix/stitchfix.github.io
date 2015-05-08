@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="container">
+      <div class="wrapper">
+
+        <div class="w-tab-pane w--tab-active" data-w-tab="Blog">
+          <div class="headimage_blog"></div>
+          {% unless page.category %}
+            {% include posts_filters.html %}
+          {% endunless %}
+
+          {% if page.category %}
+            {% assign posts = site.categories[page.category] %}
+          {% else %}
+            {% assign posts = paginator.posts %}
+          {% endif %}
+
+          {% for post in posts %}
+            {% assign author = site.data.teams | find_member: post.author_id %}
+            <div class="w-row blogpost">
+              <div class="w-col w-col-3 byline">
+                {% if author.image %}
+                  <img class="authorheadshot" src="{{ author.image }}">
+                {% endif %}
+                <div class="blogauthor">
+                  {% if post.author %}
+                    {{ post.author }}
+                  {% elsif author %}
+                    {{ author.name }} {{ author.lastname }}
+                  {% endif %}
+                </div>
+                {% if author.division %}
+                  <div class="title">{{ author.division }}</div>
+                {% endif %}
+              </div>
+              <div class="w-col w-col-9 blogcolumn">
+                <h4><a class="blogtitle" href="{{ post.url }}">{{ post.title }}</a></h4>
+                <div class="bloginfo">
+                  {% if post.author %}
+                    by {{ post.author }}
+                  {% elsif author %}
+                    by {{ author.name }} {{ author.lastname }}
+                  {% endif %}
+
+                  {% if post.categories[0] %}
+                    in {{ post.categories | join: ", " | capitalize }}
+                  {% endif %}
+                  – <date datetime="{{ post.date | date: "%Y-%m-%d"}}">{{ post.date | date: "%B %d, %Y"}}</date>
+                </div>
+                <!-- TODO: how to get discus comments? <div class="bloginfo comments">6 Comments</div> <!-->
+
+                {{ post.excerpt }}
+                <a class="w-inline-block link" href="{{ post.url }}">
+                  <div class="bloginfo blogjump">Read More&nbsp;»</div>
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+
+          {% unless page.category %}
+            {% include pagination.html %}
+          {% endunless %}
+
+        </div>
+
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

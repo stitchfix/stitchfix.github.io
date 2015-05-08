@@ -1,0 +1,34 @@
+<div class="w-section w-clearfix filterbar">
+  <div class="w-clearfix filterwrapper">
+
+    <div class="filtertitle">Filter posts by</div>
+
+    {% capture category_nav_content %}
+      {% for category in site.categories %}
+        {% assign cat = category[0] | trim %}
+        <a class="w-dropdown-link dropdownitem" href="/{{ site.category_dir }}/{{ cat }}">{{ cat | team_name: site.data.teamnames }}</a>
+      {% endfor %}
+    {% endcapture %}
+
+    {% capture author_nav_content %}
+      {% for team in site.data.teams %}
+        {% for member in team.members %}
+          {% unless member.id %}
+            {% continue %}
+          {% endunless %}
+          <a class="w-dropdown-link dropdownitem" href="/authors/{{ member.id }}">{{ member.name }} {{ member.lastname}}</a>
+        {% endfor %}
+      {% endfor %}
+    {% endcapture %}
+
+    {% include nav_filter.html label="Category" content=category_nav_content %}
+    {% include nav_filter.html label="Author" content=author_nav_content %}
+
+    <div class="w-clearfix search">
+      <img class="searchicon" src="/assets/images/svgs/search.svg">
+    </div>
+  </div>
+  <div class="w-clearfix search mobilesearch">
+    <img class="searchicon" src="/assets/images/svgs/search.svg">
+  </div>
+</div>

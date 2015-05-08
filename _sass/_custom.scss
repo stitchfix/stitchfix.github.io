@@ -124,15 +124,64 @@
   }
 }
 
-.jobfilter {
+.nav-filter {
   position: relative;
- .expand-block {
+  display: block;
+  float: left;
+  height: 40px;
+  margin: 20px 10px;
+  min-width: 266px;
+
+  padding: 0 15px;
+
+  border: 1px solid rgba(132, 123, 120, 0.49);
+
+  color: #837C77;
+
+  .expand-block {
     display: block;
     background: transparent;
-    width: 234px;
-    top: 40px;
+    position: absolute;
     left: 15px;
     overflow: visible;
     transition-duration: .3s;
+    min-width: 100%;
+    z-index: 10;
   }
+}
+
+.expand-label {
+  cursor: pointer;
+  transition: transform 0.6s linear 0.1s;
+}
+
+.expand-block {
+  transition: all 0.6s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: top;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.expand-input {
+  display: none;
+
+  &:checked ~ .expand-block {
+    transform: scaleY(1);
+    max-height: 100%;
+  }
+
+  &:checked ~ .expand-rotate {
+    transform: rotate(45deg);
+  }
+
+  &:checked + .expand-label .dropdownicon {
+    transform: rotate(180deg) translate(0, 50%);
+  }
+}
+
+.filtertitle {
+  float: left;
+  line-height: 80px;
+  margin-right: 10px;
 }

@@ -12,19 +12,15 @@ type: jobs
     <h3>Starting the day with a team you connect with is critical to our success.</h3>
   </div>
   <div class="w-clearfix filterwrapper mobilehide">
-    <div class="w-dropdown filter jobfilter">
-      <input type="checkbox" id="expand-nav-teams" name="expand-nav-teams" class="expand-input" autocomplete="off">
-      <label class="w-dropdown-toggle w-clearfix filtercontent expand-label" for="expand-nav-teams">
-        <div class="filterlabel">Teams</div>
-        <div class="w-icon-dropdown-toggle dropdownicon">
-        </div>
-      </label>
-      <nav class="w-dropdown-list dropdownlist expand-block">
-        {% for team in site.data['teamnames'] %}
-          <a class="w-dropdown-link dropdownitem" href="#{{ team.id }}">{{ team.name }}</a>
-        {% endfor %}
-      </nav>
-    </div>
+    {% capture teams_nav_content %}
+      {% for team in site.data['teamnames'] %}
+        <a href="#{{ team.id }}" class="w-dropdown-link dropdownitem">{{ team.name }}</a>
+      {% endfor %}
+    {% endcapture %}
+
+    {% include nav_filter.html label="Teams" content=teams_nav_content %}
+
+
     <div class="w-dropdown filter jobfilter">
       <div class="w-dropdown-toggle w-clearfix filtercontent">
         <div class="filterlabel">Locations</div>
@@ -102,20 +98,13 @@ type: jobs
 
   <a class="button formbutton mobileformbutton" href="/jobs">Reset Filters</a>
 
-
   <div class="joblist">
     {% for job in jobs %}
-      <a class="w-clearfix w-inline-block jobslink" href="{{ job.url }}">
+      <a class="w-clearfix w-inline-block jobslink" href="{{ job.url }}" data-job-location="{{ job.location }}" data-job-team="{{ job.team }}">
         <div class="jobtitle">{{ job.title }}</div>
         <div class="joblocation">
           {{ job.team | team_name: site.data.teamnames }} in
-          <span class="joblo">
-            {% if job.location %}
-              {{ job.location | join: ", " }}
-            {% else %}
-              San Francisco, CA
-            {% endif %}
-          </span>
+          <span class="joblo">{{ job.location | join: ", " }}</span>
         </div>
       </a>
     {% endfor %}

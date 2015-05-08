@@ -22,6 +22,8 @@ markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
 
+category_dir: "blog"
+
 # Owner (organization or individual) of site content
 author: "Stitch Fix"
 url: "http://technology.stitchfix.com/"
