@@ -2,6 +2,8 @@
 layout: default
 type: jobs
 ---
+{% assign jobs = site.collections['jobs']['docs'] %}
+
 <div class="w-tab-pane w--tab-active" data-w-tab="Jobs">
   <div class="headimage_jobs">
   </div>
@@ -10,19 +12,20 @@ type: jobs
     <h3>Starting the day with a team you connect with is critical to our success.</h3>
   </div>
   <div class="w-clearfix filterwrapper mobilehide">
-    <div class="w-dropdown filter jobfilter" data-delay="0">
-      <div class="w-dropdown-toggle w-clearfix filtercontent">
+    <div class="w-dropdown filter jobfilter">
+      <input type="checkbox" id="expand-nav-teams" name="expand-nav-teams" class="expand-input" autocomplete="off">
+      <label class="w-dropdown-toggle w-clearfix filtercontent expand-label" for="expand-nav-teams">
         <div class="filterlabel">Teams</div>
         <div class="w-icon-dropdown-toggle dropdownicon">
         </div>
-      </div>
-      <nav class="w-dropdown-list dropdownlist">
-        <a class="w-dropdown-link dropdownitem" href="#">Engineering</a>
-        <a class="w-dropdown-link dropdownitem" href="#">Algorithms</a>
-        <a class="w-dropdown-link dropdownitem" href="#">Product Design</a>
+      </label>
+      <nav class="w-dropdown-list dropdownlist expand-block">
+        {% for team in site.data['teamnames'] %}
+          <a class="w-dropdown-link dropdownitem" href="#{{ team.id }}">{{ team.name }}</a>
+        {% endfor %}
       </nav>
     </div>
-    <div class="w-dropdown filter jobfilter" data-delay="0">
+    <div class="w-dropdown filter jobfilter">
       <div class="w-dropdown-toggle w-clearfix filtercontent">
         <div class="filterlabel">Locations</div>
         <div class="w-icon-dropdown-toggle dropdownicon">
@@ -34,7 +37,7 @@ type: jobs
         <a class="w-dropdown-link dropdownitem" href="#">Washington, DC</a>
       </nav>
     </div>
-    <div class="w-dropdown filter jobfilter" data-delay="0">
+    <div class="w-dropdown filter jobfilter">
       <div class="w-dropdown-toggle w-clearfix filtercontent">
         <div class="filterlabel">Types</div>
         <div class="w-icon-dropdown-toggle dropdownicon">
@@ -47,18 +50,20 @@ type: jobs
       </nav>
     </div>
 
-    <p class="sectionbutton formbutton">
-      <!-- TODO: jobfilter -->
-      {% if site.jobfilter %}
-        See all {{ site.jobfilter | team_name: site.data.teamnames }} Jobs
-      {% else %}
-        See all Jobs
-      {% endif %}
-    </p>
+    <a href="/jobs">
+      <p class="sectionbutton formbutton">
+        <!-- TODO: jobfilter -->
+        {% if site.jobfilter %}
+          See all {{ site.jobfilter | team_name: site.data.teamnames }} Jobs
+        {% else %}
+          See all Jobs
+        {% endif %}
+      </p>
+    </a>
   </div>
 
   <!-- TODO: populate filters from jobs data -->
-  <div class="w-dropdown mobilefilter topmobilefilter" data-delay="0">
+  <div class="w-dropdown mobilefilter topmobilefilter">
     <div class="w-dropdown-toggle w-clearfix filtercontent mobilefiltercontent">
       <div class="filterlabel mobilefilterlabel">All Teams</div>
       <div class="w-icon-dropdown-toggle dropdownicon">
@@ -70,7 +75,7 @@ type: jobs
       <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Product Design</a>
     </nav>
   </div>
-  <div class="w-dropdown mobilefilter" data-delay="0">
+  <div class="w-dropdown mobilefilter">
     <div class="w-dropdown-toggle w-clearfix filtercontent mobilefiltercontent">
       <div class="filterlabel mobilefilterlabel">All Locations</div>
       <div class="w-icon-dropdown-toggle dropdownicon">
@@ -82,7 +87,7 @@ type: jobs
       <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Washington, DC</a>
     </nav>
   </div>
-  <div class="w-dropdown mobilefilter" data-delay="0">
+  <div class="w-dropdown mobilefilter">
     <div class="w-dropdown-toggle w-clearfix filtercontent mobilefiltercontent">
       <div class="filterlabel mobilefilterlabel">All Types</div>
       <div class="w-icon-dropdown-toggle dropdownicon">
@@ -99,11 +104,11 @@ type: jobs
 
 
   <div class="joblist">
-    {% for job in site.collections['jobs']['docs'] %}
+    {% for job in jobs %}
       <a class="w-clearfix w-inline-block jobslink" href="{{ job.url }}">
         <div class="jobtitle">{{ job.title }}</div>
         <div class="joblocation">
-          in
+          {{ job.team | team_name: site.data.teamnames }} in
           <span class="joblo">
             {% if job.location %}
               {{ job.location | join: ", " }}

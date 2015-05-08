@@ -2440,6 +2440,19 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
   }
 }
 
+.jobfilter {
+  position: relative;
+ .expand-block {
+    display: block;
+    background: transparent;
+    width: 234px;
+    top: 40px;
+    left: 15px;
+    overflow: visible;
+    transition-duration: .3s;
+  }
+}
+
 .expand-label {
   cursor: pointer;
   transition: transform 0.6s linear 0.1s;
@@ -2461,7 +2474,7 @@ html.w-mod-js *[data-ix="initial-tab-arrow"] {
     max-height: 100%;
   }
 
-  &:checked ~ .expand-label {
+  &:checked ~ .expand-rotate {
     transform: rotate(45deg);
   }
 
