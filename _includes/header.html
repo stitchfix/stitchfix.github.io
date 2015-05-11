@@ -5,10 +5,11 @@
       <span class="logo-tagline">Hello, world!</span>
     </a>
     <div class="w-dropdown mobilenav">
-      <div class="w-dropdown-toggle mobilenavtoggle">
+      <input type="checkbox" id="nav-menu" name="nav-menu" class="expand-input" autocomplete="off" value="">
+      <label class="w-dropdown-toggle mobilenavtoggle expand-label" for="nav-menu">
         <img src="/assets/images/svgs/hamburger_gr.svg" height="25" width="150">
-      </div>
-      <nav class="w-dropdown-list">
+      </label>
+      <nav class="mobilenav-block expand-block">
         <a class="w-dropdown-link mobilenavlink" href="{{ site.baseurl }}/">Stitch Fix</a>
         <a class="w-dropdown-link mobilenavlink" href="{{ "/engineering" | prepend: site.url }}">Engineering</a>
         <a class="w-dropdown-link mobilenavlink" href="/algorithms">Algorithms</a>
