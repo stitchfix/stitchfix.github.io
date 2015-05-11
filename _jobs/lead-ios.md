@@ -6,6 +6,7 @@ location:
 target_url: 'mailto:tech-jobs@stitchfix.com'
 layout: job
 team: engineering
+type: Local
 ---
 
 Stitch Fix is making its first foray into mobile and we’re looking for a great engineering leader to help us get there.

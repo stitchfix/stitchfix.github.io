@@ -5,6 +5,7 @@ location: San Francisco, CA
 target_url: 'mailto:tech-jobs@stitchfix.com'
 layout: job
 team: algorithms
+type: Local
 ---
 
 We work on problems that you won't find in a text book, but more likely in obscure academic literature. Nine out of ten times we have to create our own models to find solutions, with a healthy dose of creativity. Do you want to push the boundaries of data science and define the next stage of the field? This is where you come in: We want you to innovate our algorithms and better grok the data, leveraging every bit of our data and pioneer cutting-edge analysis to make it happen.

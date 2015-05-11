@@ -4,6 +4,7 @@ description: Data modeling, persistence/retrieval of data at scale, machine lear
 location: San Francisco, CA
 target_url: 'mailto:tech-jobs@stitchfix.com'
 layout: job
+type: Local
 team: algorithms
 ---
 

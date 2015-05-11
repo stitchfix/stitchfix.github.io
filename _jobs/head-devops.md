@@ -5,6 +5,7 @@ location: San Francisco, CA
 target_url: 'mailto:tech-jobs@stitchfix.com'
 layout: job
 team: engineering
+type: Local
 ---
 
 Stitch Fix has an extensive internal platform for managing our business, from inventory management to warehouse logistics to our own Personal Styling platform, each serving thousands of internal users who run the business every day.  Our public-facing infrastructure is growing as well, helping millions of our customers be their best selves.  It’s all tied together with an array of user-facing applications and back-end services.

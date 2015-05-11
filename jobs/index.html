@@ -13,22 +13,22 @@ type: jobs
   </div>
   <div class="w-clearfix filterwrapper mobilehide">
     {% capture teams_nav_content %}
-      <a href="#all-teams" class="w-dropdown-link dropdownitem">All teams</a>
+      <a href="#" class="dropdownitem js-nav-filter" data-kind="job-team">All teams</a>
       {% for team in site.data['teamnames'] %}
-        <a href="#{{ team.id }}" class="w-dropdown-link dropdownitem">{{ team.name }}</a>
+        <a href="#{{ team.id }}" class="dropdownitem js-nav-filter" data-kind="job-team">{{ team.name }}</a>
       {% endfor %}
     {% endcapture %}
     {% include nav_filter.html label="Teams" content=teams_nav_content %}
 
     {% capture locations_nav_content %}
-      <a href="#all-locations" class="w-dropdown-link dropdownitem">All locations</a>
+      <a href="#" class="dropdownitem js-nav-filter" data-kind="job-location">All locations</a>
     {% endcapture %}
-    {% include nav_filter.html label="Locations" content=locations_nav_content %}
+    {% include nav_filter.html label="Locations" content=locations_nav_content fill='job-location' %}
 
     {% capture types_nav_content %}
-      <a href="#all-types" class="w-dropdown-link dropdownitem">All types</a>
+      <a href="#" class="dropdownitem js-nav-filter" data-kind="job-type">All types</a>
     {% endcapture %}
-    {% include nav_filter.html label="Types" content=types_nav_content %}
+    {% include nav_filter.html label="Types" content=types_nav_content fill='job-type' %}
 
     <a href="/jobs">
       <p class="sectionbutton formbutton">
@@ -42,49 +42,15 @@ type: jobs
     </a>
   </div>
 
-  <!-- TODO: populate filters from jobs data -->
-  <div class="w-dropdown mobilefilter topmobilefilter">
-    <div class="w-dropdown-toggle w-clearfix filtercontent mobilefiltercontent">
-      <div class="filterlabel mobilefilterlabel">All Teams</div>
-      <div class="w-icon-dropdown-toggle dropdownicon">
-      </div>
-    </div>
-    <nav class="w-dropdown-list dropdownlist">
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Engineering</a>
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Data Science</a>
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Product Design</a>
-    </nav>
-  </div>
-  <div class="w-dropdown mobilefilter">
-    <div class="w-dropdown-toggle w-clearfix filtercontent mobilefiltercontent">
-      <div class="filterlabel mobilefilterlabel">All Locations</div>
-      <div class="w-icon-dropdown-toggle dropdownicon">
-      </div>
-    </div>
-    <nav class="w-dropdown-list dropdownlist">
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">San Francisco</a>
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Pittsburg</a>
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Washington, DC</a>
-    </nav>
-  </div>
-  <div class="w-dropdown mobilefilter">
-    <div class="w-dropdown-toggle w-clearfix filtercontent mobilefiltercontent">
-      <div class="filterlabel mobilefilterlabel">All Types</div>
-      <div class="w-icon-dropdown-toggle dropdownicon">
-      </div>
-    </div>
-    <nav class="w-dropdown-list dropdownlist">
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Full-Time</a>
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Part-Time</a>
-      <a class="w-dropdown-link dropdownitem mobiledropdown" href="#">Internships</a>
-    </nav>
-  </div>
-
-  <a class="button formbutton mobileformbutton" href="/jobs">Reset Filters</a>
-
   <div class="joblist">
     {% for job in jobs %}
-      <a class="w-clearfix w-inline-block jobslink" href="{{ job.url }}" data-job-location="{{ job.location }}" data-job-team="{{ job.team }}">
+      <a class="w-clearfix w-inline-block jobslink" href="{{ job.url }}"
+        data-job-location="{{ job.location | join: ', ' }}"
+        data-job-team="{{ job.team }}"
+        {% if job.type %}
+          data-job-type="{{ job.type }}"
+        {% endif %}
+        >
         <div class="jobtitle">{{ job.title }}</div>
         <div class="joblocation">
           {{ job.team | team_name: site.data.teamnames }} in

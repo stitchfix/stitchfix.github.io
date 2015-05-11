@@ -5,6 +5,7 @@ location: San Francisco, CA
 target_url: 'mailto:tech-jobs@stitchfix.com'
 layout: job
 team: algorithms
+type: Local
 ---
 
 We are looking for data science interns to join our Algorithms team. As an intern, you will use our rich datasets and cutting edge technologies to optimize the merchandise that we carry and how we match it to our customers. Novel methods and algorithms you develop will be implemented in our A/B testing framework, and adopted if successful.
