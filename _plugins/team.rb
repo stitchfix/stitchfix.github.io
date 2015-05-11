@@ -29,6 +29,14 @@ module Jekyll
 
       name[0]['name']
     end
+
+    def linkedin(val)
+      if ( val.index( /^http(s)?\:/ ) )
+        return val
+      else
+        return 'https://www.linkedin.com/in/' + val
+      end
+    end
   end
 end
 

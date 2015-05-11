@@ -10,6 +10,8 @@
       {% endfor %}
     {% endcapture %}
 
+    {% include nav_filter.html label="Category" content=category_nav_content %}
+
     {% capture author_nav_content %}
       {% for team in site.data.teams %}
         {% for member in team.members %}
@@ -20,9 +22,7 @@
         {% endfor %}
       {% endfor %}
     {% endcapture %}
-
-    {% include nav_filter.html label="Category" content=category_nav_content %}
-    {% include nav_filter.html label="Author" content=author_nav_content %}
+    <!-- {% include nav_filter.html label="Author" content=author_nav_content %} -->
 
     <label class="search">
       <form action="http://google.com/search?hl=en" target="_blank">

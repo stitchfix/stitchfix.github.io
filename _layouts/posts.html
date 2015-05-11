@@ -20,30 +20,40 @@
 
           {% for post in posts %}
             {% assign author = site.data.teams | find_member: post.author_id %}
+            {% capture fullname %}
+              {% if post.author %}
+                {{ post.author }}
+              {% elsif author %}
+                {{ author.name }} {{ author.lastname }}
+              {% endif %}
+            {% endcapture %}
+
             <div class="w-row blogpost">
               <div class="w-col w-col-3 byline">
-                {% if author.image %}
-                  <img class="authorheadshot" src="{{ author.image }}">
-                {% endif %}
-                <div class="blogauthor">
-                  {% if post.author %}
-                    {{ post.author }}
-                  {% elsif author %}
-                    {{ author.name }} {{ author.lastname }}
+                {% if author %}
+                  {% if author.image %}
+                    <img class="authorheadshot" src="/assets/images/team/{{ author.image }}.jpg">
+                  {% else %}
+                    <img class="authorheadshot" src="/assets/images/team/{{ author.name | downcase }}.jpg">
                   {% endif %}
-                </div>
-                {% if author.division %}
-                  <div class="title">{{ author.division }}</div>
+                  <div class="blogauthor">
+                    {{ fullname }}
+                  </div>
+                  {% if author.division %}
+                    <div class="title">{{ author.division }}</div>
+                  {% endif %}
+                {% else %}
+                  <div class="blogauthor">
+                    {{ fullname }}
+                  </div>
                 {% endif %}
               </div>
+
+
               <div class="w-col w-col-9 blogcolumn">
                 <h4><a class="blogtitle" href="{{ post.url }}">{{ post.title }}</a></h4>
                 <div class="bloginfo">
-                  {% if post.author %}
-                    by {{ post.author }}
-                  {% elsif author %}
-                    by {{ author.name }} {{ author.lastname }}
-                  {% endif %}
+                  {{ fullname }}
 
                   {% if post.categories[0] %}
                     in {{ post.categories | join: ", " | capitalize }}

@@ -31,14 +31,7 @@ type: jobs
     {% include nav_filter.html label="Types" content=types_nav_content fill='job-type' %}
 
     <a href="/jobs">
-      <p class="sectionbutton formbutton">
-        <!-- TODO: jobfilter -->
-        {% if site.jobfilter %}
-          See all {{ site.jobfilter | team_name: site.data.teamnames }} Jobs
-        {% else %}
-          See all Jobs
-        {% endif %}
-      </p>
+      <p class="sectionbutton formbutton">See all Jobs</p>
     </a>
   </div>
 

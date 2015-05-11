@@ -11,25 +11,32 @@
             <div class="w-col w-col-3 byline">
 
               {% assign author = site.data.teams | find_member: page.author_id %}
-              {% if author.image %}
-                <img class="authorheadshot" src="{{ author.image }}">
-              {% endif %}
-              <div class="blogauthor">
-                {% if page.author %}
-                  by {{ page.author }}
+              {% capture fullname %}
+                {% if post.author %}
+                  {{ post.author }}
                 {% elsif author %}
-                  by {{ author.name }} {{ author.lastname }}
+                  {{ author.name }} {{ author.lastname }}
                 {% endif %}
-              </div>
+              {% endcapture %}
+
+              {% if author %}
+                {% if author.image %}
+                  <img class="authorheadshot" src="/assets/images/team/{{ author.image }}.jpg">
+                {% else %}
+                  <img class="authorheadshot" src="/assets/images/team/{{ author.name | downcase }}.jpg">
+                {% endif %}
+              {% endif %}
+              <div class="blogauthor">by {{ fullname }}</div>
 
               {% if author.division %}
                 <div class="title">{{ author.division }}</div>
               {% endif %}
 
-              <!-- TODO: where this links to? -->
-              {% if author.twitter %}
-                <a href="https://twitter.com/{{ author.twitter }}" class="socialicon"><img src="/assets/images/svgs/socialshare.svg" width="40" height="40"></a>
-              {% endif %}
+              {% for link in author.links %}
+                <a href="{{ link.url }}" class="socialicon">
+                  <img src="/assets/images/svgs/socialshare.svg" width="40" height="40">
+                </a>
+              {% endfor %}
 
               {% if author.twitter %}
                 <a href="https://twitter.com/{{ author.twitter }}" class="socialicon"><img src="/assets/images/svgs/socialtwit_red.svg" width="40" height="40"></a>
@@ -38,11 +45,7 @@
             <div class="w-col w-col-9 blogcolumn">
               <h4>{{ page.title }}</h4>
               <div class="bloginfo">
-                {% if page.author %}
-                  by {{ page.author }}
-                {% elsif author %}
-                  by {{ author.name }} {{ author.lastname }}
-                {% endif %}
+                by {{ fullname }}
 
                 {% if page.categories[0] %}
                   in {{ page.categories | join: ", " | capitalize }}
