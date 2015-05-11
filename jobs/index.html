@@ -13,38 +13,22 @@ type: jobs
   </div>
   <div class="w-clearfix filterwrapper mobilehide">
     {% capture teams_nav_content %}
+      <a href="#all-teams" class="w-dropdown-link dropdownitem">All teams</a>
       {% for team in site.data['teamnames'] %}
         <a href="#{{ team.id }}" class="w-dropdown-link dropdownitem">{{ team.name }}</a>
       {% endfor %}
     {% endcapture %}
-
     {% include nav_filter.html label="Teams" content=teams_nav_content %}
 
+    {% capture locations_nav_content %}
+      <a href="#all-locations" class="w-dropdown-link dropdownitem">All locations</a>
+    {% endcapture %}
+    {% include nav_filter.html label="Locations" content=locations_nav_content %}
 
-    <div class="w-dropdown filter jobfilter">
-      <div class="w-dropdown-toggle w-clearfix filtercontent">
-        <div class="filterlabel">Locations</div>
-        <div class="w-icon-dropdown-toggle dropdownicon">
-        </div>
-      </div>
-      <nav class="w-dropdown-list dropdownlist">
-        <a class="w-dropdown-link dropdownitem" href="#">San Francisco</a>
-        <a class="w-dropdown-link dropdownitem" href="#">Pittsburg</a>
-        <a class="w-dropdown-link dropdownitem" href="#">Washington, DC</a>
-      </nav>
-    </div>
-    <div class="w-dropdown filter jobfilter">
-      <div class="w-dropdown-toggle w-clearfix filtercontent">
-        <div class="filterlabel">Types</div>
-        <div class="w-icon-dropdown-toggle dropdownicon">
-        </div>
-      </div>
-      <nav class="w-dropdown-list dropdownlist">
-        <a class="w-dropdown-link dropdownitem" href="#">Full Time</a>
-        <a class="w-dropdown-link dropdownitem" href="#">Contract</a>
-        <a class="w-dropdown-link dropdownitem" href="#">Internship</a>
-      </nav>
-    </div>
+    {% capture types_nav_content %}
+      <a href="#all-types" class="w-dropdown-link dropdownitem">All types</a>
+    {% endcapture %}
+    {% include nav_filter.html label="Types" content=types_nav_content %}
 
     <a href="/jobs">
       <p class="sectionbutton formbutton">
@@ -104,7 +88,7 @@ type: jobs
         <div class="jobtitle">{{ job.title }}</div>
         <div class="joblocation">
           {{ job.team | team_name: site.data.teamnames }} in
-          <span class="joblo">{{ job.location | join: ", " }}</span>
+          <span class="joblo">{{ job.location | join: ', ' }}</span>
         </div>
       </a>
     {% endfor %}
