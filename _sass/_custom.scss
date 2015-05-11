@@ -202,3 +202,24 @@
 .dropdownitem {
   padding: 10px 15px;
 }
+
+.search {
+  overflow: hidden;
+  width: auto;
+
+  &-input {
+    width: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font-family: brandongrotesque,sans-serif;
+    font-weight: 400;
+    line-height: 38px;
+    transition: all .3s ease;
+
+    &:focus {
+      width: 200px;
+      padding-left: 15px;
+    }
+  }
+}
