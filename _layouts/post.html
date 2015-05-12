@@ -5,7 +5,11 @@
     {% include header.html %}
     <div class="container">
       <div class="wrapper">
-        <img src="/assets/images/hero/IMG_0113.jpg" class="bloghero" />
+        {% if page.hero %}
+          <img src="/assets/images/{{ page.hero }}.jpg" class="bloghero" />
+        {% else %}
+          <img src="/assets/images/hero/IMG_0113.jpg" class="bloghero" />
+        {% endif %}
 
         <div class="w-tabs tabs tabspost">
         <div class="w-section blogsection">
