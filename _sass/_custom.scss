@@ -161,7 +161,7 @@
   display: block;
   float: left;
   height: 40px;
-  margin: 20px 10px;
+  margin: 0 10px 20px;
   min-width: 266px;
 
   padding: 0 15px;
@@ -183,7 +183,7 @@
 
   @media (max-width: 767px) {
     & {
-      margin: 20px 0 0;
+      margin: 0 0 20px;
       width: 100%;
     }
   }
@@ -302,3 +302,47 @@
     }
   }
 }
+
+.jobslink {
+  height: auto;
+  padding: 15px;
+}
+
+.jobtitle {
+  top: 0;
+  transform: none;
+  @media (max-width: 479px) {
+    & {
+      margin-top: 0;
+    }
+  }
+}
+
+.joblocation {
+  top: 0;
+  transform: none;
+  @media (max-width: 767px) {
+    & {
+      float: left;
+      clear: left;
+    }
+  }
+}
+
+.filterwrapper {
+  height: auto;
+  padding-top: 20px;
+}
+
+.formbutton {
+  text-decoration: none;
+  margin: 0 10px 20px;
+  top: 0;
+}
+
+@media (max-width: 479px) {
+  .mobilehide {
+    display: none;
+  }
+}
+

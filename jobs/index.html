@@ -11,7 +11,7 @@ type: jobs
     <h2>Technology jobs at Stitch Fix</h2>
     <h3>Starting the day with a team you connect with is critical to our success.</h3>
   </div>
-  <div class="w-clearfix filterwrapper mobilehide">
+  <div class="w-clearfix filterwrapper">
     {% capture teams_nav_content %}
       <a href="#" class="dropdownitem js-nav-filter" data-kind="job-team">All teams</a>
       {% for team in site.data['teamnames'] %}
@@ -30,8 +30,8 @@ type: jobs
     {% endcapture %}
     {% include nav_filter.html label="Types" content=types_nav_content fill='job-type' %}
 
-    <a href="/jobs">
-      <p class="sectionbutton formbutton">See all Jobs</p>
+    <a href="/jobs" class="sectionbutton formbutton mobilehide">
+      See all Jobs
     </a>
   </div>
 
