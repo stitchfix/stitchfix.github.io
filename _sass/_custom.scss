@@ -7,15 +7,46 @@
 
 .logo {
   text-decoration: none;
+  img {
+    height: 100%;
+  }
 }
 
 .logo-tagline {
   font-size: 16px;
   color: #847B78;
   vertical-align: middle;
-  top: 3px;
+  top: 1px;
   position: relative;
   margin-left: 6px;
+  display: inline-block;
+
+}
+
+.header {
+  @media (max-width: 767px) {
+    height: auto;
+    padding-left: 0;
+  }
+}
+
+.navcontainer {
+  @media (max-width: 767px) {
+    & {
+      height: auto;
+      min-height: 46px;
+      padding: 7px 28px 7px 15px;
+      .logo {
+        top: initial;
+        transform: none;
+        height: initial;
+        img {
+          width: 180px;
+          min-height: 18px;
+        }
+      }
+    }
+  }
 }
 
 .tab {
@@ -48,11 +79,19 @@
 }
 
 .bloghero {
-  min-height: 500px;
-  height: 500px;
+  max-height: 738px;
+  width: 100%;
   margin-top: 98px;
-  background: url(http://uploads.webflow.com/55411cb6ae02724a6ecbff7b/55009bd6e12fc57729b7f9ba_IMG_0113.jpg) scroll 0 0 no-repeat transparent;
-  background-size: cover;
+  @media (max-width: 767px) {
+    & {
+      margin-top: 84px;
+    }
+  }
+  @media (max-width: 479px) {
+    & {
+      margin-top: 46px;
+    }
+  }
 }
 
 .blogpost {
@@ -308,6 +347,9 @@
   @media (max-width: 479px) {
     & {
       display: block;
+      position: absolute;
+      top: 22px;
+      right: 7px;
     }
   }
 }
@@ -334,6 +376,7 @@
     & {
       float: left;
       clear: left;
+      text-align: left;
     }
   }
 }
@@ -347,6 +390,11 @@
   text-decoration: none;
   margin: 0 10px 20px;
   top: 0;
+  @media (max-width: 767px) {
+    & {
+      width: auto;
+    }
+  }
 }
 
 @media (max-width: 479px) {
@@ -354,4 +402,3 @@
     display: none;
   }
 }
-
