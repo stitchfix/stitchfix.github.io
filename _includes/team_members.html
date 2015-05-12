@@ -5,7 +5,7 @@
   <label for="expandgrid" class="expand-label expand-rotate">
     <img class="expandicon" src="/assets/images/svgs/expand.svg" height="32" width="150">
   </label>
-  <div class="gridexpand expand-block">
+  <div class="expand-block">
     <div class="w-row teamcolumns">
       {% assign team = site.data.teams | team: page.type %}
       {% for member in team[0]['members']  %}

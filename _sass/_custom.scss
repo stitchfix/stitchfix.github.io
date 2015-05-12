@@ -119,6 +119,10 @@
   }
 }
 
+.gridexpand {
+  display: block;
+}
+
 .teambio {
   position: relative;
   display: block;
@@ -140,12 +144,15 @@
   }
 
   .flipper {
-    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .flip-front {
+    position: relative;
   }
 
   .team-headshot {
-    width: 290px;
-    height: 290px;
+    width: 100%;
   }
 }
 

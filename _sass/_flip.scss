@@ -46,14 +46,14 @@
   }
 
   .flip-front, .flip-back {
-    position: absolute;
-    top: 0;
-    left: 0;
     transition: 0.4s;
   }
 
   .flip-back {
     opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .flip-front {
