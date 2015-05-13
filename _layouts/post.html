@@ -4,14 +4,13 @@
   <body>
     {% include header.html %}
     <div class="container">
-      <div class="wrapper">
-        {% if page.hero %}
-          <img src="/assets/images/{{ page.hero }}.jpg" class="bloghero" />
-        {% else %}
-          <img src="/assets/images/hero/IMG_0113.jpg" class="bloghero" />
-        {% endif %}
+      {% if page.hero %}
+        <div class="bloghero" style="background-image:url(/assets/images/{{ page.hero }}.jpg);"></div>
+      {% else %}
+        <div class="bloghero"></div>
+      {% endif %}
 
-        <div class="w-tabs tabs tabspost">
+      <div class="w-tabs tabs tabspost">
         <div class="w-section blogsection">
           <div class="w-row blogpost">
             <div class="w-col w-col-3 byline">
@@ -67,9 +66,7 @@
 
               {% include disqus.html %}
             </div>
-
           </div>
-        </div>
         </div>
       </div>
     </div>

@@ -79,17 +79,27 @@
 }
 
 .bloghero {
-  max-height: 738px;
+  height: 738px;
+  content: ' ';
   width: 100%;
   margin-top: 98px;
+  background: transparent url(/assets/images/hero/IMG_0113.jpg) 50% 0 / cover no-repeat scroll;
+  background-size: cover;
+  @media (max-width: 767px) {
+    & {
+      height: 538px;
+    }
+  }
   @media (max-width: 767px) {
     & {
       margin-top: 84px;
+      height: 438px;
     }
   }
   @media (max-width: 479px) {
     & {
       margin-top: 46px;
+      height: 300px;
     }
   }
 }
