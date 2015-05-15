@@ -322,6 +322,20 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Rachel
+      lastname:    Bobbins
+      location:    San Francisco
+      division:    Client Experience
+      description: Rachel is a mostly iOS, sometimes Rails developer. She enjoys cycling, reading and drinking copious amounts of coffee. She is originally from Long Island in New York, but after spending time in Massachusetts and California, her Long Island accent is barely perceptible.
+      image:
+      linkedin:     http://www.linkedin.com/in/rbobbins
+      github:       rbobbins
+      twitter:      bobbins
+      instagram:
+      flickr:
+      links:
+        - type:     homepage
+          url:      http://rbobbs.com
 - teamname: design
   members:
     - name:        Brian
