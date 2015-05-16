@@ -322,6 +322,20 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
+    - name:        Rachel
+      lastname:    Bobbins
+      location:    San Francisco
+      division:    Client Experience
+      description: Rachel spends most of her time doing iOS development, riding bikes, and drinking copious amounts of coffee. She enjoys referring to herself in 3rd person, both in prose and in <a class="link" href="https://github.com/stitchfix/stitchfix.github.io/commit/37606c6ddcfa383dea84275f6adb847dc50353c4/">commit messages</a>.
+      image:
+      linkedin:     http://www.linkedin.com/in/rbobbins
+      github:       rbobbins
+      twitter:      bobbins
+      instagram:
+      flickr:
+      links:
+        - type:     homepage
+          url:      http://rbobbs.com
 - teamname: design
   members:
     - name:        Brian
