@@ -61,6 +61,29 @@ In the world of hypothesis testing, rejecting the null hypothesis when it is act
 
 Conversely, a *type 2 error* occurs when you accept the null hypothesis when it is actually false. This is a false negative because we end up sitting on our hands when we should have taken action. We need to consider both of these types of errors when choosing the sample size.
 
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+
+thead {
+  padding: 5px;
+}
+
+table{
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+    border-bottom: none;
+}
+
+#tbl {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 800px;
+}
+</style>
+
 |   |**\\(H\_0\\) is true** | **\\(H\_1\\) is true** |
 |---|---|---|
 | **Accept \\(H\_0\\)**  | Correct Decision |  Type 2 Error (1 - power) |
