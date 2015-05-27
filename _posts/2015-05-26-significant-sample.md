@@ -56,6 +56,8 @@ Based on the test statistic we can calculate the p-value which is probability of
 
 If we seek to reject the null hypothesis, we want the p-value to be small and the typical threshold used is \\(5\%\\). In other words, if the p-value is less than \\(5\%\\), and the test group experienced a lower event rate than the control group, we conclude that the action worked. The pre-chosen cutoff (\\(5\%\\)) is also referred to as the *significance level* and plays an important role in determining the required sample size. We will explain the significance level in the following section.
 
+Note that we do not have to calculate the p-value in order to reject or accept the null hypothesis. Alternatively, we can apply a cutoff directly to the test statistic based on its distribution and the chosen significance level. For example, for a two-sided test and a significance level of \\(5\%\\), the cutoff corresponds to the upper and lower \\(2.5\%\\) on the standard normal distribution (normal distribution with a mean of 0 and a standard deviation of 1), which is \\(1.96\\). Hence we reject the null hypothesis if \\(|Z|>1.96\\).   
+
 ### Introducing the Power and the Significance Level
 In the world of hypothesis testing, rejecting the null hypothesis when it is actually true is called a *type 1 error*. Committing a type 1 error is a false positive because we end up recommending something that does not work.
 
