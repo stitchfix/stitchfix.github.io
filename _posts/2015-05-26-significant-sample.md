@@ -51,7 +51,7 @@ Intuitively, this metric makes sense: subtract the rates and normalize the resul
 
 For testing of *continuous variables*, such as revenue, see the appendix of this post.
 
-#### Step 4 - Calculate the p-value to reject or accept the null hypothesis
+#### Step 4 - Reject or accept the null hypothesis
 Based on the test statistic we can calculate the p-value which is probability of obtaining a result at least as "extreme" as the observed result, given that the null hypothesis is true.
 
 Clearly, if we seek to reject the null hypothesis, we want the p-value to be small and the typical threshold used is \\(5\%\\). In other words, if the p-value is less than \\(5\%\\), and the test group experienced a lower event rate than the control group, we conclude that the action worked. The pre-chosen cutoff (\\(5\%\\)) is also referred to as the *significance level* and plays an important role in determining the required sample size. We will explain the significance level in the following section.
