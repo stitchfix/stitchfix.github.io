@@ -104,7 +104,7 @@ The concepts of power and significance level can seem somewhat convoluted at fir
 Consider the following example:
 
 - \\(H\_0\\): \\(p\_1=p\_2\\), \\(H\_0\\): \\(p\_1>p\_2\\). A one-sided test was chosen here for charting-simplicity.
-- Corresponding decision rule is \\(|Z| > 1.65\\). The number (\\(1.65\\)) is the cutoff that corresponds to the upper 5% on the standard normal distribution.
+- Our chosen significance level is \\(5\%\\). The corresponding decision rule is \\(|Z| > 1.65\\). The number (\\(1.65\\)) is the cutoff that corresponds to the upper \\(5\%\\) on the standard normal distribution.
 - \\(N = 5,000\\) (\\(2,500\\) in each cell).
 - Say we observe \\(p\_2 = 0.10\\) and \\(p\_1 = 0.08\\), which leads to a \\(Z\\) value of \\(2.47\\) (using the formula for \\(Z\\) above). We are assuming that the variance is  roughly the same under the null and alternative hypotheses (they’re very close).
 
@@ -133,7 +133,7 @@ Note that the further the red curve (distribution under the alternative distribu
 ![](/assets/images/blog/sample_image03.png)
 
 ### Power Analysis
-Let’s say we require the significance level to be 5% and the power to be 80%. This means we have now specified two key components of a power analysis:
+Let’s say we require the significance level to be 5% and the power to be \\(80\%\\). This means we have now specified two key components of a power analysis:
 
 - A decision rule of when to reject the null hypothesis. Specifically, we reject the null when the p-value is less than \\(5\%\\).
 - Our tolerance for committing type 2 error (\\(1 - 80\% = 20\%\\)).
