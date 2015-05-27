@@ -135,7 +135,7 @@ Note that the further the red curve (distribution under the alternative distribu
 ### Power Analysis
 Let’s say we require the significance level to be 5% and the power to be \\(80\%\\). This means we have now specified two key components of a power analysis:
 
-- A decision rule of when to reject the null hypothesis. Specifically, we reject the null when the p-value is less than \\(5\%\\).
+- A decision rule of when to reject the null hypothesis. We reject the null when the p-value is less than \\(5\%\\).
 - Our tolerance for committing type 2 error (\\(1 - 80\% = 20\%\\)).
 
 Our next task now is to find the sample size that meets these two criteria. On the surface this sounds easy, but it actually poses a challenge. In fact, this is akin to solving one equation (\\(\textrm{power}=80\%\\)) with two unknowns: the sample size and the detectable difference. The detectable difference is the level of impact we want to be able to detect with our test. It is almost always the bottleneck in a power analysis and directly dictates the precision of the sample. We cannot solve for the sample size without first specifying the level of impact we want to be able to detect with our test.  
