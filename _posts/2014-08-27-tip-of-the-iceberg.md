@@ -1,6 +1,6 @@
 ---
 title: "Tip of the Iceberg: In Praise of Internal Apps"
-layout: posts
+layout: post
 location: "Washington, DC"
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'

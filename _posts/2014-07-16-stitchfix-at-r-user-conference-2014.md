@@ -1,10 +1,10 @@
 ---
-layout: posts
+layout: post
 title: "Stitch Fix at useR! 2014"
 author: "Bhaskar Rao"
 date: 2014-07-16 11:01
 published: true
-categories: 
+categories:
 ---
 I just returned having spent a great day in Los Angeles, CA (at UCLA main campus) where I had the pleasure of giving a talk at the [R User 2014 Conference][user-2014]. The conference brought together top users and developers of [R][rlanguage]. It was a great place to share ideas on how to best apply the R language and its tools to address challenges in data management, processing, analytics and visualization.
 

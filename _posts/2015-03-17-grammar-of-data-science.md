@@ -1,6 +1,6 @@
 ---
-title: The Grammar of Data Science 
-layout: posts
+title: The Grammar of Data Science
+layout: post
 author: Deep Ganguli
 author_url: 'https://www.linkedin.com/pub/deep-ganguli/47/573/356'
 published: true
@@ -47,7 +47,7 @@ d3.csv("/assets/data/diamonds_head.csv", function(csv){
             depth: +d.depth,
             table: +d.table,
             price: d.price,
-            x: +d.x, 
+            x: +d.x,
             y: +d.y,
             z: +d.z,
         };
@@ -55,7 +55,7 @@ d3.csv("/assets/data/diamonds_head.csv", function(csv){
 
    var table1 = MG.data_table({
         data: data,
-    }) 
+    })
     .target('#tbl')
     .title({accessor: 'cut', label: 'Cut', font_style: 'italic'})
     .number({accessor: 'carat', label: 'Carat', round: '2'})
@@ -82,11 +82,11 @@ library(dplyr)
 
 data(diamonds)
 
-diamonds %>% 
-  ggplot(aes(x=carat,y=price)) + 
+diamonds %>%
+  ggplot(aes(x=carat,y=price)) +
   geom_point(alpha=0.5) +
-  facet_grid(~ cut) + 
-  stat_smooth(method = lm, formula = y ~ poly(x,2)) + 
+  facet_grid(~ cut) +
+  stat_smooth(method = lm, formula = y ~ poly(x,2)) +
   theme_bw()
 ```
 
@@ -105,13 +105,13 @@ import seaborn as sns
 
 sns.set_style("white")
 sns.lmplot("carat", "price", col="cut", data=diamonds, order=2)
-``` 
+```
 
 which outputs a markedly less beautiful visualization:
 
 ![Example of seaborn lmplot](/assets/images/blog/grammar_image01.png)
 
-The main issue here is that the model fit, not the actual data, controls the scale of the y-axis. The model fits dwarf the actual data! [Tufte](http://www.edwardtufte.com/tufte/) would not approve. In R, ggplot automatically solves this problem for you, which makes the visualization useful out of the box without further effort. Furthermore, I find the R code easier to write than the Python code because it is composed of a combination of simple and easy to remember elements, e.g., geoms. It reads like English, and allows me to fit arbitrarily complex models to the data using the formula syntax. In Python, I always forget what the more specialized lmplot is called, and how to use it. I find that using R minimizes cognitive load relative to using Python for exploring data to quickly test hypotheses. In Seaborn's defense, it produces more elegant visualizations than vanilla Matplotlib with a simpler API. It is also younger than ggplot2, which means it has had less time to mature. 
+The main issue here is that the model fit, not the actual data, controls the scale of the y-axis. The model fits dwarf the actual data! [Tufte](http://www.edwardtufte.com/tufte/) would not approve. In R, ggplot automatically solves this problem for you, which makes the visualization useful out of the box without further effort. Furthermore, I find the R code easier to write than the Python code because it is composed of a combination of simple and easy to remember elements, e.g., geoms. It reads like English, and allows me to fit arbitrarily complex models to the data using the formula syntax. In Python, I always forget what the more specialized lmplot is called, and how to use it. I find that using R minimizes cognitive load relative to using Python for exploring data to quickly test hypotheses. In Seaborn's defense, it produces more elegant visualizations than vanilla Matplotlib with a simpler API. It is also younger than ggplot2, which means it has had less time to mature.
 
 ### Not convinced? dplyr will blow your mind
 Let’s consider another example in which dplyr comes into play. Suppose we’re curious about how the cut, price, carat, and volume (a derived feature of the data) of these diamonds all covary with one another. In R, we can create a simple visualization that helps us quickly answer this question using [ggpairs](http://www.inside-r.org/packages/cran/GGally/docs/ggpairs). But first, we need to construct a volume feature, select only the subset of the variables we care about, and sample the data to avoid overplotting.
@@ -121,15 +121,15 @@ Here’s the R code that does the trick:
 ```r
 library(GGally)
 
-diamonds %>% 
+diamonds %>%
   mutate(volume = x*y*z) %>%
   select(cut, carat, price, volume) %>%
-  sample_frac(0.5, replace=TRUE) %>% 
-  ggpairs(axisLabels="none") + 
+  sample_frac(0.5, replace=TRUE) %>%
+  ggpairs(axisLabels="none") +
   theme_bw()
 ```
 
-Again, the code reads like English. The methods mutate, select, and sample_frac (verbs!) are part of the dplyr data manipulation library, which I found very easy to quickly become proficient with. All I needed was this handy [cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)! I wish all libraries were this easy to learn and use. 
+Again, the code reads like English. The methods mutate, select, and sample_frac (verbs!) are part of the dplyr data manipulation library, which I found very easy to quickly become proficient with. All I needed was this handy [cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)! I wish all libraries were this easy to learn and use.
 
 Here’s the resulting visualization:
 
@@ -140,7 +140,7 @@ The function ggpairs plots each variable against the others intelligently. For e
 ### Python underperforms once more
 The equivalent Python code does not read like English and is super annoying to write:
 
-```python 
+```python
 rand_ind = random.sample(diamonds.index, int(diamonds.index.shape[0]*.50))
 diamonds_sampled = diamonds.loc[rand_ind]
 diamonds_sampled['volume'] = diamonds_sampled.x * diamonds_sampled.y * diamonds_sampled.z
@@ -161,4 +161,4 @@ That being said, **R also has some pretty huge drawbacks** relative to Python. T
 
 <hr>
 
-**Edits:** Michael Waskom, the developer behind Seaborn, pointed out that you easily truncate the subplots in the second graphic of this post using `truncate=True` in `lmplot`. 
+**Edits:** Michael Waskom, the developer behind Seaborn, pointed out that you easily truncate the subplots in the second graphic of this post using `truncate=True` in `lmplot`.

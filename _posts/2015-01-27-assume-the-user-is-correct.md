@@ -1,6 +1,6 @@
 ---
 title: "Assume the User is Correct"
-layout: posts
+layout: post
 location: "Washington, DC"
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'

@@ -1,6 +1,6 @@
 ---
-title: A Word is Worth a Thousand Vectors 
-layout: posts
+title: A Word is Worth a Thousand Vectors
+layout: post
 author: Chris Moody
 author_url: 'https://twitter.com/chrisemoody'
 published: true
@@ -14,7 +14,7 @@ The following example set the natural language community afire<a name="footnote1
 
 $$ king - man + women = queen $$
 
-In this example, a human posed a question to a computer: what is `king - man + woman`? This is similar to an SAT-style analogy (`man` is to `woman` as `king` is to what?). And a computer solved this equation and answered: `queen`. Under the hood, the machine gets that the biggest difference between the words for man and woman is gender. Add that gender difference to `king`, and you get `queen`.  
+In this example, a human posed a question to a computer: what is `king - man + woman`? This is similar to an SAT-style analogy (`man` is to `woman` as `king` is to what?). And a computer solved this equation and answered: `queen`. Under the hood, the machine gets that the biggest difference between the words for man and woman is gender. Add that gender difference to `king`, and you get `queen`.
 
 **This is astonishing because we've never explicitly taught the machine anything about gender!**
 
@@ -71,12 +71,12 @@ table {
     margin: auto;
     text-align: center;
 }
- 
+
 #legend {
     display: block;
     margin: auto;
     text-align: center
-} 
+}
 
 p.l1, p.l2, p.l3, p.l4, p.l5, p.l6{
     padding: 5px 8px 5px 8px;
@@ -97,10 +97,10 @@ p.l6 {background-color: #009785}
 d3.csv("/assets/data/data.csv", function(csv){
     var data = csv.map(function(d){
         return {
-            x: +d.x, 
+            x: +d.x,
             y: +d.y,
             radius: +d.r,
-            category: +d.c, 
+            category: +d.c,
             text: d.t
         };
     });
@@ -133,12 +133,12 @@ d3.csv("/assets/data/data.csv", function(csv){
 <div id="graphic"></div>
 
 <div id="legend">
-<p class='l1'>Destinations</p> 
-<p class='l2'>Vacation</p> 
-<p class='l3'>Season</p> 
-<p class='l4'>Holidays</p> 
-<p class='l5'>Wedding</p> 
-<p class='l6'>Month</p> 
+<p class='l1'>Destinations</p>
+<p class='l2'>Vacation</p>
+<p class='l3'>Season</p>
+<p class='l4'>Holidays</p>
+<p class='l5'>Wedding</p>
+<p class='l6'>Month</p>
 </div>
 <br />
 
@@ -146,7 +146,7 @@ Above is an interactive visualization of the words nearest to vacation. The more
 
 And these words aren't just nearby; they're also in several clusters. So we can determine that the words most similar to `vacation` come in a variety of flavors: one cluster might be `wedding`-related, but another might relate to destinations like `Belize`.
 
-Of course our human stylists understand when a client says "I'm going to Belize in March" that she has an upcoming vacation. But the computer can potentially tag this as a 'vacation' fix because the word vector for `Belize` is similar to that for `vacation`. We can then make sure that the Fixes our customers get are vacation-appropriate! 
+Of course our human stylists understand when a client says "I'm going to Belize in March" that she has an upcoming vacation. But the computer can potentially tag this as a 'vacation' fix because the word vector for `Belize` is similar to that for `vacation`. We can then make sure that the Fixes our customers get are vacation-appropriate!
 
 ##Ideas are words that can be added & subtracted
 We have the ability to search semantically by adding and subtracting word vectors<a name="footnote8-return"></a><sup><a href="#footnote8">8</a></sup>. This empowers us to creatively add and subtract concepts and ideas. Let's start with a style we know a customer liked, `item_3469`:
@@ -168,12 +168,12 @@ Of course the item IDs aren't immediately informative, but the pictures let us k
 
 ![](/assets/images/blog/vectors_images.png)
 
-The first two are items have prominent black & white stripes like `item_3469` but have the added property that they're great maternity-wear. The last item changes the pattern away from stripes but is still a loose blouse that's great for an expectant mother. Here we've simply added the word vector for `pregnant` to the word vector for `item_3469`, and looked up the word vectors most similar to that result<a name="footnote9-return"></a><sup><a href="#footnote9">9</a></sup>. 
- 
+The first two are items have prominent black & white stripes like `item_3469` but have the added property that they're great maternity-wear. The last item changes the pattern away from stripes but is still a loose blouse that's great for an expectant mother. Here we've simply added the word vector for `pregnant` to the word vector for `item_3469`, and looked up the word vectors most similar to that result<a name="footnote9-return"></a><sup><a href="#footnote9">9</a></sup>.
+
 Our stylists tailor each Fix to their clients, and this prototype system may free them to mix and match artistic concepts about style, size and fit to creatively search for new items.
 
 ##Summarizing sentences & documents
-At Stitch Fix, we work hard to craft a uniquely-styled Fix for each of our customers. At every stage of a Fix we collect feedback: what would you like in your next Fix? What did you think of the items we sent you? What worked? What didn't? 
+At Stitch Fix, we work hard to craft a uniquely-styled Fix for each of our customers. At every stage of a Fix we collect feedback: what would you like in your next Fix? What did you think of the items we sent you? What worked? What didn't?
 
 The spectrum of responses is myriad, but vectorizing those sentences<a name="footnote10-return"></a><sup><a href="#footnote10">10</a></sup> allows us to begin systematically categorizing those documents:
 
@@ -200,7 +200,7 @@ In this example we calculate which sentences are closest to the word `pregnant`.
 This allows us to understand not just what words mean, but condense our client comments, notes, and requests in a quantifiable way. We can for example categorize our sentences by first calculating the similarity between a sentence and a word:
 
 ```python
-def get_vector(word): 
+def get_vector(word):
     return model.syn0norm[model.vocab[word].index]
 def calculate_similarity(sentence, word):
    vec_a = get_vector(sentence)
@@ -234,12 +234,12 @@ While word vectorization is an elegant way to solve many practical text processi
 
 3. **Memory & performance.** The training of vectors requires a high-memory and high-performance multicore machine. Training can take several hours to several days but shouldn't need frequent retraining. If you use pretrained vectors, then this isn't an issue.
 
-4. **Databases.** Modern SQL systems aren't well-suited to performing the vector addition, subtraction and multiplication searching in vector space requires. There are a few libraries that will help you quickly find the most similar items<a name="footnote12-return"></a><sup><a href="#footnote12">12</a></sup>: [annoy](https://github.com/spotify/annoy), [ball trees](http://scikit-learn.org/dev/modules/neighbors.html#ball-tree), [locality-sensitive hashing](http://scikit-learn.org/dev/modules/neighbors.html#mathematical-description-of-locality-sensitive-hashing) (LSH) or [FLANN](http://www.cs.ubc.ca/research/flann/). 
+4. **Databases.** Modern SQL systems aren't well-suited to performing the vector addition, subtraction and multiplication searching in vector space requires. There are a few libraries that will help you quickly find the most similar items<a name="footnote12-return"></a><sup><a href="#footnote12">12</a></sup>: [annoy](https://github.com/spotify/annoy), [ball trees](http://scikit-learn.org/dev/modules/neighbors.html#ball-tree), [locality-sensitive hashing](http://scikit-learn.org/dev/modules/neighbors.html#mathematical-description-of-locality-sensitive-hashing) (LSH) or [FLANN](http://www.cs.ubc.ca/research/flann/).
 
 5. **False-positives & exactness.** Despite the impressive results that come with word vectorization, no NLP technique is perfect. Take care that your system is robust to results that a computer deems relevant but an expert human wouldn't.
 
 ##Conclusion
-The goal of this post was to convince you that **word vectors give us a simple and flexible platform for understanding text.** We've covered a few diverse examples that should help build your confidence in developing and deploying NLP systems and what problems they can solve. While most coverage of word vectors has been from a scientific angle, or demonstrating toy examples, we at Stitch Fix think this technology is ripe for industrial application. 
+The goal of this post was to convince you that **word vectors give us a simple and flexible platform for understanding text.** We've covered a few diverse examples that should help build your confidence in developing and deploying NLP systems and what problems they can solve. While most coverage of word vectors has been from a scientific angle, or demonstrating toy examples, we at Stitch Fix think this technology is ripe for industrial application.
 
 In fact, Stitch Fix is the perfect testbed for these kinds of new technologies: with expert stylists in the loop, we can move rapidly on new and prototypical algorithms without worrying too much about edge and corner cases. The creative world of fashion is one of the few domains left that computers don't understand. If you're interested in helping us break down that wall, [apply](http://technology.stitchfix.com/jobs/index.html)!
 
@@ -339,7 +339,7 @@ If you're using Python 2, this is a great reason to reduce Unicode headaches and
 <span style="font-size:medium;">
 <a name="footnote12"></a>
 <sup>12</sup>
-See a comparison of these techniques [here](http://radimrehurek.com/2014/01/performance-shootout-of-nearest-neighbours-querying/). My recommendation is using LSH if you need a pure Python solution, and annoy if you need a solution that is memory light. 
+See a comparison of these techniques [here](http://radimrehurek.com/2014/01/performance-shootout-of-nearest-neighbours-querying/). My recommendation is using LSH if you need a pure Python solution, and annoy if you need a solution that is memory light.
 <a href="#footnote12-return">&larr;</a>
 </span>
 

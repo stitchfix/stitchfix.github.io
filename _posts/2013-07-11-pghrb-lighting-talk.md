@@ -1,6 +1,6 @@
 ---
 title: pghrb Lighting Talk
-layout: posts
+layout: post
 author: Jon Dean
 author_url: 'http://jonathandean.com'
 tags:

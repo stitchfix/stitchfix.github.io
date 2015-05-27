@@ -1,6 +1,6 @@
 ---
 title: I ♥ Julia
-layout: posts
+layout: post
 author: Eli Bressert
 author_url: 'http://astrobiased.com'
 published: true

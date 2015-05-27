@@ -1,11 +1,11 @@
 ---
-layout: posts
+layout: post
 title: "The Value of Minimal, Flexible Systems"
 author: "Joel Strait"
 author_url: 'http://www.joelstrait.com'
 date: 2014-06-30
 published: true
-categories: 
+categories:
 ---
 
 We call it "Old Admin". A basic admin interface (similar to Rails' [Active Admin](http://activeadmin.info/)) built by an outside team before the current engineering team arrived. For a time it ran our whole business. One of the first tasks of our original engineers was to replace it with something more sophisticated. However, limited as it was in many ways, it inadvertently taught us some good lessons about designing internal systems.

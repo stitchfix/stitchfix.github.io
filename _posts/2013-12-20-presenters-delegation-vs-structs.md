@@ -1,6 +1,6 @@
 ---
 title: "Presenters: Delegation vs Just Making A Struct&trade;"
-layout: posts
+layout: post
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'
 tags:

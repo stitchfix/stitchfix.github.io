@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<script type="text/javascript"
-src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-  {% include _head.html %}
-  <body class="blog">
-    {% include _header.html %}
-    <div class="container contain-to-md mt2 mb2" id="blog">
-      <header class="text-c py8">
-        <h1 class="h1 thin">{{ page.title }}</h1>
-        <h2 class="h2 thin light mb1">
-          by <a href="{{ page.author_url }}">{{ page.author }}</a>
-          on <date datetime="{{page.date | date: "%Y-%m-%d"}}">{{page.date | date: "%B %d, %Y"}}</date>
-        </h2>
-        {% if page.location %}
-        <h3 class="h4 thin light m0">
-          from {{ page.location }}
-        </h3>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="container">
+      <div class="w-tab-pane w--tab-active" data-w-tab="Blog">
+        <div class="headimage_blog"></div>
+        {% unless page.category %}
+          {% include posts_filters.html %}
+        {% endunless %}
+
+        {% if page.category %}
+          {% assign posts = site.categories[page.category] %}
+        {% else %}
+          {% assign posts = paginator.posts %}
         {% endif %}
-      </header>
+
+        {% for post in posts %}
+          {% assign author = site.data.teams | find_member: post.author_id %}
+          {% capture fullname %}
+            {% if post.author %}
+              {{ post.author }}
+            {% elsif author %}
+              {{ author.name }} {{ author.lastname }}
+            {% endif %}
+          {% endcapture %}
+
+          <div class="w-row blogpost">
+            <div class="w-col w-col-3 byline">
+              {% if author %}
+                {% if author.image %}
+                  <img class="authorheadshot" src="/assets/images/team/{{ author.image }}.jpg">
+                {% else %}
+                  <img class="authorheadshot" src="/assets/images/team/{{ author.name | downcase }}.jpg">
+                {% endif %}
+                <div class="blogauthor">
+                  {{ fullname }}
+                </div>
+                {% if author.division %}
+                  <div class="title">{{ author.division }}</div>
+                {% endif %}
+              {% else %}
+                <div class="blogauthor">
+                  {{ fullname }}
+                </div>
+              {% endif %}
+            </div>
+
+
+            <div class="w-col w-col-9 blogcolumn">
+              <h4><a class="blogtitle" href="{{ post.url }}">{{ post.title }}</a></h4>
+              <div class="bloginfo">
+                {{ fullname }}
+
+                {% if post.categories[0] %}
+                  in {{ post.categories | join: ", " | capitalize }}
+                {% endif %}
+                – <date datetime="{{ post.date | date: "%Y-%m-%d"}}">{{ post.date | date: "%B %d, %Y"}}</date>
+              </div>
+              <!-- TODO: how to get discus comments? <div class="bloginfo comments">6 Comments</div> <!-->
+
+              {{ post.excerpt }}
+              <a class="w-inline-block link" href="{{ post.url }}">
+                <div class="bloginfo blogjump">Read More&nbsp;»</div>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+
+        {% unless page.category %}
+          {% include pagination.html %}
+        {% endunless %}
+
+      </div>
     </div>
-    <section class="container contain-to-md">
-      <article class="post-content">
-        {% if page.image %}
-          {% if page.image_position %}
-            {% if page.image_border %}
-              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-{{ page.image_position }} post-image-bordered">
-            {% else %}
-              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-{{ page.image_position }}">
-            {% endif %}
-          {% else %}
-            {% if page.image_border %}
-              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-right post-image-bordered">
-            {% else %}
-              <img src="/assets/images/blog/{{ page.image }}" class="post-image post-image-right ">
-            {% endif %}
-          {% endif %}
-        {% endif %}
-        {{ content }}
-      </article>
-    </section>
-    <section class="container contain-to-md m4">
-      <article>
-        {% include _disqus.html %}
-      </article>
-    </section>
-    {% include _footer.html %}
+
+    {% include footer.html %}
+    {% include posts_extras.html %}
   </body>
+
 </html>

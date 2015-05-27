@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "Machine and Expert-Human Resources: A Synthesis of Art and Science for Recommendations"
 author: Eric Colson
 date: 2014-07-21 11:01
@@ -14,7 +14,7 @@ For this, we need to rely on the judgments of expert-humans.
 Each piece contributes distinct value to the overall selection process and exclusive focus on either one would be incomplete.
 For this reason, the Stitch Fix styling application has been architected to leverage diverse resources - both machines and expert-humans - in order to exhaust all available information and processing.
 
-## Machine Resources  
+## Machine Resources
 
 Each attribute that describes a piece of merchandise can be represented as data and reconciled to each client’s unique preferences.
 For example, the way a certain blouse fits tightly on the shoulders and flaunts the upper-arms may provide value to some clients while being an undesirable quality to others.
@@ -30,7 +30,7 @@ This might include distance or similarity calculations, mixed effect models, mat
 The output from machine processing is a set of scores representing the relevancy between the client and each piece of merchandise.
 These scores encapsulate all the relationships inherent to the data, representing the aggregate knowledge amassed from vast amounts of client-merchandise interactions, and applied to the personal preferences of each client.
 
-## Expert-Human Resources  
+## Expert-Human Resources
 
 While machines are incredibly efficient at extracting patterns in structured data there is still both information and processing which fall outside of their purview.
 Much of the accord between a client and clothing owes to properties that are elusive from precise quantification.

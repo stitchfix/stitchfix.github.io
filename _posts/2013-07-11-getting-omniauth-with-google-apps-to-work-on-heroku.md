@@ -1,10 +1,10 @@
 ---
-layout: posts
+layout: post
 title: "Getting OmniAuth with Google Apps to Work on Heroku"
 author: "Dave Copeland"
 date: 2013-07-11 11:01
 published: true
-categories: 
+categories:
 ---
 
 At [Stitch Fix][stitchfix], we outsource pretty much _all_ of our hosting and technical needs to Heroku or their add-ons.  Given
@@ -31,7 +31,7 @@ First, the general setup of OmniAuth recommends this:
 
 {% highlight ruby %}
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :google_apps, domain: 'your-domain.com'  
+  provider :google_apps, domain: 'your-domain.com'
 end
 {% endhighlight %}
 
@@ -45,7 +45,7 @@ our source code because of Wacky Heroku Thing #1 - no guarantees about what's on
 require 'openid/fetchers'
 OpenID.fetcher.ca_file = File.join(Rails.root,'config','curl.pem')
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :google_apps, domain: 'your-domain.com'  
+  provider :google_apps, domain: 'your-domain.com'
 end
 {% endhighlight %}
 
@@ -54,7 +54,7 @@ include it.  Another option would be to provide an environment variable based on
 simpler.
 
 Now, the problem with this setup vis-a-vis Heroku is that there's a configuration option being set that is not apparent, because
-OmniAuth/OpenID is using what it believes to be a sensible default, but is, in fact, not correct.  
+OmniAuth/OpenID is using what it believes to be a sensible default, but is, in fact, not correct.
 
 OpenID requires the ability to store information server-side so that, after you are redirected back from the auth provider
 (Google, in our case), the server can find this information and complete the login.  _How_ this information is stored can be
@@ -84,7 +84,7 @@ gives use three processes, each with it's own separate memory space.
 Because unicorn uses _process-based_ concurrency, which means that, when a new process is started, it gets a _copy_ of the parent's
 memory, all three unicorns on a single Dyno *do not* share memory. Meaning if process 1 started the OpenID dance, but, after
 redirect, your request was handled by process 2, it doesn't have the necessary information stored in memory.  Boom!
-invalid_credentails error.  
+invalid_credentails error.
 
 So, what about that filesystem-based one?
 OmniAuth's docs *do* mention `OpenID::Store::Filesystem`, but it's still wrong on Heroku.  Why?
@@ -92,13 +92,13 @@ OmniAuth's docs *do* mention `OpenID::Store::Filesystem`, but it's still wrong o
 Here's how we'd set up the filesystem-based store:
 
 {% highlight ruby %}
-provider :google_apps, 
-         domain: 'your-domain.com', 
+provider :google_apps,
+         domain: 'your-domain.com',
          store: OpenID::Store::Filesystem.new(File.join(Rails.root,'tmp'))
 {% endhighlight %}
 
 We can't even be guaranteed of `/tmp` existing, so we set up the store inside our Rails app.  This configuration works great in
-development, because I'm running my server on one machine - all three Unicorn processes share the same data store.  
+development, because I'm running my server on one machine - all three Unicorn processes share the same data store.
 
 If we deployed to Heroku using just one Dyno, this would work.  However, the second we scale up our app to use more Dynos, the
 entire thing falls apart.  Why?
@@ -138,13 +138,13 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   if Rails.env.staging? || Rails.env.production? || ENV['OPENID_STORE'] == 'memcache'
     # Locally, these env vars will be blank, and it will connect to the local memcached
     # client running on the standard port
-    memcached_client = Dalli::Client.new(ENV['MEMCACHE_SERVERS'], 
-                                         :username => ENV['MEMCACHE_USERNAME'], 
+    memcached_client = Dalli::Client.new(ENV['MEMCACHE_SERVERS'],
+                                         :username => ENV['MEMCACHE_USERNAME'],
                                          :password => ENV['MEMCACHE_PASSWORD'])
-    provider :google_apps, domain: 'your-domain.com', 
+    provider :google_apps, domain: 'your-domain.com',
                            store: OpenID::Store::Memcache.new(memcached_client)
   else
-    provider :google_apps, domain: 'your-domain.com', 
+    provider :google_apps, domain: 'your-domain.com',
                            store: OpenID::Store::Filesystem.new(File.join(Rails.root,'tmp'))
   end
 end
@@ -163,4 +163,4 @@ work even if we've configured things incorrectly.  Anything this crucial to your
 [OmniAuth]: http://github.com/intridea/omniauth
 [omniauth-google-apps]: https://github.com/sishen/omniauth-google-apps
 [omniauth-openid]: https://github.com/intridea/omniauth-openid
-[12factor]: http://www.12factor.net 
+[12factor]: http://www.12factor.net

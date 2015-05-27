@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="container">
+      {% if page.hero %}
+        <div class="bloghero" style="background-image:url(/assets/images/{{ page.hero }}.jpg);"></div>
+      {% else %}
+        <div class="bloghero"></div>
+      {% endif %}
+
+      <div class="w-tabs tabs tabspost">
+        <div class="w-section blogsection">
+          <div class="w-row blogpost">
+            <div class="w-col w-col-3 byline">
+
+              {% assign author = site.data.teams | find_member: page.author_id %}
+              {% capture fullname %}
+                {% if post.author %}
+                  {{ post.author }}
+                {% elsif author %}
+                  {{ author.name }} {{ author.lastname }}
+                {% endif %}
+              {% endcapture %}
+
+              {% if author %}
+                {% if author.image %}
+                  <img class="authorheadshot" src="/assets/images/team/{{ author.image }}.jpg">
+                {% else %}
+                  <img class="authorheadshot" src="/assets/images/team/{{ author.name | downcase }}.jpg">
+                {% endif %}
+              {% endif %}
+              <div class="blogauthor">by {{ fullname }}</div>
+
+              {% if author.division %}
+                <div class="title">{{ author.division }}</div>
+              {% endif %}
+
+              {% for link in author.links %}
+                <a href="{{ link.url }}" class="socialicon">
+                  <img src="/assets/images/svgs/socialshare.svg" width="40" height="40">
+                </a>
+              {% endfor %}
+
+              {% if author.twitter %}
+                <a href="https://twitter.com/{{ author.twitter }}" class="socialicon"><img src="/assets/images/svgs/socialtwit_red.svg" width="40" height="40"></a>
+              {% endif %}
+            </div>
+            <div class="w-col w-col-9 blogcolumn">
+              <h4>{{ page.title }}</h4>
+              <div class="bloginfo">
+                by {{ fullname }}
+
+                {% if page.categories[0] %}
+                  in {{ page.categories | join: ", " | capitalize }}
+                {% endif %}
+                – <date datetime="{{ page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %d, %Y"}}</date>
+              </div>
+
+              {{ content }}
+
+              {% if page.tags.size > 0 %}
+                <div class="bloginfo">Tags: {{ page.tags | join ", " }}</div>
+              {% endif %}
+
+              {% include disqus.html %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+  {% include posts_extras.html %}
+</body>
+</html>

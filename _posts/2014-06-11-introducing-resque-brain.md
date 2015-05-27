@@ -1,17 +1,17 @@
 ---
-layout: posts
+layout: post
 title: "Resque Brain - a Better resque-web"
 author: "Dave Copeland"
 date: 2014-06-11
 published: true
-categories: 
+categories:
 ---
 
 We use [Resque][resque] at Stitch Fix…a lot.  For background processing
 or getting work out of the web request/response loop, Resque is our go-to technology.
 
 Because we have many single-purpose applications (instead of one awful MonoRail),
-we also have many Resque instances (we can't have an influx of user signups cause 
+we also have many Resque instances (we can't have an influx of user signups cause
 shipping label generation to slow down, thus taking out the warehouse).  Getting an
 overview of all of these instances at once is impossible with [resque-web](https://github.com/resque/resque/tree/1-x-stable#the-front-end) (you have to bounce between various instances and can't see all your Resques in one place).
 

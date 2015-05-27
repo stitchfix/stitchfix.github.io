@@ -1,6 +1,6 @@
 ---
 title: Unassuming Apps w/ AngularJS
-layout: posts
+layout: post
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'
 published: true
@@ -40,9 +40,9 @@ Here's a simplified view of the button toolbar that allows pickers to indicate a
 {% highlight html %}
 <ul class="js-buttons-list">
   <li>
-    <a href="#" 
-       class="btn js-short-pick" 
-       id="shortpick-missing-link" 
+    <a href="#"
+       class="btn js-short-pick"
+       id="shortpick-missing-link"
        data-short-pick-exception="missing">
       Missing
     </a>
@@ -58,8 +58,8 @@ Here's a simplified view of the button toolbar that allows pickers to indicate a
 
 <!-- later in the page -->
 
-<%= form_tag(fix_pick_path(@fix_pick_status.fix_id), 
-             method: :put, 
+<%= form_tag(fix_pick_path(@fix_pick_status.fix_id),
+             method: :put,
              class: "js-submit-on-scan" %>
     <%= hidden_field_tag "item_id" %>
     <%= hidden_field_tag "exception" %>
@@ -82,7 +82,7 @@ setup_short_pick_handling = ->
       item_id   = $("[data-current-item-id]").attr("data-current-item-id")
       exception = $(this).attr("data-short-pick-exception")
 
-      notifications.open("lower_warning", 
+      notifications.open("lower_warning",
                          "Short-picking item #{item_id} for reason: #{exception}")
       if confirm("Marking this item as #{exception} will require refixing later")
         $(".js-submit-on-scan #exception").val(exception)
@@ -103,7 +103,7 @@ Our markup is going to be a lot better.
 First, we'll use ERB to send the submit path to the Angular “mini-app”:
 
 {% highlight html %}
-<div ng-app="rma" 
+<div ng-app="rma"
      ng-init="pickPath = '<%= fix_pick_path(@fix) %>'">
   <div class="view-container">
     <div ng-view class="view-frame"></div>
@@ -137,7 +137,7 @@ controllers.controller('PicksController', [
   ($scope , $http , $location)->
     $scope.shortPick = (exception)->
       notifications.open(
-        "lower_warning", 
+        "lower_warning",
         "Short-picking item #{$scope.item_id} for reason: #{exception}")
 
       if confirm("Marking this item as #{exception} will require refixing later")

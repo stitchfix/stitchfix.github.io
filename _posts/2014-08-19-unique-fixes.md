@@ -1,10 +1,10 @@
 ---
-layout: posts
+layout: post
 title: Recommendations as Unique as You
 author: Eric Colson
 author_url: 'https://www.linkedin.com/in/ecolson'
 date: 2014-08-19 15:31
-published: true 
+published: true
 tags:
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Startup Engineering Team Super Powers
-layout: posts
+layout: post
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'
 tags:
@@ -45,11 +45,11 @@ it represents a radical change in an internal process, but generally we aren't t
 
 The technical aspects of achieving this aren't nearly as interesting as the culural impact it has. Because we don't have a formalized QA process, we all know that the only thing between our code and production is the test suite, so that test suite needs to be reliable.  Whenever there is a production bug, our first question is "Why didn't the tests catch this?".
 
-## Publish Shared Libraries 
+## Publish Shared Libraries
 
 Because we have several applications, those applications often need to share business logic or other code.  While dedicated services might someday be a
 way we do that, for now, we share logic and code via libraries (in our case, RubyGems).  Just like easily provisioning new applications, we can
-easily create and publish a new library in a matter of minutes.  
+easily create and publish a new library in a matter of minutes.
 
 To keep our libraries codebases consistent, we initially had a wiki page of instructions, however
 this has now been reduced to a command-line app: `y my_new_gem` which creates an empty code library the "Stitch Fix Way" that can be deployed to our
@@ -63,18 +63,18 @@ The solution to this has been a part of many popular relational databases for ye
 
 It's unfortunate that MySQL—which is quite popular and usable—lacks real constraints.  We use Postgres, which provides not just "not null" constraints and
 foreign key constraints (both part of MySQL as well), but also _check constraints_.  A check constraint allows us to put sophisitcated requirements on our
-data to ensure it is always correct.  
+data to ensure it is always correct.
 
 For example, we have a table that tracks events on a shipment (a shipment being what we send to our customers in hopes of a purchase).
 
-        Column     |           Type           | Modifiers                           
+        Column     |           Type           | Modifiers
     ---------------+--------------------------+---------------
      id            | integer                  | not null
      shipment_id   | integer                  | not null
      status_id     | integer                  | not null
      event_name    | character varying(255)   | not null
-     admin_user_id | integer                  | 
-     client_id     | integer                  | 
+     admin_user_id | integer                  |
+     client_id     | integer                  |
      created_at    | timestamp with time zone | default now()
 
 We have two types of users in our system: our clients (aka our customers), and our internal users (which we call "admin users").  In the table above, you
@@ -82,8 +82,8 @@ can see we have a reference to both a client ID and an admin user ID.  We want e
 event to an actual person.  A check constraint allows us to do that:
 
 {% highlight sql %}
-alter table shipment_events add CONSTRAINT 
-  "must_reference_a_user" CHECK (admin_user_id IS NOT NULL OR 
+alter table shipment_events add CONSTRAINT
+  "must_reference_a_user" CHECK (admin_user_id IS NOT NULL OR
                                  client_id     IS NOT NULL)
 {% endhighlight %}
 
@@ -105,7 +105,7 @@ reap the benefits of multiple applications and shared code without having to imm
 
 On the subject of databases, our databases work just like our applications - we can create new ones, set up replication, access backups, rollback to
 previous versions, and download production dumps with a simple command.  This is because, like our applications, our databases are setup via a cloud
-hosting service (Heroku Postgres) that provides all of that.  
+hosting service (Heroku Postgres) that provides all of that.
 
 We recently found that three back-end reporting systems were competing for resources on our single replication slave database. So, we spun up two more,
 and now they each have their own.  We never had to discuss the difficulty in physically setting up the systems—just whether or not it made sense to do
@@ -129,7 +129,7 @@ of our background queues, get alerted when any job fails, get notified when our 
 statements that should never return a value do, in fact, return a value.
 
 This means that we know about problems before our users do.  It's so important to have this knowledge, because users have been trained over the years to
-accept flaky software as being normal—they won't report problems right away or at-all.  
+accept flaky software as being normal—they won't report problems right away or at-all.
 
 Because of our monitoring set up, I can email an internal user that I'm aware of their problem, but also if there's a
 workaround they can try to get their work done, often before they realize what's going on.  It might sound creepy, but it helps—I can get real-time

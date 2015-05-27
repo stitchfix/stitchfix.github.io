@@ -1,0 +1,65 @@
+<div class="w-section section sectiongrid">
+  <h1>{{ team_name }} Team</h1>
+
+  <input type="checkbox" name="expandgrid" id="expandgrid" class="expand-input" autocomplete="off" checked="checked">
+  <label for="expandgrid" class="expand-label expand-rotate">
+    <img class="expandicon" src="/assets/images/svgs/expand.svg" height="32" width="150">
+  </label>
+  <div class="expand-block">
+    <div class="w-row teamcolumns">
+      {% assign team = site.data.teams | team: page.type %}
+      {% for member in team[0]['members']  %}
+        <div class="w-col w-col-3 w-col-small-6 teammember fade-container">
+          <div class="flipper">
+            <div class="flip-front">
+              {% if member.image %}
+                <img src="/assets/images/team/{{ member.image }}.jpg" class="team-headshot">
+              {% else %}
+                <img src="/assets/images/team/{{ member.name | downcase }}.jpg" class="team-headshot">
+              {% endif %}
+            </div>
+            <div class="flip-back">
+              <p class="teambio">{{ member.description }}</p>
+
+              <div>
+                {% if member.linkedin %}
+                  <a href="{{ member.linkedin | linkedin }}" class="teamsocialicon">
+                    <img src="/assets/images/svgs/linkedin.svg" width="20" height="20">
+                  </a>
+                {% endif %}
+
+                {% if member.github %}
+                  <a href="https://github.com/{{ member.github }}" class="teamsocialicon">
+                    <img src="/assets/images/svgs/git.svg" width="20" height="20">
+                  </a>
+                {% endif %}
+
+                {% if member.twitter %}
+                  <a href="https://twitter.com/{{ member.twitter }}" class="teamsocialicon">
+                    <img src="/assets/images/svgs/twit.svg" width="20" height="20">
+                  </a>
+                {% endif %}
+
+                {% if member.instagram %}
+                  <a href="#{{ member.instagram }}" class="teamsocialicon">
+                    <img src="/assets/images/svgs/insta.svg" width="20" height="20">
+                  </a>
+                {% endif %}
+
+                {% for link in member.links %}
+                  <a href="{{ link.url }}" class="teamsocialicon">
+                    <img src="/assets/images/svgs/link.svg" width="20" height="20">
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="teamname">{{ member.name | upcase }}, {{ member.location }}</div>
+          <div class="title">{{ member.division }}</div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

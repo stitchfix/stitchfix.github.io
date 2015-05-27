@@ -1,13 +1,13 @@
 ---
 title: Rails Application Templates
-layout: posts
+layout: post
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'
 tags:
 published: true
 ---
 
-The ability to quickly create and deploy an application is crucial to avoiding a monolithic architecture.  I touched on this in my 
+The ability to quickly create and deploy an application is crucial to avoiding a monolithic architecture.  I touched on this in my
 [talk at RubyNation][3], as well as [my post][4] here, but a key part of that ability is to script the actual creation of the application so that it's
 ready for your infrastructure and your team.  At Stitch Fix, we  use Ruby on Rails for most of our applications and, fortunately enough, Rails provides a handy feature called [application templates][1] that allows you to script the creation of a new applications with whatever boilerplate you need.
 
@@ -80,14 +80,14 @@ gsub_file "Gemfile", /^gem\s+["']turbolinks["'].*$/,''
 Further, suppose you want to explicitly set the version of Ruby in your `Gemfile`:
 
 {% highlight ruby %}
-insert_into_file 'Gemfile', "\nruby '2.1.0'", 
+insert_into_file 'Gemfile', "\nruby '2.1.0'",
                  after: "source 'https://rubygems.org'\n"
 {% endhighlight %}
 
 This sort of string manipulation isn't a great API, (as [Aaron Patterson attests](https://twitter.com/tenderlove/statuses/417048556533329920), but it has the virtue of working well and being flexible.
 
 Before we leave this section, it's important to make sure you are using the method `inside` which allows you to set the directory
-a certain file is in when asking to manipulate it.  
+a certain file is in when asking to manipulate it.
 
 Suppose you want to add a line to the top of `environment.rb` to force stdout to sync.  You could do:
 
@@ -122,7 +122,7 @@ Suppose you have a boilerplate Unicorn configuration.  You would first place it 
 
 {% highlight ruby %}
 def source_paths
-  Array(super) + 
+  Array(super) +
     [File.join(File.expand_path(File.dirname(__FILE__)),'rails_root')]
 end
 {% endhighlight %}
@@ -152,7 +152,7 @@ that will be interpolated at app generation time to include the app name, handil
 <head>
   <!-- this ERB will be processed when we generate our app -->
   <title><%= @app_name.humanize %></title>
-  <!-- this will end up as ERB in the generated file and 
+  <!-- this will end up as ERB in the generated file and
        not processed during application generation -->
   <%%= stylesheet_link_tag    "application", media: "all" %>
   <%%= javascript_include_tag "application" %>
@@ -194,7 +194,7 @@ My suggestion would be to work in a cycle like so:
 4. If possible, deploy the app somewhere to see if it works in a production-like environment
 4. If you want to change anything, remove the app directory, make your changes, and proceed to step 1.
 
-You should try to reduce the number of manual steps required in #1.  
+You should try to reduce the number of manual steps required in #1.
 The more manual steps you have, the more likely it is someone will make a mistake creating a new app,
 and that's the sort of friction you're trying to get rid of.
 

@@ -5,8 +5,8 @@
       location:    San Francisco
       division:    CTO
       description: Jeff likes his objects oriented in a programmable fashion and his espresso well made. If he had a time machine he'd stop Buddy Holly from flying on any planes ever. Hails from New York.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       jeff
       # linkedin: accepts a URL or a public profile name
       linkedin:    jeffreyjbarrett
       github:
@@ -21,8 +21,7 @@
       location:    Pittsburgh
       division:    Warehouse & Logistics
       description: Jon cares about great software but just a bit more about providing a tangible value. He's composed of 60% water, 20% coffee, 12% IPA and 8% scotch or bourbon. Hails from Pittsburgh.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      image:       jon
       # linkedin: accepts a URL or a public profile name
       linkedin:    jonathanedean
       github:      jonathandean
@@ -38,9 +37,8 @@
       lastname:    Strait
       location:    San Francisco
       division:    Styling
-      description: Joel builds great web applications with a secret blend of 11 technologies and spices. He's available for weddings, bar mitzvahs, and birthday parties. Once <a href='http://beatsdrummachine.com/'>built a command line drum machine</a> and then later <a href='http://www.joelstrait.com/blog/2014/6/14/nanosynth_create_sound_with_ruby'>did it again</a>. Hails from Pittsburgh.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      description: "Joel builds great web applications with a secret blend of 11 technologies and spices. He's available for weddings, bar mitzvahs, and birthday parties. Once <a href='http://beatsdrummachine.com/'>built a command line drum machine</a> and then later <a href='http://www.joelstrait.com/blog/2014/6/14/nanosynth_create_sound_with_ruby'>did it again</a>. Hails from Pittsburgh."
+      image:       joel
       # linkedin: accepts a URL or a public profile name
       linkedin:
       github:      jstrait
@@ -56,9 +54,8 @@
       lastname:    Copeland
       location:    Washington, DC
       division:    Warehouse & Logistics
-      description: Dave likes iced tea, cats, homemade bitters, and the commandline. He's written a <a class="link" title="Build Awesome Command-Line Applications in Ruby" href="http://pragprog.com/titles/dccar2">book on only one of those subjects</a>. Hails from Washington, DC.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      description: "Dave likes iced tea, cats, homemade bitters, and the commandline. He's written a <a class='link' title='Build Awesome Command-Line Applications in Ruby' href='http://pragprog.com/titles/dccar2'>book on only one of those subjects</a>. Hails from Washington, DC."
+      image:       dave
       # linkedin: accepts a URL or a public profile name
       linkedin:
       github:      davetron5000
@@ -75,8 +72,7 @@
       location:    San Francisco
       division:    Client Experience
       description: Andy builds compelling software. He bikes, hikes, hoops, wears shorts, and plays with art and music. Adopted SF native but hails from the cold in the North.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      image:       andy
       # linkedin: accepts a URL or a public profile name
       linkedin:    ndpsoftware
       github:      ndp
@@ -95,9 +91,7 @@
       location:    San Francisco
       division:    Merchandising
       description: Nick likes long walks in the rain and holding hands in a salt-spritzed gust of wind. He also likes all kinds of databases and anything that allows him to put data in them. Hails from England.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
-      # linkedin: accepts a URL or a public profile name
+      image:       nick
       linkedin:
       github:      nickflux
       twitter:     nreavill
@@ -111,9 +105,7 @@
       location:    San Francisco
       division:    Merchandising
       description: David likes being the dumbest guy in the room, which is why he loves working at Stitch Fix. He loves coding and has high hopes that this "Internet" thing might someday take off. Hails from England, dislikes spelling 'colour' without the 'u'.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
-      # linkedin: accepts a URL or a public profile name
+      image:       david
       linkedin:    davidamcclain
       github:      uhhuhyeah
       twitter:     davidamcclain
@@ -127,9 +119,8 @@
       location:    San Francisco
       division:    Client Experience
       description: Born in Youngstown Oh, Joe relocated to Cleveland for 8 years where he established himself in the tech/startup scene. He’s now fleeing for San Francisco, mostly for the Buddhist temples and Indian Food. He’s also the Father of a boy named 'Biscuits'.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
-      # linkedin: accepts a URL or a public profile name
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       joe
       linkedin:
       github:      joecannatti
       twitter:     joecannatti
@@ -143,8 +134,8 @@
       location:    San Francisco
       division:    Client Experience
       description: Jim loves to think about how to make things better. He was raised in the Bay Area but has hopped around the country since college. Often unprepared for slight changes in weather.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       jim
       # linkedin: accepts a URL or a public profile name
       linkedin:    jimmyfung
       github:
@@ -159,8 +150,8 @@
       location:    Long Beach
       division:    Styling
       description: Simeon is a web engineer who prefers simple over complex unless we're talking about coffee or stouts. He loves watching and playing the beautiful game. Hails from Maryland's Eastern Shore.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       simeon
       # linkedin: accepts a URL or a public profile name
       linkedin:    simeonwillbanks
       github:      simeonwillbanks
@@ -175,8 +166,8 @@
       location:    Pittsburgh
       division:    Warehouse & Logistics
       description: Pete is a fiction writer turned programmer. A conversion specialist, he's migrated from .NET to Rails and from being a Browns fan to a Steelers fan (at the demand of his father-in-law). His son and daughter help keep his life nice and busy.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       pete
       # linkedin: accepts a URL or a public profile name
       linkedin:    https://www.linkedin.com/pub/peter-dudek/32/2ab/284
       github:      pdudek
@@ -191,8 +182,8 @@
       location:    Pittsburgh
       division:    Warehouse & Logistics
       description: Though he now hangs his hat in Pittsburgh, Eric was born and raised on Iowa farm land. When not translating caffeine and music to bits, he likes to spend his time collecting board games; sometimes he even plays them. His smart fashion sense can best be described as, "conference shirt chic".
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:       egravert
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       eric
       # linkedin: accepts a URL or a public profile name
       linkedin:    https://www.linkedin.com/in/ericgravert
       github:      egravert
@@ -207,7 +198,7 @@
       location:    San Francisco
       division:    Client Experience
       description: Deanna enjoys designing products that enrich people’s lives. She has worked with startups, ad agencies and music merchandisers, and has taught design classes in San Francisco. She's into art, prehistoric plants, yoga and rock shows.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
       image:       deanna
       # linkedin: accepts a URL or a public profile name
       linkedin:    https://www.linkedin.com/in/dastudios
@@ -225,8 +216,8 @@
       location:    San Francisco
       division:    Client Experience
       description: David learned a love of data driven applications early on in his career, though they rarely love him back.  He is a native of the San Francisco Bay Area and will probably never leave, mostly because he is lazy, but also because he thinks it's a great place to live.
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image: dc2
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       dc2
       # linkedin: accepts a URL or a public profile name
       linkedin:    davidachang
       github:
@@ -241,7 +232,7 @@
       location:    Orange County
       division:    Merchandising
       description: Mitch was born and raised in Orange County. He loves working on "scratch-your-own-itch" projects just as much as he loves working on large scale systems. Stitch Fix is one of the few places that promotes innovation on both.
-      image:      mitch
+      image:       mitch
       linkedin:    mrdempsey
       github:     webdestroya
       twitter:
@@ -343,8 +334,8 @@
       location:    Pittsburgh
       division:
       description: "Brian holds love-hate relationships with the following: cats, chickens, Kurt Russell, horror films, antiques, retro video games, and the oxford comma. Betwixt it all, he designs and implements experiences for web and mobile applications. Hails from Pittsburgh."
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       brian
       # linkedin: accepts a URL or a public profile name
       linkedin:    borudesign
       github:      yorthehunter
@@ -359,8 +350,8 @@
       location:    San Francisco
       division:
       description: "Sup? I'm a semi-ex-developer; a recent graduate in graphic design &amp; printmaking; and a tech-savvy, customer-centric designer&mdash;visual, interaction, information...take your pick. I refuse to refer to myself in the 3rd person, and I recently read a blog post on semi-colons; amiright?"
-      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff.jpg")
-      image:
+      # image: filename of user picture(no extension, must be a jpg). If blank, defaults to 'name' (e.g. "jeff")
+      image:       aaron
       # linkedin: accepts a URL or a public profile name
       linkedin:    aaronsbrown
       github:
@@ -370,14 +361,14 @@
       links:
       # links: accepts a list of "type" (e.g. "blog") and "url". Omit entirely if not using.
 
-- teamname: data science
+- teamname: algorithms
   members:
     - name:        Bhaskar
       lastname:    Rao
       location:    San Francisco
       division:
       description: Bhaskar likes data, datum, and ruby. He runs on decaf Blue Bottle coffee. Hails from India.
-      image:
+      image:       bhaskar
       linkedin:    http://www.linkedin.com/pub/bhaskar-rao/3/539/82a
       github:
       twitter:
@@ -390,7 +381,7 @@
       location:    San Francisco
       division:
       description: Eric loves the austere beauty of data and analytics. He could easily go too far if practicality didn’t rein him in now and again. Hails from the SF Bay Area.
-      image:
+      image:       eric
       linkedin:    ecolson
       github:
       twitter:     ericcolson
@@ -403,7 +394,7 @@
       location:    San Francisco
       division:
       description: Alan enjoys puns, data, unsalted almonds, R, and copious amounts of unsweetened black tea in a wine glass (preferably filled with only the last item). Also knows a French word or two. Hails from San Francisco.
-      image:
+      image:       alan
       linkedin:    alanfaieng
       github:
       twitter:     alanengdata
@@ -416,7 +407,7 @@
       location:    San Francisco
       division:
       description: Brad likes statistics, messy data and all things Python. Originally from Colorado, he now lives in the SF Bay area and enjoys the local coffee and hiking.
-      image:
+      image:       brad
       linkedin:    http://www.linkedin.com/pub/brad-klingenberg/34/5a4/7aa
       github:
       twitter:
@@ -429,7 +420,7 @@
       location:    San Francisco
       division:
       description: Daragh enjoys home brewing, rock climbing, and R. He tries to avoid all three in the same evening. You can typically find him over caffeinated and over excited about his latest analytic project. Hails from the Washington, DC area.
-      image:
+      image:       daragh
       linkedin:    http://www.linkedin.com/pub/daragh-sibley/5/183/211
       github:
       twitter:
@@ -437,12 +428,13 @@
       flickr:
       links:
 
-    - name:        Eli
+    - id:          ebressert
+      name:        Eli
       lastname:    Bressert
       location:    San Francisco
       division:
       description: Eli loves big ideas and putting them into action by connecting the impossible. During his freetime he writes, surfs, and enjoys the California lifestyle. Hails from the sun-baked lands of Arizona.
-      image:       
+      image:       eli
       linkedin:    http://www.linkedin.com/pub/eli-bressert/60/960/872
       github:      ebressert
       twitter:     astrobiased
@@ -457,7 +449,7 @@
       location:    San Francisco
       division:
       description: Deep enjoys high dimensional statistics, map reduce, and skateboarding. You can occasionally find him starting brawls between Bayesians and frequentists. Hails from LA.
-      image:
+      image:       deep
       linkedin:    http://www.linkedin.com/pub/deep-ganguli/47/573/356/
       github:      dganguli
       twitter:     dgangul1
@@ -470,7 +462,7 @@
       location:    San Francisco
       division:
       description: Cian loves developing original ideas based on insights from data whether it's in geophysics, molecular spectroscopy or women's fashion. Outside of the office he'll probably be playing a sport. Hails from Vancouver, BC.
-      image:
+      image:       cian
       linkedin:    cianmenzeljones
       github:      cianmj
       twitter:     cianmj
@@ -496,7 +488,7 @@
       location:    San Francisco
       division:
       description: Paolo enjoys digging in complex data sets, building models, and finding those hidden connections. During his free time he loves skiing, hiking, biking, and playing guitar. Hails from Italy.
-      image:
+      image:       paolo
       linkedin:    https://www.linkedin.com/pub/paolo-massimi/20/737/827
       github:
       twitter:
@@ -680,7 +672,7 @@
       lastname:    Moody
       location:    San Francisco
       division:
-      description: Chris loves high performance computing, high dimensions & high fashion. He loves learning the beautiful symmetries between physics, data, and analytics. Hails from Spain & South Carolina. 
+      description: Chris loves high performance computing, high dimensions & high fashion. He loves learning the beautiful symmetries between physics, data, and analytics. Hails from Spain & South Carolina.
       image:       chris-moody
       linkedin:    https://www.linkedin.com/in/chrisemoody
       github:      cemoody
@@ -702,7 +694,7 @@
       flickr:
       links:
 
-    - name:        Patrick 
+    - name:        Patrick
       lastname:    Foley
       location:    San Francisco
       division:

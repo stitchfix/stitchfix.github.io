@@ -1,6 +1,6 @@
 ---
 title: "ElasticSearch and Denormalization in Rails"
-layout: posts
+layout: post
 location: "San Francisco, CA"
 author: Nick Reavill
 author_url: 'https://www.linkedin.com/in/nreavill'
@@ -65,7 +65,7 @@ class Sample < ActiveRecord::Base
           color_name: color.name
     }
   end
-  
+
   settings(elasticsearch_settings) do
     mapping do
       indexes :display_name, type: 'multi_field', fields: {
@@ -147,7 +147,7 @@ class Sample < ActiveRecord::Base
   def to_hash
     SampleDenormalizer.new(self).to_hash
   end
-  
+
   # mapping here as before ...
 
 end
@@ -169,7 +169,7 @@ class SampleDenormalizer
        original_image
        style_id
        style_name
-       has_fit_attributes? 
+       has_fit_attributes?
        color_name).map{ |method_name|
         [ method_name, self.send(method_name) ]
     }.to_h
@@ -262,7 +262,7 @@ no matter the object and get the same result:
 %span.style
   %a{href: edit_style_path(sample.style_id)}
     %i
-      = sample.style_id           
+      = sample.style_id
     = sample.style_name.titleize
 ```
 

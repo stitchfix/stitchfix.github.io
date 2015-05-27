@@ -1,0 +1,11 @@
+<div class="nav-filter">
+  <input type="checkbox" id="expand-nav-{{ include.label }}" name="expand-nav-{{ include.label }}" class="expand-input" autocomplete="off">
+  <label class="w-dropdown-toggle w-clearfix filtercontent expand-label" for="expand-nav-{{ include.label }}">
+    <div class="filterlabel">{{ include.label }}</div>
+    <div class="w-icon-dropdown-toggle dropdownicon">
+    </div>
+  </label>
+  <nav class="dropdownlist expand-block {% if include.fill %}js-nav-filter-fill{% endif %}" data-kind="{{ include.fill }}">
+    {{ include.content }}
+  </nav>
+</div>

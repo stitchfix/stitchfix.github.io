@@ -1,6 +1,6 @@
 ---
 title: Advice for Data Scientists on Where to Work
-layout: posts
+layout: post
 author: Eric Colson, Brad Klingenberg, and Jeff Magnusson
 author_url: 'http://technology.stitchfix.com/#team'
 published: true

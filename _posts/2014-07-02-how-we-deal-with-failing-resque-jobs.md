@@ -1,6 +1,6 @@
 ---
 title: How We Deal with Failed Resque Jobs
-layout: posts
+layout: post
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'
 tags:
@@ -34,7 +34,7 @@ At Stitch Fix, we wanted our jobs to "just work" and be automatically retriable,
 The trickiest one was in charging a client's credit card.
 
 <a name="return_1"></a>
-We charge our clients a styling fee (inside a Resque job) before we ship out their Fix. 
+We charge our clients a styling fee (inside a Resque job) before we ship out their Fix.
 We saw the same issues that Grouper did–as our service grew in popularity, we had more and more of these jobs, and were therefore seeing more and more of them fail due to a `TERM` signal.
 Because these jobs use a third party<sup><a href="#1">1</a></sup> to charge our clients (namely, the awesomely secure and pretty-much-always-on [Braintree] _[except for the 5 minutes before I posted this, when they had a system-wide outage.  So, the following is really being used as you read this! -DBC]_), they are tricky to retry, and hard to make idempotent.
 
@@ -62,7 +62,7 @@ This logic is certainly more complex than just fire-and-forget, but now our styl
 We configured it to automatically retry using [resque-retry][resqueretry], and it hasn't bothered us since (nor have our clients been double-charged).
 This has a nice side effect in that if Braintree (or our connection to Braintree) goes down, we can blindly retry all the jobs that failed when it comes back up.
 
-## Design for Idempotence 
+## Design for Idempotence
 
 By designing your jobs to be idempotent, you insulate them against any external factors like Heroku, third-party maintenance windows, or gophers chewing
 through cables.  It's a bit more up-front cost, but it's also much simpler to test that it's working.

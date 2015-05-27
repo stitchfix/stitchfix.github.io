@@ -1,6 +1,6 @@
 ---
 title: "May Bayes Theorem Be with You"
-layout: posts
+layout: post
 location: "San Francisco, CA"
 author: Kim Larsen
 author_url: 'http://www.linkedin.com/pub/kim-larsen/3/4a0/3a2'

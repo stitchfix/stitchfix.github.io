@@ -1,15 +1,15 @@
 ---
 title: Stitch Fix &#10084; UNIX
-layout: posts
+layout: post
 author: Simeon Willbanks
 author_url: 'https://twitter.com/simeonwillbanks'
 published: true
 location: "Everywhere"
 ---
 
-I &#10084; UNIX and using the command line; they help me solve problems at Stitch Fix.  I'm not alone.  Across the Data Science and Engineering teams, we're constantly solving problems with UNIX and the command line.  
+I &#10084; UNIX and using the command line; they help me solve problems at Stitch Fix.  I'm not alone.  Across the Data Science and Engineering teams, we're constantly solving problems with UNIX and the command line.
 
-Below, we've listed a few problems and their awesome command line solutions.  If you know of a more efficient solution, please share in the comments.  Otherwise, we'd love to hear how you or your team solve problems with UNIX and the command line. 
+Below, we've listed a few problems and their awesome command line solutions.  If you know of a more efficient solution, please share in the comments.  Otherwise, we'd love to hear how you or your team solve problems with UNIX and the command line.
 
 Please enjoy!
 
@@ -29,7 +29,7 @@ Please enjoy!
    - [How do you filter a CSV file by a column value?](#filter-csv-by-column-values)
    - [In a CSV file, what are the column names and their indices?](#csv-file-columns-names-and-indices)
    - [How do you count the occurrences of a value in a CSV file column?](#count-value-occurrences-in-csv-file-column)
- - [Systems](#systems) 
+ - [Systems](#systems)
    - [What is my system's resource usage and availability?](#display-resource-usage-and-availability)
    - [How do you easily manage Python virtual environments?](#easily-manage-python-virtual-environments)
  - [Productivity](#productivity)
@@ -64,9 +64,9 @@ cat my_input.csv | xargs -n1 -P8 ./check.rb > images_with_possible_issues.csv
 ```
 
  - `xargs` runs a command, feeding it `STDIN` as arguments to that command
-   - `echo "foo" | xargs ls` is the same as `"ls foo"`.  
+   - `echo "foo" | xargs ls` is the same as `"ls foo"`.
  - `-n1` says to run the given command once for each line of input (normally `xargs` will run many lines at once, so if you had a file with 10 rows in it called `"blah.csv"` and do `cat blah.csv | xargs curl`, it would likely run curl once with all 10 rows of blah.csv given to curl, so `-n1` runs it once per line of input).
- - `-P8` says to parallelize it 8 ways.  
+ - `-P8` says to parallelize it 8 ways.
 
 So, I've got 8 instances of my script running at once.  Obviously, there are diminishing returns on parallelism, but since `curl`'ing images is mostly I/O bound this worked pretty well without compromising my machine.
 
@@ -92,7 +92,7 @@ find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -1 | cut -f2
 find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "
 ```
 
- - The gnu `find` one does the heavy lifting inside the find command itself.  
+ - The gnu `find` one does the heavy lifting inside the find command itself.
  - OS X `find` is a bit dumber so it just provides a list of files, gets modification times by calling stat on each one via `xargs`, then sort and clip.
 
 <a name="count-data-dump-number-of-lines"></a>
@@ -126,7 +126,7 @@ wc -l ./foo.txt
 4 ./foo.txt
 ```
 
- - The `wc` utility displays the number of lines, words, and bytes contained in each input file, or standard input. 
+ - The `wc` utility displays the number of lines, words, and bytes contained in each input file, or standard input.
  - The `-l` flag specifies that you want the number of (l)ines in the file!
 
 <a name="bulk-change-filenames"></a>
@@ -155,7 +155,7 @@ fnsed s/kitten/stitchfix/ kitten*
 ```
 
 ##### Output
-Now the directory contains: 
+Now the directory contains:
 
 ```
 stitchfix-01.jpg
@@ -169,7 +169,7 @@ stitchfix-99.jpg
 #!/bin/bash
 
 if [ "$#" = "0" -o "$#" = "1" ]; then
-    echo "Usage - fnsed <sed expression> <filename1> [filename2] ..." 
+    echo "Usage - fnsed <sed expression> <filename1> [filename2] ..."
     exit
 fi
 
@@ -177,10 +177,10 @@ for oldfile in $* ; do
     # skip the first one b/c it's a sed expression
     if [ $oldfile != $1 ]; then
         newfile=`echo $oldfile | sed $1`
-        if [ $oldfile != $newfile ]; then 
+        if [ $oldfile != $newfile ]; then
 	         mv $oldfile $newfile
-        fi 
-    fi 
+        fi
+    fi
 done
 ```
 
@@ -258,9 +258,9 @@ Some directory contains a lot of files, and a lot of large files.  For each dire
 
 ##### Command
 ```
-for f in `find . -type d`; 
-  do bash -c "printf '%6s  %6s  %s' `du -s -h $f | sed s+./.*++g` `ls -l  $f | wc -l` $f"; 
-  echo; 
+for f in `find . -type d`;
+  do bash -c "printf '%6s  %6s  %s' `du -s -h $f | sed s+./.*++g` `ls -l  $f | wc -l` $f";
+  echo;
 done
 ```
 
@@ -307,9 +307,9 @@ done | sort -n
 ```
 
  - The first `find` gets all the directories below the current one
- - The while loop goes over each directory and finds all the files below it.  
-   - Not efficient, but I haven't yet run into situations where it takes too long.  
- - The final sort command puts output in a useful order.  
+ - The while loop goes over each directory and finds all the files below it.
+   - Not efficient, but I haven't yet run into situations where it takes too long.
+ - The final sort command puts output in a useful order.
    - The number of files is _cumulative_
    - In the above example, there are 4273 files in _all_ directories below `./sf`
 
@@ -376,7 +376,7 @@ awk -F, '$2 ~ 15' ./hours.csv
  - `awk` `-F` sets a "field separator"; for CSV files, this is a ','
  - `'$2 ~ 15'` is the `awk` program
    - `$2` is the second field which is "Hours Styling"
-   - `~` is a regular expression operator, so we filter any lines with hours that match `15` 
+   - `~` is a regular expression operator, so we filter any lines with hours that match `15`
 
 ##### Command
 ```
@@ -388,7 +388,7 @@ awk -F, '$2 == 15.01' ./hours.csv
 3,15.01
 ```
 
- - `==` is an equality operator, so we filter any lines with hours that match `15.01` 
+ - `==` is an equality operator, so we filter any lines with hours that match `15.01`
 
 <a name="csv-file-columns-names-and-indices"></a>
 ### CSV File Column Names And Indices
@@ -530,9 +530,9 @@ function pyenv {
 }
 ```
 
-`pyenv` is a light wrapper around Python's `virtualenv` command.  Executed with no arguments (`pyenv`), it returns a list of currently installed virtual environments.  
+`pyenv` is a light wrapper around Python's `virtualenv` command.  Executed with no arguments (`pyenv`), it returns a list of currently installed virtual environments.
 
-Executed with a single argument, it attempts to activate the `virtualenv` passed as the argument (`pyenv my_virtual_env`).  
+Executed with a single argument, it attempts to activate the `virtualenv` passed as the argument (`pyenv my_virtual_env`).
 
 Executed with `--create` flag, it creates the virtual environment passed in the second argument (`pyenv --create my_virtual_env`).
 
@@ -544,7 +544,7 @@ Executed with `--create` flag, it creates the virtual environment passed in the 
 &#8212; [Eric Gravert](https://twitter.com/egravert) *(OS X, Linux / bash)*
 
 #### Problem
-I hate typing. 
+I hate typing.
 
 #### Solution
 I alias EVERYTHING.
@@ -587,12 +587,12 @@ TIME: 01:08:53 PM
 I still hate typing.
 
 #### Solution
-You can set the `CDPATH` variable to add tab completion to the `cd` bash command. For example, if you have a directory which holds your projects, you can add that directory to the `CDPATH` variable to get tab completion of the project directories from anywhere in your file system.  
+You can set the `CDPATH` variable to add tab completion to the `cd` bash command. For example, if you have a directory which holds your projects, you can add that directory to the `CDPATH` variable to get tab completion of the project directories from anywhere in your file system.
 
 It is important to remember to add `.` to the beginning of the directory list or you will lose tab completion in the current directory.
 
 ##### Command
-Export `CDPATH` in your bash rc file (`~/.bash_profile` on mac). 
+Export `CDPATH` in your bash rc file (`~/.bash_profile` on mac).
 
 For exmple:
 

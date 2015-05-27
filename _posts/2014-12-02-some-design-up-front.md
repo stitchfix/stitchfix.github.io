@@ -1,6 +1,6 @@
 ---
 title: Some Design Up Front
-layout: posts
+layout: post
 author: Dave Copeland
 author_url: 'http://naildrivin5.com'
 published: true

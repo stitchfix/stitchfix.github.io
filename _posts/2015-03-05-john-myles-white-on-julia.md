@@ -1,6 +1,6 @@
 ---
 title: Multithreaded Data - John Myles White on Julia
-layout: posts
+layout: post
 author: Eli Bressert
 author_url: 'https://twitter.com/astrobiased'
 published: true

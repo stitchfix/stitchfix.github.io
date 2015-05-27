@@ -1,0 +1,23 @@
+<div class="w-section w-clearfix filterbar">
+  <div class="w-clearfix filterwrapper">
+
+    <div class="filtertitle">Filter posts by</div>
+
+    {% capture category_nav_content %}
+      {% for category in site.categories %}
+        {% assign cat = category[0] | trim %}
+        <a class="w-dropdown-link dropdownitem" href="/{{ site.category_dir }}/{{ cat }}">{{ cat | team_name: site.data.teamnames }}</a>
+      {% endfor %}
+    {% endcapture %}
+
+    {% include nav_filter.html label="Category" content=category_nav_content %}
+
+    <label class="search">
+      <form action="http://google.com/search?hl=en" target="_blank">
+        <input type="hidden" name="q" value="site:technology.stichfix.com">
+        <input type="search" name="q" value="" autocomplete="off" class="search-input">
+        <img class="searchicon" src="/assets/images/svgs/search.svg">
+      </form>
+    </label>
+  </div>
+</div>
