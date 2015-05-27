@@ -54,7 +54,7 @@ For testing of *continuous variables*, such as revenue, see the appendix of this
 #### Step 4 - Calculate the p-value to reject or accept the null hypothesis
 Based on the test statistic we can calculate the p-value which is probability of obtaining a result at least as "extreme" as the observed result, given that the null hypothesis is true.
 
-Clearly, we want the p-value to be small and the typical threshold used is \\(5\%\\). In other words, if the p-value is less than \\(5\%\\), and the test group experienced a lower event rate than the control group, we conclude that the action worked. The number (\\(5\%\\)) is also referred to as the significance level, which we will explain in the next section.
+Clearly, we want the p-value to be small and the typical threshold used is \\(5\%\\). In other words, if the p-value is less than \\(5\%\\), and the test group experienced a lower event rate than the control group, we conclude that the action worked. The cutoff (\\(5\%\\)) is also referred to as the *significance level*, which we will explain in the next section.
 
 ### Introducing the Power and the Significance Level
 In the world of hypothesis testing, rejecting the null hypothesis when it is actually true is called a *type 1 error*. Committing a type 1 error is a false positive because we end up recommending something that does not work.
