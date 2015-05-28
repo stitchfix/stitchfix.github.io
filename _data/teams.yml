@@ -714,3 +714,57 @@
       instagram:
       flickr:
       links:
+
+    - name:        Diana 
+      lastname:    Tkachenko
+      location:    San Francisco
+      division:
+      description:  Diana has an unhealthy obsession with noodles, House of Cards, and jasmine green tea. In her spare time, she likes to hang out with her two little brothers and is proud of having taught them base-2 system before they learned base-10 (they are now very confused). Diana grew up in Siberia, but she still finds San Francisco terribly cold. 
+      image:       diana-tkachenko
+      linkedin:    https://www.linkedin.com/in/dianatkachenko
+      github:      https://github.com/diananana
+      twitter:
+      instagram:
+      flickr:
+      links:
+        
+    - name:        Alex 
+      lastname:    Smolyanskaya
+      location:    San Francisco
+      division:
+      description:  Alex likes getting to a point of empathy with data, preferably while listening to dance music. When not computing, she can be found birding, skiing, or hanging with her parrot. Born in Ukraine, raised in Brooklyn.
+      image:       alex-smolyanskaya
+      linkedin:    https://www.linkedin.com/in/smoly
+      github:      https://github.com/smoly
+      twitter:     https://twitter.com/asmoly
+      instagram:
+      flickr:
+      links:
+
+    - name:        Kevin 
+      lastname:    Wecht
+      location:    San Francisco
+      division:
+      description: Kevin enjoys using data to test common assumptions. He also likes breakfast cereal, large fluffy dogs, and playing/watching sports of all kinds. Hails from the San Francisco Bay Area.       
+      image:       kevin-wecht
+      linkedin:    https://www.linkedin.com/in/kevinwecht
+      github:      https://github.com/kwecht
+      twitter:    
+      instagram:
+      flickr:
+      links:
+
+    - name:        Andy 
+      lastname:    Almand-Hunter
+      location:    San Francisco
+      division:
+      description: Andy likes espresso, rock climbing, and computer code.  He loves the unreasonable effectiveness of mathematics in everything from physics to fashion.  Hails from Maine, but has slowly been making his way west, and is happy to finally call the Pacific coast home.
+
+      image:       andy-almand-hunter
+      linkedin:    https://www.linkedin.com/in/andyalmandhunter
+      github:      https://github.com/andyalmandhunter
+      twitter:    
+      instagram:
+      flickr:
+      links:
+
