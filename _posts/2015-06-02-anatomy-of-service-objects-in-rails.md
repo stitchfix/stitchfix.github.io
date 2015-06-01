@@ -75,7 +75,7 @@ A great example of where a service-as-a-global-symbol is problematic is [Resque]
 Resque.enqueue(MyJob)
 ```
 
-The real issue is that Resque's _internals_ also use `Resque`.  Meaning, if your app needs to communicate wiht more than one Resque instance, it's basically impossible, since there is no way to tell Resque what implementation to use.
+The real issue is that Resque's _internals_ also use `Resque`.  Meaning, if your app needs to communicate with more than one Resque instance, it's basically impossible, since there is no way to tell Resque what implementation to use.
 
 If, on the other hand, Resque was implemented as an object, instead of a global, any code that needed to access a different Resque instance would not have to change—it would just be given a different object.
 
@@ -83,7 +83,7 @@ If your service object has a lot of configuration—as is the case with API clie
 
 By designing our service objects to use instance methods, it means the users of our service will depend on objects, not global symbols.  Although we have to type four additional characters—`.new`—our code using our service can more easily adapt to change, since we can modify the class of the object we're using without changing the code that uses it.  It also makes it easier to reason about thread-safety, because we have a stateless object instead of a stateful, VM-wide symbol.
 
-To keep our service object’s focused and cohesive, we want to limit the size of their public APIs.
+To keep our service object focused and cohesive, we want to limit the size of their public APIs.
 
 ### Have Few Public Methods
 
@@ -91,7 +91,7 @@ Many Rubyists have two very bad habits: using  a public `attr_accessor` for ever
 
 This style of coding makes refactoring pretty much impossible, and it also makes it hard to understand how a class is intended to be used.  If the intention is that users of your class just call one or two methods, those are the only ones that should be public (and your tests should only use those methods, too).
 
-Consider our `ReturnProcessor` example from above.  Suppose the method users call is called `process!`, and it does two things: charge the customer for unpaid items, and record the return has having been processed.  It uses a private method—`record_return`—and another service object—`checkout_service`—to do this.
+Consider our `ReturnProcessor` example from above.  Suppose the method users call is called `process!`, and it does two things: charge the customer for unpaid items, and record the return as having been processed.  It uses a private method—`record_return`—and another service object—`checkout_service`—to do this.
 
 ```ruby
 class ReturnProcessor
@@ -157,7 +157,7 @@ Once we’ve identified the very few public methods we need, our next step is to
 
 ## Method parameters should be value objects
 
-The purpose of your service object's methods are to operate on some data or perform some process using some data as input.  This is the primary differentiator between a service object and other objects.  As we saw above, the `process!` method in `ReturnProcessor` handles marking a return has processed and charging a customer for unpaid items.  This means it needs the data for the return as well as the user who processed it.
+The purpose of your service object's methods are to operate on some data or perform some process using some data as input.  This is the primary differentiator between a service object and other objects.  As we saw above, the `process!` method in `ReturnProcessor` handles marking a return as processed and charging a customer for unpaid items.  This means it needs the data for the return as well as the user who processed it.
 
 What you *should not* be passing to your service object's methods are other service objects.  We saw that `ReturnProcessor` will charge customers for unreturned items using an instance of `CheckoutService`.  
 
@@ -202,7 +202,7 @@ class ReturnProcessor
 end
 ```
 
-Notice that instead a method like `success?`, I’ve used an explicit name for what happen—`return_processed?`.  Users of `ReturnProcessor` will then benefit from clear, intention-revealing code:
+Notice that instead of a method like `success?`, I’ve used an explicit name for what happened—`return_processed?`.  Users of `ReturnProcessor` will then benefit from clear, intention-revealing code:
 
 ```ruby
 result = return_processor.process!(the_return,user)
