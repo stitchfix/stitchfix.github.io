@@ -11,7 +11,7 @@ We've given up on “fat models, skinny controllers” as a design style for our
 
 ## Purpose of a Service Object
 
-A service object's job is to hold the code for a particular bit of business logic.  For example, when we process a customer's returned items in the warehouse, we use an instance of `ReturnProcessor` to handle that.  Unlike the “fat model” style, where a small number of objects contain many, many methods for all necessary logic, using service objects results in many classes, each of which are single purpose.
+A service object's job is to hold the code for a particular bit of business logic.  For example, when we process a customer's returned items in the warehouse, we use an instance of `ReturnProcessor` to handle that.  Unlike the “fat model” style, where a small number of objects contain many, many methods for all necessary logic, using service objects results in many classes, each of which are [single purpose][srp].
 
 Where a classic Rails design would add Yet Another Method™ to the nearest ActiveRecord object (in this case, `Shipment`), using service objects allows us to keep all of our code separate and organized.  This makes it easy to understand, modify, and test our business logic.  It also alleviates some pain when extracting this code into separate HTTP services.
 
@@ -301,8 +301,9 @@ end
 
 This is more verbose, but is a useful pattern if:
 
-* The way `CheckoutService` is created is unstable and likely to change, and we wish to store that code outside this class
+* The way `CheckoutService` is created is unstable and likely to change, and we wish to store that code outside this class.
 * We will need different implementations of `CheckoutService` for different situations.
+* `CheckoutService` is a singleton or something that's relatively difficult to construct, and we want that code to life elsewhere.
 * We want to fail fast if creating the `CheckoutService` results in an error (as opposed to failing when the object is actually needed).
 
 Also note that our `attr_reader` is private.  As mentioned, callers should not use `ReturnProcessor` instances to gain access to `CheckoutService` instances, and we communicate that via `private`.
@@ -320,6 +321,7 @@ And, we can do it without any new DSLs or frameworks (other than `immutable-stru
 [yagni]: http://martinfowler.com/bliki/Yagni.html
 [resque]: https://github.com/resque/resque
 [ddd]: http://en.wikipedia.org/wiki/Domain-driven_design
+[srp]: http://en.wikipedia.org/wiki/Single_responsibility_principle
 
 ----
 
