@@ -3960,7 +3960,7 @@ position: relative;
 
 The interactive map shows all the states in the US. Use the slider to pan through the months from January to December to see the most dominant color of each state. There are a few interesting patterns that we spotted:
 
-- There is a very sharp color change from light gray to gray between July and August. This may be due to our clients anticipation of the upcoming Fall and Winter seasons.  
+- There is a very sharp color change from light gray to gray between July and August. This may be due to our clients' anticipation of the upcoming Fall and Winter seasons.  
 
 - Green is a very popular color in many states in March while orange is very trendy in November!
 
