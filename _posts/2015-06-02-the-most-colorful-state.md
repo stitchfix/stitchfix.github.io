@@ -12,7 +12,7 @@ location: "San Francisco, CA"
 <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js' type='text/javascript'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js' type='text/javascript'></script>
 
-Throughout the year, people wear different types of clothes. As we transition from summer to fall, tanktops are replaced by sweaters, and as spring turns into summer, pants are replaced by shorts and skirts. But what about colors? Do people wear different colors to match the seasons? From anecdotal experience we would say yes. One might even guess that people tend to wear more gray/black clothing in New York vs. sunny Los Angeles during the winter.
+Throughout the year, people wear different types of clothes. As we transition from Summer to Fall, tanktops are replaced by sweaters, and as Spring turns into Summer, pants are replaced by shorts and skirts. But what about colors? Do people wear different colors to match the seasons? From anecdotal experience we would say yes. One might even guess that people tend to wear more gray/black clothing in New York vs. sunny Los Angeles during the Winter.
 
 Stitch Fix interacts closely with its clientele and we get a lot of feedback from them regarding what clothes they keep, why they like them, and much more. Each item of clothing they keep has a ton of metadata, such as pattern, material, size, and most importantly for this post, **color**.
 
@@ -34,7 +34,7 @@ We collected and analyzed our data to see if there tends to be a trend of prefer
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 </style>
@@ -3960,7 +3960,7 @@ position: relative;
 
 The interactive map shows all the states in the US. Use the slider to pan through the months from January to December to see the most dominant color of each state. There are a few interesting patterns that we spotted:
 
-- There is a very sharp color change from light gray to gray between July and August. This may be due to our clients anticipation of the upcoming fall/winter season.  
+- There is a very sharp color change from light gray to gray between July and August. This may be due to our clients anticipation of the upcoming Fall and Winter seasons.  
 
 - Green is a very popular color in many states in March while orange is very trendy in November!
 
