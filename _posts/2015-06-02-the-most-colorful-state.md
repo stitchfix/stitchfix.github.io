@@ -34,7 +34,7 @@ We collected and analyzed our data to see if there tends to be a trend of prefer
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 800px;
 }
 
 </style>
