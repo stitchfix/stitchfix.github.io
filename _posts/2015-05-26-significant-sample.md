@@ -45,7 +45,7 @@ where:
 
 - \\( p\_1 \\) and \\( p\_2 \\) are the event rates for the control and test groups, respectively
 - \\(n\_1\\) and \\(n\_2\\) are the sample sizes for the control and test groups, respectively
-- \\(p\\) is the blended rate: \\( (x_1+x_2)/(n_1+n_2) \\) where \\(x_1\\) and \\(x_2\)) are event counts
+- \\(p\\) is the blended rate: \\( (x\_1+x\_2)/(n\_1+n_2) \\) where \\(x\_1\\) and \\(x\_2\)) are event counts
 
 Intuitively, this metric makes sense: subtract the rates and normalize the result using the standard error. Moreover, under the null hypothesis (where the expected difference is 0), \\(Z\\) follows a standard normal distribution with a mean of 0 and standard deviation of 1 if \\(N\\) is fairly large and \\(p\\) is not too close to 0 or 1.
 
