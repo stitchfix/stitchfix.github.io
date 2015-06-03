@@ -108,7 +108,7 @@ Consider the following example:
 - \\(H\_0\\): \\(p\_1=p\_2\\), \\(H\_1\\): \\(p\_1>p\_2\\). A one-sided test was chosen here for charting-simplicity.
 - Our chosen significance level is \\(5\%\\). The corresponding decision rule is \\(|Z| > 1.65\\). The number (\\(1.65\\)) is the cutoff that corresponds to the upper \\(5\%\\) on the standard normal distribution.
 - \\(N = 5,000\\) (\\(2,500\\) in each cell).
-- Say we think we need to observe \\(p\_1 = 0.10\\) and \\(p\_2 = 0.08\\) in order to be satisfied that the intervention worked. This leads to an expected value for \\(Z\\) of \\(2.47\\) (using the formula for \\(Z\\) above). We are assuming that the variance is  roughly the same under the null and alternative hypotheses (they’re very close).
+- Say we think we need to observe \\(p\_1 = 0.10\\) and \\(p\_2 = 0.08\\) in order to be satisfied that the intervention worked. This leads to a \\(Z\\) of \\(2.47\\) under the alternative hypothesis (using the formula for \\(Z\\) above). We are assuming that the variance is  roughly the same under the null and alternative hypotheses (they’re very close).
 
 ##### R Code
 ```r
