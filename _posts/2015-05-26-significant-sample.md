@@ -108,7 +108,7 @@ Consider the following example:
 - \\(H\_0\\): \\(p\_1=p\_2\\), \\(H\_1\\): \\(p\_1>p\_2\\). A one-sided test was chosen here for charting-simplicity.
 - Our chosen significance level is \\(5\%\\). The corresponding decision rule is \\(|Z| > 1.65\\). The number (\\(1.65\\)) is the cutoff that corresponds to the upper \\(5\%\\) on the standard normal distribution.
 - \\(N = 5,000\\) (\\(2,500\\) in each cell).
-- Say we think we need to observe \\(p\_1 = 0.10\\) and \\(p\_2 = 0.08\\) in order to be satisfied that the intervention worked. This leads to a \\(Z\\) of \\(2.47\\) under the alternative hypothesis (using the formula for \\(Z\\) above). We are assuming that the variance is  roughly the same under the null and alternative hypotheses (they’re very close).
+- Say we decide that we need to observe a difference of 0.02 in order to be satisfied that the intervention worked (i.e., \\(p\_1 = 0.10\\) and \\(p\_2 = 0.08\\)). This corresponds to a \\(Z\\) of \\(2.47\\) under the alternative hypothesis (using the formula for \\(Z\\) above). We are assuming that the variance is roughly the same under the null and alternative hypotheses (they’re very close).
 
 ##### R Code
 ```r
@@ -129,7 +129,7 @@ ggplot(dat, aes(x = x)) +
 
 ![power sig plot](/assets/images/blog/sample_image00.png)
 
-Note that the further the red curve (distribution of \\(Z\\) under the alternative distribution) is shifted to the right – i.e., the larger the value of \\(Z\\) – the higher the power. In order for \\(Z\\) to increase, we have to increase \\(N\\) or observe a bigger difference between \\(p\_2\\) and \\(p\_1\\). This is illustrated below:
+Note that if we pick a smaller \\(N\\), or a smaller difference between \\(p\_2\\) and \\(p\_1\\), the power drops:
 
 ![](/assets/images/blog/sample_image02.png)
 ![](/assets/images/blog/sample_image03.png)
