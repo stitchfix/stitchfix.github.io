@@ -212,7 +212,7 @@ ggplot(data = result, aes(x = DD, y = ni)) +
 
 (Note that the \\(n\\) here is the sample size needed for each cell - i.e., \\(n = n\_1 = n\_2\\) and \\(n\_1 + n\_2 = N\\).)
 
-This graph shows that we need roughly 10x more observations to get a detectable difference of \\(0.01\\) compared to \\(0.03\\). Hence, settling for a detectable difference around the middle of the range in terms of sample size requirement – e.g., \\(0.016\\) – is perhaps the most prudent choice. This leads to a decent power at a sample size of \\(10,000\\) (\\(5,000\\) in each cell). Again, this is a made-up example and you can easily plug your own numbers into the code:
+This graph shows that we need roughly 10x more observations to get a detectable difference of \\(0.01\\) compared to \\(0.03\\). This is because the power increases with \\( \sqrt{N} \\). Hence, settling for a detectable difference around the middle of the range in terms of sample size requirement – e.g., \\(0.016\\) – is perhaps the most prudent choice. This leads to a decent power at a sample size of \\(10,000\\) (\\(5,000\\) in each cell). Again, this is a made-up example and you can easily plug your own numbers into the code:
 
 ```r
 power.prop.test(sig.level=0.05, p1=0.1, p2=0.10-0.016, alternative='two.sided', n=5000)$power
