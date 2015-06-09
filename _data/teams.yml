@@ -336,6 +336,19 @@
       links:
         - type:     homepage
           url:      http://rbobbs.com
+
+    - name:        Lisa
+      lastname:    Sheridan
+      location:    Kīlauea (Kaua‘i)
+      division:    Styling
+      description: Lisa enjoys building cool software usually after drinking the best espresso she can find.  In her free time, you can find her on some kind of board in the water or snow (if there is any). Hails from Sacramento.
+      image:
+      linkedin:    lisheridan
+      github: codevelvet
+      twitter:
+      instagram:
+      flickr:
+
 - teamname: design
   members:
     - name:        Brian
