@@ -349,6 +349,18 @@
       instagram:
       flickr:
 
+    - name:        Bill
+      lastname:    Eisenhauer
+      location:    Austin
+      division:    Styling
+      description: Bill is a Native Texan, Texas A&M Aggie, sports-fanatic, and beach-lover. Bill has been developing software since nearly the punched card!
+      image:
+      linkedin:    billeisenhauer
+      github:      billeisenhauer
+      twitter:     billeisenhauer
+      instagram:
+      flickr:
+
 - teamname: design
   members:
     - name:        Brian
