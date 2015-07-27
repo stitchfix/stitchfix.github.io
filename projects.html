@@ -7,7 +7,7 @@ layout: default
     {% if repo.fork %}
     {% else %}
       <li>
-        <a href="{{repo.html_url}}">{{ repo.name }}</a> - {{repo.description}}
+        <a href="{{repo.html_url}}">{{ repo.name }}</a> - {{repo.description}} ({{repo.language}}).  Last updated {{repo.updated_at}}.
       </li>
     {% endif %}
   {% endfor %}
