@@ -4,8 +4,11 @@ layout: default
 <h1>Projects</h1>
 <ul>
   {% for repo in site.github.public_repositories %} 
-    <li>
-      <a href="{{repo.html_url}}">{{ repo.name }}</a> - {{repo.description}}
-    </li>
+    {% if repo.fork %}
+    {% else %}
+      <li>
+        <a href="{{repo.html_url}}">{{ repo.name }}</a> - {{repo.description}}
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
