@@ -1,0 +1,14 @@
+@include bg_color(white, "white");
+@include bg_color($warm-gray-20, "warm-gray-20");
+@include bg_color($sand, "sand");
+@include bg_color($light-sand, "light-sand");
+@include bg_color($dark-sand, "dark-sand");
+
+@include color($red, "red");
+
+.sectionslash {
+  background-image: url('/assets/images/svgs/angle3.svg');
+  background-position: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

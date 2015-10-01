@@ -1,0 +1,128 @@
+/*doc
+---
+title: "Customizing links"
+name: links-variables
+category: elements - links
+---
+
+*Overwrite these variables in `_custom_variables.scss` to change these defaults.*
+
+```
+$link-color:               $base-blue !default;
+$link-hover-color:         $base-blue-soft !default;
+$link-active-color:        $base-blue !default;
+$link-visited-color:       $base-blue !default;
+$link-light-color:         $base-blue-soft !default;
+$link-light-hover-color:   $base-blue-light !default;
+$link-light-active-color:  $base-blue-soft !default;
+$link-light-visited-color: $base-blue-soft !default;
+
+$link-transition-speed:    $transition-speed-base !default;
+
+--- Optional customizations ---
+$link-underline-option:        false !default;
+$link-border-underline-option: false !default;
+$link-transition-option:       true !default;
+$link-underline-hover-option:  false !default;
+```
+
+*/
+
+// Options
+
+$link-underline-option:        false !default;
+$link-border-underline-option: false !default;
+$link-transition-option:       true !default;
+$link-underline-hover-option:  false !default;
+
+/*doc
+---
+title: Links
+name: links
+category: elements - links
+---
+
+Links have basic styling for `:hover` `:active` and `:visited` by default. There's
+also a couple of classes you can use to make links more universally useful.
+
+```html_example
+<div class="p1">
+  <p> <a href="#">Standard link</a> </p>
+  <p class="link"> Style something else to look like a link </p>
+  <p> <a href="#" class="u">Use .u to force an underline</a> </p>
+</div>
+<div class="p1" style="background-color: #666;">
+  <p> <a href="#" class="light">"Light" link for dark backgrounds</a> </p>
+  <p> <a href="#" class="link-white">Forced white text link</a> </p>
+</div>
+```
+*/
+
+@mixin links_styles {
+  %link,
+  .link,
+  a {
+    color: $link-color;
+
+    @if $link-underline-option {
+      text-decoration: underline;
+
+      @if $link-border-underline-option {
+        text-decoration: none;
+        border-bottom: 1px solid;
+      }
+    } @else {
+      text-decoration: none;
+    }
+
+    @if $link-transition-option {
+      -webkit-transition: color, $link-transition-speed;
+         -moz-transition: color, $link-transition-speed;
+              transition: color, $link-transition-speed;
+    }
+
+    &:visited {
+      color: $link-visited-color;
+    }
+
+    &.light {
+      color: $link-light-color;
+
+      &:visited {
+        color: $link-light-visited-color;
+      }
+      &:hover {
+        color: $link-light-hover-color;
+      }
+      &:active {
+        color: $link-light-active-color;
+      }
+    }
+
+    &.link-white {
+      color: white;
+
+      &:visited,
+      &:hover,
+      &:active {
+        color: white;
+      }
+    }
+
+    &:hover {
+      color: $link-hover-color;
+
+      @if $link-underline-hover-option {
+        @if $link-border-underline-option {
+          text-decoration: none;
+          border-bottom: 1px solid;
+        } @else {
+          text-decoration: underline;
+        }
+      }
+    }
+    &:active {
+      color: $link-active-color;
+    }
+  }
+}

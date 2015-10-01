@@ -1,0 +1,175 @@
+/*doc
+---
+title: "Customizing lists"
+name: lists-variables
+category: elements - lists
+---
+
+*Overwrite these variables in `_custom_variables.scss` to change these defaults.*
+
+```
+$list-pad: 1.5rem !default;
+$list-inline-gutter: 1rem !default;
+```
+
+*/
+
+
+/*doc
+---
+title: Lists
+name: lists
+category: elements - lists
+---
+
+By default, `ul` `ol` and `dl` have some basic styling. There's also
+a couple of classes with which to extend these to make them more versatile.
+
+#####Default lists
+```html_example
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+<hr>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<hr>
+<dl>
+  <dt>List item 1 title</dt>
+  <dd>List item 1 definition</dd>
+  <dt>List item 2 title</dt>
+  <dd>List item 2 definition</dd>
+</dl>
+```
+
+#####Unstyled lists
+```html_example
+<ul class="list-unstyled">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+```
+
+#####Condensed lists
+```html_example
+<ul class="list-condensed">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+```
+
+#####Inline list
+```html_example
+<h2 class="h4">Inline list</h2>
+<ul class="list-inline">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+```
+
+#####Nav List
+Used with `.list-inline`. Forces inline list items to become full-width blocks on XS viewports.
+This is typically useful in navigation bars to give a better mobile experience.
+
+```html_example
+<h2 class="h4">Nav list</h2>
+<p>Extend `.list-inline` with `.list-nav` to force inline list items to change to full-width blocks at the mobile breakpoint.</p>
+<ul class="list-inline list-nav">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+```
+
+*/
+
+@mixin lists_styles {
+  ul,
+  ol {
+    padding-left: $list-pad;
+    margin-top: 0;
+
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  dl > dd:last-child {
+    margin-bottom: 0;
+  }
+
+  %list-unstyled,
+  .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  %list-condensed,
+  .list-condensed {
+    margin-bottom: 0;
+
+    > li {
+      margin-bottom: 0;
+    }
+  }
+
+  %list-inline,
+  .list-inline {
+    padding-left: 0;
+
+    > li {
+      display:        inline-block;
+      padding-left:   $list-inline-gutter / 2;
+      padding-right:  $list-inline-gutter / 2;
+      vertical-align: middle;
+      margin-bottom:  0;
+    }
+
+    &.list-nav {
+      @include at_breakpoint(xs) {
+        > li {
+          display: block;
+          width: 100%;
+          text-align: left;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      .btn {
+        vertical-align: middle;
+      }
+    }
+  }
+}

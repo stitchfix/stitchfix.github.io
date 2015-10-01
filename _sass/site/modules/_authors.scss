@@ -1,0 +1,103 @@
+.authors-row {
+  text-align: center;
+
+  .blog-post__author-image {
+    width: 4rem;
+    margin-bottom: 0;
+    display: inline-block;
+  } 
+
+}
+
+.post-listing {
+  @extend %media, %m4 !optional;
+
+  &__author-container {
+    @extend %left, %media-object, %text-c, %mr-1 !optional;
+    padding-right: 2rem;
+    width: 20%;
+    min-height: 1px;
+
+    @include at_breakpoint(xs){
+      float: none;
+      width: 100%;
+    }
+  }
+
+  &__author-image {
+    @extend %circleimage !optional;
+  }
+
+  &__author {
+    $img_size: 6rem;
+    position: relative;
+    width: $img_size;
+    border-radius: 50%;
+    border: 5px solid $light-sand;
+    top: -($img_size/2);
+    margin-bottom: -($img_size/3);
+
+    @include at_breakpoint(md){
+      $img_size: 5rem;
+      width: $img_size;
+      top: -($img_size/2);
+      margin-bottom: -($img_size/3);
+    }
+
+    @include at_breakpoint(sm){
+      $img_size: 4rem;
+      width: $img_size;
+      top: -($img_size/2);
+      margin-bottom: -($img_size/3);
+    }
+
+    @include at_breakpoint(xs) {
+      border: none;
+      position: static;
+      top: 0;
+      margin-bottom: 0 !important;
+      max-width: 5rem;
+    }
+
+    &:only-child {
+      width: 100%;
+    }
+
+    &:first-child {
+      top: 0;
+      margin-bottom: 1rem;
+
+      @include at_breakpoint(sm){
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &:nth-child(even) {
+      left: $img_size/2;
+
+      @include at_breakpoint(md) {
+        $img_size: 5rem;
+        left: $img_size/2;
+      }
+
+      @include at_breakpoint(sm) {
+        $img_size: 4rem;
+        left: $img_size/2;
+      }
+    }
+  }
+
+  &__no-author {
+    @extend %left, %media-object, .hidden-ltsm !optional;
+    width: 20% !important;
+    height: 1px;
+  }
+
+  &__body {
+    @extend %media-body !optional;
+  }
+}
+
+.post-byline {
+  @extend %mb2;
+}

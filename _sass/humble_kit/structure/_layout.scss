@@ -1,0 +1,520 @@
+/*doc
+---
+title: "Customizing layout"
+name: layout-variables
+category: structure - layout
+---
+
+*Overwrite these variables in `_custom_variables.scss` to change these defaults.*
+
+```
+$hr-color:     rgba(0,0,0,0.1) !default;
+$margin-base:  1rem !default;
+$padding-base: $margin-base !default;
+```
+
+**Note:**
+*Margins and padding are defined in increments of rem by default*
+
+*/
+
+
+/*doc
+---
+title: "Margin helpers"
+name: margin-helpers
+category: structure - layout
+---
+
+Use margin and padding helpers to keep vertical rhythm. Micro classes like
+this help maintain the intended design, while keeping css bloat low.
+
+However, it's _sometimes_ easier for long-term maintenance to `@extend` these
+styles (as placeholders) in another class.
+
+Examples:
+
+#####Bad:
+
+`.my-module { margin-bottom: 30px; }`
+
+
+
+#####Decent:
+
+`.my-module { @extend %mb3, %p1; }`
+
+
+This will produce the compiled css:
+
+`.my-module { margin-bottom: 3rem; padding: 1rem; }`
+
+This adds some extra size to the compiled CSS, but is easy to read and understand in a shared
+development environment.
+
+
+#####Potentially better:
+
+```
+<div class="my-module mb4 p1">
+  This is called .my-module, has a margin-bottom of 4rem, and a padding
+  of 1rem on all sides. It's obvious to anyone reading the code and it's smaller in
+  file size. It's also easy to change later.
+</div>
+```
+
+```html_example
+<div class="m0 p1 bg-gray-lightest">margin 0 top and bottom</div>
+<div class="m1 p1 bg-gray-light">margin 1 top and bottom</div>
+<div class="m2 p1 bg-gray-lightest">margin 2 top and bottom</div>
+<div class="m3 p1 bg-gray-light">margin 3 top and bottom</div>
+<div class="m4 p1 bg-gray-lightest">margin 4 top and bottom</div>
+<div class="m5 p1 bg-gray-light">margin 5 top and bottom</div>
+<div class="m6 p1 bg-gray-lightest">margin 6 top and bottom</div>
+<div class="m7 p1 bg-gray-lightest">margin 7 top and bottom</div>
+<div class="m8 p1 bg-gray-lightest">margin 8 top and bottom</div>
+```
+
+```html_example
+<div class="ml0 p1 bg-gray-lightest">margin 0 left</div>
+<div class="ml1 p1 bg-gray-light">margin 1 left</div>
+<div class="ml2 p1 bg-gray-lightest">margin 2 left</div>
+<div class="ml3 p1 bg-gray-light">margin 3 left</div>
+<div class="ml4 p1 bg-gray-lightest">margin 4 left</div>
+<div class="ml5 p1 bg-gray-light">margin 5 left</div>
+<div class="ml6 p1 bg-gray-lightest">margin 6 left</div>
+<div class="ml7 p1 bg-gray-light">margin 7 left</div>
+<div class="ml8 p1 bg-gray-lightest">margin 8 left</div>
+```
+
+```html_example
+<div class="mr0 p1 bg-gray-lightest">margin 0 right</div>
+<div class="mr1 p1 bg-gray-light">margin 1 right</div>
+<div class="mr2 p1 bg-gray-lightest">margin 2 right</div>
+<div class="mr3 p1 bg-gray-light">margin 3 right</div>
+<div class="mr4 p1 bg-gray-lightest">margin 4 right</div>
+<div class="mr5 p1 bg-gray-light">margin 5 right</div>
+<div class="mr6 p1 bg-gray-lightest">margin 6 right</div>
+<div class="mr7 p1 bg-gray-light">margin 7 right</div>
+<div class="mr8 p1 bg-gray-lightest">margin 8 right</div>
+```
+
+```html_example
+<div class="mt0 p1 bg-gray-lightest">margin 0 top</div>
+<div class="mt1 p1 bg-gray-light">margin 1 top</div>
+<div class="mt2 p1 bg-gray-lightest">margin 2 top</div>
+<div class="mt3 p1 bg-gray-light">margin 3 top</div>
+<div class="mt4 p1 bg-gray-lightest">margin 4 top</div>
+<div class="mt5 p1 bg-gray-light">margin 5 top</div>
+<div class="mt6 p1 bg-gray-lightest">margin 6 top</div>
+<div class="mt7 p1 bg-gray-light">margin 7 top</div>
+<div class="mt8 p1 bg-gray-lightest">margin 8 top</div>
+```
+
+```html_example
+<div class="mb0 p1 bg-gray-lightest">margin 0 bottom</div>
+<div class="mb1 p1 bg-gray-light">margin 1 bottom</div>
+<div class="mb2 p1 bg-gray-lightest">margin 2 bottom</div>
+<div class="mb3 p1 bg-gray-light">margin 3 bottom</div>
+<div class="mb4 p1 bg-gray-lightest">margin 4 bottom</div>
+<div class="mb5 p1 bg-gray-light">margin 5 bottom</div>
+<div class="mb6 p1 bg-gray-lightest">margin 6 bottom</div>
+<div class="mb7 p1 bg-gray-light">margin 7 bottom</div>
+<div class="mb8 p1 bg-gray-lightest">margin 8 bottom</div>
+```
+
+```html_example
+<div class="m-xs p1 bg-gray-lightest">margin XS on all sides</div>
+<div class="m-sm p1 bg-gray-lightest">margin SM on all sides</div>
+<div class="m-md p1 bg-gray-lightest">margin MD on all sides</div>
+<div class="m-lg p1 bg-gray-lightest">margin LG on all sides</div>
+<div class="m-xl p1 bg-gray-lightest">margin XL on all sides</div>
+```
+*/
+
+// Leaves off xl by default
+$layout-base-sizes: $xs, $sm, $md, $lg !default;
+
+
+@mixin layout_styles {
+  // TODO: .center is deprecated (by .centered)
+  .center { margin-left: auto; margin-right: auto;}
+
+  // Creates top/bottom standard margin (e.g. .m0, .m1, etc.)
+  @for $i from 0 through 8 {
+    %m#{$i},
+    .m#{$i}{
+      // If zero margin, then force with !important
+      @if $i == 0 { margin-top: $margin-base*$i !important; margin-bottom: $margin-base*$i !important; }
+      @else {       margin-top: $margin-base*$i; margin-bottom: $margin-base*$i; }
+    }
+  }
+
+  // Creates directional margins (e.g. .ml0, .mt1, etc.)
+  @each $dir in $base-directions {
+    $short: nth($dir, 1);
+    $long:  nth($dir, 2);
+    @for $i from 0 through 8 {
+      %m#{$short}#{$i},
+      .m#{$short}#{$i}{
+        // If zero margin, then force with !important
+        @if $i == 0 { margin-#{$long}: $margin-base*$i !important; }
+        @else {       margin-#{$long}: $margin-base*$i; }
+      }
+    }
+  }
+
+  // Creates all direction standard size margins for simple positioning (e.g. .m-md, .m-xl, etc.)
+  @each $size in $base-sizes {
+    $n: nth($size, 1);
+    $s: nth($size, 3);
+    %m-#{$n},
+    .m-#{$n}{
+      margin: $s;
+    }
+  }
+
+
+  /*doc
+  ---
+  title: "Padding helpers"
+  name: padding-helpers
+  category: structure - layout
+  ---
+
+  ```html_example
+  <div class="p1 bg-gray-lightest">padding 1 on all sides</div>
+  <div class="p2 bg-gray-light">padding 2 on all sides</div>
+  <div class="p3 bg-gray-lightest">padding 3 on all sides</div>
+  <div class="p4 bg-gray-light">padding 4 on all sides</div>
+  <div class="p5 bg-gray-lightest">padding 5 on all sides</div>
+  <div class="p6 bg-gray-light">padding 6 on all sides</div>
+  <div class="p7 bg-gray-lightest">padding 7 on all sides</div>
+  <div class="p8 bg-gray-light">padding 8 on all sides</div>
+  ```
+
+  ```html_example
+  <div class="pyhalf bg-gray-light">padding half y-axis</div>
+  <div class="py1 bg-gray-lightest">padding 1 y-axis</div>
+  <div class="py2 bg-gray-light">padding 2 y-axis</div>
+  <div class="py3 bg-gray-lightest">padding 3 y-axis</div>
+  <div class="py4 bg-gray-light">padding 4 y-axis</div>
+  <div class="py5 bg-gray-lightest">padding 5 y-axis</div>
+  <div class="py6 bg-gray-light">padding 6 y-axis</div>
+  <div class="py7 bg-gray-lightest">padding 7 y-axis</div>
+  <div class="py8 bg-gray-light">padding 8 y-axis</div>
+  ```
+
+  ```html_example
+  <div class="pxhalf bg-gray-light">padding half x-axis</div>
+  <div class="px1 bg-gray-lightest">padding 1 x-axis</div>
+  <div class="px2 bg-gray-light">padding 2 x-axis</div>
+  <div class="px3 bg-gray-lightest">padding 3 x-axis</div>
+  <div class="px4 bg-gray-light">padding 4 x-axis</div>
+  <div class="px5 bg-gray-lightest">padding 5 x-axis</div>
+  <div class="px6 bg-gray-light">padding 6 x-axis</div>
+  <div class="px7 bg-gray-lightest">padding 7 x-axis</div>
+  <div class="px8 bg-gray-light">padding 8 x-axis</div>
+  ```
+  */
+
+
+  // Creates all direction basic padding (e.g. .p1, .p2, etc.)
+  @for $i from 1 through 8 {
+    %p#{$i},
+    .p#{$i}{ padding: $padding-base*$i; }
+    @include at_breakpoint(ltsm) {
+      %p#{$i},
+      .p#{$i}{ padding-top: $padding-base*($i/2); padding-bottom: $padding-base*($i/2); }
+    }
+  }
+
+  // Creates vertical padding helpers (e.g. .py1, .py2, etc.)
+  @for $i from 1 through 8 {
+    %py#{$i},
+    .py#{$i}{ padding-top: $padding-base*$i; padding-bottom: $padding-base*$i; }
+    @include at_breakpoint(ltsm) {
+      %py#{$i},
+      .py#{$i}{ padding-top: $padding-base*($i/2); padding-bottom: $padding-base*($i/2); }
+    }
+  }
+
+  // Special case half vertical padding
+  %pyhalf,
+  .pyhalf { padding-top: $padding-base*0.5;  padding-bottom: $padding-base*0.5; }
+
+  // Creates horizontal padding helpers; horizontal padding is halved (e.g. .px1, .px2, etc.)
+  @for $i from 1 through 8 {
+    %px#{$i},
+    .px#{$i}{ padding-left: $padding-base*($i/2); padding-right: $padding-base*($i/2); }
+  }
+
+  // Special case half horizontal padding
+  %pxhalf,
+  .pxhalf { padding-right: $padding-base*0.25;  padding-left: $padding-base*0.25; }
+
+
+  /*doc
+  ---
+  title: "Position helpers"
+  name: position-helpers
+  category: structure - layout
+  ---
+
+  Position elements using micro classes for better control.
+
+
+  ```html_example
+  <div class="pos-rel full-width bg-gray-lightest" style="height: 500px;">
+    <div class="pos-abs pos-l pos-t p1 m-xl bg-gray z-sm">
+      Absolutely positioned top left, z-index SM, margin XL
+    </div>
+    <div class="pos-abs pos-b pos-r p1 m-lg bg-gray-light">
+      Absolutely positioned bottom right, margin LG
+    </div>
+    <div class="pos-abs pos-t pos-l pos-b p1 py6 bg-gray-light">
+      Absolutely positioned left, top, bottom
+      <br />
+      (to stretch from top to bottom)
+    </div>
+    <div class="pos-abs pos-center bg-gray-light p1">
+      Centered
+    </div>
+  </div>
+  ```
+  */
+
+  %pos-abs,
+  .pos-abs { position: absolute; }
+  %pos-rel,
+  .pos-rel { position: relative; }
+  %pos-fix,
+  .pos-fix { position: fixed;    }
+
+  // Creates positional classes (e.g. .pos-r { right: 0; })
+  @each $dir in $base-directions {
+    $short: nth($dir, 1);
+    $long:  nth($dir, 2);
+    %pos-#{$short},
+    .pos-#{$short}{ #{$long}: 0; }
+  }
+
+  %pos-all,
+  .pos-all { top: 0; left: 0; right: 0; bottom:0; }
+
+  %pos-center,
+  .pos-center {
+    top: 50%;
+    left: 50%;
+        -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  // TODO: z-index helpers here are technically deprecated by the code below?
+  %z1,
+  .z1  { z-index: 1; }
+  %z2,
+  .z2  { z-index: 2; }
+  %z5,
+  .z5  { z-index: 5; }
+  %z10,
+  .z10 { z-index: 10; }
+
+  /* Creates z index classes and placeholders using base sizes (xs, sm, etc.) */
+  @each $size in $base-sizes {
+    $name:  nth($size, 1);
+    $index: nth($size, 4);
+
+    %z-#{$name},
+    .z-#{$name}{
+      z-index: $index;
+    }
+  }
+
+
+  /*doc
+  ---
+  title: "Utility helpers"
+  name: utility-helpers
+  category: structure - layout
+  ---
+
+#####Horizontal rule
+```html_example
+  <hr />
+```
+
+#####Full width helper
+```html_example
+<span class="full-width p1 bg-gray-light ib">Full width</span>
+```
+
+#####Centered margins for block elements
+```html_example
+<div class="p1 bg-gray-light centered" style="width: 50%">Centered</div>
+```
+
+#####Clearfix & floats helpers
+```html_example
+<div class="clearfix p1 bg-gray-lightest">
+  <p>Clearfix: successfully clears floated child elements in a container</p>
+  <div class="left p1 bg-gray-light">Float left</div>
+  <div class="right p1 bg-gray-light">Float right</div>
+</div>
+```
+
+#####Inline blocks and vertical alignment
+```html_example
+<div class="bg-gray p1">
+  <div class="ib p1 bg-gray-light">inline block</div>
+  <div class="ib px1 vertical-t bg-gray-light">vertical align top</div>
+  <div class="ib px1 vertical-mid bg-gray-light">vertical align middle</div>
+  <div class="ib px1 vertical-b bg-gray-light">vertical align bottom</div>
+</div>
+```
+*/
+
+  /* Horizontal rule
+     ========================================================================== */
+  /**
+  * 1. To keep vertical rhythm, hr uses font-size-base as a height (including
+  *    1px for the border.
+  */
+
+  %hr,
+  hr,
+  .hr {
+    border: none;
+    border-bottom: 1px solid $hr-color;
+    height: ($font-size-base - 1); /* 1 */
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+
+  /* Layout utility classes
+     ========================================================================== */
+
+  %full-width,
+  .full-width{
+    width: 100%;
+  }
+
+  %clearfix,
+  .clearfix {
+    &:before, &:after { content: " "; display: table; }
+    &:after { clear: both; }
+  }
+
+  %right,
+  .right {
+    float: right;
+  }
+  %left,
+  .left {
+    float: left;
+  }
+
+
+  %centered,
+  .centered {
+    margin-left:  auto;
+    margin-right: auto;
+  }
+
+  %ib,
+  .ib {
+    display: inline-block;
+  }
+
+  %vertical-t,
+  .vertical-t {
+    vertical-align: top;
+  }
+
+  %vertical-b,
+  .vertical-b {
+    vertical-align: bottom;
+  }
+
+  %vertical-mid,
+  .vertical-mid {
+    vertical-align: middle;
+  }
+
+
+  /*doc
+  ---
+  title: "Responsive display"
+  name: z-responsive-display
+  category: structure - layout
+  ---
+
+  `.hidden` will hide element in all conditions.
+
+  `.full-width-xs` is a helper class that forces an element to be the full width of its parent
+  at XS breakpoints. This is useful on mobile viewports to give more touch-area and consistent
+  layout.
+
+#####Responsive display classes:
+
+  `hidden-xl` `hidden-lg` `hidden-ltlg` `hidden-md` `hidden-ltmd` `hidden-sm` `hidden-ltsm` `hidden-xs` `hidden-gtxs` `hidden-gtsm`
+
+  These classes will hide content at defined breakpoints.
+
+  For example:
+
+  ```
+  <div class="hidden-xs">
+    Something worth hiding
+  </div>
+  ```
+
+  This div will not show at XS breakpoint. This content still LOADS, however,
+  so be cognizant of the load impact and use *wisely*.
+
+  ```html_example
+  <div class="hidden-xl   bg-gray-lightest">1 hidden-xl</div>
+  <div class="hidden-lg   bg-gray-light">   2 hidden-lg</div>
+  <div class="hidden-ltlg bg-gray-lightest">3 hidden-ltlg</div>
+  <div class="hidden-md   bg-gray-light">   4 hidden-md</div>
+  <div class="hidden-ltmd bg-gray-lightest">5 hidden-ltmd</div>
+  <div class="hidden-sm   bg-gray-light">   6 hidden-sm</div>
+  <div class="hidden-ltsm bg-gray-lightest">7 hidden-ltsm</div>
+  <div class="hidden-xs   bg-gray-light">   8 hidden-xs</div>
+  <div class="hidden-gtxs bg-gray-lightest">9 hidden-gtxs</div>
+  <div class="hidden-gtsm bg-gray-light">   10 hidden-gtsm</div>
+  ```
+
+  */
+
+  %hidden,
+  .hidden{
+    display: none !important;
+  }
+
+  @include at_breakpoint(xl)   { .hidden-xl   { display: none !important; } }
+  @include at_breakpoint(lg)   { .hidden-lg   { display: none !important; } }
+  @include at_breakpoint(ltlg) { .hidden-ltlg { display: none !important; } }
+  @include at_breakpoint(md)   { .hidden-md   { display: none !important; } }
+  @include at_breakpoint(ltmd) { .hidden-ltmd { display: none !important; } }
+  @include at_breakpoint(sm)   { .hidden-sm   { display: none !important; } }
+  @include at_breakpoint(ltsm) { .hidden-ltsm { display: none !important; } }
+  @include at_breakpoint(xs)   { .hidden-xs   { display: none !important; } }
+  @include at_breakpoint(gtxs) { .hidden-gtxs { display: none !important; } }
+  @include at_breakpoint(gtsm) { .hidden-gtsm { display: none !important; } }
+
+  @include at_breakpoint(xs) {
+    .full-width-xs {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      &:not([class^="px"]):not([class*="px"]):not([class^="py"]):not([class*="py"]) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+}

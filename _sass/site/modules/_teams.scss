@@ -1,0 +1,19 @@
+.member-bio {
+  @extend %g, %_1-4, %_1-3-md, %_1-2-sm, %_1-1-xs, %text-c, %m2 !optional;
+
+  &__image {
+    @extend %mr1, %ml1, %circleimage !optional;
+  }
+  &__name {
+    @extend %uppercase, %mb1, .h6, %thick !optional;
+    color: $red;
+    line-height: 1.5rem;
+  }
+  &__social {
+    @extend %mb1;
+  }
+  &__description {
+    @extend %f-sm, %text-l !optional;
+    line-height: 1.5rem;
+  }
+}

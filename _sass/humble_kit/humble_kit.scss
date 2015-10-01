@@ -1,0 +1,136 @@
+/* Base - global setup, styles, and classes for any project
+   ========================================================================== */
+
+// Always included
+@import "base/variables.scss";
+@import "base/reset.scss";
+@import "base/mixins.scss";
+
+@import "base/typography.scss";
+@if $include-typography-option == true {
+  @include typography_styles;
+}
+
+
+/* Elements - basic default styling for fundamental elements
+   ========================================================================== */
+
+@import "elements/links.scss";
+@if $include-links-option == true {
+  @include links_styles;
+}
+
+@import "elements/lists.scss";
+@if $include-lists-option == true {
+  @include lists_styles;
+}
+
+@import "elements/tables.scss";
+@if $include-tables-option == true {
+  @include tables_styles;
+}
+
+@import "elements/forms.scss";
+@if $include-forms-option == true {
+  @include forms_styles;
+}
+
+@import "elements/flex.scss";
+@if $include-flex-option == true {
+  @include flex_styles;
+}
+
+
+/* Structure - Helpers that manage the layout and vertical rhythm of a site.
+   ========================================================================== */
+
+@import "structure/layout.scss";
+@if $include-layout-helpers-option == true {
+  @include layout_styles;
+}
+
+@import "structure/containers.scss";
+@import "structure/grid.scss";
+@if $include-grid-option == true {
+  @include containers_styles;
+  @include grid_styles;
+}
+
+
+/* Modules - reusable patterns commonly found on most web apps
+   ========================================================================== */
+
+@import "modules/media.scss";
+@if $include-media-option == true {
+  @include media_styles;
+}
+
+@import "modules/buttons.scss";
+@if $include-buttons-option == true {
+  @include buttons_styles;
+}
+
+
+/* Theme - optional decorative and thematic ui creation classes
+   ========================================================================== */
+@import "theme/decorations.scss"; // optional
+@if $include-decorations-option == true {
+  @include decorations_styles;
+}
+
+@import "theme/skins.scss"; // optional
+@if $include-skins-option == true {
+  @include skins_styles;
+}
+
+
+/*doc
+---
+title: Humble Kit
+name: Humble Kit
+category: home
+---
+
+## A flexible CSS tool kit for internal applications
+-----
+
+### SASS file structure
+
+```
+stylesheets
+└── base
+|   |
+|   ├── _mixins.scss
+|   ├── _reset.scss
+|   ├── _typography.scss
+|   └── _variables.scss
+└── elements
+|   |
+|   ├── _flex.scss
+|   ├── _forms.scss
+|   ├── _links.scss
+|   ├── _lists.scss
+|   └── _tables.scss
+└── modules
+|   |
+|   ├── _buttons.scss
+|   └── _media.scss
+└── structure
+|   |
+|   ├── _containers.scss
+|   ├── _grid.scss
+|   └── _layout.scss
+└── theme
+    |
+    ├── _decorations.scss
+    └── _skins.scss
+
+```
+
+***Humble Kit*** is an ongoing css tool kit project that is steeped in Agile-mindedness, scalable and modular Sass, with the ultimate goal of providing a quick, flexible, and responsible way to style in a team environment. Consistency and maintainability are at the core of the project and rapid-iterations are the driving cause.
+
+***Humble Kit*** plays well with Bootstrap, most notably the javascript components. It's also fairly easy (once you get in there) to modify and extend the tool kit by extending `@mixins` and modifying default variables.
+
+***Humble Kit*** has been thoughtfully crafted to be used when developing and maintaining internal web applications for Stitch Fix.
+
+*/

@@ -1,64 +1,20 @@
 ---
-layout: default
+layout: new
 ---
-<h1>Projects</h1>
-<section>
-  <h1>Ruby</h1>
-  {% for repo in site.github.public_repositories %} 
-    {% unless repo.fork %}
-      {% if repo.language == 'Ruby' %}
-        <article>
-          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
-          <p>
-            {{repo.description}}
-          </p>
-        </article>
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
-</section>
-<section>
-  <h1>JavaScript</h1>
-  {% for repo in site.github.public_repositories %} 
-    {% unless repo.fork %}
-      {% if repo.language == 'JavaScript' %}
-        <article>
-          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
-          <p>
-            {{repo.description}}
-          </p>
-        </article>
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
-</section>
-<section>
-  <h1>Python</h1>
-  {% for repo in site.github.public_repositories %} 
-    {% unless repo.fork %}
-      {% if repo.language == 'Python' %}
-        <article>
-          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
-          <p>
-            {{repo.description}}
-          </p>
-        </article>
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
-</section>
-<section>
-  <h1>Everything Else</h1>
-  {% for repo in site.github.public_repositories %} 
-    {% unless repo.fork %}
-      {% if repo.language != 'Python' and repo.language != 'Ruby' and repo.language != 'JavaScript' %}
-        <article>
-          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
-          <p>
-            {{repo.description}}
-          </p>
-        </article>
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
+{% include language.html repositories=site.github.public_repositories language="Ruby" %}
+{% include language.html repositories=site.github.public_repositories language="JavaScript" %}
+{% include language.html repositories=site.github.public_repositories language="Python" %}
+<section class="mt3">
+  {% include language-head.html language="Everything Else" %}
+  <div class="grid">
+    {% for repo in site.github.public_repositories %} 
+      {% unless repo.fork %}
+        {% if repo.language != 'Python' and repo.language != 'Ruby' and repo.language != 'JavaScript' %}
+          <div class="g _1-3">
+            {% include project.html repo=repo language=repo.language %}
+          </div>
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  </div>
 </section>

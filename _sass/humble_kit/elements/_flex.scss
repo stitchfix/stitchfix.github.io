@@ -1,0 +1,148 @@
+  /*doc
+  ---
+  title: Flexbox
+  name: flexbox
+  category: elements - flexbox
+  ---
+
+  Flexbox is a way to create a better set of fluid elements in modern browsers.
+  The standard flexbox consists of a parent container and any number of child elements.
+
+  Use `.flex-container` as the parent and `.flex-item` as the child.
+
+  Flexbox styles are still being worked on and can be considered "experimental"
+
+  ```html_example
+  <div class="flex-container">
+    <div class="flex-item flex-left f-lg bordered border-xs"> 1 </div>
+    <div class="flex-item flex-left f-lg bordered border-xs"> 2 </div>
+    <div class="flex-item flex-left f-lg bordered border-xs"> 3 </div>
+  </div>
+  ```
+
+  Use `.flex-N` where N is a number from 0 to 4 to control the relative width of a `flex-item`.
+
+  ```html_example
+  <div class="flex-container">
+    <div class="flex-item flex-1 p1 bg-gray-lightest">Flex 1</div>
+    <div class="flex-item flex-2 p1 bg-gray-light">Flex 2</div>
+    <div class="flex-item flex-3 p1 bg-gray-lightest">Flex 3</div>
+    <div class="flex-item flex-4 p1 bg-gray-light">Flex 4</div>
+  </div>
+  ```
+
+  */
+
+@mixin flex_styles {
+
+  %flex-container,
+  .flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+
+    %flex-item,
+    .flex-item {
+      margin-left: auto;
+      margin-right: auto;
+
+      -webkit-box-flex: 1;
+         -moz-box-flex: 1;
+      width: 10%;
+          -webkit-flex: 1;
+              -ms-flex: 1;
+
+                  flex: 1;
+    }
+    %flex-left,
+    .flex-left {
+      margin-left: 0;
+    }
+    %flex-0,
+    .flex-0 {
+      -webkit-box-flex: 0;
+         -moz-box-flex: 0;
+      width: 0%;
+          -webkit-flex: 0;
+              -ms-flex: 0;
+                  flex: 0;
+    }
+    %flex-2,
+    .flex-2 {
+      -webkit-box-flex: 2;
+         -moz-box-flex: 2;
+      width: 20%;
+          -webkit-flex: 2;
+              -ms-flex: 2;
+                  flex: 2;
+    }
+    %flex-3,
+    .flex-3 {
+      -webkit-box-flex: 3;
+         -moz-box-flex: 3;
+      width: 30%;
+          -webkit-flex: 3;
+              -ms-flex: 3;
+                  flex: 3;
+    }
+    %flex-4,
+    .flex-4 {
+      -webkit-box-flex: 4;
+         -moz-box-flex: 4;
+      width: 40%;
+          -webkit-flex: 4;
+              -ms-flex: 4;
+                  flex: 4;
+    }
+  }
+
+
+  /*doc
+  ---
+  title: "Flex list"
+  name: flexlist
+  category: elements - flexbox
+  ---
+
+  Use `.list-flex` on lists to create `li` children as flexible sections.
+
+  You can think of flex lists as a way to present list information like in a table,
+  but that isn't necessarily tabular data.
+
+  Flexbox styles are still being worked on and can be considered "experimental"
+
+  ```html_example
+  <ul class="list-flex">
+    <li class="list-header bg-gray-lightest"> List header </li>
+    <li class="bg-gray-light"> List item </li>
+    <li class="bg-gray-lightest"> List item </li>
+    <li class="bg-gray-light"> List item </li>
+    <li class="bg-gray-lightest"> List item </li>
+  </ul>
+  ```
+
+  */
+
+  %list-flex,
+  .list-flex {
+    @extend %flex-container;
+    @extend %m0 !optional;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      @extend %flex-item;
+      @extend %flex-2;
+      @extend %m0 !optional;
+
+      &.list-header {
+        @extend %text-r !optional;
+        @extend %flex-4;
+        @extend %px1 !optional;
+      }
+    }
+  }
+}

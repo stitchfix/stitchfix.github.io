@@ -1,0 +1,78 @@
+@import "site/colors.scss";
+
+// Optionally included Humble Kit styles
+// Uncomment to remove a section from compilation
+
+//$include-typography-option: false;
+//$include-links-option: false;
+//$include-lists-option: false;
+$include-tables-option: false;
+$include-forms-option: false;
+$include-code-option: false;
+//$include-flex-option: false;
+//$include-layout-helpers-option: false;
+//$include-grid-option: false;
+$include-decorations-option: false;
+//$include-skins-option: false;
+//$include-media-option: false;
+//$include-buttons-option: false;
+
+
+// Global variables
+$body-bg:         $light-sand;
+$text-base-color: $warm-gray;
+$container-pad:   20px;
+
+
+// Typography variables
+$font-weight-base: 400;
+$font-weight-thin: 200;
+$font-weight-thick: 800;
+$font-size-base: 15px;
+$user-font-family-sans-serif: brandontext;
+$headings-weight: normal;
+$f-xl: 8;
+$f-lg: 6;
+$f1: 5;
+$f2: 4;
+$f3: 3;
+$f4: 2;
+$f5: 1;
+$f-md: $f5;
+$f6: 0;
+$f-sm: $f6;
+$f-xs: -1;
+
+
+// Link variables
+$link-color:               $red;
+$link-hover-color:         $dark-gray;
+$link-active-color:        $red;
+$link-visited-color:       $red;
+//$link-light-color:         $base-blue-soft;
+//$link-light-hover-color:   $base-blue-light;
+//$link-light-active-color:  $base-blue-soft;
+//$link-light-visited-color: $base-blue-soft;
+$link-underline-hover-option:  true;
+
+
+// Buttons variables
+
+$btn-mobile-full-width: false;
+$btn-bg-primary:     $red;
+//$btn-color-primary:  $red;
+$btn-border-primary: $red;
+$btn-border-radius:  2rem;
+
+//$btn-inset-option:       false;
+//$btn-border-option:      true;
+//$btn-radius-option:      true;
+//$btn-text-shadow-option: false;
+//$btn-transition-option:  true;
+//$btn-hover-bg-option:    true;
+//
+//$btn-bg-link: rgba(0,0,0,0.1);
+//
+//$btn-font-weight: 100;
+//
+//$btn-vertical-align: top;

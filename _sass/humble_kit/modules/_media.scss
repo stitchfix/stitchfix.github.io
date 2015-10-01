@@ -1,0 +1,66 @@
+/*doc
+---
+title: "Media object"
+name: media_object
+category: modules - media
+---
+Made famous here:
+<a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">
+The media object saves hundreds of lines of code
+</a>
+
+The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+
+```html_example
+<div class="media">
+  <img src="http://fillmurray.com/100/100" class="media-object left mr1">
+  <p class="media-body">
+    The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+  </p>
+</div>
+```
+
+```html_example
+<div class="media">
+  <img src="http://fillmurray.com/75/75" class="media-object right ml1">
+  <p class="media-body">
+    The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+  </p>
+</div>
+```
+
+```html_example
+<div class="media">
+  <img src="http://fillmurray.com/125/125" class="media-object left mr1">
+  <img src="http://fillmurray.com/125/125" class="media-object right ml1">
+  <p class="media-body">
+    The media object defines a section of content with an "object" (typically an image) to one side and content on the other.
+Use the classes `.left` and `.right` on the object to position it on the left or right.
+  </p>
+</div>
+```
+
+*/
+
+@mixin media_styles{
+  %media,
+  .media,
+  %media-body,
+  .media-body {
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  %media:first-child,
+  .media:first-child {
+    margin-top: 0;
+  }
+
+  %media-object,
+  .media-object {
+    display: block;
+  }
+}

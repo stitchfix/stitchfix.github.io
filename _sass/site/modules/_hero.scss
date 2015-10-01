@@ -1,0 +1,57 @@
+.hero {
+  @extend %pos-rel;
+}
+
+.site-title {
+  @extend %pos-abs, %pos-center, %text-c, %m0 !optional;
+  border: 6px solid white;
+  color: white;
+  font-size: 100px;
+  line-height: 2rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.03em;
+  padding: 3rem 6rem 1rem;
+
+  @include at_breakpoint(ltlg) {
+    font-size: 80px;
+  }
+  @include at_breakpoint(ltmd) {
+    font-size: 64px;
+    padding: 2rem 4rem 1rem;
+    line-height: 1.66rem;
+  }
+  @include at_breakpoint(ltsm) {
+    font-size: 42px;
+    padding: 1rem 1rem 0.66rem;
+    line-height: 1.33rem;
+  }
+
+  @include at_breakpoint(xs) {
+    top: 29%;
+  }
+
+
+  &__tagline {
+    color: white;
+    font-size: 26px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+
+    @include at_breakpoint(ltmd) {
+      font-size: 20px;
+    }
+    @include at_breakpoint(ltsm) {
+      font-size: 16px;
+    }
+  }
+}
+
+.hero-image{
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0px;
+}

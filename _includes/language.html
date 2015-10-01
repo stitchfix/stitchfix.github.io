@@ -1,0 +1,14 @@
+<section class="mt3">
+  {% include language-head.html language=include.language %}
+  <div class="grid">
+    {% for repo in include.repositories %} 
+      {% unless repo.fork %}
+        {% if repo.language == include.language %}
+          <div class="g _1-3">
+            {% include project.html repo=repo %}
+          </div>
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>

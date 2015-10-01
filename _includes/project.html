@@ -1,0 +1,15 @@
+<article>
+  <header>
+    <h1 class="h3 mb0">
+      <a href="{{include.repo.html_url}}">{{ include.repo.name }}</a>
+      {% if include.language == 'CSS' %}
+        <i class="devicon-css3-plain"></i>
+      {% else %}
+        <i class="devicon-{{ include.language | downcase }}-plain"></i>
+      {% endif %}
+    </h1>
+  </header>
+  <p>
+    {{include.repo.description}}
+  </p>
+</article>

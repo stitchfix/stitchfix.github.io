@@ -1,0 +1,79 @@
+// Brand Colors March 2015
+$gold: rgba(140, 111, 75, 1);
+//$gold-60: rgba(140,111,75,.6);
+//$gold-40: rgba(140,111,75,.4);
+//$gold-20: rgba(140,111,75,.2);
+//$gold-10: rgba(140,111,75,.1);
+
+$yellow: rgba(233, 215, 23, 1);
+//$yellow-20: rgba(233,215,23,.2);
+//$yellow-10: rgba(233,215,23,.1);
+
+$red: rgba(255, 92, 97, 1);
+$red-20: #FFDEDF;
+$red-10: #FFEEEF;
+$red-5: rgba(255, 92, 97, .05);
+$red-2: rgba(255, 92, 97, .02);
+
+$light-coral: rgba(253, 220, 195, 1);
+$light-coral-50: #FEEDE1;
+
+$mint: rgba(137, 198, 189, 1);
+$mint-20: #E7F3F2;
+$mint-10: #F3F9F8;
+$mint-green: rgba(137, 198, 189, .7);
+// Previous value
+
+$dark-mint: #69BDB0;
+$dark-mint-20: #E1F2EF;
+$dark-mint-10: #F0F8F7;
+
+$warm-gray: #847c77;
+$warm-gray-80: #9D9693;
+$warm-gray-60: #B5B0AE;
+$warm-gray-40: #CECBC9;
+$warm-gray-20: #E6E5E4;
+
+$sand: #F3EFEC;
+$dark-sand: darken($sand, 5%);
+$light-sand: rgb(247, 245, 242);
+// tint of sand 50% tint
+
+$off-white: #FEFCFB;
+// was rgb(254, 250, 247);
+
+// Brand Colors (of yore)
+$dark-gray: darken($warm-gray, 20%);
+// was rgb(69, 54, 53);
+$gray: #696C71;
+// 105  108 113
+
+// Accent Colors
+$mint-green-tint-hi: lighten($mint-green, 23%);
+$mint-green-tint-low: lighten($mint-green, 15%);
+$mint-green-shade: darken($mint-green, 10%);
+$mint-green-shade-low: darken($mint-green, 20%);
+$mint-green-shade-extra-dark: darken($mint-green, 30%);
+
+//// Bootstrap
+//// Colors -- overrides
+//$gray-base: $warm-gray;
+//$gray-darker: darken($warm-gray, 25%);
+//$gray-dark: darken($warm-gray, 15%);
+//$gray: darken($warm-gray, 5%);
+//// label color
+//$gray-light: $warm-gray-60;
+//$gray-lighter: $warm-gray-20;
+//
+//$brand-primary: $mint-green;
+//$brand-success: $mint;
+//$brand-info: $light-coral;
+//$brand-warning: $yellow;
+//$brand-danger: $red;
+//
+//// Bootstrap -- Scaffolding
+//$body-bg: white;
+//$text-color: darken($warm-gray, 0%);
+//$link-color: $mint-green-shade-extra-dark;
+//$link-hover-color: darken($dark-mint, 20%);
+//$link-hover-decoration: none;

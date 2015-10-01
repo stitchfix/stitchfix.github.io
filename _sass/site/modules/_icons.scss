@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'icomoon';
+  src:url('/assets/fonts/icons/icomoon.eot');
+  src:url('/assets/fonts/icons/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icons/icomoon.svg#icomoon') format('svg'),
+    url('/assets/fonts/icons/icomoon.woff') format('woff'),
+    url('/assets/fonts/icons/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin icons {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 20px;
+  padding: 0.4rem;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.icon {  
+  @include icons;
+  span { display: none; }
+  &:hover,
+  &:focus {
+    color: #4e4a47;
+  text-decoration: none;
+  }
+  &:after { content: "\e600"; }
+  &.dribbble:after { content: "\e601"; }
+  &.flickr:after { content: "\e602"; }
+  &.github:after { content: "\e603"; }
+  &.instagram:after { content: "\e604"; }
+  &.linkedin:after { content: "\e605"; }
+  &.pinterest:after { content: "\e606"; }
+  &.twitter:after { content: "\e607"; }
+
+}
+
+.sectionicon {
+  width: 60px;
+  margin-top: 30px;
+}

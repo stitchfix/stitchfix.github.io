@@ -1,0 +1,18 @@
+.logo {
+  line-height: 1rem;
+  height: 3rem;
+
+  & > img {
+    height: 3rem;
+    min-width: 36px;
+    @extend %pyhalf, %vertical-mid;
+  }
+
+  &__tagline {
+    @extend %px1;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

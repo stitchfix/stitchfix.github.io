@@ -1,0 +1,239 @@
+/* ==========================================================================
+   What you need to know about this file:
+   ==========================================================================
+
+   These thematic styles that I refer to as "decoration" are useful for
+   rapidly spinning up distinct, yet consistent UI elements.
+
+   Dimensions and variations are constrained by discrete variable lists.
+   These lists help keep consistent visual design.
+
+*/
+
+
+/*doc
+---
+title: Borders
+name: borders
+category: theme - decorations
+---
+
+```
+$border-colors: (
+  "gray-lightest":    $base-gray-lightest,
+  "gray-light":       $base-gray-light ,
+  "gray":             $base-gray,
+  "gray-dark":        $base-gray-dark,
+  "gray-darkest":     $base-gray-darkest,
+  "link":             $link-color,
+  "ghost-black-base": $ghost-black-base,
+  "ghost-white-base": $ghost-white-base
+);
+```
+
+```html_example
+<p class="bordered border-xs"> xs border </p>
+<p class="bordered border-sm"> sm border </p>
+<p class="bordered border-md"> md border </p>
+<p class="bordered border-lg"> lg border </p>
+<p class="bordered border-xl"> xl border </p>
+```
+
+```html_example
+<p class="bordered"> all borders </p>
+<p class="border-b"> border bottom </p>
+<p class="border-t"> border top </p>
+<p class="border-l border-r"> border left and right </p>
+<p class="border-none"> no border </p>
+```
+
+```html_example
+<p class="bordered border-md border-gray-lightest"> lightest gray border </p>
+<p class="bordered border-md border-gray-light"> light gray border </p>
+<p class="bordered border-md border-gray"> gray border </p>
+<p class="bordered border-md border-gray-dark"> dark gray border </p>
+<p class="bordered border-md border-gray-darkest"> darkest gray border </p>
+<p class="bordered border-md border-link"> link border </p>
+<p class="bordered border-md border-ghost-black-base"> ghost black base border </p>
+<div class="p1 bg-gray">
+  <p class="bordered border-md border-ghost-white-base"> ghost white base border </p>
+</div>
+```
+*/
+
+
+/*doc
+---
+title: Radius rounding
+name: radius
+category: theme - decorations
+---
+
+```html_example
+<p class="bg-gray-light round-xs"> xs radius </p>
+<p class="bg-gray-light round-sm"> sm radius </p>
+<p class="bg-gray-light round-md"> md radius </p>
+<p class="bg-gray-light round-lg"> lg radius </p>
+<p class="bg-gray-light round-xl"> xl radius </p>
+```
+
+```html_example
+<p class="bg-gray-light round-md round-t"> top radius </p>
+<p class="bg-gray-light round-md round-b"> bottom radius </p>
+<p class="bg-gray-light round-md round-l"> left radius </p>
+<p class="bg-gray-light round-md round-r"> right radius </p>
+<p class="bg-gray-light round-md round-none"> no radius </p>
+```
+*/
+
+
+/*doc
+---
+title: Shadows
+name: shadows
+category: theme - decorations
+---
+
+```html_example
+<p class="shadowed"> shadow </p>
+<p class="shadowed-light"> light shadow </p>
+<div class="p1 bg-gray">
+  <p class="shadowed-white"> white shadow </p>
+  <p class="shadowed-white-light"> light white shadow </p>
+</div>
+<p class="shadowed-link-border"> link border using shadow </p>
+<p class="shadowed-link-light-border"> light link border using shadow </p>
+```
+*/
+
+$border-widths: (
+  xs: 1px,
+  sm: 2px,
+  md: 4px,
+  lg: 8px,
+  xl: 16px
+);
+
+$border-directions: (
+  t:    "top",
+  b:    "bottom",
+  l:    "left",
+  r:    "right",
+  none: "none"
+);
+
+$border-colors: (
+  "gray-lightest":    $base-gray-lightest,
+  "gray-light":       $base-gray-light ,
+  "gray":             $base-gray,
+  "gray-dark":        $base-gray-dark,
+  "gray-darkest":     $base-gray-darkest,
+  "link":             $link-color,
+  "ghost-black-base": $ghost-black-base,
+  "ghost-white-base": $ghost-white-base
+);
+
+@mixin border-size($name, $width) {
+  %border-#{$name},
+  .border-#{$name} {
+    border-width: $width;
+  }
+}
+
+@mixin border-dir($name, $dir) {
+  %border-#{$name},
+  .border-#{$name} {
+    @if $dir == "none" {
+      border-width: 0 !important;
+    }
+    @else {
+      border-#{$dir}-style: solid;
+      border-#{$dir}-width: 1px;
+    }
+  }
+}
+
+@mixin radius-size($name, $width) {
+  %round-#{$name},
+  .round-#{$name} {
+    border-radius: $width;
+  }
+}
+
+@mixin radius-dir($name, $dir) {
+  %round-#{$name},
+  .round-#{$name} {
+    @if $dir == "none" {
+      border-radius: 0 !important;
+    } @else if $dir == "top" {
+      border-bottom-right-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    } @else if $dir == "bottom" {
+      border-top-right-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+    } @else if $dir == "left" {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    } @else {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+  }
+}
+
+@mixin border-color($name, $color) {
+  %border-#{$name},
+  .border-#{$name} {
+    border-color: $color;
+  }
+}
+
+@mixin decorations_styles {
+
+  %bordered,
+  .bordered {
+    border: 1px solid;
+  }
+
+  %shadowed,
+  .shadowed {
+    box-shadow: 0 2px 6px $ghost-black-base;
+  }
+
+  %shadowed-light,
+  .shadowed-light {
+    box-shadow: 0 1px 3px $ghost-black-base;
+  }
+
+  %shadowed-white,
+  .shadowed-white {
+    box-shadow: 0 2px 6px $ghost-white-base;
+  }
+
+  %shadowed-white-light,
+  .shadowed-white-light {
+    box-shadow: 0 1px 3px $ghost-white-base;
+  }
+
+  %shadowed-link-border,
+  .shadowed-link-border {
+    box-shadow: 0 0 0 nth($sm, 3) $link-color;
+  }
+
+  %shadowed-link-light-border,
+  .shadowed-link-light-border {
+    box-shadow: 0 0 0 nth($sm, 3) $link-light-color;
+  }
+
+  @each $name, $width in $border-widths {
+    @include border-size($name, $width);
+    @include radius-size($name, $width);
+  }
+  @each $name, $dir in $border-directions {
+    @include border-dir($name, $dir);
+    @include radius-dir($name, $dir);
+  }
+  @each $name, $color in $border-colors {
+    @include border-color($name, $color);
+  }
+}

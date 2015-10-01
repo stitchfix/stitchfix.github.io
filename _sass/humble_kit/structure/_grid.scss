@@ -1,0 +1,215 @@
+
+/*doc
+---
+title: Grids
+name: grid
+category: structure - grid
+---
+
+1. Use `.grid` on your parent container for *only* the area you want to grid
+2. Use `.g` and a fraction class (e.g. `._1-2`) on the child of the grid
+3. If you want responsive grids (different widths at different breakpoints), then suffix your fraction class with
+   one of these: `xs` `sm` `md` `lg`. Any suffix you add will work for any breakpoint equal to or smaller
+   (i.e. `_1-2-lg` will make a column that is 50% of its parent at large breakpoints and below)
+4. Responsive grids "overwrite" each other; that is, `._1-1-xs` will take effect at the smallest breakpoint, even
+   if you also include `._1-2-sm`. This is how it is supposed to work. Examples to follow.
+
+```html_example
+<section class="grid">
+  <div class="g _1-2">
+    <p class="p1 bg-gray">_1-2 column width</p>
+  </div>
+  <div class="g _1-4">
+    <p class="p1 bg-gray">_1-4 column width</p>
+  </div>
+  <div class="g _1-4">
+    <p class="p1 bg-gray">_1-4 column width</p>
+  </div>
+</section>
+```
+
+#####Responsive grids
+```html_example
+<section class="grid">
+  <div class="g _1-1-sm _1-2-lg _1-4">
+    <p class="p1 bg-gray">1/4 at XL, 1/2 at LG to MD, 1/1 at SM and below</p>
+  </div>
+  <div class="g _1-1-sm _1-2-lg _1-4">
+    <p class="p1 bg-gray">1/4 at XL, 1/2 at LG to MD, 1/1 at SM and below</p>
+  </div>
+  <div class="g _1-1-sm _1-2-lg _1-4">
+    <p class="p1 bg-gray">1/4 at XL, 1/2 at LG to MD, 1/1 at SM and below</p>
+  </div>
+  <div class="g _1-1-sm _1-2-lg _1-4">
+    <p class="p1 bg-gray">1/4 at XL, 1/2 at LG to MD, 1/1 at SM and below</p>
+  </div>
+</section>
+```
+*/
+
+@mixin grid_styles {
+  %grid,
+  .grid {
+    list-style:     none;
+    margin-left:   -$grid-gutter;
+    padding:        0;
+    font-size:      0; // Fixes inline-block spacing
+  }
+
+  %g,
+  .g {
+    display:        inline-block;
+    padding-left:   $grid-gutter;
+    vertical-align: top;
+    width:          100%;
+    font-size:      $font-size-base; // Reset font size appropriately
+  }
+
+  // Sets up basic column sizing (e.g. ._1-1, ._3-4, .2-3)
+  @for $i from 1 through $max-columns {
+    @for $j from $i through $max-columns {
+      $col_width: $i / $j;
+      %_#{$i}-#{$j},
+      ._#{$i}-#{$j} {
+        width: $col_width * 100%;
+      }
+    }
+  }
+
+  // Sets up breakpoint column sizing (e.g. ._1-1-xs, ._3-4-md, .2-3-xl)
+  @each $breakpoint in $base-sizes {
+    $bp: nth($breakpoint, 5);
+    $short: nth($breakpoint, 1);
+    @include at_breakpoint(#{$bp}){
+      @for $i from 1 through $max-columns {
+        @for $j from $i through $max-columns {
+          $col_width: $i / $j;
+          %_#{$i}-#{$j}-#{$short},
+          ._#{$i}-#{$j}-#{$short} {
+            width: $col_width * 100%;
+          }
+        }
+      }
+    }
+  }
+
+
+  /*doc
+  ---
+  title: "Grid utility classes"
+  name: grid-utility-classes
+  category: structure - grid
+  ---
+
+  Grid utility classes are used along side `.grid`.
+
+#####Reverses grid direction from what is displayed in the markup
+```html_example
+<section class="grid grid-reverse">
+  <div class="g _1-2">
+    <p class="p1 bg-gray">Content #1</p>
+  </div>
+  <div class="g _1-4">
+    <p class="p1 bg-gray">Content #2</p>
+  </div>
+  <div class="g _1-4">
+    <p class="p1 bg-gray">Content #3</p>
+  </div>
+</section>
+```
+
+#####Centered grids
+```hmtl_example
+<section class="grid grid-c">
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+  <div class="g _1-3">
+    <p class="p1 bg-gray">_1-3 column width</p>
+  </div>
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+</section>
+```
+
+#####Right-align grids
+```hmtl_example
+<section class="grid grid-r">
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+  <div class="g _1-3">
+    <p class="p1 bg-gray">_1-3 column width</p>
+  </div>
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+</section>
+```
+
+#####Zero-gutter grids
+```hmtl_example
+<section class="grid grid-nopad">
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+  <div class="g _1-3">
+    <p class="p1 bg-gray">_1-3 column width</p>
+  </div>
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+  <div class="g _1-6">
+    <p class="p1 bg-gray">_1-6 column width</p>
+  </div>
+</section>
+```
+*/
+
+  // Reverse order grids
+  %grid-reverse,
+  .grid-reverse {
+    direction: rtl;
+    text-align: left;
+    > %g,
+    > .g {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+
+  // Grid columns from the center
+  %grid-c,
+  .grid-c {
+    text-align: center;
+    > %g,
+    > .g {
+      text-align: left;
+    }
+  }
+
+  // Grid columns from the right
+  %grid-r,
+  .grid-r {
+    text-align: right;
+    > %g,
+    > .g {
+      text-align: left;
+      margin-right: 0;
+    }
+  }
+
+  // Remove gutter for flush columns
+  %grid-nopad,
+  .grid-nopad {
+    margin-left: 0;
+    > %g,
+    > .g {
+      padding-left: 0;
+    }
+  }
+}

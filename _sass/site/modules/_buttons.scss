@@ -1,0 +1,7 @@
+.btn-cta {
+  @extend %btn, %btn-md, %btn-outline, %btn-primary;
+}
+
+.btn-pagination {
+  @extend %btn, %btn-primary, %btn-outline, %btn-sm;
+}

@@ -1,0 +1,309 @@
+/*doc
+---
+title: "Background colors"
+name: bg-colors
+category: theme - decorations
+---
+
+Color classes that can be applied to most elements (or extended) at will
+
+```html_example
+<div class="p1">
+  <div class="bg-gray-lightest ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-gray-light ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-gray ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-gray-dark ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-gray-darkest ib" style="width: 50px; height: 50px;"></div>
+</div>
+```
+
+#####"Ghost" colors (semi-transparencies)
+```html_example
+<div class="p1 bg-gray">
+  <div class="bg-ghost-white-light ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-ghost-white-base ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-ghost-white-dark ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-ghost-black-light ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-ghost-black-base ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-ghost-black-dark ib" style="width: 50px; height: 50px;"></div>
+</div>
+```
+
+#####"Context" background colors (alert, info, success, warning)
+```html_example
+<div class="p1">
+  <div class="bg-alert ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-info ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-success ib" style="width: 50px; height: 50px;"></div>
+  <div class="bg-warning ib" style="width: 50px; height: 50px;"></div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: "Text colors"
+name: text-colors
+category: theme - decorations
+---
+
+######Text color classes
+```html_example
+<div class="p1 bg-gray-light">
+  <p class="color-gray-lightest">Here's some text</p>
+  <p class="color-gray-light">Here's some text</p>
+  <p class="color-gray">Here's some text</p>
+  <p class="color-gray-dark">Here's some text</p>
+  <p class="color-gray-darkest">Here's some text</p>
+  <p class="color-ghost-white-light">Here's some text</p>
+  <p class="color-ghost-white-base">Here's some text</p>
+  <p class="color-ghost-white-dark">Here's some text</p>
+  <p class="color-ghost-black-light">Here's some text</p>
+  <p class="color-ghost-black-base">Here's some text</p>
+  <p class="color-ghost-black-dark">Here's some text</p>
+  <p class="color-alert">Here's some text</p>
+  <p class="color-info">Here's some text</p>
+  <p class="color-success">Here's some text</p>
+  <p class="color-warning">Here's some text</p>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: "Skins"
+name: skins
+category: theme - decorations
+---
+
+##### Grays skin colors
+```html_example
+<div class="p1">
+  <div class="skin-gray-lightest bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+  <div class="skin-gray-light bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+  <div class="skin-gray bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+  <div class="skin-gray-dark bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+  <div class="skin-gray-darkest bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+</div>
+```
+
+##### "Context" skin colors (alert, info, success, warning)
+```html_example
+<div class="p1">
+  <div class="skin-alert bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+  <div class="skin-info bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+  <div class="skin-success bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+  <div class="skin-warning bordered p1">
+    <span>default text</span>
+    <span class="light">.light text</span>
+    <span class="dark">.dark text</span>
+  </div>
+</div>
+```
+*/
+
+
+/*doc
+---
+title: "Skins Mixins"
+name: skins-mixins
+category: theme - decorations
+---
+
+Creating your own skins mixins:
+There are three different mixins used to rapidly generate decorative skin styles.
+1. @mixin bg_color()
+2. @mixin color()
+3. @mixin skin()
+
+##### bg_color($bg, $name)
+- `$bg` is a color value or variable name that refers to the color you want (hex, rgb, rgba).
+- `$name` is a string to uniquely identify the class
+
+***Input***
+
+```
+@include bg_color(#ff3a5c, "watermelon");
+```
+
+***Output***
+
+```
+%bg-watermelon,
+.bg-watermelon {
+  background-color: #ff3a5c;
+}
+```
+
+
+##### color($color, $name)
+- `$color` is a color value or variable name that refers to the color you want (hex, rgb, rgba).
+- `$name` is a string to uniquely identify the class
+
+***Input***
+
+```
+@include color(rgb(133, 231, 182), "mint");
+```
+
+***Output***
+
+```
+%color-mint,
+.color-mint {
+  color: rgb(133, 231, 182);
+}
+```
+
+
+##### skin($bg, $name, $border: darken($bg, 17.5%), $color: "white", $color_dark: $border)
+- `$bg` is a color value or variable name that refers to the color you want (hex, rgb, rgba).
+- `$name` is a string to uniquely identify the class
+- `$border` (OPTIONAL) is a color value or variable name that refers to the border color of the module
+- `$color` (OPTIONAL) is a color value or variable name that refers to the default text color of the module
+- `$color_dark` (OPTIONAL) is a color value or variable name that refers to the `.dark` text color of the module
+
+***Input***
+
+```
+@include skin(rgb(133, 231, 182), "mint", $color_dark: darken(rgb(133, 231, 182), 33%);
+```
+
+***Output***
+
+```
+%skin-mint,
+.skin-mint {
+  background-color: rgb(133, 231, 182);
+  border-color: darken(rgb(133, 231, 182), 17.5%);
+  color: white;
+  .p, p  { color: white; }
+  .light { color: white; }
+  .dark  { color: darken(rgb(133, 231, 182), 33%); }
+  }
+}
+```
+
+There are several pre-defined background, color, and skin classes available by default.
+Please see the examples for classes and placeholders for color decorations.
+
+*/
+
+/*doc
+---
+title: "Ghost classes (opacity)"
+name: ghosts
+category: theme - decorations
+---
+
+```html_example
+<div class="bg-gray-light ghost-lightest">Content</div>
+<div class="bg-gray-light ghost-light">Content</div>
+<div class="bg-gray-light ghost-base">Content</div>
+<div class="bg-gray-light ghost-dark">Content</div>
+<div class="bg-gray-light ghost-darkest">Content</div>
+<div class="bg-gray-light ghost-none">No opacity</div>
+```
+
+*/
+
+$opacity-values: (
+  none:     1.00,
+  lightest: 0.15,
+  light:    0.33,
+  base:     0.50,
+  dark:     0.66,
+  darkest:  0.85
+);
+
+@mixin bg-color($bg, $name) {
+  %bg-#{$name},
+  .bg-#{$name} {
+    background-color: $bg !important;
+  }
+}
+
+@mixin color($color, $name) {
+  %color-#{$name},
+  .color-#{$name} {
+    color: $color !important;
+  }
+}
+
+@mixin skin($bg, $name, $border: darken($bg, 17.5%), $color: white, $color_dark: $border){
+  %skin-#{$name},
+  .skin-#{$name}{
+    background-color: $bg;
+    border-color: $border;
+    color: $color;
+    .p, p  { color: $color; }
+    .light { color: white;  }
+    .dark  { color: $color-dark; }
+  }
+}
+
+@mixin opacity($name, $val){
+  %ghost-#{$name},
+  .ghost-#{$name} {
+    opacity: $val;
+  }
+}
+
+@mixin skins_styles {
+  // Creates a map that holds all key:value pairs for default colors used to create bg and text-color classes
+  $colors-for-bg-and-text: map_merge($colors-grays, map_merge($colors-ghosts, $colors-notifications));
+
+  @each $color, $name in $colors-for-bg-and-text {
+    @include bg-color($color, $name);
+    @include color($color, $name);
+  }
+
+  @each $name, $val in $opacity-values {
+    @include opacity($name, $val);
+  }
+
+  @include skin($alert-base,   "alert",   $alert-dark,   $alert-light);
+  @include skin($info-base,    "info",    $info-dark,    $info-light);
+  @include skin($success-base, "success", $success-dark, $success-light);
+  @include skin($warning-base, "warning", $warning-dark, $warning-light);
+
+  @include skin($base-gray-lightest, "gray-lightest", $color: darken($base-gray-lightest, 17.5%), $color_dark: $base-gray);
+  @include skin($base-gray-light,    "gray-light",    $color: $base-gray,                         $color_dark: $base-gray-dark);
+  @include skin($base-gray,          "gray",          $color: $base-gray-light);
+  @include skin($base-gray-dark,     "gray-dark",     $color: $base-gray-light);
+  @include skin($base-gray-darkest,  "gray-darkest",  $color: $base-gray);
+}

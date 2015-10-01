@@ -1,0 +1,50 @@
+.global-nav {
+  @extend %text-c, %pos-fix, %z10, %pos-l, %pos-r, %pos-t !optional;
+  background-color: darken($sand, 3%);
+
+  li:first-child {
+    // A sloppy bit to force a padded box for the image
+    // TODO: something better
+    min-width: 52px;
+  }
+
+  &__item {
+    font-size: 1rem;
+    line-height: 3rem;
+    @extend %pos-rel, %left;
+    color: $warm-gray !important;
+    padding-left:  1rem;
+    padding-right: 1rem;
+
+    @include at_breakpoint(sm){
+      font-size: 0.9rem;
+    }
+
+    @include at_breakpoint(xs){
+      padding-left:  0.5rem;
+      padding-right: 0.5rem;
+      font-size: 0.8rem;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $dark-sand;
+      text-decoration: none;
+    }
+
+    &.current {
+      background-color: $red;
+      color: white !important;
+    }
+  }
+}
+
+.no-flexbox .list-flex {
+  // Fix flexbox for non-flexbox, archaic monstrosities
+
+  li {
+    float: left !important;
+    display: block !important;
+    width: 20% !important;
+  }
+}

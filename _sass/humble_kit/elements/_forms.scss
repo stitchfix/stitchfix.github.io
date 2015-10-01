@@ -1,0 +1,230 @@
+/*doc
+---
+title: "Customizing forms"
+name: forms-variables
+category: elements - forms
+---
+
+*Overwrite these variables in `_custom_variables.scss` to change these defaults.*
+
+```
+$form-base-color: $text-light-color !default;
+$form-placeholder-color: #afa9af !default;
+
+$form-pad-v-base: 0.5rem !default;
+$form-pad-h-base: 0.25rem !default;
+
+$input-bg: #f0f0f0 !default;
+$input-border-width: 1px !default;
+$input-border-color: #afa9af !default;
+$input-focus-bg: white !default;
+$input-focus-color: $text-base-color !default;
+
+$input-disabled-bg: rgba($input-bg, 0.5) !default;
+$input-disabled-color: rgba($form-base-color, 0.5) !default;
+
+$labels-look-like-links-option: false !default;
+```
+
+*/
+
+$labels-look-like-links-option: false !default;
+
+
+/*doc
+---
+title: Forms
+name: forms
+category: elements - forms
+---
+
+Forms are inline by default and pretty much ready-to-go. There's a few
+ways to extend a `form` or `input` to make life easier.
+
+##### Default form
+```html_example
+<form>
+  <fieldset>
+    <input placeholder="Email" type="text" /><input placeholder="Password" type="password" />
+    <label class="line3">
+      <input type="checkbox" class="checkbox" />Remember me
+    </label>
+    <button class="btn btn-primary" type="submit">Sign in</button>
+  </fieldset>
+</form>
+```
+
+##### Stacked form
+```html_example
+<form class="form-stacked">
+  <fieldset>
+    <div class="mb1">
+      <label>E-Mail</label>
+      <input required=true type="email"></input>
+      <aside>
+        <em class="light">This is a required field.</em>
+      </aside>
+    </div>
+    <div class="mb1">
+      <label>State</label>
+      <select>
+        <option>Option Number 1</option>
+        <option>2nd opt</option>
+        <option>This is long option three</option>
+        <option>Something 4</option>
+        <option>five</option>
+      </select>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="checkbox" class="checkbox"></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="radio" class="radio"></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-link" type="reset">Reset</button>
+  </fieldset>
+</form>
+```
+
+##### Disabled form
+```html_example
+<form class="form-stacked">
+  <fieldset class="disabled">
+    <div class="mb1">
+      <label>E-Mail</label>
+      <input required=true type="email" disabled></input>
+      <aside>
+        <em class="light">This is a required field.</em>
+      </aside>
+    </div>
+    <div class="mb1">
+      <label>State</label>
+      <select disabled>
+        <option>Option Number 1</option>
+        <option>2nd opt</option>
+        <option>This is long option three</option>
+        <option>Something 4</option>
+        <option>five</option>
+      </select>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="checkbox" class="checkbox" disabled></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <div class="mb1">
+      <label>
+        <input type="radio" class="radio" disabled></input>
+        I've read the terms and conditions
+      </label>
+    </div>
+    <button class="btn btn-primary" disabled type="submit">Submit</button>
+    <button class="btn btn-link" disabled type="reset">Reset</button>
+  </fieldset>
+</form>
+```
+*/
+
+@mixin forms_styles {
+  form,
+  .form {
+    @extend %f-md !optional;
+  }
+
+  fieldset,
+  button {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  label {
+    @include size_and_line($f-md, rem, 0);
+    margin-right: 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    line-height: 3rem;
+    @if $labels-look-like-links-option {
+      @extend %link !optional;
+    }
+
+  }
+
+  textarea {
+    min-height: 5rem;
+    vertical-align: top;
+  }
+
+  input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+  select,
+  textarea {
+    margin: 0 1rem 1rem 0;
+    color: $form-base-color;
+    padding: $form-pad-v-base $form-pad-h-base;
+    background-color: $input-bg;
+    border: $input-border-width solid $input-border-color;
+    @extend %f-md !optional;
+    height: 3rem;
+    box-sizing: border-box;
+    font-family: $font-family-base;
+    vertical-align: top;
+
+    &.input-lg {
+      @extend %f3 !optional;
+      max-height: 5rem;
+      min-height: 4rem;
+    }
+
+    &:focus {
+      background-color: $input-focus-bg;
+      color: $input-focus-color;
+      outline: none;
+      box-shadow: 0 0 6px 1px rgba($base-blue-soft, 0.5);
+    }
+  }
+
+  select {
+    height: 3rem;
+  }
+
+  .checkbox,
+  input[type="checkbox"],
+  .radio,
+  input[type="radio"] {
+    display: inline-block;
+    margin-right: 0.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1em;
+    height: 1rem;
+  }
+
+  .form-stacked {
+    input:not([type="submit"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="reset"]),
+    select,
+    textarea {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  input[disabled]:not(.#{$btn-class-prefix}),
+  select[disabled]:not(.#{$btn-class-prefix}),
+  input:disabled:not(.#{$btn-class-prefix}),
+  select:disabled:not(.#{$btn-class-prefix}),
+  .disabled:not(.#{$btn-class-prefix}) {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background-color: $input-disabled-bg !important;
+    color: $input-disabled-color !important;
+  }
+}

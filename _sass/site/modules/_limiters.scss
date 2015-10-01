@@ -1,0 +1,22 @@
+%limiter {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.p-limited {
+  @extend %limiter;
+  max-width: 45rem;
+
+  @include at_breakpoint(ltsm) {
+    max-width: 24rem;
+  }
+
+}
+
+.h-limited {
+  @extend %limiter;
+  max-width: 45rem;
+
+}
+

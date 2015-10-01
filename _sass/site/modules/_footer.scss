@@ -1,0 +1,77 @@
+.global-footer {
+  @extend %m2, %py2 !optional;
+  border-top: 1px solid $dark-sand;
+
+  &__content-small-views {
+    // Hide on larger-than-small viewports
+    @extend .hidden-gtsm, %text-c !optional;
+  }
+
+  &__content {
+    // Hide on smaller-than-or-equal-to-small viewports
+    @extend .hidden-ltsm !optional;
+    @extend %grid !optional;
+  }
+
+  a:link,
+  a:visited,
+  a {
+    color: $warm-gray;
+  }
+}
+
+.footer-column--brand,
+.footer-column--social {
+  @extend %g, %_1-4, %_1-3-md, %_1-1-sm !optional;
+}
+
+.footer-column--links {
+  @extend %g, %_2-4, %_2-3-md, %_1-1-sm !optional;
+}
+
+.links-container {
+  @extend %grid !optional;
+}
+
+.links-list {
+  @extend %g, %_1-3, %list-unstyled, %f-sm, %thin !optional;
+
+  &__header {
+    @extend %normal !optional;
+  }
+}
+
+.links-list--small-views {
+  @extend %uppercase, %list-unstyled, %list-condensed !optional;
+  border-top: 1px solid $dark-sand;
+
+  & > li {
+    border-bottom: 1px dashed $dark-sand;
+
+    &:last-child {
+      border-bottom-style: solid;
+    }
+
+    & > a {
+      display: block;
+      @extend %f-sm, %line3 !optional;
+
+      &:hover {
+        background-color: $red-20;
+      }
+    }
+  }
+}
+
+.footer-logo {
+  @extend %mb1 !optional;
+  max-width: 180px;
+  max-height: 40px;
+  display: block;
+}
+
+.copyright {
+  @extend %small, %thin !optional;
+  display: block;
+}
+

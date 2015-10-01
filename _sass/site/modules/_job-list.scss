@@ -1,0 +1,24 @@
+.career-list {
+@extend %list-unstyled, %list-condensed !optional;
+
+  a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px dashed $dark-sand;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $red-20;
+    }
+  }
+}
+
+.career-listing {
+  &__title { }
+
+  &__details {
+    @extend %small !optional;
+    color: $warm-gray;
+    padding-bottom: 0.5rem;
+  }
+}

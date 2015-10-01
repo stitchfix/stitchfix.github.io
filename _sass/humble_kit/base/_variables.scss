@@ -1,0 +1,515 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/**
+* These are the default values for the framework's many options. Variables
+* that use the !default flag are basically saying "assign this value unless
+* a value already exists."
+*/
+
+
+/* ==========================================================================
+   Base Variables
+   ========================================================================== */
+
+/* OPTION: include typography */
+$include-typography-option: true !default;
+
+/* OPTION: include basic elements styles */
+$include-links-option:  true !default;
+$include-lists-option:  true !default;
+$include-tables-option: true !default;
+$include-forms-option:  true !default;
+$include-code-option:   true !default;
+
+/* OPTION: include flexbox and flex list styles */
+$include-flex-option: true !default;
+
+/* OPTION: include layout helper classes */
+$include-layout-helpers-option: true !default;
+
+/* OPTION: include grid */
+$include-grid-option: true !default;
+
+/* OPTION: decoration classes and mixins */
+$include-decorations-option: true !default;
+
+/* OPTION: skin classes and placeholders */
+$include-skins-option: true !default;
+
+/* OPTION: media object classes and placeholders */
+$include-media-option: true !default;
+
+/* OPTION: buttons classes and placeholders */
+$include-buttons-option: true !default;
+
+
+/*doc
+---
+title: "Global variables"
+name: global-variables
+category: base - variables
+---
+
+These variables set up consistent framework conventions
+
+```
+$xs : ("xs", "extra-small", 1px,  1 ) !default;
+$sm : ("sm", "small",       2px,  2 ) !default;
+$md : ("md", "medium",      4px,  4 ) !default;
+$lg : ("lg", "large",       8px,  8 ) !default;
+$xl : ("xl", "extra-large", 16px, 16) !default;
+
+$top:    ("t", "top")    !default;
+$bottom: ("b", "bottom") !default;
+$left:   ("l", "left")   !default;
+$right:  ("r", "right")  !default;
+```
+
+*/
+
+// Basic global variables
+$none: ("none", "none", 0,  0 ) !default;
+
+$xs: ("xs", "extra-small", 1px,  1,  "xs"  ) !default;
+$sm: ("sm", "small",       2px,  2,  "ltsm") !default;
+$md: ("md", "medium",      4px,  4,  "ltmd") !default;
+$lg: ("lg", "large",       8px,  8,  "ltlg") !default;
+$xl: ("xl", "extra-large", 16px, 16, "ltxl") !default;
+
+$top:    ("t", "top")    !default;
+$bottom: ("b", "bottom") !default;
+$left:   ("l", "left")   !default;
+$right:  ("r", "right")  !default;
+$middle: ("m", "mid")    !default;
+$center: ("c", "center") !default;
+
+// Basic global maps and lists
+$base-values-names: "lightest", "light", "base", "dark", "darkest";
+
+$base-sizes: $xl, $lg, $md, $sm, $xs !default;
+
+$base-directions: $top, $bottom, $left, $right !default;
+
+
+/* Colors
+   ========================================================================== */
+
+/*doc
+---
+title: "Color variables"
+name: colors-variables
+category: base - variables
+---
+
+All of the colors here are default values intended to give
+a reasonable base set of colors to use in an application.
+
+```
+$ghost-white-light: rgba(white, 0.25) !default;
+$ghost-white-base:  rgba(white, 0.5) !default;
+$ghost-white-dark:  rgba(white, 0.75) !default;
+$ghost-black-light: rgba(black, 0.1) !default;
+$ghost-black-base:  rgba(black, 0.25) !default;
+$ghost-black-dark:  rgba(black, 0.5) !default;
+
+$base-gray-lightest: #eeeff4 !default;
+$base-gray-light:    #d5dbe7 !default;
+$base-gray-soft:     #a2acb7 !default;
+$base-gray:          #677084 !default;
+$base-gray-dark:     #505a69 !default;
+$base-gray-darkest:  #3f4551 !default;
+
+$base-whale-gray:    #ababbb !default;
+$base-yellow:        #fffc71 !default;
+$base-green:         #0fa359 !default;
+$base-blue:          #3874b5 !default;
+$base-blue-dark:     #284c72 !default;
+$base-blue-soft:     #77abc9 !default;
+$base-blue-light:    #a9caea !default;
+$base-cyan:          #2ca8e4 !default;
+$base-cyan-light:    #5ebdea !default;
+$base-red:           #b70808 !default;
+$base-orange:        #e39215 !default;
+$base-tomato:        #e73c36 !default;
+$base-lime:          #9ee76d !default;
+$base-tangerine:     #ffd912 !default;
+$base-aqua:          #7FDBFF !default;
+$base-grape:         #945eff !default;
+$base-violet:        #cd95f0 !default;
+$base-peach:         #ffa086 !default;
+```
+
+*/
+
+$ghost-white-light: rgba(white, 0.25) !default;
+$ghost-white-base:  rgba(white, 0.5) !default;
+$ghost-white-dark:  rgba(white, 0.75) !default;
+$ghost-black-light: rgba(black, 0.1) !default;
+$ghost-black-base:  rgba(black, 0.25) !default;
+$ghost-black-dark:  rgba(black, 0.5) !default;
+
+$base-gray-lightest: #eeeff4 !default;
+$base-gray-light:    #ccd2de !default;
+$base-gray-soft:     #a2acb7 !default;
+$base-gray:          #7d869b !default;
+$base-gray-dark:     #505a69 !default;
+$base-gray-darkest:  #2a313d !default;
+
+$base-whale-gray:    #ababbb !default;
+$base-yellow:        #fffc71 !default;
+$base-green:         #0fa359 !default;
+$base-blue:          #3874b5 !default;
+$base-blue-dark:     #284c72 !default;
+$base-blue-soft:     #77abc9 !default;
+$base-blue-light:    #a9caea !default;
+$base-cyan:          #2ca8e4 !default;
+$base-cyan-light:    #5ebdea !default;
+$base-red:           #d53e22 !default;
+$base-orange:        #e39215 !default;
+$base-tomato:        #e73c36 !default;
+$base-lime:          #9ee76d !default;
+$base-tangerine:     #ffbd09 !default;
+$base-aqua:          #7FDBFF !default;
+$base-grape:         #945eff !default;
+$base-violet:        #cd95f0 !default;
+$base-peach:         #ffa086 !default;
+
+// Generic ui color variables
+$alert-base:    $base-red;
+$alert-light:   lighten($alert-base, 35%);
+$alert-dark:     darken($alert-base, 15%);
+$info-base:     $base-cyan;
+$info-light:    lighten($info-base, 35%);
+$info-dark:      darken($info-base, 15%);
+$success-base:  $base-green;
+$success-light: lighten($success-base, 35%);
+$success-dark:   darken($success-base, 15%);
+$warning-base:  $base-tangerine;
+$warning-light: lighten($warning-base, 35%);
+$warning-dark:   darken($warning-base, 15%);
+
+// Color maps
+$colors-grays: (
+  $base-gray-lightest: "gray-lightest",
+  $base-gray-light:    "gray-light",
+  $base-gray:          "gray",
+  $base-gray-dark:     "gray-dark",
+  $base-gray-darkest:  "gray-darkest"
+);
+
+$colors-notifications: (
+  $alert-base:   "alert",
+  $info-base:    "info",
+  $success-base: "success",
+  $warning-base: "warning"
+);
+
+$colors-ghosts: (
+  $ghost-white-light: "ghost-white-light",
+  $ghost-white-base:  "ghost-white-base",
+  $ghost-white-dark:  "ghost-white-dark",
+  $ghost-black-light: "ghost-black-light",
+  $ghost-black-base:  "ghost-black-base",
+  $ghost-black-dark:  "ghost-black-dark"
+);
+
+
+/* Body variables
+   ========================================================================== */
+
+$body-bg: #ffffff !default;
+
+
+/* Transitions variables
+   ========================================================================== */
+
+$transition-speed-base: 200ms !default;
+$transition-speed-fast: 100ms !default;
+$transition-speed-slow: 400ms !default;
+
+
+/* Global typography values
+   ========================================================================== */
+/**
+* 1. The base font size of the site. This variable controls the basis of the
+*    vertical rhythm of the site. Since everything's in rems, the rem will size
+*    off of this number exactly.
+*
+*    So what's awesome about this? You now have complete control over a very
+*    powerful unit of math that controls your entire site. Congratulations!
+*
+*    Padding and margins are set in rems (by default) as is the entire typography
+*    scale of the site, so all you need to do is modify this just a bit to get
+*    a totally new scale.
+*
+* 2. Modular scale ratio: This system makes use of math (oy, vey...) to create
+*    sequential, relational type in a scale. Basically, it's a simple way to
+*    get good-looking type sizes using only a couple of variables.
+*
+*    Reading: http://alistapart.com/article/more-meaningful-typography
+*    Practice: http://modularscale.com/
+*
+*    $type-ratio is a number or fraction that defines our exponential scale.
+*    Even minor changes can make a noticeable impact on your type scale. Don't
+*    worry though: the vertical rhythm is calculated and will accept any
+*    changes in scale and adapt. See _mixins.scss for more info.
+*/
+
+/* This will automatically adjust heading letter spacing to look nicer at larger font sizes. */
+$letter-spacing-adjustment: false !default;
+
+$font-size-base: 16px !default;
+/* 1 */
+
+$type-ratio: 1.24 !default;
+/* 2 */
+
+$font-weight-base: 400 !default;
+$font-weight-thin: 100 !default;
+$font-weight-thick: 700 !default;
+
+
+/* Basic typography variables
+   ========================================================================== */
+
+/**
+* 1. Optional: User font family definition. Add a font or fonts as a variable
+*    and it will be injected into the site font family (serif or sans).
+* 2. $font-family-base defines which style of font (defined before) to use as
+*    default for the site. $font-family-sans-serif by default.
+* 3. Default color for text. If using dark on light, avoid solid black (#000).
+*    This is just good practice and looks nicer, too.
+* 4. Some variables for <small> text. Accepts a size and a unit.
+*/
+
+$user-font-family-sans-serif: null !default; /* 1 */
+$user-font-family-serif:      null !default;
+
+$font-family-sans-serif: $user-font-family-sans-serif, "Helvetica Neue", Helvetica, sans-serif !default;
+$font-family-serif:      $user-font-family-serif, Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:       $font-family-sans-serif !default; /* 2 */
+
+$text-base-color:  #444 !default; /* 3 */
+$text-light-color: lighten($text-base-color, 33%) !default;
+$text-dark-color:  darken($text-base-color, 33%) !default;
+
+$small-size:      0.8 !default; /* 4 */
+$small-size-unit: em  !default;
+
+
+/* Headings variables
+   ========================================================================== */
+
+$headings-font-family: $font-family-serif !default;
+$headings-font-weight: $font-weight-thick !default;
+$headings-color: inherit !default;
+$headings-weight: $font-weight-thick !default;
+
+
+/* Font size variables
+   ========================================================================== */
+
+/**
+* I choose not to use classes or variables with the greek naming convention
+* (i.e. ".alpha, $beta, etc.")
+* I find it easier not to have to learn new languages (however common) nor
+* have to think about (however briefly) a class and its implication.
+*
+* In this numerical naming convention, it's easier to associate lower
+* numbers with larger text, simply because that convention is already in
+* place with heading markup (h1 - h6).
+*
+* Also included here are a few more font sizes with the sm, md, lg
+* naming convention.
+*
+* 1. Expressed as progressive steps in scale (as integers).
+*    Basically, the type grows (or shrinks) from a base font size variable
+*    at a rate that is exponential according to the integers below.
+*    If this makes no sense, it might be easier to try changing these numbers,
+*    the $font-size-base, or the $type-ratio and seeing the results in your
+*    application. Tweak them to get something that works for you.
+*/
+
+$f-xl:  11 !default; /* 1 */
+$f-lg:  9 !default;
+$f1:    7 !default;
+$f2:    5 !default;
+$f3:    4 !default;
+$f4:    3 !default;
+$f5:    1 !default;
+$f-md:  $f5 !default;
+$f6:    0 !default;
+$f-sm:  $f6 !default;
+$f-xs: -1 !default;
+
+
+/* Custom breakpoints
+   ========================================================================== */
+/**
+* These variables represent the max-width of a size break.
+*
+* Define these values as you need, but, by default, we're looking at something
+* like mobile (xs), tablet (sm), smaller lap (md), big lap/small monitor (lg),
+* standard monitor (xl).
+*
+* Feel free to customize these size breaks and/or rename and replace these
+* variable names.
+*/
+
+$media-width-xs: 480px  !default;
+$media-width-sm: 768px  !default;
+$media-width-md: 992px  !default;
+$media-width-lg: 1200px !default;
+$media-width-xl: 1400px !default;
+
+
+/* ==========================================================================
+   Elements Variables
+   ========================================================================== */
+
+/* Links variables
+   ========================================================================== */
+
+$link-color:               $base-blue !default;
+$link-hover-color:         $base-blue-soft !default;
+$link-active-color:        $base-blue !default;
+$link-visited-color:       $base-blue !default;
+$link-light-color:         $base-blue-light !default;
+$link-light-hover-color:   $base-gray-lightest !default;
+$link-light-active-color:  $base-blue-soft !default;
+$link-light-visited-color: $base-blue-soft !default;
+
+$link-transition-speed:    $transition-speed-base !default;
+
+
+/* Lists variables
+   ========================================================================== */
+
+$list-pad:           1.5rem !default;
+$list-inline-gutter: 1rem !default;
+
+
+/* Tables variables
+   ========================================================================== */
+
+$table-cell-pad:           1rem 1rem !default;
+$table-cell-condensed-pad: 0.5rem 0.5rem !default;
+
+$table-bg:             transparent !default;
+$table-header-border:  rgba(0, 0, 0, 0.1) !default;
+$table-footer-border:  rgba(0, 0, 0, 0.1) !default;
+$table-header-bg:      transparent !default;
+$table-footer-bg:      transparent !default;
+$table-cell-border:    rgba(0, 0, 0, 0.1) !default;
+$table-stripe-color:   #F0F0F0 !default;
+$table-hover-color:    #E7E7E7 !default;
+$table-border-color:   rgba(0, 0, 0, 0.1) !default;
+$table-vertical-align: middle !default;
+
+$table-stripe-dark-color: rgba(255, 255, 255, 0.1) !default;
+$table-hover-dark-color:  rgba(255, 255, 255, 0.2) !default;
+
+
+/* Forms variables
+   ========================================================================== */
+
+$form-base-color: $text-light-color !default;
+$form-placeholder-color: #afa9af !default;
+
+$form-pad-v-base: 0.5rem !default;
+$form-pad-h-base: 0.25rem !default;
+
+$input-bg: #f0f0f0 !default;
+$input-border-width: 1px !default;
+$input-border-color: #afa9af !default;
+$input-focus-bg: white !default;
+$input-focus-color: $text-base-color !default;
+
+$input-disabled-bg: rgba($input-bg, 0.5) !default;
+$input-disabled-color: rgba($form-base-color, 0.5) !default;
+
+
+/* ==========================================================================
+   Structure Variables
+   ========================================================================== */
+
+/* Layout variables
+   ========================================================================== */
+
+$hr-color:     rgba(0,0,0,0.1) !default;
+$margin-base:  1rem !default;
+$padding-base: $margin-base !default;
+
+
+/* Containers variables
+   ========================================================================== */
+/**
+* 1. Include a $container-max if you want to constrain the maximum allowable
+*    width for the container, regardless of breakpoint constraints.
+*
+* 2. Center the container by default. Possible values: left / right / center
+*/
+
+/* Container constraint variables */
+
+$container-pad:   10px !default;
+$container-xs:    ($media-width-xs - ($container-pad*2)) !default;
+$container-sm:    ($media-width-sm - ($container-pad*2)) !default;
+$container-md:    ($media-width-md - ($container-pad*2)) !default;
+$container-lg:    ($media-width-lg - ($container-pad*2)) !default;
+$container-xl:    ($media-width-xl - ($container-pad*2)) !default;
+
+$container-max:   null !default; /* 1 */
+$container-align: center !default; /* 2 */
+
+
+/* Grid variables
+   ========================================================================== */
+
+$grid-gutter: $font-size-base * 1.5 !default;
+$grid-debug: false !default;
+$max-columns: 6 !default;
+
+
+/* ==========================================================================
+   Modules Variables
+   ========================================================================== */
+
+/* Buttons variables
+   ========================================================================== */
+
+$btn-class-prefix:     "btn" !default;
+
+$btn-font-weight:      $font-weight-base !default;
+$btn-border-radius:    0.25rem !default;
+$btn-shadow:           inset 0 2px 6px rgba(0,0,0,0.3) !default;
+$btn-darken-amount:    20% !default;
+
+$btn-bg-default:       $base-whale-gray !default;
+$btn-color-default:    white !default;
+$btn-border-default:   darken($btn-bg-default, $btn-darken-amount) !default;
+
+$btn-bg-primary:       $base-blue !default;
+$btn-color-primary:    white !default;
+$btn-border-primary:   darken($btn-bg-primary, $btn-darken-amount) !default;
+
+$btn-bg-secondary:     $base-blue-soft !default;
+$btn-color-secondary:  white !default;
+$btn-border-secondary: darken($btn-bg-secondary, $btn-darken-amount) !default;
+
+$btn-bg-tertiary:      $base-violet !default;
+$btn-color-tertiary:   white !default;
+$btn-border-tertiary:  darken($btn-bg-tertiary, $btn-darken-amount) !default;
+
+$btn-bg-link:          rgba(0,  0,  0,  0.15) !default;
+$btn-bg-link-dark:     rgba(255,255,255,0.15) !default;
+$btn-border-link:      rgba($base-blue-light,0.0) !default;
+$btn-border-link-dark: rgba($base-blue-light,0.0) !default;
+
+$btn-hover-adjustment:     8% !default;
+$btn-border-width:         1px !default;
+$btn-outline-border-width: 2px !default;
+$btn-transition-speed:     0.2s !default;
+$btn-vertical-align:       middle !default;
