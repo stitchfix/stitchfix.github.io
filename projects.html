@@ -2,37 +2,63 @@
 layout: default
 ---
 <h1>Projects</h1>
-<ul>
+<section>
+  <h1>Ruby</h1>
   {% for repo in site.github.public_repositories %} 
-    {% if repo.fork %}
-    {% else %}
-      <li>
-        <a href="{{repo.html_url}}">{{ repo.name }}</a> - {{repo.description}} ({{repo.language}}).  Last updated {{repo.updated_at}}.
-        <br>
-        <dl>
-          <dt>Environment</dt><dd> {{repo.environment}}</dd>
-          <dt>Title</dt><dd> {{repo.project_title}}</dd>
-          <dt>Tagline</dt><dd> {{repo.project_tagline}}</dd>
-          <dt>User Page?</dt><dd> {{repo.is_user_page}}</dd>
-          <dt>Project Page?</dt><dd> {{repo.is_project_page}}</dd>
-          <dt>Releases</dt>
-          <dd>
-            <ol>
-              {% for release in repo.releases %}
-              <li>
-                <dl>
-                  <dt>Tagname</dt> <dd>{{release.tag_name}}</dd>
-                  <dt>Name</dt> <dd>{{release.name}}</dd>
-                  <dt>Body</dt> <dd>{{release.body}}</dd>
-                  <dt>Created</dt> <dd>{{release.created_at}}</dd>
-                  <dt>Published</dt> <dd>{{release.published_at}}</dd>
-                </dl>
-              </li>
-              {% endfor %}
-            </ol>
-          </dd>
-        </dl>
-      </li>
-    {% endif %}
+    {% unless repo.fork %}
+      {% if repo.language == 'Ruby' %}
+        <article>
+          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
+          <p>
+            {{repo.description}}
+          </p>
+        </article>
+      {% endif %}
+    {% endunless %}
   {% endfor %}
-</ul>
+</section>
+<section>
+  <h1>JavaScript</h1>
+  {% for repo in site.github.public_repositories %} 
+    {% unless repo.fork %}
+      {% if repo.language == 'JavaScript' %}
+        <article>
+          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
+          <p>
+            {{repo.description}}
+          </p>
+        </article>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+</section>
+<section>
+  <h1>Python</h1>
+  {% for repo in site.github.public_repositories %} 
+    {% unless repo.fork %}
+      {% if repo.language == 'Python' %}
+        <article>
+          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
+          <p>
+            {{repo.description}}
+          </p>
+        </article>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+</section>
+<section>
+  <h1>Everything Else</h1>
+  {% for repo in site.github.public_repositories %} 
+    {% unless repo.fork %}
+      {% if repo.language != 'Python' and repo.language != 'Ruby' and repo.language != 'JavaScript' %}
+        <article>
+          <h1><a href="{{repo.html_url}}">{{ repo.name }}</a></h1>
+          <p>
+            {{repo.description}}
+          </p>
+        </article>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+</section>
