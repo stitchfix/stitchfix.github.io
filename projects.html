@@ -10,7 +10,7 @@ layout: new
     {% for repo in site.github.public_repositories %} 
       {% unless repo.fork %}
         {% if repo.language != 'Python' and repo.language != 'Ruby' and repo.language != 'JavaScript' %}
-          <div class="g _1-3">
+          <div class="g _1-3 _1-1-md">
             {% include project.html repo=repo language=repo.language %}
           </div>
         {% endif %}

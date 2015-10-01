@@ -280,7 +280,7 @@ all variable-driven and moderately easy to modify.
   small,
   .small {
     font-size: $small-size#{$small-size-unit};
-    line-height: 1rem;
+    line-height: 1em;
   }
 
   %uppercase,

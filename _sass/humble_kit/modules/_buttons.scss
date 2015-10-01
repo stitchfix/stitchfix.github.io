@@ -288,8 +288,6 @@ Creates a custom button size in the same way as `.btn-xl`, `.btn-md`, etc.
       line-height: $lh;
     }
 
-    &%btn-outline,
-    &%btn-outline-dark,
     &.btn-outline,
     &.btn-outline-dark{
       line-height: calc(#{$lh} - (2 * #{$btn-outline-border-width}));
@@ -351,7 +349,6 @@ Creates a custom button size in the same way as `.btn-xl`, `.btn-md`, etc.
       }
       border-color: lighten($btn-border-default, $btn-hover-adjustment);
       color: $btn-color-default;
-      text-decoration: none;
       @if $btn-text-shadow-option {
         text-shadow: 0 0 15px white, 0 0 30px white;
       }
@@ -454,19 +451,16 @@ Creates a custom button size in the same way as `.btn-xl`, `.btn-md`, etc.
     font-weight:  $font-weight-base;
     background-color: transparent;
 
-    &%#{$btn-class-prefix}-primary,
     &.#{$btn-class-prefix}-primary {
       &:hover {
         color: $btn-bg-primary;
       }
     }
-    &#{$btn-class-prefix}-secondary
     &.#{$btn-class-prefix}-secondary {
       &:hover {
         color: $btn-bg-secondary;
       }
     }
-    &#{$btn-class-prefix}-tertiary
     &.#{$btn-class-prefix}-tertiary {
       &:hover {
         color: $btn-bg-tertiary;
@@ -492,37 +486,25 @@ Creates a custom button size in the same way as `.btn-xl`, `.btn-md`, etc.
       color: $btn-bg-default;
     }
 
-    &%#{$btn-class-prefix}-primary,
     &.#{$btn-class-prefix}-primary {
+      color:        $btn-bg-primary;
       border-color: $btn-bg-primary;
-
-      &, &:link, &:visited {
-        color: $btn-bg-primary;
-      }
 
       &:hover {
         background-color: $btn-bg-primary;
       }
     }
-    &%#{$btn-class-prefix}-secondary,
     &.#{$btn-class-prefix}-secondary {
+      color:        $btn-bg-secondary;
       border-color: $btn-bg-secondary;
-
-      &, &:link, &:visited {
-        color: $btn-bg-secondary;
-      }
 
       &:hover {
         background-color: $btn-bg-secondary;
       }
     }
-    &%#{$btn-class-prefix}-tertiary,
     &.#{$btn-class-prefix}-tertiary {
+      color:        $btn-bg-tertiary;
       border-color: $btn-bg-tertiary;
-
-      &, &:link, &:visited {
-        color: $btn-bg-tertiary;
-      }
 
       &:hover {
         background-color: $btn-bg-tertiary;

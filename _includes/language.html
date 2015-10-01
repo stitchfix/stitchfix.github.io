@@ -4,7 +4,7 @@
     {% for repo in include.repositories %} 
       {% unless repo.fork %}
         {% if repo.language == include.language %}
-          <div class="g _1-3">
+          <div class="g _1-3 _1-1-md">
             {% include project.html repo=repo %}
           </div>
         {% endif %}
