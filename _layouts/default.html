@@ -1,8 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include _head.html %}
-  <body class="home">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {{ site.title }}
+    </title>
+    <meta name="author" content="{{site.author}}">
+    <meta name="description" content="{{site.description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
+  </head>
+  <body class="container">
+    <header class="text-c mt3">
+      <h1 class="mb1">Stitch Fix Open Source</h1>
+      <p>
+        Open Source software is a huge part of our success.  This site is our small contirbution back.
+      </p>
+      <img class="text-c" src="/assets/images/logomark.svg" width="36" alt="Multithreaded" data-pin-nopin="true">
+      <nav class="text-c border-b border-gray-light border-xs mt1">
+        <ul class="list-inline list-nav">
+          <li>
+            <a href="/" class="uppercase small">Home</a>
+          </li>
+          <li>
+            <a href="code-of-conduct.html" class="uppercase small">Code of Conduct</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     {{ content }}
-    {% include _footer.html %}
+    <footer class="border-t border-gray-light border-xs mt2">
+      <nav class="text-c">
+        <ul class="list-inline list-nav">
+          <li>
+            <a href="http://multithreaded.stitchfix.com/blog/" class="uppercase small color-gray-dark">Blog</a>
+          </li>
+          <li>
+            <a href="http://multithreaded.stitchfix.com/engineering/" class="uppercase small color-gray-dark">Engineering</a>
+          </li>
+          <li>
+            <a href="http://multithreaded.stitchfix.com/algorithms/" class="uppercase small color-gray-dark">Algorithms</a>
+          </li>
+          <li>
+            <a href="https://www.stitchfix.com/about" class="uppercase small color-gray-dark">Company</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
