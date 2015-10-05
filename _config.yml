@@ -3,7 +3,6 @@ name: "Stitch Fix Engineering & Algorithms Jobs"
 # Populates the meta description for the site. Should be under 150 characters for best SEO purposes.
 description: "Stitch Fix is a full-stack startup creating unique solutions in data-driven merchandising, massively scaled personal styling, and complex logistics."
 
-# Owner (organization or individual) of site content
 author: "Stitch Fix"
 url: "http://technology.stitchfix.com/"
 title: "Stitch Fix Technology"
