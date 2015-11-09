@@ -1,0 +1,170 @@
+---
+layout: default
+---
+<article>
+  <div class="container contain-to-md">
+  <header>
+    <h1 class="mb1 mt2 h3">Open Source Repository Guidelines</h1>
+    <p class="thin">
+      Describes the bare-minimum needed in any open-source GitHub repository.
+    </p>
+  </header>
+    <section>
+      <h1 class="h4 mb1 mt2">General</h1>
+      <ul>
+        <li>
+          <p class="thick">
+            A <code>CONTRIBUTING.md</code>, like so:
+          </p>
+          <pre class="bordered border-xs border-gray p1 bg-white round-md">
+# Contributing
+Thanks for using and improving *LIBRARY NAME*! If you'd like to help out, check out 
+[the project's issues list](https://github.com/stitchfix/LIBRARY_NAME/issues) for 
+ideas on what could be improved.  If there's an idea you'd like to propose, 
+or a design change, feel free to file a new issue or send a pull request:
+
+1. [Fork][fork] the repo.
+1. [Create a topic branch.][branch]
+1. Write tests.
+1. Implement your feature or fix bug.
+1. Add, commit, and push your changes.
+1. [Submit a pull request.][pr]
+
+[fork]: https://help.github.com/articles/fork-a-repo/
+[branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/
+[pr]: https://help.github.com/articles/using-pull-requests/
+
+## General Guidelines
+
+* When in doubt, test it.  If you can't test it, re-think what you are doing.
+* Code formatting and internal application architecture should be consistent.</pre>
+        </li>
+        <li>
+          <p class="thick">
+            A <code>CODE_OF_CODUCT.md</code> that references the <a href="/code-of-conduct.html">code of conduct here</a>:
+          </p>
+          <pre class="bordered border-xs border-gray p1 bg-white round-md">
+# Code of Conduct
+
+We are committed to keeping our community open and inclusive.
+
+**Our Code of Conduct can be found here**:
+http://opensource.stitchfix.com/code-of-conduct.html</pre>
+        </li>
+        <li>
+          <p class="thick">
+            Configuration for continuous integration in <a href="http://travis-ci.org">Travis CI</a>.
+          </p>
+          <p>
+            Configure <code>.travis.yml</code> such that it triggers builds on all platforms in use by Stitch Fix, all <em>reasonable</em> platforms in use by the community and whatever the bleeding edge is.  For example, Ruby libraries should be built on Ruby 1.9.3 and above as well as <code>ruby-head</code>.
+          </p>
+        </li>
+        <li>
+          <p class="thick">
+            When releasing versions, make use of the GitHub Releases feature:
+          </p>
+          <ol class="ml2">
+            <li>Create a tag named <code>v1.2.3</code> following <a href="http://semver.org">Semantic Versioning</a>.</li>
+            <li>This will create a release in GitHub.  Edit that release</li>
+            <li>Itemize out <em>all</em> changes since the last release.  These should <em>all</em> reference pull requests</li>
+            <li>If someone outside Stitch Fix contributed to the PR, thank them explicitly using GitHub <code>@-</code>mentions.</li>
+          </ol>
+          <p>
+            A good example is <a href="https://github.com/stitchfix/immutable-struct/releases">immutable-struct</a>.
+          </p>
+        </li>
+        <li>
+          <p class="thick">
+            Prefer the <a href="https://opensource.org/licenses/MIT">MIT</a> license, and include it in <code>LICENSE.txt</code>
+          </p>
+        </li>
+        <li>
+          <p class="thick">
+            Try to make your initial commit message something more fun than “Initial Commit” :)
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1 class="h4 mb1 mt2">Ruby</h1>
+      <ul>
+        <li>
+          <p class="thick">Gems should be laid out in a standard fashion.</p>
+          <ul class="list-condensed">
+            <li>The gem name should use underscores as word separators.</li>
+            <li>All code goes in <code>lib/gem_name</code>, for example <code>lib/merch_calendar</code></li>
+            <li><p>
+                The mail file in <code>lib/gem_name.rb</code> should establish a namespace module and <code>require</code> all the other files. It should be sufficient to require just this file in order to use the gem.</p>
+          <pre class="bordered border-xs border-gray p1 bg-white round-md">
+module MerchCalendar
+end
+
+require 'merch_calendar/version'
+require 'merch_calendar/util'
+# ...</pre>
+            </li>
+            <li>
+              <p>
+                There should be a file named <code>lib/gem_name/version.rb</code> that contains the gem's version inside its namespace in the public constant <code>VERSION</code>
+              </p>
+              <pre class="bordered border-xs border-gray p1 bg-white round-md">
+module MerchCalendar
+  VERSION = "1.1.3"
+end</pre>
+            </li>
+            <li>
+              Do not assume Rails.  Explicitly <code>require</code> dependencies in each file, and require <strong>only</strong> what you need.
+            </li>
+            <li>
+              Put all dependencies in the Gemspec.  Your <code>Gemfile</code> should generally be pretty empty.
+            </li>
+            <li>
+              Prefer RSpec and put all tests in <code>spec/</code>.
+            </li>
+            <li>
+              <p>
+                Your <code>Rakefile</code> should be able to run tests and release the gem.  This is a good start:
+              </p>
+<pre class="bordered border-xs border-gray p1 bg-white round-md">
+require 'rubygems/package_task'
+require 'rspec/core/rake_task'
+require "bundler/gem_tasks"
+
+RSpec::Core::RakeTask.new
+
+task default: :spec
+</pre>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="thick">Gemspecs should be consistent</p>
+          <ul class="list-condensed">
+            <li>Start with what <code>bundle gem</code> gives you for a Gemspec.</li>
+            <li><code>spec.authors</code> should have “Stitch Fix Engineering” as the first author.</li>
+            <li>For each Stitch Fix employee that has contributed, list them in <code>spec.authors</code> after “Stitch Fix Engineering”.</li>
+            <li>For <em>significant</em> contributes from non-Stitch Fix employees, list them as well (ask permission first).</li>
+            <li><code>spec.email</code> should contain <code>eng@stitchfix.com</code>, followed by the <em>primary GitHub emails</em> of the contributors in <code>spec.authors</code>.</li>
+            <li><code>spec.description</code> and <code>spec.summary</code> should be identical and match the description in the GitHub repo.</li>
+            <li><code>spec.license</code> should match the license.</li>
+            <li><code>spec.homepage</code> should be the GitHub page.</li>
+            <li>Add runtime dependencies judiciously.  When you <em>must</em> keep the version as loose as possible.</li>
+            <li>Keep development dependencies' version requirements as loose as possible.</li>
+          </ul>
+        </li>
+          <li>
+            <p class="thick">Write and publish documentation.</p>
+            <p>
+              Use RDoc for all public members and configure the gem on <a href="http://rdoc.info">RDoc.info</a>.
+            </p>
+          </li>
+          <li>
+            <p class="thick">Release as the shared user</p>
+            <p>
+              Do not release gems as yourself.  Release them as the Stitch Fix RubyGems owner.  See our internal document “Pushing Release of Open Source Gems” for the specifics.
+            </p>
+          </li>
+        </ul>
+    </section>
+  </div>
+</article>
