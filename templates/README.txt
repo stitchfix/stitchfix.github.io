@@ -1,4 +1,4 @@
-# MyGem [![Build Status](https://travis-ci.org/stitchfix/YOURGEM.svg?branch=add_travis_yml)](https://travis-ci.org/stitchfix/YOURGEM)
+# MyGem [![Build Status](https://travis-ci.org/stitchfix/YOURGEM.svg?branch=master)](https://travis-ci.org/stitchfix/YOURGEM)
 
 > It's a neat little gem that you're gunna *love*
 
